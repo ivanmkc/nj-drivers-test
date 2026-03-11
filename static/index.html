@@ -44,6 +44,7 @@
     border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; color: var(--gray);
   }
   .lang-btn.active { border-color: var(--blue); background: var(--blue-light); color: var(--blue); }
+  .lang-btn:disabled { opacity: 0.35; cursor: not-allowed; }
 
   /* State picker */
   #state-screen { text-align: center; padding-top: 10vh; }
@@ -329,11 +330,13 @@ function applyI18n() {
 }
 
 function buildLangBar(containerId, availableLangs) {
-  const langs = availableLangs || Object.keys(I18N);
+  const allLangs = Object.keys(I18N);
+  const available = new Set(availableLangs || allLangs);
   const bar = document.getElementById(containerId);
-  bar.innerHTML = langs.map(lang =>
-    `<button class="lang-btn ${lang === currentLang ? 'active' : ''}" onclick="switchLang('${lang}')">${LANG_LABELS[lang] || lang.toUpperCase()}</button>`
-  ).join('');
+  bar.innerHTML = allLangs.map(lang => {
+    const disabled = !available.has(lang);
+    return `<button class="lang-btn ${lang === currentLang && !disabled ? 'active' : ''}" ${disabled ? 'disabled' : `onclick="switchLang('${lang}')"`}>${LANG_LABELS[lang] || lang.toUpperCase()}</button>`;
+  }).join('');
 }
 
 function switchLang(lang) {
@@ -449,7 +452,9 @@ function renderHome() {
     });
   });
 
-  buildLangBar('lang-bar', s.languages.length > 0 ? s.languages : Object.keys(I18N));
+  const avail = s.languages.length > 0 ? s.languages : Object.keys(I18N);
+  if (!avail.includes(currentLang)) { currentLang = 'en'; localStorage.setItem('quiz_lang', 'en'); }
+  buildLangBar('lang-bar', avail);
   applyI18n();
   updateStartScreen();
 }
