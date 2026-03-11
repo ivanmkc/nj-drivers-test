@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
-"""Translate NJ driver's test questions YAML to any language using Gemini.
+"""Translate driver's test questions YAML to any language using Gemini.
 
 Usage:
-    python translate.py ja          # Japanese
-    python translate.py es          # Spanish
-    python translate.py zh          # Chinese
-    python translate.py ko          # Korean
+    python translate.py nj ja          # NJ questions -> Japanese
+    python translate.py ny es          # NY questions -> Spanish
 """
 
 import json
+import os
 import sys
 import time
 import yaml
@@ -18,29 +17,9 @@ MODEL = "gemini-3.1-pro-preview"
 CLIENT = genai.Client(vertexai=True, project="adk-coding-agents", location="global")
 
 LANG_NAMES = {
-    "ja": "Japanese",
-    "es": "Spanish",
-    "zh": "Simplified Chinese",
-    "ko": "Korean",
-    "pt": "Portuguese",
-    "fr": "French",
-    "de": "German",
-    "hi": "Hindi",
-    "ar": "Arabic",
-    "vi": "Vietnamese",
-    "tl": "Tagalog",
-    "ru": "Russian",
-}
-
-METADATA_TRANSLATIONS = {
-    "ja": {
-        "source": "2025年 ニュージャージー州運転者マニュアル (www.njmvc.gov)",
-        "passing_score": "80%（実際のMVC試験では50問中40問正解）",
-    },
-    "es": {
-        "source": "Manual del Conductor de Nueva Jersey 2025 (www.njmvc.gov)",
-        "passing_score": "80% (40 de 50 en el examen real del MVC)",
-    },
+    "ja": "Japanese", "es": "Spanish", "zh": "Simplified Chinese",
+    "ko": "Korean", "pt": "Portuguese", "fr": "French", "de": "German",
+    "hi": "Hindi", "ar": "Arabic", "vi": "Vietnamese", "tl": "Tagalog", "ru": "Russian",
 }
 
 
@@ -73,32 +52,38 @@ Translate these driving test questions to {lang_name}. Return a JSON array with 
             max_output_tokens=8192,
         ),
     )
-
     text = response.text.strip()
     if text.startswith("```"):
         text = text.split("\n", 1)[1]
         if text.endswith("```"):
             text = text[: text.rfind("```")]
         text = text.strip()
-
     return json.loads(text)
 
 
 def main():
-    if len(sys.argv) < 2:
-        print(f"Usage: python translate.py <lang_code>")
-        print(f"Supported: {', '.join(LANG_NAMES.keys())}")
+    if len(sys.argv) < 3:
+        print("Usage: python translate.py <state_code> <lang_code>")
+        print(f"  Languages: {', '.join(LANG_NAMES.keys())}")
+        print("  Example: python translate.py nj ja")
         sys.exit(1)
 
-    lang_code = sys.argv[1].lower()
+    state_code = sys.argv[1].lower()
+    lang_code = sys.argv[2].lower()
     lang_name = LANG_NAMES.get(lang_code)
     if not lang_name:
-        print(f"Unknown language code '{lang_code}'. Supported: {', '.join(LANG_NAMES.keys())}")
+        print(f"Unknown language '{lang_code}'. Supported: {', '.join(LANG_NAMES.keys())}")
         sys.exit(1)
 
-    output_path = f"nj_drivers_test_questions_{lang_code}.yaml"
+    state_dir = os.path.join(os.path.dirname(__file__), "states", state_code)
+    input_path = os.path.join(state_dir, "questions_en.yaml")
+    output_path = os.path.join(state_dir, f"questions_{lang_code}.yaml")
 
-    with open("nj_drivers_test_questions.yaml") as f:
+    if not os.path.exists(input_path):
+        print(f"Source file not found: {input_path}")
+        sys.exit(1)
+
+    with open(input_path) as f:
         data = yaml.safe_load(f)
 
     questions = data["questions"]
@@ -106,7 +91,7 @@ def main():
     batch_size = 10
     total = len(questions)
 
-    print(f"Translating {total} questions to {lang_name} ({lang_code}) in batches of {batch_size}...")
+    print(f"Translating {total} {state_code.upper()} questions to {lang_name} ({lang_code})...")
 
     for i in range(0, total, batch_size):
         batch = questions[i : i + batch_size]
@@ -127,29 +112,26 @@ def main():
                     time.sleep(wait)
                 else:
                     print(f"FAILED: {e}")
-                    print("Falling back to untranslated batch")
                     translated.extend(batch)
 
         if i + batch_size < total:
             time.sleep(1)
 
-    meta_t = METADATA_TRANSLATIONS.get(lang_code, {})
-    ja_data = {
+    out_data = {
         "metadata": {
-            "source": meta_t.get("source", data["metadata"]["source"]),
-            "source_original": data["metadata"]["source"],
+            "source": data["metadata"].get("source", ""),
+            "source_original": data["metadata"].get("source", ""),
             "total_questions": len(translated),
-            "passing_score": meta_t.get("passing_score", data["metadata"]["passing_score"]),
             "language": lang_code,
-            "categories": data["metadata"]["categories"],
+            "categories": data["metadata"].get("categories", []),
         },
         "questions": translated,
     }
 
     with open(output_path, "w", encoding="utf-8") as f:
-        yaml.dump(ja_data, f, allow_unicode=True, default_flow_style=False, sort_keys=False)
+        yaml.dump(out_data, f, allow_unicode=True, default_flow_style=False, sort_keys=False)
 
-    print(f"\nDone! Wrote {len(translated)} translated questions to {output_path}")
+    print(f"\nDone! Wrote {len(translated)} questions to {output_path}")
 
 
 if __name__ == "__main__":

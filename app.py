@@ -1,45 +1,64 @@
-import glob
+import json
 import os
 import random
+import re
 import yaml
 from flask import Flask, jsonify, request, send_from_directory
 
 app = Flask(__name__, static_folder="static")
 
-# Load all language variants at startup
 BASE_DIR = os.path.dirname(__file__)
-LANGS = {}  # lang_code -> {"questions": [...], "metadata": {...}}
+STATES_DIR = os.path.join(BASE_DIR, "states")
 
-for path in sorted(glob.glob(os.path.join(BASE_DIR, "nj_drivers_test_questions*.yaml"))):
-    fname = os.path.basename(path)
-    with open(path) as f:
-        data = yaml.safe_load(f)
-    # Determine language from filename: _ja.yaml -> "ja", base -> "en"
-    if "_ja.yaml" in fname:
-        lang = "ja"
-    elif "_es.yaml" in fname:
-        lang = "es"
-    else:
-        lang = "en"
-    LANGS[lang] = {
-        "questions": data["questions"],
-        "metadata": data["metadata"],
-        "by_id": {q["id"]: q for q in data["questions"]},
-    }
+# Auto-discover states and their question files at startup
+# Structure: STATES[state_code][lang_code] = {"questions": [...], "by_id": {...}}
+# CONFIG[state_code] = {...config.json...}
+STATES = {}
+CONFIG = {}
 
-CATEGORIES = sorted(set(q["category"] for q in LANGS["en"]["questions"]))
+for state_code in sorted(os.listdir(STATES_DIR)):
+    state_dir = os.path.join(STATES_DIR, state_code)
+    if not os.path.isdir(state_dir):
+        continue
+
+    config_path = os.path.join(state_dir, "config.json")
+    if not os.path.exists(config_path):
+        continue
+
+    with open(config_path) as f:
+        CONFIG[state_code] = json.load(f)
+
+    STATES[state_code] = {}
+
+    for fname in sorted(os.listdir(state_dir)):
+        match = re.match(r"questions_(\w+)\.yaml$", fname)
+        if not match:
+            continue
+        lang = match.group(1)
+        with open(os.path.join(state_dir, fname)) as f:
+            data = yaml.safe_load(f)
+        STATES[state_code][lang] = {
+            "questions": data["questions"],
+            "by_id": {q["id"]: q for q in data["questions"]},
+        }
 
 
-def get_lang():
-    return request.args.get("lang", "en") if request.args.get("lang") in LANGS else "en"
+def get_state():
+    state = request.args.get("state", "").lower()
+    return state if state in STATES else None
 
 
-def get_questions():
-    return LANGS[get_lang()]["questions"]
+def get_lang(state):
+    lang = request.args.get("lang", "en")
+    return lang if lang in STATES.get(state, {}) else "en"
 
 
-def get_by_id():
-    return LANGS[get_lang()]["by_id"]
+def get_state_lang():
+    state = get_state()
+    if not state:
+        return None, None, None
+    lang = get_lang(state)
+    return state, lang, STATES[state].get(lang) or STATES[state].get("en")
 
 
 @app.route("/")
@@ -47,15 +66,43 @@ def index():
     return send_from_directory("static", "index.html")
 
 
+@app.route("/api/states")
+def states():
+    result = []
+    for code in sorted(CONFIG.keys()):
+        cfg = CONFIG[code]
+        langs = sorted(STATES.get(code, {}).keys())
+        total = len(STATES.get(code, {}).get("en", {}).get("questions", []))
+        has_questions = total > 0
+        result.append({
+            "code": code,
+            "name": cfg["name"],
+            "agency": cfg["agency"],
+            "passing_score_pct": cfg["passing_score_pct"],
+            "test_question_count": cfg["test_question_count"],
+            "languages": langs,
+            "total_questions": total,
+            "has_questions": has_questions,
+        })
+    return jsonify({"states": result})
+
+
 @app.route("/api/metadata")
 def metadata():
-    lang = get_lang()
-    data = LANGS[lang]
+    state, lang, data = get_state_lang()
+    if not state:
+        return jsonify({"error": "Missing or invalid state parameter"}), 400
+    cfg = CONFIG[state]
+    categories = sorted(set(q["category"] for q in data["questions"])) if data else []
     return jsonify({
-        "total_questions": len(data["questions"]),
-        "categories": CATEGORIES,
-        "passing_score": data["metadata"]["passing_score"],
-        "languages": sorted(LANGS.keys()),
+        "state": state,
+        "state_name": cfg["name"],
+        "agency": cfg["agency"],
+        "total_questions": len(data["questions"]) if data else 0,
+        "categories": categories,
+        "passing_score_pct": cfg["passing_score_pct"],
+        "test_question_count": cfg["test_question_count"],
+        "languages": sorted(STATES.get(state, {}).keys()),
         "language": lang,
     })
 
@@ -63,45 +110,44 @@ def metadata():
 @app.route("/api/quiz")
 @app.route("/api/quiz/<int:count>")
 def quiz(count=50):
-    questions = get_questions()
+    state, lang, data = get_state_lang()
+    if not state or not data:
+        return jsonify({"error": "Missing or invalid state parameter"}), 400
+    questions = data["questions"]
     count = min(count, len(questions))
     selected = random.sample(questions, count)
-    quiz_questions = []
-    for q in selected:
-        quiz_questions.append({
-            "id": q["id"],
-            "category": q["category"],
-            "question": q["question"],
-            "choices": q["choices"],
-        })
-    return jsonify({"questions": quiz_questions, "total": count})
+    return jsonify({
+        "questions": [
+            {"id": q["id"], "category": q["category"], "question": q["question"], "choices": q["choices"]}
+            for q in selected
+        ],
+        "total": count,
+    })
 
 
 @app.route("/api/answer/<int:question_id>")
 def answer(question_id):
-    by_id = get_by_id()
-    q = by_id.get(question_id)
+    state, lang, data = get_state_lang()
+    if not state or not data:
+        return jsonify({"error": "Missing or invalid state parameter"}), 400
+    q = data["by_id"].get(question_id)
     if not q:
         return jsonify({"error": "Question not found"}), 404
-    return jsonify({
-        "id": q["id"],
-        "answer": q["answer"],
-        "explanation": q["explanation"],
-    })
+    return jsonify({"id": q["id"], "answer": q["answer"], "explanation": q["explanation"]})
 
 
 @app.route("/api/answers", methods=["POST"])
 def answers():
-    by_id = get_by_id()
+    state, lang, data = get_state_lang()
+    if not state or not data:
+        return jsonify({"error": "Missing or invalid state parameter"}), 400
+    by_id = data["by_id"]
     ids = request.get_json(force=True).get("ids", [])
     result = {}
     for qid in ids:
         q = by_id.get(qid)
         if q:
-            result[str(qid)] = {
-                "answer": q["answer"],
-                "explanation": q["explanation"],
-            }
+            result[str(qid)] = {"answer": q["answer"], "explanation": q["explanation"]}
     return jsonify(result)
 
 
