@@ -236,6 +236,9 @@
       <span class="miss-badge" id="q-miss-badge"></span>
     </div>
     <div class="question-text" id="q-text"></div>
+    <div id="q-image-wrap" style="display:none; text-align:center; margin:12px 0;">
+      <img id="q-image" style="max-width:100%; max-height:240px; border-radius:8px; border:1px solid #e5e7eb;" alt="Road sign">
+    </div>
     <div class="choices" id="choices"></div>
     <div class="explanation" id="explanation"></div>
     <button class="next-btn" id="next-btn" onclick="nextQuestion()"></button>
@@ -528,6 +531,10 @@ function showQuestion() {
   document.getElementById('score-wrong').textContent = wrongCount;
   document.getElementById('q-category').textContent = q.category.replace(/_/g, ' ');
   document.getElementById('q-text').textContent = q.question;
+  const imgWrap = document.getElementById('q-image-wrap');
+  const imgEl = document.getElementById('q-image');
+  if (q.image) { imgEl.src = `/signs/${currentState.code}/${q.image}`; imgWrap.style.display = 'block'; }
+  else { imgWrap.style.display = 'none'; imgEl.src = ''; }
   document.getElementById('explanation').classList.remove('visible');
   document.getElementById('next-btn').classList.remove('visible');
   const store = loadStore();

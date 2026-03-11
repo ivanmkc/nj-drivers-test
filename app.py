@@ -66,6 +66,16 @@ def index():
     return send_from_directory("static", "index.html")
 
 
+@app.route("/signs/<state>/<path:filename>")
+def serve_sign(state, filename):
+    state = state.lower()
+    signs_dir = os.path.join(STATES_DIR, state, "signs")
+    if not os.path.isdir(signs_dir):
+        # Fall back to shared signs directory
+        signs_dir = os.path.join(BASE_DIR, "signs")
+    return send_from_directory(signs_dir, filename)
+
+
 @app.route("/api/states")
 def states():
     result = []
@@ -116,13 +126,13 @@ def quiz(count=50):
     questions = data["questions"]
     count = min(count, len(questions))
     selected = random.sample(questions, count)
-    return jsonify({
-        "questions": [
-            {"id": q["id"], "category": q["category"], "question": q["question"], "choices": q["choices"]}
-            for q in selected
-        ],
-        "total": count,
-    })
+    quiz_questions = []
+    for q in selected:
+        item = {"id": q["id"], "category": q["category"], "question": q["question"], "choices": q["choices"]}
+        if q.get("image"):
+            item["image"] = q["image"]
+        quiz_questions.append(item)
+    return jsonify({"questions": quiz_questions, "total": count})
 
 
 @app.route("/api/answer/<int:question_id>")
