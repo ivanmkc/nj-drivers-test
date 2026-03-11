@@ -43,8 +43,32 @@
   .screen { display: none; }
   .screen.active { display: block; }
 
+  /* ---- Language Selector ---- */
+  .lang-bar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+  .lang-btn {
+    padding: 6px 12px;
+    border: 1.5px solid #e5e7eb;
+    background: var(--bg);
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    color: var(--gray);
+  }
+  .lang-btn.active {
+    border-color: var(--blue);
+    background: var(--blue-light);
+    color: var(--blue);
+  }
+
   /* ---- Start Screen ---- */
-  #start-screen { text-align: center; padding-top: 10vh; }
+  #start-screen { text-align: center; padding-top: 6vh; }
   #start-screen h1 { font-size: 28px; margin-bottom: 8px; color: var(--blue); }
   #start-screen .subtitle {
     color: var(--gray); margin-bottom: 24px; font-size: 15px; line-height: 1.5;
@@ -64,66 +88,31 @@
     justify-content: space-between;
     align-items: center;
   }
-  .past-stats-banner .stat-group {
-    display: flex;
-    gap: 16px;
-  }
-  .past-stats-banner .stat {
-    text-align: center;
-  }
-  .past-stats-banner .stat .num {
-    font-size: 22px;
-    font-weight: 700;
-  }
+  .past-stats-banner .stat-group { display: flex; gap: 16px; }
+  .past-stats-banner .stat { text-align: center; }
+  .past-stats-banner .stat .num { font-size: 22px; font-weight: 700; }
   .past-stats-banner .stat .lbl {
-    font-size: 11px;
-    color: var(--gray);
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
+    font-size: 11px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.3px;
   }
   .past-stats-banner .view-link {
-    color: var(--blue);
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
-    white-space: nowrap;
+    color: var(--blue); font-size: 14px; font-weight: 600;
+    cursor: pointer; text-decoration: none; white-space: nowrap;
   }
 
-  .mode-selector {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 16px;
-  }
+  .mode-selector { display: flex; gap: 8px; margin-bottom: 16px; }
   .mode-btn {
-    flex: 1;
-    padding: 12px 8px;
-    border: 2px solid #e5e7eb;
-    background: var(--bg);
-    border-radius: var(--radius);
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.15s;
-    text-align: center;
+    flex: 1; padding: 12px 8px; border: 2px solid #e5e7eb; background: var(--bg);
+    border-radius: var(--radius); font-size: 14px; font-weight: 600;
+    cursor: pointer; transition: all 0.15s; text-align: center;
   }
-  .mode-btn.active {
-    border-color: var(--blue);
-    background: var(--blue-light);
-    color: var(--blue);
-  }
+  .mode-btn.active { border-color: var(--blue); background: var(--blue-light); color: var(--blue); }
   .mode-btn .mode-icon { font-size: 20px; display: block; margin-bottom: 4px; }
   .mode-btn .mode-desc { font-size: 11px; font-weight: 400; color: var(--gray); display: block; }
   .mode-btn.active .mode-desc { color: var(--blue); }
   .weak-count {
-    display: inline-block;
-    background: var(--red);
-    color: white;
-    font-size: 11px;
-    padding: 1px 6px;
-    border-radius: 10px;
-    margin-left: 4px;
-    font-weight: 700;
+    display: inline-block; background: var(--red); color: white;
+    font-size: 11px; padding: 1px 6px; border-radius: 10px;
+    margin-left: 4px; font-weight: 700;
   }
 
   .count-selector {
@@ -144,8 +133,7 @@
   .start-btn:active { opacity: 0.8; }
   .start-btn:disabled { opacity: 0.5; cursor: default; }
   .start-btn.secondary {
-    background: var(--bg); color: var(--blue); border: 2px solid var(--blue);
-    margin-top: 10px;
+    background: var(--bg); color: var(--blue); border: 2px solid var(--blue); margin-top: 10px;
   }
 
   /* ---- Quiz Screen ---- */
@@ -154,10 +142,8 @@
     margin-bottom: 16px; overflow: hidden;
   }
   .progress-fill {
-    height: 100%; background: var(--blue); border-radius: 3px;
-    transition: width 0.3s ease;
+    height: 100%; background: var(--blue); border-radius: 3px; transition: width 0.3s ease;
   }
-
   .quiz-header {
     display: flex; justify-content: space-between; align-items: center;
     margin-bottom: 12px; font-size: 14px; color: var(--gray);
@@ -178,7 +164,6 @@
   }
 
   .question-text { font-size: 18px; font-weight: 600; line-height: 1.5; margin-bottom: 20px; }
-
   .choices { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
 
   .choice-btn {
@@ -274,7 +259,7 @@
   .chart-container canvas { width: 100%; height: 180px; }
   .chart-empty {
     height: 120px; display: flex; align-items: center; justify-content: center;
-    color: var(--gray); font-size: 14px;
+    color: var(--gray); font-size: 14px; text-align: center;
   }
 
   .weak-section { margin-bottom: 24px; }
@@ -290,8 +275,7 @@
   .category-bars { margin-bottom: 24px; }
   .category-bars h4 { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
   .cat-bar-row {
-    display: flex; align-items: center; gap: 10px; margin-bottom: 8px;
-    font-size: 13px;
+    display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 13px;
   }
   .cat-bar-label {
     width: 110px; flex-shrink: 0; text-transform: capitalize;
@@ -319,33 +303,33 @@
 
   <!-- Start Screen -->
   <div id="start-screen" class="screen active">
-    <h1>NJ Driver's Test</h1>
-    <p class="subtitle">Practice for your New Jersey MVC written test.<br>
-    Based on the 2025 NJ Driver Manual + real test questions.</p>
+    <div class="lang-bar" id="lang-bar"></div>
+    <h1 data-i18n="title"></h1>
+    <p class="subtitle" data-i18n-html="subtitle"></p>
 
     <div class="past-stats-banner" id="past-stats-banner">
       <div class="row">
         <div class="stat-group">
-          <div class="stat"><div class="num" id="banner-quizzes">0</div><div class="lbl">Quizzes</div></div>
-          <div class="stat"><div class="num" id="banner-avg">0%</div><div class="lbl">Avg Score</div></div>
-          <div class="stat"><div class="num" id="banner-streak">0</div><div class="lbl">Pass Streak</div></div>
+          <div class="stat"><div class="num" id="banner-quizzes">0</div><div class="lbl" data-i18n="quizzes"></div></div>
+          <div class="stat"><div class="num" id="banner-avg">0%</div><div class="lbl" data-i18n="avgScore"></div></div>
+          <div class="stat"><div class="num" id="banner-streak">0</div><div class="lbl" data-i18n="passStreak"></div></div>
         </div>
-        <a class="view-link" onclick="showStats()">View Stats &rsaquo;</a>
+        <a class="view-link" onclick="showStats()" data-i18n="viewStats"></a>
       </div>
     </div>
 
     <div class="mode-selector">
       <button class="mode-btn active" id="mode-random" onclick="setMode('random')">
-        <span class="mode-icon">&#127922;</span> Random
-        <span class="mode-desc">All questions</span>
+        <span class="mode-icon">&#127922;</span> <span data-i18n="modeRandom"></span>
+        <span class="mode-desc" data-i18n="modeRandomDesc"></span>
       </button>
       <button class="mode-btn" id="mode-weak" onclick="setMode('weak')">
-        <span class="mode-icon">&#127919;</span> Weak Spots <span class="weak-count" id="weak-count" style="display:none"></span>
-        <span class="mode-desc">Most missed</span>
+        <span class="mode-icon">&#127919;</span> <span data-i18n="modeWeak"></span> <span class="weak-count" id="weak-count" style="display:none"></span>
+        <span class="mode-desc" data-i18n="modeWeakDesc"></span>
       </button>
     </div>
 
-    <p style="font-weight:600; margin-bottom:8px; font-size:15px;">Number of questions:</p>
+    <p style="font-weight:600; margin-bottom:8px; font-size:15px;" data-i18n="numQuestions"></p>
     <div class="count-selector">
       <button class="count-btn" data-count="10">10</button>
       <button class="count-btn" data-count="25">25</button>
@@ -353,7 +337,7 @@
       <button class="count-btn" data-count="100">100</button>
       <button class="count-btn" data-count="298">All</button>
     </div>
-    <button class="start-btn" id="start-btn" onclick="startQuiz()">Start Quiz</button>
+    <button class="start-btn" id="start-btn" onclick="startQuiz()" data-i18n="startQuiz"></button>
   </div>
 
   <!-- Quiz Screen -->
@@ -370,7 +354,7 @@
     <div class="question-text" id="q-text"></div>
     <div class="choices" id="choices"></div>
     <div class="explanation" id="explanation"></div>
-    <button class="next-btn" id="next-btn" onclick="nextQuestion()">Next</button>
+    <button class="next-btn" id="next-btn" onclick="nextQuestion()"></button>
   </div>
 
   <!-- Results Screen -->
@@ -381,8 +365,8 @@
     </div>
     <div class="result-msg" id="result-msg"></div>
     <div class="result-detail" id="result-detail"></div>
-    <button class="start-btn" onclick="goHome()">New Quiz</button>
-    <button class="start-btn secondary" onclick="showStats()">View Stats</button>
+    <button class="start-btn" onclick="goHome()" data-i18n="newQuiz"></button>
+    <button class="start-btn secondary" onclick="showStats()" data-i18n="viewStats"></button>
     <div class="review-section" id="review-section">
       <h3 id="review-title"></h3>
       <div id="review-list"></div>
@@ -391,43 +375,88 @@
 
   <!-- Stats Screen -->
   <div id="stats-screen" class="screen">
-    <button class="stats-back" onclick="goHome()">&larr; Back</button>
-    <div class="stats-title">Your Progress</div>
+    <button class="stats-back" onclick="goHome()"><span>&larr;</span> <span data-i18n="back"></span></button>
+    <div class="stats-title" data-i18n="yourProgress"></div>
 
     <div class="stats-grid">
-      <div class="stat-card"><div class="num blue" id="s-total">0</div><div class="lbl">Quizzes</div></div>
-      <div class="stat-card"><div class="num green" id="s-avg">0%</div><div class="lbl">Avg Score</div></div>
-      <div class="stat-card"><div class="num" id="s-seen">0</div><div class="lbl">Q's Seen</div></div>
+      <div class="stat-card"><div class="num blue" id="s-total">0</div><div class="lbl" data-i18n="quizzes"></div></div>
+      <div class="stat-card"><div class="num green" id="s-avg">0%</div><div class="lbl" data-i18n="avgScore"></div></div>
+      <div class="stat-card"><div class="num" id="s-seen">0</div><div class="lbl" data-i18n="qsSeen"></div></div>
     </div>
     <div class="stats-grid" style="grid-template-columns: 1fr 1fr;">
-      <div class="stat-card"><div class="num green" id="s-streak">0</div><div class="lbl">Pass Streak</div></div>
-      <div class="stat-card"><div class="num" id="s-best">0%</div><div class="lbl">Best Score</div></div>
+      <div class="stat-card"><div class="num green" id="s-streak">0</div><div class="lbl" data-i18n="passStreak"></div></div>
+      <div class="stat-card"><div class="num" id="s-best">0%</div><div class="lbl" data-i18n="bestScore"></div></div>
     </div>
 
     <div class="chart-container">
-      <h4>Score History</h4>
+      <h4 data-i18n="scoreHistory"></h4>
       <canvas id="chart" height="180"></canvas>
-      <div class="chart-empty" id="chart-empty">Take a quiz to see your progress</div>
+      <div class="chart-empty" id="chart-empty"></div>
     </div>
 
     <div class="category-bars" id="cat-bars-section">
-      <h4>Accuracy by Category</h4>
+      <h4 data-i18n="accuracyByCategory"></h4>
       <div id="cat-bars"></div>
     </div>
 
     <div class="weak-section" id="weak-section">
-      <h4>Most Missed Questions</h4>
+      <h4 data-i18n="mostMissed"></h4>
       <div id="weak-list"></div>
     </div>
 
     <div class="danger-zone">
-      <button class="danger-btn" onclick="clearData()">Reset All Progress</button>
+      <button class="danger-btn" onclick="clearData()" data-i18n="resetAll"></button>
     </div>
   </div>
 
 </div>
 
 <script>
+// ---- i18n ----
+let I18N = {};
+let currentLang = localStorage.getItem('nj_quiz_lang') || 'en';
+const LANG_LABELS = { en: 'EN', ja: '日本語', es: 'ES' };
+
+async function loadI18n() {
+  const res = await fetch('/static/i18n.json');
+  I18N = await res.json();
+}
+
+function t(key) {
+  return (I18N[currentLang] && I18N[currentLang][key]) || (I18N['en'] && I18N['en'][key]) || key;
+}
+
+function applyI18n() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    el.textContent = t(el.dataset.i18n);
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    el.innerHTML = t(el.dataset.i18nHtml);
+  });
+  document.documentElement.lang = currentLang;
+}
+
+function buildLangBar() {
+  const bar = document.getElementById('lang-bar');
+  const available = Object.keys(I18N);
+  bar.innerHTML = available.map(lang =>
+    `<button class="lang-btn ${lang === currentLang ? 'active' : ''}" onclick="switchLang('${lang}')">${LANG_LABELS[lang] || lang.toUpperCase()}</button>`
+  ).join('');
+}
+
+function switchLang(lang) {
+  if (!I18N[lang]) return;
+  currentLang = lang;
+  localStorage.setItem('nj_quiz_lang', lang);
+  applyI18n();
+  buildLangBar();
+  updateStartScreen();
+}
+
+function langParam() {
+  return `lang=${currentLang}`;
+}
+
 // ---- Storage ----
 const STORE_KEY = 'nj_quiz';
 
@@ -450,15 +479,17 @@ let correctCount = 0;
 let wrongCount = 0;
 let answered = false;
 let selectedCount = 50;
-let quizMode = 'random'; // 'random' | 'weak'
+let quizMode = 'random';
 let sessionResults = [];
 
 // ---- Init ----
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  await loadI18n();
+  applyI18n();
+  buildLangBar();
   updateStartScreen();
 });
 
-// Count selector
 document.querySelectorAll('.count-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.count-btn').forEach(b => b.classList.remove('active'));
@@ -476,10 +507,10 @@ function setMode(mode) {
   const startBtn = document.getElementById('start-btn');
   if (mode === 'weak' && weakIds.length === 0) {
     startBtn.disabled = true;
-    startBtn.textContent = 'No weak spots yet';
+    startBtn.textContent = t('noWeakSpots');
   } else {
     startBtn.disabled = false;
-    startBtn.textContent = 'Start Quiz';
+    startBtn.textContent = t('startQuiz');
   }
 }
 
@@ -541,11 +572,8 @@ function goHome() {
 
 // ---- Quiz ----
 async function startQuiz() {
-  if (quizMode === 'weak') {
-    await startWeakQuiz();
-    return;
-  }
-  const res = await fetch(`/api/quiz/${selectedCount}`);
+  if (quizMode === 'weak') { await startWeakQuiz(); return; }
+  const res = await fetch(`/api/quiz/${selectedCount}?${langParam()}`);
   const data = await res.json();
   questions = data.questions;
   beginQuiz();
@@ -557,12 +585,10 @@ async function startWeakQuiz() {
   if (weakIds.length === 0) return;
   const count = Math.min(selectedCount, weakIds.length);
   const ids = weakIds.slice(0, count).map(w => w.id);
-  // Fetch all questions then filter to weak ones
-  const res = await fetch(`/api/quiz/298`);
+  const res = await fetch(`/api/quiz/298?${langParam()}`);
   const data = await res.json();
   const idSet = new Set(ids);
   questions = data.questions.filter(q => idSet.has(q.id));
-  // Shuffle
   for (let i = questions.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [questions[i], questions[j]] = [questions[j], questions[i]];
@@ -592,13 +618,12 @@ function showQuestion() {
   document.getElementById('explanation').classList.remove('visible');
   document.getElementById('next-btn').classList.remove('visible');
 
-  // Show miss history badge
   const store = loadStore();
   const qData = store.questions[q.id];
   const missBadge = document.getElementById('q-miss-badge');
   if (qData && qData.wrong > 0) {
     const rate = Math.round((qData.wrong / qData.seen) * 100);
-    missBadge.textContent = `Missed ${rate}%`;
+    missBadge.textContent = `${t('missed')} ${rate}%`;
     missBadge.style.display = 'inline-block';
   } else {
     missBadge.style.display = 'none';
@@ -620,7 +645,7 @@ async function selectAnswer(letter, btn) {
   if (answered) return;
   answered = true;
 
-  const res = await fetch(`/api/answer/${questions[currentIdx].id}`);
+  const res = await fetch(`/api/answer/${questions[currentIdx].id}?${langParam()}`);
   const data = await res.json();
   const correct = data.answer;
   const isCorrect = letter === correct;
@@ -638,7 +663,6 @@ async function selectAnswer(letter, btn) {
     if (correctIdx >= 0 && allBtns[correctIdx]) allBtns[correctIdx].classList.add('correct');
   }
 
-  // Record per-question stats
   const store = loadStore();
   const qid = questions[currentIdx].id;
   if (!store.questions[qid]) store.questions[qid] = { seen: 0, wrong: 0, category: questions[currentIdx].category };
@@ -663,16 +687,13 @@ async function selectAnswer(letter, btn) {
   document.getElementById('score-wrong').textContent = wrongCount;
 
   const nextBtn = document.getElementById('next-btn');
-  nextBtn.textContent = currentIdx < questions.length - 1 ? 'Next' : 'See Results';
+  nextBtn.textContent = currentIdx < questions.length - 1 ? t('next') : t('seeResults');
   nextBtn.classList.add('visible');
 }
 
 function nextQuestion() {
   currentIdx++;
-  if (currentIdx >= questions.length) {
-    showResults();
-    return;
-  }
+  if (currentIdx >= questions.length) { showResults(); return; }
   showQuestion();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -682,7 +703,6 @@ function showResults() {
   const pct = Math.round((correctCount / questions.length) * 100);
   const pass = pct >= 80;
 
-  // Save to history
   const store = loadStore();
   store.history.push({
     date: new Date().toISOString(),
@@ -698,28 +718,28 @@ function showResults() {
   const circle = document.getElementById('results-circle');
   circle.className = `results-circle ${pass ? 'pass' : 'fail'}`;
   document.getElementById('results-pct').textContent = `${pct}%`;
-  document.getElementById('results-label').textContent = pass ? 'PASS' : 'FAIL';
-  document.getElementById('result-msg').textContent = pass ? 'Congratulations!' : 'Keep Practicing!';
+  document.getElementById('results-label').textContent = pass ? t('pass') : t('fail');
+  document.getElementById('result-msg').textContent = pass ? t('congratulations') : t('keepPracticing');
   document.getElementById('result-detail').textContent =
-    `You got ${correctCount} out of ${questions.length} correct. You need 80% to pass the actual MVC test.`;
+    t('resultDetail').replace('{correct}', correctCount).replace('{total}', questions.length);
 
   const wrongResults = sessionResults.filter(r => !r.correct);
   const reviewTitle = document.getElementById('review-title');
   const reviewList = document.getElementById('review-list');
 
   if (wrongResults.length > 0) {
-    reviewTitle.textContent = `Review Missed Questions (${wrongResults.length})`;
+    reviewTitle.textContent = t('reviewMissed').replace('{count}', wrongResults.length);
     reviewList.innerHTML = wrongResults.map(r => `
       <div class="review-item was-wrong">
         <div class="rq">${esc(r.question)}</div>
-        <div class="ra">Your answer: <strong>${r.yourAnswer}: ${esc(r.yourAnswerText)}</strong></div>
-        <div class="ra">Correct: <strong>${r.correctAnswer}: ${esc(r.correctAnswerText)}</strong></div>
+        <div class="ra">${t('yourAnswer')}: <strong>${r.yourAnswer}: ${esc(r.yourAnswerText)}</strong></div>
+        <div class="ra">${t('correct')}: <strong>${r.correctAnswer}: ${esc(r.correctAnswerText)}</strong></div>
         <div class="ra" style="margin-top:6px; font-style:italic;">${esc(r.explanation)}</div>
       </div>
     `).join('');
   } else {
-    reviewTitle.textContent = 'Perfect Score!';
-    reviewList.innerHTML = '<p style="color:#6b7280;">You answered every question correctly.</p>';
+    reviewTitle.textContent = t('perfectScore');
+    reviewList.innerHTML = `<p style="color:#6b7280;">${t('perfectMsg')}</p>`;
   }
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -737,8 +757,8 @@ function showStats() {
   const h = store.history;
 
   showScreen('stats-screen');
+  applyI18n();
 
-  // Summary stats
   document.getElementById('s-total').textContent = h.length;
   const avg = h.length ? Math.round(h.reduce((s, r) => s + r.pct, 0) / h.length) : 0;
   document.getElementById('s-avg').textContent = avg + '%';
@@ -752,20 +772,18 @@ function showStats() {
   }
   document.getElementById('s-streak').textContent = streak;
 
-  // Chart
   const canvas = document.getElementById('chart');
   const emptyMsg = document.getElementById('chart-empty');
   if (h.length < 2) {
     canvas.style.display = 'none';
     emptyMsg.style.display = 'flex';
-    emptyMsg.textContent = h.length === 0 ? 'Take a quiz to see your progress' : 'Take one more quiz to see the chart';
+    emptyMsg.textContent = h.length === 0 ? t('chartEmpty') : t('chartOneMore');
   } else {
     canvas.style.display = 'block';
     emptyMsg.style.display = 'none';
     drawChart(canvas, h);
   }
 
-  // Category accuracy bars
   const catStats = {};
   for (const [id, data] of Object.entries(store.questions)) {
     const cat = data.category || 'unknown';
@@ -774,11 +792,9 @@ function showStats() {
     catStats[cat].correct += data.seen - data.wrong;
   }
   const catBars = document.getElementById('cat-bars');
-  const sortedCats = Object.entries(catStats).sort((a, b) => {
-    const pctA = a[1].correct / a[1].seen;
-    const pctB = b[1].correct / b[1].seen;
-    return pctA - pctB;
-  });
+  const sortedCats = Object.entries(catStats).sort((a, b) =>
+    (a[1].correct / a[1].seen) - (b[1].correct / b[1].seen)
+  );
 
   if (sortedCats.length === 0) {
     document.getElementById('cat-bars-section').style.display = 'none';
@@ -795,7 +811,6 @@ function showStats() {
     }).join('');
   }
 
-  // Weak questions
   const weakIds = getWeakQuestionIds(store);
   const weakSection = document.getElementById('weak-section');
   const weakList = document.getElementById('weak-list');
@@ -808,7 +823,7 @@ function showStats() {
       const rate = Math.round(w.missRate * 100);
       return `<div class="weak-item">
         <div class="wq">Q${w.id}</div>
-        <div class="wm">Missed <span class="miss-pct">${w.wrong}/${w.seen} (${rate}%)</span> &middot; ${(qData.category || '').replace(/_/g, ' ')}</div>
+        <div class="wm">${t('missed')} <span class="miss-pct">${w.wrong}/${w.seen} (${rate}%)</span> &middot; ${(qData.category || '').replace(/_/g, ' ')}</div>
       </div>`;
     }).join('');
   }
@@ -816,7 +831,7 @@ function showStats() {
   window.scrollTo({ top: 0 });
 }
 
-// ---- Chart Drawing ----
+// ---- Chart ----
 function drawChart(canvas, history) {
   const dpr = window.devicePixelRatio || 1;
   const rect = canvas.getBoundingClientRect();
@@ -825,98 +840,66 @@ function drawChart(canvas, history) {
   canvas.style.height = '180px';
   const ctx = canvas.getContext('2d');
   ctx.scale(dpr, dpr);
-  const W = rect.width;
-  const H = 180;
+  const W = rect.width, H = 180;
   const pad = { top: 20, right: 16, bottom: 30, left: 36 };
   const plotW = W - pad.left - pad.right;
   const plotH = H - pad.top - pad.bottom;
 
-  // Show last 20 quizzes max
   const data = history.slice(-20);
   const n = data.length;
 
   ctx.clearRect(0, 0, W, H);
 
-  // Grid lines and Y labels
-  ctx.strokeStyle = '#e5e7eb';
-  ctx.lineWidth = 1;
-  ctx.fillStyle = '#9ca3af';
-  ctx.font = '11px -apple-system, sans-serif';
+  ctx.strokeStyle = '#e5e7eb'; ctx.lineWidth = 1;
+  ctx.fillStyle = '#9ca3af'; ctx.font = '11px -apple-system, sans-serif';
   ctx.textAlign = 'right';
   for (let pct of [0, 25, 50, 75, 100]) {
     const y = pad.top + plotH - (pct / 100) * plotH;
-    ctx.beginPath();
-    ctx.moveTo(pad.left, y);
-    ctx.lineTo(W - pad.right, y);
-    ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(pad.left, y); ctx.lineTo(W - pad.right, y); ctx.stroke();
     ctx.fillText(pct + '%', pad.left - 6, y + 4);
   }
 
-  // 80% pass line
   const passY = pad.top + plotH - (80 / 100) * plotH;
-  ctx.strokeStyle = '#16a34a40';
-  ctx.lineWidth = 2;
-  ctx.setLineDash([6, 4]);
-  ctx.beginPath();
-  ctx.moveTo(pad.left, passY);
-  ctx.lineTo(W - pad.right, passY);
-  ctx.stroke();
+  ctx.strokeStyle = '#16a34a40'; ctx.lineWidth = 2; ctx.setLineDash([6, 4]);
+  ctx.beginPath(); ctx.moveTo(pad.left, passY); ctx.lineTo(W - pad.right, passY); ctx.stroke();
   ctx.setLineDash([]);
 
-  // Points
   const points = data.map((d, i) => ({
     x: pad.left + (n === 1 ? plotW / 2 : (i / (n - 1)) * plotW),
-    y: pad.top + plotH - (d.pct / 100) * plotH,
-    pct: d.pct,
+    y: pad.top + plotH - (d.pct / 100) * plotH, pct: d.pct,
   }));
 
-  // Line
-  ctx.strokeStyle = '#1a56db';
-  ctx.lineWidth = 2.5;
-  ctx.lineJoin = 'round';
+  ctx.strokeStyle = '#1a56db'; ctx.lineWidth = 2.5; ctx.lineJoin = 'round';
   ctx.beginPath();
   points.forEach((p, i) => i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y));
   ctx.stroke();
 
-  // Area fill
   ctx.beginPath();
   points.forEach((p, i) => i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y));
   ctx.lineTo(points[points.length - 1].x, pad.top + plotH);
-  ctx.lineTo(points[0].x, pad.top + plotH);
-  ctx.closePath();
+  ctx.lineTo(points[0].x, pad.top + plotH); ctx.closePath();
   const grad = ctx.createLinearGradient(0, pad.top, 0, pad.top + plotH);
   grad.addColorStop(0, 'rgba(26, 86, 219, 0.2)');
   grad.addColorStop(1, 'rgba(26, 86, 219, 0.02)');
-  ctx.fillStyle = grad;
-  ctx.fill();
+  ctx.fillStyle = grad; ctx.fill();
 
-  // Dots
   points.forEach(p => {
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, 4, 0, Math.PI * 2);
-    ctx.fillStyle = p.pct >= 80 ? '#16a34a' : '#dc2626';
-    ctx.fill();
-    ctx.strokeStyle = '#fff';
-    ctx.lineWidth = 2;
-    ctx.stroke();
+    ctx.beginPath(); ctx.arc(p.x, p.y, 4, 0, Math.PI * 2);
+    ctx.fillStyle = p.pct >= 80 ? '#16a34a' : '#dc2626'; ctx.fill();
+    ctx.strokeStyle = '#fff'; ctx.lineWidth = 2; ctx.stroke();
   });
 
-  // X labels (quiz numbers)
-  ctx.fillStyle = '#9ca3af';
-  ctx.font = '10px -apple-system, sans-serif';
-  ctx.textAlign = 'center';
+  ctx.fillStyle = '#9ca3af'; ctx.font = '10px -apple-system, sans-serif'; ctx.textAlign = 'center';
   const startNum = history.length - data.length + 1;
   const step = n <= 10 ? 1 : n <= 20 ? 2 : 5;
   points.forEach((p, i) => {
-    if (i % step === 0 || i === n - 1) {
-      ctx.fillText('#' + (startNum + i), p.x, H - pad.bottom + 16);
-    }
+    if (i % step === 0 || i === n - 1) ctx.fillText('#' + (startNum + i), p.x, H - pad.bottom + 16);
   });
 }
 
-// ---- Clear Data ----
+// ---- Clear ----
 function clearData() {
-  if (confirm('This will erase all your quiz history and question tracking. Continue?')) {
+  if (confirm(t('resetConfirm'))) {
     localStorage.removeItem(STORE_KEY);
     goHome();
   }
