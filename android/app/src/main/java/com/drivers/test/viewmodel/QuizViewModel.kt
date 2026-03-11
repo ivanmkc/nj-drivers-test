@@ -1,6 +1,7 @@
 package com.drivers.test.viewmodel
 
 import android.app.Application
+import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateListOf
@@ -13,7 +14,6 @@ import com.drivers.test.repository.ApiClient
 import com.drivers.test.repository.LocalStore
 import com.drivers.test.repository.Localizer
 import kotlinx.coroutines.launch
-import kotlin.math.ceil
 import kotlin.math.roundToInt
 
 class QuizViewModel(application: Application) : AndroidViewModel(application) {
@@ -135,6 +135,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
                     }
                 }
             } catch (e: Exception) {
+                Log.e("QuizVM", "Failed to load states", e)
                 errorMessage = "Failed to load states. Make sure the server is running."
             }
             isLoading = false
@@ -179,7 +180,8 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
                 sessionResults.clear()
                 answered = false; selectedAnswer = null; correctAnswer = null; explanation = null
                 screen = AppScreen.QUIZ
-            } catch (_: Exception) {
+            } catch (e: Exception) {
+                Log.e("QuizVM", "Failed to load quiz", e)
                 errorMessage = "Failed to load quiz."
             }
             isLoading = false
@@ -214,7 +216,8 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
                     correctAnswer = response.answer, correctAnswerText = q.choices[response.answer] ?: "",
                     correct = isCorrect, explanation = response.explanation,
                 ))
-            } catch (_: Exception) {
+            } catch (e: Exception) {
+                Log.e("QuizVM", "Failed to check answer", e)
                 errorMessage = "Failed to check answer."
             }
         }

@@ -62,7 +62,7 @@ struct ResultsScreen: View {
                         .foregroundColor(AppTheme.blue)
                         .frame(maxWidth: .infinity)
                         .padding(16)
-                        .background(Color.white)
+                        .background(AppTheme.card)
                         .overlay(
                             RoundedRectangle(cornerRadius: 12)
                                 .stroke(AppTheme.blue, lineWidth: 2)

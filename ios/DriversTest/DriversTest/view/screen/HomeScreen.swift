@@ -25,10 +25,9 @@ struct HomeScreen: View {
                 .foregroundColor(AppTheme.gray)
 
                 if let state = vm.currentState {
-                    let passCount = Int(ceil(Double(state.testQuestionCount) * Double(state.passingScorePct) / 100.0))
                     Text(localizer.t("passingScore", vars: [
                         "pass_pct": "\(state.passingScorePct)",
-                        "pass_count": "\(passCount)",
+                        "pass_count": "\(state.passCount)",
                         "test_count": "\(state.testQuestionCount)",
                     ]))
                     .font(.system(size: 13))
@@ -73,7 +72,7 @@ struct HomeScreen: View {
                                 .padding(.horizontal, 20)
                                 .padding(.vertical, 10)
                                 .foregroundColor(vm.selectedCount == count ? .white : AppTheme.blue)
-                                .background(vm.selectedCount == count ? AppTheme.blue : Color.white)
+                                .background(vm.selectedCount == count ? AppTheme.blue : AppTheme.card)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 12)
                                         .stroke(AppTheme.blue, lineWidth: 2)

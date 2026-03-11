@@ -12,7 +12,7 @@ struct QuizScreen: View {
                     GeometryReader { geo in
                         ZStack(alignment: .leading) {
                             RoundedRectangle(cornerRadius: 3)
-                                .fill(Color(.systemGray4))
+                                .fill(AppTheme.border)
                                 .frame(height: 6)
                             RoundedRectangle(cornerRadius: 3)
                                 .fill(AppTheme.blue)
@@ -81,7 +81,7 @@ struct QuizScreen: View {
                                     .clipShape(RoundedRectangle(cornerRadius: 8))
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 8)
-                                            .stroke(Color(.systemGray4), lineWidth: 1)
+                                            .stroke(AppTheme.border, lineWidth: 1)
                                     )
                             } placeholder: {
                                 ProgressView()
@@ -111,7 +111,7 @@ struct QuizScreen: View {
                                 Text(explanation)
                                     .font(.system(size: 14))
                                     .lineSpacing(4)
-                                    .foregroundColor(Color(.darkGray))
+                                    .foregroundColor(.secondary)
                                     .padding(12)
                             }
                             .background(AppTheme.blueLight)

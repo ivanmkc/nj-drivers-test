@@ -1,14 +1,6 @@
 import Foundation
 import SwiftUI
 
-enum AppScreen {
-    case statePicker
-    case home
-    case quiz
-    case results
-    case stats
-}
-
 @MainActor
 class QuizViewModel: ObservableObject {
     @Published var screen: AppScreen = .statePicker
@@ -202,11 +194,10 @@ class QuizViewModel: ObservableObject {
             // Update store
             var s = storage.loadStore(for: state.code)
             let idStr = String(q.id)
-            if s.questions[idStr] == nil {
-                s.questions[idStr] = QuestionRecord(seen: 0, wrong: 0, category: q.category)
-            }
-            s.questions[idStr]!.seen += 1
-            if !isCorrect { s.questions[idStr]!.wrong += 1 }
+            var record = s.questions[idStr] ?? QuestionRecord(seen: 0, wrong: 0, category: q.category)
+            record.seen += 1
+            if !isCorrect { record.wrong += 1 }
+            s.questions[idStr] = record
             storage.saveStore(s, for: state.code)
 
             sessionResults.append(SessionResult(

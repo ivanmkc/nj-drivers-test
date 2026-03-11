@@ -10,4 +10,8 @@ struct AppTheme {
     static let orange = Color("Orange")
     static let gray = Color("Gray")
     static let grayLight = Color("GrayLight")
+
+    // Theme-aware surface colors
+    static let card = Color(UIColor.secondarySystemGroupedBackground)
+    static let border = Color(UIColor.separator)
 }

@@ -3,6 +3,8 @@ import Foundation
 class LocalStore {
     static let shared = LocalStore()
     private let defaults = UserDefaults.standard
+    private let encoder = JSONEncoder()
+    private let decoder = JSONDecoder()
 
     private func storeKey(for stateCode: String) -> String {
         "quiz_\(stateCode)"
@@ -10,14 +12,14 @@ class LocalStore {
 
     func loadStore(for stateCode: String) -> QuizStore {
         guard let data = defaults.data(forKey: storeKey(for: stateCode)),
-              let store = try? JSONDecoder().decode(QuizStore.self, from: data) else {
+              let store = try? decoder.decode(QuizStore.self, from: data) else {
             return .empty
         }
         return store
     }
 
     func saveStore(_ store: QuizStore, for stateCode: String) {
-        if let data = try? JSONEncoder().encode(store) {
+        if let data = try? encoder.encode(store) {
             defaults.set(data, forKey: storeKey(for: stateCode))
         }
     }
@@ -26,19 +28,16 @@ class LocalStore {
         defaults.removeObject(forKey: storeKey(for: stateCode))
     }
 
-    // Saved state code
     var savedStateCode: String? {
         get { defaults.string(forKey: "quiz_state") }
         set { defaults.set(newValue, forKey: "quiz_state") }
     }
 
-    // Language
     var savedLanguage: String {
         get { defaults.string(forKey: "quiz_lang") ?? "en" }
         set { defaults.set(newValue, forKey: "quiz_lang") }
     }
 
-    // Weak questions
     func getWeakQuestions(for stateCode: String) -> [WeakQuestion] {
         let store = loadStore(for: stateCode)
         var weak: [WeakQuestion] = []

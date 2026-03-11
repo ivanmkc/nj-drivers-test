@@ -24,10 +24,10 @@ struct LanguageBarView: View {
                         .padding(.horizontal, 12)
                         .padding(.vertical, 6)
                         .foregroundColor(lang == localizer.currentLang ? AppTheme.blue : AppTheme.gray)
-                        .background(lang == localizer.currentLang ? AppTheme.blueLight : Color.white)
+                        .background(lang == localizer.currentLang ? AppTheme.blueLight : AppTheme.card)
                         .overlay(
                             RoundedRectangle(cornerRadius: 20)
-                                .stroke(lang == localizer.currentLang ? AppTheme.blue : Color(.systemGray4), lineWidth: 1.5)
+                                .stroke(lang == localizer.currentLang ? AppTheme.blue : AppTheme.border, lineWidth: 1.5)
                         )
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                 }
@@ -77,10 +77,10 @@ struct StatsBannerView: View {
             }
         }
         .padding(14)
-        .background(Color.white)
+        .background(AppTheme.card)
         .overlay(
             RoundedRectangle(cornerRadius: 12)
-                .stroke(Color(.systemGray4), lineWidth: 1)
+                .stroke(AppTheme.border, lineWidth: 1)
         )
         .clipShape(RoundedRectangle(cornerRadius: 12))
     }
@@ -119,10 +119,10 @@ struct ModeButton: View {
             .frame(maxWidth: .infinity)
             .padding(12)
             .foregroundColor(isActive ? AppTheme.blue : .primary)
-            .background(isActive ? AppTheme.blueLight : Color.white)
+            .background(isActive ? AppTheme.blueLight : AppTheme.card)
             .overlay(
                 RoundedRectangle(cornerRadius: 12)
-                    .stroke(isActive ? AppTheme.blue : Color(.systemGray4), lineWidth: 2)
+                    .stroke(isActive ? AppTheme.blue : AppTheme.border, lineWidth: 2)
             )
             .clipShape(RoundedRectangle(cornerRadius: 12))
         }
@@ -198,7 +198,7 @@ struct ChoiceButton: View {
         switch state {
         case .correct: return AppTheme.green
         case .wrong: return AppTheme.red
-        default: return Color(.systemGray4)
+        default: return AppTheme.border
         }
     }
 }
@@ -238,7 +238,7 @@ struct ReviewItemView: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(14)
-        .background(Color.white)
+        .background(AppTheme.card)
         .overlay(
             HStack(spacing: 0) {
                 Rectangle()
@@ -270,10 +270,10 @@ struct StatCardView: View {
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 16)
-        .background(Color.white)
+        .background(AppTheme.card)
         .overlay(
             RoundedRectangle(cornerRadius: 12)
-                .stroke(Color(.systemGray4), lineWidth: 1)
+                .stroke(AppTheme.border, lineWidth: 1)
         )
         .clipShape(RoundedRectangle(cornerRadius: 12))
     }
@@ -301,7 +301,7 @@ struct CategoryBarView: View {
             GeometryReader { geo in
                 ZStack(alignment: .leading) {
                     RoundedRectangle(cornerRadius: 5)
-                        .fill(Color(.systemGray4))
+                        .fill(AppTheme.border)
                         .frame(height: 10)
                     RoundedRectangle(cornerRadius: 5)
                         .fill(barColor)
@@ -345,7 +345,7 @@ struct WeakItemView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.horizontal, 14)
         .padding(.vertical, 12)
-        .background(Color.white)
+        .background(AppTheme.card)
         .overlay(
             HStack(spacing: 0) {
                 Rectangle()
@@ -357,7 +357,7 @@ struct WeakItemView: View {
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .overlay(
             RoundedRectangle(cornerRadius: 12)
-                .stroke(Color(.systemGray4), lineWidth: 1)
+                .stroke(AppTheme.border, lineWidth: 1)
         )
     }
 }
@@ -382,7 +382,7 @@ struct ScoreChartView: View {
                 var path = Path()
                 path.move(to: CGPoint(x: pad.leading, y: y))
                 path.addLine(to: CGPoint(x: size.width - pad.trailing, y: y))
-                context.stroke(path, with: .color(Color(.systemGray4)), lineWidth: 1)
+                context.stroke(path, with: .color(AppTheme.border), lineWidth: 1)
 
                 context.draw(
                     Text("\(pct)%").font(.system(size: 10)).foregroundColor(Color(.systemGray)),

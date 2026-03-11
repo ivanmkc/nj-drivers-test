@@ -25,7 +25,6 @@ import com.drivers.test.view.components.LanguageBar
 import com.drivers.test.view.components.PrimaryButton
 import com.drivers.test.view.components.StatItem
 import com.drivers.test.viewmodel.QuizViewModel
-import kotlin.math.ceil
 
 @Composable
 fun HomeScreen(vm: QuizViewModel) {
@@ -59,11 +58,10 @@ fun HomeScreen(vm: QuizViewModel) {
             fontSize = 15.sp, color = c.gray, textAlign = TextAlign.Center,
         )
         Spacer(Modifier.height(4.dp))
-        val passCount = ceil(state.testQuestionCount * state.passingScorePct / 100.0).toInt()
         Text(
             vm.t("passingScore", mapOf(
                 "pass_pct" to "${state.passingScorePct}",
-                "pass_count" to "$passCount",
+                "pass_count" to "${state.passCount}",
                 "test_count" to "${state.testQuestionCount}",
             )),
             fontSize = 13.sp, color = c.gray,

@@ -69,9 +69,10 @@ def index():
 @app.route("/signs/<state>/<path:filename>")
 def serve_sign(state, filename):
     state = state.lower()
+    if state not in CONFIG:
+        return jsonify({"error": "Invalid state"}), 404
     signs_dir = os.path.join(STATES_DIR, state, "signs")
     if not os.path.isdir(signs_dir):
-        # Fall back to shared signs directory
         signs_dir = os.path.join(BASE_DIR, "signs")
     return send_from_directory(signs_dir, filename)
 

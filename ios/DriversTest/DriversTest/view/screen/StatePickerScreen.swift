@@ -25,7 +25,7 @@ struct StatePickerScreen: View {
                 } else if let error = vm.errorMessage {
                     VStack(spacing: 12) {
                         Text(error)
-                            .foregroundColor(.red)
+                            .foregroundColor(AppTheme.red)
                             .multilineTextAlignment(.center)
                         Button("Retry") {
                             Task { await vm.loadStates() }
@@ -85,10 +85,10 @@ struct StateCard: View {
                 }
             }
             .padding(16)
-            .background(Color.white)
+            .background(AppTheme.card)
             .overlay(
                 RoundedRectangle(cornerRadius: 12)
-                    .stroke(Color(.systemGray4), lineWidth: 2)
+                    .stroke(AppTheme.border, lineWidth: 2)
             )
             .clipShape(RoundedRectangle(cornerRadius: 12))
             .opacity(state.hasQuestions ? 1 : 0.5)
@@ -97,10 +97,9 @@ struct StateCard: View {
     }
 
     private var passingText: String {
-        let passCount = Int(ceil(Double(state.testQuestionCount) * Double(state.passingScorePct) / 100.0))
-        return "\(state.agency) \u{00B7} " + localizer.t("passingScore", vars: [
+        "\(state.agency) \u{00B7} " + localizer.t("passingScore", vars: [
             "pass_pct": "\(state.passingScorePct)",
-            "pass_count": "\(passCount)",
+            "pass_count": "\(state.passCount)",
             "test_count": "\(state.testQuestionCount)",
         ])
     }

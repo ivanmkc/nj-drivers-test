@@ -62,10 +62,10 @@ struct StatsScreen: View {
                     }
                 }
                 .padding(16)
-                .background(Color.white)
+                .background(AppTheme.card)
                 .overlay(
                     RoundedRectangle(cornerRadius: 12)
-                        .stroke(Color(.systemGray4), lineWidth: 1)
+                        .stroke(AppTheme.border, lineWidth: 1)
                 )
                 .clipShape(RoundedRectangle(cornerRadius: 12))
 
@@ -106,7 +106,7 @@ struct StatsScreen: View {
                         .foregroundColor(AppTheme.red)
                         .frame(maxWidth: .infinity)
                         .padding(12)
-                        .background(Color.white)
+                        .background(AppTheme.card)
                         .overlay(
                             RoundedRectangle(cornerRadius: 12)
                                 .stroke(AppTheme.redLight, lineWidth: 2)

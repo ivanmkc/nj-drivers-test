@@ -1,6 +1,7 @@
 package com.drivers.test.model
 
 import com.google.gson.annotations.SerializedName
+import kotlin.math.ceil
 
 // API responses
 
@@ -15,7 +16,9 @@ data class StateInfo(
     val languages: List<String>,
     @SerializedName("total_questions") val totalQuestions: Int,
     @SerializedName("has_questions") val hasQuestions: Boolean,
-)
+) {
+    val passCount: Int get() = ceil(testQuestionCount * passingScorePct / 100.0).toInt()
+}
 
 data class QuizResponse(val questions: List<QuizQuestion>, val total: Int)
 

@@ -1,9 +1,10 @@
 package com.drivers.test.theme
 
-import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 
 // From shared/theme.json
@@ -60,7 +61,6 @@ private val DarkColorScheme = darkColorScheme(
     outline = Color(0xFF374151),
 )
 
-// Custom colors accessible outside Material theme
 data class AppColors(
     val blue: Color,
     val blueLight: Color,
@@ -90,13 +90,11 @@ val DarkAppColors = AppColors(
     card = CardDark,
 )
 
-object AppTheme {
-    var colors: AppColors = LightAppColors
-        private set
+val LocalAppColors = staticCompositionLocalOf { LightAppColors }
 
-    fun update(isDark: Boolean) {
-        colors = if (isDark) DarkAppColors else LightAppColors
-    }
+object AppTheme {
+    val colors: AppColors
+        @Composable get() = LocalAppColors.current
 }
 
 @Composable
@@ -105,10 +103,12 @@ fun DriversTestTheme(
     content: @Composable () -> Unit,
 ) {
     val colorScheme = if (darkTheme) DarkColorScheme else LightColorScheme
-    AppTheme.update(darkTheme)
+    val appColors = if (darkTheme) DarkAppColors else LightAppColors
 
-    MaterialTheme(
-        colorScheme = colorScheme,
-        content = content,
-    )
+    CompositionLocalProvider(LocalAppColors provides appColors) {
+        MaterialTheme(
+            colorScheme = colorScheme,
+            content = content,
+        )
+    }
 }

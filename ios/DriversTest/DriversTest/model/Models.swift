@@ -1,5 +1,15 @@
 import Foundation
 
+// MARK: - Navigation
+
+enum AppScreen {
+    case statePicker
+    case home
+    case quiz
+    case results
+    case stats
+}
+
 // MARK: - API Response Models
 
 struct StatesResponse: Codable {
@@ -17,6 +27,10 @@ struct StateInfo: Codable, Identifiable {
     let hasQuestions: Bool
 
     var id: String { code }
+
+    var passCount: Int {
+        Int(ceil(Double(testQuestionCount) * Double(passingScorePct) / 100.0))
+    }
 
     enum CodingKeys: String, CodingKey {
         case code, name, agency, languages

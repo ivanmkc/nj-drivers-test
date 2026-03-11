@@ -21,7 +21,6 @@ import com.drivers.test.model.StateInfo
 import com.drivers.test.theme.AppTheme
 import com.drivers.test.view.components.LanguageBar
 import com.drivers.test.viewmodel.QuizViewModel
-import kotlin.math.ceil
 
 @Composable
 fun StatePickerScreen(vm: QuizViewModel) {
@@ -58,7 +57,7 @@ fun StatePickerScreen(vm: QuizViewModel) {
                 modifier = Modifier.fillMaxWidth().padding(top = 40.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
-                Text(vm.errorMessage!!, color = c.red, textAlign = TextAlign.Center)
+                Text(vm.errorMessage.orEmpty(), color = c.red, textAlign = TextAlign.Center)
                 Spacer(Modifier.height(12.dp))
                 Button(onClick = { vm.loadStates() }) { Text("Retry") }
             }
@@ -74,7 +73,6 @@ fun StatePickerScreen(vm: QuizViewModel) {
 @Composable
 private fun StateCard(state: StateInfo, vm: QuizViewModel) {
     val c = AppTheme.colors
-    val passCount = ceil(state.testQuestionCount * state.passingScorePct / 100.0).toInt()
 
     Row(
         modifier = Modifier
@@ -94,7 +92,7 @@ private fun StateCard(state: StateInfo, vm: QuizViewModel) {
             Text(
                 "${state.agency} \u00B7 " + vm.t("passingScore", mapOf(
                     "pass_pct" to "${state.passingScorePct}",
-                    "pass_count" to "$passCount",
+                    "pass_count" to "${state.passCount}",
                     "test_count" to "${state.testQuestionCount}",
                 )),
                 fontSize = 13.sp, color = c.gray,
