@@ -14,6 +14,8 @@
     --green-light: #dcfce7;
     --red: #dc2626;
     --red-light: #fee2e2;
+    --orange: #ea580c;
+    --orange-light: #fff7ed;
     --gray: #6b7280;
     --gray-light: #f3f4f6;
     --bg: #ffffff;
@@ -38,271 +40,312 @@
     padding-bottom: env(safe-area-inset-bottom, 16px);
   }
 
+  .screen { display: none; }
+  .screen.active { display: block; }
+
   /* ---- Start Screen ---- */
-  #start-screen {
+  #start-screen { text-align: center; padding-top: 10vh; }
+  #start-screen h1 { font-size: 28px; margin-bottom: 8px; color: var(--blue); }
+  #start-screen .subtitle {
+    color: var(--gray); margin-bottom: 24px; font-size: 15px; line-height: 1.5;
+  }
+
+  .past-stats-banner {
+    display: none;
+    background: var(--bg);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    text-align: left;
+    border: 1px solid #e5e7eb;
+  }
+  .past-stats-banner .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .past-stats-banner .stat-group {
+    display: flex;
+    gap: 16px;
+  }
+  .past-stats-banner .stat {
     text-align: center;
-    padding-top: 15vh;
   }
-  #start-screen h1 {
-    font-size: 28px;
-    margin-bottom: 8px;
-    color: var(--blue);
+  .past-stats-banner .stat .num {
+    font-size: 22px;
+    font-weight: 700;
   }
-  #start-screen p {
+  .past-stats-banner .stat .lbl {
+    font-size: 11px;
     color: var(--gray);
-    margin-bottom: 24px;
-    font-size: 15px;
-    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
   }
-  .count-selector {
+  .past-stats-banner .view-link {
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .mode-selector {
     display: flex;
     gap: 8px;
-    justify-content: center;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
+    margin-bottom: 16px;
   }
-  .count-btn {
-    padding: 10px 20px;
-    border: 2px solid var(--blue);
+  .mode-btn {
+    flex: 1;
+    padding: 12px 8px;
+    border: 2px solid #e5e7eb;
     background: var(--bg);
-    color: var(--blue);
     border-radius: var(--radius);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.15s;
+    text-align: center;
   }
-  .count-btn.active, .count-btn:active {
-    background: var(--blue);
+  .mode-btn.active {
+    border-color: var(--blue);
+    background: var(--blue-light);
+    color: var(--blue);
+  }
+  .mode-btn .mode-icon { font-size: 20px; display: block; margin-bottom: 4px; }
+  .mode-btn .mode-desc { font-size: 11px; font-weight: 400; color: var(--gray); display: block; }
+  .mode-btn.active .mode-desc { color: var(--blue); }
+  .weak-count {
+    display: inline-block;
+    background: var(--red);
     color: white;
+    font-size: 11px;
+    padding: 1px 6px;
+    border-radius: 10px;
+    margin-left: 4px;
+    font-weight: 700;
   }
+
+  .count-selector {
+    display: flex; gap: 8px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap;
+  }
+  .count-btn {
+    padding: 10px 20px; border: 2px solid var(--blue); background: var(--bg);
+    color: var(--blue); border-radius: var(--radius); font-size: 16px;
+    font-weight: 600; cursor: pointer; transition: all 0.15s;
+  }
+  .count-btn.active, .count-btn:active { background: var(--blue); color: white; }
+
   .start-btn {
-    width: 100%;
-    padding: 16px;
-    background: var(--blue);
-    color: white;
-    border: none;
-    border-radius: var(--radius);
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: opacity 0.15s;
+    width: 100%; padding: 16px; background: var(--blue); color: white;
+    border: none; border-radius: var(--radius); font-size: 18px;
+    font-weight: 600; cursor: pointer; transition: opacity 0.15s;
   }
   .start-btn:active { opacity: 0.8; }
+  .start-btn:disabled { opacity: 0.5; cursor: default; }
+  .start-btn.secondary {
+    background: var(--bg); color: var(--blue); border: 2px solid var(--blue);
+    margin-top: 10px;
+  }
 
   /* ---- Quiz Screen ---- */
-  #quiz-screen { display: none; }
-
   .progress-bar {
-    height: 6px;
-    background: #e5e7eb;
-    border-radius: 3px;
-    margin-bottom: 16px;
-    overflow: hidden;
+    height: 6px; background: #e5e7eb; border-radius: 3px;
+    margin-bottom: 16px; overflow: hidden;
   }
   .progress-fill {
-    height: 100%;
-    background: var(--blue);
-    border-radius: 3px;
+    height: 100%; background: var(--blue); border-radius: 3px;
     transition: width 0.3s ease;
   }
 
   .quiz-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
-    font-size: 14px;
-    color: var(--gray);
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 12px; font-size: 14px; color: var(--gray);
   }
-  .quiz-header .score {
-    font-weight: 600;
-  }
+  .quiz-header .score { font-weight: 600; }
   .score .correct { color: var(--green); }
   .score .wrong { color: var(--red); }
 
   .category-badge {
-    display: inline-block;
-    background: var(--blue-light);
-    color: var(--blue);
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    display: inline-block; background: var(--blue-light); color: var(--blue);
+    padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 600;
+    margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .miss-badge {
+    display: none; background: var(--red-light); color: var(--red);
+    padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 600;
+    margin-left: 6px;
   }
 
-  .question-text {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
+  .question-text { font-size: 18px; font-weight: 600; line-height: 1.5; margin-bottom: 20px; }
 
-  .choices {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 16px;
-  }
+  .choices { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
 
   .choice-btn {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 14px 16px;
-    background: var(--bg);
-    border: 2px solid #e5e7eb;
-    border-radius: var(--radius);
-    font-size: 16px;
-    line-height: 1.4;
-    cursor: pointer;
-    transition: all 0.15s;
-    text-align: left;
-    width: 100%;
+    display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px;
+    background: var(--bg); border: 2px solid #e5e7eb; border-radius: var(--radius);
+    font-size: 16px; line-height: 1.4; cursor: pointer; transition: all 0.15s;
+    text-align: left; width: 100%;
   }
-  .choice-btn:active:not(.disabled) {
-    transform: scale(0.98);
-  }
+  .choice-btn:active:not(.disabled) { transform: scale(0.98); }
   .choice-btn .letter {
-    flex-shrink: 0;
-    width: 28px;
-    height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--gray-light);
-    border-radius: 50%;
-    font-weight: 700;
-    font-size: 14px;
-    color: var(--gray);
+    flex-shrink: 0; width: 28px; height: 28px; display: flex;
+    align-items: center; justify-content: center; background: var(--gray-light);
+    border-radius: 50%; font-weight: 700; font-size: 14px; color: var(--gray);
   }
-  .choice-btn.selected {
-    border-color: var(--blue);
-    background: var(--blue-light);
-  }
-  .choice-btn.selected .letter {
-    background: var(--blue);
-    color: white;
-  }
-  .choice-btn.correct {
-    border-color: var(--green);
-    background: var(--green-light);
-  }
-  .choice-btn.correct .letter {
-    background: var(--green);
-    color: white;
-  }
-  .choice-btn.wrong {
-    border-color: var(--red);
-    background: var(--red-light);
-  }
-  .choice-btn.wrong .letter {
-    background: var(--red);
-    color: white;
-  }
-  .choice-btn.disabled {
-    cursor: default;
-    opacity: 0.7;
-  }
-  .choice-btn.disabled.correct,
-  .choice-btn.disabled.wrong,
-  .choice-btn.disabled.selected {
-    opacity: 1;
-  }
+  .choice-btn.correct { border-color: var(--green); background: var(--green-light); }
+  .choice-btn.correct .letter { background: var(--green); color: white; }
+  .choice-btn.wrong { border-color: var(--red); background: var(--red-light); }
+  .choice-btn.wrong .letter { background: var(--red); color: white; }
+  .choice-btn.disabled { cursor: default; opacity: 0.7; }
+  .choice-btn.disabled.correct, .choice-btn.disabled.wrong { opacity: 1; }
 
   .explanation {
-    display: none;
-    background: var(--blue-light);
-    border-left: 4px solid var(--blue);
-    padding: 12px 16px;
-    border-radius: 0 var(--radius) var(--radius) 0;
-    font-size: 14px;
-    line-height: 1.6;
-    color: #374151;
-    margin-bottom: 16px;
+    display: none; background: var(--blue-light); border-left: 4px solid var(--blue);
+    padding: 12px 16px; border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: 14px; line-height: 1.6; color: #374151; margin-bottom: 16px;
   }
   .explanation.visible { display: block; }
 
   .next-btn {
-    display: none;
-    width: 100%;
-    padding: 16px;
-    background: var(--blue);
-    color: white;
-    border: none;
-    border-radius: var(--radius);
-    font-size: 17px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: opacity 0.15s;
+    display: none; width: 100%; padding: 16px; background: var(--blue);
+    color: white; border: none; border-radius: var(--radius); font-size: 17px;
+    font-weight: 600; cursor: pointer; transition: opacity 0.15s;
   }
   .next-btn:active { opacity: 0.8; }
   .next-btn.visible { display: block; }
 
   /* ---- Results Screen ---- */
-  #results-screen { display: none; text-align: center; padding-top: 10vh; }
+  #results-screen { text-align: center; padding-top: 6vh; }
   .results-circle {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 24px;
-    border: 6px solid;
+    width: 160px; height: 160px; border-radius: 50%;
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: center; margin: 0 auto 24px; border: 6px solid;
   }
   .results-circle.pass { border-color: var(--green); color: var(--green); }
   .results-circle.fail { border-color: var(--red); color: var(--red); }
   .results-circle .pct { font-size: 42px; font-weight: 700; }
   .results-circle .label { font-size: 14px; font-weight: 600; text-transform: uppercase; }
 
-  .result-msg {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 8px;
-  }
-  .result-detail {
-    color: var(--gray);
-    font-size: 15px;
-    margin-bottom: 32px;
-    line-height: 1.5;
-  }
+  .result-msg { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+  .result-detail { color: var(--gray); font-size: 15px; margin-bottom: 24px; line-height: 1.5; }
 
-  .review-section {
-    text-align: left;
-    margin-top: 24px;
-  }
-  .review-section h3 {
-    font-size: 18px;
-    margin-bottom: 12px;
-  }
+  .review-section { text-align: left; margin-top: 24px; }
+  .review-section h3 { font-size: 18px; margin-bottom: 12px; }
   .review-item {
-    background: var(--bg);
-    border-radius: var(--radius);
-    padding: 14px;
-    margin-bottom: 10px;
-    border-left: 4px solid;
+    background: var(--bg); border-radius: var(--radius); padding: 14px;
+    margin-bottom: 10px; border-left: 4px solid;
   }
-  .review-item.was-correct { border-color: var(--green); }
   .review-item.was-wrong { border-color: var(--red); }
   .review-item .rq { font-weight: 600; font-size: 14px; margin-bottom: 6px; }
   .review-item .ra { font-size: 13px; color: var(--gray); }
   .review-item .ra strong { color: var(--text); }
+
+  /* ---- Stats Screen ---- */
+  #stats-screen { padding-top: 16px; }
+  .stats-back {
+    display: inline-flex; align-items: center; gap: 6px; color: var(--blue);
+    font-size: 15px; font-weight: 600; cursor: pointer; margin-bottom: 20px;
+    background: none; border: none;
+  }
+  .stats-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; }
+
+  .stats-grid {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 24px;
+  }
+  .stat-card {
+    background: var(--bg); border-radius: var(--radius); padding: 16px 12px;
+    text-align: center; border: 1px solid #e5e7eb;
+  }
+  .stat-card .num { font-size: 26px; font-weight: 700; }
+  .stat-card .num.green { color: var(--green); }
+  .stat-card .num.red { color: var(--red); }
+  .stat-card .num.blue { color: var(--blue); }
+  .stat-card .lbl {
+    font-size: 11px; color: var(--gray); text-transform: uppercase;
+    letter-spacing: 0.3px; margin-top: 4px;
+  }
+
+  .chart-container {
+    background: var(--bg); border-radius: var(--radius); padding: 16px;
+    margin-bottom: 24px; border: 1px solid #e5e7eb;
+  }
+  .chart-container h4 { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
+  .chart-container canvas { width: 100%; height: 180px; }
+  .chart-empty {
+    height: 120px; display: flex; align-items: center; justify-content: center;
+    color: var(--gray); font-size: 14px;
+  }
+
+  .weak-section { margin-bottom: 24px; }
+  .weak-section h4 { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
+  .weak-item {
+    background: var(--bg); border-radius: var(--radius); padding: 12px 14px;
+    margin-bottom: 8px; border: 1px solid #e5e7eb; border-left: 4px solid var(--orange);
+  }
+  .weak-item .wq { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+  .weak-item .wm { font-size: 12px; color: var(--gray); }
+  .weak-item .wm .miss-pct { color: var(--red); font-weight: 600; }
+
+  .category-bars { margin-bottom: 24px; }
+  .category-bars h4 { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
+  .cat-bar-row {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 8px;
+    font-size: 13px;
+  }
+  .cat-bar-label {
+    width: 110px; flex-shrink: 0; text-transform: capitalize;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .cat-bar-track {
+    flex: 1; height: 10px; background: #e5e7eb; border-radius: 5px; overflow: hidden;
+  }
+  .cat-bar-fill { height: 100%; border-radius: 5px; transition: width 0.3s; }
+  .cat-bar-pct { width: 36px; text-align: right; font-weight: 600; font-size: 13px; }
+
+  .danger-zone {
+    border-top: 1px solid #e5e7eb; padding-top: 20px; margin-top: 8px;
+  }
+  .danger-btn {
+    width: 100%; padding: 12px; background: var(--bg); color: var(--red);
+    border: 2px solid var(--red-light); border-radius: var(--radius);
+    font-size: 15px; font-weight: 600; cursor: pointer;
+  }
+  .danger-btn:active { background: var(--red-light); }
 </style>
 </head>
 <body>
 <div class="container">
 
   <!-- Start Screen -->
-  <div id="start-screen">
+  <div id="start-screen" class="screen active">
     <h1>NJ Driver's Test</h1>
-    <p>Practice for your New Jersey MVC written test.<br>
+    <p class="subtitle">Practice for your New Jersey MVC written test.<br>
     Based on the 2025 NJ Driver Manual + real test questions.</p>
-    <p style="font-weight:600; margin-bottom:8px;">Number of questions:</p>
+
+    <div class="past-stats-banner" id="past-stats-banner">
+      <div class="row">
+        <div class="stat-group">
+          <div class="stat"><div class="num" id="banner-quizzes">0</div><div class="lbl">Quizzes</div></div>
+          <div class="stat"><div class="num" id="banner-avg">0%</div><div class="lbl">Avg Score</div></div>
+          <div class="stat"><div class="num" id="banner-streak">0</div><div class="lbl">Pass Streak</div></div>
+        </div>
+        <a class="view-link" onclick="showStats()">View Stats &rsaquo;</a>
+      </div>
+    </div>
+
+    <div class="mode-selector">
+      <button class="mode-btn active" id="mode-random" onclick="setMode('random')">
+        <span class="mode-icon">&#127922;</span> Random
+        <span class="mode-desc">All questions</span>
+      </button>
+      <button class="mode-btn" id="mode-weak" onclick="setMode('weak')">
+        <span class="mode-icon">&#127919;</span> Weak Spots <span class="weak-count" id="weak-count" style="display:none"></span>
+        <span class="mode-desc">Most missed</span>
+      </button>
+    </div>
+
+    <p style="font-weight:600; margin-bottom:8px; font-size:15px;">Number of questions:</p>
     <div class="count-selector">
       <button class="count-btn" data-count="10">10</button>
       <button class="count-btn" data-count="25">25</button>
@@ -310,17 +353,20 @@
       <button class="count-btn" data-count="100">100</button>
       <button class="count-btn" data-count="298">All</button>
     </div>
-    <button class="start-btn" onclick="startQuiz()">Start Quiz</button>
+    <button class="start-btn" id="start-btn" onclick="startQuiz()">Start Quiz</button>
   </div>
 
   <!-- Quiz Screen -->
-  <div id="quiz-screen">
+  <div id="quiz-screen" class="screen">
     <div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
     <div class="quiz-header">
       <span id="q-counter">1 / 50</span>
       <span class="score"><span class="correct" id="score-correct">0</span> / <span class="wrong" id="score-wrong">0</span></span>
     </div>
-    <div class="category-badge" id="q-category"></div>
+    <div>
+      <span class="category-badge" id="q-category"></span>
+      <span class="miss-badge" id="q-miss-badge"></span>
+    </div>
     <div class="question-text" id="q-text"></div>
     <div class="choices" id="choices"></div>
     <div class="explanation" id="explanation"></div>
@@ -328,30 +374,89 @@
   </div>
 
   <!-- Results Screen -->
-  <div id="results-screen">
+  <div id="results-screen" class="screen">
     <div class="results-circle" id="results-circle">
       <div class="pct" id="results-pct"></div>
       <div class="label" id="results-label"></div>
     </div>
     <div class="result-msg" id="result-msg"></div>
     <div class="result-detail" id="result-detail"></div>
-    <button class="start-btn" onclick="location.reload()">Try Again</button>
+    <button class="start-btn" onclick="goHome()">New Quiz</button>
+    <button class="start-btn secondary" onclick="showStats()">View Stats</button>
     <div class="review-section" id="review-section">
       <h3 id="review-title"></h3>
       <div id="review-list"></div>
     </div>
   </div>
 
+  <!-- Stats Screen -->
+  <div id="stats-screen" class="screen">
+    <button class="stats-back" onclick="goHome()">&larr; Back</button>
+    <div class="stats-title">Your Progress</div>
+
+    <div class="stats-grid">
+      <div class="stat-card"><div class="num blue" id="s-total">0</div><div class="lbl">Quizzes</div></div>
+      <div class="stat-card"><div class="num green" id="s-avg">0%</div><div class="lbl">Avg Score</div></div>
+      <div class="stat-card"><div class="num" id="s-seen">0</div><div class="lbl">Q's Seen</div></div>
+    </div>
+    <div class="stats-grid" style="grid-template-columns: 1fr 1fr;">
+      <div class="stat-card"><div class="num green" id="s-streak">0</div><div class="lbl">Pass Streak</div></div>
+      <div class="stat-card"><div class="num" id="s-best">0%</div><div class="lbl">Best Score</div></div>
+    </div>
+
+    <div class="chart-container">
+      <h4>Score History</h4>
+      <canvas id="chart" height="180"></canvas>
+      <div class="chart-empty" id="chart-empty">Take a quiz to see your progress</div>
+    </div>
+
+    <div class="category-bars" id="cat-bars-section">
+      <h4>Accuracy by Category</h4>
+      <div id="cat-bars"></div>
+    </div>
+
+    <div class="weak-section" id="weak-section">
+      <h4>Most Missed Questions</h4>
+      <div id="weak-list"></div>
+    </div>
+
+    <div class="danger-zone">
+      <button class="danger-btn" onclick="clearData()">Reset All Progress</button>
+    </div>
+  </div>
+
 </div>
 
 <script>
+// ---- Storage ----
+const STORE_KEY = 'nj_quiz';
+
+function loadStore() {
+  try {
+    const raw = localStorage.getItem(STORE_KEY);
+    if (raw) return JSON.parse(raw);
+  } catch(e) {}
+  return { history: [], questions: {} };
+}
+
+function saveStore(store) {
+  localStorage.setItem(STORE_KEY, JSON.stringify(store));
+}
+
+// ---- State ----
 let questions = [];
 let currentIdx = 0;
 let correctCount = 0;
 let wrongCount = 0;
 let answered = false;
 let selectedCount = 50;
-let results = []; // {question, yourAnswer, correctAnswer, correct, explanation}
+let quizMode = 'random'; // 'random' | 'weak'
+let sessionResults = [];
+
+// ---- Init ----
+document.addEventListener('DOMContentLoaded', () => {
+  updateStartScreen();
+});
 
 // Count selector
 document.querySelectorAll('.count-btn').forEach(btn => {
@@ -362,23 +467,123 @@ document.querySelectorAll('.count-btn').forEach(btn => {
   });
 });
 
+function setMode(mode) {
+  quizMode = mode;
+  document.getElementById('mode-random').classList.toggle('active', mode === 'random');
+  document.getElementById('mode-weak').classList.toggle('active', mode === 'weak');
+  const store = loadStore();
+  const weakIds = getWeakQuestionIds(store);
+  const startBtn = document.getElementById('start-btn');
+  if (mode === 'weak' && weakIds.length === 0) {
+    startBtn.disabled = true;
+    startBtn.textContent = 'No weak spots yet';
+  } else {
+    startBtn.disabled = false;
+    startBtn.textContent = 'Start Quiz';
+  }
+}
+
+function getWeakQuestionIds(store) {
+  const weak = [];
+  for (const [id, data] of Object.entries(store.questions)) {
+    if (data.wrong > 0 && data.seen >= 1) {
+      weak.push({ id: parseInt(id), missRate: data.wrong / data.seen, wrong: data.wrong, seen: data.seen });
+    }
+  }
+  weak.sort((a, b) => b.missRate - a.missRate || b.wrong - a.wrong);
+  return weak;
+}
+
+function updateStartScreen() {
+  const store = loadStore();
+  const h = store.history;
+  const banner = document.getElementById('past-stats-banner');
+
+  if (h.length === 0) {
+    banner.style.display = 'none';
+    document.getElementById('weak-count').style.display = 'none';
+    return;
+  }
+
+  banner.style.display = 'block';
+  document.getElementById('banner-quizzes').textContent = h.length;
+  const avg = Math.round(h.reduce((s, r) => s + r.pct, 0) / h.length);
+  document.getElementById('banner-avg').textContent = avg + '%';
+
+  let streak = 0;
+  for (let i = h.length - 1; i >= 0; i--) {
+    if (h[i].pct >= 80) streak++; else break;
+  }
+  document.getElementById('banner-streak').textContent = streak;
+
+  const weakIds = getWeakQuestionIds(store);
+  const wc = document.getElementById('weak-count');
+  if (weakIds.length > 0) {
+    wc.style.display = 'inline-block';
+    wc.textContent = weakIds.length;
+  } else {
+    wc.style.display = 'none';
+  }
+}
+
+// ---- Navigation ----
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function goHome() {
+  updateStartScreen();
+  setMode('random');
+  showScreen('start-screen');
+  window.scrollTo({ top: 0 });
+}
+
+// ---- Quiz ----
 async function startQuiz() {
+  if (quizMode === 'weak') {
+    await startWeakQuiz();
+    return;
+  }
   const res = await fetch(`/api/quiz/${selectedCount}`);
   const data = await res.json();
   questions = data.questions;
+  beginQuiz();
+}
+
+async function startWeakQuiz() {
+  const store = loadStore();
+  const weakIds = getWeakQuestionIds(store);
+  if (weakIds.length === 0) return;
+  const count = Math.min(selectedCount, weakIds.length);
+  const ids = weakIds.slice(0, count).map(w => w.id);
+  // Fetch all questions then filter to weak ones
+  const res = await fetch(`/api/quiz/298`);
+  const data = await res.json();
+  const idSet = new Set(ids);
+  questions = data.questions.filter(q => idSet.has(q.id));
+  // Shuffle
+  for (let i = questions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [questions[i], questions[j]] = [questions[j], questions[i]];
+  }
+  questions = questions.slice(0, count);
+  beginQuiz();
+}
+
+function beginQuiz() {
   currentIdx = 0;
   correctCount = 0;
   wrongCount = 0;
-  results = [];
-  document.getElementById('start-screen').style.display = 'none';
-  document.getElementById('quiz-screen').style.display = 'block';
+  sessionResults = [];
+  showScreen('quiz-screen');
   showQuestion();
 }
 
 function showQuestion() {
   answered = false;
   const q = questions[currentIdx];
-  document.getElementById('progress').style.width = `${((currentIdx) / questions.length) * 100}%`;
+  document.getElementById('progress').style.width = `${(currentIdx / questions.length) * 100}%`;
   document.getElementById('q-counter').textContent = `${currentIdx + 1} / ${questions.length}`;
   document.getElementById('score-correct').textContent = correctCount;
   document.getElementById('score-wrong').textContent = wrongCount;
@@ -387,10 +592,21 @@ function showQuestion() {
   document.getElementById('explanation').classList.remove('visible');
   document.getElementById('next-btn').classList.remove('visible');
 
+  // Show miss history badge
+  const store = loadStore();
+  const qData = store.questions[q.id];
+  const missBadge = document.getElementById('q-miss-badge');
+  if (qData && qData.wrong > 0) {
+    const rate = Math.round((qData.wrong / qData.seen) * 100);
+    missBadge.textContent = `Missed ${rate}%`;
+    missBadge.style.display = 'inline-block';
+  } else {
+    missBadge.style.display = 'none';
+  }
+
   const choicesDiv = document.getElementById('choices');
   choicesDiv.innerHTML = '';
-  const letters = ['A', 'B', 'C', 'D'];
-  letters.forEach(letter => {
+  ['A', 'B', 'C', 'D'].forEach(letter => {
     if (!q.choices[letter]) return;
     const btn = document.createElement('button');
     btn.className = 'choice-btn';
@@ -404,35 +620,40 @@ async function selectAnswer(letter, btn) {
   if (answered) return;
   answered = true;
 
-  // Fetch correct answer
   const res = await fetch(`/api/answer/${questions[currentIdx].id}`);
   const data = await res.json();
   const correct = data.answer;
+  const isCorrect = letter === correct;
 
   const allBtns = document.querySelectorAll('.choice-btn');
   allBtns.forEach(b => b.classList.add('disabled'));
 
-  if (letter === correct) {
+  if (isCorrect) {
     btn.classList.add('correct');
     correctCount++;
   } else {
     btn.classList.add('wrong');
     wrongCount++;
-    // Highlight correct answer
-    const letters = ['A', 'B', 'C', 'D'];
-    const correctIdx = letters.indexOf(correct);
-    if (correctIdx >= 0 && allBtns[correctIdx]) {
-      allBtns[correctIdx].classList.add('correct');
-    }
+    const correctIdx = ['A', 'B', 'C', 'D'].indexOf(correct);
+    if (correctIdx >= 0 && allBtns[correctIdx]) allBtns[correctIdx].classList.add('correct');
   }
 
-  results.push({
+  // Record per-question stats
+  const store = loadStore();
+  const qid = questions[currentIdx].id;
+  if (!store.questions[qid]) store.questions[qid] = { seen: 0, wrong: 0, category: questions[currentIdx].category };
+  store.questions[qid].seen++;
+  if (!isCorrect) store.questions[qid].wrong++;
+  saveStore(store);
+
+  sessionResults.push({
+    id: qid,
     question: questions[currentIdx].question,
     yourAnswer: letter,
     yourAnswerText: questions[currentIdx].choices[letter],
     correctAnswer: correct,
     correctAnswerText: questions[currentIdx].choices[correct],
-    correct: letter === correct,
+    correct: isCorrect,
     explanation: data.explanation,
   });
 
@@ -456,27 +677,33 @@ function nextQuestion() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// ---- Results ----
 function showResults() {
-  document.getElementById('quiz-screen').style.display = 'none';
-  document.getElementById('results-screen').style.display = 'block';
-
   const pct = Math.round((correctCount / questions.length) * 100);
   const pass = pct >= 80;
+
+  // Save to history
+  const store = loadStore();
+  store.history.push({
+    date: new Date().toISOString(),
+    correct: correctCount,
+    total: questions.length,
+    pct: pct,
+    mode: quizMode,
+  });
+  saveStore(store);
+
+  showScreen('results-screen');
 
   const circle = document.getElementById('results-circle');
   circle.className = `results-circle ${pass ? 'pass' : 'fail'}`;
   document.getElementById('results-pct').textContent = `${pct}%`;
   document.getElementById('results-label').textContent = pass ? 'PASS' : 'FAIL';
-
-  document.getElementById('result-msg').textContent = pass
-    ? 'Congratulations!'
-    : 'Keep Practicing!';
+  document.getElementById('result-msg').textContent = pass ? 'Congratulations!' : 'Keep Practicing!';
   document.getElementById('result-detail').textContent =
-    `You got ${correctCount} out of ${questions.length} correct. ` +
-    `You need 80% to pass the actual MVC test.`;
+    `You got ${correctCount} out of ${questions.length} correct. You need 80% to pass the actual MVC test.`;
 
-  // Show wrong answers for review
-  const wrongResults = results.filter(r => !r.correct);
+  const wrongResults = sessionResults.filter(r => !r.correct);
   const reviewTitle = document.getElementById('review-title');
   const reviewList = document.getElementById('review-list');
 
@@ -484,10 +711,10 @@ function showResults() {
     reviewTitle.textContent = `Review Missed Questions (${wrongResults.length})`;
     reviewList.innerHTML = wrongResults.map(r => `
       <div class="review-item was-wrong">
-        <div class="rq">${r.question}</div>
-        <div class="ra">Your answer: <strong>${r.yourAnswer}: ${r.yourAnswerText}</strong></div>
-        <div class="ra">Correct: <strong>${r.correctAnswer}: ${r.correctAnswerText}</strong></div>
-        <div class="ra" style="margin-top:6px; font-style:italic;">${r.explanation}</div>
+        <div class="rq">${esc(r.question)}</div>
+        <div class="ra">Your answer: <strong>${r.yourAnswer}: ${esc(r.yourAnswerText)}</strong></div>
+        <div class="ra">Correct: <strong>${r.correctAnswer}: ${esc(r.correctAnswerText)}</strong></div>
+        <div class="ra" style="margin-top:6px; font-style:italic;">${esc(r.explanation)}</div>
       </div>
     `).join('');
   } else {
@@ -496,6 +723,203 @@ function showResults() {
   }
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function esc(s) {
+  const d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+
+// ---- Stats Screen ----
+function showStats() {
+  const store = loadStore();
+  const h = store.history;
+
+  showScreen('stats-screen');
+
+  // Summary stats
+  document.getElementById('s-total').textContent = h.length;
+  const avg = h.length ? Math.round(h.reduce((s, r) => s + r.pct, 0) / h.length) : 0;
+  document.getElementById('s-avg').textContent = avg + '%';
+  document.getElementById('s-seen').textContent = Object.keys(store.questions).length;
+  const best = h.length ? Math.max(...h.map(r => r.pct)) : 0;
+  document.getElementById('s-best').textContent = best + '%';
+
+  let streak = 0;
+  for (let i = h.length - 1; i >= 0; i--) {
+    if (h[i].pct >= 80) streak++; else break;
+  }
+  document.getElementById('s-streak').textContent = streak;
+
+  // Chart
+  const canvas = document.getElementById('chart');
+  const emptyMsg = document.getElementById('chart-empty');
+  if (h.length < 2) {
+    canvas.style.display = 'none';
+    emptyMsg.style.display = 'flex';
+    emptyMsg.textContent = h.length === 0 ? 'Take a quiz to see your progress' : 'Take one more quiz to see the chart';
+  } else {
+    canvas.style.display = 'block';
+    emptyMsg.style.display = 'none';
+    drawChart(canvas, h);
+  }
+
+  // Category accuracy bars
+  const catStats = {};
+  for (const [id, data] of Object.entries(store.questions)) {
+    const cat = data.category || 'unknown';
+    if (!catStats[cat]) catStats[cat] = { seen: 0, correct: 0 };
+    catStats[cat].seen += data.seen;
+    catStats[cat].correct += data.seen - data.wrong;
+  }
+  const catBars = document.getElementById('cat-bars');
+  const sortedCats = Object.entries(catStats).sort((a, b) => {
+    const pctA = a[1].correct / a[1].seen;
+    const pctB = b[1].correct / b[1].seen;
+    return pctA - pctB;
+  });
+
+  if (sortedCats.length === 0) {
+    document.getElementById('cat-bars-section').style.display = 'none';
+  } else {
+    document.getElementById('cat-bars-section').style.display = 'block';
+    catBars.innerHTML = sortedCats.map(([cat, data]) => {
+      const pct = Math.round((data.correct / data.seen) * 100);
+      const color = pct >= 80 ? 'var(--green)' : pct >= 60 ? 'var(--orange)' : 'var(--red)';
+      return `<div class="cat-bar-row">
+        <span class="cat-bar-label">${cat.replace(/_/g, ' ')}</span>
+        <div class="cat-bar-track"><div class="cat-bar-fill" style="width:${pct}%;background:${color}"></div></div>
+        <span class="cat-bar-pct" style="color:${color}">${pct}%</span>
+      </div>`;
+    }).join('');
+  }
+
+  // Weak questions
+  const weakIds = getWeakQuestionIds(store);
+  const weakSection = document.getElementById('weak-section');
+  const weakList = document.getElementById('weak-list');
+  if (weakIds.length === 0) {
+    weakSection.style.display = 'none';
+  } else {
+    weakSection.style.display = 'block';
+    weakList.innerHTML = weakIds.slice(0, 15).map(w => {
+      const qData = store.questions[w.id];
+      const rate = Math.round(w.missRate * 100);
+      return `<div class="weak-item">
+        <div class="wq">Q${w.id}</div>
+        <div class="wm">Missed <span class="miss-pct">${w.wrong}/${w.seen} (${rate}%)</span> &middot; ${(qData.category || '').replace(/_/g, ' ')}</div>
+      </div>`;
+    }).join('');
+  }
+
+  window.scrollTo({ top: 0 });
+}
+
+// ---- Chart Drawing ----
+function drawChart(canvas, history) {
+  const dpr = window.devicePixelRatio || 1;
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = rect.width * dpr;
+  canvas.height = 180 * dpr;
+  canvas.style.height = '180px';
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+  const W = rect.width;
+  const H = 180;
+  const pad = { top: 20, right: 16, bottom: 30, left: 36 };
+  const plotW = W - pad.left - pad.right;
+  const plotH = H - pad.top - pad.bottom;
+
+  // Show last 20 quizzes max
+  const data = history.slice(-20);
+  const n = data.length;
+
+  ctx.clearRect(0, 0, W, H);
+
+  // Grid lines and Y labels
+  ctx.strokeStyle = '#e5e7eb';
+  ctx.lineWidth = 1;
+  ctx.fillStyle = '#9ca3af';
+  ctx.font = '11px -apple-system, sans-serif';
+  ctx.textAlign = 'right';
+  for (let pct of [0, 25, 50, 75, 100]) {
+    const y = pad.top + plotH - (pct / 100) * plotH;
+    ctx.beginPath();
+    ctx.moveTo(pad.left, y);
+    ctx.lineTo(W - pad.right, y);
+    ctx.stroke();
+    ctx.fillText(pct + '%', pad.left - 6, y + 4);
+  }
+
+  // 80% pass line
+  const passY = pad.top + plotH - (80 / 100) * plotH;
+  ctx.strokeStyle = '#16a34a40';
+  ctx.lineWidth = 2;
+  ctx.setLineDash([6, 4]);
+  ctx.beginPath();
+  ctx.moveTo(pad.left, passY);
+  ctx.lineTo(W - pad.right, passY);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Points
+  const points = data.map((d, i) => ({
+    x: pad.left + (n === 1 ? plotW / 2 : (i / (n - 1)) * plotW),
+    y: pad.top + plotH - (d.pct / 100) * plotH,
+    pct: d.pct,
+  }));
+
+  // Line
+  ctx.strokeStyle = '#1a56db';
+  ctx.lineWidth = 2.5;
+  ctx.lineJoin = 'round';
+  ctx.beginPath();
+  points.forEach((p, i) => i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y));
+  ctx.stroke();
+
+  // Area fill
+  ctx.beginPath();
+  points.forEach((p, i) => i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y));
+  ctx.lineTo(points[points.length - 1].x, pad.top + plotH);
+  ctx.lineTo(points[0].x, pad.top + plotH);
+  ctx.closePath();
+  const grad = ctx.createLinearGradient(0, pad.top, 0, pad.top + plotH);
+  grad.addColorStop(0, 'rgba(26, 86, 219, 0.2)');
+  grad.addColorStop(1, 'rgba(26, 86, 219, 0.02)');
+  ctx.fillStyle = grad;
+  ctx.fill();
+
+  // Dots
+  points.forEach(p => {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, 4, 0, Math.PI * 2);
+    ctx.fillStyle = p.pct >= 80 ? '#16a34a' : '#dc2626';
+    ctx.fill();
+    ctx.strokeStyle = '#fff';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+  });
+
+  // X labels (quiz numbers)
+  ctx.fillStyle = '#9ca3af';
+  ctx.font = '10px -apple-system, sans-serif';
+  ctx.textAlign = 'center';
+  const startNum = history.length - data.length + 1;
+  const step = n <= 10 ? 1 : n <= 20 ? 2 : 5;
+  points.forEach((p, i) => {
+    if (i % step === 0 || i === n - 1) {
+      ctx.fillText('#' + (startNum + i), p.x, H - pad.bottom + 16);
+    }
+  });
+}
+
+// ---- Clear Data ----
+function clearData() {
+  if (confirm('This will erase all your quiz history and question tracking. Continue?')) {
+    localStorage.removeItem(STORE_KEY);
+    goHome();
+  }
 }
 </script>
 </body>
