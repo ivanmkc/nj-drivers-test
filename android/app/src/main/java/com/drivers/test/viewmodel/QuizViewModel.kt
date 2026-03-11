@@ -8,14 +8,17 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.drivers.test.data.*
+import com.drivers.test.model.*
+import com.drivers.test.repository.ApiClient
+import com.drivers.test.repository.LocalStore
+import com.drivers.test.repository.Localizer
 import kotlinx.coroutines.launch
 import kotlin.math.ceil
 import kotlin.math.roundToInt
 
 class QuizViewModel(application: Application) : AndroidViewModel(application) {
-    private val api = ApiService.create()
-    private val storage = StorageService(application)
+    private val api = ApiClient.create()
+    private val storage = LocalStore(application)
     val localizer = Localizer()
 
     var screen by mutableStateOf(AppScreen.STATE_PICKER)

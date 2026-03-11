@@ -1,0 +1,53 @@
+name: iOS Build & Test
+
+on:
+  push:
+    paths:
+      - 'ios/**'
+      - '.github/workflows/ios.yml'
+  pull_request:
+    paths:
+      - 'ios/**'
+      - '.github/workflows/ios.yml'
+
+jobs:
+  build-and-test:
+    runs-on: macos-14
+    defaults:
+      run:
+        working-directory: ios/DriversTest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_15.4.app/Contents/Developer
+
+      - name: Resolve packages
+        run: xcodebuild -resolvePackageDependencies -scheme DriversTest -project DriversTest.xcodeproj
+
+      - name: Build
+        run: |
+          xcodebuild build \
+            -project DriversTest.xcodeproj \
+            -scheme DriversTest \
+            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Run UI Tests
+        run: |
+          xcodebuild test \
+            -project DriversTest.xcodeproj \
+            -scheme DriversTest \
+            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO \
+            -resultBundlePath TestResults.xcresult
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-test-results
+          path: ios/DriversTest/TestResults.xcresult
