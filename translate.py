@@ -13,7 +13,7 @@ import time
 import yaml
 from google import genai
 
-MODEL = "gemini-3.1-flash-preview"
+MODEL = "gemini-3-flash-preview"
 CLIENT = genai.Client(vertexai=True, project="adk-coding-agents", location="global")
 
 LANG_NAMES = {
