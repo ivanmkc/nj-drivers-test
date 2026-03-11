@@ -14,6 +14,18 @@
     --orange: #ea580c;
     --gray: #6b7280; --gray-light: #f3f4f6;
     --bg: #ffffff; --text: #111827; --radius: 12px;
+    --card: #ffffff; --border: #e5e7eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --blue: #5b8def; --blue-light: #1e293b;
+      --green: #4ade80; --green-light: #14332a;
+      --red: #fca5a5; --red-light: #3b1515;
+      --orange: #fb923c;
+      --gray: #9ca3af; --gray-light: #1f2937;
+      --bg: #111827; --text: #f9fafb;
+      --card: #1f2937; --border: #374151;
+    }
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -28,7 +40,7 @@
   /* Lang bar */
   .lang-bar { display: flex; justify-content: flex-end; gap: 4px; margin-bottom: 12px; }
   .lang-btn {
-    padding: 6px 12px; border: 1.5px solid #e5e7eb; background: var(--bg);
+    padding: 6px 12px; border: 1.5px solid var(--border); background: var(--card);
     border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; color: var(--gray);
   }
   .lang-btn.active { border-color: var(--blue); background: var(--blue-light); color: var(--blue); }
@@ -40,7 +52,7 @@
   .state-list { display: flex; flex-direction: column; gap: 10px; text-align: left; }
   .state-card {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 16px; background: var(--bg); border: 2px solid #e5e7eb;
+    padding: 16px; background: var(--card); border: 2px solid var(--border);
     border-radius: var(--radius); cursor: pointer; transition: all 0.15s;
   }
   .state-card:active { transform: scale(0.98); }
@@ -62,8 +74,8 @@
   .passing-info { color: var(--gray); font-size: 13px; margin-bottom: 20px; }
 
   .past-stats-banner {
-    display: none; background: var(--bg); border-radius: var(--radius);
-    padding: 14px 16px; margin-bottom: 20px; text-align: left; border: 1px solid #e5e7eb;
+    display: none; background: var(--card); border-radius: var(--radius);
+    padding: 14px 16px; margin-bottom: 20px; text-align: left; border: 1px solid var(--border);
   }
   .past-stats-banner .row { display: flex; justify-content: space-between; align-items: center; }
   .past-stats-banner .stat-group { display: flex; gap: 16px; }
@@ -74,7 +86,7 @@
 
   .mode-selector { display: flex; gap: 8px; margin-bottom: 16px; }
   .mode-btn {
-    flex: 1; padding: 12px 8px; border: 2px solid #e5e7eb; background: var(--bg);
+    flex: 1; padding: 12px 8px; border: 2px solid var(--border); background: var(--card);
     border-radius: var(--radius); font-size: 14px; font-weight: 600; cursor: pointer; text-align: center;
   }
   .mode-btn.active { border-color: var(--blue); background: var(--blue-light); color: var(--blue); }
@@ -85,7 +97,7 @@
 
   .count-selector { display: flex; gap: 8px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap; }
   .count-btn {
-    padding: 10px 20px; border: 2px solid var(--blue); background: var(--bg);
+    padding: 10px 20px; border: 2px solid var(--blue); background: var(--card);
     color: var(--blue); border-radius: var(--radius); font-size: 16px; font-weight: 600; cursor: pointer;
   }
   .count-btn.active, .count-btn:active { background: var(--blue); color: white; }
@@ -96,11 +108,11 @@
   }
   .start-btn:active { opacity: 0.8; }
   .start-btn:disabled { opacity: 0.5; cursor: default; }
-  .start-btn.secondary { background: var(--bg); color: var(--blue); border: 2px solid var(--blue); margin-top: 10px; }
+  .start-btn.secondary { background: var(--card); color: var(--blue); border: 2px solid var(--blue); margin-top: 10px; }
   .start-btn.ghost { background: none; color: var(--gray); border: none; font-size: 14px; padding: 10px; margin-top: 6px; }
 
   /* Quiz */
-  .progress-bar { height: 6px; background: #e5e7eb; border-radius: 3px; margin-bottom: 16px; overflow: hidden; }
+  .progress-bar { height: 6px; background: var(--border); border-radius: 3px; margin-bottom: 16px; overflow: hidden; }
   .progress-fill { height: 100%; background: var(--blue); border-radius: 3px; transition: width 0.3s ease; }
   .quiz-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 14px; color: var(--gray); }
   .quiz-header .score { font-weight: 600; }
@@ -112,8 +124,8 @@
   .choices { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
   .choice-btn {
     display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px;
-    background: var(--bg); border: 2px solid #e5e7eb; border-radius: var(--radius);
-    font-size: 16px; line-height: 1.4; cursor: pointer; text-align: left; width: 100%;
+    background: var(--card); border: 2px solid var(--border); border-radius: var(--radius);
+    font-size: 16px; line-height: 1.4; cursor: pointer; text-align: left; width: 100%; color: var(--text);
   }
   .choice-btn:active:not(.disabled) { transform: scale(0.98); }
   .choice-btn .letter { flex-shrink: 0; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; background: var(--gray-light); border-radius: 50%; font-weight: 700; font-size: 14px; color: var(--gray); }
@@ -123,7 +135,7 @@
   .choice-btn.wrong .letter { background: var(--red); color: white; }
   .choice-btn.disabled { cursor: default; opacity: 0.7; }
   .choice-btn.disabled.correct, .choice-btn.disabled.wrong { opacity: 1; }
-  .explanation { display: none; background: var(--blue-light); border-left: 4px solid var(--blue); padding: 12px 16px; border-radius: 0 var(--radius) var(--radius) 0; font-size: 14px; line-height: 1.6; color: #374151; margin-bottom: 16px; }
+  .explanation { display: none; background: var(--blue-light); border-left: 4px solid var(--blue); padding: 12px 16px; border-radius: 0 var(--radius) var(--radius) 0; font-size: 14px; line-height: 1.6; color: var(--text); margin-bottom: 16px; }
   .explanation.visible { display: block; }
   .next-btn { display: none; width: 100%; padding: 16px; background: var(--blue); color: white; border: none; border-radius: var(--radius); font-size: 17px; font-weight: 600; cursor: pointer; }
   .next-btn:active { opacity: 0.8; }
@@ -140,7 +152,7 @@
   .result-detail { color: var(--gray); font-size: 15px; margin-bottom: 24px; line-height: 1.5; }
   .review-section { text-align: left; margin-top: 24px; }
   .review-section h3 { font-size: 18px; margin-bottom: 12px; }
-  .review-item { background: var(--bg); border-radius: var(--radius); padding: 14px; margin-bottom: 10px; border-left: 4px solid; }
+  .review-item { background: var(--card); border-radius: var(--radius); padding: 14px; margin-bottom: 10px; border-left: 4px solid; }
   .review-item.was-wrong { border-color: var(--red); }
   .review-item .rq { font-weight: 600; font-size: 14px; margin-bottom: 6px; }
   .review-item .ra { font-size: 13px; color: var(--gray); }
@@ -151,18 +163,18 @@
   .stats-back { display: inline-flex; align-items: center; gap: 6px; color: var(--blue); font-size: 15px; font-weight: 600; cursor: pointer; margin-bottom: 20px; background: none; border: none; }
   .stats-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; }
   .stats-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 24px; }
-  .stat-card { background: var(--bg); border-radius: var(--radius); padding: 16px 12px; text-align: center; border: 1px solid #e5e7eb; }
+  .stat-card { background: var(--card); border-radius: var(--radius); padding: 16px 12px; text-align: center; border: 1px solid var(--border); }
   .stat-card .num { font-size: 26px; font-weight: 700; }
   .stat-card .num.green { color: var(--green); }
   .stat-card .num.blue { color: var(--blue); }
   .stat-card .lbl { font-size: 11px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.3px; margin-top: 4px; }
-  .chart-container { background: var(--bg); border-radius: var(--radius); padding: 16px; margin-bottom: 24px; border: 1px solid #e5e7eb; }
+  .chart-container { background: var(--card); border-radius: var(--radius); padding: 16px; margin-bottom: 24px; border: 1px solid var(--border); }
   .chart-container h4 { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
   .chart-container canvas { width: 100%; height: 180px; }
   .chart-empty { height: 120px; display: flex; align-items: center; justify-content: center; color: var(--gray); font-size: 14px; text-align: center; }
   .weak-section { margin-bottom: 24px; }
   .weak-section h4 { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
-  .weak-item { background: var(--bg); border-radius: var(--radius); padding: 12px 14px; margin-bottom: 8px; border: 1px solid #e5e7eb; border-left: 4px solid var(--orange); }
+  .weak-item { background: var(--card); border-radius: var(--radius); padding: 12px 14px; margin-bottom: 8px; border: 1px solid var(--border); border-left: 4px solid var(--orange); }
   .weak-item .wq { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
   .weak-item .wm { font-size: 12px; color: var(--gray); }
   .weak-item .wm .miss-pct { color: var(--red); font-weight: 600; }
@@ -170,11 +182,11 @@
   .category-bars h4 { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
   .cat-bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 13px; }
   .cat-bar-label { width: 110px; flex-shrink: 0; text-transform: capitalize; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .cat-bar-track { flex: 1; height: 10px; background: #e5e7eb; border-radius: 5px; overflow: hidden; }
+  .cat-bar-track { flex: 1; height: 10px; background: var(--border); border-radius: 5px; overflow: hidden; }
   .cat-bar-fill { height: 100%; border-radius: 5px; }
   .cat-bar-pct { width: 36px; text-align: right; font-weight: 600; font-size: 13px; }
-  .danger-zone { border-top: 1px solid #e5e7eb; padding-top: 20px; margin-top: 8px; }
-  .danger-btn { width: 100%; padding: 12px; background: var(--bg); color: var(--red); border: 2px solid var(--red-light); border-radius: var(--radius); font-size: 15px; font-weight: 600; cursor: pointer; }
+  .danger-zone { border-top: 1px solid var(--border); padding-top: 20px; margin-top: 8px; }
+  .danger-btn { width: 100%; padding: 12px; background: var(--card); color: var(--red); border: 2px solid var(--red-light); border-radius: var(--radius); font-size: 15px; font-weight: 600; cursor: pointer; }
   .danger-btn:active { background: var(--red-light); }
 </style>
 </head>
@@ -676,21 +688,22 @@ function drawChart(canvas, history) {
   const data = history.slice(-20), n = data.length;
   const passPct = currentState.passing_score_pct;
   ctx.clearRect(0, 0, W, H);
-  ctx.strokeStyle = '#e5e7eb'; ctx.lineWidth = 1; ctx.fillStyle = '#9ca3af'; ctx.font = '11px -apple-system, sans-serif'; ctx.textAlign = 'right';
+  const cs = getComputedStyle(document.documentElement);
+  ctx.strokeStyle = cs.getPropertyValue('--border').trim(); ctx.lineWidth = 1; ctx.fillStyle = cs.getPropertyValue('--gray').trim(); ctx.font = '11px -apple-system, sans-serif'; ctx.textAlign = 'right';
   for (let pct of [0, 25, 50, 75, 100]) { const y = pad.top + plotH - (pct / 100) * plotH; ctx.beginPath(); ctx.moveTo(pad.left, y); ctx.lineTo(W - pad.right, y); ctx.stroke(); ctx.fillText(pct + '%', pad.left - 6, y + 4); }
   const passY = pad.top + plotH - (passPct / 100) * plotH;
-  ctx.strokeStyle = '#16a34a40'; ctx.lineWidth = 2; ctx.setLineDash([6, 4]);
+  ctx.strokeStyle = cs.getPropertyValue('--green').trim() + '40'; ctx.lineWidth = 2; ctx.setLineDash([6, 4]);
   ctx.beginPath(); ctx.moveTo(pad.left, passY); ctx.lineTo(W - pad.right, passY); ctx.stroke(); ctx.setLineDash([]);
   const points = data.map((d, i) => ({ x: pad.left + (n === 1 ? plotW / 2 : (i / (n - 1)) * plotW), y: pad.top + plotH - (d.pct / 100) * plotH, pct: d.pct }));
-  ctx.strokeStyle = '#1a56db'; ctx.lineWidth = 2.5; ctx.lineJoin = 'round'; ctx.beginPath();
+  ctx.strokeStyle = cs.getPropertyValue('--blue').trim(); ctx.lineWidth = 2.5; ctx.lineJoin = 'round'; ctx.beginPath();
   points.forEach((p, i) => i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y)); ctx.stroke();
   ctx.beginPath(); points.forEach((p, i) => i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y));
   ctx.lineTo(points[points.length - 1].x, pad.top + plotH); ctx.lineTo(points[0].x, pad.top + plotH); ctx.closePath();
   const grad = ctx.createLinearGradient(0, pad.top, 0, pad.top + plotH);
   grad.addColorStop(0, 'rgba(26, 86, 219, 0.2)'); grad.addColorStop(1, 'rgba(26, 86, 219, 0.02)');
   ctx.fillStyle = grad; ctx.fill();
-  points.forEach(p => { ctx.beginPath(); ctx.arc(p.x, p.y, 4, 0, Math.PI * 2); ctx.fillStyle = p.pct >= passPct ? '#16a34a' : '#dc2626'; ctx.fill(); ctx.strokeStyle = '#fff'; ctx.lineWidth = 2; ctx.stroke(); });
-  ctx.fillStyle = '#9ca3af'; ctx.font = '10px -apple-system, sans-serif'; ctx.textAlign = 'center';
+  points.forEach(p => { ctx.beginPath(); ctx.arc(p.x, p.y, 4, 0, Math.PI * 2); ctx.fillStyle = p.pct >= passPct ? cs.getPropertyValue('--green').trim() : cs.getPropertyValue('--red').trim(); ctx.fill(); ctx.strokeStyle = cs.getPropertyValue('--card').trim(); ctx.lineWidth = 2; ctx.stroke(); });
+  ctx.fillStyle = cs.getPropertyValue('--gray').trim(); ctx.font = '10px -apple-system, sans-serif'; ctx.textAlign = 'center';
   const startNum = history.length - data.length + 1, step = n <= 10 ? 1 : 2;
   points.forEach((p, i) => { if (i % step === 0 || i === n - 1) ctx.fillText('#' + (startNum + i), p.x, H - pad.bottom + 16); });
 }
