@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1a56db">
+<title>NJ Driver's Test Practice</title>
+<style>
+  :root {
+    --blue: #1a56db;
+    --blue-light: #e8f0fe;
+    --green: #16a34a;
+    --green-light: #dcfce7;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --gray: #6b7280;
+    --gray-light: #f3f4f6;
+    --bg: #ffffff;
+    --text: #111827;
+    --radius: 12px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--gray-light);
+    color: var(--text);
+    min-height: 100dvh;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 16px;
+    padding-bottom: env(safe-area-inset-bottom, 16px);
+  }
+
+  /* ---- Start Screen ---- */
+  #start-screen {
+    text-align: center;
+    padding-top: 15vh;
+  }
+  #start-screen h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: var(--blue);
+  }
+  #start-screen p {
+    color: var(--gray);
+    margin-bottom: 24px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .count-selector {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .count-btn {
+    padding: 10px 20px;
+    border: 2px solid var(--blue);
+    background: var(--bg);
+    color: var(--blue);
+    border-radius: var(--radius);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .count-btn.active, .count-btn:active {
+    background: var(--blue);
+    color: white;
+  }
+  .start-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s;
+  }
+  .start-btn:active { opacity: 0.8; }
+
+  /* ---- Quiz Screen ---- */
+  #quiz-screen { display: none; }
+
+  .progress-bar {
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 3px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--blue);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+  }
+
+  .quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: var(--gray);
+  }
+  .quiz-header .score {
+    font-weight: 600;
+  }
+  .score .correct { color: var(--green); }
+  .score .wrong { color: var(--red); }
+
+  .category-badge {
+    display: inline-block;
+    background: var(--blue-light);
+    color: var(--blue);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .question-text {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .choices {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .choice-btn {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+    background: var(--bg);
+    border: 2px solid #e5e7eb;
+    border-radius: var(--radius);
+    font-size: 16px;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: all 0.15s;
+    text-align: left;
+    width: 100%;
+  }
+  .choice-btn:active:not(.disabled) {
+    transform: scale(0.98);
+  }
+  .choice-btn .letter {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gray-light);
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--gray);
+  }
+  .choice-btn.selected {
+    border-color: var(--blue);
+    background: var(--blue-light);
+  }
+  .choice-btn.selected .letter {
+    background: var(--blue);
+    color: white;
+  }
+  .choice-btn.correct {
+    border-color: var(--green);
+    background: var(--green-light);
+  }
+  .choice-btn.correct .letter {
+    background: var(--green);
+    color: white;
+  }
+  .choice-btn.wrong {
+    border-color: var(--red);
+    background: var(--red-light);
+  }
+  .choice-btn.wrong .letter {
+    background: var(--red);
+    color: white;
+  }
+  .choice-btn.disabled {
+    cursor: default;
+    opacity: 0.7;
+  }
+  .choice-btn.disabled.correct,
+  .choice-btn.disabled.wrong,
+  .choice-btn.disabled.selected {
+    opacity: 1;
+  }
+
+  .explanation {
+    display: none;
+    background: var(--blue-light);
+    border-left: 4px solid var(--blue);
+    padding: 12px 16px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #374151;
+    margin-bottom: 16px;
+  }
+  .explanation.visible { display: block; }
+
+  .next-btn {
+    display: none;
+    width: 100%;
+    padding: 16px;
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s;
+  }
+  .next-btn:active { opacity: 0.8; }
+  .next-btn.visible { display: block; }
+
+  /* ---- Results Screen ---- */
+  #results-screen { display: none; text-align: center; padding-top: 10vh; }
+  .results-circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    border: 6px solid;
+  }
+  .results-circle.pass { border-color: var(--green); color: var(--green); }
+  .results-circle.fail { border-color: var(--red); color: var(--red); }
+  .results-circle .pct { font-size: 42px; font-weight: 700; }
+  .results-circle .label { font-size: 14px; font-weight: 600; text-transform: uppercase; }
+
+  .result-msg {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .result-detail {
+    color: var(--gray);
+    font-size: 15px;
+    margin-bottom: 32px;
+    line-height: 1.5;
+  }
+
+  .review-section {
+    text-align: left;
+    margin-top: 24px;
+  }
+  .review-section h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .review-item {
+    background: var(--bg);
+    border-radius: var(--radius);
+    padding: 14px;
+    margin-bottom: 10px;
+    border-left: 4px solid;
+  }
+  .review-item.was-correct { border-color: var(--green); }
+  .review-item.was-wrong { border-color: var(--red); }
+  .review-item .rq { font-weight: 600; font-size: 14px; margin-bottom: 6px; }
+  .review-item .ra { font-size: 13px; color: var(--gray); }
+  .review-item .ra strong { color: var(--text); }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Start Screen -->
+  <div id="start-screen">
+    <h1>NJ Driver's Test</h1>
+    <p>Practice for your New Jersey MVC written test.<br>
+    Based on the 2025 NJ Driver Manual + real test questions.</p>
+    <p style="font-weight:600; margin-bottom:8px;">Number of questions:</p>
+    <div class="count-selector">
+      <button class="count-btn" data-count="10">10</button>
+      <button class="count-btn" data-count="25">25</button>
+      <button class="count-btn active" data-count="50">50</button>
+      <button class="count-btn" data-count="100">100</button>
+      <button class="count-btn" data-count="298">All</button>
+    </div>
+    <button class="start-btn" onclick="startQuiz()">Start Quiz</button>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div id="quiz-screen">
+    <div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+    <div class="quiz-header">
+      <span id="q-counter">1 / 50</span>
+      <span class="score"><span class="correct" id="score-correct">0</span> / <span class="wrong" id="score-wrong">0</span></span>
+    </div>
+    <div class="category-badge" id="q-category"></div>
+    <div class="question-text" id="q-text"></div>
+    <div class="choices" id="choices"></div>
+    <div class="explanation" id="explanation"></div>
+    <button class="next-btn" id="next-btn" onclick="nextQuestion()">Next</button>
+  </div>
+
+  <!-- Results Screen -->
+  <div id="results-screen">
+    <div class="results-circle" id="results-circle">
+      <div class="pct" id="results-pct"></div>
+      <div class="label" id="results-label"></div>
+    </div>
+    <div class="result-msg" id="result-msg"></div>
+    <div class="result-detail" id="result-detail"></div>
+    <button class="start-btn" onclick="location.reload()">Try Again</button>
+    <div class="review-section" id="review-section">
+      <h3 id="review-title"></h3>
+      <div id="review-list"></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+let questions = [];
+let currentIdx = 0;
+let correctCount = 0;
+let wrongCount = 0;
+let answered = false;
+let selectedCount = 50;
+let results = []; // {question, yourAnswer, correctAnswer, correct, explanation}
+
+// Count selector
+document.querySelectorAll('.count-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.count-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    selectedCount = parseInt(btn.dataset.count);
+  });
+});
+
+async function startQuiz() {
+  const res = await fetch(`/api/quiz/${selectedCount}`);
+  const data = await res.json();
+  questions = data.questions;
+  currentIdx = 0;
+  correctCount = 0;
+  wrongCount = 0;
+  results = [];
+  document.getElementById('start-screen').style.display = 'none';
+  document.getElementById('quiz-screen').style.display = 'block';
+  showQuestion();
+}
+
+function showQuestion() {
+  answered = false;
+  const q = questions[currentIdx];
+  document.getElementById('progress').style.width = `${((currentIdx) / questions.length) * 100}%`;
+  document.getElementById('q-counter').textContent = `${currentIdx + 1} / ${questions.length}`;
+  document.getElementById('score-correct').textContent = correctCount;
+  document.getElementById('score-wrong').textContent = wrongCount;
+  document.getElementById('q-category').textContent = q.category.replace(/_/g, ' ');
+  document.getElementById('q-text').textContent = q.question;
+  document.getElementById('explanation').classList.remove('visible');
+  document.getElementById('next-btn').classList.remove('visible');
+
+  const choicesDiv = document.getElementById('choices');
+  choicesDiv.innerHTML = '';
+  const letters = ['A', 'B', 'C', 'D'];
+  letters.forEach(letter => {
+    if (!q.choices[letter]) return;
+    const btn = document.createElement('button');
+    btn.className = 'choice-btn';
+    btn.innerHTML = `<span class="letter">${letter}</span><span>${q.choices[letter]}</span>`;
+    btn.addEventListener('click', () => selectAnswer(letter, btn));
+    choicesDiv.appendChild(btn);
+  });
+}
+
+async function selectAnswer(letter, btn) {
+  if (answered) return;
+  answered = true;
+
+  // Fetch correct answer
+  const res = await fetch(`/api/answer/${questions[currentIdx].id}`);
+  const data = await res.json();
+  const correct = data.answer;
+
+  const allBtns = document.querySelectorAll('.choice-btn');
+  allBtns.forEach(b => b.classList.add('disabled'));
+
+  if (letter === correct) {
+    btn.classList.add('correct');
+    correctCount++;
+  } else {
+    btn.classList.add('wrong');
+    wrongCount++;
+    // Highlight correct answer
+    const letters = ['A', 'B', 'C', 'D'];
+    const correctIdx = letters.indexOf(correct);
+    if (correctIdx >= 0 && allBtns[correctIdx]) {
+      allBtns[correctIdx].classList.add('correct');
+    }
+  }
+
+  results.push({
+    question: questions[currentIdx].question,
+    yourAnswer: letter,
+    yourAnswerText: questions[currentIdx].choices[letter],
+    correctAnswer: correct,
+    correctAnswerText: questions[currentIdx].choices[correct],
+    correct: letter === correct,
+    explanation: data.explanation,
+  });
+
+  document.getElementById('explanation').textContent = data.explanation;
+  document.getElementById('explanation').classList.add('visible');
+  document.getElementById('score-correct').textContent = correctCount;
+  document.getElementById('score-wrong').textContent = wrongCount;
+
+  const nextBtn = document.getElementById('next-btn');
+  nextBtn.textContent = currentIdx < questions.length - 1 ? 'Next' : 'See Results';
+  nextBtn.classList.add('visible');
+}
+
+function nextQuestion() {
+  currentIdx++;
+  if (currentIdx >= questions.length) {
+    showResults();
+    return;
+  }
+  showQuestion();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showResults() {
+  document.getElementById('quiz-screen').style.display = 'none';
+  document.getElementById('results-screen').style.display = 'block';
+
+  const pct = Math.round((correctCount / questions.length) * 100);
+  const pass = pct >= 80;
+
+  const circle = document.getElementById('results-circle');
+  circle.className = `results-circle ${pass ? 'pass' : 'fail'}`;
+  document.getElementById('results-pct').textContent = `${pct}%`;
+  document.getElementById('results-label').textContent = pass ? 'PASS' : 'FAIL';
+
+  document.getElementById('result-msg').textContent = pass
+    ? 'Congratulations!'
+    : 'Keep Practicing!';
+  document.getElementById('result-detail').textContent =
+    `You got ${correctCount} out of ${questions.length} correct. ` +
+    `You need 80% to pass the actual MVC test.`;
+
+  // Show wrong answers for review
+  const wrongResults = results.filter(r => !r.correct);
+  const reviewTitle = document.getElementById('review-title');
+  const reviewList = document.getElementById('review-list');
+
+  if (wrongResults.length > 0) {
+    reviewTitle.textContent = `Review Missed Questions (${wrongResults.length})`;
+    reviewList.innerHTML = wrongResults.map(r => `
+      <div class="review-item was-wrong">
+        <div class="rq">${r.question}</div>
+        <div class="ra">Your answer: <strong>${r.yourAnswer}: ${r.yourAnswerText}</strong></div>
+        <div class="ra">Correct: <strong>${r.correctAnswer}: ${r.correctAnswerText}</strong></div>
+        <div class="ra" style="margin-top:6px; font-style:italic;">${r.explanation}</div>
+      </div>
+    `).join('');
+  } else {
+    reviewTitle.textContent = 'Perfect Score!';
+    reviewList.innerHTML = '<p style="color:#6b7280;">You answered every question correctly.</p>';
+  }
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
