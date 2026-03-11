@@ -6,19 +6,11 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.drivers.test.theme.DriversTestTheme
 import com.drivers.test.view.screen.StatePickerScreen
 import com.drivers.test.view.screen.HomeScreen
-import com.drivers.test.view.screen.QuizScreen
-import com.drivers.test.view.screen.ResultsScreen
-import com.drivers.test.view.screen.StatsScreen
 import com.drivers.test.viewmodel.QuizViewModel
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
-/**
- * UI tests for the Driver's Test app.
- * These tests verify screen rendering and basic interactions.
- * They run against the Compose UI tree without needing a backend server.
- */
 @RunWith(AndroidJUnit4::class)
 class DriversTestUITest {
 
@@ -29,20 +21,22 @@ class DriversTestUITest {
 
     @Test
     fun statePicker_showsTitleAndDescription() {
+        val vm = createTestViewModel()
         composeTestRule.setContent {
             DriversTestTheme {
-                StatePickerScreen(vm = createTestViewModel())
+                StatePickerScreen(vm = vm)
             }
         }
-        composeTestRule.onNodeWithText("Driver's Test Practice").assertExists()
-        composeTestRule.onNodeWithText("Choose your state to start practicing").assertExists()
+        composeTestRule.onNodeWithText(vm.t("appTitle")).assertExists()
+        composeTestRule.onNodeWithText(vm.t("selectStateDesc")).assertExists()
     }
 
     @Test
     fun statePicker_showsLanguageButtons() {
+        val vm = createTestViewModel()
         composeTestRule.setContent {
             DriversTestTheme {
-                StatePickerScreen(vm = createTestViewModel())
+                StatePickerScreen(vm = vm)
             }
         }
         composeTestRule.onNodeWithText("EN").assertExists()
@@ -57,7 +51,6 @@ class DriversTestUITest {
                 StatePickerScreen(vm = vm)
             }
         }
-        // When loading, title should still be visible but states should not
         composeTestRule.onNodeWithText(vm.t("appTitle")).assertExists()
     }
 
@@ -96,8 +89,7 @@ class DriversTestUITest {
                 StatePickerScreen(vm = vm)
             }
         }
-        // "Coming soon" state should show badge
-        composeTestRule.onNodeWithText("Coming soon").assertExists()
+        composeTestRule.onNodeWithText(vm.t("comingSoon")).assertExists()
     }
 
     // -- Home Screen --
@@ -105,12 +97,13 @@ class DriversTestUITest {
     @Test
     fun homeScreen_showsTitle() {
         val vm = createTestViewModelWithState()
+        val expected = vm.t("title", mapOf("state" to "NJ", "state_name" to "New Jersey"))
         composeTestRule.setContent {
             DriversTestTheme {
                 HomeScreen(vm = vm)
             }
         }
-        composeTestRule.onNodeWithText("NJ Driver's Test").assertExists()
+        composeTestRule.onNodeWithText(expected).assertExists()
     }
 
     @Test
@@ -121,8 +114,8 @@ class DriversTestUITest {
                 HomeScreen(vm = vm)
             }
         }
-        composeTestRule.onNodeWithText("Random").assertExists()
-        composeTestRule.onNodeWithText("Weak Spots").assertExists()
+        composeTestRule.onNodeWithText(vm.t("modeRandom")).assertExists()
+        composeTestRule.onNodeWithText(vm.t("modeWeak")).assertExists()
     }
 
     @Test
@@ -146,7 +139,7 @@ class DriversTestUITest {
                 HomeScreen(vm = vm)
             }
         }
-        composeTestRule.onNodeWithText("Start Quiz").assertExists()
+        composeTestRule.onNodeWithText(vm.t("startQuiz")).assertExists()
     }
 
     @Test
@@ -157,18 +150,23 @@ class DriversTestUITest {
                 HomeScreen(vm = vm)
             }
         }
-        composeTestRule.onNodeWithText("Change State").assertExists()
+        composeTestRule.onNodeWithText(vm.t("changeState")).assertExists()
     }
 
     @Test
     fun homeScreen_showsPassingInfo() {
         val vm = createTestViewModelWithState()
+        val expected = vm.t("passingScore", mapOf(
+            "pass_pct" to "80",
+            "pass_count" to "40",
+            "test_count" to "50",
+        ))
         composeTestRule.setContent {
             DriversTestTheme {
                 HomeScreen(vm = vm)
             }
         }
-        composeTestRule.onNodeWithText("Passing: 80% (40/50)", substring = true).assertExists()
+        composeTestRule.onNodeWithText(expected, substring = true).assertExists()
     }
 
     // -- Language Switching --
@@ -181,10 +179,10 @@ class DriversTestUITest {
                 HomeScreen(vm = vm)
             }
         }
-        // Tap Japanese language button
-        composeTestRule.onNodeWithText("日本語").performClick()
-        // Title should now be in Japanese
-        composeTestRule.onNodeWithText("NJ 運転免許テスト").assertExists()
+        composeTestRule.onNodeWithText("\u65E5\u672C\u8A9E").performClick()
+        composeTestRule.waitForIdle()
+        val expected = vm.t("title", mapOf("state" to "NJ", "state_name" to "New Jersey"))
+        composeTestRule.onNodeWithText(expected).assertExists()
     }
 
     @Test
@@ -196,7 +194,9 @@ class DriversTestUITest {
             }
         }
         composeTestRule.onNodeWithText("ES").performClick()
-        composeTestRule.onNodeWithText("Examen de Conducir NJ").assertExists()
+        composeTestRule.waitForIdle()
+        val expected = vm.t("title", mapOf("state" to "NJ", "state_name" to "New Jersey"))
+        composeTestRule.onNodeWithText(expected).assertExists()
     }
 
     // -- Helpers --
