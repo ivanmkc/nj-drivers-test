@@ -42,7 +42,7 @@ jobs:
           path: android/app/build/outputs/apk/debug/*.apk
 
   ui-test:
-    runs-on: macos-latest
+    runs-on: macos-13
     defaults:
       run:
         working-directory: android
