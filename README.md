@@ -20,10 +20,8 @@ drivers/
 ├── tools/                   # Build and content scripts
 │   ├── bundle.py                # Builds gzipped JSON bundle, copies to apps
 │   ├── generate_questions.py    # Generate questions from manual text (Gemini)
-│   ├── generate_questions_from_knowledge.py
 │   ├── translate.py             # Translate questions to other languages
-│   ├── setup_state.py           # Scaffold a new state directory
-│   ├── setup_state_from_knowledge.py
+│   ├── setup_state.py           # Full pipeline: download PDF, extract, generate
 │   ├── add_sign_questions.py    # Add sign-identification questions
 │   ├── audit_questions.py       # Quality/accuracy audit
 │   └── extract_signs.py
@@ -117,10 +115,35 @@ Open http://localhost:8080 in your browser.
 
 ## Adding a New State
 
+Every question set **must** be grounded in a real official driver's manual. Never generate questions from LLM knowledge alone.
+
+### Pipeline
+
+1. **Find the official manual** — locate the state's official driver handbook PDF or online manual.
+2. **Set up the state** — downloads the PDF and extracts text:
+   ```bash
+   python3 tools/setup_state.py <code> <name> <agency> <pass_pct> <test_count> <manual_url>
+   ```
+3. **Generate questions** — uses extracted manual text as Gemini context:
+   ```bash
+   python3 tools/generate_questions.py <code> data/states/<code>/manual.txt
+   ```
+4. **Add sign questions** (optional):
+   ```bash
+   python3 tools/add_sign_questions.py <code>
+   ```
+5. **Translate**:
+   ```bash
+   python3 tools/translate.py <code> es
+   python3 tools/translate.py <code> ja
+   ```
+6. **Bundle** — builds the gzipped JSON and copies to iOS/Android:
+   ```bash
+   python3 tools/bundle.py
+   ```
+
+### Quality checks
+
 ```bash
-python3 tools/setup_state.py <code> <name> <agency> <pass_pct> <test_count> <manual_url>
-python3 tools/generate_questions.py <code> <manual_text_file>
-python3 tools/translate.py <code> ja
-python3 tools/translate.py <code> es
-python3 tools/bundle.py
+python3 tools/audit_questions.py        # Validate all question data
 ```
