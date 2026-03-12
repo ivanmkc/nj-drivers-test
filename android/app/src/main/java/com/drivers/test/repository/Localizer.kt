@@ -1,7 +1,7 @@
 package com.drivers.test.repository
 
 class Localizer {
-    val langLabels = mapOf("en" to "EN", "ja" to "日本語", "es" to "ES")
+    val langLabels = mapOf("en" to "EN", "ja" to "日本語", "es" to "ES", "fr" to "FR")
 
     private val translations: Map<String, Map<String, String>> = mapOf(
         "en" to mapOf(
@@ -46,7 +46,7 @@ class Localizer {
             "resetConfirm" to "This will erase all your quiz history and question tracking for {state_name}. Continue?",
             "pass" to "PASS",
             "fail" to "FAIL",
-            "passingScore" to "Passing: {pass_pct}% ({pass_count}/{test_count})",
+            "passingScore" to "Real test: {test_count} questions, {pass_count} correct to pass ({pass_pct}%)",
         ),
         "ja" to mapOf(
             "appTitle" to "運転免許テスト練習",
@@ -90,7 +90,7 @@ class Localizer {
             "resetConfirm" to "{state_name}のすべてのテスト履歴と問題追跡データが消去されます。よろしいですか？",
             "pass" to "合格",
             "fail" to "不合格",
-            "passingScore" to "合格ライン: {pass_pct}% ({pass_count}/{test_count})",
+            "passingScore" to "本番: {test_count}問中{pass_count}問正解で合格 ({pass_pct}%)",
         ),
         "es" to mapOf(
             "appTitle" to "Práctica de Examen de Conducir",
@@ -134,7 +134,51 @@ class Localizer {
             "resetConfirm" to "Esto borrará todo tu historial y seguimiento de {state_name}. ¿Continuar?",
             "pass" to "APROBADO",
             "fail" to "REPROBADO",
-            "passingScore" to "Aprobación: {pass_pct}% ({pass_count}/{test_count})",
+            "passingScore" to "Examen real: {test_count} preguntas, {pass_count} correctas para aprobar ({pass_pct}%)",
+        ),
+        "fr" to mapOf(
+            "appTitle" to "Pratique d'examen de conduite",
+            "selectStateDesc" to "Choisissez votre province pour commencer",
+            "questionsAvailable" to "{count} questions",
+            "comingSoon" to "Bientôt disponible",
+            "title" to "Examen de conduite {state}",
+            "subtitle" to "Pratiquez pour l'examen écrit de {state_name}.",
+            "quizzes" to "Tests",
+            "avgScore" to "Moyenne",
+            "passStreak" to "Série",
+            "viewStats" to "Voir les stats",
+            "modeRandom" to "Aléatoire",
+            "modeRandomDesc" to "Toutes les questions",
+            "modeWeak" to "Points faibles",
+            "modeWeakDesc" to "Les plus ratées",
+            "numQuestions" to "Nombre de questions :",
+            "startQuiz" to "Commencer",
+            "noWeakSpots" to "Aucun point faible",
+            "next" to "Suivant",
+            "seeResults" to "Voir les résultats",
+            "missed" to "Ratée",
+            "congratulations" to "Félicitations !",
+            "keepPracticing" to "Continuez à pratiquer !",
+            "resultDetail" to "Vous avez obtenu {correct} sur {total}. Il faut {pass_pct}% pour réussir l'examen.",
+            "newQuiz" to "Nouveau test",
+            "reviewMissed" to "Revoir les erreurs ({count})",
+            "perfectScore" to "Score parfait !",
+            "perfectMsg" to "Vous avez répondu correctement à toutes les questions.",
+            "yourAnswer" to "Votre réponse",
+            "correct" to "Correcte",
+            "back" to "Retour",
+            "changeState" to "Changer de province",
+            "yourProgress" to "Votre progrès",
+            "qsSeen" to "Vues",
+            "bestScore" to "Meilleur",
+            "scoreHistory" to "Historique des scores",
+            "accuracyByCategory" to "Précision par catégorie",
+            "mostMissed" to "Questions les plus ratées",
+            "resetAll" to "Effacer tout le progrès",
+            "resetConfirm" to "Cela effacera tout votre historique pour {state_name}. Continuer ?",
+            "pass" to "RÉUSSI",
+            "fail" to "ÉCHOUÉ",
+            "passingScore" to "Examen réel : {test_count} questions, {pass_count} bonnes réponses pour réussir ({pass_pct}%)",
         ),
     )
 

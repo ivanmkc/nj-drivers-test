@@ -33,18 +33,20 @@ CATEGORIES = [
 ]
 
 SYSTEM_PROMPT = """\
-You are an expert driver education test writer. Generate accurate multiple-choice questions based on the official driver's manual and driving laws for the specified US state.
+You are an expert driver education test writer. Generate accurate multiple-choice questions based on the official driver's manual and driving laws for the specified jurisdiction (US state, Canadian province, or territory).
 
 Rules:
-1. Each question must have exactly 4 choices labeled A, B, C, D
+1. Each question must have exactly 4 choices labeled A, B, C, D — use ONLY the single uppercase letters A, B, C, D as keys
 2. Exactly one answer must be correct
-3. Questions must be factually accurate for the SPECIFIC STATE requested
-4. Include state-specific rules, fines, BAC limits, point systems, speed limits, etc.
+3. Questions must be factually accurate for the SPECIFIC JURISDICTION requested
+4. Include jurisdiction-specific rules, fines, BAC limits, point systems, speed limits, etc.
 5. Include a mix of difficulty levels
-6. Explanations should cite the relevant state-specific rule or fact
+6. Explanations should cite the relevant jurisdiction-specific rule or fact
 7. Do NOT create questions that require viewing an image to answer
 8. Do NOT repeat questions across batches
-9. Return valid JSON only, no markdown fences
+9. Each question must be a complete, self-contained sentence (not a sentence fragment or fill-in-the-blank)
+10. Use the correct units for the jurisdiction (mph for US, km/h for Canada)
+11. Return valid JSON only, no markdown fences
 
 Output format - JSON array:
 [
@@ -71,11 +73,14 @@ Generate {num_questions} multiple-choice driver's test questions for {state_name
 
 Category: {category} — {category_desc}
 
-Focus on {state_name}-specific rules, laws, fines, and regulations. Use accurate state-specific details like:
-- State-specific speed limits, BAC limits, point values
-- State-specific penalties, fines, suspension periods
-- State-specific GDL/permit rules and age requirements
-- State-specific insurance and registration requirements
+Focus on {state_name}-specific rules, laws, fines, and regulations. Use accurate jurisdiction-specific details like:
+- Speed limits, BAC limits, point values specific to {state_name}
+- Penalties, fines, suspension periods specific to {state_name}
+- GDL/permit rules and age requirements specific to {state_name}
+- Insurance and registration requirements specific to {state_name}
+
+Each question MUST be a complete sentence (e.g. "What is the speed limit..." not "The speed limit is:").
+Choice keys MUST be exactly A, B, C, D — no other characters.
 
 Start question IDs at {start_id}.{exclude_text}"""
 

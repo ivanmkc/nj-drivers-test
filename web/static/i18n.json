@@ -45,7 +45,7 @@
     "pass": "PASS",
     "fail": "FAIL",
     "language": "Language",
-    "passingScore": "Passing: {pass_pct}% ({pass_count}/{test_count})"
+    "passingScore": "Real test: {test_count} questions, {pass_count} correct to pass ({pass_pct}%)"
   },
   "ja": {
     "appTitle": "運転免許テスト練習",
@@ -93,7 +93,7 @@
     "pass": "合格",
     "fail": "不合格",
     "language": "言語",
-    "passingScore": "合格ライン: {pass_pct}% ({pass_count}/{test_count})"
+    "passingScore": "本番: {test_count}問中{pass_count}問正解で合格 ({pass_pct}%)"
   },
   "es": {
     "appTitle": "Práctica de Examen de Conducir",
@@ -141,6 +141,54 @@
     "pass": "APROBADO",
     "fail": "REPROBADO",
     "language": "Idioma",
-    "passingScore": "Aprobación: {pass_pct}% ({pass_count}/{test_count})"
+    "passingScore": "Examen real: {test_count} preguntas, {pass_count} correctas para aprobar ({pass_pct}%)"
+  },
+  "fr": {
+    "appTitle": "Pratique d'examen de conduite",
+    "selectState": "Choisissez votre province",
+    "selectStateDesc": "Choisissez votre province pour commencer",
+    "questionsAvailable": "{count} questions",
+    "comingSoon": "Bientôt disponible",
+    "title": "Examen de conduite {state}",
+    "subtitle": "Pratiquez pour l'examen écrit de {state_name}.",
+    "quizzes": "Tests",
+    "avgScore": "Moyenne",
+    "passStreak": "Série",
+    "viewStats": "Voir les stats",
+    "modeRandom": "Aléatoire",
+    "modeRandomDesc": "Toutes les questions",
+    "modeWeak": "Points faibles",
+    "modeWeakDesc": "Les plus ratées",
+    "numQuestions": "Nombre de questions :",
+    "startQuiz": "Commencer",
+    "noWeakSpots": "Aucun point faible",
+    "next": "Suivant",
+    "seeResults": "Voir les résultats",
+    "missed": "Ratée",
+    "congratulations": "Félicitations !",
+    "keepPracticing": "Continuez à pratiquer !",
+    "resultDetail": "Vous avez obtenu {correct} sur {total}. Il faut {pass_pct}% pour réussir l'examen.",
+    "newQuiz": "Nouveau test",
+    "reviewMissed": "Revoir les erreurs ({count})",
+    "perfectScore": "Score parfait !",
+    "perfectMsg": "Vous avez répondu correctement à toutes les questions.",
+    "yourAnswer": "Votre réponse",
+    "correct": "Correcte",
+    "back": "Retour",
+    "changeState": "Changer de province",
+    "yourProgress": "Votre progrès",
+    "qsSeen": "Vues",
+    "bestScore": "Meilleur",
+    "scoreHistory": "Historique des scores",
+    "chartEmpty": "Passez un test pour voir votre progrès",
+    "chartOneMore": "Passez un test de plus pour voir le graphique",
+    "accuracyByCategory": "Précision par catégorie",
+    "mostMissed": "Questions les plus ratées",
+    "resetAll": "Effacer tout le progrès",
+    "resetConfirm": "Cela effacera tout votre historique pour {state_name}. Continuer ?",
+    "pass": "RÉUSSI",
+    "fail": "ÉCHOUÉ",
+    "language": "Langue",
+    "passingScore": "Examen réel : {test_count} questions, {pass_count} bonnes réponses pour réussir ({pass_pct}%)"
   }
 }
