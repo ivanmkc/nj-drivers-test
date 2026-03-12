@@ -85,7 +85,7 @@ struct HomeScreen: View {
                 // Start button
                 let weakEmpty = vm.quizMode == .weak && vm.weakQuestions.isEmpty
                 Button {
-                    Task { await vm.startQuiz() }
+                    vm.startQuiz()
                 } label: {
                     Text(weakEmpty ? localizer.t("noWeakSpots") : localizer.t("startQuiz"))
                         .font(.system(size: 18, weight: .semibold))

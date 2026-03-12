@@ -7,8 +7,9 @@ from flask import Flask, jsonify, request, send_from_directory
 
 app = Flask(__name__, static_folder="static")
 
-BASE_DIR = os.path.dirname(__file__)
-STATES_DIR = os.path.join(BASE_DIR, "states")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(BASE_DIR)
+STATES_DIR = os.path.join(ROOT_DIR, "data", "states")
 
 # Auto-discover states and their question files at startup
 # Structure: STATES[state_code][lang_code] = {"questions": [...], "by_id": {...}}
@@ -73,7 +74,7 @@ def serve_sign(state, filename):
         return jsonify({"error": "Invalid state"}), 404
     signs_dir = os.path.join(STATES_DIR, state, "signs")
     if not os.path.isdir(signs_dir):
-        signs_dir = os.path.join(BASE_DIR, "signs")
+        signs_dir = os.path.join(ROOT_DIR, "data", "signs")
     return send_from_directory(signs_dir, filename)
 
 

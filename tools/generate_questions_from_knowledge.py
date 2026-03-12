@@ -103,7 +103,7 @@ def main():
         sys.exit(1)
 
     state_code = sys.argv[1].lower()
-    state_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "states", state_code)
+    state_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "states", state_code)
     config_path = os.path.join(state_dir, "config.json")
     output_path = os.path.join(state_dir, "questions_en.yaml")
 

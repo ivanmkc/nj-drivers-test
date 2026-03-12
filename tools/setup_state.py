@@ -27,8 +27,8 @@ def main():
     manual_url = sys.argv[6]
     source = sys.argv[7] if len(sys.argv) > 7 else f"2025 {name} Driver's Manual"
 
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    state_dir = os.path.join(base_dir, "states", code)
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    state_dir = os.path.join(base_dir, "data", "states", code)
     os.makedirs(state_dir, exist_ok=True)
 
     # Create config.json

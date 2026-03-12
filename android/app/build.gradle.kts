@@ -41,6 +41,17 @@ android {
     }
 }
 
+tasks.register<Exec>("bundleQuestions") {
+    workingDir = rootProject.projectDir.parentFile
+    commandLine("python3", "tools/bundle.py")
+}
+
+tasks.configureEach {
+    if (name.startsWith("merge") && name.endsWith("Assets")) {
+        dependsOn("bundleQuestions")
+    }
+}
+
 dependencies {
     // Compose BOM
     val composeBom = platform("androidx.compose:compose-bom:2023.10.01")
@@ -57,13 +68,8 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
 
-    // Networking
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    // JSON parsing
     implementation("com.google.code.gson:gson:2.10.1")
-
-    // Image loading
-    implementation("io.coil-kt:coil-compose:2.5.0")
 
     debugImplementation("androidx.compose.ui:ui-tooling")
 

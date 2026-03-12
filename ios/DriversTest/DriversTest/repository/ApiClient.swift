@@ -1,53 +1,97 @@
 import Foundation
 
+struct QuestionBundle: Codable {
+    let states: [StateInfo]
+    let questions: [String: [String: [BundledQuestion]]]
+}
+
+struct BundledQuestion: Codable {
+    let id: Int
+    let category: String
+    let question: String
+    let choices: [String: String]
+    let answer: String
+    let explanation: String
+    let image: String?
+}
+
 class ApiClient {
     static let shared = ApiClient()
 
-    let baseURL = "http://localhost:8080"
+    private var bundle: QuestionBundle?
 
-    private let decoder = JSONDecoder()
+    init() {
+        loadBundle()
+    }
 
-    func fetchStates() async throws -> [StateInfo] {
-        guard let url = URL(string: "\(baseURL)/api/states") else {
-            throw APIError.invalidURL
+    private func loadBundle() {
+        guard let url = Bundle.main.url(forResource: "questions_bundle.json", withExtension: "gz") else {
+            return
         }
-        let (data, _) = try await URLSession.shared.data(from: url)
-        let response = try decoder.decode(StatesResponse.self, from: data)
-        return response.states
+        guard let compressed = try? Data(contentsOf: url) else { return }
+        guard let decompressed = decompress(compressed) else { return }
+        bundle = try? JSONDecoder().decode(QuestionBundle.self, from: decompressed)
     }
 
-    func fetchQuiz(state: String, lang: String, count: Int) async throws -> [QuizQuestion] {
-        var components = URLComponents(string: "\(baseURL)/api/quiz/\(count)")
-        components?.queryItems = [
-            URLQueryItem(name: "state", value: state),
-            URLQueryItem(name: "lang", value: lang),
-        ]
-        guard let url = components?.url else {
-            throw APIError.invalidURL
+    private func decompress(_ data: Data) -> Data? {
+        // gzip starts with 1f 8b
+        guard data.count > 2, data[0] == 0x1f, data[1] == 0x8b else { return data }
+        var result = Data()
+        _ = data.withUnsafeBytes { rawBuffer in
+            guard let baseAddress = rawBuffer.baseAddress else { return }
+            var stream = z_stream()
+            stream.next_in = UnsafeMutablePointer(mutating: baseAddress.assumingMemoryBound(to: UInt8.self))
+            stream.avail_in = uInt(data.count)
+            guard inflateInit2_(&stream, 15 + 32, ZLIB_VERSION, Int32(MemoryLayout<z_stream>.size)) == Z_OK else { return }
+            defer { inflateEnd(&stream) }
+            var buffer = [UInt8](repeating: 0, count: 65536)
+            repeat {
+                stream.next_out = &buffer
+                stream.avail_out = uInt(buffer.count)
+                let status = inflate(&stream, Z_NO_FLUSH)
+                let outputCount = buffer.count - Int(stream.avail_out)
+                if outputCount > 0 {
+                    result.append(buffer, count: outputCount)
+                }
+                if status == Z_STREAM_END { break }
+                if status != Z_OK { break }
+            } while true
         }
-        let (data, _) = try await URLSession.shared.data(from: url)
-        let response = try decoder.decode(QuizResponse.self, from: data)
-        return response.questions
+        return result.isEmpty ? nil : result
     }
 
-    func fetchAnswer(questionId: Int, state: String, lang: String) async throws -> AnswerResponse {
-        var components = URLComponents(string: "\(baseURL)/api/answer/\(questionId)")
-        components?.queryItems = [
-            URLQueryItem(name: "state", value: state),
-            URLQueryItem(name: "lang", value: lang),
-        ]
-        guard let url = components?.url else {
-            throw APIError.invalidURL
+    func fetchStates() -> [StateInfo] {
+        bundle?.states ?? []
+    }
+
+    func fetchQuiz(state: String, lang: String, count: Int) -> [QuizQuestion] {
+        guard let stateQuestions = bundle?.questions[state],
+              let langQuestions = stateQuestions[lang] ?? stateQuestions["en"] else {
+            return []
         }
-        let (data, _) = try await URLSession.shared.data(from: url)
-        return try decoder.decode(AnswerResponse.self, from: data)
+
+        let selected = Array(langQuestions.shuffled().prefix(count))
+        return selected.map { q in
+            QuizQuestion(
+                id: q.id,
+                category: q.category,
+                question: q.question,
+                choices: q.choices,
+                image: q.image
+            )
+        }
     }
 
-    func signImageURL(state: String, filename: String) -> URL? {
-        URL(string: "\(baseURL)/signs/\(state)/\(filename)")
+    func fetchAnswer(questionId: Int, state: String, lang: String) -> AnswerResponse? {
+        guard let stateQuestions = bundle?.questions[state],
+              let langQuestions = stateQuestions[lang] ?? stateQuestions["en"],
+              let q = langQuestions.first(where: { $0.id == questionId }) else {
+            return nil
+        }
+        return AnswerResponse(id: q.id, answer: q.answer, explanation: q.explanation)
     }
-}
 
-enum APIError: Error {
-    case invalidURL
+    func signImageName(_ filename: String) -> String {
+        "signs/\(filename)"
+    }
 }

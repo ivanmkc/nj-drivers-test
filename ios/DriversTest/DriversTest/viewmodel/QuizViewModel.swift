@@ -93,7 +93,6 @@ class QuizViewModel: ObservableObject {
         sessionResults.filter { !$0.correct }
     }
 
-    // Category stats for stats screen
     var categoryStats: [(category: String, pct: Int)] {
         var cats: [String: (seen: Int, correct: Int)] = [:]
         for (_, record) in store.questions {
@@ -107,7 +106,6 @@ class QuizViewModel: ObservableObject {
             .sorted { $0.pct < $1.pct }
     }
 
-    // Question miss data for badge
     func questionMissInfo(_ questionId: Int) -> (wrong: Int, seen: Int)? {
         guard let record = store.questions[String(questionId)], record.wrong > 0 else { return nil }
         return (record.wrong, record.seen)
@@ -115,21 +113,14 @@ class QuizViewModel: ObservableObject {
 
     // MARK: - Actions
 
-    func loadStates() async {
-        isLoading = true
-        errorMessage = nil
-        do {
-            allStates = try await api.fetchStates()
-            if let savedCode = storage.savedStateCode,
-               let saved = allStates.first(where: { $0.code == savedCode && $0.hasQuestions }) {
-                currentState = saved
-                selectedCount = min(50, saved.totalQuestions)
-                screen = .home
-            }
-        } catch {
-            errorMessage = "Failed to load states. Make sure the server is running."
+    func loadStates() {
+        allStates = api.fetchStates()
+        if let savedCode = storage.savedStateCode,
+           let saved = allStates.first(where: { $0.code == savedCode && $0.hasQuestions }) {
+            currentState = saved
+            selectedCount = min(50, saved.totalQuestions)
+            screen = .home
         }
-        isLoading = false
     }
 
     func selectState(_ state: StateInfo) {
@@ -149,70 +140,62 @@ class QuizViewModel: ObservableObject {
         screen = .home
     }
 
-    func startQuiz() async {
+    func startQuiz() {
         guard let state = currentState else { return }
-        isLoading = true
-        do {
-            if quizMode == .weak {
-                let weak = weakQuestions
-                guard !weak.isEmpty else { isLoading = false; return }
-                let count = min(selectedCount, weak.count)
-                let weakIds = Set(weak.prefix(count).map(\.id))
-                let all = try await api.fetchQuiz(state: state.code, lang: localizer.currentLang, count: state.totalQuestions)
-                questions = all.filter { weakIds.contains($0.id) }.shuffled().prefix(count).map { $0 }
-            } else {
-                questions = try await api.fetchQuiz(state: state.code, lang: localizer.currentLang, count: selectedCount)
-            }
-            currentIndex = 0
-            correctCount = 0
-            wrongCount = 0
-            sessionResults = []
-            answered = false
-            selectedAnswer = nil
-            correctAnswer = nil
-            explanation = nil
-            screen = .quiz
-        } catch {
-            errorMessage = "Failed to load quiz."
+
+        if quizMode == .weak {
+            let weak = weakQuestions
+            guard !weak.isEmpty else { return }
+            let count = min(selectedCount, weak.count)
+            let weakIds = Set(weak.prefix(count).map(\.id))
+            let all = api.fetchQuiz(state: state.code, lang: localizer.currentLang, count: state.totalQuestions)
+            questions = all.filter { weakIds.contains($0.id) }.shuffled().prefix(count).map { $0 }
+        } else {
+            questions = api.fetchQuiz(state: state.code, lang: localizer.currentLang, count: selectedCount)
         }
-        isLoading = false
+        currentIndex = 0
+        correctCount = 0
+        wrongCount = 0
+        sessionResults = []
+        answered = false
+        selectedAnswer = nil
+        correctAnswer = nil
+        explanation = nil
+        screen = .quiz
     }
 
-    func selectAnswer(_ letter: String) async {
+    func selectAnswer(_ letter: String) {
         guard !answered, let q = currentQuestion, let state = currentState else { return }
         answered = true
         selectedAnswer = letter
 
-        do {
-            let response = try await api.fetchAnswer(questionId: q.id, state: state.code, lang: localizer.currentLang)
-            correctAnswer = response.answer
-            explanation = response.explanation
-            let isCorrect = letter == response.answer
-
-            if isCorrect { correctCount += 1 } else { wrongCount += 1 }
-
-            // Update store
-            var s = storage.loadStore(for: state.code)
-            let idStr = String(q.id)
-            var record = s.questions[idStr] ?? QuestionRecord(seen: 0, wrong: 0, category: q.category)
-            record.seen += 1
-            if !isCorrect { record.wrong += 1 }
-            s.questions[idStr] = record
-            storage.saveStore(s, for: state.code)
-
-            sessionResults.append(SessionResult(
-                id: q.id,
-                question: q.question,
-                yourAnswer: letter,
-                yourAnswerText: q.choices[letter] ?? "",
-                correctAnswer: response.answer,
-                correctAnswerText: q.choices[response.answer] ?? "",
-                correct: isCorrect,
-                explanation: response.explanation
-            ))
-        } catch {
-            errorMessage = "Failed to check answer."
+        guard let response = api.fetchAnswer(questionId: q.id, state: state.code, lang: localizer.currentLang) else {
+            return
         }
+        correctAnswer = response.answer
+        explanation = response.explanation
+        let isCorrect = letter == response.answer
+
+        if isCorrect { correctCount += 1 } else { wrongCount += 1 }
+
+        var s = storage.loadStore(for: state.code)
+        let idStr = String(q.id)
+        var record = s.questions[idStr] ?? QuestionRecord(seen: 0, wrong: 0, category: q.category)
+        record.seen += 1
+        if !isCorrect { record.wrong += 1 }
+        s.questions[idStr] = record
+        storage.saveStore(s, for: state.code)
+
+        sessionResults.append(SessionResult(
+            id: q.id,
+            question: q.question,
+            yourAnswer: letter,
+            yourAnswerText: q.choices[letter] ?? "",
+            correctAnswer: response.answer,
+            correctAnswerText: q.choices[response.answer] ?? "",
+            correct: isCorrect,
+            explanation: response.explanation
+        ))
     }
 
     func nextQuestion() {

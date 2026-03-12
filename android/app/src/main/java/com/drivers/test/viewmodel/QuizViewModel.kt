@@ -8,16 +8,14 @@ import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.viewModelScope
 import com.drivers.test.model.*
 import com.drivers.test.repository.ApiClient
 import com.drivers.test.repository.LocalStore
 import com.drivers.test.repository.Localizer
-import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
 
 class QuizViewModel(application: Application) : AndroidViewModel(application) {
-    private val api = ApiClient.create()
+    private val api = ApiClient(application)
     private val storage = LocalStore(application)
     val localizer = Localizer()
 
@@ -118,27 +116,17 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
     // Actions
     fun loadStates() {
-        isLoading = true
-        errorMessage = null
-        viewModelScope.launch {
-            try {
-                val states = api.getStates().states
-                allStates.clear()
-                allStates.addAll(states)
-                val savedCode = storage.savedStateCode
-                if (savedCode != null) {
-                    val saved = states.find { it.code == savedCode && it.hasQuestions }
-                    if (saved != null) {
-                        currentState = saved
-                        selectedCount = minOf(50, saved.totalQuestions)
-                        screen = AppScreen.HOME
-                    }
-                }
-            } catch (e: Exception) {
-                Log.e("QuizVM", "Failed to load states", e)
-                errorMessage = "Failed to load states. Make sure the server is running."
+        val states = api.fetchStates()
+        allStates.clear()
+        allStates.addAll(states)
+        val savedCode = storage.savedStateCode
+        if (savedCode != null) {
+            val saved = states.find { it.code == savedCode && it.hasQuestions }
+            if (saved != null) {
+                currentState = saved
+                selectedCount = minOf(50, saved.totalQuestions)
+                screen = AppScreen.HOME
             }
-            isLoading = false
         }
     }
 
@@ -161,31 +149,22 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
     fun startQuiz() {
         val state = currentState ?: return
-        isLoading = true
-        viewModelScope.launch {
-            try {
-                val qs = if (quizMode == QuizMode.WEAK) {
-                    val weak = weakQuestions()
-                    if (weak.isEmpty()) { isLoading = false; return@launch }
-                    val count = minOf(selectedCount, weak.size)
-                    val weakIds = weak.take(count).map { it.id }.toSet()
-                    val all = api.getQuiz(state.totalQuestions, state.code, currentLang).questions
-                    all.filter { it.id in weakIds }.shuffled().take(count)
-                } else {
-                    api.getQuiz(selectedCount, state.code, currentLang).questions
-                }
-                questions.clear()
-                questions.addAll(qs)
-                currentIndex = 0; correctCount = 0; wrongCount = 0
-                sessionResults.clear()
-                answered = false; selectedAnswer = null; correctAnswer = null; explanation = null
-                screen = AppScreen.QUIZ
-            } catch (e: Exception) {
-                Log.e("QuizVM", "Failed to load quiz", e)
-                errorMessage = "Failed to load quiz."
-            }
-            isLoading = false
+        val qs = if (quizMode == QuizMode.WEAK) {
+            val weak = weakQuestions()
+            if (weak.isEmpty()) return
+            val count = minOf(selectedCount, weak.size)
+            val weakIds = weak.take(count).map { it.id }.toSet()
+            val all = api.fetchQuiz(state.code, currentLang, state.totalQuestions)
+            all.filter { it.id in weakIds }.shuffled().take(count)
+        } else {
+            api.fetchQuiz(state.code, currentLang, selectedCount)
         }
+        questions.clear()
+        questions.addAll(qs)
+        currentIndex = 0; correctCount = 0; wrongCount = 0
+        sessionResults.clear()
+        answered = false; selectedAnswer = null; correctAnswer = null; explanation = null
+        screen = AppScreen.QUIZ
     }
 
     fun selectAnswer(letter: String) {
@@ -195,32 +174,25 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         answered = true
         selectedAnswer = letter
 
-        viewModelScope.launch {
-            try {
-                val response = api.getAnswer(q.id, state.code, currentLang)
-                correctAnswer = response.answer
-                explanation = response.explanation
-                val isCorrect = letter == response.answer
-                if (isCorrect) correctCount++ else wrongCount++
+        val response = api.fetchAnswer(q.id, state.code, currentLang) ?: return
+        correctAnswer = response.answer
+        explanation = response.explanation
+        val isCorrect = letter == response.answer
+        if (isCorrect) correctCount++ else wrongCount++
 
-                val s = storage.loadStore(state.code)
-                val idStr = q.id.toString()
-                val record = s.questions.getOrPut(idStr) { QuestionRecord(category = q.category) }
-                record.seen++
-                if (!isCorrect) record.wrong++
-                storage.saveStore(s, state.code)
+        val s = storage.loadStore(state.code)
+        val idStr = q.id.toString()
+        val record = s.questions.getOrPut(idStr) { QuestionRecord(category = q.category) }
+        record.seen++
+        if (!isCorrect) record.wrong++
+        storage.saveStore(s, state.code)
 
-                sessionResults.add(SessionResult(
-                    id = q.id, question = q.question,
-                    yourAnswer = letter, yourAnswerText = q.choices[letter] ?: "",
-                    correctAnswer = response.answer, correctAnswerText = q.choices[response.answer] ?: "",
-                    correct = isCorrect, explanation = response.explanation,
-                ))
-            } catch (e: Exception) {
-                Log.e("QuizVM", "Failed to check answer", e)
-                errorMessage = "Failed to check answer."
-            }
-        }
+        sessionResults.add(SessionResult(
+            id = q.id, question = q.question,
+            yourAnswer = letter, yourAnswerText = q.choices[letter] ?: "",
+            correctAnswer = response.answer, correctAnswerText = q.choices[response.answer] ?: "",
+            correct = isCorrect, explanation = response.explanation,
+        ))
     }
 
     fun nextQuestion() {

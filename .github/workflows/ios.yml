@@ -4,10 +4,14 @@ on:
   push:
     paths:
       - 'ios/**'
+      - 'data/**'
+      - 'tools/bundle.py'
       - '.github/workflows/ios.yml'
   pull_request:
     paths:
       - 'ios/**'
+      - 'data/**'
+      - 'tools/bundle.py'
       - '.github/workflows/ios.yml'
 
 jobs:
@@ -19,6 +23,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install bundle dependencies
+        run: pip install pyyaml
+
+      - name: Bundle questions
+        run: python3 ../../tools/bundle.py
 
       - name: Select Xcode
         run: |

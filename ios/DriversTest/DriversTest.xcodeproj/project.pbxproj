@@ -22,6 +22,8 @@
 		A10013 /* StatsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10013; };
 		A10014 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10014; };
 		A10015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B10015; };
+		A10016 /* questions_bundle.json.gz in Resources */ = {isa = PBXBuildFile; fileRef = B10017; };
+		A10017 /* signs in Resources */ = {isa = PBXBuildFile; fileRef = B10018; };
 		A20001 /* DriversTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20001; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,8 @@
 		B10014 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B10015 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B10016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B10017 /* questions_bundle.json.gz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "questions_bundle.json.gz"; sourceTree = "<group>"; };
+		B10018 /* signs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = signs; sourceTree = "<group>"; };
 		B20001 /* DriversTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversTestUITests.swift; sourceTree = "<group>"; };
 		C10001 /* DriversTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriversTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C20001 /* DriversTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriversTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +97,7 @@
 				E10005 /* viewmodel */,
 				E10006 /* view */,
 				E10007 /* theme */,
+				E10011 /* Resources */,
 				B10015 /* Assets.xcassets */,
 				B10016 /* Info.plist */,
 			);
@@ -172,6 +177,15 @@
 			path = screen;
 			sourceTree = "<group>";
 		};
+		E10011 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B10017 /* questions_bundle.json.gz */,
+				B10018 /* signs */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E20001 /* DriversTestUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +201,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = G10003;
 			buildPhases = (
+				F10004 /* Bundle Questions */,
 				F10002 /* Sources */,
 				D10001 /* Frameworks */,
 				F10003 /* Resources */,
@@ -255,12 +270,31 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F10004 /* Bundle Questions */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle Questions";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "python3 \"${SRCROOT}/../../tools/bundle.py\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXResourcesBuildPhase section */
 		F10003 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A10015 /* Assets.xcassets in Resources */,
+				A10016 /* questions_bundle.json.gz in Resources */,
+				A10017 /* signs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

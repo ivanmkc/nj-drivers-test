@@ -19,8 +19,8 @@ struct AppRoot: View {
                 StatsScreen(vm: vm, localizer: localizer)
             }
         }
-        .task {
-            await vm.loadStates()
+        .onAppear {
+            vm.loadStates()
         }
     }
 }

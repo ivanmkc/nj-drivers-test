@@ -1,7 +1,7 @@
 package com.drivers.test.view
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.drivers.test.model.AppScreen
@@ -10,7 +10,7 @@ import com.drivers.test.viewmodel.QuizViewModel
 
 @Composable
 fun AppRoot(modifier: Modifier = Modifier, vm: QuizViewModel = viewModel()) {
-    LaunchedEffect(Unit) { vm.loadStates() }
+    DisposableEffect(Unit) { vm.loadStates(); onDispose {} }
 
     when (vm.screen) {
         AppScreen.STATE_PICKER -> StatePickerScreen(vm)

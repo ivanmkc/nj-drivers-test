@@ -71,23 +71,19 @@ struct QuizScreen: View {
                             .fixedSize(horizontal: false, vertical: true)
 
                         // Question image
-                        if let imageName = q.image, let state = vm.currentState,
-                           let url = ApiClient.shared.signImageURL(state: state.code, filename: imageName) {
-                            AsyncImage(url: url) { image in
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(maxHeight: 240)
-                                    .clipShape(RoundedRectangle(cornerRadius: 8))
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 8)
-                                            .stroke(AppTheme.border, lineWidth: 1)
-                                    )
-                            } placeholder: {
-                                ProgressView()
-                                    .frame(height: 120)
-                            }
-                            .frame(maxWidth: .infinity)
+                        if let imageName = q.image,
+                           let path = Bundle.main.path(forResource: (imageName as NSString).deletingPathExtension, ofType: (imageName as NSString).pathExtension, inDirectory: "signs"),
+                           let uiImage = UIImage(contentsOfFile: path) {
+                            Image(uiImage: uiImage)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(maxHeight: 240)
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .stroke(AppTheme.border, lineWidth: 1)
+                                )
+                                .frame(maxWidth: .infinity)
                         }
 
                         // Choices
@@ -97,7 +93,7 @@ struct QuizScreen: View {
                                 text: q.choices[letter] ?? "",
                                 state: choiceState(for: letter),
                                 action: {
-                                    Task { await vm.selectAnswer(letter) }
+                                    vm.selectAnswer(letter)
                                 }
                             )
                         }

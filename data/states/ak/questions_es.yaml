@@ -1,7 +1,7 @@
 metadata:
   source: 2025 Alaska Driver's Manual
   source_original: 2025 Alaska Driver's Manual
-  total_questions: 249
+  total_questions: 246
   language: es
   categories:
   - alcohol_drugs_health
@@ -29,7 +29,7 @@ questions:
     los 14 años de edad.
 - id: 2
   category: license_system
-  question: Mientras conduce con un Permiso de Instrucción en Alaska, el conductor
+  question: Mientras se conduce con un Permiso de Instrucción en Alaska, el conductor
     supervisor debe tener al menos 21 años de edad y ¿cuánta experiencia de conducción?
   choices:
     A: Al menos 6 meses
@@ -38,8 +38,8 @@ questions:
     D: Al menos 5 años
   answer: B
   explanation: La persona que acompaña al titular del permiso debe tener al menos
-    21 años y contar con al menos un año de experiencia de conducción con licencia
-    para el tipo de vehículo que se conduce.
+    21 años de edad y contar con al menos un año de experiencia de conducción con
+    licencia para el tipo de vehículo que se está conduciendo.
 - id: 3
   category: license_system
   question: ¿Por cuánto tiempo es válido generalmente un Permiso de Instrucción de
@@ -102,7 +102,7 @@ questions:
     D: 45 días
   answer: C
   explanation: La ley de Alaska exige que notifique al DMV sobre un cambio de nombre
-    o dirección en un plazo de 30 días.
+    o dirección dentro de los 30 días.
 - id: 8
   category: license_system
   question: En Alaska, su licencia de conducir será suspendida si acumula ¿cuántos
@@ -130,18 +130,6 @@ questions:
     puede usar una vez cada 12 meses.
 - id: 10
   category: license_system
-  question: Bajo la ley de 'Tolerancia Cero' de Alaska, ¿cuál es el límite legal de
-    concentración de alcohol en sangre (BAC) para un conductor menor de 21 años?
-  choices:
-    A: 0.00%
-    B: 0.02%
-    C: 0.08%
-  answer: A
-  explanation: Alaska tiene una ley de Tolerancia Cero, lo que significa que es ilegal
-    que cualquier persona menor de 21 años opere un vehículo con cualquier cantidad
-    medible de alcohol (0.00%).
-- id: 11
-  category: license_system
   question: ¿Cuál es el monto mínimo de cobertura de seguro de responsabilidad civil
     requerido en Alaska por daños a la propiedad en un solo accidente?
   choices:
@@ -151,9 +139,9 @@ questions:
     D: $50,000
   answer: C
   explanation: La ley de Alaska exige un seguro de responsabilidad civil mínimo de
-    $50,000 por lesiones corporales o muerte de una persona, $100,000 por lesiones
-    corporales o muerte de dos o más personas, y $25,000 por daños a la propiedad.
-- id: 12
+    $50,000 por lesiones corporales/muerte de una persona, $100,000 por lesiones corporales/muerte
+    de dos o más personas, y $25,000 por daños a la propiedad.
+- id: 11
   category: license_system
   question: ¿Por cuántos años suele ser válida una licencia de conducir estándar de
     Alaska antes de que venza?
@@ -164,12 +152,12 @@ questions:
     D: 10 años
   answer: C
   explanation: La mayoría de las licencias de conducir de Alaska se emiten por un
-    período de ocho años y vencen el día del cumpleaños del titular.
-- id: 13
+    período de ocho años y vencen el día del cumpleaños de la persona.
+- id: 12
   category: license_system
-  question: En Alaska, si usted está involucrado en una colisión que resulte en más
+  question: En Alaska, si usted se ve involucrado en una colisión que resulte en más
     de $501 en daños a la propiedad, ¿dentro de cuántos días debe presentar un informe
-    ante el DMV?
+    al DMV?
   choices:
     A: 2 días
     B: 5 días
@@ -179,7 +167,7 @@ questions:
   explanation: Debe presentar un Certificado de Seguro (Formulario 12-209) ante el
     DMV dentro de los 15 días posteriores a un accidente que involucre lesiones, muerte
     o daños a la propiedad que superen los $501.
-- id: 14
+- id: 13
   category: license_system
   question: 'Para aprobar el examen de la vista para una licencia de conducir de Alaska,
     su visión debe ser de al menos:'
@@ -189,39 +177,39 @@ questions:
     C: 20/50 en ambos ojos
     D: 20/70 en al menos un ojo
   answer: B
-  explanation: Los solicitantes deben tener al menos una visión de 20/40 en al menos
+  explanation: Los solicitantes deben tener una visión de al menos 20/40 en al menos
     un ojo para aprobar el examen de la vista del DMV de Alaska sin restricciones.
-- id: 15
+- id: 14
   category: license_system
   question: ¿Cuál de los siguientes es un requisito para obtener un permiso de motocicleta
     en Alaska?
   choices:
     A: Tener al menos 14 años de edad
-    B: Contar con la firma de un padre o tutor si es menor de 18 años
-    C: Aprobar un examen de conocimientos escrito
+    B: Tener la firma de un padre si es menor de 18 años
+    C: Aprobar un examen de conocimientos por escrito
     D: Todas las anteriores
   answer: D
   explanation: Para obtener un permiso de motocicleta (M1, M2 o M3), debe tener al
-    menos 14 años, contar con el consentimiento de los padres si es menor de 18 años
-    y aprobar el examen de conocimientos específico para motocicletas.
-- id: 16
+    menos 14 años, contar con el consentimiento de los padres si es menor de 18 y
+    aprobar el examen de conocimientos específico para motocicletas.
+- id: 15
   category: license_system
-  question: Para obtener una licencia compatible con REAL ID en Alaska, ¿cuántos documentos
+  question: Para obtener una licencia que cumpla con REAL ID en Alaska, ¿cuántos documentos
     que demuestren la residencia en Alaska debe proporcionar?
   choices:
     A: Un documento
     B: Dos documentos
     C: Tres documentos
-    D: Four documentos
+    D: Cuatro documentos
   answer: B
   explanation: Según el DMV de Alaska, los solicitantes de una REAL ID deben proporcionar
     dos documentos que demuestren su residencia física en Alaska, como facturas de
     servicios públicos o contratos de alquiler.
-- id: 17
+- id: 16
   category: license_system
   question: Si se muda a Alaska desde otro estado y tiene una licencia de conducir
-    válida de fuera del estado, ¿dentro de cuántos días después de convertirse en
-    residente debe obtener una licencia de Alaska?
+    válida de otro estado, ¿dentro de cuántos días después de convertirse en residente
+    debe obtener una licencia de Alaska?
   choices:
     A: 30 días
     B: 60 días
@@ -231,7 +219,7 @@ questions:
   explanation: La ley de Alaska exige que los nuevos residentes transfieran su licencia
     de conducir de otro estado a una licencia de Alaska dentro de los 90 días posteriores
     al establecimiento de la residencia.
-- id: 18
+- id: 17
   category: license_system
   question: 'Una persona con una licencia estándar Clase D en Alaska está autorizada
     para conducir un vehículo con una Clasificación de Peso Bruto Vehicular (GVWR)
@@ -243,9 +231,9 @@ questions:
     D: 32,001 lbs
   answer: C
   explanation: Una licencia Clase D de Alaska es para vehículos no comerciales con
-    un GVWR (Clasificación de Peso Bruto Vehicular) de menos de 26,001 lbs, siempre
-    que no estén diseñados para transportar a más de 15 pasajeros o materiales peligrosos.
-- id: 19
+    un GVWR de menos de 26,001 libras (lbs), siempre que no estén diseñados para transportar
+    a más de 15 pasajeros o materiales peligrosos.
+- id: 18
   category: license_system
   question: 'En Alaska, si un padre o tutor que firmó la solicitud de licencia de
     un menor decide que ya no quiere ser responsable de la conducción del menor, puede:'
@@ -258,7 +246,7 @@ questions:
   explanation: Según el Estatuto de Alaska 28.15.071, la persona que firmó la solicitud
     del menor puede presentar una solicitud por escrito al DMV para cancelar la licencia,
     lo que la libera de responsabilidad futura.
-- id: 20
+- id: 19
   category: license_system
   question: ¿Cuál es la edad mínima para solicitar una Licencia de Conducir Comercial
     (CDL) para el comercio intraestatal (solo dentro de Alaska)?
@@ -269,25 +257,25 @@ questions:
     D: 21 años
   answer: C
   explanation: En Alaska, debe tener al menos 19 años para obtener una CDL para el
-    comercio intraestatal. Debe tener al menos 21 años para el comercio interestatal.
-- id: 21
+    comercio intraestatal. Debe tener 21 años para el comercio interestatal.
+- id: 20
   category: license_system
-  question: Para un conductor de Alaska menor de 18 años, si es condenado por una
-    primera infracción de 'menor consumiendo alcohol', ¿por cuánto tiempo se le revocará
-    su privilegio de conducir?
+  question: Para un conductor de Alaska menor de 18 años, si es condenado por primera
+    vez por una infracción de 'menor consumiendo alcohol', ¿por cuánto tiempo se le
+    revocará el privilegio de conducir?
   choices:
     A: 30 días
     B: 60 días
     C: 90 días
     D: 180 días
   answer: C
-  explanation: El Estatuto de Alaska 28.15.183 exige una revocación de 90 días de
-    los privilegios de conducir por una primera condena de un menor consumiendo o
-    poseyendo alcohol.
-- id: 22
+  explanation: El Estatuto de Alaska 28.15.183 ordena una revocación de 90 días de
+    los privilegios de conducir por una primera condena de un menor que consume o
+    posee alcohol.
+- id: 21
   category: license_system
-  question: ¿Cuántos puntos se asignan a su historial de manejo de Alaska por 'Exceso
-    de velocidad en una zona escolar o cruce peatonal de un parque infantil'?
+  question: ¿Cuántos puntos se asignan a su historial de manejo de Alaska por "Exceso
+    de velocidad en una zona escolar o en un cruce peatonal de un parque infantil"?
   choices:
     A: 2 puntos
     B: 4 puntos
@@ -295,9 +283,9 @@ questions:
     D: 8 puntos
   answer: C
   explanation: El sistema de puntos de Alaska asigna 6 puntos por exceso de velocidad
-    en una zona escolar o cruce peatonal de un parque infantil, lo cual es superior
-    a las infracciones de velocidad estándar.
-- id: 23
+    en una zona escolar o en un cruce peatonal de un parque infantil, lo cual es más
+    alto que las infracciones de velocidad estándar.
+- id: 22
   category: license_system
   question: Si su licencia de conducir de Alaska es suspendida debido al sistema de
     puntos, ¿cuál es la tarifa estándar de restablecimiento que debe pagar después
@@ -310,21 +298,20 @@ questions:
   answer: C
   explanation: El DMV de Alaska requiere una tarifa de restablecimiento de $100 para
     las licencias suspendidas debido a la acumulación de puntos.
-- id: 24
+- id: 23
   category: license_system
   question: 'El personal militar en servicio activo que tenga una licencia de conducir
     de Alaska que expire mientras presta servicio fuera del estado:'
   choices:
     A: Debe renovarla en línea inmediatamente
     B: Debe regresar a Alaska para renovarla
-    C: La licencia sigue siendo válida hasta 90 días después de su baja o regreso
-      a Alaska
-    D: La licencia se cancela permanentemente después de 1 año de vencimiento
+    C: La licencia permanece válida hasta 90 días después de su baja o regreso a Alaska
+    D: La licencia se cancela permanentemente después de 1 año de expiración
   answer: C
   explanation: La ley de Alaska establece que las licencias de los miembros militares
     en servicio activo permanecen válidas mientras están fuera del estado y durante
     los 90 días posteriores a su baja o regreso al estado.
-- id: 25
+- id: 24
   category: license_system
   question: En Alaska, ¿cuántos puntos se deducen de su historial de manejo por cada
     12 meses consecutivos de conducción sin infracciones?
@@ -336,7 +323,7 @@ questions:
   answer: B
   explanation: El DMV de Alaska deduce 2 puntos del historial de un conductor por
     cada período de 12 meses que conduzca sin recibir ninguna nueva condena de tráfico.
-- id: 26
+- id: 25
   category: license_system
   question: Para obtener un endoso de autobús escolar (S) en Alaska, ¿qué edad mínima
     debe tener el solicitante?
@@ -348,10 +335,10 @@ questions:
   answer: C
   explanation: Alaska requiere que los conductores de autobuses escolares tengan al
     menos 21 años de edad para calificar para el endoso de autobús escolar.
-- id: 27
+- id: 26
   category: license_system
-  question: 'Si es menor de 21 años y es condenado por una segunda infracción de ''menor
-    consumiendo alcohol'', su licencia de Alaska será revocada por:'
+  question: 'Si usted es menor de 21 años y es condenado por una segunda infracción
+    de "menor consumiendo alcohol", su licencia de Alaska será revocada por:'
   choices:
     A: 90 días
     B: 6 meses
@@ -359,8 +346,9 @@ questions:
     D: 2 años
   answer: C
   explanation: Según el Estatuto de Alaska 28.15.183, una segunda condena por un menor
-    consumiendo alcohol resulta en una revocación de 1 año de los privilegios de conducir.
-- id: 28
+    que consume alcohol resulta en una revocación de los privilegios de conducir por
+    1 año.
+- id: 27
   category: license_system
   question: Para renovar una licencia de conducir de Alaska en línea, ¿en qué rango
     de edad debe estar el solicitante?
@@ -371,20 +359,20 @@ questions:
     D: 18 a 80
   answer: C
   explanation: Las regulaciones del DMV de Alaska establecen que las renovaciones
-    en línea solo están disponibles para conductores de entre 22 y 68 años.
-- id: 29
+    en línea solo están disponibles para conductores de entre 22 y 68 años de edad.
+- id: 28
   category: license_system
   question: En Alaska, ¿cuál es la edad mínima para solicitar una tarjeta de identificación
     emitida por el estado?
   choices:
-    A: Sin edad mínima
+    A: No hay edad mínima
     B: 14 años
     C: 16 años
     D: 18 años
   answer: A
   explanation: No existe un requisito de edad mínima para obtener una tarjeta de identificación
     del estado de Alaska, aunque un padre o tutor debe firmar por un menor.
-- id: 30
+- id: 29
   category: license_system
   question: Si se revoca una licencia de conducir de Alaska por un DUI (conducir bajo
     la influencia), ¿qué debe proporcionar el conductor al DMV para restablecer su
@@ -392,16 +380,16 @@ questions:
   choices:
     A: Una carta de disculpa
     B: Prueba de responsabilidad financiera (seguro SR-22)
-    C: Un nuevo certificado de nacimiento
+    C: Un acta de nacimiento nueva
     D: Prueba de 100 horas de servicio comunitario
   answer: B
   explanation: Los conductores que restablecen una licencia después de una revocación
     por DUI en Alaska deben proporcionar una prueba de seguro SR-22 (responsabilidad
     financiera) por un período específico, generalmente de 3 a 5 años.
-- id: 31
+- id: 30
   category: driver_testing
-  question: ¿Cuál es el puntaje mínimo requerido para aprobar el examen escrito de
-    conocimientos de Alaska?
+  question: Para aprobar el examen escrito de conocimientos de Alaska, ¿cuál es la
+    puntuación mínima requerida?
   choices:
     A: 70%
     B: 75%
@@ -409,23 +397,23 @@ questions:
     D: 85%
   answer: C
   explanation: El examen de conocimientos del DMV de Alaska consta de 20 preguntas,
-    y los solicitantes deben responder al menos 16 correctamente (80%) para aprobar.
-- id: 32
+    y los solicitantes deben responder correctamente al menos 16 (80%) para aprobar.
+- id: 31
   category: driver_testing
-  question: Al realizar el examen de manejo en carretera de Alaska, ¿cuál de los siguientes
-    requisitos debe cumplirse para el vehículo utilizado?
+  question: ¿Al realizar el examen de conducir de Alaska, cuál de los siguientes debe
+    proporcionarse para el vehículo que se utilizará?
   choices:
     A: Comprobante de un cambio de aceite reciente
-    B: Una carta ante notario del fabricante del vehículo
+    B: Una carta notariada del fabricante del vehículo
     C: Registro vigente y comprobante de seguro
     D: Un tanque lleno de gasolina premium
   answer: C
-  explanation: Para el examen de manejo, el solicitante debe proporcionar un vehículo
-    que esté debidamente registrado y asegurado, y este debe pasar una inspección
+  explanation: Para el examen de conducir, el solicitante debe proporcionar un vehículo
+    que esté debidamente registrado y asegurado, y este debe pasar una verificación
     básica de seguridad del equipo.
-- id: 33
+- id: 32
   category: driver_testing
-  question: Bajo la ley de 'Consentimiento Implícito' (Implied Consent) de Alaska,
+  question: Bajo la ley de "Consentimiento Implícito" (Implied Consent) de Alaska,
     al conducir un vehículo motorizado, ¿qué ha aceptado usted?
   choices:
     A: Llevar siempre a un pasajero
@@ -436,21 +424,7 @@ questions:
   explanation: La ley de Consentimiento Implícito de Alaska significa que, al operar
     un vehículo, usted acepta someterse a una prueba química de su aliento, sangre
     u orina si es arrestado legalmente por conducir bajo la influencia (DUI).
-- id: 34
-  category: driver_testing
-  question: Cuando un autobús escolar se detiene en una carretera de dos carriles
-    con sus luces rojas intermitentes y el brazo de parada extendido, ¿quién debe
-    detenerse?
-  choices:
-    A: Solo el tráfico que sigue al autobús
-    B: Solo el tráfico que viene de frente al autobús
-    C: El tráfico en ambas direcciones
-    D: Nadie, si hay al menos dos carriles
-  answer: C
-  explanation: En una carretera de dos carriles en Alaska, el tráfico en ambas direcciones
-    debe detenerse ante un autobús escolar con luces rojas intermitentes y un brazo
-    de parada extendido.
-- id: 35
+- id: 33
   category: driver_testing
   question: En Alaska, ¿es ilegal estacionar un vehículo a menos de cuántos pies de
     un hidrante de incendios?
@@ -462,9 +436,9 @@ questions:
   answer: B
   explanation: De acuerdo con las regulaciones de conducción de Alaska, no se puede
     estacionar a menos de 15 pies de un hidrante de incendios.
-- id: 36
+- id: 34
   category: driver_testing
-  question: 'La ley de Alaska exige que se enciendan las luces delanteras cuando la
+  question: 'La ley de Alaska exige que los faros delanteros se enciendan cuando la
     visibilidad se reduce a menos de:'
   choices:
     A: 500 pies
@@ -472,9 +446,9 @@ questions:
     C: 1,500 pies
     D: 2,000 pies
   answer: B
-  explanation: Las luces delanteras deben usarse en Alaska siempre que la visibilidad
+  explanation: Los faros delanteros deben usarse en Alaska siempre que la visibilidad
     sea inferior a 1,000 pies debido a las condiciones climáticas o de iluminación.
-- id: 37
+- id: 35
   category: driver_testing
   question: Para los conductores que viven al sur de los 60 grados de latitud norte
     (por ejemplo, Juneau, Anchorage), ¿entre qué fechas se permiten generalmente los
@@ -488,7 +462,7 @@ questions:
   explanation: En Alaska, al sur de los 60 grados de latitud norte, los neumáticos
     con clavos son legales desde el 15 de septiembre hasta el 15 de abril. Al norte
     de los 60 grados, son legales hasta el 1 de mayo.
-- id: 38
+- id: 36
   category: driver_testing
   question: ¿Cuál es la señal manual correcta para indicar que está disminuyendo la
     velocidad o deteniéndose?
@@ -498,26 +472,26 @@ questions:
     C: Brazo izquierdo extendido hacia abajo
     D: Brazo derecho extendido hacia afuera
   answer: C
-  explanation: Para señalar una parada o una disminución de la velocidad mediante
-    señales manuales, el conductor debe extender el brazo izquierdo por la ventana
-    y apuntar hacia abajo.
-- id: 39
+  explanation: Para señalar una parada o disminución de velocidad mediante señales
+    manuales, el conductor debe extender su brazo izquierdo por la ventana y apuntarlo
+    hacia abajo.
+- id: 37
   category: driver_testing
   question: En Alaska, ¿cuál es la sanción por exceso de velocidad en una zona de
-    obras viales designada o en un corredor de seguridad vial?
+    obras en la carretera o en un corredor de seguridad vial designado?
   choices:
     A: Una multa fija de $500
     B: El doble de la multa normal
     C: El triple de la multa normal
     D: Suspensión automática de la licencia por 30 días
   answer: B
-  explanation: La ley de Alaska exige que las multas por infracciones de tráfico se
-    dupliquen cuando se cometen en una zona de obras viales designada o en un corredor
-    de seguridad vial.
-- id: 40
+  explanation: La ley de Alaska exige que las multas por infracciones de tránsito
+    se dupliquen cuando se cometen en una zona de obras en la carretera o en un corredor
+    de seguridad vial designado.
+- id: 38
   category: driver_testing
-  question: ¿El Manual del Conductor de Alaska recomienda una distancia de seguimiento
-    de al menos cuántos segundos detrás del vehículo que va delante de usted en condiciones
+  question: El Manual del Conductor de Alaska recomienda una distancia de seguimiento
+    de al menos ¿cuántos segundos detrás del vehículo que va delante de usted en condiciones
     ideales?
   choices:
     A: 2 segundos
@@ -525,11 +499,11 @@ questions:
     C: 4 segundos
     D: 6 segundos
   answer: C
-  explanation: Aunque muchos estados utilizan la regla de los 2 o 3 segundos, el Manual
+  explanation: Aunque muchos estados utilizan una regla de 2 o 3 segundos, el Manual
     del Conductor de Alaska recomienda una distancia de seguimiento de 4 segundos
-    para permitir un mejor tiempo de reacción, especialmente ante posibles peligros
+    para permitir un mejor tiempo de reacción, especialmente dados los posibles peligros
     en la carretera.
-- id: 41
+- id: 39
   category: driver_testing
   question: ¿Cuál es la sentencia mínima obligatoria de cárcel por una primera condena
     por DUI en el estado de Alaska?
@@ -539,25 +513,25 @@ questions:
     C: 72 horas
     D: 10 días
   answer: C
-  explanation: En Alaska, una primera condena por DUI (conducir bajo la influencia)
-    conlleva una sentencia mínima obligatoria de 72 horas consecutivas de cárcel.
-- id: 42
+  explanation: En Alaska, una primera condena por DUI conlleva una sentencia mínima
+    obligatoria de 72 horas consecutivas de cárcel.
+- id: 40
   category: driver_testing
   question: 'Al acercarse a un vehículo de emergencia estacionado con sus luces intermitentes
-    encendidas en una autopista de varios carriles, la ley de ''Moverse a un lado''
+    encendidas en una carretera de varios carriles, la ley de "Hacerse a un lado"
     (Move Over) de Alaska le exige:'
   choices:
     A: Detenerse inmediatamente en su carril
     B: Mantener la velocidad pero tocar la bocina
     C: Desocupar el carril más cercano al vehículo de emergencia si es seguro hacerlo
-    D: Acelerar para rebasar el vehículo rápidamente
+    D: Aumentar la velocidad para pasar el vehículo rápidamente
   answer: C
   explanation: La ley Move Over de Alaska exige que los conductores se cambien a un
-    carril no adyacente o reduzcan la velocidad significativamente si cambiar de carril
-    no es seguro al pasar vehículos de emergencia al costado de la carretera.
-- id: 43
+    carril no adyacente o disminuyan la velocidad significativamente si cambiar de
+    carril no es seguro al pasar vehículos de emergencia al costado de la carretera.
+- id: 41
   category: driver_testing
-  question: Al entrar en una glorieta (rotonda) en Alaska, ¿quién tiene el derecho
+  question: ¿Al entrar en una glorieta (roundabout) en Alaska, quién tiene el derecho
     de paso?
   choices:
     A: El tráfico que entra a la glorieta
@@ -566,10 +540,10 @@ questions:
     D: El vehículo que entra por la derecha
   answer: B
   explanation: Los conductores que entran en una glorieta deben ceder el derecho de
-    paso al tráfico que ya circula dentro de la intersección.
-- id: 44
+    paso al tráfico que ya está circulando dentro de la intersección.
+- id: 42
   category: driver_testing
-  question: 'En Alaska, debe bajar las luces altas de sus faros cuando siga a otro
+  question: 'En Alaska, debe atenuar sus luces altas (high-beam) cuando siga a otro
     vehículo a una distancia de:'
   choices:
     A: 200 pies
@@ -577,10 +551,10 @@ questions:
     C: 500 pies
     D: 1,000 pies
   answer: B
-  explanation: La ley de Alaska exige que los conductores bajen las luces altas al
-    acercarse a un vehículo en sentido contrario a menos de 500 pies o cuando sigan
+  explanation: La ley de Alaska exige que los conductores atenúen las luces altas
+    al acercarse a un vehículo en sentido contrario a menos de 500 pies o al seguir
     a otro vehículo a menos de 300 pies.
-- id: 45
+- id: 43
   category: driver_testing
   question: En Alaska, ¿cuál es el límite de velocidad predeterminado en un distrito
     comercial a menos que se indique lo contrario?
@@ -591,8 +565,8 @@ questions:
     D: 30 mph
   answer: B
   explanation: Según el Manual del Conductor de Alaska, el límite de velocidad en
-    un distrito comercial es de 20 mph, a menos que las señales indiquen lo contrario.
-- id: 46
+    un distrito comercial es de 20 mph a menos que las señales indiquen lo contrario.
+- id: 44
   category: driver_testing
   question: Al estacionar su vehículo cerca de un hidrante de incendios en Alaska,
     ¿cuál es la distancia mínima requerida que debe mantener?
@@ -604,7 +578,7 @@ questions:
   answer: B
   explanation: La ley de Alaska prohíbe estacionar a menos de 15 pies de un hidrante
     de incendios.
-- id: 47
+- id: 45
   category: driver_testing
   question: En Alaska, ¿con cuántos pies de antelación, como mínimo, debe señalizar
     su intención de girar?
@@ -616,19 +590,20 @@ questions:
   answer: B
   explanation: El Manual del Conductor de Alaska establece que debe dar una señal
     de giro continua durante al menos 100 pies antes de girar.
-- id: 48
+- id: 46
   category: driver_testing
-  question: Según la ley de Alaska, ¿cuándo es obligatorio tener los faros encendidos?
+  question: Bajo la ley de Alaska, ¿cuándo es obligatorio tener encendidos los faros
+    delanteros?
   choices:
     A: Desde el atardecer hasta el amanecer
     B: Desde una hora después del atardecer hasta una hora antes del amanecer
     C: Desde media hora después del atardecer hasta media hora antes del amanecer
     D: Solo cuando la visibilidad es inferior a 1,000 pies
   answer: C
-  explanation: La ley de Alaska exige que los faros estén encendidos desde media hora
-    después del atardecer hasta media hora antes del amanecer, o en cualquier momento
-    en que la visibilidad sea inferior a 1,000 pies.
-- id: 49
+  explanation: La ley de Alaska exige que los faros delanteros estén encendidos desde
+    media hora después del atardecer hasta media hora antes del amanecer, o en cualquier
+    momento en que la visibilidad sea inferior a 1,000 pies.
+- id: 47
   category: driver_testing
   question: En Alaska, ¿cuál es la cobertura mínima requerida de seguro de responsabilidad
     civil por la muerte o lesiones de dos o más personas en un solo accidente?
@@ -641,22 +616,22 @@ questions:
   explanation: La ley de seguro obligatorio de Alaska exige una cobertura de '50/100/25',
     lo que significa $100,000 por la muerte o lesiones de dos o más personas en un
     accidente.
-- id: 50
+- id: 48
   category: driver_testing
-  question: Según el sistema de puntos de Alaska, ¿cuántos puntos se asignan por una
-    condena de 'Conducción Temeraria' (Reckless Driving)?
+  question: De acuerdo con el sistema de puntos de Alaska, ¿cuántos puntos se asignan
+    por una condena de 'Conducción Temeraria' (Reckless Driving)?
   choices:
     A: 4 puntos
     B: 6 puntos
     C: 8 puntos
     D: 10 puntos
   answer: D
-  explanation: La conducción temeraria (Reckless Driving) es una infracción grave
-    en Alaska y resulta en la adición de 10 puntos a su historial de conducción.
-- id: 51
+  explanation: La conducción temeraria es una infracción grave en Alaska y resulta
+    en la adición de 10 puntos a su historial de manejo.
+- id: 49
   category: driver_testing
-  question: ¿A cuántos pies de una señal de alto (stop), una baliza intermitente o
-    una señal de ceda el paso (yield) está prohibido estacionar su vehículo en Alaska?
+  question: En Alaska, ¿a cuántos pies de una señal de alto (stop), una baliza intermitente
+    o una señal de ceda el paso no se puede estacionar un vehículo?
   choices:
     A: 20 pies
     B: 30 pies
@@ -666,10 +641,10 @@ questions:
   explanation: La ley de Alaska prohíbe estacionar a menos de 30 pies de cualquier
     baliza intermitente, señal de alto o señal de ceda el paso ubicada al costado
     de una carretera.
-- id: 52
+- id: 50
   category: driver_testing
-  question: Para los conductores de 21 años o más en Alaska, es ilegal conducir con
-    una concentración de alcohol en sangre (BAC) de ____ o superior.
+  question: Para conductores de 21 años o más en Alaska, es ilegal conducir con una
+    concentración de alcohol en sangre (BAC) de ____ o superior.
   choices:
     A: 0.02%
     B: 0.05%
@@ -678,11 +653,11 @@ questions:
   answer: C
   explanation: En Alaska, el límite legal de BAC para conductores de 21 años o más
     es de 0.08%.
-- id: 53
+- id: 51
   category: driver_testing
   question: 'Al conducir en una carretera en Alaska con un límite de velocidad de
-    45 mph o superior, debe atenuar sus luces altas cuando siga a otro vehículo a
-    una distancia de:'
+    45 mph o más, debe atenuar sus luces altas cuando siga a otro vehículo a una distancia
+    de:'
   choices:
     A: 200 pies
     B: 300 pies
@@ -690,8 +665,8 @@ questions:
     D: 1,000 pies
   answer: C
   explanation: El Manual del Conductor de Alaska establece que debe atenuar sus faros
-    cuando siga a otro vehículo a menos de 500 pies.
-- id: 54
+    cuando siga a otro vehículo a una distancia de 500 pies.
+- id: 52
   category: driver_testing
   question: En las áreas de Alaska al sur de los 60 grados de latitud norte (como
     Anchorage y Juneau), ¿entre qué fechas se permiten generalmente los neumáticos
@@ -702,12 +677,12 @@ questions:
     C: Del 1 de septiembre al 15 de mayo
     D: Del 1 de noviembre al 1 de abril
   answer: B
-  explanation: En Alaska, al sur de los 60 grados de latitud norte, se permiten neumáticos
-    con clavos desde el 15 de septiembre hasta el 1 de mayo.
-- id: 55
+  explanation: En Alaska, al sur de los 60 grados de latitud norte, los neumáticos
+    con clavos están permitidos desde el 15 de septiembre hasta el 1 de mayo.
+- id: 53
   category: driver_testing
   question: 'Bajo la ley de ''Consentimiento Implícito'' (Implied Consent) de Alaska,
-    si se niega a realizar una prueba química para determinar su BAC, su licencia
+    si se niega a realizarse una prueba química para determinar su BAC, su licencia
     de conducir será:'
   choices:
     A: Suspendida por 30 días
@@ -716,22 +691,22 @@ questions:
     D: Sin cambios a menos que sea condenado por un DUI
   answer: B
   explanation: Al conducir en Alaska, usted ha dado su consentimiento para una prueba
-    química. La negativa resulta en la incautación inmediata y la revocación de su
-    licencia de conducir.
-- id: 56
+    química. La negativa resulta en la incautación y revocación inmediata de su licencia
+    de conducir.
+- id: 54
   category: driver_testing
   question: 'En Alaska, un niño menor de 4 años que pese menos de 40 libras debe estar:'
   choices:
-    A: En un asiento elevador (booster seat)
+    A: En un asiento elevado (booster seat)
     B: En un asiento de seguridad para niños aprobado por el gobierno federal
     C: En el asiento delantero con cinturón de seguridad
     D: En el regazo de un adulto
   answer: B
   explanation: La ley de Alaska exige que los niños menores de 4 años que pesen menos
     de 40 libras estén debidamente asegurados en un asiento de seguridad para niños.
-- id: 57
+- id: 55
   category: driver_testing
-  question: 'Al estacionar en una colina con bordillo (curb) en Alaska, si se dirige
+  question: 'Al estacionar en una colina en Alaska con un bordillo (acera), si va
     cuesta arriba, debe girar sus ruedas delanteras:'
   choices:
     A: Hacia el bordillo
@@ -741,8 +716,8 @@ questions:
   answer: B
   explanation: Al estacionar cuesta arriba contra un bordillo, gire las ruedas hacia
     afuera del bordillo para que, si el vehículo rueda, la parte trasera de la llanta
-    delantera golpee el bordillo y detenga el automóvil.
-- id: 58
+    delantera golpee el bordillo y detenga el auto.
+- id: 56
   category: driver_responsibility
   question: 'Si lo sorprenden conduciendo en Alaska sin el seguro de responsabilidad
     civil requerido por primera vez, sus privilegios de conducir serán suspendidos
@@ -753,9 +728,9 @@ questions:
     C: 6 meses
     D: 1 año
   answer: B
-  explanation: Según la Ley de Seguro Obligatorio, una primera infracción por conducir
+  explanation: Bajo la Ley de Seguro Obligatorio, una primera infracción por conducir
     sin seguro resulta en una suspensión de la licencia de conducir de 90 días.
-- id: 59
+- id: 57
   category: driver_responsibility
   question: 'En Alaska, debe notificar de inmediato al departamento de policía local
     o a los Alaska State Troopers sobre un accidente si este involucra lesiones, muerte
@@ -767,12 +742,12 @@ questions:
     D: $2,000
   answer: B
   explanation: La ley de Alaska exige la notificación inmediata a las autoridades
-    policiales de cualquier accidente que involucre lesiones, muerte o daños a la
+    policiales por cualquier accidente que involucre lesiones, muerte o daños a la
     propiedad por un total de $500 o más.
-- id: 60
+- id: 58
   category: driver_responsibility
-  question: Al vender un vehículo en Alaska, ¿dentro de cuántos días debe el vendedor
-    notificar al DMV sobre la transferencia de propiedad?
+  question: ¿Al vender un vehículo en Alaska, el vendedor debe notificar al DMV sobre
+    la transferencia de propiedad dentro de cuántos días?
   choices:
     A: 5 días
     B: 10 días
@@ -782,10 +757,11 @@ questions:
   explanation: El vendedor está obligado a presentar un Aviso de Transferencia de
     Vehículo al DMV dentro de los 10 días posteriores a la venta para protegerse de
     cualquier responsabilidad.
-- id: 61
+- id: 59
   category: driver_responsibility
-  question: Según la ley de "Consentimiento Implícito" de Alaska, ¿cuál es la sanción
-    por negarse por primera vez a someterse a una prueba química de aliento?
+  question: Bajo la ley de 'Consentimiento Implícito' (Implied Consent) de Alaska,
+    ¿cuál es la sanción por negarse por primera vez a someterse a una prueba química
+    de aliento?
   choices:
     A: Solo una multa de $100
     B: Una suspensión de la licencia por 30 días
@@ -796,49 +772,49 @@ questions:
   explanation: Negarse a someterse a una prueba química es un delito menor de clase
     A en Alaska y conlleva las mismas sanciones mínimas obligatorias que una condena
     por DUI.
-- id: 62
+- id: 60
   category: driver_responsibility
   question: En Alaska, las multas de tráfico se duplican cuando ocurre una infracción
     en ¿cuál de las siguientes áreas?
   choices:
-    A: Zonas escolares y corredores de seguridad vial (Traffic Safety Corridors)
+    A: Zonas escolares y Corredores de Seguridad Vial
     B: Vecindarios residenciales
     C: Estacionamientos
     D: Caminos de grava
   answer: A
-  explanation: Las multas por infracciones de movimiento se duplican en los corredores
-    de seguridad vial designados y en las zonas escolares activas en Alaska.
-- id: 63
+  explanation: Las multas por infracciones de tránsito se duplican en los Corredores
+    de Seguridad Vial (Highway Safety Corridors) designados y en las zonas escolares
+    activas en Alaska.
+- id: 61
   category: driver_responsibility
-  question: Si se le condena por exceso de velocidad de 15 mph o más sobre el límite
-    en Alaska, ¿cuántos puntos se añadirán a su historial de conducción?
+  question: ¿Si se le condena por exceso de velocidad de 15 mph o más sobre el límite
+    en Alaska, cuántos puntos se añadirán a su historial de conducción?
   choices:
     A: 2 puntos
     B: 4 puntos
     C: 6 puntos
     D: 8 puntos
   answer: C
-  explanation: Conducir a 15 mph o más sobre el límite resulta en 6 puntos. Conducir
-    a 10-14 mph sobre el límite resulta en 4 puntos, y de 1-9 mph sobre el límite
-    resulta en 2 puntos.
-- id: 64
+  explanation: Exceder el límite de velocidad por 15 mph o más resulta en 6 puntos.
+    Excederlo por 10-14 mph resulta en 4 puntos, y por 1-9 mph resulta en 2 puntos.
+- id: 62
   category: driver_responsibility
-  question: En Alaska, si es condenado por un DUI, se le requerirá usar un dispositivo
-    de bloqueo de encendido (IID) durante al menos ¿cuánto tiempo después de que se
-    restablezca su licencia?
+  question: En Alaska, si se le condena por conducir bajo los efectos del alcohol
+    o drogas (DUI), ¿por cuánto tiempo como mínimo se le exigirá el uso de un dispositivo
+    de bloqueo de encendido (IID) después de que se restablezca su licencia?
   choices:
     A: 6 meses
     B: Toda la duración de su libertad condicional
     C: 1 año
     D: 3 meses
   answer: B
-  explanation: La ley de Alaska exige la instalación de un dispositivo de bloqueo
-    de encendido (IID) durante todo el período de libertad condicional tras una condena
-    por DUI.
-- id: 65
+  explanation: La ley de Alaska exige la instalación de un IID durante todo el período
+    de libertad condicional tras una condena por DUI.
+- id: 63
   category: driver_responsibility
-  question: Si su licencia de conducir de Alaska es revocada por un DUI, ¿por cuántos
-    años debe presentar una prueba de responsabilidad financiera (seguro SR-22)?
+  question: Si su licencia de conducir de Alaska es revocada por un DUI, ¿durante
+    cuántos años debe proporcionar una prueba de responsabilidad financiera (seguro
+    SR-22)?
   choices:
     A: 1 año
     B: 3 años
@@ -847,10 +823,10 @@ questions:
   answer: B
   explanation: Tras la revocación de la licencia por un DUI u ofensa similar, Alaska
     exige que el conductor mantenga el seguro SR-22 durante 3 años.
-- id: 66
+- id: 64
   category: driver_responsibility
-  question: Al mudarse a Alaska, ¿dentro de cuántos días después de conseguir empleo
-    o establecer su residencia debe registrar su vehículo?
+  question: Al mudarse a Alaska, ¿dentro de cuántos días debe registrar su vehículo
+    después de conseguir empleo o establecer su residencia?
   choices:
     A: 10 días
     B: 30 días
@@ -859,11 +835,11 @@ questions:
   answer: A
   explanation: Los nuevos residentes deben registrar sus vehículos en Alaska dentro
     de los 10 días posteriores a su entrada al estado o al obtener empleo.
-- id: 67
+- id: 65
   category: driver_responsibility
   question: ¿Cuántos puntos se añaden a su historial de conducción de Alaska por no
-    detenerse ante un autobús escolar que tiene sus luces rojas parpadeando y el brazo
-    de parada extendido?
+    detenerse ante un autobús escolar que tiene sus luces rojas intermitentes y el
+    brazo de parada extendido?
   choices:
     A: 2 puntos
     B: 4 puntos
@@ -871,12 +847,13 @@ questions:
     D: 8 puntos
   answer: C
   explanation: Rebasar ilegalmente a un autobús escolar detenido con las luces rojas
-    parpadeando es una infracción grave en Alaska y conlleva una penalización de 6
-    puntos.
-- id: 68
+    intermitentes es una infracción grave en Alaska y conlleva una penalización de
+    6 puntos.
+- id: 66
   category: driver_responsibility
   question: En Alaska, ¿cuándo se considera que una licencia de conducir está "en
-    riesgo" de suspensión por acumulación de puntos en un período de 24 meses?
+    riesgo" de suspensión debido a que el conductor acumula cuántos puntos en un período
+    de 24 meses?
   choices:
     A: 6 puntos
     B: 9 puntos
@@ -885,7 +862,7 @@ questions:
   answer: D
   explanation: El DMV suspenderá su licencia si acumula 12 puntos en 12 meses o 18
     puntos en 24 meses.
-- id: 69
+- id: 67
   category: driver_responsibility
   question: En Alaska, ¿cuántos puntos se asignan a su historial de conducción por
     una condena de "Conducción Temeraria" (Reckless Driving)?
@@ -897,9 +874,9 @@ questions:
   answer: C
   explanation: La conducción temeraria es una infracción mayor en Alaska y resulta
     en la adición de 6 puntos al historial del conductor.
-- id: 70
+- id: 68
   category: driver_responsibility
-  question: ¿A qué nivel de puntos le enviará el DMV de Alaska una carta de advertencia
+  question: ¿En qué nivel de puntos el DMV de Alaska le enviará una carta de advertencia
     oficial sobre su historial de conducción?
   choices:
     A: Cuando acumula 6 puntos en 12 meses
@@ -909,21 +886,21 @@ questions:
   answer: A
   explanation: El DMV de Alaska envía una carta de advertencia a los conductores que
     acumulan 6 puntos en un período de 12 meses o 9 puntos en un período de 24 meses.
-- id: 71
+- id: 69
   category: driver_responsibility
-  question: ¿En Alaska, si lo sorprenden conduciendo un vehículo motorizado sin el
-    seguro de responsabilidad civil requerido, cuál es la sanción por una primera
+  question: En Alaska, si se le sorprende conduciendo un vehículo motorizado sin el
+    seguro de responsabilidad civil obligatorio, ¿cuál es la sanción por una primera
     infracción?
   choices:
-    A: Una multa de $50 solamente
+    A: Solo una multa de $50
     B: Una suspensión obligatoria de la licencia de conducir por 90 días
-    C: Incautación del vehículo por un año
+    C: El embargo del vehículo por un año
     D: Revocación permanente de la licencia de conducir
   answer: B
   explanation: Conducir sin el seguro de responsabilidad civil obligatorio en Alaska
     resulta en una suspensión obligatoria de 90 días de su licencia de conducir por
     una primera infracción.
-- id: 72
+- id: 70
   category: driver_responsibility
   question: ¿Con qué frecuencia se debe renovar el registro del vehículo para la mayoría
     de los vehículos de pasajeros estándar en Alaska?
@@ -935,10 +912,10 @@ questions:
   answer: B
   explanation: Los registros de vehículos en Alaska son generalmente bienales, lo
     que significa que deben renovarse cada dos años.
-- id: 73
+- id: 71
   category: driver_responsibility
-  question: Al comprar un vehículo en Alaska, ¿dentro de cuántos días después de la
-    compra debe el comprador solicitar un nuevo título y registro?
+  question: ¿Al comprar un vehículo en Alaska, el comprador debe solicitar un nuevo
+    título y registro dentro de cuántos días después de la compra?
   choices:
     A: 10 días
     B: 15 días
@@ -947,10 +924,10 @@ questions:
   answer: C
   explanation: El comprador de un vehículo debe solicitar la transferencia del título
     y el registro dentro de los 30 días posteriores a la fecha de venta.
-- id: 74
+- id: 72
   category: driver_responsibility
-  question: En Alaska, ¿cuántos puntos se añaden a su historial por exceder el límite
-    de velocidad señalizado por 15 millas por hora o más?
+  question: En Alaska, ¿cuántos puntos se añaden a su historial por conducir a 15
+    millas por hora o más sobre el límite de velocidad indicado?
   choices:
     A: 2 puntos
     B: 4 puntos
@@ -958,23 +935,24 @@ questions:
     D: 8 puntos
   answer: C
   explanation: Exceder el límite de velocidad por 15 mph o más resulta en 6 puntos
-    en el historial de conducción de Alaska. (De 3 a 9 mph por encima son 2 puntos;
-    de 10 a 14 mph por encima son 4 puntos).
-- id: 75
+    en el historial de conducción de Alaska. (Exceder por 3-9 mph son 2 puntos; por
+    10-14 mph son 4 puntos).
+- id: 73
   category: driver_responsibility
-  question: Si su licencia es revocada por un DUI en Alaska, ¿qué debe proporcionar
-    al DMV para que se le restituyan sus privilegios de conducir?
+  question: Si se le revoca la licencia por un DUI (conducir bajo la influencia) en
+    Alaska, ¿qué debe proporcionar al DMV para que se le restituyan sus privilegios
+    de conducción?
   choices:
-    A: Prueba de finalización de un programa de educación sobre el alcohol (ADERE)
+    A: Prueba de haber completado un programa de educación sobre el alcohol (ADERE)
     B: Una carta de recomendación de un juez
     C: Prueba de la compra de un vehículo nuevo
-    D: Una calificación aprobatoria en el examen de conductor comercial
+    D: Una puntuación aprobatoria en el examen de conductor comercial
   answer: A
   explanation: Para restituir una licencia después de un DUI, debe completar un programa
     de Información de Rehabilitación y Educación sobre Alcohol y Drogas (ADERE), pagar
     las tarifas de restitución y proporcionar una prueba de responsabilidad financiera
     (SR-22).
-- id: 76
+- id: 74
   category: driver_responsibility
   question: 'En Alaska, un conductor que está obligado a presentar un SR-22 (Prueba
     de Responsabilidad Financiera) generalmente debe mantenerlo por un período de:'
@@ -984,22 +962,21 @@ questions:
     C: 3 años
     D: 10 años
   answer: C
-  explanation: Normalmente se requiere que un SR-22 se mantenga en los archivos del
-    DMV durante tres años después de una condena que active el requisito.
-- id: 77
+  explanation: Normalmente se requiere que el SR-22 se mantenga en los archivos del
+    DMV durante tres años después de una condena que active este requisito.
+- id: 75
   category: driver_responsibility
   question: En Alaska, ¿qué vehículos son elegibles para el 'Registro Permanente',
     lo que significa que el registro no vence mientras el propietario sea el mismo?
   choices:
-    A: Vehículos que tienen 8 años de antigüedad o más
+    A: Vehículos que tienen 8 años o más
     B: Solo vehículos eléctricos
-    C: Cualquier vehículo propiedad de una persona mayor de 65 años
+    C: Cualquier vehículo cuyo propietario sea mayor de 65 años
     D: Vehículos utilizados únicamente para la agricultura
   answer: A
-  explanation: En Alaska, los propietarios de vehículos que tienen 8 años de antigüedad
-    o más pueden optar por tener un registro permanente que no requiere renovación
-    bienal.
-- id: 78
+  explanation: En Alaska, los propietarios de vehículos que tienen 8 años o más pueden
+    optar por tener un registro permanente que no requiere renovación bienal.
+- id: 76
   category: driver_responsibility
   question: Si usted se ve involucrado en un accidente en Alaska y no tiene el seguro
     requerido, ¿por cuánto tiempo se suspenderá su licencia?
@@ -1009,38 +986,38 @@ questions:
     C: Hasta 3 años
     D: Hasta que pague una multa de $1,000
   answer: C
-  explanation: Si usted está en un accidente y no tiene seguro, su licencia puede
-    ser suspendida por hasta tres años o hasta que proporcione una prueba de responsabilidad
-    financiera y cumpla con otros requisitos.
-- id: 79
+  explanation: Si tiene un accidente y no tiene seguro, su licencia puede ser suspendida
+    por hasta tres años o hasta que proporcione una prueba de responsabilidad financiera
+    y cumpla con otros requisitos.
+- id: 77
   category: driver_responsibility
-  question: ¿Existen áreas específicas en Alaska donde el seguro de vehículos motorizados
-    NO es obligatorio?
+  question: ¿Dónde existen áreas específicas en Alaska donde el seguro de vehículos
+    motorizados NO es obligatorio?
   choices:
     A: En la ciudad de Anchorage
     B: En áreas donde no se requiere el registro del vehículo
-    C: En todas las propiedades privadas en todo el estado
+    C: En todas las propiedades privadas de todo el estado
     D: El seguro es obligatorio en todo Alaska sin excepción
   answer: B
-  explanation: En Alaska, se requiere el seguro obligatorio en las áreas donde se
-    requiere el registro. En áreas remotas donde no se requiere el registro, el seguro
+  explanation: En Alaska, el seguro obligatorio se requiere en las áreas donde se
+    exige el registro. En áreas remotas donde no se requiere el registro, el seguro
     tampoco es obligatorio por ley.
-- id: 80
+- id: 78
   category: safe_driving_rules
   question: ¿Cuál es la distancia mínima a la que debe estacionarse de una señal de
-    alto, una baliza intermitente o una señal de ceda el paso en Alaska?
+    alto (stop), una baliza intermitente o una señal de ceder el paso (yield) en Alaska?
   choices:
     A: 15 pies
     B: 20 pies
     C: 30 pies
     D: 50 pies
   answer: C
-  explanation: Las regulaciones de Alaska establecen que no se puede estacionar a
-    menos de 30 pies de cualquier baliza intermitente, señal de alto o señal de ceda
-    el paso ubicada al costado de una carretera.
-- id: 81
+  explanation: Las regulaciones de Alaska establecen que no puede estacionarse a menos
+    de 30 pies de cualquier baliza intermitente, señal de alto o señal de ceder el
+    paso ubicada al costado de una carretera.
+- id: 79
   category: safe_driving_rules
-  question: ¿A menos que se indique lo contrario, cuál es el límite de velocidad en
+  question: A menos que se indique lo contrario, ¿cuál es el límite de velocidad en
     un callejón en Alaska?
   choices:
     A: 10 mph
@@ -1050,60 +1027,48 @@ questions:
   answer: B
   explanation: El límite de velocidad predeterminado para cualquier callejón en Alaska
     es de 15 mph, a menos que las señales indiquen lo contrario.
-- id: 82
+- id: 80
   category: safe_driving_rules
-  question: Según la ley de Alaska, ¿cuándo es legal rebasar a otro vehículo por la
-    derecha?
+  question: Según la ley de Alaska, ¿cuándo es legal adelantar a otro vehículo por
+    la derecha?
   choices:
-    A: Cuando el vehículo de adelante está girando o está a punto de girar a la izquierda
-      y hay un acotamiento pavimentado
+    A: Cuando el vehículo de adelante está girando o a punto de girar a la izquierda
+      y hay un arcén pavimentado
     B: Siempre que tenga prisa y el carril izquierdo esté bloqueado
     C: Solo en carreteras de grava con múltiples carriles
-    D: Nunca es legal rebasar por la derecha en Alaska
+    D: Nunca es legal adelantar por la derecha en Alaska
   answer: A
-  explanation: En Alaska, puede rebasar por la derecha solo cuando el vehículo alcanzado
+  explanation: En Alaska, puede adelantar por la derecha solo cuando el vehículo alcanzado
     está girando o está a punto de girar a la izquierda, o en una calle o carretera
-    con pavimento sin obstrucciones no ocupado por vehículos estacionados y con ancho
-    suficiente para dos o más líneas de vehículos en movimiento en cada dirección.
-- id: 83
+    con pavimento despejado no ocupado por vehículos estacionados y con anchura suficiente
+    para dos o más líneas de vehículos en movimiento en cada dirección.
+- id: 81
   category: safe_driving_rules
-  question: 'En Alaska, usted NO tiene que detenerse ante un autobús escolar con sus
-    luces rojas intermitentes y el brazo de parada extendido si:'
+  question: 'En Alaska, usted NO tiene que detenerse ante un autobús escolar que tenga
+    las luces rojas intermitentes y el brazo de parada extendido si:'
   choices:
-    A: Viaja en la dirección opuesta en una carretera de dos o más carriles
-    B: Viaja en la dirección opuesta en una carretera dividida con una barrera física
-      o mediana
+    A: Usted viaja en la dirección opuesta en una carretera de dos o más carriles
+    B: Usted viaja en la dirección opuesta en una carretera dividida con una barrera
+      física o mediana
     C: El autobús está detenido en una zona escolar
-    D: Viaja al menos 10 mph por debajo del límite de velocidad
+    D: Usted viaja al menos a 10 mph por debajo del límite de velocidad
   answer: B
   explanation: Los conductores que viajan en la dirección opuesta en una carretera
-    dividida con una barrera física (como una mediana o zanja) no están obligados
+    dividida por una barrera física (como una mediana o una zanja) no están obligados
     a detenerse ante un autobús escolar en Alaska.
-- id: 84
+- id: 82
   category: safe_driving_rules
-  question: ¿A cuántos pies de distancia debe estacionarse de un paso de peatones
-    en una intersección en Alaska?
+  question: ¿A cuántos pies de distancia de un paso de peatones en una intersección
+    debe estacionarse en Alaska?
   choices:
     A: 10 pies
     B: 15 pies
     C: 20 pies
     D: 25 pies
   answer: C
-  explanation: La ley de Alaska prohíbe estacionarse a menos de 20 pies de un paso
-    de peatones en una intersección.
-- id: 85
-  category: safe_driving_rules
-  question: ¿Qué sucede con las multas de tráfico en las zonas de obras viales designadas
-    de Alaska cuando hay trabajadores presentes?
-  choices:
-    A: Se triplican
-    B: Se duplican
-    C: Se mantienen igual pero se añaden 2 puntos
-    '0': Se reducen si conducía de forma segura
-  answer: B
-  explanation: En Alaska, las multas por infracciones de tráfico cometidas en zonas
-    de obras viales designadas o corredores de seguridad vial se duplican.
-- id: 86
+  explanation: La ley de Alaska prohíbe estacionar a menos de 20 pies de un paso de
+    peatones en una intersección.
+- id: 83
   category: safe_driving_rules
   question: Al usar señales manuales para indicar un giro, ¿qué posición representa
     un giro a la derecha en Alaska?
@@ -1115,34 +1080,34 @@ questions:
   answer: B
   explanation: La señal manual estándar para un giro a la derecha es el brazo izquierdo
     y la mano extendidos hacia arriba.
-- id: 87
+- id: 84
   category: safe_driving_rules
   question: En una intersección en T no controlada en Alaska, ¿quién tiene el derecho
     de paso?
   choices:
-    A: El conductor en la calle que termina
-    B: El conductor en la calle continua
-    C: El conductor que llega primero
+    A: El conductor en la vía que termina
+    B: El conductor en la vía continua (vía principal)
+    C: El conductor que llegue primero
     D: El conductor a la izquierda
   answer: B
   explanation: En una intersección en T donde no hay dispositivos de control de tráfico,
-    el conductor en la calle que termina debe ceder el derecho de paso a los vehículos
-    en la calle continua.
-- id: 88
+    el conductor en la vía que termina debe ceder el derecho de paso a los vehículos
+    en la vía continua.
+- id: 85
   category: safe_driving_rules
-  question: En Alaska, ¿a cuántos pies de la entrada de una estación de bomberos no
-    se puede estacionar en el mismo lado de la calle?
+  question: En Alaska, ¿a menos de cuántos pies de la entrada de una estación de bomberos
+    no se puede estacionar en el mismo lado de la calle?
   choices:
     A: 15 pies
     B: 20 pies
     C: 50 pies
     D: 75 pies
   answer: B
-  explanation: La ley de Alaska prohíbe estacionarse a menos de 20 pies de la entrada
+  explanation: La ley de Alaska prohíbe estacionar a menos de 20 pies de la entrada
     del camino de acceso a cualquier estación de bomberos.
-- id: 89
+- id: 86
   category: safe_driving_rules
-  question: 'En Alaska, las vueltas en U están prohibidas en una curva o colina donde
+  question: 'En Alaska, los giros en U están prohibidos en una curva o colina donde
     el vehículo no pueda ser visto por otros conductores que se aproximen desde cualquier
     dirección dentro de:'
   choices:
@@ -1151,10 +1116,10 @@ questions:
     C: 1,000 pies
     D: 1,500 pies
   answer: C
-  explanation: Según el Manual del Conductor de Alaska, no puede realizar una vuelta
+  explanation: Según el Manual del Conductor de Alaska, no se puede realizar un giro
     en U en una curva o cerca de la cima de una colina donde su vehículo no pueda
-    ser visto por otros conductores dentro de los 1,000 pies.
-- id: 90
+    ser visto por otros conductores a menos de 1,000 pies.
+- id: 87
   category: safe_driving_rules
   question: Bajo la 'Ley de Hacerse a un Lado' (Move Over Law) de Alaska, ¿qué debe
     hacer al acercarse a un vehículo de emergencia con luces intermitentes detenido
@@ -1163,16 +1128,16 @@ questions:
     A: Detenerse por completo hasta que se le indique pasar
     B: Mantener la velocidad pero tocar la bocina
     C: Moverse al carril izquierdo si es seguro hacerlo, o reducir la velocidad significativamente
-    D: Aumentar la velocidad para pasar el área rápidamente
+    D: Acelerar para pasar el área rápidamente
   answer: C
-  explanation: La ley de Alaska exige que los conductores desocupen el carril más
-    cercano a un vehículo de emergencia estacionado o reduzcan la velocidad a una
-    que sea razonable y prudente si cambiar de carril no es seguro.
-- id: 91
+  explanation: La ley de Alaska exige que los conductores dejen libre el carril más
+    cercano a un vehículo de emergencia estacionado o que reduzcan la velocidad a
+    una velocidad razonable y prudente si cambiar de carril no es seguro.
+- id: 88
   category: safe_driving_rules
   question: En Alaska, si conduce un vehículo de movimiento lento en una carretera
-    de dos carriles y se forma una fila de tráfico detrás de usted, ¿debe hacerse
-    a un lado cuando haya cuántos vehículos detrás de usted?
+    de dos carriles y se forma una fila de tráfico detrás de usted, ¿debe orillarse
+    cuando haya cuántos vehículos detrás de usted?
   choices:
     A: 3 o más
     B: 5 o más
@@ -1182,7 +1147,7 @@ questions:
   explanation: El Estatuto de Alaska 28.35.140 exige que los vehículos de movimiento
     lento se retiren de la calzada en la primera oportunidad segura si se forma una
     fila de 5 o más vehículos detrás de ellos.
-- id: 92
+- id: 89
   category: safe_driving_rules
   question: ¿Cuál es el límite de velocidad no señalizado en una zona residencial
     de Alaska?
@@ -1194,11 +1159,11 @@ questions:
   answer: B
   explanation: El límite de velocidad predeterminado para las zonas residenciales
     en Alaska es de 25 mph, a menos que se indique lo contrario.
-- id: 93
+- id: 90
   category: safe_driving_rules
-  question: Al estacionar cerca de una señal de alto (stop), una baliza intermitente
-    o una señal de control de tráfico en Alaska, ¿a cuántos pies de distancia debe
-    estar como mínimo?
+  question: Al estacionar cerca de una señal de alto, una baliza intermitente o una
+    señal de control de tráfico en Alaska, ¿debe estar al menos a cuántos pies de
+    distancia?
   choices:
     A: 15 pies
     B: 20 pies
@@ -1208,9 +1173,9 @@ questions:
   explanation: La ley de Alaska prohíbe estacionar a menos de 30 pies de cualquier
     baliza intermitente, señal de alto o señal de control de tráfico ubicada al costado
     de una calzada.
-- id: 94
+- id: 91
   category: safe_driving_rules
-  question: 'En Alaska, debe encender las luces delanteras si la visibilidad se reduce
+  question: 'En Alaska, debe encender sus faros delanteros si la visibilidad se reduce
     a menos de:'
   choices:
     A: 500 pies
@@ -1218,9 +1183,9 @@ questions:
     C: 1,500 pies
     D: 2,000 pies
   answer: B
-  explanation: Las luces delanteras deben usarse en Alaska cuando no hay suficiente
-    luz para ver con claridad a una distancia de 1,000 pies.
-- id: 95
+  explanation: Los faros delanteros deben usarse en Alaska cuando no hay suficiente
+    luz para ver claramente a una distancia de 1,000 pies.
+- id: 92
   category: safe_driving_rules
   question: Al rebasar a otro vehículo en una carretera de dos carriles en Alaska,
     ¿debe regresar a su carril antes de estar a cuántos pies de un vehículo que viene
@@ -1232,32 +1197,31 @@ questions:
     D: 500 pies
   answer: B
   explanation: Debe completar el rebase y regresar a su carril antes de estar a menos
-    de 200 pies de cualquier vehículo que se aproxime en dirección opuesta.
-- id: 96
+    de 200 pies de cualquier vehículo que se aproxime en la dirección opuesta.
+- id: 93
   category: safe_driving_rules
-  question: 'Al entrar en una rotonda (glorieta) en Alaska, debe ceder el derecho
-    de paso a:'
+  question: 'Al entrar en una rotonda (glorieta) en Alaska, debe ceder el paso a:'
   choices:
     A: El tráfico que entra por la derecha
-    B: El tráfico que ya está en el círculo
+    B: El tráfico que ya está en la rotonda
     C: Nadie, usted tiene el derecho de paso
     D: Solo a los vehículos de emergencia
   answer: B
   explanation: Los conductores que entran en una rotonda deben ceder el paso al tráfico
     que ya está circulando dentro del círculo.
-- id: 97
+- id: 94
   category: safe_driving_rules
-  question: 'Al conducir con niebla o nieve intensa en Alaska, debe usar:'
+  question: 'Al conducir con niebla densa o nieve en Alaska, debe usar:'
   choices:
-    A: Luces delanteras de carretera (altas)
-    B: Luces delanteras de cruce (bajas)
-    C: Solo las luces de estacionamiento
-    D: Luces de emergencia intermitentes
+    A: Luces altas (faros de largo alcance)
+    B: Luces bajas (faros de corto alcance)
+    C: Solo luces de estacionamiento
+    D: Luces intermitentes de emergencia
   answer: B
   explanation: Se deben usar las luces bajas en condiciones de niebla o nieve porque
     las luces altas se reflejan en la humedad o los cristales de hielo, lo que provoca
     deslumbramiento y reduce la visibilidad.
-- id: 98
+- id: 95
   category: defensive_driving
   question: Según el Manual del Conductor de Alaska, ¿cuál es la distancia de seguimiento
     recomendada detrás del vehículo que va delante de usted en condiciones ideales?
@@ -1270,196 +1234,196 @@ questions:
   explanation: El Manual del Conductor de Alaska recomienda una distancia de seguimiento
     de cuatro segundos para permitir suficiente tiempo para reaccionar ante peligros
     o paradas repentinas.
-- id: 99
+- id: 96
   category: defensive_driving
   question: Para evitar frenar a último momento o la necesidad de girar repentinamente,
-    ¿con cuánta anticipación debe observar la carretera mientras conduce en Alaska?
+    ¿con cuánta anticipación debe observar el camino mientras conduce en Alaska?
   choices:
-    A: 5 a 8 segundos
-    B: 12 a 15 segundos
-    C: 20 a 25 segundos
-    D: 30 a 40 segundos
+    A: De 5 a 8 segundos
+    B: De 12 a 15 segundos
+    C: De 20 a 25 segundos
+    D: De 30 a 40 segundos
   answer: B
-  explanation: Los conductores deben observar la carretera con una anticipación de
-    12 a 15 segundos para identificar posibles peligros a tiempo y planificar sus
-    respuestas.
-- id: 100
+  explanation: Los conductores deben observar el camino con 12 a 15 segundos de antelación
+    para identificar posibles peligros temprano y planificar sus respuestas.
+- id: 97
   category: defensive_driving
-  question: En Alaska, si conduce por una carretera y cinco o más vehículos le siguen
-    por detrás debido a su baja velocidad, ¿qué está obligado a hacer?
+  question: En Alaska, si conduce por una carretera y cinco o más vehículos lo siguen
+    debido a su baja velocidad, ¿qué debe hacer obligatoriamente?
   choices:
     A: Aumentar la velocidad al límite indicado inmediatamente
     B: Encender las luces de emergencia y continuar
-    C: Hacerse a un lado en el primer apartadero (turnout) seguro para dejarlos pasar
+    C: Hacerse a un lado en el primer apartadero seguro para dejarlos pasar
     D: Mantener su velocidad y permanecer en el centro del carril
   answer: C
-  explanation: La ley de Alaska exige que los vehículos de movimiento lento se retiren
+  explanation: La ley de Alaska exige que los vehículos que circulan despacio se salgan
     de la calzada en el primer apartadero seguro si se forma una fila de cinco o más
     vehículos detrás de ellos.
-- id: 101
+- id: 98
   category: defensive_driving
-  question: ¿A cuántos pies de un vehículo que viene en sentido contrario debe atenuar
-    las luces altas cuando conduce de noche en Alaska?
+  question: Al conducir de noche en Alaska, debe bajar las luces altas cuando se encuentre
+    a cuántos pies de un vehículo que viene en sentido contrario?
   choices:
     A: 200 pies
     B: 300 pies
     C: 500 pies
     D: 1,000 pies
   answer: C
-  explanation: La ley de Alaska exige que los conductores atenúen sus luces altas
-    cuando un vehículo que viene en sentido contrario se encuentra a menos de 500
-    pies para evitar cegar al otro conductor.
-- id: 102
+  explanation: La ley de Alaska exige que los conductores bajen sus luces altas cuando
+    un vehículo que viene en sentido contrario esté a menos de 500 pies para evitar
+    cegar al otro conductor.
+- id: 99
   category: defensive_driving
-  question: Si su vehículo comienza a hidroplanear en una carretera mojada de Alaska,
-    ¿cuál es la mejor acción de conducción defensiva que debe tomar?
+  question: Si su vehículo comienza a deslizarse sobre el agua (hidroplaneo) en una
+    carretera mojada de Alaska, ¿cuál es la mejor acción de conducción defensiva que
+    puede tomar?
   choices:
     A: Frenar bruscamente para recuperar la tracción
     B: Girar el volante bruscamente hacia la derecha
-    C: Levantar suavemente el pie del acelerador y mantener el volante recto
-    D: Poner el auto en punto muerto (neutral) y bombear los frenos
+    C: Levantar el pie del acelerador y mantener el volante recto
+    D: Poner el coche en punto muerto y bombear los frenos
   answer: C
-  explanation: Si ocurre un hidroplaneo, debe quitar el pie del acelerador y dirigir
-    el volante en línea recta. No frene ni gire repentinamente, ya que esto puede
-    causar un derrape.
-- id: 103
+  explanation: Si ocurre hidroplaneo, debe levantar el pie del acelerador y mantener
+    el volante recto. No frene ni gire repentinamente, ya que esto puede provocar
+    un derrape.
+- id: 100
   category: defensive_driving
   question: Al conducir con niebla densa en Alaska, ¿qué luces debe usar para mantener
     la mejor visibilidad?
   choices:
-    A: Luces altas
-    B: Luces bajas
-    C: Solo las luces de estacionamiento
+    A: Luces altas (faros de largo alcance)
+    B: Luces bajas (faros de corto alcance)
+    C: Solo luces de estacionamiento
     D: Luces intermitentes de emergencia
   answer: B
   explanation: Se deben usar las luces bajas en la niebla. Las luces altas se reflejan
-    en la niebla y crean un resplandor que dificulta la visión.
-- id: 104
+    en la niebla y crean deslumbramiento, lo que dificulta la visión.
+- id: 101
   category: defensive_driving
-  question: Si encuentra un alce en o cerca de una carretera de Alaska, ¿cuál es la
-    práctica de conducción defensiva más segura?
+  question: ¿Si se encuentra con un alce en o cerca de una carretera de Alaska, cuál
+    es la práctica de conducción defensiva más segura?
   choices:
     A: Tocar la bocina continuamente para ahuyentarlo
     B: Acelerar para pasarlo antes de que se mueva a su carril
     C: Reducir la velocidad, mantenerse alerta y estar preparado para detenerse
     D: Usar las luces altas para cegar al animal y que se quede quieto
   answer: C
-  explanation: Los alces son impredecibles. Si ve uno, reduzca la velocidad y prepárese
-    para detenerse, ya que pueden lanzarse repentinamente a la carretera.
-- id: 105
+  explanation: Los alces son impredecibles. Si ve uno, reduzca la velocidad y esté
+    preparado para detenerse, ya que pueden lanzarse repentinamente a la carretera.
+- id: 102
   category: defensive_driving
   question: ¿Cuál es la forma correcta de usar los Sistemas de Frenos Antibloqueo
     (ABS) durante una parada de emergencia en una carretera resbaladiza de Alaska?
   choices:
     A: Bombear los frenos rápidamente
     B: Aplicar una presión firme y constante al pedal del freno
-    C: Presionar ligeramente los frenos hasta detenerse
-    D: Poner el auto en punto muerto y usar el freno de emergencia
+    C: Tocar ligeramente los frenos hasta detenerse
+    D: Poner el vehículo en punto muerto (neutral) y usar el freno de emergencia
   answer: B
-  explanation: Con el sistema ABS, debe aplicar una presión firme y constante. El
-    sistema 'bombeará' automáticamente los frenos por usted para evitar que se bloqueen.
-- id: 106
+  explanation: Con el ABS, debe aplicar una presión firme y constante. El sistema
+    "bombeará" automáticamente los frenos por usted para evitar que se bloqueen.
+- id: 103
   category: defensive_driving
   question: Si sus ruedas traseras comienzan a derrapar en una carretera helada de
     Alaska, ¿hacia qué lado debe girar el volante?
   choices:
     A: En la dirección opuesta al derrape
-    B: En la dirección en la que derrapa la parte trasera del vehículo
-    C: Mantenerlo perfectamente recto hasta que el auto se detenga
-    D: Girar bruscamente hacia el arcén de la carretera
+    B: En la dirección en la que la parte trasera del vehículo está derrapando
+    C: Mantenerlo perfectamente recto hasta que el coche se detenga
+    D: Girar bruscamente hacia el arcén (hombro) de la carretera
   answer: B
   explanation: Para recuperarse de un derrape, gire el volante en la dirección en
     la que se desliza la parte trasera del vehículo. Esto ayuda a realinear las ruedas
     delanteras con las traseras.
-- id: 107
+- id: 104
   category: defensive_driving
   question: Al conducir en condiciones invernales en Alaska, ¿por qué es peligroso
     usar el control de crucero (cruise control)?
   choices:
     A: Consume más combustible en climas fríos
-    B: Puede hacer que las ruedas giren sin control y pierdan tracción en superficies
-      resbaladizas
+    B: Puede hacer que las ruedas patinen y pierdan tracción en superficies resbaladizas
     C: Desactiva la calefacción del vehículo
     D: Es ilegal usar el control de crucero en Alaska durante los meses de invierno
   answer: B
   explanation: El control de crucero puede ser peligroso en carreteras heladas o mojadas
     porque puede intentar mantener la velocidad haciendo que las ruedas patinen, lo
     que provoca una pérdida de control.
-- id: 108
+- id: 105
   category: defensive_driving
-  question: Al conducir un vehículo equipado con el Sistema de Frenos Antibloqueo
+  question: Al conducir un vehículo equipado con un Sistema de Frenos Antibloqueo
     (ABS) en carreteras heladas de Alaska, ¿cómo debe aplicar los frenos en una emergencia?
   choices:
     A: Bombear los frenos rápidamente
-    B: Aplicar una presión firme y constante sin soltar el pedal
-    C: Presionar ligeramente los frenos para evitar el bloqueo
-    D: Poner el auto en punto muerto y usar el freno de emergencia
+    B: Aplicar una presión firme y constante y no soltar
+    C: Tocar ligeramente los frenos para evitar el bloqueo
+    D: Poner el vehículo en punto muerto (neutral) y usar el freno de emergencia
   answer: B
   explanation: Con el ABS, debe aplicar una presión firme y constante. El sistema
     bombeará automáticamente los frenos por usted para evitar el bloqueo. Bombearlos
     manualmente anula el sistema.
-- id: 109
+- id: 106
   category: defensive_driving
   question: En Alaska, ¿cuál es la clasificación legal para un conductor sorprendido
-    'enviando mensajes de texto mientras conduce' (leyendo o escribiendo una comunicación
+    "enviando mensajes de texto mientras conduce" (leyendo o escribiendo una comunicación
     basada en texto)?
   choices:
     A: Una infracción de tráfico menor
     B: Un delito menor de Clase A (Class A Misdemeanor)
-    C: Una violación que no es de movimiento
+    C: Una infracción que no es de movimiento
     D: Un delito grave (felony) en todos los casos
   answer: B
   explanation: Según el Estatuto de Alaska 28.35.161, conducir mientras un dispositivo
     con pantalla está en funcionamiento (enviar mensajes de texto) es un delito menor
-    de Clase A, lo cual es una ofensa criminal seria.
-- id: 110
+    de Clase A, lo cual es una ofensa criminal grave.
+- id: 107
   category: defensive_driving
   question: 'Con respecto a las leyes de cinturones de seguridad, Alaska es un estado
-    de ''Aplicación primaria'' (Primary Enforcement). Esto significa que:'
+    de "Aplicación Primaria" (Primary Enforcement). Esto significa que:'
   choices:
-    A: Solo puede ser multado por una violación del cinturón de seguridad si lo detienen
+    A: Solo puede ser citado por una infracción del cinturón de seguridad si lo detienen
       por otro motivo
-    B: Un oficial de policía puede detenerlo y multarlo únicamente por no usar el
-      cinturón de seguridad
+    B: Un oficial de policía puede detenerlo y citarlo únicamente por no usar el cinturón
+      de seguridad
     C: Los cinturones de seguridad solo son obligatorios para pasajeros menores de
       18 años
     D: Los cinturones de seguridad solo son obligatorios en autopistas, no en calles
       de la ciudad
   answer: B
   explanation: Alaska es un estado de aplicación primaria, lo que significa que las
-    autoridades pueden detenerlo y emitir una multa específicamente por una violación
-    del cinturón de seguridad, incluso si no se ha infringido ninguna otra ley.
-- id: 111
+    fuerzas del orden pueden detenerlo y emitir una multa específicamente por una
+    infracción del cinturón de seguridad, incluso si no se ha infringido ninguna otra
+    ley.
+- id: 108
   category: defensive_driving
   question: 'Cuando un vehículo de emergencia con sirenas y luces intermitentes se
-    le acerque por detrás en Alaska, usted debe:'
+    le acerca por detrás en Alaska, usted debe:'
   choices:
     A: Detenerse exactamente donde está
-    B: Acelerar para apartarse del camino
-    C: Orillarse al borde derecho de la calzada y detenerse
+    B: Acelerar para quitarse del camino
+    C: Dirigirse al borde derecho de la calzada y detenerse
     D: Moverse al carril izquierdo para dejar que pasen por la derecha
   answer: C
   explanation: La ley de Alaska exige que los conductores cedan el paso a los vehículos
     de emergencia acercándose lo más posible al borde derecho o a la acera de la calzada
     y deteniéndose hasta que el vehículo haya pasado.
-- id: 112
+- id: 109
   category: defensive_driving
   question: ¿Cuál de los siguientes es un lugar común donde es probable que se forme
     primero el "hielo negro" (black ice) en las carreteras de Alaska?
   choices:
     A: En medio de las intersecciones
     B: En puentes y pasos elevados
-    C: En pendientes ascendentes pronunciadas
+    C: En pendientes empinadas cuesta arriba
     D: En apartaderos de grava
   answer: B
   explanation: Los puentes y pasos elevados se congelan antes que las carreteras normales
     porque el aire frío circula tanto por encima como por debajo de la superficie
     de la carretera, lo que los convierte en lugares propicios para el hielo negro.
-- id: 113
+- id: 110
   category: alcohol_drugs_health
-  question: 'En Alaska, se considera que un conductor de 21 años o más está conduciendo
-    bajo la influencia (DUI) si su concentración de alcohol en sangre (BAC) es igual
-    o superior a:'
+  question: 'En Alaska, se considera que un conductor de 21 años o más conduce bajo
+    la influencia (DUI) si su concentración de alcohol en sangre (BAC) es igual o
+    superior a:'
   choices:
     A: 0.02%
     B: 0.05%
@@ -1468,10 +1432,10 @@ questions:
   answer: C
   explanation: Según el Estatuto de Alaska 28.35.030, una persona es culpable de DUI
     si opera un vehículo motorizado con un BAC de 0.08% o superior.
-- id: 114
+- id: 111
   category: alcohol_drugs_health
-  question: Para una primera condena por DUI en Alaska, ¿cuál es la multa mínima que
-    se debe pagar?
+  question: ¿Cuál es la multa mínima que se debe pagar por una primera condena por
+    conducir bajo los efectos del alcohol o drogas (DUI) en Alaska?
   choices:
     A: $500
     B: $1,000
@@ -1480,10 +1444,10 @@ questions:
   answer: C
   explanation: La ley de Alaska exige una multa mínima de $1,500 por una primera condena
     por DUI.
-- id: 115
+- id: 112
   category: alcohol_drugs_health
   question: 'En Alaska, si está operando un vehículo motorizado comercial, se considera
-    legalmente intoxicado si su BAC es de:'
+    legalmente intoxicado si su concentración de alcohol en sangre (BAC) es de:'
   choices:
     A: 0.01% o superior
     B: 0.04% o superior
@@ -1492,24 +1456,24 @@ questions:
   answer: B
   explanation: Para los conductores comerciales en Alaska, el límite legal de BAC
     es más bajo que para los conductores estándar, establecido en 0.04%.
-- id: 116
+- id: 113
   category: alcohol_drugs_health
-  question: Tras una condena por DUI en Alaska, ¿por cuánto tiempo mínimo exigirá
-    el tribunal la instalación de un dispositivo de bloqueo de encendido (IID) para
-    una primera infracción?
+  question: Tras una condena por DUI en Alaska, ¿por cuánto tiempo como mínimo exigirá
+    el tribunal la instalación de un dispositivo de interbloqueo de encendido (IID)
+    por una primera infracción?
   choices:
     A: 3 meses
     B: 6 meses
     C: 12 meses
     D: La duración del periodo de libertad condicional
   answer: B
-  explanation: La ley de Alaska exige que los infractores de DUI por primera vez utilicen
-    un dispositivo de bloqueo de encendido durante un mínimo de 6 meses después de
-    que se restablezcan sus privilegios de conducción.
-- id: 117
+  explanation: La ley de Alaska exige que quienes cometen un DUI por primera vez utilicen
+    un dispositivo de interbloqueo de encendido durante un mínimo de 6 meses después
+    de que se restablezcan sus privilegios de conducción.
+- id: 114
   category: alcohol_drugs_health
-  question: Según la ley de "recipiente abierto" (Open Container) de Alaska, ¿dónde
-    es legal llevar un recipiente de alcohol abierto en un vehículo?
+  question: Según la ley de 'Recipiente Abierto' de Alaska, ¿dónde es legal llevar
+    un recipiente de alcohol abierto en un vehículo?
   choices:
     A: En la guantera
     B: En la consola central
@@ -1517,25 +1481,25 @@ questions:
     D: Debajo del asiento del conductor
   answer: C
   explanation: El Estatuto de Alaska 28.35.029 prohíbe los recipientes abiertos de
-    alcohol en el compartimento de pasajeros. Deben mantenerse en el maletero o en
+    alcohol en el compartimiento de pasajeros. Deben mantenerse en el maletero o en
     un área que no esté ocupada normalmente por el conductor o los pasajeros.
-- id: 118
+- id: 115
   category: alcohol_drugs_health
   question: En Alaska, ¿puede ser condenado por un DUI si conduce bajo la influencia
     de un medicamento recetado legalmente?
   choices:
     A: No, siempre que tenga una receta válida
     B: No, el DUI solo se aplica al alcohol y a las drogas ilegales
-    C: Sí, si el medicamento afecta su capacidad para conducir de forma segura
+    C: Sí, si el medicamento afecta su capacidad para conducir de manera segura
     D: Sí, pero solo si también tiene alcohol en su sistema
   answer: C
   explanation: Las leyes de DUI de Alaska se aplican a cualquier sustancia controlada
     o inhalante que afecte su capacidad para conducir, independientemente de si fue
     recetada legalmente.
-- id: 119
+- id: 116
   category: alcohol_drugs_health
-  question: 'Si es condenado por un segundo DUI en un plazo de 15 años en Alaska,
-    su licencia de conducir será revocada por al menos:'
+  question: 'Si es condenado por un segundo DUI dentro de un periodo de 15 años en
+    Alaska, su licencia de conducir será revocada por al menos:'
   choices:
     A: 90 días
     B: 180 días
@@ -1544,37 +1508,36 @@ questions:
   answer: C
   explanation: Una segunda condena por DUI dentro de un periodo de 15 años en Alaska
     resulta en un periodo mínimo obligatorio de revocación de la licencia de 1 año.
-- id: 120
+- id: 117
   category: alcohol_drugs_health
   question: 'En Alaska, negarse a someterse a una prueba química de aliento cuando
     lo solicita un oficial de la ley es:'
   choices:
-    A: No es un delito, pero conlleva una multa
+    A: No es un delito, pero resulta en una multa
     B: Un delito penal independiente con sanciones iguales o superiores a un DUI
-    C: Solo una infracción si más tarde se le declara culpable de DUI
+    C: Solo una infracción si luego se le declara culpable de DUI
     D: Permitido si no ha hablado con un abogado
   answer: B
-  explanation: La negativa a someterse a una prueba química (Breath Test Refusal)
-    es un delito menor de clase A en Alaska y conlleva las mismas sanciones mínimas
-    obligatorias que una condena por DUI.
-- id: 121
+  explanation: La negativa a someterse a una prueba química (Negativa a la Prueba
+    de Aliento) es un delito menor de clase A en Alaska y conlleva las mismas penas
+    mínimas obligatorias que una condena por DUI.
+- id: 118
   category: alcohol_drugs_health
-  question: ¿Cuál de las siguientes afirmaciones es verdadera con respecto al consumo
+  question: ¿Cuál de las siguientes afirmaciones es verdadera con respecto al uso
     de marihuana y la conducción en Alaska?
   choices:
     A: Es legal conducir después de consumir marihuana porque es legal para uso recreativo
-    B: Solo se le puede acusar de conducir bajo los efectos del alcohol o drogas (DUI)
-      si está fumando mientras conduce
-    C: Conducir bajo la influencia de la marihuana es un delito, al igual que conducir
-      bajo la influencia del alcohol
+    B: Solo se le puede acusar de DUI si está fumando mientras conduce
+    C: Conducir bajo los efectos de la marihuana es un delito, al igual que conducir
+      bajo los efectos del alcohol
     D: La marihuana no afecta la capacidad de conducción como lo hace el alcohol
   answer: C
   explanation: A pesar de la legalización de la marihuana recreativa en Alaska, conducir
     bajo los efectos de la marihuana sigue siendo un delito penal de DUI.
-- id: 122
+- id: 119
   category: alcohol_drugs_health
   question: 'Si tiene una condición médica que pueda afectar su capacidad para operar
-    un vehículo motorizado de manera segura, usted debe:'
+    un vehículo motorizado de manera segura, debe:'
   choices:
     A: Informar únicamente a su compañía de seguros
     B: Informar de la condición al DMV de Alaska
@@ -1584,9 +1547,9 @@ questions:
   explanation: Los conductores en Alaska están obligados a notificar al DMV sobre
     cualquier condición física o mental que pueda afectar su capacidad para conducir
     de manera segura.
-- id: 123
+- id: 120
   category: alcohol_drugs_health
-  question: ¿Qué es el 'efecto sinérgico' en el contexto de la seguridad al conducir?
+  question: ¿Qué es el 'efecto sinérgico' en el contexto de la seguridad vial?
   choices:
     A: El efecto de mezclar diferentes tipos de alcohol
     B: El efecto combinado del alcohol y las drogas, que es mayor que la suma de sus
@@ -1595,23 +1558,22 @@ questions:
     D: La velocidad a la que el hígado procesa el alcohol
   answer: B
   explanation: El efecto sinérgico ocurre cuando se consumen alcohol y drogas (incluso
-    las de venta libre) juntos, lo que aumenta significativamente el deterioro más
-    allá de lo que cualquiera de los dos causaría por sí solo.
-- id: 124
+    las de venta libre) al mismo tiempo, lo que aumenta significativamente el deterioro
+    más allá de lo que cualquiera de los dos causaría por sí solo.
+- id: 121
   category: alcohol_drugs_health
   question: 'En Alaska, si usted está involucrado en un accidente fatal y se sospecha
-    que conduce bajo los efectos del alcohol o drogas (DUI), se le puede requerir
-    que proporcione:'
+    que conduce bajo la influencia (DUI), se le puede exigir que proporcione:'
   choices:
-    A: Solo una declaración por escrito
+    A: Una declaración escrita solamente
     B: Una muestra de sangre para análisis
     C: Una copia de su certificado de nacimiento
     D: Un testigo de buena conducta
   answer: B
-  explanation: Según la ley de Alaska, si una persona se ve involucrada en un accidente
-    que resulta en muerte o lesiones físicas graves, se puede administrar un análisis
+  explanation: Según la ley de Alaska, si una persona está involucrada en un accidente
+    que resulta en muerte o lesiones físicas graves, se puede administrar una prueba
     de sangre para determinar el contenido de alcohol o drogas.
-- id: 125
+- id: 122
   category: alcohol_drugs_health
   question: ¿Cuál es la única manera de reducir eficazmente su concentración de alcohol
     en sangre (BAC) antes de conducir?
@@ -1622,65 +1584,64 @@ questions:
     D: Comer una comida pesada
   answer: C
   explanation: El tiempo es el único factor que reducirá el BAC. El café, las duchas
-    y la comida no aceleran el metabolismo del alcohol en el hígado.
-- id: 126
+    y la comida no aceleran el metabolismo del alcohol por parte del hígado.
+- id: 123
   category: alcohol_drugs_health
   question: Si se niega a someterse a una prueba química de aliento después de ser
-    arrestado por conducir bajo los efectos del alcohol o drogas (DUI) en Alaska,
-    ¿por cuántos días como mínimo se le revocará la licencia por una primera infracción?
+    arrestado por conducir bajo la influencia (DUI) en Alaska, ¿por cuántos días como
+    mínimo se le revocará la licencia por una primera infracción?
   choices:
     A: 30 días
     B: 60 días
     C: 90 días
     D: 180 días
   answer: C
-  explanation: La negativa a someterse a una prueba química en Alaska resulta en una
-    revocación obligatoria de la licencia de al menos 90 días por la primera infracción,
-    que es la misma sanción administrativa que una condena por DUI.
-- id: 127
+  explanation: Negarse a someterse a una prueba química en Alaska resulta en una revocación
+    obligatoria de la licencia de al menos 90 días por la primera infracción, que
+    es la misma sanción administrativa que una condena por DUI.
+- id: 124
   category: alcohol_drugs_health
-  question: La ley de 'Contenedor Abierto' (Open Container) de Alaska prohíbe la posesión
-    de una botella o receptáculo abierto que contenga una bebida alcohólica en ¿qué
-    parte del vehículo?
+  question: La ley de "Contenedor Abierto" de Alaska prohíbe la posesión de una botella
+    o receptáculo abierto que contenga una bebida alcohólica en ¿qué parte del vehículo?
   choices:
     A: Solo en el maletero
-    B: En el compartimento de pasajeros del vehículo
+    B: El compartimento de pasajeros del vehículo
     C: Solo en la guantera
-    D: Detrás del último asiento vertical de un vehículo que no tenga maletero
+    D: Detrás del último asiento vertical de un vehículo sin maletero
   answer: B
   explanation: La ley de Alaska prohíbe llevar un contenedor abierto de alcohol en
-    el compartimento de pasajeros de un vehículo motorizado. Debe guardarse en el
+    el compartimento de pasajeros de un vehículo motorizado. Debe mantenerse en el
     maletero o, si el vehículo no tiene maletero, detrás del último asiento vertical.
-- id: 128
+- id: 125
   category: alcohol_drugs_health
-  question: En Alaska, ¿cuánto tiempo permanece una condena por conducir bajo los
-    efectos del alcohol o drogas (DUI) en su historial de manejo?
+  question: En Alaska, ¿cuánto tiempo permanece una condena por conducir bajo la influencia
+    (DUI) en su historial de manejo?
   choices:
     A: 5 años
     B: 10 años
     C: 15 años
     D: Permanentemente
   answer: D
-  explanation: En Alaska, una condena por DUI forma parte permanente de su historial
+  explanation: En Alaska, una condena por DUI es una parte permanente de su historial
     de manejo y no puede ser eliminada.
-- id: 129
+- id: 126
   category: alcohol_drugs_health
-  question: 'Una tercera condena por conducir bajo los efectos del alcohol o drogas
-    (DUI) dentro de un período de 10 años en Alaska se clasifica como:'
+  question: 'Una tercera condena por conducir bajo la influencia (DUI) dentro de un
+    período de 10 años en Alaska se clasifica como:'
   choices:
-    A: Delito menor de clase A
-    B: Delito menor de clase B
-    C: Felonía de clase C
+    A: Delito menor de Clase A
+    B: Delito menor de Clase B
+    C: Delito grave de Clase C (Felony)
     D: Infracción
   answer: C
-  explanation: Según la ley de Alaska, una tercera condena por DUI en un plazo de
-    10 años es una felonía de clase C, que conlleva penas significativamente más severas,
-    incluyendo un mínimo de 120 días de cárcel.
-- id: 130
+  explanation: Según la ley de Alaska, una tercera condena por DUI dentro de 10 años
+    es un delito grave de Clase C (Felony), lo que conlleva sanciones significativamente
+    más severas, incluyendo un mínimo de 120 días de cárcel.
+- id: 127
   category: alcohol_drugs_health
-  question: Bajo la ley de Tolerancia Cero (Zero Tolerance) de Alaska, a un conductor
-    menor de 21 años al que se le encuentre cualquier cantidad medible de alcohol
-    en su sistema se le revocará la licencia por ¿cuántos días por una primera infracción?
+  question: Bajo la ley de Tolerancia Cero de Alaska, a un conductor menor de 21 años
+    al que se le encuentre cualquier cantidad medible de alcohol en su sistema se
+    le revocará la licencia por ¿cuántos días por una primera infracción?
   choices:
     A: 10 días
     B: 30 días
@@ -1690,23 +1651,22 @@ questions:
   explanation: Para una primera infracción bajo la ley de Tolerancia Cero (menores
     de 21 años con un BAC de 0.01% o superior), el DMV de Alaska revocará la licencia
     del conductor por 30 días.
-- id: 131
+- id: 128
   category: alcohol_drugs_health
-  question: ¿Si usted está tomando un medicamento recetado y este afecta su capacidad
-    para conducir, puede ser arrestado por DUI en Alaska?
+  question: Si está tomando un medicamento recetado y este afecta su capacidad para
+    conducir, ¿puede ser arrestado por conducir bajo la influencia (DUI) en Alaska?
   choices:
     A: No, si el medicamento le fue recetado legalmente
     B: No, a menos que también haya consumido alcohol
     C: Sí, si el medicamento afecta sus capacidades físicas o mentales
     D: Sí, pero solo si excedió la dosis recetada
   answer: C
-  explanation: En Alaska, usted puede ser arrestado por DUI (conducir bajo la influencia)
-    si sus facultades están disminuidas por cualquier sustancia controlada, incluyendo
-    los medicamentos recetados legalmente.
-- id: 132
+  explanation: En Alaska, usted puede ser arrestado por DUI si está bajo los efectos
+    de cualquier sustancia controlada, incluidos los medicamentos recetados legalmente.
+- id: 129
   category: alcohol_drugs_health
-  question: En Alaska, si tiene una condición médica que le provoca convulsiones,
-    ¿cuánto tiempo debe pasar generalmente sin tener convulsiones antes de poder conducir
+  question: En Alaska, si tiene una condición médica que causa convulsiones, ¿cuánto
+    tiempo debe pasar generalmente sin tener convulsiones antes de poder conducir
     legalmente?
   choices:
     A: 1 mes
@@ -1715,25 +1675,26 @@ questions:
     D: 2 años
   answer: C
   explanation: Aunque el DMV revisa las condiciones médicas caso por caso, el requisito
-    estándar en Alaska es típicamente haber estado sin convulsiones durante 6 meses,
+    estándar en Alaska es típicamente estar libre de convulsiones durante 6 meses,
     respaldado por un informe médico.
-- id: 133
+- id: 130
   category: alcohol_drugs_health
-  question: Si usted se ve involucrado en un incidente de DUI en Alaska y un pasajero
-    menor de 16 años estaba en su vehículo, ¿cuál es la consecuencia legal?
+  question: Si usted está involucrado en un incidente de conducir bajo la influencia
+    (DUI) en Alaska y una persona menor de 16 años era pasajera en su vehículo, ¿cuál
+    es la consecuencia legal?
   choices:
     A: No hay ninguna sanción adicional
     B: Se considera un factor agravante que aumenta la sentencia mínima obligatoria
-    C: Su licencia es revocada de por vida inmediatamente
+    C: Se le revoca la licencia de por vida inmediatamente
     D: Solo se le acusa de una infracción por el uso del cinturón de seguridad
   answer: B
   explanation: Tener un pasajero menor de 16 años durante un DUI es un factor agravante
-    en Alaska que puede resultar en un mayor tiempo de cárcel y multas más altas,
-    y puede dar lugar a cargos adicionales como Poner en Peligro el Bienestar de un
-    Menor.
-- id: 134
+    en Alaska que puede llevar a un aumento del tiempo en la cárcel y multas más altas,
+    y puede dar lugar a cargos adicionales como poner en peligro el bienestar de un
+    menor.
+- id: 131
   category: penalties_and_points
-  question: Según la ley de Alaska, ¿cuál es el valor en puntos por una condena de
+  question: ¿Según la ley de Alaska, cuál es el valor en puntos por una condena de
     'Conducción Temeraria' (Reckless Driving)?
   choices:
     A: 2 puntos
@@ -1742,11 +1703,11 @@ questions:
     D: 10 puntos
   answer: C
   explanation: La conducción temeraria se considera una infracción mayor en Alaska
-    y conlleva una sanción de 6 puntos en el historial del conductor.
-- id: 135
+    y conlleva una penalización de 6 puntos en el historial del conductor.
+- id: 132
   category: penalties_and_points
   question: ¿Cuál es la multa mínima por una primera condena de DUI en Alaska (excluyendo
-    costas judiciales y otros cargos)?
+    los costos judiciales y otros cargos)?
   choices:
     A: $500
     B: $1,000
@@ -1755,9 +1716,9 @@ questions:
   answer: C
   explanation: En Alaska, la multa mínima por una primera infracción de DUI es de
     $1,500.
-- id: 136
+- id: 133
   category: penalties_and_points
-  question: ¿Cuántos puntos se asignan por 'Rebasar ilegalmente un autobús escolar
+  question: ¿Cuántos puntos se asignan por el 'Rebase ilegal de un autobús escolar
     detenido' en Alaska?
   choices:
     A: 2 puntos
@@ -1767,10 +1728,10 @@ questions:
   answer: C
   explanation: Rebasar un autobús escolar detenido con sus luces rojas intermitentes
     es una infracción grave en Alaska y resulta en 6 puntos.
-- id: 137
+- id: 134
   category: penalties_and_points
-  question: ¿Con qué frecuencia puede un conductor de Alaska completar un curso de
-    conducción defensiva aprobado para reducir puntos en su historial de conducción?
+  question: ¿Con qué frecuencia puede un conductor de Alaska completar un curso aprobado
+    de conducción defensiva para reducir los puntos en su historial de manejo?
   choices:
     A: Una vez cada 6 meses
     B: Una vez cada 12 meses
@@ -1778,8 +1739,9 @@ questions:
     D: Una vez cada 5 años
   answer: B
   explanation: Alaska permite una reducción de 2 puntos por completar un curso de
-    conducción defensiva, pero este crédito solo puede aplicarse una vez cada 12 meses.
-- id: 138
+    conducción defensiva, pero este crédito solo se puede aplicar una vez cada 12
+    meses.
+- id: 135
   category: penalties_and_points
   question: En Alaska, ¿cuántos puntos se añaden a su historial por 'Seguir demasiado
     de cerca' (tailgating)?
@@ -1791,10 +1753,10 @@ questions:
   answer: A
   explanation: Seguir demasiado de cerca es una infracción de 2 puntos según el programa
     de puntos del DMV de Alaska.
-- id: 139
+- id: 136
   category: penalties_and_points
   question: Después de una condena por DUI en Alaska, ¿por cuánto tiempo debe un conductor
-    mantener generalmente el seguro SR-22 (prueba de responsabilidad financiera)?
+    mantener típicamente el seguro SR-22 (prueba de responsabilidad financiera)?
   choices:
     A: 1 año
     B: 3 años
@@ -1803,22 +1765,22 @@ questions:
   answer: B
   explanation: Los conductores condenados por DUI u otras infracciones mayores en
     Alaska generalmente deben mantener el seguro SR-22 durante 3 años.
-- id: 140
+- id: 137
   category: penalties_and_points
   question: ¿Cuál de las siguientes infracciones resulta en el mayor número de puntos
     (6 puntos) en Alaska?
   choices:
     A: Conducción descuidada (Careless driving)
     B: No detenerse ante un oficial de la paz
-    C: Exceso de velocidad de 15 mph sobre el límite
+    C: Exceder el límite de velocidad por 15 mph
     D: No ceder el paso
   answer: B
   explanation: No detenerse ante un oficial de la paz es una infracción mayor que
-    conlleva 6 puntos. La conducción descuidada conlleva 2 puntos y el exceso de velocidad
-    de 15 mph sobre el límite conlleva 4 puntos.
-- id: 141
+    conlleva 6 puntos. La conducción descuidada (careless driving) es de 2 puntos
+    y el exceso de velocidad de 15 mph o más es de 4 puntos.
+- id: 138
   category: penalties_and_points
-  question: ¿En Alaska, cuántos puntos se asignan por una condena de 'Conducción descuidada'
+  question: En Alaska, ¿cuántos puntos se asignan por una condena de 'Conducción Descuidada'
     (Careless Driving)?
   choices:
     A: 2 puntos
@@ -1826,14 +1788,13 @@ questions:
     C: 6 puntos
     D: 0 puntos (solo multa)
   answer: A
-  explanation: La conducción descuidada (Careless driving) es una infracción de 2
-    puntos en Alaska, mientras que la conducción temeraria (Reckless driving) es una
-    infracción de 6 puntos.
-- id: 142
+  explanation: La conducción descuidada es una infracción de 2 puntos en Alaska, mientras
+    que la conducción temeraria (reckless driving) es una infracción de 6 puntos.
+- id: 139
   category: penalties_and_points
-  question: ¿En Alaska, por cuánto tiempo se requiere que un infractor de DUI por
-    primera vez tenga instalado un Dispositivo de Bloqueo de Encendido (IID) después
-    de que se restablezca su licencia?
+  question: En Alaska, ¿por cuánto tiempo se le requiere a un infractor de DUI por
+    primera vez que instale un Dispositivo de Bloqueo de Encendido (IID) después de
+    que se restablezca su licencia?
   choices:
     A: 3 meses
     B: 6 meses
@@ -1843,25 +1804,25 @@ questions:
   answer: D
   explanation: Alaska requiere la instalación de un Dispositivo de Bloqueo de Encendido
     (IID) para todas las condenas por DUI. Para una primera infracción, generalmente
-    se requiere por la duración del período de revocación (mínimo 90 días) más cualquier
-    tiempo adicional ordenado por el tribunal.
-- id: 143
+    se requiere durante el período de revocación (mínimo 90 días) más cualquier tiempo
+    adicional ordenado por el tribunal.
+- id: 140
   category: penalties_and_points
-  question: ¿En Alaska, cuántos puntos se asignan a su historial de conducción por
-    exceder el límite de velocidad por 15 mph o más?
+  question: En Alaska, ¿cuántos puntos se asignan a su historial de manejo por exceder
+    el límite de velocidad por 15 mph o más?
   choices:
     A: 2 puntos
     B: 4 puntos
     C: 6 puntos
     D: 10 puntos
   answer: B
-  explanation: De acuerdo con el sistema de puntos del DMV de Alaska, exceder el límite
-    de velocidad por 15 mph o más resulta en la adición de 4 puntos a su historial
-    de conducción.
-- id: 144
+  explanation: Según el sistema de puntos del DMV de Alaska, el exceso de velocidad
+    de 15 mph o más sobre el límite resulta en la adición de 4 puntos a su historial
+    de manejo.
+- id: 141
   category: penalties_and_points
-  question: Según la ley de Alaska, ¿cuál es el tiempo mínimo obligatorio de cárcel
-    por una primera condena por DUI?
+  question: ¿Según la ley de Alaska, cuál es el tiempo mínimo obligatorio de cárcel
+    por una primera condena por DUI (conducir bajo la influencia)?
   choices:
     A: 24 horas
     B: 48 horas
@@ -1870,10 +1831,10 @@ questions:
   answer: C
   explanation: Una primera condena por DUI en Alaska conlleva una sentencia mínima
     obligatoria de 72 horas consecutivas de cárcel.
-- id: 145
+- id: 142
   category: penalties_and_points
   question: Si se le condena por no detenerse ante un autobús escolar que está cargando
-    o descargando pasajeros en Alaska, ¿cuántos puntos se asignan?
+    o descargando pasajeros en Alaska, ¿cuántos puntos se le asignan?
   choices:
     A: 2 puntos
     B: 4 puntos
@@ -1881,21 +1842,21 @@ questions:
     D: 10 puntos
   answer: C
   explanation: Rebasar un autobús escolar detenido con sus luces rojas intermitentes
-    es una infracción de seguridad grave en Alaska y conlleva una penalización de
-    6 puntos.
-- id: 146
+    es una violación de seguridad grave en Alaska y conlleva una penalización de 6
+    puntos.
+- id: 143
   category: penalties_and_points
   explanation: En Alaska, seguir a otro vehículo demasiado de cerca (tailgating) resulta
     en la adición de 2 puntos a su historial de conducción.
-  question: ¿Cuántos puntos se asignan por 'Seguir demasiado de cerca' (Following
-    too closely) en el estado de Alaska?
+  question: ¿Cuántos puntos se asignan por 'Seguir demasiado de cerca' en el estado
+    de Alaska?
   choices:
     A: 2 puntos
     B: 3 puntos
     C: 4 puntos
     D: 6 puntos
   answer: A
-- id: 147
+- id: 144
   category: penalties_and_points
   question: Si un conductor de Alaska es condenado por conducir mientras su licencia
     está suspendida o revocada, ¿cuántos puntos se añaden a su historial?
@@ -1907,20 +1868,20 @@ questions:
   answer: C
   explanation: Conducir mientras la licencia está suspendida o revocada es una infracción
     mayor y resulta en la asignación de 10 puntos.
-- id: 148
+- id: 145
   category: penalties_and_points
-  question: ¿En Alaska, por cuánto tiempo debe instalarse un Dispositivo de Bloqueo
-    de Encendido (IID) en el vehículo del infractor por una primera condena por DUI?
+  question: En Alaska, por una primera condena por DUI, ¿durante cuánto tiempo debe
+    instalarse un dispositivo de bloqueo de encendido (IID) en el vehículo del infractor?
   choices:
     A: 3 meses
     B: 6 meses
     C: 12 meses
     D: 24 meses
   answer: B
-  explanation: Para una primera condena por DUI en Alaska, generalmente se requiere
-    que el conductor use un Dispositivo de Bloqueo de Encendido (IID) por un período
-    de 6 meses después de que se restablezca su licencia.
-- id: 149
+  explanation: Para una primera condena por DUI en Alaska, normalmente se requiere
+    que el conductor use un dispositivo de bloqueo de encendido por un período de
+    6 meses después de que se restablezca su licencia.
+- id: 146
   category: penalties_and_points
   question: ¿Cuál es el valor en puntos por no ceder el paso a un peatón en Alaska?
   choices:
@@ -1931,9 +1892,9 @@ questions:
   answer: B
   explanation: No ceder el paso a un peatón o a otro vehículo es una infracción de
     4 puntos en el estado de Alaska.
-- id: 150
+- id: 147
   category: penalties_and_points
-  question: ¿En Alaska, cuál es la multa para un conductor que no usa el cinturón
+  question: En Alaska, ¿cuál es la multa para un conductor que no usa el cinturón
     de seguridad?
   choices:
     A: $15
@@ -1943,11 +1904,10 @@ questions:
   answer: A
   explanation: Según el Estatuto de Alaska 28.05.095, la multa por una infracción
     del cinturón de seguridad es de $15.
-- id: 151
+- id: 148
   category: penalties_and_points
-  question: 'Si es condenado por un DUI (conducir bajo la influencia) en Alaska, se
-    le requerirá mantener una prueba de responsabilidad financiera (seguro SR-22)
-    por al menos:'
+  question: 'Si es condenado por un DUI en Alaska, se le requerirá mantener una prueba
+    de responsabilidad financiera (seguro SR-22) durante al menos:'
   choices:
     A: 1 año
     B: 3 años
@@ -1955,24 +1915,24 @@ questions:
     D: Permanentemente
   answer: B
   explanation: Tras una condena por DUI o la revocación de la licencia por negarse
-    a una prueba, Alaska exige que el conductor mantenga el seguro SR-22 durante 3
+    a la prueba, Alaska exige que el conductor mantenga el seguro SR-22 durante 3
     años por la primera infracción.
-- id: 152
+- id: 149
   category: sharing_the_road
-  question: Según la ley de "Hacerse a un lado" (Move Over law) de Alaska, ¿qué debe
-    hacer al acercarse a un vehículo de emergencia estacionado con luces intermitentes
-    en una autopista con dos o más carriles que circulan en la misma dirección?
+  question: Bajo la ley de 'Hacerse a un lado' (Move Over) de Alaska, ¿qué debe hacer
+    al acercarse a un vehículo de emergencia estacionado con luces intermitentes en
+    una carretera con dos o más carriles que se mueven en la misma dirección?
   choices:
     A: Detenerse inmediatamente en su carril
     B: Mantener la velocidad pero tocar la bocina
     C: Cambiarse al carril izquierdo si es seguro hacerlo, o reducir la velocidad
       significativamente
-    D: Acelerar para rebasar el vehículo rápidamente
+    D: Acelerar para pasar el vehículo rápidamente
   answer: C
   explanation: El Estatuto de Alaska 28.35.185 exige que los conductores dejen libre
     el carril más cercano a un vehículo de emergencia estacionado o reduzcan la velocidad
     a una que sea segura y razonable para las condiciones climáticas y de la carretera.
-- id: 153
+- id: 150
   category: sharing_the_road
   question: Al seguir a un vehículo de emergencia que responde a una alarma en Alaska,
     ¿cuál es la distancia mínima legal de seguimiento?
@@ -1985,11 +1945,11 @@ questions:
   explanation: Según el Estatuto de Alaska 28.35.180, es ilegal seguir a un vehículo
     de emergencia (como un camión de bomberos o una ambulancia) a menos de 500 pies
     cuando este responde a una emergencia.
-- id: 154
+- id: 151
   category: sharing_the_road
-  question: Usted conduce por una autopista con una mediana física o barrera. Un autobús
+  question: Usted conduce por una autopista con una mediana o barrera física. Un autobús
     escolar está detenido en el lado opuesto de la mediana con las luces rojas intermitentes.
-    ¿Qué le exige la ley de Alaska?
+    ¿Qué le exige la ley de Alaska que haga?
   choices:
     A: Detenerse y esperar a que las luces dejen de parpadear
     B: Reducir la velocidad a 15 mph y proceder con precaución
@@ -1999,10 +1959,10 @@ questions:
   explanation: En Alaska, los conductores que viajan en la dirección opuesta en una
     autopista dividida por una mediana o barrera física no están obligados a detenerse
     ante un autobús escolar.
-- id: 155
+- id: 152
   category: sharing_the_road
   question: En Alaska, ¿es legal la "división de carril" (lane splitting), es decir,
-    una motocicleta que circula entre filas de vehículos detenidos o en movimiento
+    que una motocicleta circule entre filas de vehículos detenidos o en movimiento
     en el mismo carril?
   choices:
     A: Sí, pero solo en tráfico pesado
@@ -2010,13 +1970,13 @@ questions:
     C: No, es ilegal
     D: Sí, se recomienda para reducir la congestión
   answer: C
-  explanation: Según el Manual del Conductor de Alaska y las regulaciones de tráfico
-    (13 AAC 02.427), las motocicletas tienen derecho al uso total de un carril, y
-    la división de carril está prohibida.
-- id: 156
+  explanation: De acuerdo con el Manual del Conductor de Alaska y las regulaciones
+    de tráfico (13 AAC 02.427), las motocicletas tienen derecho al uso total de un
+    carril, y la división de carril (lane splitting) está prohibida.
+- id: 153
   category: sharing_the_road
   question: Cuando un peatón utiliza un bastón blanco o un perro guía en una intersección
-    en Alaska, ¿qué debe hacer un conductor?
+    en Alaska, ¿qué debe hacer el conductor?
   choices:
     A: Tocar la bocina para avisarle que usted está allí
     B: Continuar si el peatón no está directamente en su camino
@@ -2025,8 +1985,8 @@ questions:
   answer: C
   explanation: La ley de Alaska (13 AAC 02.175) exige que los conductores tomen las
     precauciones necesarias y se detengan por completo si es necesario para evitar
-    lesionar a un peatón ciego que use un bastón o un perro guía.
-- id: 157
+    lesionar a un peatón ciego que utilice un bastón o un perro guía.
+- id: 154
   category: sharing_the_road
   question: Según la ley de Alaska, una bicicleta operada de noche debe estar equipada
     con un faro delantero visible desde al menos ¿cuántos pies?
@@ -2039,9 +1999,9 @@ questions:
   explanation: El Código Administrativo de Alaska (13 AAC 04.320) exige que las bicicletas
     utilizadas de noche tengan una lámpara en la parte delantera que emita una luz
     blanca visible desde una distancia de al menos 500 pies.
-- id: 158
+- id: 155
   category: sharing_the_road
-  question: Al compartir la carretera con camiones grandes, ¿qué es la "Zona No" (No-Zone)?
+  question: Al compartir la carretera con camiones grandes, ¿qué es la "No-Zone"?
   choices:
     A: El área donde los camiones no tienen permitido circular
     B: Los puntos ciegos alrededor del camión donde su vehículo desaparece de la vista
@@ -2049,14 +2009,13 @@ questions:
     C: La zona de velocidad restringida para vehículos comerciales
     D: El área reservada para las estaciones de pesaje de camiones
   answer: B
-  explanation: La "Zona No" (No-Zone) se refiere a los grandes puntos ciegos detrás,
-    delante y a ambos lados de un camión donde el conductor del camión no puede ver
-    a otros vehículos.
-- id: 159
+  explanation: La "No-Zone" se refiere a los grandes puntos ciegos detrás, delante
+    y a ambos lados de un camión donde el conductor del camión no puede ver a otros
+    vehículos.
+- id: 156
   category: sharing_the_road
-  question: En Alaska, si usted está girando a la derecha y un ciclista está en el
-    carril para bicicletas o en el arcén a su derecha, ¿quién tiene el derecho de
-    paso?
+  question: En Alaska, si usted va a girar a la derecha y un ciclista está en el carril
+    para bicicletas o en el arcén a su derecha, ¿quién tiene el derecho de paso?
   choices:
     A: El vehículo motorizado, porque es más grande
     B: El ciclista
@@ -2065,14 +2024,15 @@ questions:
       los autos
   answer: B
   explanation: Los ciclistas tienen los mismos derechos y responsabilidades que los
-    automovilistas. Usted debe ceder el paso a un ciclista al girar cruzando su trayectoria.
-- id: 160
+    automovilistas. Usted debe ceder el paso a un ciclista cuando gire cruzando su
+    trayectoria.
+- id: 157
   category: sharing_the_road
   question: ¿Cuál es la edad mínima para un pasajero en una motocicleta en Alaska,
-    siempre que la motocicleta esté equipada con un asiento para pasajeros designado
+    siempre que la motocicleta esté equipada con un asiento para pasajero designado
     y reposapiés?
   choices:
-    A: No hay una edad mínima establecida por el estado
+    A: No existe una edad mínima obligatoria por el estado
     B: 5 años
     C: 8 años
     D: 12 años
@@ -2080,32 +2040,32 @@ questions:
   explanation: La ley de Alaska no especifica una edad mínima para los pasajeros de
     motocicletas, pero la motocicleta debe estar equipada con un asiento permanente
     y reposapiés para el pasajero.
-- id: 161
+- id: 158
   category: sharing_the_road
   question: 'Cuando un camión grande gira a la derecha en una calle estrecha, a menudo:'
   choices:
     A: Se mantendrá lo más cerca posible del bordillo derecho
-    B: Se abrirá hacia la izquierda antes de girar
+    B: Se abrirá ampliamente hacia la izquierda antes de girar
     C: Acelerará para completar el giro rápidamente
     D: Girará desde el carril situado más a la izquierda
   answer: B
-  explanation: Los camiones grandes tienen un radio de giro amplio y, a menudo, necesitan
+  explanation: Los camiones grandes tienen un radio de giro amplio y a menudo necesitan
     abrirse hacia la izquierda para no chocar con el bordillo al realizar un giro
     a la derecha.
-- id: 162
+- id: 159
   category: sharing_the_road
-  question: En Alaska, ¿es legal que una persona permanezca en la calzada con el fin
-    de solicitar transporte (hacer autostop)?
+  question: En Alaska, ¿es legal que una persona se pare en la calzada con el fin
+    de solicitar transporte (hacer autostop/hitchhiking)?
   choices:
     A: Sí, en cualquier lugar del estado
-    B: Sí, pero solo en autopistas con arcén (hombro)
+    B: Sí, pero solo en autopistas con arcén
     C: No, está prohibido por la ley estatal
     D: Sí, pero solo durante las horas del día
   answer: C
-  explanation: Según la norma 13 AAC 02.175, ninguna persona puede permanecer en la
-    calzada con el fin de solicitar transporte, aunque sí pueden estar en el arcén
-    o en la acera.
-- id: 163
+  explanation: Según la norma 13 AAC 02.175, ninguna persona puede pararse en la calzada
+    con el fin de solicitar transporte, aunque pueden pararse en el arcén o en la
+    acera.
+- id: 160
   category: sharing_the_road
   question: 'Al seguir a una motocicleta en Alaska, debe mantener una distancia de
     seguimiento de al menos:'
@@ -2116,12 +2076,12 @@ questions:
     D: 10 segundos
   answer: C
   explanation: El Manual del Conductor de Alaska recomienda una distancia de seguimiento
-    de al menos cuatro segundos al seguir a una motocicleta para permitir maniobras
+    de al menos cuatro segundos cuando se sigue a una motocicleta para permitir maniobras
     o paradas repentinas.
-- id: 164
+- id: 161
   category: sharing_the_road
-  question: Si se ve involucrado en un choque con un vehículo comercial (camión),
-    ¿qué información adicional debería intentar obtener además de la licencia de conducir?
+  question: ¿Si usted se ve involucrado en un choque con un vehículo comercial (camión),
+    qué información adicional debería intentar obtener además de la licencia de conducir?
   choices:
     A: El consumo de combustible del camión
     B: El nombre de la empresa de transporte y el número USDOT
@@ -2131,10 +2091,10 @@ questions:
   explanation: Cuando se está involucrado en un accidente con un vehículo comercial,
     es importante identificar al transportista (empresa) y el número de identificación
     USDOT que se muestra en el vehículo.
-- id: 165
+- id: 162
   category: sharing_the_road
-  question: 'En Alaska, no debe seguir a un equipo de bomberos (camión de bomberos)
-    que responda a una alarma de incendio a una distancia menor de:'
+  question: 'En Alaska, no debe seguir a un camión de bomberos que se desplaza en
+    respuesta a una alarma de incendio a una distancia menor de:'
   choices:
     A: 100 pies
     B: 300 pies
@@ -2142,50 +2102,51 @@ questions:
     D: 1,000 pies
   answer: C
   explanation: Según el Código Administrativo de Alaska (13 AAC 02.517), es ilegal
-    seguir a un vehículo de bomberos que responda a una alarma a menos de 500 pies
-    o conducir o estacionar dentro de la cuadra donde el vehículo de bomberos se ha
-    detenido.
-- id: 166
+    seguir a un vehículo de bomberos que responde a una alarma a menos de 500 pies
+    o conducir o estacionarse dentro de la cuadra donde el vehículo de bomberos se
+    ha detenido.
+- id: 163
   category: sharing_the_road
   question: ¿Cuál es la distancia de seguimiento recomendada al conducir detrás de
     una motocicleta en Alaska para garantizar la seguridad?
   choices:
     A: 2 segundos
     B: 4 segundos
-    C: El largo de 1 vehículo
+    C: 1 largo de vehículo
     D: 50 pies
   answer: B
   explanation: El Manual del Conductor de Alaska recomienda una distancia de seguimiento
-    de al menos 4 segundos al estar detrás de una motocicleta porque estas pueden
-    detenerse mucho más rápido que otros vehículos y se ven afectadas más fácilmente
+    de al menos 4 segundos cuando se circula detrás de una motocicleta, ya que estas
+    pueden detenerse mucho más rápido que otros vehículos y se ven afectadas más fácilmente
     por las condiciones de la carretera.
-- id: 167
+- id: 164
   category: sharing_the_road
-  question: 'Según la ley de Alaska, si ve a un peatón que usa un bastón blanco o
-    un perro guía, usted debe:'
+  question: 'Según la ley de Alaska, si ve a un peatón usando un bastón blanco o un
+    perro guía, usted debe:'
   choices:
-    A: Tocar la bocina para avisarles que usted está allí.
-    B: Reducir la velocidad y estar preparado para detenerse para cederles el paso.
+    A: Tocar la bocina para que sepan que usted está allí.
+    B: Reducir la velocidad y estar preparado para detenerse para cederles el derecho
+      de paso.
     C: Rodearlos rápidamente.
     D: Ceder el paso solo si están en un paso de peatones marcado.
   answer: B
-  explanation: La ley de Alaska exige que los conductores cedan el paso a cualquier
-    peatón total o parcialmente ciego que lleve un bastón blanco o use un perro guía,
-    independientemente de si se encuentra en un paso de peatones.
-- id: 168
+  explanation: La ley de Alaska exige que los conductores cedan el derecho de paso
+    a cualquier peatón total o parcialmente ciego que lleve un bastón blanco o utilice
+    un perro guía, independientemente de si se encuentra en un paso de peatones.
+- id: 165
   category: sharing_the_road
-  question: 'Cuando un camión grande gira a la derecha en una calle con dos carriles
-    en cada dirección, el conductor puede necesitar:'
+  question: 'Cuando un camión grande está girando a la derecha en una calle con dos
+    carriles en cada dirección, el conductor puede necesitar:'
   choices:
     A: Permanecer completamente en el carril derecho.
     B: Abrirse hacia la izquierda para completar el giro.
     C: Acelerar para despejar la intersección rápidamente.
-    D: Girar solo desde el carril izquierdo.
+    D: Girar únicamente desde el carril izquierdo.
   answer: B
-  explanation: Los camiones grandes tienen un radio de giro amplio. Para no chocar
-    con el bordillo, a menudo deben abrirse hacia la izquierda antes de girar a la
-    derecha. Los conductores nunca deben intentar meterse entre el camión y el bordillo.
-- id: 169
+  explanation: Los camiones grandes tienen un radio de giro amplio. Para no golpear
+    la acera, a menudo deben abrirse hacia la izquierda antes de girar a la derecha.
+    Los conductores nunca deben intentar meterse entre el camión y la acera.
+- id: 166
   category: sharing_the_road
   question: En Alaska, ¿qué indica una luz amarilla intermitente en un autobús escolar?
   choices:
@@ -2197,9 +2158,9 @@ questions:
   explanation: Las luces amarillas intermitentes en un autobús escolar significan
     que el autobús se está preparando para detenerse. Los conductores deben reducir
     la velocidad y prepararse para detener sus vehículos.
-- id: 170
+- id: 167
   category: sharing_the_road
-  question: Según el Manual del Conductor de Alaska, al adelantar a un ciclista, ¿cuánto
+  question: Según el Manual del Conductor de Alaska, al rebasar a un ciclista, ¿cuánto
     espacio debe dejar como mínimo entre su vehículo y la bicicleta?
   choices:
     A: 1 pie
@@ -2209,11 +2170,11 @@ questions:
   answer: C
   explanation: El Manual del Conductor de Alaska establece que los automovilistas
     deben dar a los ciclistas suficiente espacio y sugiere un mínimo de 3 pies de
-    separación al adelantarlos.
-- id: 171
+    distancia al rebasarlos.
+- id: 168
   category: sharing_the_road
-  question: 'Si está conduciendo y un vehículo delante de usted se ha detenido en
-    un cruce de peatones para dejar pasar a un peatón, usted debe:'
+  question: 'Si usted está conduciendo y un vehículo delante de usted se ha detenido
+    en un paso de peatones para dejar pasar a un peatón, usted debe:'
   choices:
     A: Rebasar al vehículo detenido por la izquierda.
     B: Rebasar al vehículo detenido por la derecha.
@@ -2221,25 +2182,24 @@ questions:
     D: Tocar la bocina para decirle al peatón que se dé prisa.
   answer: C
   explanation: La ley de Alaska prohíbe rebasar a un vehículo que se ha detenido en
-    un cruce de peatones para permitir que un peatón cruce, ya que el conductor que
-    intenta rebasar podría no ver al peatón.
-- id: 172
+    un paso de peatones para permitir que un peatón cruce, ya que el conductor que
+    rebasa podría no ver al peatón.
+- id: 169
   category: sharing_the_road
-  question: 'Por ley, los ciclistas en Alaska deben:'
+  question: 'Los ciclistas en Alaska están obligados por ley a:'
   choices:
     A: Circular en sentido contrario al flujo del tráfico.
     B: Circular únicamente por las aceras.
     C: Obedecer las mismas leyes de tránsito que los conductores de vehículos motorizados.
-    D: Nunca usar señales manuales.
+    D: No utilizar nunca señales manuales.
   answer: C
   explanation: En Alaska, los ciclistas tienen los mismos derechos y responsabilidades
     que los automovilistas. Deben obedecer todas las señales de tráfico, letreros
     y marcas en el pavimento.
-- id: 173
+- id: 170
   category: vehicle_information
   question: En Alaska, para los residentes que viven al norte de los 60 grados de
-    latitud norte, ¿entre qué fechas se permiten legalmente los neumáticos con clavos
-    (studded tires)?
+    latitud norte, ¿entre qué fechas se permiten legalmente los neumáticos con clavos?
   choices:
     A: Del 1 de octubre al 15 de abril
     B: Del 15 de septiembre al 1 de mayo
@@ -2249,35 +2209,35 @@ questions:
   explanation: Según la ley de Alaska, para las áreas al norte de los 60 grados de
     latitud norte (que incluye Fairbanks y Anchorage), los neumáticos con clavos están
     permitidos desde el 15 de septiembre hasta el 1 de mayo.
-- id: 174
+- id: 171
   category: vehicle_information
-  question: Según las leyes de equipamiento de vehículos de Alaska, ¿cuál es el polarizado
-    máximo permitido para las ventanas laterales delanteras (conductor y pasajero
-    delantero)?
+  question: ¿De acuerdo con las leyes de equipamiento de vehículos de Alaska, cuál
+    es el polarizado máximo permitido para las ventanas laterales delanteras (conductor
+    y pasajero delantero)?
   choices:
-    A: Debe permitir al menos un 40% de transmisión de luz
-    B: Debe permitir al menos un 50% de transmisión de luz
-    C: Debe permitir al menos un 70% de transmisión de luz
-    D: No se permite polarizado en las ventanas laterales
+    A: Debe permitir al menos un 40% de transmitancia de luz
+    B: Debe permitir al menos un 50% de transmitancia de luz
+    C: Debe permitir al menos un 70% de transmitancia de luz
+    D: No se permite el polarizado en las ventanas laterales
   answer: C
-  explanation: En Alaska, las ventanas laterales delanteras deben tener una transmisión
+  explanation: En Alaska, las ventanas laterales delanteras deben tener una transmitancia
     de luz de al menos el 70%.
-- id: 175
+- id: 172
   category: vehicle_information
   question: En Alaska, ¿cuál es el polarizado máximo permitido para las ventanas laterales
     traseras y la ventana trasera?
   choices:
-    A: Debe permitir al menos un 20% de transmisión de luz
-    B: Debe permitir al menos un 30% de transmisión de luz
-    C: Debe permitir al menos un 40% de transmisión de luz
-    D: Debe permitir al menos un 70% de transmisión de luz
+    A: Debe permitir al menos un 20% de transmitancia de luz
+    B: Debe permitir al menos un 30% de transmitancia de luz
+    C: Debe permitir al menos un 40% de transmitancia de luz
+    D: Debe permitir al menos un 70% de transmitancia de luz
   answer: C
   explanation: La ley de Alaska exige que las ventanas laterales traseras y la ventana
-    trasera permitan al menos un 40% de transmisión de luz.
-- id: 176
+    trasera permitan al menos un 40% de transmitancia de luz.
+- id: 173
   category: vehicle_information
-  question: 'Todo vehículo motorizado en Alaska debe estar equipado con una bocina
-    que pueda escucharse desde una distancia de al menos:'
+  question: 'Todo vehículo de motor en Alaska debe estar equipado con una bocina que
+    pueda escucharse desde una distancia de al menos:'
   choices:
     A: 100 pies
     B: 200 pies
@@ -2286,7 +2246,7 @@ questions:
   answer: B
   explanation: Los estándares de equipamiento de vehículos de Alaska requieren una
     bocina audible en condiciones normales desde una distancia no menor a 200 pies.
-- id: 177
+- id: 174
   category: vehicle_information
   question: En Alaska, ¿una carga que se extienda más de cuántos pies más allá de
     la parte trasera del vehículo debe marcarse con una bandera roja durante el día?
@@ -2297,12 +2257,12 @@ questions:
     D: 5 pies
   answer: C
   explanation: Siempre que una carga se extienda 4 pies o más más allá de la parte
-    trasera de la plataforma o carrocería de un vehículo, se debe colocar una bandera
+    trasera de la plataforma o carrocería de un vehículo, se debe exhibir una bandera
     roja (de al menos 12 pulgadas cuadradas) en el extremo posterior de la carga.
-- id: 178
+- id: 175
   category: vehicle_information
-  question: 'La ley de Alaska exige que la placa de matrícula de su vehículo esté
-    iluminada para que sea claramente legible desde una distancia de al menos:'
+  question: 'La ley de Alaska exige que la placa de su vehículo esté iluminada de
+    modo que sea claramente legible desde una distancia de al menos:'
   choices:
     A: 25 pies
     B: 50 pies
@@ -2311,7 +2271,7 @@ questions:
   answer: B
   explanation: La placa de registro trasera debe estar iluminada por una luz blanca
     para que sea visible desde una distancia de 50 pies hacia atrás.
-- id: 179
+- id: 176
   category: vehicle_information
   question: ¿Cuál es la profundidad mínima legal de la banda de rodadura de los neumáticos
     para un vehículo de pasajeros en Alaska?
@@ -2323,10 +2283,10 @@ questions:
   answer: B
   explanation: Los neumáticos se consideran inseguros en Alaska si la profundidad
     de la banda de rodadura es inferior a 2/32 de pulgada.
-- id: 180
+- id: 177
   category: vehicle_information
-  question: En Alaska, ¿cuántos espejos debe tener como mínimo cada vehículo motorizado,
-    ubicados de tal manera que reflejen al conductor una vista de la carretera a una
+  question: En Alaska, ¿todo vehículo de motor debe tener al menos cuántos espejos
+    ubicados de manera que reflejen al conductor una vista de la carretera por una
     distancia de al menos 200 pies hacia atrás?
   choices:
     A: Un espejo
@@ -2336,26 +2296,26 @@ questions:
   answer: B
   explanation: 'La ley de Alaska exige al menos dos espejos: uno en el lado izquierdo
     y otro en el centro o en el lado derecho.'
-- id: 181
+- id: 178
   category: vehicle_information
-  question: ¿Según la ley de Alaska, cuál de las siguientes afirmaciones es verdadera
+  question: Según la ley de Alaska, ¿cuál de las siguientes afirmaciones es verdadera
     con respecto a los silenciadores de los vehículos?
   choices:
     A: Los silenciadores pueden modificarse para aumentar el ruido del motor
-    B: Los escapes libres (cut-outs) o derivaciones están permitidos en carreteras
-      rurales
+    B: Se permiten recortes o derivaciones del silenciador en carreteras rurales
     C: Un vehículo debe tener un silenciador en buen estado de funcionamiento para
       evitar el ruido excesivo
     D: Los silenciadores solo son obligatorios para los vehículos fabricados después
       de 2010
   answer: C
   explanation: La ley de Alaska exige que todo vehículo de motor tenga un silenciador
-    en buen estado de funcionamiento y en operación constante para evitar ruidos excesivos
-    o inusuales. Los escapes libres o derivaciones están prohibidos.
-- id: 182
+    en buen estado de funcionamiento y en funcionamiento constante para evitar ruidos
+    excesivos o inusuales. Se prohíben los recortes o derivaciones (cut-outs o bypasses).
+- id: 179
   category: vehicle_information
-  question: 'En Alaska, se debe exhibir un emblema de ''Vehículo de Movimiento Lento''
-    en la parte trasera de cualquier vehículo que viaje a una velocidad inferior a:'
+  question: 'En Alaska, se debe exhibir un emblema de ''Vehículo de movimiento lento''
+    (Slow Moving Vehicle) en la parte trasera de cualquier vehículo que viaje a una
+    velocidad inferior a:'
   choices:
     A: 15 mph
     B: 20 mph
@@ -2365,63 +2325,63 @@ questions:
   explanation: El emblema de vehículo de movimiento lento (un triángulo naranja reflectante)
     es obligatorio para los vehículos diseñados para operar a velocidades de 25 mph
     o menos.
-- id: 183
+- id: 180
   category: vehicle_information
-  question: ¿Cuántos medios independientes para aplicar los frenos exige la ley de
-    Alaska que tengan todos los vehículos de motor (excepto las motocicletas)?
+  question: La ley de Alaska exige que todos los vehículos de motor (excepto las motocicletas)
+    estén equipados con ¿cuántos medios separados para aplicar los frenos?
   choices:
     A: Uno
     B: Dos
     C: Tres
     D: Ninguno, siempre que el sistema principal funcione
   answer: B
-  explanation: Cada vehículo de motor debe tener dos medios independientes para aplicar
+  explanation: Todo vehículo de motor debe tener dos medios separados para aplicar
     los frenos (el freno de servicio/pedal y el freno de estacionamiento/emergencia),
     cada uno de los cuales debe ser eficaz para detener el vehículo.
-- id: 184
+- id: 181
   category: vehicle_information
-  question: En Alaska, para los residentes que viven al sur de los 60 grados de latitud
-    norte (como Juneau o Ketchikan), ¿en qué período de tiempo son legales los neumáticos
-    con clavos (studded tires)?
+  question: ¿En Alaska, para los residentes que viven al sur de los 60 grados de latitud
+    norte (como Juneau o Ketchikan), durante qué periodo de tiempo son legales los
+    neumáticos con clavos?
   choices:
     A: Del 15 de septiembre al 1 de mayo
     B: Del 1 de octubre al 15 de abril
     C: Del 15 de septiembre al 15 de abril
     D: Del 1 de noviembre al 31 de marzo
   answer: C
-  explanation: De acuerdo con el Código Administrativo de Alaska y el Manual del Conductor,
+  explanation: Según el Código Administrativo de Alaska y el Manual del Conductor,
     los neumáticos con clavos son legales desde el 15 de septiembre hasta el 15 de
-    abril para las áreas al sur de los 60 grados de latitud norte.
-- id: 185
+    abril para las zonas al sur de los 60 grados de latitud norte.
+- id: 182
   category: vehicle_information
-  question: Según la ley de Alaska, ¿cuál es la transmisión de luz mínima permitida
-    para el polarizado (tintado) no original en las ventanillas laterales delanteras?
+  question: Según la ley de Alaska, ¿cuál es el porcentaje mínimo de transmitancia
+    de luz permitido para el polarizado no original (aftermarket tinting) en las ventanas
+    laterales delanteras?
   choices:
     A: 35%
     B: 50%
     C: 70%
     D: 20%
   answer: C
-  explanation: La ley de Alaska (13 AAC 04.223) especifica que las ventanillas situadas
-    a la derecha e izquierda inmediata del conductor deben permitir el paso de al
+  explanation: La ley de Alaska (13 AAC 04.223) especifica que las ventanas situadas
+    a la derecha e izquierda inmediatas del conductor deben permitir el paso de al
     menos el 70% de la luz.
-- id: 186
+- id: 183
   category: vehicle_information
-  question: En Alaska, el polarizado (tintado) no original en las ventanillas laterales
-    traseras y la ventanilla trasera de un vehículo de pasajeros debe permitir el
-    paso de al menos qué porcentaje de luz?
+  question: En Alaska, ¿qué porcentaje mínimo de luz debe permitir pasar el polarizado
+    no original en las ventanas laterales traseras y en la ventana trasera de un vehículo
+    de pasajeros?
   choices:
     A: 40%
     B: 30%
     C: 20%
     D: 15%
   answer: A
-  explanation: Para los vehículos de pasajeros en Alaska, las ventanillas laterales
-    traseras y la ventanilla trasera (medallón) deben tener una transmisión de luz
-    de al menos el 40%.
-- id: 187
+  explanation: Para los vehículos de pasajeros en Alaska, las ventanas laterales traseras
+    y la ventana trasera deben tener una transmitancia de luz de al menos el 40%.
+- id: 184
   category: vehicle_information
-  question: En Alaska, los frenos de servicio de su vehículo deben ser capaces de
+  question: En Alaska, ¿los frenos de servicio de su vehículo deben ser capaces de
     detener el vehículo en cuántos pies cuando viaja a 20 mph en una superficie seca
     y nivelada?
   choices:
@@ -2430,10 +2390,10 @@ questions:
     C: 40 pies
     D: 50 pies
   answer: B
-  explanation: Las normas de seguridad de Alaska exigen que el freno de pedal (freno
-    de servicio) debe ser capaz de detener un vehículo de pasajeros que viaja a 20
-    mph en una distancia de 25 pies.
-- id: 188
+  explanation: Las normas de seguridad de Alaska exigen que el freno de pie (freno
+    de servicio) sea capaz de detener un vehículo de pasajeros que viaja a 20 mph
+    en una distancia de 25 pies.
+- id: 185
   category: vehicle_information
   question: 'En Alaska, las luces traseras de su vehículo deben ser de color rojo
     y visibles desde una distancia de:'
@@ -2445,11 +2405,11 @@ questions:
   answer: B
   explanation: Las regulaciones de equipamiento de Alaska exigen que las luces traseras
     sean visibles desde una distancia de 1,000 pies hacia atrás.
-- id: 189
+- id: 186
   category: vehicle_information
-  question: 'Cuando un vehículo está equipado con una ''luz blanca'' para iluminar
-    la placa de matrícula trasera, la placa debe ser legible desde una distancia de
-    al menos:'
+  question: 'Cuando un vehículo está equipado con una "luz blanca" para iluminar la
+    placa de matrícula trasera, la placa debe ser legible desde una distancia de al
+    menos:'
   choices:
     A: 25 pies
     B: 50 pies
@@ -2458,10 +2418,10 @@ questions:
   answer: B
   explanation: La ley de Alaska exige que la placa de matrícula trasera esté iluminada
     de modo que sea claramente legible desde una distancia de 50 pies hacia atrás.
-- id: 190
+- id: 187
   category: vehicle_information
-  question: 'En Alaska, las luces de giro (direccionales) deben ser visibles bajo
-    la luz solar normal desde una distancia no menor a:'
+  question: 'En Alaska, las luces de giro deben ser visibles bajo la luz solar normal
+    desde una distancia no menor a:'
   choices:
     A: 50 pies
     B: 100 pies
@@ -2470,21 +2430,20 @@ questions:
   answer: B
   explanation: Las señales de giro en un vehículo de pasajeros estándar en Alaska
     deben ser visibles desde al menos 100 pies de distancia bajo la luz solar normal.
-- id: 191
+- id: 188
   category: vehicle_information
   question: ¿Cuál de las siguientes afirmaciones es verdadera con respecto a las zonas
-    de "Uso de Faros" (Headlight Use) en ciertas autopistas de Alaska?
+    de "Uso de faros delanteros" (Headlight Use) en ciertas autopistas de Alaska?
   choices:
-    A: Solo se requieren faros si está lloviendo.
-    B: Los faros deben encenderse incluso a plena luz del día.
-    C: Solo se requieren luces de estacionamiento durante el día.
+    A: Los faros solo son obligatorios si está lloviendo.
+    B: Los faros deben estar encendidos incluso a plena luz del día.
+    C: Solo se requieren las luces de estacionamiento durante el día.
     D: Las luces altas deben usarse en todo momento.
   answer: B
-  explanation: Alaska ha designado zonas de "Uso de Faros" (Headlight Use) en muchas
-    autopistas donde los conductores están legalmente obligados a tener sus faros
-    encendidos en todo momento, incluso durante las horas del día, para aumentar la
-    visibilidad.
-- id: 192
+  explanation: Alaska ha designado zonas de "Uso de faros delanteros" en muchas autopistas
+    donde los conductores están legalmente obligados a tener sus faros encendidos
+    en todo momento, incluso durante las horas del día, para aumentar la visibilidad.
+- id: 189
   category: signs_and_signals
   question: En Alaska, ¿cuál es el límite de velocidad máximo al conducir en un callejón?
   choices:
@@ -2495,10 +2454,10 @@ questions:
   answer: B
   explanation: Según el Manual del Conductor de Alaska, el límite de velocidad en
     un callejón es de 15 mph, a menos que se indique lo contrario.
-- id: 193
+- id: 190
   category: signs_and_signals
   question: 'Al conducir en un distrito residencial en Alaska donde no hay un límite
-    de velocidad señalizado, no debe exceder los:'
+    de velocidad señalizado, no debe exceder las:'
   choices:
     A: 20 mph
     B: 25 mph
@@ -2507,10 +2466,10 @@ questions:
   answer: B
   explanation: En Alaska, el límite de velocidad predeterminado para los distritos
     residenciales es de 25 mph.
-- id: 194
+- id: 191
   category: signs_and_signals
-  question: En Alaska, ¿cuál es el límite de velocidad en una zona escolar cuando
-    las luces amarillas están parpadeando o hay niños presentes?
+  question: ¿Cuál es el límite de velocidad en una zona escolar en Alaska cuando las
+    luces amarillas están parpadeando o hay niños presentes?
   choices:
     A: 15 mph
     B: 20 mph
@@ -2519,65 +2478,65 @@ questions:
   answer: B
   explanation: El límite de velocidad en una zona escolar designada en Alaska es de
     20 mph cuando las luces están parpadeando o hay niños presentes.
-- id: 195
+- id: 192
   category: signs_and_signals
   question: Si está utilizando señales manuales, ¿cómo indica un giro a la derecha
     en Alaska?
   choices:
-    A: Extienda su brazo izquierdo recto hacia afuera de la ventana.
-    B: Extienda su brazo izquierdo hacia afuera y apunte hacia arriba.
-    C: Extienda su brazo izquierdo hacia afuera y apunte hacia abajo.
-    D: Extienda su brazo derecho recto hacia afuera de la ventana.
+    A: Extender el brazo izquierdo recto por la ventana.
+    B: Extender el brazo izquierdo hacia afuera y apuntar hacia arriba.
+    C: Extender el brazo izquierdo hacia afuera y apuntar hacia abajo.
+    D: Extender el brazo derecho recto por la ventana.
   answer: B
   explanation: Para indicar un giro a la derecha mediante señales manuales, debe extender
     el brazo izquierdo por la ventana y doblarlo hacia arriba a la altura del codo.
-- id: 196
+- id: 193
   category: signs_and_signals
-  question: ¿Qué significa un semáforo en rojo intermitente en Alaska?
+  question: ¿Qué significa una luz de tráfico roja intermitente en Alaska?
   choices:
-    A: Reduzca la velocidad y proceda con precaución.
+    A: Reducir la velocidad y proceder con precaución.
     B: La luz está a punto de cambiar a verde.
-    C: Deténgase por completo y proceda solo cuando sea seguro hacerlo.
-    D: Ceda el paso a todo el tráfico, pero no se detenga a menos que sea necesario.
+    C: Detenerse por completo y proceder solo cuando sea seguro hacerlo.
+    D: Ceder el paso a todo el tráfico, pero no detenerse a menos que sea necesario.
   answer: C
   explanation: 'Una luz roja intermitente tiene el mismo significado que una señal
-    de alto: debe detenerse por completo y avanzar cuando sea seguro.'
-- id: 197
+    de alto (pare): debe detenerse por completo y proceder cuando sea seguro.'
+- id: 194
   category: signs_and_signals
   question: 'Una señal en forma de banderín (un triángulo isósceles que apunta a la
-    derecha) que se encuentra en el lado izquierdo de la carretera indica:'
+    derecha) situada en el lado izquierdo de la carretera indica:'
   choices:
     A: Una zona escolar más adelante.
-    B: Una señal de ceda el paso más adelante.
+    B: Una señal de ceder el paso más adelante.
     C: Una zona de no rebasar.
-    D: Una calle de un solo sentido.
+    D: Una calle de sentido único.
   answer: C
-  explanation: Se coloca una señal en forma de banderín en el lado izquierdo de la
-    carretera para marcar el inicio de una zona de no rebasar.
-- id: 198
+  explanation: Una señal en forma de banderín se coloca en el lado izquierdo de la
+    carretera para marcar el inicio de una zona de no rebasar (no adelantar).
+- id: 195
   category: signs_and_signals
-  question: ¿Cuál es el significado de un semáforo en amarillo intermitente?
+  question: ¿Cuál es el significado de una señal de tráfico amarilla intermitente?
   choices:
-    A: Deténgase y espere a que la luz cambie a verde.
-    B: Aumente la velocidad para despejar la intersección.
-    C: Proceda con precaución.
-    D: Trátelo como una parada de cuatro vías.
+    A: Detenerse y esperar a que la luz cambie a verde.
+    B: Acelerar para despejar la intersección.
+    C: Proceder con precaución.
+    D: Tratarla como una parada de cuatro vías.
   answer: C
   explanation: Una luz amarilla intermitente significa que debe reducir la velocidad
     y cruzar la intersección con precaución.
-- id: 199
+- id: 196
   category: signs_and_signals
   question: 'Cuando vea una línea amarilla continua junto a una línea amarilla discontinua
     en el pavimento, y la línea continua esté de su lado, usted debe:'
   choices:
-    A: Rebasar solo si el camino está despejado.
+    A: Rebasar solo si la carretera está despejada.
     B: No rebasar a otros vehículos.
     C: Rebasar solo durante las horas del día.
     D: Esperar una señal de alto más adelante.
   answer: B
   explanation: Una línea amarilla continua en su lado de la línea central significa
-    que está prohibido rebasar para el tráfico en su dirección.
-- id: 200
+    que está prohibido rebasar (adelantar) para el tráfico en su dirección.
+- id: 197
   category: signs_and_signals
   question: 'En Alaska, una señal manual donde el brazo se extiende hacia afuera y
     hacia abajo indica que el conductor está:'
@@ -2589,7 +2548,7 @@ questions:
   answer: C
   explanation: Extender el brazo izquierdo hacia abajo indica la intención del conductor
     de reducir la velocidad o detenerse.
-- id: 201
+- id: 198
   category: signs_and_signals
   question: ¿De qué color son las señales de construcción y mantenimiento en Alaska?
   choices:
@@ -2600,43 +2559,43 @@ questions:
   answer: B
   explanation: Las señales de construcción, mantenimiento u operaciones de emergencia
     tienen forma de diamante o rectangulares y son de color naranja.
-- id: 202
+- id: 199
   category: signs_and_signals
-  question: 'Una luz amarilla continua del semáforo significa:'
+  question: 'Una luz de tráfico amarilla fija significa:'
   choices:
     A: La luz está a punto de cambiar a verde.
     B: Debe acelerar para ganarle a la luz roja.
     C: La luz está a punto de cambiar a roja; debe detenerse si es seguro hacerlo.
     D: Los peatones tienen el derecho de paso.
   answer: C
-  explanation: Una luz amarilla continua advierte que la señal está cambiando a rojo.
+  explanation: Una luz amarilla fija advierte que la señal está cambiando a rojo.
     Debe detenerse si puede hacerlo de manera segura; de lo contrario, proceda con
     precaución.
-- id: 203
+- id: 200
   category: signs_and_signals
   question: ¿Qué indican las líneas blancas discontinuas en el pavimento?
   choices:
     A: El tráfico se mueve en direcciones opuestas.
-    B: El tráfico se mueve en la misma dirección y se permite el cambio de carril.
+    B: El tráfico se mueve en la misma dirección y se permiten los cambios de carril.
     C: El borde de la calzada.
     D: Un cruce peatonal.
   answer: B
   explanation: Las líneas blancas discontinuas separan los carriles de tráfico que
     se mueven en la misma dirección; se permite cruzar la línea para cambiar de carril
     cuando sea seguro.
-- id: 204
+- id: 201
   category: signs_and_signals
   question: ¿Qué indica una señal circular amarilla con una 'X' negra y las letras
     'RR'?
   choices:
-    A: Un cruce de caminos más adelante.
-    B: Un cruce de ferrocarril más adelante.
+    A: Un cruce de caminos adelante.
+    B: Un cruce de ferrocarril adelante.
     C: Zona de no rebasar.
-    D: Una zona de descanso más adelante.
+    D: Un área de descanso adelante.
   answer: B
   explanation: Una señal circular amarilla con una 'X' negra y 'RR' es una señal de
-    advertencia anticipada circular para un cruce de ferrocarril.
-- id: 205
+    advertencia avanzada circular para un cruce de ferrocarril.
+- id: 202
   category: signs_and_signals
   question: En Alaska, ¿cuál es la señal manual correcta para indicar un giro a la
     derecha?
@@ -2647,33 +2606,33 @@ questions:
     D: Brazo derecho extendido recto hacia afuera de la ventana
   answer: B
   explanation: Según el Manual del Conductor de Alaska, un giro a la derecha se señala
-    extendiendo el brazo izquierdo por la ventana y apuntando hacia arriba.
-- id: 206
+    extendiendo el brazo izquierdo por la ventana y apuntándolo hacia arriba.
+- id: 203
   category: signs_and_signals
-  question: ¿Cuál es el significado de una señal en forma de banderín ubicada en el
-    lado izquierdo de la carretera?
+  question: ¿Cuál es el significado de una señal en forma de banderín (pennant) ubicada
+    en el lado izquierdo de la carretera?
   choices:
-    A: Zona escolar más adelante
+    A: Zona escolar adelante
     B: Zona de no rebasar (No Passing Zone)
     C: Ceda el paso al tráfico que viene en sentido contrario
-    D: Cruce de ferrocarril más adelante
+    D: Cruce de ferrocarril adelante
   answer: B
   explanation: Una señal en forma de banderín (un triángulo isósceles que apunta a
     la derecha) se coloca en el lado izquierdo de la carretera para marcar el inicio
     de una zona de no rebasar (No Passing Zone).
-- id: 207
+- id: 204
   category: signs_and_signals
   question: En Alaska, ¿qué significan las líneas amarillas sólidas dobles en el centro
     de la carretera?
   choices:
     A: Se permite rebasar desde cualquier lado
     B: Se permite rebasar solo por la derecha
-    C: Está prohibido rebasar en ambas direcciones
+    C: Se prohíbe rebasar en ambas direcciones
     D: La carretera es de un solo sentido
   answer: C
   explanation: Las líneas amarillas sólidas dobles indican que no se permite rebasar
     a los vehículos que viajan en cualquier dirección.
-- id: 208
+- id: 205
   category: signs_and_signals
   question: 'Cuando vea una señal de tráfico amarilla intermitente en una intersección,
     debe:'
@@ -2681,58 +2640,58 @@ questions:
     A: Detenerse y esperar la luz verde
     B: Acelerar para despejar la intersección rápidamente
     C: Reducir la velocidad y proceder con precaución
-    D: Tratarla como una parada de cuatro vías
+    D: Tratarla como una parada de cuatro vías (four-way stop)
   answer: C
   explanation: Una luz amarilla intermitente es una advertencia para reducir la velocidad
     y estar especialmente alerta mientras avanza por la intersección.
-- id: 209
+- id: 206
   category: signs_and_signals
   question: ¿Qué significa una línea blanca sólida pintada en el borde derecho de
     la carretera?
   choices:
     A: Un carril solo para vehículos de emergencia
-    B: El borde de la calzada (línea de niebla o 'fog line')
+    B: El borde de la calzada (línea de niebla)
     C: Un sendero para peatones
     D: Una zona donde se permite rebasar
   answer: B
   explanation: Las líneas blancas sólidas a lo largo del costado de la carretera marcan
     el borde del pavimento, a menudo llamadas líneas de niebla (fog lines), y ayudan
-    a los conductores a mantenerse en la carretera por la noche o con mal tiempo.
-- id: 210
+    a los conductores a permanecer en la carretera por la noche o con mal tiempo.
+- id: 207
   category: signs_and_signals
-  question: 'Una señal de cinco lados (pentágono) indica que está entrando en:'
+  question: 'Una señal de cinco lados (pentágono) indica que está entrando en una:'
   choices:
-    A: Una zona de construcción
-    B: Una zona de hospital
-    C: Una zona escolar o cruce escolar
-    D: Un área de parque público
+    A: Zona de construcción
+    B: Zona hospitalaria
+    C: Zona escolar o cruce escolar
+    D: Área de parque público
   answer: C
   explanation: La forma de pentágono de cinco lados está reservada exclusivamente
     para zonas escolares y cruces escolares.
-- id: 211
+- id: 208
   category: signs_and_signals
-  question: En Alaska, ¿cuál es la señal manual para "Reducir la velocidad o Detenerse"?
+  question: En Alaska, ¿cuál es la señal manual para 'Reducir la velocidad o Detenerse'?
   choices:
-    A: Brazo izquierdo extendido hacia afuera
+    A: Brazo izquierdo extendido recto hacia afuera
     B: Brazo izquierdo extendido hacia arriba
     C: Brazo izquierdo extendido hacia abajo
     D: Brazo derecho extendido hacia abajo
   answer: C
-  explanation: Para indicar que está reduciendo la velocidad o deteniéndose, extienda
-    el brazo izquierdo por la ventana y apunte hacia abajo, hacia el suelo.
-- id: 212
+  explanation: Para señalar que está reduciendo la velocidad o deteniéndose, extienda
+    el brazo izquierdo por la ventana y apúntelo hacia abajo, hacia el suelo.
+- id: 209
   category: signs_and_signals
   question: ¿Qué representa una señal naranja en forma de diamante en Alaska?
   choices:
     A: Advertencia general de peligros en la carretera
     B: Advertencia de construcción o mantenimiento
     C: Límite de velocidad reglamentario
-    D: Estación de servicio más adelante
+    D: Estación de servicio adelante
   answer: B
   explanation: El naranja es el color estándar para las señales de construcción y
     mantenimiento. La forma de diamante indica una advertencia de condiciones específicas
     en la zona de trabajo.
-- id: 213
+- id: 210
   category: signs_and_signals
   question: 'Si se encuentra en una intersección con una luz amarilla fija, debe:'
   choices:
@@ -2744,19 +2703,19 @@ questions:
   explanation: Una luz amarilla fija significa que la señal está a punto de cambiar
     a rojo. Debe detenerse si es seguro hacerlo; si ya se encuentra en la intersección,
     continúe con precaución.
-- id: 214
+- id: 211
   category: signs_and_signals
   question: 'Las líneas blancas discontinuas en una calzada de varios carriles indican:'
   choices:
     A: El tráfico se mueve en direcciones opuestas
-    B: El tráfico se mueve en la misma dirección y se permiten los cambios de carril
+    B: El tráfico se mueve en la misma dirección y se permite cambiar de carril
     C: El borde de la calzada
     D: Un carril exclusivo para bicicletas
   answer: B
   explanation: Las líneas blancas discontinuas separan los carriles de tráfico que
     se mueven en la misma dirección. Los conductores pueden cruzar estas líneas para
     cambiar de carril cuando sea seguro.
-- id: 215
+- id: 212
   category: signs_and_signals
   question: ¿Qué significa una señal de "X" roja sobre un carril de tráfico?
   choices:
@@ -2771,56 +2730,56 @@ questions:
   category: signs_and_signals
   question: ¿Qué significa esta señal?
   choices:
-    A: Reducir la velocidad y proceder con precaución
-    B: Detenerse por completo
-    C: Ceder el paso al tráfico que viene en sentido contrario
-    D: Detenerse solo si hay otros vehículos presentes
+    A: Reduzca la velocidad y proceda con precaución
+    B: Deténgase por completo
+    C: Ceda el paso al tráfico que viene en sentido contrario
+    D: Deténgase solo si hay otros vehículos presentes
   answer: B
   explanation: Una señal de PARE (STOP) roja y octagonal significa que debe detenerse
     por completo en la línea de parada, el paso de peatones o antes de entrar en la
     intersección. Verifique el tráfico y los peatones antes de continuar.
-  id: 216
+  id: 213
 - image: yield.png
   category: signs_and_signals
-  question: ¿Qué le exige hacer esta señal?
+  question: ¿Qué le obliga a hacer esta señal?
   choices:
     A: Detenerse por completo
-    B: Acelerar para incorporarse al tráfico
+    B: Aumentar la velocidad para incorporarse al tráfico
     C: Reducir la velocidad y ceder el paso al tráfico y a los peatones
     D: Continuar sin detenerse
   answer: C
-  explanation: Una señal de CEDA EL PASO (YIELD) triangular roja y blanca significa
-    que debe reducir la velocidad y ceder el derecho de paso al tráfico y a los peatones.
-    Debe detenerse si es necesario para permitir que otros pasen de manera segura.
-  id: 217
+  explanation: Una señal triangular roja y blanca de CEDA EL PASO (YIELD) significa
+    que debe reducir la velocidad y ceder el paso al tráfico y a los peatones. Debe
+    detenerse si es necesario para permitir que otros pasen de manera segura.
+  id: 214
 - image: do_not_enter.png
   category: signs_and_signals
   question: ¿Qué significa esta señal?
   choices:
-    A: Carretera cerrada más adelante
+    A: Camino cerrado más adelante
     B: No se permite estacionar
-    C: No entrar en esta calzada
+    C: No entre en esta calzada
     D: Calle sin salida más adelante
   answer: C
-  explanation: Una señal de NO ENTRAR (DO NOT ENTER) roja y blanca significa que no
+  explanation: Una señal roja y blanca de NO ENTRAR (DO NOT ENTER) significa que no
     debe entrar en la carretera o rampa donde está colocada esta señal. Generalmente
     se ve en las rampas de salida de las autopistas o en calles de un solo sentido
     donde entrar lo pondría en el camino del tráfico que viene en sentido contrario.
-  id: 218
+  id: 215
 - image: wrong_way.png
   category: signs_and_signals
   question: Si ve esta señal, ¿qué debe hacer?
   choices:
     A: Hacer un giro en U
     B: Continuar conduciendo con cuidado
-    C: 'Detenerse y retroceder o dar la vuelta: va en sentido contrario'
-    D: Acelerar para salir del área rápidamente
+    C: Detenerse y retroceder o dar la vuelta; va en sentido contrario
+    D: Aumentar la velocidad para salir del área rápidamente
   answer: C
-  explanation: Una señal de SENTIDO CONTRARIO (WRONG WAY) roja y blanca significa
+  explanation: Una señal roja y blanca de SENTIDO CONTRARIO (WRONG WAY) significa
     que está viajando contra el tráfico en una carretera de un solo sentido o en una
     rampa de autopista. Deténgase inmediatamente y dé la vuelta o retroceda de manera
     segura.
-  id: 219
+  id: 216
 - image: one_way_left.png
   category: signs_and_signals
   question: ¿Qué indica esta señal?
@@ -2832,8 +2791,8 @@ questions:
   answer: B
   explanation: 'Una señal de UNA VÍA (ONE WAY) en blanco y negro con una flecha indica
     que el tráfico en esta calle se mueve en una sola dirección: la dirección que
-    apunta la flecha.'
-  id: 220
+    señala la flecha.'
+  id: 217
 - image: no_u_turn.png
   category: signs_and_signals
   question: ¿Qué prohíbe esta señal?
@@ -2841,14 +2800,14 @@ questions:
     A: Giros a la derecha
     B: Giros a la izquierda
     C: Giros en U
-    D: Rebasar a otros vehículos
+    D: Adelantar a otros vehículos
   answer: C
   explanation: Una señal reglamentaria blanca con una flecha de giro en U tachada
     significa que los giros en U están prohibidos en este lugar.
-  id: 221
+  id: 218
 - image: no_left_turn.png
   category: signs_and_signals
-  question: ¿Qué acción prohíbe esta señal?
+  question: ¿Qué acción está prohibida por esta señal?
   choices:
     A: Girar a la derecha
     B: Girar a la izquierda
@@ -2856,48 +2815,46 @@ questions:
     D: Seguir recto
   answer: B
   explanation: Una señal reglamentaria blanca que muestra una flecha de giro a la
-    izquierda tachada significa que no se permiten los giros a la izquierda en esta
-    intersección.
-  id: 222
+    izquierda tachada significa que no se permiten giros a la izquierda en esta intersección.
+  id: 219
 - image: no_right_turn.png
   category: signs_and_signals
   question: ¿Qué significa esta señal?
   choices:
-    A: No se permite girar en U
-    B: No se permite girar a la izquierda
-    C: No se permite girar a la derecha
-    D: No se permite rebasar
+    A: No se permite el giro en U
+    B: No se permite el giro a la izquierda
+    C: No se permite el giro a la derecha
+    D: No se permite adelantar
   answer: C
   explanation: Una señal reglamentaria blanca que muestra una flecha de giro a la
     derecha tachada significa que los giros a la derecha están prohibidos en este
     lugar.
-  id: 223
+  id: 220
 - image: no_passing.png
   category: signs_and_signals
   question: ¿Qué indica esta señal?
   choices:
-    A: La carretera se estrecha más adelante
+    A: El camino se estrecha adelante
     B: No rebase a otros vehículos en esta zona
-    C: Tráfico de doble sentido más adelante
+    C: Tráfico en ambos sentidos adelante
     D: Manténgase a la derecha
   answer: B
-  explanation: Una señal en forma de banderín de color blanco y negro que dice 'NO
-    PASSING ZONE' significa que no se le permite rebasar a otros vehículos en esta
-    área. Marca el inicio de una zona de no rebasar.
-  id: 224
+  explanation: Una señal amarilla en forma de banderín con letras negras que dice
+    "NO PASSING ZONE" significa que no se le permite rebasar a otros vehículos en
+    esta área. Marca el inicio de una zona de no rebasar.
+  id: 221
 - image: keep_right.png
   category: signs_and_signals
   question: ¿Qué instruye esta señal a los conductores?
   choices:
-    A: Incorporarse a la derecha
-    B: Girar a la derecha solamente
-    C: Mantenerse a la derecha de un divisor u obstrucción
-    D: El carril derecho termina más adelante
+    A: Incorpórese a la derecha
+    B: Solo vuelta a la derecha
+    C: Manténgase a la derecha de un divisor u obstrucción
+    D: El carril derecho termina adelante
   answer: C
-  explanation: Una señal reglamentaria blanca de 'KEEP RIGHT' (Manténgase a la derecha)
-    con una flecha significa que debe mantenerse en el lado derecho de una isla de
-    tráfico, mediana u obstrucción.
-  id: 225
+  explanation: Una señal reglamentaria blanca de "KEEP RIGHT" con una flecha significa
+    que debe mantenerse en el lado derecho de una isla de tráfico, mediana u obstrucción.
+  id: 222
 - image: speed_limit_25.png
   category: signs_and_signals
   question: ¿Qué tipo de señal es esta, según su forma y color?
@@ -2909,34 +2866,34 @@ questions:
   answer: C
   explanation: Las señales rectangulares blancas con letras negras son señales reglamentarias.
     Las señales de límite de velocidad le indican la velocidad máxima legal para el
-    área en condiciones ideales.
-  id: 226
+    área bajo condiciones ideales.
+  id: 223
 - image: deer_crossing.png
   category: signs_and_signals
   question: ¿De qué le advierte esta señal amarilla en forma de diamante?
   choices:
-    A: Un zoológico o parque de animales más adelante
-    B: Los ciervos cruzan la carretera con frecuencia en esta zona
-    C: Zona de caza más adelante
+    A: Un zoológico o parque de animales adelante
+    B: Los venados cruzan frecuentemente la carretera en esta zona
+    C: Zona de caza adelante
     D: Un refugio de vida silvestre cercano
   answer: B
-  explanation: Una señal amarilla en forma de diamante con la silueta de un ciervo
-    advierte que los ciervos cruzan la carretera con frecuencia en esta zona. Reduzca
+  explanation: Una señal amarilla en forma de diamante con la silueta de un venado
+    advierte que los venados cruzan frecuentemente la carretera en esta zona. Reduzca
     la velocidad y esté atento a los animales, especialmente al amanecer y al anochecer.
-  id: 227
+  id: 224
 - image: pedestrian_crossing.png
   category: signs_and_signals
   question: ¿De qué le advierte esta señal?
   choices:
-    A: Zona escolar más adelante
-    B: Cruce de peatones más adelante
-    C: Sendero de excursión cercano
-    D: Parada de autobús más adelante
+    A: Zona escolar adelante
+    B: Cruce de peatones adelante
+    C: Sendero para caminatas cercano
+    D: Parada de autobús adelante
   answer: B
   explanation: Una señal amarilla en forma de diamante con una figura de peatón advierte
-    de un cruce de peatones más adelante. Esté preparado para detenerse ante los peatones
-    que cruzan la carretera.
-  id: 228
+    de un cruce de peatones adelante. Esté preparado para detenerse ante los peatones
+    que cruzan la calle.
+  id: 225
 - image: school_zone.png
   category: signs_and_signals
   question: ¿Qué indica la forma de esta señal?
@@ -2944,25 +2901,25 @@ questions:
     A: Un cruce de ferrocarril
     B: Una zona de construcción
     C: Una zona escolar o cruce escolar
-    D: Una zona de hospital
+    D: Una zona hospitalaria
   answer: C
-  explanation: Una señal en forma de pentágono (5 lados) de color verde-amarillo fluorescente
+  explanation: Una señal de forma pentagonal (5 lados) de color amarillo-verde fluorescente
     indica una zona escolar o un cruce escolar. Reduzca la velocidad y esté atento
     a los niños.
-  id: 229
+  id: 226
 - image: railroad_crossing.png
   category: signs_and_signals
   question: ¿De qué le advierte esta señal circular amarilla?
   choices:
-    A: Una rotonda más adelante
-    B: Una zona de hospital
-    C: Un cruce de ferrocarril más adelante
+    A: Una rotonda adelante
+    B: Una zona hospitalaria
+    C: Un cruce de ferrocarril adelante
     D: Una zona de no rebasar
   answer: C
   explanation: Una señal circular amarilla con una X negra y dos letras R es la señal
-    de advertencia anticipada de un cruce de ferrocarril más adelante. Reduzca la
-    velocidad, mire y escuche si vienen trenes.
-  id: 230
+    de advertencia anticipada de un cruce de ferrocarril adelante. Reduzca la velocidad,
+    mire y escuche si vienen trenes.
+  id: 227
 - image: railroad_crossbuck.png
   category: signs_and_signals
   question: ¿Dónde vería normalmente esta señal?
@@ -2972,75 +2929,75 @@ questions:
     C: En la entrada de un hospital
     D: En un puente peatonal
   answer: B
-  explanation: La señal blanca en forma de X (aspa) de cruce de ferrocarril se coloca
-    en los cruces de tren. Significa que debe ceder el paso a los trenes. Si se aproxima
-    un tren, debe detenerse.
-  id: 231
+  explanation: La señal blanca en forma de X de cruce de ferrocarril (crossbuck) se
+    coloca en los cruces de ferrocarril. Significa que debe ceder el paso a los trenes.
+    Si se aproxima un tren, debe detenerse.
+  id: 228
 - image: curve_right.png
   category: signs_and_signals
-  question: ¿Qué indica esta señal amarilla en forma de rombo?
+  question: ¿Qué indica esta señal amarilla en forma de diamante?
   choices:
-    A: La carretera termina más adelante
-    B: Giro a la derecha obligatorio
-    C: Una curva a la derecha más adelante
-    D: Desvío más adelante
+    A: El camino termina adelante
+    B: Se requiere vuelta a la derecha
+    C: Una curva a la derecha adelante
+    D: Desvío adelante
   answer: C
-  explanation: Una señal amarilla en forma de rombo con una flecha curva advierte
-    de una curva en el camino más adelante. Reduzca la velocidad antes de entrar en
-    la curva.
-  id: 232
+  explanation: Una señal amarilla en forma de diamante con una flecha curva advierte
+    de una curva en el camino adelante. Reduzca la velocidad antes de entrar en la
+    curva.
+  id: 229
 - image: sharp_turn_right.png
   category: signs_and_signals
   question: ¿En qué se diferencia esta señal de una señal de curva?
   choices:
-    A: Indica un giro menos pronunciado
+    A: Indica un giro menos severo
     B: Advierte de un giro brusco que requiere una mayor reducción de velocidad
-    C: Significa que solo se puede girar a la derecha
+    C: Significa solo vuelta a la derecha
     D: Solo se utiliza en autopistas
   answer: B
   explanation: Una señal de giro brusco (con una flecha más angulada) indica un giro
-    más cerrado que una señal de curva. Es necesario reducir la velocidad de manera
-    más significativa antes de este giro.
-  id: 233
+    más cerrado que una señal de curva. Debe reducir su velocidad de manera más significativa
+    antes de este giro.
+  id: 230
 - image: reverse_curve.png
   category: signs_and_signals
-  question: ¿Sobre qué condición de la carretera advierte esta señal?
+  question: ¿Qué condición de la carretera advierte esta señal?
   choices:
-    A: Un camino sinuoso
+    A: Una carretera sinuosa
     B: Una sola curva más adelante
     C: Una serie de dos curvas en direcciones opuestas
     D: Una rotonda más adelante
   answer: C
-  explanation: Una señal de curva inversa advierte de dos curvas en direcciones opuestas
-    más adelante. Reduzca la velocidad y prepárese para que el camino gire primero
-    en un sentido y luego en el otro.
-  id: 234
+  explanation: Una señal de curva inversa advierte sobre dos curvas en direcciones
+    opuestas más adelante. Reduzca la velocidad y prepárese para que la carretera
+    gire primero en un sentido y luego en el otro.
+  id: 231
 - image: winding_road.png
   category: signs_and_signals
   question: ¿Qué le advierte que espere esta señal?
   choices:
-    A: Una sola curva pronunciada
+    A: Una sola curva cerrada
     B: Una superficie de carretera resbaladiza
     C: Una serie de curvas o giros más adelante
     D: Una colina más adelante
   answer: C
-  explanation: Una señal de camino sinuoso advierte de una serie de curvas o giros
-    más adelante. Reduzca su velocidad y esté alerta a los cambios en las condiciones
+  explanation: Una señal de carretera sinuosa advierte sobre una serie de curvas o
+    giros más adelante. Reduzca su velocidad y esté alerta a los cambios en las condiciones
     de la carretera.
-  id: 235
+  id: 232
 - image: merge.png
   category: signs_and_signals
   question: ¿Para qué le indica esta señal que se prepare?
   choices:
     A: El fin de un carril
-    B: Tráfico que se incorpora desde otra carretera
+    B: Tráfico incorporándose desde otra carretera
     C: El inicio de una autopista dividida
     D: Una carretera que se estrecha a un solo carril
   answer: B
-  explanation: Una señal amarilla de incorporación en forma de rombo advierte que
-    el tráfico de otra carretera se incorporará a su carril. Prepárese para ajustar
+  explanation: Una señal amarilla en forma de diamante de incorporación (merge) advierte
+    que el tráfico de otra carretera se incorporará a su carril. Prepárese para ajustar
     su velocidad y posición.
-  id: 236
+  id: 233
 - image: road_narrows.png
   category: signs_and_signals
   question: ¿Sobre qué advierte esta señal?
@@ -3048,103 +3005,103 @@ questions:
     A: Puente más adelante
     B: La carretera se estrecha más adelante
     C: El carril termina
-    D: Termina la autopista dividida
+    D: Fin de la autopista dividida
   answer: B
   explanation: Esta señal de advertencia indica que la carretera más adelante se vuelve
-    más estrecha. Prepárese para una reducción del ancho de la vía y ajuste su posición
+    más estrecha. Prepárese para una reducción en el ancho de la vía y ajuste su posición
     en el carril.
-  id: 237
+  id: 234
 - image: divided_highway.png
   category: signs_and_signals
   question: ¿Qué indica esta señal que hay más adelante?
   choices:
-    A: La carretera termina
-    B: Tráfico de doble sentido
+    A: Fin de la carretera
+    B: Tráfico en ambos sentidos
     C: Comienza una autopista dividida
     D: Salida de la autopista
   answer: C
   explanation: Esta señal advierte que la carretera más adelante se convierte en una
     autopista dividida con una mediana o barrera que separa el tráfico opuesto. Manténgase
     a la derecha.
-  id: 238
+  id: 235
 - image: divided_highway_ends.png
   category: signs_and_signals
-  question: ¿Sobre qué le advierte esta señal?
+  question: ¿De qué le advierte esta señal?
   choices:
     A: Comienza una autopista dividida
-    B: La autopista dividida termina y se reanuda el tráfico de doble sentido
+    B: La autopista dividida termina y se reanuda el tráfico en ambos sentidos
     C: Un área de incorporación más adelante
-    D: Construcción de carreteras más adelante
+    D: Construcción de carretera más adelante
   answer: B
   explanation: Esta señal advierte que la autopista dividida está terminando. El tráfico
-    opuesto ya no estará separado por una mediana. Prepárese para el tráfico de doble
-    sentido.
-  id: 239
+    opuesto ya no estará separado por una mediana. Prepárese para el tráfico en ambos
+    sentidos.
+  id: 236
 - image: two_way_traffic.png
   category: signs_and_signals
-  question: ¿Sobre qué le advierte esta señal?
+  question: ¿De qué le advierte esta señal?
   choices:
     A: Comienza una autopista dividida
     B: Una zona de adelantamiento más adelante
-    C: 'Tráfico de doble sentido más adelante: el tráfico circula en ambas direcciones'
+    C: 'Tráfico en ambos sentidos más adelante: el tráfico circula en ambas direcciones'
     D: Un cambio de carril más adelante
   answer: C
-  explanation: Esta señal advierte de tráfico de doble sentido más adelante. Es posible
-    que esté saliendo de una vía de sentido único o de una autopista dividida y se
-    encuentre con vehículos que circulan en sentido contrario.
-  id: 240
+  explanation: Esta señal advierte sobre tráfico en ambos sentidos más adelante. Es
+    posible que esté saliendo de una vía de un solo sentido o de una autopista dividida
+    y se encuentre con vehículos que viajan en la dirección opuesta.
+  id: 237
 - image: slippery_when_wet.png
   category: signs_and_signals
-  question: ¿Sobre qué condición de la carretera advierte esta señal?
+  question: ¿Qué condición de la carretera advierte esta señal?
   choices:
     A: Condiciones de carretera con hielo
     B: La carretera puede estar resbaladiza cuando está mojada
     C: Carretera sinuosa más adelante
     D: Pavimento irregular
   answer: B
-  explanation: Una señal de "resbaladizo cuando está mojado" advierte que la superficie
+  explanation: Una señal de 'resbaladizo cuando está mojado' advierte que la superficie
     de la carretera puede volverse muy resbaladiza durante la lluvia o en condiciones
     de humedad. Reduzca su velocidad y evite frenar o girar bruscamente.
-  id: 241
+  id: 238
 - image: hill.png
   category: signs_and_signals
   question: ¿De qué le advierte esta señal?
   choices:
-    A: Un bache o resalto en la carretera
+    A: Un bache en la carretera
     B: Una superficie de carretera irregular
     C: Una colina o pendiente pronunciada más adelante
-    D: Construcción de carreteras
+    D: Construcción de carretera
   answer: C
-  explanation: Esta señal advierte de una colina o pendiente pronunciada más adelante.
+  explanation: Esta señal advierte sobre una colina o pendiente pronunciada más adelante.
     Es posible que deba ajustar su velocidad y cambiar a una marcha más baja, especialmente
     en camiones o al remolcar.
-  id: 242
+  id: 239
 - image: signal_ahead.png
   category: signs_and_signals
   question: ¿Para qué le advierte esta señal que se prepare?
   choices:
-    A: Una señal de alto (STOP) más adelante
+    A: Una señal de pare (stop) más adelante
     B: Un semáforo más adelante
     C: Un cruce escolar
-    D: Un control policial
+    D: Un punto de control policial
   answer: B
-  explanation: Esta señal advierte de un semáforo más adelante. Esté preparado para
-    detenerse si la luz está en rojo o amarillo. Esta señal se coloca a menudo donde
+  explanation: Esta señal advierte sobre un semáforo más adelante. Prepárese para
+    detenerse si la luz está en rojo o amarillo. Esta señal a menudo se coloca donde
     el semáforo puede no ser visible desde la distancia.
-  id: 243
+  id: 240
 - image: stop_ahead.png
   category: signs_and_signals
-  question: ¿Qué le indica esta señal que espere más adelante?
+  question: ¿Qué le indica esta señal que debe esperar más adelante?
   choices:
     A: Una señal de ceda el paso
     B: Un semáforo
     C: Una señal de alto (STOP) donde debe detenerse
-    D: Un reductor de velocidad (tope)
+    D: Un reductor de velocidad (resalto)
   answer: C
-  explanation: Esta señal advierte que hay una señal de alto (STOP) más adelante.
-    Comience a reducir la velocidad y prepárese para detenerse por completo en la
-    señal de alto.
-  id: 244
+  explanation: Esta señal advierte que hay una señal de alto más adelante. Comience
+    a reducir la velocidad y prepárese para detenerse por completo en la señal de
+    alto.
+  id: 241
 - image: cross_road.png
   category: signs_and_signals
   question: ¿Sobre qué advierte esta señal?
@@ -3155,59 +3112,58 @@ questions:
     D: Un cruce de peatones
   answer: B
   explanation: Esta señal advierte que hay un cruce de caminos o una intersección
-    de 4 vías más adelante. Esté atento al tráfico que entra desde las carreteras
-    laterales.
-  id: 245
+    de 4 vías más adelante. Esté atento al tráfico que ingresa desde las calles laterales.
+  id: 242
 - image: side_road.png
   category: signs_and_signals
-  question: ¿De qué le advierte esta señal?
+  question: ¿Sobre qué le advierte esta señal?
   choices:
     A: Una intersección en T más adelante
-    B: Una carretera lateral que entra por la derecha
-    C: Una curva en la carretera
+    B: Un camino lateral que entra por la derecha
+    C: Una curva en el camino
     D: Un callejón sin salida
   answer: B
-  explanation: Esta señal advierte de una carretera lateral que entra por la derecha.
-    Esté atento a los vehículos que entran a la autopista desde la carretera lateral.
-  id: 246
+  explanation: Esta señal advierte sobre un camino lateral que entra por la derecha.
+    Esté atento a los vehículos que ingresan a la carretera desde el camino lateral.
+  id: 243
 - image: added_lane.png
   category: signs_and_signals
   question: ¿Qué significa esta señal?
   choices:
-    A: Los carriles se están incorporando (fusionando)
+    A: Los carriles se están incorporando
     B: Un carril está terminando
     C: Se está añadiendo un nuevo carril; no es necesario incorporarse
-    D: Se requiere giro a la derecha
+    D: Se requiere girar a la derecha
   answer: C
   explanation: Una señal de carril añadido significa que un nuevo carril se une a
-    la autopista sin requerir la incorporación de vehículos. El tráfico que entra
-    desde la rampa tiene su propio carril nuevo.
-  id: 247
+    la carretera sin necesidad de incorporarse. El tráfico que entra desde la rampa
+    tiene su propio carril nuevo.
+  id: 244
 - image: no_parking.png
   category: signs_and_signals
   question: ¿Qué prohíbe esta señal?
   choices:
     A: Detenerse en cualquier momento
     B: Estacionarse en esta área
-    C: Detenerse brevemente o dejar el motor encendido
-    D: Carga o descarga
+    C: Permanecer detenido o con el motor encendido
+    D: Cargar o descargar
   answer: B
-  explanation: Una señal roja y blanca de NO ESTACIONAR (NO PARKING) significa que
+  explanation: Una señal de NO ESTACIONAR (NO PARKING) roja y blanca significa que
     no puede estacionar su vehículo en esta área. Puede detenerse brevemente para
     subir o bajar pasajeros.
-  id: 248
+  id: 245
 - image: handicap_parking.png
   category: signs_and_signals
   question: ¿Quién tiene permitido estacionarse en un espacio marcado con esta señal?
   choices:
     A: Cualquier persona por menos de 15 minutos
     B: Solo personas de la tercera edad
-    C: Solo vehículos que muestren un cartel o placa de discapacidad vigente
+    C: Solo vehículos que exhiban un cartel o placa de discapacidad válida
     D: Cualquier conductor con un pasajero que tenga una discapacidad
   answer: C
   explanation: Una señal azul con el símbolo de la silla de ruedas marca el estacionamiento
-    reservado para personas con discapacidades. Solo los vehículos que muestren un
+    reservado para personas con discapacidades. Solo los vehículos que exhiban un
     cartel o placa de matrícula de estacionamiento para personas con discapacidad
-    vigente pueden estacionarse en estos espacios. Las infracciones conllevan multas
+    válida pueden estacionarse en estos espacios. Las infracciones conllevan multas
     elevadas.
-  id: 249
+  id: 246

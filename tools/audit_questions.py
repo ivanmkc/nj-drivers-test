@@ -17,8 +17,9 @@ import os
 import sys
 import yaml
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATES_DIR = os.path.join(BASE_DIR, "states")
+TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(TOOLS_DIR)
+STATES_DIR = os.path.join(ROOT_DIR, "data", "states")
 
 
 def load_questions(state_code: str) -> tuple[list[dict], dict]:

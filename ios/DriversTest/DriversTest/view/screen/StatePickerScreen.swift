@@ -28,7 +28,7 @@ struct StatePickerScreen: View {
                             .foregroundColor(AppTheme.red)
                             .multilineTextAlignment(.center)
                         Button("Retry") {
-                            Task { await vm.loadStates() }
+                            vm.loadStates()
                         }
                         .buttonStyle(.borderedProminent)
                     }

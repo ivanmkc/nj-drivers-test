@@ -293,7 +293,7 @@ def main():
         sys.exit(1)
 
     state_code = sys.argv[1].lower()
-    state_dir = os.path.join(os.path.dirname(__file__), "states", state_code)
+    state_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "states", state_code)
     yaml_path = os.path.join(state_dir, f"questions_en.yaml")
 
     if not os.path.exists(yaml_path):
@@ -307,7 +307,7 @@ def main():
     max_id = max(q["id"] for q in existing)
 
     # Check which sign images actually exist
-    signs_dir = os.path.join(os.path.dirname(__file__), "signs")
+    signs_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "signs")
     available = set(os.listdir(signs_dir)) if os.path.isdir(signs_dir) else set()
 
     # Filter to questions whose images exist and aren't already in the bank
