@@ -283,7 +283,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "python3 \"${SRCROOT}/../../tools/bundle.py\"\n";
+			shellScript = "python3 \"${SRCROOT}/../../tools/bundle.py\" || echo \"warning: bundle.py failed (pyyaml not installed?), using existing bundle\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

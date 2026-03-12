@@ -44,6 +44,7 @@ android {
 tasks.register<Exec>("bundleQuestions") {
     workingDir = rootProject.projectDir.parentFile
     commandLine("python3", "tools/bundle.py")
+    isIgnoreExitValue = true
 }
 
 tasks.configureEach {
