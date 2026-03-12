@@ -1,3 +1,4 @@
+import Compression
 import Foundation
 
 struct QuestionBundle: Codable {
@@ -34,30 +35,49 @@ class ApiClient {
     }
 
     private func decompress(_ data: Data) -> Data? {
-        // gzip starts with 1f 8b
-        guard data.count > 2, data[0] == 0x1f, data[1] == 0x8b else { return data }
-        var result = Data()
-        _ = data.withUnsafeBytes { rawBuffer in
-            guard let baseAddress = rawBuffer.baseAddress else { return }
-            var stream = z_stream()
-            stream.next_in = UnsafeMutablePointer(mutating: baseAddress.assumingMemoryBound(to: UInt8.self))
-            stream.avail_in = uInt(data.count)
-            guard inflateInit2_(&stream, 15 + 32, ZLIB_VERSION, Int32(MemoryLayout<z_stream>.size)) == Z_OK else { return }
-            defer { inflateEnd(&stream) }
-            var buffer = [UInt8](repeating: 0, count: 65536)
-            repeat {
-                stream.next_out = &buffer
-                stream.avail_out = uInt(buffer.count)
-                let status = inflate(&stream, Z_NO_FLUSH)
-                let outputCount = buffer.count - Int(stream.avail_out)
-                if outputCount > 0 {
-                    result.append(buffer, count: outputCount)
-                }
-                if status == Z_STREAM_END { break }
-                if status != Z_OK { break }
-            } while true
+        // gzip starts with 1f 8b; strip the 10-byte gzip header for raw DEFLATE
+        guard data.count > 10, data[0] == 0x1f, data[1] == 0x8b else { return data }
+        // Find start of DEFLATE stream: skip 10-byte header + optional extras
+        var offset = 10
+        let flags = data[3]
+        if flags & 0x04 != 0 { // FEXTRA
+            guard offset + 2 <= data.count else { return nil }
+            let xlen = Int(data[offset]) | (Int(data[offset + 1]) << 8)
+            offset += 2 + xlen
         }
-        return result.isEmpty ? nil : result
+        if flags & 0x08 != 0 { // FNAME
+            while offset < data.count && data[offset] != 0 { offset += 1 }
+            offset += 1
+        }
+        if flags & 0x10 != 0 { // FCOMMENT
+            while offset < data.count && data[offset] != 0 { offset += 1 }
+            offset += 1
+        }
+        if flags & 0x02 != 0 { offset += 2 } // FHCRC
+
+        let deflateData = data.subdata(in: offset..<(data.count - 8)) // strip 8-byte trailer
+        return deflateData.withUnsafeBytes { src -> Data? in
+            guard let srcPtr = src.baseAddress?.assumingMemoryBound(to: UInt8.self) else { return nil }
+            var result = Data()
+            let chunkSize = 65536
+            let dst = UnsafeMutablePointer<UInt8>.allocate(capacity: chunkSize)
+            defer { dst.deallocate() }
+            let stream = UnsafeMutablePointer<compression_stream>.allocate(capacity: 1)
+            defer { stream.deallocate() }
+            var status = compression_stream_init(stream, COMPRESSION_STREAM_DECODE, COMPRESSION_ZLIB)
+            guard status == COMPRESSION_STATUS_OK else { return nil }
+            defer { compression_stream_destroy(stream) }
+            stream.pointee.src_ptr = srcPtr
+            stream.pointee.src_size = deflateData.count
+            repeat {
+                stream.pointee.dst_ptr = dst
+                stream.pointee.dst_size = chunkSize
+                status = compression_stream_process(stream, 0)
+                let written = chunkSize - stream.pointee.dst_size
+                if written > 0 { result.append(dst, count: written) }
+            } while status == COMPRESSION_STATUS_OK
+            return status == COMPRESSION_STATUS_END ? result : nil
+        }
     }
 
     func fetchStates() -> [StateInfo] {
