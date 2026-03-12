@@ -1,6 +1,6 @@
 metadata:
   source: Alberta Driver Guide
-  total_questions: 238
+  total_questions: 237
   categories:
   - alcohol_drugs_health
   - defensive_driving
@@ -586,7 +586,7 @@ questions:
     exit the Graduated Driver Licensing program and move to a full Class 5 license?
   choices:
     A: Passing the Advanced Road Test
-    '0': Completing 24 months of probationary driving with no suspensions in the last
+    B: Completing 24 months of probationary driving with no suspensions in the last
       12 months
     C: Attending a mandatory 4-hour safety seminar
     D: Paying a $500 exit fee
@@ -1109,17 +1109,6 @@ questions:
     unless otherwise posted by the municipality.
 - id: 89
   category: safe_driving_rules
-  question: In Alberta, what are the standard hours for a playground zone speed limit
-    to be in effect?
-  choices:
-    A: 8:00 am to 8:00 pm daily
-    B: 8:30 am to one hour after sunset
-    C: Sunrise to sunset
-  answer: B
-  explanation: According to the Alberta Driver's Guide, playground zone speed limits
-    (30 km/h) are in effect from 8:30 am to one hour after sunset every day.
-- id: 90
-  category: safe_driving_rules
   question: When passing a stopped emergency vehicle with its sirens or lights flashing
     on a highway with a speed limit of 100 km/h, what is the maximum speed you are
     permitted to travel in the lane adjacent to the vehicle?
@@ -1132,7 +1121,7 @@ questions:
   explanation: In Alberta, you must slow down to 60 km/h (or the posted speed limit,
     whichever is lower) when passing emergency vehicles or tow trucks stopped on the
     side of the road with their lights flashing.
-- id: 91
+- id: 90
   category: safe_driving_rules
   question: What is the minimum distance you must park from a stop sign, yield sign,
     or marked crosswalk?
@@ -1144,7 +1133,7 @@ questions:
   answer: B
   explanation: You must not park within 5 meters of a stop sign, yield sign, or a
     marked crosswalk to ensure visibility for other drivers and pedestrians.
-- id: 92
+- id: 91
   category: safe_driving_rules
   question: Under what specific condition is a left turn on a red light permitted
     in Alberta?
@@ -1157,7 +1146,7 @@ questions:
   explanation: In Alberta, you may turn left on a red light only if you are turning
     from a one-way street onto another one-way street, after coming to a complete
     stop and yielding to pedestrians and other traffic.
-- id: 93
+- id: 92
   category: safe_driving_rules
   question: In Alberta, U-turns are strictly prohibited in which of the following
     locations?
@@ -1171,7 +1160,7 @@ questions:
   explanation: U-turns are prohibited on a curve or hill where visibility is less
     than 150 meters, at intersections controlled by traffic lights (unless a sign
     permits), and where a sign prohibits them.
-- id: 94
+- id: 93
   category: safe_driving_rules
   question: In Alberta, what is the penalty for a first-time distracted driving conviction?
   choices:
@@ -1182,7 +1171,7 @@ questions:
   answer: B
   explanation: Distracted driving in Alberta carries a $300 fine and 3 demerit points
     against the driver's license.
-- id: 95
+- id: 94
   category: safe_driving_rules
   question: When two vehicles approach an uncontrolled 'T' intersection at the same
     time, who has the right of way?
@@ -1194,7 +1183,7 @@ questions:
   answer: A
   explanation: At all uncontrolled intersections in Alberta, including 'T' intersections,
     the driver on the left must yield to the driver on the right.
-- id: 96
+- id: 95
   category: safe_driving_rules
   question: In Alberta, what is the rule regarding funeral processions at intersections?
   choices:
@@ -1207,7 +1196,7 @@ questions:
     procession. Once the lead vehicle has entered an intersection, the rest of the
     procession may follow regardless of traffic control devices, provided their headlights
     are on.
-- id: 97
+- id: 96
   category: defensive_driving
   question: When driving in urban areas of Alberta, how far ahead should you scan
     the road to identify potential hazards?
@@ -1219,7 +1208,7 @@ questions:
   answer: B
   explanation: In urban areas, drivers should scan 12 to 15 seconds ahead (about one
     to one-and-a-half blocks) to anticipate hazards.
-- id: 98
+- id: 97
   category: defensive_driving
   question: In Alberta, you must switch your high beam headlights to low beams when
     you are within what distance of an oncoming vehicle?
@@ -1231,7 +1220,7 @@ questions:
   answer: C
   explanation: According to the Alberta Traffic Safety Act, you must dim your high
     beams when an oncoming vehicle is within 300 metres.
-- id: 99
+- id: 98
   category: defensive_driving
   question: When following another vehicle at night in Alberta, at what distance must
     you switch your headlights from high beam to low beam?
@@ -1243,7 +1232,7 @@ questions:
   answer: B
   explanation: You must use low beam headlights when following another vehicle within
     150 metres to avoid blinding the driver in front of you through their mirrors.
-- id: 100
+- id: 99
   category: defensive_driving
   question: If your vehicle begins to hydroplane on a wet Alberta highway, what is
     the first thing you should do?
@@ -1256,7 +1245,7 @@ questions:
   explanation: If hydroplaning, you should decelerate by easing off the gas pedal.
     Do not brake, as this can cause a skid. Keep the steering wheel straight until
     you regain contact with the road.
-- id: 101
+- id: 100
   category: defensive_driving
   question: When driving on a rural Alberta highway, how far ahead should you scan
     the road for potential hazards?
@@ -1268,7 +1257,7 @@ questions:
   answer: C
   explanation: On highways or rural roads, you should scan 20 to 25 seconds ahead
     because higher speeds require more distance to react and stop.
-- id: 102
+- id: 101
   category: defensive_driving
   question: When driving in heavy fog in Alberta, which lighting configuration is
     the safest to use?
@@ -1280,7 +1269,7 @@ questions:
   answer: B
   explanation: Low beams should be used in fog. High beams reflect off the moisture
     in the fog, creating glare and making it harder to see.
-- id: 103
+- id: 102
   category: defensive_driving
   question: 'If you are driving a vehicle equipped with Anti-lock Brakes (ABS) and
     need to perform an emergency stop on a slippery road, you should:'
@@ -1292,7 +1281,7 @@ questions:
   answer: B
   explanation: With ABS, you should apply firm, continuous pressure. The system will
     automatically pump the brakes for you to prevent lock-up.
-- id: 104
+- id: 103
   category: defensive_driving
   question: In Alberta, what is the recommended following distance when driving under
     adverse conditions such as ice, snow, or heavy rain?
@@ -1304,7 +1293,7 @@ questions:
   answer: C
   explanation: In poor weather or road conditions, you should double the normal following
     distance to at least four seconds to account for increased stopping distances.
-- id: 105
+- id: 104
   category: defensive_driving
   question: To avoid being blinded by the glare of oncoming headlights at night, where
     should an Alberta driver look?
@@ -1317,7 +1306,7 @@ questions:
   explanation: If blinded by glare, look slightly to the right toward the white line
     or edge of the road to maintain your position without looking directly into the
     light.
-- id: 106
+- id: 105
   category: defensive_driving
   question: Why is the road surface most slippery during the first few minutes of
     rain in Alberta?
@@ -1329,7 +1318,7 @@ questions:
   answer: B
   explanation: When it first starts to rain, the water mixes with oil, dust, and grease
     on the road that hasn't washed away yet, creating a very slippery film.
-- id: 107
+- id: 106
   category: defensive_driving
   question: When driving in Alberta, what is 'threshold braking'?
   choices:
@@ -1340,7 +1329,7 @@ questions:
   answer: B
   explanation: Threshold braking is used in vehicles without ABS; it involves applying
     the brakes as firmly as possible without locking the wheels.
-- id: 108
+- id: 107
   category: defensive_driving
   question: In Alberta, when are collisions with wildlife (such as deer or moose)
     most likely to occur?
@@ -1352,7 +1341,7 @@ questions:
   answer: C
   explanation: Wildlife is most active and hardest to see during dusk and dawn. Drivers
     should be especially cautious during these times, especially in rural areas.
-- id: 109
+- id: 108
   category: defensive_driving
   question: If you encounter 'black ice' while driving on an Alberta highway, what
     is the best way to maintain control?
@@ -1365,7 +1354,7 @@ questions:
   explanation: Black ice is nearly invisible. If you hit it, stay calm, avoid sudden
     braking or steering, and ease off the accelerator to let the vehicle slow down
     naturally.
-- id: 110
+- id: 109
   category: defensive_driving
   question: In ideal driving conditions, what is the minimum recommended following
     distance an Alberta driver should maintain behind the vehicle in front?
@@ -1378,7 +1367,7 @@ questions:
   explanation: The Alberta Driver's Guide recommends a minimum following distance
     of two seconds under ideal conditions. This distance should be increased in poor
     weather or road conditions.
-- id: 111
+- id: 110
   category: defensive_driving
   question: When following a large commercial vehicle or a motorcycle in Alberta,
     why should you increase your following distance to at least 4 seconds?
@@ -1391,7 +1380,7 @@ questions:
   explanation: Increasing following distance behind large vehicles ensures you stay
     out of their blind spots (No-Zones) and gives you a better view of the road ahead.
     For motorcycles, it provides a safety cushion as they can stop very quickly.
-- id: 112
+- id: 111
   category: defensive_driving
   question: To maintain a proper 'visual lead time' while driving in an urban area
     in Alberta, how far ahead should you be scanning the road?
@@ -1403,7 +1392,7 @@ questions:
   answer: B
   explanation: Alberta's defensive driving guidelines suggest scanning 12 to 15 seconds
     ahead in urban areas (about one to one-and-a-half blocks) to anticipate hazards.
-- id: 113
+- id: 112
   category: defensive_driving
   question: When driving on rural Alberta highways, what is the recommended visual
     lead time for scanning the road ahead?
@@ -1415,7 +1404,7 @@ questions:
   answer: C
   explanation: In rural areas, where speeds are higher, drivers should scan 20 to
     25 seconds ahead to identify potential hazards like wildlife or intersections.
-- id: 114
+- id: 113
   category: defensive_driving
   question: 'According to the Alberta Traffic Safety Act, you must switch your high
     beam headlights to low beams when an oncoming vehicle is within:'
@@ -1427,7 +1416,7 @@ questions:
   answer: B
   explanation: Alberta law requires drivers to use low beam headlights when within
     150 metres of an oncoming vehicle to avoid blinding the other driver.
-- id: 115
+- id: 114
   category: defensive_driving
   question: When driving in heavy fog, snow, or rain in Alberta, which headlight setting
     provides the best visibility?
@@ -1440,7 +1429,7 @@ questions:
   explanation: Low beams should be used in adverse weather. High beams reflect off
     the moisture in the air (fog/snow), creating a 'white wall' effect that reduces
     visibility.
-- id: 116
+- id: 115
   category: defensive_driving
   question: Why should Alberta drivers be particularly cautious when driving over
     bridge decks or overpasses when temperatures are near freezing?
@@ -1452,7 +1441,7 @@ questions:
   answer: B
   explanation: Bridge decks and overpasses freeze more quickly than other road surfaces
     because cold air circulates both above and below the structure.
-- id: 117
+- id: 116
   category: defensive_driving
   question: In Alberta, when passing a stopped emergency vehicle with its sirens or
     lights flashing, you must slow down to what speed if the posted speed limit is
@@ -1466,7 +1455,7 @@ questions:
   explanation: Alberta law requires drivers to slow to 60 km/h (or the posted speed
     limit if it is lower than 60 km/h) when passing emergency vehicles or tow trucks
     stopped on the side of the road with lights flashing.
-- id: 118
+- id: 117
   category: defensive_driving
   question: To avoid the effects of fatigue and 'highway hypnosis' during long trips
     on Alberta's primary highways, how often should a driver plan to take a break?
@@ -1478,7 +1467,7 @@ questions:
   answer: B
   explanation: The Alberta Driver's Guide suggests taking a rest break every two hours
     or every 200 kilometres to maintain alertness and prevent fatigue.
-- id: 119
+- id: 118
   category: defensive_driving
   question: If the rear of your vehicle begins to skid to the right on an icy Alberta
     road, how should you steer?
@@ -1490,7 +1479,7 @@ questions:
   answer: B
   explanation: In a skid, you should steer in the direction you want the front of
     the vehicle to go. If the rear skids right, steering right helps realign the vehicle.
-- id: 120
+- id: 119
   category: defensive_driving
   question: When changing lanes in Alberta, what is the primary purpose of performing
     a 'shoulder check'?
@@ -1502,7 +1491,7 @@ questions:
   answer: B
   explanation: A shoulder check is essential because mirrors do not show everything.
     It allows you to see vehicles that are in the 'blind spot' beside your car.
-- id: 121
+- id: 120
   category: defensive_driving
   question: 'In Alberta, ''black ice'' is most likely to form on the road surface
     when:'
@@ -1514,7 +1503,7 @@ questions:
   answer: C
   explanation: Black ice is a thin, transparent layer of ice that forms when moisture
     freezes on the road surface, often occurring when temperatures hover near 0°C.
-- id: 122
+- id: 121
   category: alcohol_drugs_health
   question: Under Alberta's Immediate Roadside Sanctions (IRS) program, what is the
     license suspension period for a fully licensed driver's first 'IRS Warn' offense
@@ -1527,7 +1516,7 @@ questions:
   answer: B
   explanation: For a first 'IRS Warn' offense (BAC 0.05 to 0.079), a fully licensed
     driver faces an immediate 3-day license suspension.
-- id: 123
+- id: 122
   category: alcohol_drugs_health
   question: In Alberta, if a driver receives an 'IRS Fail' (BAC 0.08 or higher), how
     long will their vehicle be seized for a first offense?
@@ -1539,7 +1528,7 @@ questions:
   answer: D
   explanation: An 'IRS Fail' results in an immediate 30-day vehicle seizure for a
     first offense, along with other penalties.
-- id: 124
+- id: 123
   category: alcohol_drugs_health
   question: What is the administrative fine amount (excluding the victim fine surcharge)
     for a first-time 'IRS Fail' offense in Alberta?
@@ -1551,7 +1540,7 @@ questions:
   answer: B
   explanation: A first 'IRS Fail' offense carries a $1,000 administrative fine, plus
     a victim fine surcharge.
-- id: 125
+- id: 124
   category: alcohol_drugs_health
   question: If a fully licensed driver in Alberta receives a second 'IRS Warn' within
     10 years, how long is the resulting license suspension?
@@ -1563,7 +1552,7 @@ questions:
   answer: B
   explanation: A second 'IRS Warn' offense within a 10-year period results in a 15-day
     license suspension.
-- id: 126
+- id: 125
   category: alcohol_drugs_health
   question: Which mandatory education course must a first-time 'IRS Fail' offender
     complete in Alberta?
@@ -1575,7 +1564,7 @@ questions:
   answer: C
   explanation: First-time 'IRS Fail' offenders are required to complete the 'Planning
     Ahead' education program.
-- id: 127
+- id: 126
   category: alcohol_drugs_health
   question: Under the 'IRS Commercial' program in Alberta, what is the maximum blood
     alcohol concentration (BAC) allowed for a driver operating a commercial vehicle?
@@ -1587,7 +1576,7 @@ questions:
   answer: A
   explanation: The 'IRS Commercial' program mandates a zero-tolerance policy (0.00
     BAC) for drivers operating commercial vehicles.
-- id: 128
+- id: 127
   category: alcohol_drugs_health
   question: In Alberta, what are the consequences for refusing to provide a breath
     or blood sample when lawfully requested by police?
@@ -1599,7 +1588,7 @@ questions:
   answer: B
   explanation: Refusing to provide a breath or blood sample results in the same immediate
     roadside sanctions as an 'IRS Fail' (0.08 or over).
-- id: 129
+- id: 128
   category: alcohol_drugs_health
   question: For a third 'IRS Warn' offense within 10 years, how long is the vehicle
     seized in Alberta?
@@ -1611,7 +1600,7 @@ questions:
   answer: B
   explanation: A third 'IRS Warn' offense within 10 years results in a 7-day vehicle
     seizure and a 30-day license suspension.
-- id: 130
+- id: 129
   category: alcohol_drugs_health
   question: A first-time 'IRS Fail' offender in Alberta must participate in the Ignition
     Interlock Program (IIP) for how long after their fixed suspension period?
@@ -1623,19 +1612,19 @@ questions:
   answer: C
   explanation: A first-time 'IRS Fail' offender is required to participate in the
     Ignition Interlock Program for 12 months.
-- id: 131
+- id: 130
   category: alcohol_drugs_health
   question: In Alberta, a driver will receive an 'IRS Fail' if their blood THC concentration
     is at or above what level?
   choices:
     A: 1 nanogram (ng)
-    '2': 2 nanograms (ng)
+    B: 2 nanograms (ng)
     C: 5 nanograms (ng)
     D: 10 nanograms (ng)
   answer: C
   explanation: An 'IRS Fail' is issued if a driver has a blood THC concentration of
     5 nanograms or more.
-- id: 132
+- id: 131
   category: alcohol_drugs_health
   question: What is the fixed term of license suspension for a first 'IRS Fail' offense
     before the driver is eligible to participate in the Ignition Interlock Program?
@@ -1647,7 +1636,7 @@ questions:
   answer: C
   explanation: A first 'IRS Fail' includes a fixed 90-day license suspension, followed
     by a mandatory 12-month Ignition Interlock period.
-- id: 133
+- id: 132
   category: alcohol_drugs_health
   question: 'In Alberta, physicians and optometrists have a legal obligation to report
     to Alberta Transportation if a patient has a medical condition that:'
@@ -1659,7 +1648,7 @@ questions:
   answer: B
   explanation: Medical professionals are legally required to report patients who have
     conditions that may impair their ability to safely operate a motor vehicle.
-- id: 134
+- id: 133
   category: alcohol_drugs_health
   question: What is the vehicle seizure period for a first-time 'IRS Warn' offense
     (BAC 0.05 to 0.079)?
@@ -1670,7 +1659,7 @@ questions:
     D: 30 days
   answer: B
   explanation: A first 'IRS Warn' offense results in an immediate 3-day vehicle seizure.
-- id: 135
+- id: 134
   category: alcohol_drugs_health
   question: Which education program is required for drivers who receive a second or
     subsequent 'IRS Fail' within 10 years in Alberta?
@@ -1682,7 +1671,7 @@ questions:
   answer: B
   explanation: Repeat 'IRS Fail' offenders (second or subsequent offenses within 10
     years) must complete the 'Impact' education program.
-- id: 136
+- id: 135
   category: alcohol_drugs_health
   question: Under Alberta's Immediate Roadside Sanctions (IRS) Fail program, what
     is the administrative penalty for a first-time offense of driving with a BAC over
@@ -1697,7 +1686,7 @@ questions:
   explanation: In Alberta, the IRS Fail program for a first offense includes a 15-month
     suspension (the final 12 months may be served with an Ignition Interlock), a $1,000
     fine plus victim fine surcharge, and a 30-day vehicle seizure.
-- id: 137
+- id: 136
   category: alcohol_drugs_health
   question: In Alberta, what are the consequences for a first-time 'IRS Warn' (BAC
     between 0.05 and 0.08)?
@@ -1709,7 +1698,7 @@ questions:
   answer: A
   explanation: A first-time IRS Warn (BAC 0.05 to 0.08) results in an immediate 3-day
     license suspension, a $300 fine plus surcharge, and a 3-day vehicle seizure.
-- id: 138
+- id: 137
   category: alcohol_drugs_health
   question: Under the IRS Zero Tolerance program for GDL drivers in Alberta, what
     happens if any amount of alcohol is detected in the driver's blood?
@@ -1722,7 +1711,7 @@ questions:
   explanation: Alberta has a zero-tolerance policy for GDL drivers. Any detectable
     alcohol results in an immediate 30-day suspension, a 7-day vehicle seizure, and
     a $200 fine plus surcharge.
-- id: 139
+- id: 138
   category: alcohol_drugs_health
   question: In Alberta, if a driver refuses to provide a breath or blood sample when
     legally demanded by a peace officer, what are the consequences?
@@ -1735,7 +1724,7 @@ questions:
   explanation: Refusing to provide a breath or blood sample in Alberta results in
     the same penalties as an IRS Fail, including a 15-month suspension, $1,000 fine,
     and 30-day vehicle seizure.
-- id: 140
+- id: 139
   category: alcohol_drugs_health
   question: If an Alberta driver is subject to the Ignition Interlock Program following
     an IRS Fail, who is responsible for the costs of installation and monthly fees?
@@ -1747,7 +1736,7 @@ questions:
   answer: C
   explanation: The driver is responsible for all costs associated with the Ignition
     Interlock Program, including installation, rental fees, and removal.
-- id: 141
+- id: 140
   category: alcohol_drugs_health
   question: What is the 'synergistic effect' when referring to driving impairment?
   choices:
@@ -1760,7 +1749,7 @@ questions:
   explanation: Combining alcohol with drugs (even prescription or over-the-counter)
     can produce a synergistic effect, where the impairment is much more severe than
     if either substance were used alone.
-- id: 142
+- id: 141
   category: alcohol_drugs_health
   question: Which of the following is considered a sign of driver fatigue?
   choices:
@@ -1771,7 +1760,7 @@ questions:
   answer: D
   explanation: Fatigue can cause 'microsleeps' and reduced coordination. Signs include
     missing exits, drifting lanes, and physical symptoms like heavy eyelids.
-- id: 143
+- id: 142
   category: alcohol_drugs_health
   question: Before driving while taking prescription medication, what should an Alberta
     driver do?
@@ -1783,7 +1772,7 @@ questions:
   answer: B
   explanation: Drivers must check with medical professionals to ensure medication
     (even over-the-counter) does not cause drowsiness or impair driving ability.
-- id: 144
+- id: 143
   category: alcohol_drugs_health
   question: Under Alberta's IRS Zero Tolerance program, what is the limit for THC
     (cannabis) for GDL drivers?
@@ -1796,7 +1785,7 @@ questions:
   explanation: Similar to alcohol, Alberta has a zero-tolerance policy for cannabis
     for GDL drivers; any detectable amount of THC will trigger an IRS Zero Tolerance
     penalty.
-- id: 145
+- id: 144
   category: alcohol_drugs_health
   question: When a vehicle is seized under Alberta's IRS program, who is responsible
     for the towing and storage costs?
@@ -1808,7 +1797,7 @@ questions:
   answer: C
   explanation: The driver or owner of the vehicle is responsible for all costs related
     to the seizure, including towing and storage fees, before the vehicle can be released.
-- id: 146
+- id: 145
   category: alcohol_drugs_health
   question: Which educational course is mandatory for an Alberta driver who receives
     a first-time 'IRS Fail' penalty?
@@ -1821,7 +1810,7 @@ questions:
   explanation: Drivers who receive an IRS Fail must complete the 'Planning Ahead'
     (first offense) or 'Impact' (repeat offense) program as part of their license
     reinstatement requirements.
-- id: 147
+- id: 146
   category: alcohol_drugs_health
   question: Which of the following factors affects how quickly your body absorbs and
     processes alcohol?
@@ -1833,7 +1822,7 @@ questions:
   answer: D
   explanation: BAC is influenced by weight, gender, the amount of food in the stomach,
     and the rate of consumption.
-- id: 148
+- id: 147
   category: alcohol_drugs_health
   question: What is the only way to effectively reduce the level of alcohol in your
     blood?
@@ -1845,7 +1834,7 @@ questions:
   answer: C
   explanation: Only time allows the liver to process alcohol and lower the BAC. Coffee,
     showers, and exercise do not speed up the sobering process.
-- id: 149
+- id: 148
   category: penalties_and_points
   question: In Alberta, how many demerit points are assigned to your driving record
     for failing to stop for a school bus that has its alternating flashing red lights
@@ -1858,7 +1847,7 @@ questions:
   answer: D
   explanation: Failing to stop for a school bus with its red lights flashing is a
     serious offense in Alberta and results in 6 demerit points.
-- id: 150
+- id: 149
   category: penalties_and_points
   question: Under the Alberta demerit point system, how many points are assessed for
     'Following too closely'?
@@ -1870,7 +1859,7 @@ questions:
   answer: C
   explanation: Following another vehicle too closely (tailgating) results in 4 demerit
     points being added to an Alberta driver's record.
-- id: 151
+- id: 150
   category: penalties_and_points
   question: If an Alberta driver is convicted of failing to yield the right-of-way
     to a pedestrian in a crosswalk, how many demerit points will they receive?
@@ -1882,7 +1871,7 @@ questions:
   answer: B
   explanation: Failing to yield to a pedestrian in a crosswalk results in 3 demerit
     points in Alberta.
-- id: 152
+- id: 151
   category: penalties_and_points
   question: If a driver's license is suspended for a second time due to demerit points
     within a one-year period, how long will the suspension last?
@@ -1894,7 +1883,7 @@ questions:
   answer: C
   explanation: In Alberta, a second demerit point suspension within one year results
     in a 3-month license suspension.
-- id: 153
+- id: 152
   category: penalties_and_points
   question: How many demerit points are recorded against your license for speeding
     more than 30 km/h but not more than 50 km/h over the limit?
@@ -1906,7 +1895,7 @@ questions:
   answer: B
   explanation: Speeding between 31 km/h and 50 km/h over the posted limit results
     in 4 demerit points.
-- id: 154
+- id: 153
   category: penalties_and_points
   question: In Alberta, exceeding the speed limit by more than 50 km/h results in
     how many demerit points?
@@ -1918,7 +1907,7 @@ questions:
   answer: C
   explanation: Exceeding the speed limit by more than 50 km/h is a major violation
     and results in 6 demerit points.
-- id: 155
+- id: 154
   category: penalties_and_points
   question: What happens to the fine for speeding in an Alberta construction zone
     when workers are present?
@@ -1930,7 +1919,7 @@ questions:
   answer: C
   explanation: In Alberta, speeding fines are doubled when workers are present in
     a construction zone.
-- id: 156
+- id: 155
   category: penalties_and_points
   question: Failing to stop at a stop sign or a red light in Alberta results in how
     many demerit points?
@@ -1942,7 +1931,7 @@ questions:
   answer: B
   explanation: Failing to stop at a stop sign or a red light results in 3 demerit
     points.
-- id: 157
+- id: 156
   category: penalties_and_points
   question: Under the 'IRS Fail' program, a first-time offender with a BAC over 0.08
     will receive an immediate license suspension of how many days?
@@ -1955,7 +1944,7 @@ questions:
   explanation: An 'IRS Fail' (BAC 0.08+ or refusal) results in an immediate 90-day
     license suspension, followed by a 12-month period of driving only with an ignition
     interlock device.
-- id: 158
+- id: 157
   category: penalties_and_points
   question: How many demerit points are assigned for 'Improper passing' in Alberta?
   choices:
@@ -1966,7 +1955,7 @@ questions:
   answer: B
   explanation: Improper passing on a highway results in 3 demerit points being added
     to the driver's record.
-- id: 159
+- id: 158
   category: penalties_and_points
   question: In Alberta, the offense of 'Stunting' on a highway carries a penalty of
     how many demerit points?
@@ -1978,7 +1967,7 @@ questions:
   answer: B
   explanation: Stunting (performing actions that distract or endanger others, like
     burning rubber or performing stunts) results in 3 demerit points.
-- id: 160
+- id: 159
   category: penalties_and_points
   question: Which of the following violations results in 6 demerit points in Alberta?
   choices:
@@ -1989,7 +1978,7 @@ questions:
   answer: B
   explanation: Careless driving is a major offense in Alberta and results in 6 demerit
     points.
-- id: 161
+- id: 160
   category: penalties_and_points
   question: Under the Alberta Immediate Roadside Sanction (IRS) 'FAIL' program, what
     is the vehicle seizure period for a first-time offender with a BAC over 0.08?
@@ -2001,7 +1990,7 @@ questions:
   answer: D
   explanation: A first-time IRS 'FAIL' (BAC of 0.08 or higher or refusal to provide
     a sample) results in an immediate 30-day vehicle seizure.
-- id: 162
+- id: 161
   category: penalties_and_points
   question: In Alberta, if you are caught speeding more than 50 km/h over the posted
     limit, how many demerit points will be applied to your record?
@@ -2013,7 +2002,7 @@ questions:
   answer: C
   explanation: Speeding more than 50 km/h over the limit is a serious offense in Alberta
     and carries 6 demerit points, along with a mandatory court appearance.
-- id: 163
+- id: 162
   category: penalties_and_points
   question: How many demerit points are assigned for failing to yield the right-of-way
     to a pedestrian in a crosswalk in Alberta?
@@ -2025,19 +2014,19 @@ questions:
   answer: C
   explanation: Failing to yield to a pedestrian in a crosswalk is a 4-demerit point
     offense in Alberta.
-- id: 164
+- id: 163
   category: penalties_and_points
   question: Under the Alberta Immediate Roadside Sanction (IRS) 'WARN' program (BAC
     0.05 to 0.08), what is the license suspension period for a first-time offense?
   choices:
     A: 24 hours
-    '0': 3 days
+    B: 3 days
     C: 7 days
     D: 30 days
   answer: B
   explanation: A first-time IRS 'WARN' (BAC between 0.05 and 0.08) results in an immediate
     3-day driver's license suspension.
-- id: 165
+- id: 164
   category: penalties_and_points
   question: In Alberta, how many demerit points are given for 'stunting' (performing
     actions like wheelies, burnouts, or driving in a way that distracts other users)?
@@ -2049,7 +2038,7 @@ questions:
   answer: B
   explanation: Stunting on a highway in Alberta carries a penalty of 3 demerit points
     and a significant fine.
-- id: 166
+- id: 165
   category: penalties_and_points
   question: What is the minimum fine for a first offense of driving an uninsured motor
     vehicle on an Alberta highway?
@@ -2061,7 +2050,7 @@ questions:
   answer: C
   explanation: The minimum fine for driving without insurance in Alberta is $2,875
     for a first offense. Failure to pay can result in jail time.
-- id: 167
+- id: 166
   category: penalties_and_points
   question: How many demerit points are applied for 'Following too closely' (tailgating)
     in Alberta?
@@ -2073,7 +2062,7 @@ questions:
   answer: C
   explanation: Following too closely is considered a serious safety violation and
     results in 4 demerit points in Alberta.
-- id: 168
+- id: 167
   category: penalties_and_points
   question: If you are convicted of failing to stop for a peace officer in Alberta,
     how many demerit points are added to your record?
@@ -2085,7 +2074,7 @@ questions:
   answer: D
   explanation: Failing to stop for a peace officer is one of the highest demerit offenses
     in Alberta, carrying 7 demerit points.
-- id: 169
+- id: 168
   category: sharing_the_road
   question: In Alberta, when approaching a school bus from either direction on an
     undivided highway that has its alternating amber lights flashing, what must a
@@ -2099,7 +2088,7 @@ questions:
   explanation: Flashing amber lights on a school bus mean it is preparing to stop.
     Drivers should use caution and be prepared to stop as the alternating red lights
     will soon begin to flash.
-- id: 170
+- id: 169
   category: sharing_the_road
   question: According to the Alberta Driver's Guide, what is the recommended minimum
     distance a motorist should maintain when passing a cyclist on a road with a speed
@@ -2112,7 +2101,7 @@ questions:
   answer: B
   explanation: Alberta guidelines suggest a minimum of 1 meter of space when passing
     a cyclist in zones of 60 km/h or less, and 1.5 meters in zones over 60 km/h.
-- id: 171
+- id: 170
   category: sharing_the_road
   question: At an intersection in Alberta where there are no marked crosswalks or
     stop lines, where does a pedestrian have the right-of-way?
@@ -2125,7 +2114,7 @@ questions:
   answer: B
   explanation: In Alberta, every intersection is considered to have an 'unmarked crosswalk'
     unless a sign indicates otherwise. Drivers must yield to pedestrians at all intersections.
-- id: 172
+- id: 171
   category: sharing_the_road
   question: When following a large commercial vehicle, why should you increase your
     following distance more than you would for a passenger car?
@@ -2139,7 +2128,7 @@ questions:
   explanation: Large vehicles have significant blind spots. If you follow too closely,
     you cannot see the road ahead, and the truck driver cannot see you in their side
     mirrors (the 'No-Zone').
-- id: 173
+- id: 172
   category: sharing_the_road
   question: An emergency vehicle with its siren and lights operating is approaching
     you from behind on a two-way road. What should you do?
@@ -2152,7 +2141,7 @@ questions:
   explanation: When an emergency vehicle with sirens/lights approaches, you must move
     to the right-hand curb or edge of the roadway and come to a complete stop until
     it has passed.
-- id: 174
+- id: 173
   category: sharing_the_road
   question: You are driving on a divided highway and see a school bus stopped on the
     opposite side of the median with its red lights flashing. What are you required
@@ -2166,7 +2155,7 @@ questions:
   explanation: On a divided highway (where a physical median separates traffic), drivers
     on the opposite side of the bus are not required to stop, though they should still
     proceed with caution.
-- id: 175
+- id: 174
   category: sharing_the_road
   question: When turning right, what is the most important action to take regarding
     cyclists?
@@ -2179,7 +2168,7 @@ questions:
   explanation: Drivers must check their right blind spot for cyclists before turning
     right, as a cyclist may be proceeding straight through the intersection on the
     driver's right side.
-- id: 176
+- id: 175
   category: sharing_the_road
   question: Why should you leave extra space when following a motorcycle?
   choices:
@@ -2191,7 +2180,7 @@ questions:
   explanation: Motorcycles are light and have high-performance braking systems, allowing
     them to stop much more quickly than a car. Following too closely increases the
     risk of a rear-end collision.
-- id: 177
+- id: 176
   category: sharing_the_road
   question: When a large truck is turning right at an intersection, what should you
     be aware of?
@@ -2204,7 +2193,7 @@ questions:
   explanation: Large vehicles have a long wheelbase and need to swing wide to clear
     the curb. Drivers should never try to pass a truck on the right when it is approaching
     an intersection.
-- id: 178
+- id: 177
   category: sharing_the_road
   question: If you see a pedestrian with a white cane raised at an intersection, what
     does this indicate?
@@ -2216,7 +2205,7 @@ questions:
   answer: B
   explanation: A white cane indicates the pedestrian is visually impaired. Drivers
     must give them extra consideration and yield the right-of-way.
-- id: 179
+- id: 178
   category: sharing_the_road
   question: Which of the following vehicles are included in Alberta's 'Slow Down,
     Move Over' laws regarding stopped vehicles with flashing lights?
@@ -2229,7 +2218,7 @@ questions:
   explanation: Alberta's law applies to all 'regulated' roadside vehicles with flashing
     lights, including tow trucks, snowplows, and service vehicles, not just emergency
     responders.
-- id: 180
+- id: 179
   category: sharing_the_road
   question: A cyclist in front of you extends their left arm out and downward. What
     does this signal mean?
@@ -2241,7 +2230,7 @@ questions:
   answer: C
   explanation: The hand signal for slowing or stopping is the left arm extended out
     and bent downward at the elbow.
-- id: 181
+- id: 180
   category: sharing_the_road
   question: In Alberta, what is the penalty for failing to stop for a school bus with
     its alternating flashing red lights and stop arm extended?
@@ -2254,7 +2243,7 @@ questions:
   explanation: In Alberta, failing to stop for a school bus with flashing red lights
     carries a significant fine of $567 and 6 demerit points, reflecting the high safety
     risk to children.
-- id: 182
+- id: 181
   category: sharing_the_road
   question: In Alberta, if you are driving on a two-lane undivided highway and a school
     bus is stopped with flashing red lights in the oncoming lane, what must you do?
@@ -2266,7 +2255,7 @@ questions:
   answer: B
   explanation: On an undivided highway, traffic in both directions must stop for a
     school bus with flashing red lights. You must stop at least 20 metres away.
-- id: 183
+- id: 182
   category: sharing_the_road
   question: When a school bus is displaying alternating flashing amber lights, what
     does this indicate to Alberta drivers?
@@ -2279,7 +2268,7 @@ questions:
   explanation: Flashing amber lights are a warning that the bus is preparing to stop.
     Drivers should use extreme caution and be ready to stop when the lights change
     to red.
-- id: 184
+- id: 183
   category: sharing_the_road
   question: According to the Alberta Driver's Guide, what is the minimum distance
     you must maintain when following an emergency vehicle that has its lights and
@@ -2292,7 +2281,7 @@ questions:
   answer: C
   explanation: It is illegal to follow within 150 metres of any emergency vehicle
     (fire truck, ambulance, police car) that has its siren or flashing lights operating.
-- id: 185
+- id: 184
   category: sharing_the_road
   question: 'When turning right, a motorist in Alberta should check their ''blind
     spot'' for cyclists because:'
@@ -2305,7 +2294,7 @@ questions:
   answer: B
   explanation: Cyclists often ride near the curb. Before turning right, you must check
     your shoulder to ensure a cyclist isn't beside you intending to go straight.
-- id: 186
+- id: 185
   category: sharing_the_road
   question: Under Alberta law, who has the right-of-way at an intersection with no
     crosswalk markings when a pedestrian is attempting to cross?
@@ -2317,7 +2306,7 @@ questions:
   answer: B
   explanation: In Alberta, every intersection is considered a crosswalk, whether it
     is marked or unmarked. Drivers must yield to pedestrians at all intersections.
-- id: 187
+- id: 186
   category: sharing_the_road
   question: When sharing the road with large commercial vehicles, you should be aware
     that they have 'No-Zones.' What are these?
@@ -2330,7 +2319,7 @@ questions:
   answer: B
   explanation: No-Zones are large blind spots. If you cannot see the truck driver's
     face in their side-view mirrors, they cannot see you.
-- id: 188
+- id: 187
   category: sharing_the_road
   question: 'In Alberta, if you are caught speeding in a construction zone when workers
     are present, the fine is:'
@@ -2342,7 +2331,7 @@ questions:
   answer: C
   explanation: To protect road workers, Alberta law dictates that speeding fines are
     doubled when workers are present in a construction zone.
-- id: 189
+- id: 188
   category: sharing_the_road
   question: What is the correct procedure for a motorist when a funeral procession
     is crossing an intersection?
@@ -2354,7 +2343,7 @@ questions:
   answer: B
   explanation: In Alberta, it is a matter of law and respect to yield to funeral processions.
     You must not drive through or interfere with a funeral procession.
-- id: 190
+- id: 189
   category: sharing_the_road
   question: 'When a large truck is turning right at an intersection, it may need to:'
   choices:
@@ -2366,7 +2355,7 @@ questions:
   explanation: Large vehicles have a wide turning radius and 'off-tracking' (where
     the rear wheels follow a shorter path than the front wheels), requiring them to
     swing wide to clear the curb.
-- id: 191
+- id: 190
   category: sharing_the_road
   question: 'When a pedestrian is using a white cane in Alberta, it indicates they
     are visually impaired. Drivers should:'
@@ -2378,7 +2367,7 @@ questions:
   answer: B
   explanation: A white cane is a signal of visual impairment. Drivers must exercise
     extreme caution and yield the right-of-way to these pedestrians.
-- id: 192
+- id: 191
   category: sharing_the_road
   question: When passing a cyclist in Alberta, what is the recommended practice for
     safety?
@@ -2390,7 +2379,7 @@ questions:
   answer: A
   explanation: The Alberta Driver's Guide recommends giving cyclists plenty of room.
     Changing lanes is the safest way to pass a cyclist.
-- id: 193
+- id: 192
   category: vehicle_information
   question: According to the Alberta Vehicle Equipment Regulation, what is the minimum
     required tread depth for tires on a passenger vehicle?
@@ -2402,7 +2391,7 @@ questions:
   answer: B
   explanation: In Alberta, tires are considered unsafe if the tread depth is less
     than 1.6 millimetres (approximately 2/32 of an inch).
-- id: 194
+- id: 193
   category: vehicle_information
   question: In Alberta, when must you ensure your vehicle's headlights are turned
     on?
@@ -2415,7 +2404,7 @@ questions:
   explanation: Alberta law requires headlights to be on from one hour after sunset
     until one hour before sunrise, and at any time when visibility is reduced to less
     than 150 metres.
-- id: 195
+- id: 194
   category: vehicle_information
   question: Which of the following is true regarding window tinting on a vehicle registered
     in Alberta?
@@ -2429,7 +2418,7 @@ questions:
   explanation: Alberta's Vehicle Equipment Regulation prohibits aftermarket window
     tint film on the windshield and the front side windows (driver and front passenger
     sides).
-- id: 196
+- id: 195
   category: vehicle_information
   question: 'Every motor vehicle in Alberta must be equipped with a horn that can
     be heard under normal conditions from a distance of at least:'
@@ -2442,7 +2431,7 @@ questions:
   explanation: The Alberta Vehicle Equipment Regulation states that a motor vehicle
     must have a horn that emits sound audible under normal conditions from a distance
     of not less than 60 metres.
-- id: 197
+- id: 196
   category: vehicle_information
   question: In Alberta, what are the requirements for a vehicle's brake system?
   choices:
@@ -2454,7 +2443,7 @@ questions:
   answer: C
   explanation: 'Alberta law requires motor vehicles to have two independent braking
     systems: the service brake (foot brake) and the parking brake (emergency brake).'
-- id: 198
+- id: 197
   category: vehicle_information
   question: 'A vehicle''s tail lamps in Alberta must be clearly visible from a distance
     of at least:'
@@ -2466,7 +2455,7 @@ questions:
   answer: C
   explanation: Tail lamps must be red and must be visible from a distance of at least
     150 metres to the rear.
-- id: 199
+- id: 198
   category: vehicle_information
   question: In Alberta, if a vehicle's load or a trailer obstructs the driver's view
     through the interior rearview mirror, what equipment is required?
@@ -2479,7 +2468,7 @@ questions:
   explanation: If the view to the rear is obstructed, the vehicle must be equipped
     with mirrors on both the left and right sides to provide the driver with a clear
     view of the highway to the rear.
-- id: 200
+- id: 199
   category: vehicle_information
   question: What is the Alberta regulation regarding mufflers and exhaust systems?
   choices:
@@ -2491,7 +2480,7 @@ questions:
   answer: C
   explanation: Alberta law requires an effective muffler to prevent excessive or unusual
     noise. Widening the exhaust or using 'cut-outs' is illegal.
-- id: 201
+- id: 200
   category: vehicle_information
   question: In Alberta, a vehicle's license plate must be illuminated by a tail lamp
     or a separate white light so that it is visible from what distance?
@@ -2503,7 +2492,7 @@ questions:
   answer: A
   explanation: The rear license plate must be illuminated with a white light so that
     it is clearly legible from a distance of 15 metres to the rear.
-- id: 202
+- id: 201
   category: vehicle_information
   question: Under Alberta's Vehicle Equipment Regulation, what is the maximum height
     allowed for the mounting of headlamps on a service vehicle?
@@ -2515,7 +2504,7 @@ questions:
   answer: B
   explanation: Headlamps on a motor vehicle must be mounted no higher than 1370 millimetres
     from the ground.
-- id: 203
+- id: 202
   category: vehicle_information
   question: 'In Alberta, mudguards (mud flaps) are required on the rear of a vehicle
     or trailer if:'
@@ -2529,7 +2518,7 @@ questions:
   explanation: Trucks, trailers, and other vehicles must have mudguards or fenders
     that cover the full width of the tire and extend down to at least the center of
     the rear axle if the body doesn't provide this protection.
-- id: 204
+- id: 203
   category: vehicle_information
   question: What is the requirement for turn signal lights on a vehicle in Alberta?
   choices:
@@ -2540,7 +2529,7 @@ questions:
   answer: B
   explanation: Turn signal lamps must be visible from a distance of not less than
     100 metres in normal sunlight.
-- id: 205
+- id: 204
   category: vehicle_information
   question: According to the Alberta Driver's Guide, when must a vehicle's headlights
     be turned on?
@@ -2553,7 +2542,7 @@ questions:
   explanation: In Alberta, headlights must be used from one hour after sunset until
     one hour before sunrise, and at any time when visibility is reduced to less than
     150 meters.
-- id: 206
+- id: 205
   category: vehicle_information
   question: What is the minimum legal tire tread depth for a passenger vehicle in
     Alberta?
@@ -2565,7 +2554,7 @@ questions:
   answer: B
   explanation: Under the Alberta Vehicle Equipment Regulation, tires are considered
     unsafe if the tread depth is less than 1.6 millimeters (approx. 2/32 of an inch).
-- id: 207
+- id: 206
   category: vehicle_information
   question: Regarding window tinting, what is the law in Alberta for the windshield
     and front side windows?
@@ -2577,7 +2566,7 @@ questions:
   answer: C
   explanation: In Alberta, it is illegal to apply any aftermarket window tint to the
     windshield or the front side windows (driver and passenger side).
-- id: 208
+- id: 207
   category: vehicle_information
   question: In Alberta, a vehicle's service brake (foot brake) must be capable of
     stopping the vehicle on a dry, level, paved surface within what distance at a
@@ -2590,7 +2579,7 @@ questions:
   answer: B
   explanation: The Alberta Vehicle Equipment Regulation states that the service brake
     must be able to stop the vehicle within 9 meters when traveling at 30 km/h.
-- id: 209
+- id: 208
   category: vehicle_information
   question: If your vehicle's interior rear-view mirror is obstructed by a trailer
     or load, what is the equipment requirement in Alberta?
@@ -2603,7 +2592,7 @@ questions:
   explanation: If the view from the internal rear-view mirror is obstructed, Alberta
     law requires the vehicle to be equipped with both left and right-side exterior
     mirrors.
-- id: 210
+- id: 209
   category: vehicle_information
   question: 'A vehicle''s horn must be audible under normal conditions from a distance
     of at least:'
@@ -2615,7 +2604,7 @@ questions:
   answer: B
   explanation: According to Alberta's Vehicle Equipment Regulation, every motor vehicle
     must have a horn that can be heard from a distance of at least 60 meters.
-- id: 211
+- id: 210
   category: vehicle_information
   question: What color must the light be that illuminates the rear license plate in
     Alberta?
@@ -2627,7 +2616,7 @@ questions:
   answer: C
   explanation: Alberta law requires the rear license plate to be illuminated by a
     white light so that the plate is clearly legible from a distance of 15 meters.
-- id: 212
+- id: 211
   category: vehicle_information
   question: 'Under Alberta''s Vehicle Equipment Regulation, mudguards (fenders) are
     required on the rear of a vehicle if:'
@@ -2641,7 +2630,7 @@ questions:
   explanation: Mudguards or fenders are required on the rear of vehicles (especially
     trucks and trailers) to prevent the tires from throwing debris, mud, or water
     onto the windshields of other vehicles.
-- id: 213
+- id: 212
   category: vehicle_information
   question: 'In Alberta, turn signal lights must be visible in normal sunlight from
     a distance of at least:'
@@ -2653,7 +2642,7 @@ questions:
   answer: B
   explanation: Turn signal lamps must be visible from a distance of not less than
     30 meters in normal sunlight.
-- id: 214
+- id: 213
   category: vehicle_information
   question: In Alberta, if a load extends more than 1.5 meters beyond the rear of
     the vehicle, what must be attached to the end of the load during daylight hours?
@@ -2666,7 +2655,7 @@ questions:
   explanation: When a load extends 1.5 meters or more beyond the rear of a vehicle,
     a red flag at least 30 cm square must be displayed at the end of the load during
     the day. At night, a red light must be used.
-- id: 215
+- id: 214
   category: signs_and_signals
   question: Unless otherwise posted, playground zone speed limits in Alberta are in
     effect during which hours?
@@ -2678,7 +2667,7 @@ questions:
   answer: B
   explanation: In Alberta, playground zone restrictions are in effect every day from
     8:30 AM to one hour after sunset.
-- id: 216
+- id: 215
   category: signs_and_signals
   question: When approaching an intersection with a flashing red light in Alberta,
     what must a driver do?
@@ -2691,7 +2680,7 @@ questions:
   explanation: A flashing red light means the same as a stop sign. You must come to
     a complete stop, yield to cross traffic and pedestrians, and proceed only when
     safe.
-- id: 217
+- id: 216
   category: signs_and_signals
   question: In Alberta, what does a flashing amber (yellow) traffic light mean?
   choices:
@@ -2702,7 +2691,7 @@ questions:
   answer: C
   explanation: A flashing amber light is a cautionary signal. Drivers may proceed
     with caution after yielding to pedestrians and other vehicles within the intersection.
-- id: 218
+- id: 217
   category: signs_and_signals
   question: 'In Alberta, a flashing green light at an intersection (not an arrow)
     generally indicates:'
@@ -2715,7 +2704,7 @@ questions:
   explanation: In Alberta, a flashing green light typically means it is a pedestrian-actuated
     signal. Drivers may proceed with caution, but must be prepared to stop if the
     light changes.
-- id: 219
+- id: 218
   category: signs_and_signals
   question: In Alberta, what does a solid white line between lanes of traffic moving
     in the same direction mean?
@@ -2727,7 +2716,7 @@ questions:
   answer: B
   explanation: Solid white lines are used to indicate that lane changing is discouraged
     or hazardous. Drivers should stay in their lane.
-- id: 220
+- id: 219
   category: signs_and_signals
   question: Under Alberta law, when are you permitted to turn left on a red light?
   choices:
@@ -2739,7 +2728,7 @@ questions:
   explanation: In Alberta, you can turn left on a red light only if you are turning
     from a one-way street onto another one-way street, after coming to a complete
     stop and yielding to traffic and pedestrians.
-- id: 221
+- id: 220
   category: signs_and_signals
   question: 'A ''X'' pavement marking in Alberta indicates that you are approaching:'
   choices:
@@ -2750,7 +2739,7 @@ questions:
   answer: B
   explanation: Large 'X' markings on the pavement warn drivers that they are approaching
     a railway crossing.
-- id: 222
+- id: 221
   category: signs_and_signals
   question: 'A white diamond marking on a lane in Alberta indicates that the lane
     is:'
@@ -2762,7 +2751,7 @@ questions:
   answer: A
   explanation: A diamond marking indicates a reserved lane, such as for buses, taxis,
     or high-occupancy vehicles (HOV).
-- id: 223
+- id: 222
   category: signs_and_signals
   question: When approaching a traffic circle (roundabout) in Alberta, which vehicle
     has the right-of-way?
@@ -2774,7 +2763,7 @@ questions:
   answer: B
   explanation: In Alberta, drivers entering a traffic circle must yield to traffic
     already in the circle.
-- id: 224
+- id: 223
   category: signs_and_signals
   question: In Alberta, where is a U-turn NOT prohibited?
   choices:
@@ -2786,7 +2775,7 @@ questions:
   explanation: U-turns are prohibited on curves, near crests of hills, and at intersections
     with traffic lights (unless signs permit). They are generally allowed on residential
     roads between intersections if they can be done safely.
-- id: 225
+- id: 224
   category: signs_and_signals
   question: What does a sign with a fluorescent yellow-green background indicate in
     Alberta?
@@ -2798,7 +2787,7 @@ questions:
   answer: B
   explanation: Fluorescent yellow-green is used for school, pedestrian, and bicycle
     signs to provide high visibility.
-- id: 226
+- id: 225
   category: signs_and_signals
   question: In Alberta, if you are at a stop sign and another vehicle arrives at the
     same time at a 4-way stop, who goes first?
@@ -2810,7 +2799,7 @@ questions:
   answer: B
   explanation: At a 4-way stop, if two vehicles arrive at the same time, the driver
     on the left must yield to the driver on the right.
-- id: 227
+- id: 226
   category: signs_and_signals
   question: Unless otherwise posted, what are the effective hours for a playground
     zone in Alberta?
@@ -2822,7 +2811,7 @@ questions:
   answer: C
   explanation: In Alberta, playground zones are in effect every day from 8:30 AM to
     one hour after sunset.
-- id: 228
+- id: 227
   category: signs_and_signals
   question: What does a flashing green light at an intersection mean in Alberta?
   choices:
@@ -2834,7 +2823,7 @@ questions:
   explanation: In Alberta, a flashing green light indicates a pedestrian-actuated
     signal. Drivers may proceed but must be prepared to stop if the light changes
     to yellow or red.
-- id: 229
+- id: 228
   category: signs_and_signals
   question: When approaching a railway crossing that has a flashing red light and
     bells, what must a driver do?
@@ -2848,7 +2837,7 @@ questions:
   explanation: Alberta law requires drivers to stop no closer than 5 metres and no
     further than 15 metres from the nearest rail at a railway crossing when signals
     are activated.
-- id: 230
+- id: 229
   category: signs_and_signals
   question: 'A solid white line painted across an intersection lane is known as a:'
   choices:
@@ -2859,7 +2848,7 @@ questions:
   answer: B
   explanation: A solid white line across a lane at an intersection is a stop line,
     indicating where a vehicle must come to a complete stop.
-- id: 231
+- id: 230
   category: signs_and_signals
   question: In Alberta, what does a 'X' pavement marking indicate?
   choices:
@@ -2870,7 +2859,7 @@ questions:
   answer: C
   explanation: A large 'X' painted on the pavement indicates that you are approaching
     a railway crossing.
-- id: 232
+- id: 231
   category: signs_and_signals
   question: What is the meaning of a solid yellow line next to a broken yellow line
     on a highway?
@@ -2882,7 +2871,7 @@ questions:
   answer: B
   explanation: When a solid and broken yellow line are together, passing is only permitted
     for the vehicle that has the broken line on its side of the road.
-- id: 233
+- id: 232
   category: signs_and_signals
   question: What hand signal should a driver use to indicate they are slowing down
     or stopping?
@@ -2894,7 +2883,7 @@ questions:
   answer: C
   explanation: To signal a stop or decrease in speed using hand signals, the driver
     should extend their left arm out and bend it downward at the elbow.
-- id: 234
+- id: 233
   category: signs_and_signals
   question: 'A sign with a white diamond on a black background indicates:'
   choices:
@@ -2906,7 +2895,7 @@ questions:
   explanation: In Alberta, a diamond symbol on a sign or pavement indicates a reserved
     lane for specific types of vehicles, such as buses, taxis, or high-occupancy vehicles
     (HOV).
-- id: 235
+- id: 234
   category: signs_and_signals
   question: Under Alberta law, where are U-turns NOT permitted?
   choices:
@@ -2917,7 +2906,7 @@ questions:
   answer: D
   explanation: In Alberta, U-turns are prohibited at intersections with traffic lights,
     on curves, and near the crest of a hill where visibility is restricted.
-- id: 236
+- id: 235
   category: signs_and_signals
   question: What does a fluorescent yellow-green pentagon-shaped sign indicate?
   choices:
@@ -2928,7 +2917,7 @@ questions:
   answer: B
   explanation: A pentagon-shaped sign with a fluorescent yellow-green background is
     used to warn drivers they are in or approaching a school zone or school crosswalk.
-- id: 237
+- id: 236
   category: signs_and_signals
   question: Which of the following describes a 'Shared Center Turn Lane'?
   choices:
@@ -2940,13 +2929,13 @@ questions:
   answer: C
   explanation: A shared center turn lane is located in the middle of a two-way street
     and is used by drivers from both directions to turn left into driveways or intersections.
-- id: 238
+- id: 237
   category: signs_and_signals
   question: What is the meaning of a sign that shows a red circle with a white horizontal
     bar inside it?
   choices:
     A: No entry
-    '0': No parking
+    B: No parking
     C: Do not pass
     D: Stop ahead
   answer: A
