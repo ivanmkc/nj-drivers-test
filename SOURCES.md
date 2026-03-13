@@ -4,7 +4,7 @@ All questions are generated from **official state driver manuals** using Gemini 
 
 Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) signs sourced from Wikimedia Commons — these are US government works in the public domain.
 
-## States (12)
+## States (18)
 
 ### California (CA)
 - **Source**: [2025 California Driver Handbook](https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/)
@@ -20,11 +20,32 @@ Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) 
 - **Questions**: 361
 - **Languages**: EN, ES, JA
 
+### Illinois (IL)
+- **Source**: [2025 Illinois Rules of the Road](https://www.ilsos.gov/publications/pdf_publications/dsd_a112.pdf)
+- **Agency**: SOS
+- **Passing**: 80% (28/35 questions)
+- **Questions**: 429
+- **Languages**: EN, ES
+
 ### Indiana (IN)
 - **Source**: [2025 Indiana Driver's Manual](https://www.in.gov/bmv/licenses-permits-ids/files/drivers-manual.pdf)
 - **Agency**: BMV
 - **Passing**: 84% (13/16 questions)
 - **Questions**: 362
+- **Languages**: EN, ES, JA
+
+### Iowa (IA)
+- **Source**: [2025 Iowa Driver's Manual](https://iowadot.gov/mvd/driverslicense/dlmanual/dlmanual.pdf)
+- **Agency**: DOT
+- **Passing**: 80% (28/35 questions)
+- **Questions**: 253
+- **Languages**: EN, ES, JA
+
+### Kansas (KS)
+- **Source**: [2025 Kansas Driving Handbook](https://www.ksrevenue.gov/pdf/dlhb.pdf)
+- **Agency**: DOR
+- **Passing**: 80% (20/25 questions)
+- **Questions**: 484
 - **Languages**: EN, ES, JA
 
 ### Maryland (MD)
@@ -41,6 +62,13 @@ Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) 
 - **Questions**: 392
 - **Languages**: EN, ES, JA
 
+### Missouri (MO)
+- **Source**: [2025 Missouri Driver Guide](https://dor.mo.gov/forms/Driver%20Guide.pdf)
+- **Agency**: DOR
+- **Passing**: 80% (20/25 questions)
+- **Questions**: 410
+- **Languages**: EN, ES, JA
+
 ### New Jersey (NJ)
 - **Source**: [2025 New Jersey Driver Manual](https://www.nj.gov/mvc/pdf/license/drivermanual.pdf)
 - **Agency**: MVC
@@ -53,6 +81,13 @@ Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) 
 - **Agency**: DMV
 - **Passing**: 70% (14/20 questions)
 - **Questions**: 407
+- **Languages**: EN, ES, JA
+
+### Pennsylvania (PA)
+- **Source**: [2025 Pennsylvania Driver's Manual (PUB 95)](https://www.dmv.pa.gov/Information-Centers/Publications/Pages/Drivers-Manual.aspx)
+- **Agency**: PennDOT
+- **Passing**: 85% (15/18 questions)
+- **Questions**: 523
 - **Languages**: EN, ES, JA
 
 ### Oregon (OR)
@@ -81,6 +116,13 @@ Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) 
 - **Agency**: DMV
 - **Passing**: 80% (28/35 questions)
 - **Questions**: 234
+- **Languages**: EN, ES, JA
+
+### Washington (WA)
+- **Source**: [2025 Washington Driver Guide](https://www.dol.wa.gov/driverslicense/docs/driverguide-en.pdf)
+- **Agency**: DOL
+- **Passing**: 80% (20/25 questions)
+- **Questions**: 392
 - **Languages**: EN, ES, JA
 
 ### Wisconsin (WI)

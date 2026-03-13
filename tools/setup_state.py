@@ -87,7 +87,7 @@ def main():
     if not os.path.exists(questions_path):
         print(f"\nGenerating questions for {name}...")
         subprocess.run([
-            sys.executable, os.path.join(base_dir, "generate_questions.py"),
+            sys.executable, os.path.join(base_dir, "tools", "generate_questions.py"),
             code, manual_text_path
         ], check=True)
     else:
@@ -96,12 +96,12 @@ def main():
     # Add sign questions
     print(f"\nAdding sign questions...")
     subprocess.run([
-        sys.executable, os.path.join(base_dir, "add_sign_questions.py"), code
+        sys.executable, os.path.join(base_dir, "tools", "add_sign_questions.py"), code
     ], check=True)
 
     # Translate
-    translate_script = os.path.join(base_dir, "translate.py")
-    for lang in ["ja", "es"]:
+    translate_script = os.path.join(base_dir, "tools", "translate.py")
+    for lang in ["es"]:
         lang_path = os.path.join(state_dir, f"questions_{lang}.yaml")
         if not os.path.exists(lang_path):
             print(f"\nTranslating to {lang}...")
