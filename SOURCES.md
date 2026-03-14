@@ -4,7 +4,14 @@ All questions are generated from **official state driver manuals** using Gemini 
 
 Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) signs sourced from Wikimedia Commons — these are US government works in the public domain.
 
-## States (18)
+## States (23)
+
+### Alabama (AL)
+- **Source**: [Alabama Driver Manual](https://www.alea.gov/sites/default/files/inline-files/driverlicensemanual.pdf)
+- **Agency**: ALEA
+- **Passing**: 80% (24/30 questions)
+- **Questions**: 308
+- **Languages**: EN, ES
 
 ### California (CA)
 - **Source**: [2025 California Driver Handbook](https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/)
@@ -48,6 +55,13 @@ Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) 
 - **Questions**: 484
 - **Languages**: EN, ES, JA
 
+### Kentucky (KY)
+- **Source**: [Kentucky Driver Manual](https://drive.ky.gov/Drivers/Documents/Kentucky-Driver-Manual.pdf)
+- **Agency**: KYTC
+- **Passing**: 80% (32/40 questions)
+- **Questions**: 373
+- **Languages**: EN, ES
+
 ### Maryland (MD)
 - **Source**: [2025 Maryland Driver's Handbook](https://mva.maryland.gov/Documents/DL-002.pdf)
 - **Agency**: MVA
@@ -55,12 +69,12 @@ Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) 
 - **Questions**: 218
 - **Languages**: EN, ES, JA
 
-### North Carolina (NC)
-- **Source**: [2025 North Carolina Driver's Handbook](https://www.ncdot.gov/dmv/license-id/driver-licenses/new-drivers/Documents/driver-handbook.pdf)
-- **Agency**: DMV
-- **Passing**: 80% (20/25 questions)
-- **Questions**: 392
-- **Languages**: EN, ES, JA
+### Massachusetts (MA)
+- **Source**: [Massachusetts Driver's Manual](https://www.mass.gov/doc/english-drivers-manual/download)
+- **Agency**: RMV
+- **Passing**: 72% (18/25 questions)
+- **Questions**: 472
+- **Languages**: EN, ES
 
 ### Missouri (MO)
 - **Source**: [2025 Missouri Driver Guide](https://dor.mo.gov/forms/Driver%20Guide.pdf)
@@ -68,6 +82,13 @@ Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) 
 - **Passing**: 80% (20/25 questions)
 - **Questions**: 410
 - **Languages**: EN, ES, JA
+
+### Nevada (NV)
+- **Source**: [Nevada Driver's Handbook](https://dmv.nv.gov/pdfforms/dlbook.pdf)
+- **Agency**: DMV
+- **Passing**: 80% (20/25 questions)
+- **Questions**: 362
+- **Languages**: EN, ES
 
 ### New Jersey (NJ)
 - **Source**: [2025 New Jersey Driver Manual](https://www.nj.gov/mvc/pdf/license/drivermanual.pdf)
@@ -83,18 +104,32 @@ Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) 
 - **Questions**: 407
 - **Languages**: EN, ES, JA
 
-### Pennsylvania (PA)
-- **Source**: [2025 Pennsylvania Driver's Manual (PUB 95)](https://www.dmv.pa.gov/Information-Centers/Publications/Pages/Drivers-Manual.aspx)
-- **Agency**: PennDOT
-- **Passing**: 85% (15/18 questions)
-- **Questions**: 523
+### North Carolina (NC)
+- **Source**: [2025 North Carolina Driver's Handbook](https://www.ncdot.gov/dmv/license-id/driver-licenses/new-drivers/Documents/driver-handbook.pdf)
+- **Agency**: DMV
+- **Passing**: 80% (20/25 questions)
+- **Questions**: 392
 - **Languages**: EN, ES, JA
+
+### Ohio (OH)
+- **Source**: [Ohio Digest of Motor Vehicle Laws](https://publicsafety.ohio.gov/static/hsy7607.pdf)
+- **Agency**: BMV
+- **Passing**: 75% (30/40 questions)
+- **Questions**: 220
+- **Languages**: EN, ES
 
 ### Oregon (OR)
 - **Source**: [2025 Oregon Driver Manual](https://www.oregon.gov/odot/forms/dmv/37.pdf)
 - **Agency**: DMV
 - **Passing**: 80% (28/35 questions)
 - **Questions**: 237
+- **Languages**: EN, ES, JA
+
+### Pennsylvania (PA)
+- **Source**: [2025 Pennsylvania Driver's Manual (PUB 95)](https://www.dmv.pa.gov/Information-Centers/Publications/Pages/Drivers-Manual.aspx)
+- **Agency**: PennDOT
+- **Passing**: 85% (15/18 questions)
+- **Questions**: 523
 - **Languages**: EN, ES, JA
 
 ### Tennessee (TN)
@@ -131,6 +166,12 @@ Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) 
 - **Passing**: 80% (40/50 questions)
 - **Questions**: 193
 - **Languages**: EN, ES, JA
+
+## Not Yet Sourced (28)
+
+The following states do not yet have question sets. Their DMV websites block automated PDF downloads, so the official manuals need to be downloaded manually in a browser and placed at `/tmp/<code>_manual.pdf` for processing.
+
+AK (Alaska), AR (Arkansas), AZ (Arizona), CO (Colorado), CT (Connecticut), DC (District of Columbia), DE (Delaware), GA (Georgia), HI (Hawaii), ID (Idaho), LA (Louisiana), ME (Maine), MI (Michigan), MN (Minnesota), MS (Mississippi), MT (Montana), ND (North Dakota), NE (Nebraska), NH (New Hampshire), NM (New Mexico), OK (Oklahoma), RI (Rhode Island), SC (South Carolina), SD (South Dakota), UT (Utah), VT (Vermont), WV (West Virginia), WY (Wyoming)
 
 ## Road Sign Images
 
