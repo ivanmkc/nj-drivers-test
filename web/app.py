@@ -1,47 +1,39 @@
+import gzip
 import json
 import os
 import random
-import re
-import yaml
 from flask import Flask, jsonify, request, send_from_directory
 
 app = Flask(__name__, static_folder="static")
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(BASE_DIR)
+BUNDLE_PATH = os.path.join(ROOT_DIR, "shared", "questions_bundle.json.gz")
 STATES_DIR = os.path.join(ROOT_DIR, "data", "states")
 
-# Auto-discover states and their question files at startup
-# Structure: STATES[state_code][lang_code] = {"questions": [...], "by_id": {...}}
-# CONFIG[state_code] = {...config.json...}
+# Load from pre-built gzipped JSON bundle (fast) instead of YAML (slow)
 STATES = {}
 CONFIG = {}
 
-for state_code in sorted(os.listdir(STATES_DIR)):
-    state_dir = os.path.join(STATES_DIR, state_code)
-    if not os.path.isdir(state_dir):
-        continue
+with gzip.open(BUNDLE_PATH, "rt", encoding="utf-8") as f:
+    bundle = json.load(f)
 
-    config_path = os.path.join(state_dir, "config.json")
-    if not os.path.exists(config_path):
-        continue
-
-    with open(config_path) as f:
-        CONFIG[state_code] = json.load(f)
-
-    STATES[state_code] = {}
-
-    for fname in sorted(os.listdir(state_dir)):
-        match = re.match(r"questions_(\w+)\.yaml$", fname)
-        if not match:
-            continue
-        lang = match.group(1)
-        with open(os.path.join(state_dir, fname)) as f:
-            data = yaml.safe_load(f)
-        STATES[state_code][lang] = {
-            "questions": data["questions"],
-            "by_id": {q["id"]: q for q in data["questions"]},
+for state_data in bundle["states"]:
+    code = state_data["code"]
+    CONFIG[code] = {
+        "name": state_data["name"],
+        "agency": state_data["agency"],
+        "passing_score_pct": state_data["passing_score_pct"],
+        "test_question_count": state_data["test_question_count"],
+    }
+    STATES[code] = {}
+    for lang, questions in state_data["languages"].items():
+        STATES[code][lang] = {
+            "questions": questions,
+            "by_id": {q["id"]: q for q in questions},
         }
+
+del bundle
 
 
 def get_state():
