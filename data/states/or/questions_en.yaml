@@ -1,6 +1,6 @@
 metadata:
-  source: //www.oregon.gov/odot/forms/dmv/37.pdf:2025 Oregon Driver Manual (oregon.gov)
-  total_questions: 237
+  source: 2025 Oregon Driver Manual (oregon.gov)
+  total_questions: 284
   categories:
   - alcohol_drugs_health
   - defensive_driving
@@ -2504,19 +2504,6 @@ questions:
     yield the right-of-way to traffic and pedestrians. You must stop if necessary
     to let others pass safely.
   id: 205
-- image: do_not_enter.png
-  category: signs_and_signals
-  question: What does this sign mean?
-  choices:
-    A: Road closed ahead
-    B: No parking allowed
-    C: Do not enter this roadway
-    D: Dead end ahead
-  answer: C
-  explanation: A red and white DO NOT ENTER sign means you must not enter the road
-    or ramp where this sign is posted. It is usually seen at freeway off-ramps or
-    one-way streets where entering would put you in the path of oncoming traffic.
-  id: 206
 - image: wrong_way.png
   category: signs_and_signals
   question: If you see this sign, what should you do?
@@ -2529,31 +2516,7 @@ questions:
   explanation: A red and white WRONG WAY sign means you are traveling against traffic
     on a one-way road or highway ramp. Stop immediately and safely turn around or
     back up.
-  id: 207
-- image: one_way_left.png
-  category: signs_and_signals
-  question: What does this sign indicate?
-  choices:
-    A: Left turn only
-    B: Traffic flows in one direction — to the left
-    C: Keep left of the median
-    D: Highway exit to the left
-  answer: B
-  explanation: A black and white ONE WAY sign with an arrow indicates that traffic
-    on this street moves in only one direction — the direction the arrow points.
-  id: 208
-- image: no_u_turn.png
-  category: signs_and_signals
-  question: What does this sign prohibit?
-  choices:
-    A: Right turns
-    B: Left turns
-    C: U-turns
-    D: Passing other vehicles
-  answer: C
-  explanation: A white regulatory sign with a U-turn arrow crossed out means U-turns
-    are prohibited at this location.
-  id: 209
+  id: 206
 - image: no_left_turn.png
   category: signs_and_signals
   question: What action is prohibited by this sign?
@@ -2565,44 +2528,7 @@ questions:
   answer: B
   explanation: A white regulatory sign showing a left turn arrow crossed out means
     left turns are not allowed at this intersection.
-  id: 210
-- image: no_right_turn.png
-  category: signs_and_signals
-  question: What does this sign mean?
-  choices:
-    A: No U-turn allowed
-    B: No left turn allowed
-    C: No right turn allowed
-    D: No passing allowed
-  answer: C
-  explanation: A white regulatory sign showing a right turn arrow crossed out means
-    right turns are prohibited at this location.
-  id: 211
-- image: no_passing.png
-  category: signs_and_signals
-  question: What does this sign indicate?
-  choices:
-    A: Road narrows ahead
-    B: Do not pass other vehicles in this zone
-    C: Two-way traffic ahead
-    D: Keep right
-  answer: B
-  explanation: A yellow with black lettering NO PASSING ZONE pennant-shaped sign means
-    you are not allowed to pass other vehicles in this area. It marks the beginning
-    of a no-passing zone.
-  id: 212
-- image: keep_right.png
-  category: signs_and_signals
-  question: What does this sign instruct drivers to do?
-  choices:
-    A: Merge right
-    B: Turn right only
-    C: Keep to the right of a divider or obstruction
-    D: Right lane ends ahead
-  answer: C
-  explanation: A white regulatory KEEP RIGHT sign with an arrow means you must keep
-    to the right side of a traffic island, median, or obstruction.
-  id: 213
+  id: 207
 - image: speed_limit_25.png
   category: signs_and_signals
   question: What type of sign is this, based on its shape and color?
@@ -2614,7 +2540,7 @@ questions:
   answer: C
   explanation: White rectangular signs with black lettering are regulatory signs.
     Speed limit signs tell you the maximum legal speed for the area under ideal conditions.
-  id: 214
+  id: 208
 - image: deer_crossing.png
   category: signs_and_signals
   question: What does this yellow diamond-shaped sign warn you about?
@@ -2627,19 +2553,7 @@ questions:
   explanation: A yellow diamond-shaped sign with a deer silhouette warns that deer
     frequently cross the road in this area. Slow down and watch for animals, especially
     at dawn and dusk.
-  id: 215
-- image: pedestrian_crossing.png
-  category: signs_and_signals
-  question: What does this sign warn you about?
-  choices:
-    A: School zone ahead
-    B: Pedestrian crossing ahead
-    C: Hiking trail nearby
-    D: Bus stop ahead
-  answer: B
-  explanation: A yellow diamond-shaped sign with a pedestrian figure warns of a pedestrian
-    crossing ahead. Be prepared to stop for pedestrians crossing the road.
-  id: 216
+  id: 209
 - image: school_zone.png
   category: signs_and_signals
   question: What does the shape of this sign indicate?
@@ -2651,19 +2565,7 @@ questions:
   answer: C
   explanation: A pentagon-shaped (5-sided) fluorescent yellow-green sign indicates
     a school zone or school crossing. Slow down and watch for children.
-  id: 217
-- image: railroad_crossing.png
-  category: signs_and_signals
-  question: What does this circular yellow sign warn you about?
-  choices:
-    A: A roundabout ahead
-    B: A hospital zone
-    C: A railroad crossing ahead
-    D: A no-passing zone
-  answer: C
-  explanation: A circular yellow sign with a black X and two R's is the advance warning
-    sign for a railroad crossing ahead. Slow down, look, and listen for trains.
-  id: 218
+  id: 210
 - image: railroad_crossbuck.png
   category: signs_and_signals
   question: Where would you typically see this sign?
@@ -2675,19 +2577,7 @@ questions:
   answer: B
   explanation: The white X-shaped railroad crossbuck sign is placed at railroad crossings.
     It means you must yield to trains. If a train is approaching, you must stop.
-  id: 219
-- image: curve_right.png
-  category: signs_and_signals
-  question: What does this yellow diamond-shaped sign indicate?
-  choices:
-    A: Road ends ahead
-    B: Right turn required
-    C: A curve to the right ahead
-    D: Detour ahead
-  answer: C
-  explanation: A yellow diamond-shaped sign with a curved arrow warns of a curve in
-    the road ahead. Slow down before entering the curve.
-  id: 220
+  id: 211
 - image: sharp_turn_right.png
   category: signs_and_signals
   question: How does this sign differ from a curve sign?
@@ -2700,55 +2590,7 @@ questions:
   explanation: A sharp turn sign (with a more angled arrow) indicates a sharper turn
     than a curve sign. You need to reduce your speed more significantly before this
     turn.
-  id: 221
-- image: reverse_curve.png
-  category: signs_and_signals
-  question: What road condition does this sign warn about?
-  choices:
-    A: A winding road
-    B: A single curve ahead
-    C: A series of two curves in opposite directions
-    D: A roundabout ahead
-  answer: C
-  explanation: A reverse curve sign warns of two curves in opposite directions ahead.
-    Slow down and be prepared for the road to curve first one way, then the other.
-  id: 222
-- image: winding_road.png
-  category: signs_and_signals
-  question: What does this sign warn you to expect?
-  choices:
-    A: A single sharp curve
-    B: A slippery road surface
-    C: A series of curves or turns ahead
-    D: A hill ahead
-  answer: C
-  explanation: A winding road sign warns of a series of curves or turns ahead. Reduce
-    your speed and be alert for changing road conditions.
-  id: 223
-- image: merge.png
-  category: signs_and_signals
-  question: What does this sign tell you to prepare for?
-  choices:
-    A: A lane ending
-    B: Traffic merging from another road
-    C: A divided highway beginning
-    D: A road narrowing to one lane
-  answer: B
-  explanation: A yellow diamond-shaped merge sign warns that traffic from another
-    road will be merging into your lane. Be prepared to adjust your speed and position.
-  id: 224
-- image: road_narrows.png
-  category: signs_and_signals
-  question: What does this sign warn about?
-  choices:
-    A: Bridge ahead
-    B: Road narrows ahead
-    C: Lane ends
-    D: Divided highway ends
-  answer: B
-  explanation: This warning sign indicates the road ahead becomes narrower. Be prepared
-    for reduced road width and adjust your lane position.
-  id: 225
+  id: 212
 - image: divided_highway.png
   category: signs_and_signals
   question: What does this sign indicate is ahead?
@@ -2760,130 +2602,7 @@ questions:
   answer: C
   explanation: This sign warns that the road ahead becomes a divided highway with
     a median or barrier separating opposing traffic. Keep to the right.
-  id: 226
-- image: divided_highway_ends.png
-  category: signs_and_signals
-  question: What does this sign warn you about?
-  choices:
-    A: A divided highway begins
-    B: The divided highway ends and two-way traffic resumes
-    C: A merge area ahead
-    D: Road construction ahead
-  answer: B
-  explanation: This sign warns that the divided highway is ending. Opposing traffic
-    will no longer be separated by a median. Be prepared for two-way traffic.
-  id: 227
-- image: two_way_traffic.png
-  category: signs_and_signals
-  question: What does this sign warn you about?
-  choices:
-    A: A divided highway begins
-    B: A passing zone ahead
-    C: Two-way traffic ahead — traffic moves in both directions
-    D: A lane shift ahead
-  answer: C
-  explanation: This sign warns of two-way traffic ahead. You may be leaving a one-way
-    road or divided highway and will encounter vehicles traveling in the opposite
-    direction.
-  id: 228
-- image: slippery_when_wet.png
-  category: signs_and_signals
-  question: What road condition does this sign warn about?
-  choices:
-    A: Icy road conditions
-    B: The road may be slippery when wet
-    C: Winding road ahead
-    D: Uneven pavement
-  answer: B
-  explanation: A slippery when wet sign warns that the road surface may become very
-    slippery during rain or wet conditions. Reduce your speed and avoid sudden braking
-    or turning.
-  id: 229
-- image: hill.png
-  category: signs_and_signals
-  question: What does this sign warn you about?
-  choices:
-    A: A bump in the road
-    B: An uneven road surface
-    C: A steep hill or grade ahead
-    D: Road construction
-  answer: C
-  explanation: This sign warns of a steep hill or grade ahead. You may need to adjust
-    your speed and shift to a lower gear, especially in trucks or when towing.
-  id: 230
-- image: signal_ahead.png
-  category: signs_and_signals
-  question: What does this sign warn you to prepare for?
-  choices:
-    A: A stop sign ahead
-    B: A traffic signal ahead
-    C: A school crossing
-    D: A police checkpoint
-  answer: B
-  explanation: This sign warns of a traffic signal ahead. Be prepared to stop if the
-    light is red or yellow. This sign is often placed where the signal may not be
-    visible from a distance.
-  id: 231
-- image: stop_ahead.png
-  category: signs_and_signals
-  question: What does this sign tell you to expect ahead?
-  choices:
-    A: A yield sign
-    B: A traffic signal
-    C: A stop sign where you must stop
-    D: A speed bump
-  answer: C
-  explanation: This sign warns that there is a stop sign ahead. Begin slowing down
-    and prepare to come to a complete stop at the stop sign.
-  id: 232
-- image: cross_road.png
-  category: signs_and_signals
-  question: What does this sign warn about?
-  choices:
-    A: A railroad crossing ahead
-    B: A crossroad or intersection ahead
-    C: A hospital ahead
-    D: A pedestrian crossing
-  answer: B
-  explanation: This sign warns that a crossroad or 4-way intersection is ahead. Watch
-    for traffic entering from side roads.
-  id: 233
-- image: side_road.png
-  category: signs_and_signals
-  question: What does this sign warn you about?
-  choices:
-    A: A T-intersection ahead
-    B: A side road entering from the right
-    C: A curve in the road
-    D: A dead end
-  answer: B
-  explanation: This sign warns of a side road entering from the right. Watch for vehicles
-    entering the highway from the side road.
-  id: 234
-- image: added_lane.png
-  category: signs_and_signals
-  question: What does this sign mean?
-  choices:
-    A: Lanes are merging
-    B: A lane is ending
-    C: A new lane is being added — no merging needed
-    D: Right turn required
-  answer: C
-  explanation: An added lane sign means a new lane is joining the highway without
-    requiring merging. Traffic entering from the ramp has its own new lane.
-  id: 235
-- image: no_parking.png
-  category: signs_and_signals
-  question: What does this sign prohibit?
-  choices:
-    A: Stopping at any time
-    B: Parking in this area
-    C: Standing or idling
-    D: Loading or unloading
-  answer: B
-  explanation: A red and white NO PARKING sign means you cannot park your vehicle
-    in this area. You may briefly stop to load or unload passengers.
-  id: 236
+  id: 213
 - image: handicap_parking.png
   category: signs_and_signals
   question: Who is allowed to park in a space marked with this sign?
@@ -2896,4 +2615,880 @@ questions:
   explanation: A blue sign with the wheelchair symbol marks parking reserved for persons
     with disabilities. Only vehicles displaying a valid disability parking placard
     or license plate may park in these spaces. Violations carry heavy fines.
-  id: 237
+  id: 214
+- id: 215
+  category: license_system
+  question: Besides a REAL ID compliant Oregon license, which of the following is
+    listed as an acceptable form of identification for an adult to board a commercial
+    U.S. flight?
+  choices:
+    A: A credit card with a photo
+    B: A student ID card
+    C: A foreign government-issued passport
+    D: A standard, non-REAL ID Oregon driver's license
+  answer: C
+  explanation: 'The manual states, ''Additional acceptable IDs include, but are not
+    limited to: ... Foreign government-issued passport.'' A standard, non-REAL ID
+    license is no longer accepted for this purpose.'
+- id: 216
+  category: vehicle_information
+  question: Who is the publisher of the 2026-2027 Oregon Driver Manual?
+  choices:
+    A: The Oregon State Police
+    B: The Oregon Legislature
+    C: The Governor's Office of Transportation Safety
+    D: The Oregon Department of Transportation, Driver and Motor Vehicle Services
+  answer: D
+  explanation: 'The manual states on page iii that it is ''Published by: Oregon Department
+    of Transportation, Driver and Motor Vehicle Services.'''
+- id: 217
+  category: safe_driving_rules
+  question: According to the Table of Contents, in which section would you find information
+    about 'Pavement Markings' and 'Speed Regulations'?
+  choices:
+    A: Turns & Intersections
+    B: Lane Travel
+    C: Sharing the Road
+    D: Safe & Responsible Driving
+  answer: B
+  explanation: The Table of Contents on page v lists 'Speed Regulations' and 'Pavement
+    Markings' as sub-sections under the main heading 'Lane Travel.'
+- id: 218
+  category: safe_driving_rules
+  question: If you wanted to study the rules for navigating a roundabout, which section
+    of the manual should you consult according to the Table of Contents?
+  choices:
+    A: Turns & Intersections
+    B: Lane Travel
+    C: Curves
+    D: Freeway Driving
+  answer: A
+  explanation: The Table of Contents on page v shows 'Roundabouts' as a topic within
+    the 'Turns & Intersections' section.
+- id: 219
+  category: sharing_the_road
+  question: According to the Table of Contents, information on how to safely share
+    the road with large vehicles can be found in which chapter?
+  choices:
+    A: Driving a Large Vehicle or Towing
+    B: Sharing the Road
+    C: Defensive Driving
+    D: Vehicle Equipment Failures
+  answer: B
+  explanation: The Table of Contents on page v lists 'Large Vehicles' as a sub-section
+    under the main heading 'Sharing the Road.'
+- id: 220
+  category: safe_driving_rules
+  question: To learn about the proper use of safety belts, which section should you
+    refer to in the manual's Table of Contents?
+  choices:
+    A: How to Apply
+    B: Safe & Responsible Driving
+    C: Avoiding a Collision
+    D: Mandatory Insurance
+  answer: B
+  explanation: The Table of Contents on page vi lists 'Safety Belts' as a sub-topic
+    within the 'Safe & Responsible Driving' section.
+- id: 221
+  category: vehicle_information
+  question: According to the Table of Contents, where can you find tips on how to
+    improve your vehicle's gas mileage?
+  choices:
+    A: Vehicle Equipment Failures
+    B: Hazardous Conditions
+    C: Fuel Saving Techniques
+    D: Additional Services
+  answer: C
+  explanation: The Table of Contents on page vi lists 'Fuel Saving Techniques' as
+    a topic under the 'Safe & Responsible Driving' section.
+- id: 222
+  category: penalties_and_points
+  question: If you want to understand the reasons why your driving privileges could
+    be taken away, which section of the manual should you read?
+  choices:
+    A: Testing
+    B: Loss of Driving Privileges
+    C: Driver Responsibility
+    D: Traffic Collisions
+  answer: B
+  explanation: The Table of Contents on page vi lists 'Loss of Driving Privileges'
+    as a main topic heading near the end of the manual.
+- id: 223
+  category: driver_responsibility
+  question: In the 'Important message to drivers,' what is described as the worst-case
+    scenario for choosing to drive in a careless or impaired way?
+  choices:
+    A: Receiving a traffic ticket
+    B: Having your insurance rates increase
+    C: Causing your own death or the death of someone else
+    D: Paying a large fine
+  answer: C
+  explanation: The manual states on page vii, 'At worst, you may lose your life or
+    cause someone else’s death, including that of a loved one.'
+- id: 224
+  category: driver_responsibility
+  question: 'The introductory message from the DMV Administrator emphasizes that everyone
+    on the roadway has a shared responsibility to:'
+  choices:
+    A: Drive as fast as possible to reduce congestion
+    B: Use a cell phone only when traffic is light
+    C: Be attentive, obey traffic laws, and share the road
+    D: Yield to faster-moving vehicles at all times
+  answer: C
+  explanation: The message on page vii states, 'Each one of us has a responsibility...
+    to choose to be attentive, obey traffic laws, and share the road with other drivers,
+    people riding bicycles and those who walk and roll.'
+- id: 225
+  category: license_system
+  question: 'In Oregon, you are required to possess a valid driving privilege to operate
+    a motor vehicle on:'
+  choices:
+    A: Highways only
+    B: Private property only
+    C: Highways or premises open to the public
+    D: Any road except for private driveways
+  answer: C
+  explanation: The manual states on page 1, 'To operate a motor vehicle on highways
+    or premises open to the public in Oregon, you must possess a valid driving privilege.'
+- id: 226
+  category: driver_testing
+  question: Where does the manual direct you to find the most current information
+    on DMV fees, office hours, and drive test scheduling?
+  choices:
+    A: The last page of the manual
+    B: The Oregon Department of Transportation main website
+    C: By calling the Governor's office
+    D: The official DMV website, OregonDMV.com
+  answer: D
+  explanation: The manual states on page 1, 'For current information on requirements,
+    fees, drive test scheduling and office hours, go to OregonDMV.com.'
+- id: 227
+  category: license_system
+  question: For individuals 18 and older, which of the following is listed as a federally
+    accepted form of ID for boarding a commercial U.S. flight?
+  choices:
+    A: A birth certificate
+    B: A Permanent Resident card
+    C: A Social Security card
+    D: A library card with a photo
+  answer: B
+  explanation: The manual on page ii lists 'Permanent Resident card' as an acceptable
+    ID for flying.
+- id: 228
+  category: driver_responsibility
+  question: According to the Table of Contents, where would you find information regarding
+    mandatory vehicle insurance and what to do after a traffic collision?
+  choices:
+    A: Safe & Responsible Driving
+    B: How to Apply
+    C: The sections 'Mandatory Insurance' and 'Traffic Collisions'
+    D: Loss of Driving Privileges
+  answer: C
+  explanation: The Table of Contents on page vi lists 'Mandatory Insurance' and 'Traffic
+    Collisions' as separate, specific topic headings.
+- id: 229
+  category: signs_and_signals
+  question: According to the Table of Contents, information about specific traffic
+    signs and signals is located in which section?
+  choices:
+    A: Lane Travel
+    B: Signs & Traffic Signals
+    C: Pavement Markings
+    D: Work Zones
+  answer: B
+  explanation: The Table of Contents on page v clearly indicates a main section titled
+    'Signs & Traffic Signals' which contains subsections for 'Signs' and 'Traffic
+    Signals'.
+- id: 230
+  category: driver_testing
+  question: If you fail the online knowledge test four times, what is the next step
+    you must take?
+  choices:
+    A: You must wait 90 days before attempting the test again.
+    B: You must complete an ODOT-Approved Driver Education Course.
+    C: You must schedule and take any future attempts at a DMV office.
+    D: You may take the test online two more times after a 24-hour waiting period.
+  answer: C
+  explanation: The manual states, 'After four attempts you must test at a DMV office.'
+- id: 231
+  category: driver_testing
+  question: For a new Oregon resident, under what condition may the DMV waive the
+    drive test?
+  choices:
+    A: If you have held a valid driver license from any country for at least five
+      years.
+    B: If you surrender an out-of-state license that is valid or expired less than
+      one year.
+    C: If you are over 25 years of age and have a clean driving record.
+    D: If you pass the knowledge test with a perfect score on the first attempt.
+  answer: B
+  explanation: The manual states the DMV may waive the drive test if 'You are a new
+    resident surrendering an out-of-state license that is valid or expired less than
+    one year.'
+- id: 232
+  category: driver_testing
+  question: When taking a knowledge test at a DMV office, what are you permitted to
+    bring for audio assistance?
+  choices:
+    A: A personal translator to read the questions aloud.
+    B: A DMV-provided audio device only.
+    C: Your own earbuds or headphones.
+    D: A smartphone with a text-to-speech app.
+  answer: C
+  explanation: The manual states for in-office knowledge tests, 'You may bring your
+    own earbuds or headphones for the test.'
+- id: 233
+  category: penalties_and_points
+  question: Which of the following actions is specifically defined as cheating on
+    a knowledge test, resulting in failure and a 90-day re-test restriction?
+  choices:
+    A: Asking the examiner to clarify a question.
+    B: Using a paper foreign language translation dictionary with permission.
+    C: Taking notes or allowing someone else to take the test for you.
+    D: Failing to complete the test within the allotted time.
+  answer: C
+  explanation: 'The manual lists several actions considered cheating, including: ''talking,
+    writing or note taking, cell phone use, operation of any electronic devices, or
+    allowing someone else to take a test for you.'''
+- id: 234
+  category: signs_and_signals
+  question: What is the shape and meaning of a YIELD sign?
+  choices:
+    A: 'Octagon: You must come to a complete stop before proceeding.'
+    B: 'Triangle: You must reduce speed, yield right of way, and stop if necessary.'
+    C: 'Square: You are going the wrong way and must turn around.'
+    D: 'Circle: You are approaching a railroad crossing and must look for trains.'
+  answer: B
+  explanation: 'The manual describes the Yield sign as a ''Triangle: This sign means
+    you should reduce speed and yield right of way. If needed, stop the same as you
+    would for a stop sign.'''
+- id: 235
+  category: signs_and_signals
+  question: What does a sign with a red circle and a slash mark indicate?
+  choices:
+    A: The action shown is recommended but not required.
+    B: You are approaching a hazard and should slow down.
+    C: The road ahead is closed to all traffic.
+    D: You must not perform the action shown on the sign.
+  answer: D
+  explanation: The manual states, 'When you see a sign with a red circle and a slash
+    mark, it means do not make the turn shown.'
+- id: 236
+  category: vehicle_information
+  question: If weather conditions require it for your drive test, which of the following
+    sets of equipment must your vehicle have?
+  choices:
+    A: All-weather floor mats and a first-aid kit.
+    B: An ice scraper and emergency flares.
+    C: Traction tires or chains, and a working window defroster.
+    D: A GPS navigation system and a car cover.
+  answer: C
+  explanation: The manual specifies, 'If weather conditions require, your vehicle
+    must have traction tires or chains, windshield wipers, headlights, taillights
+    and a window defroster.'
+- id: 237
+  category: driver_testing
+  question: What is a potential disadvantage of using a certified Third Party drive
+    tester instead of the DMV?
+  choices:
+    A: The test is significantly harder.
+    B: Testing costs may be greater.
+    C: The results are not recognized by the DMV.
+    D: They have fewer available appointment times.
+  answer: B
+  explanation: The manual notes that while Third Party Testers may offer more scheduling
+    flexibility, 'Testing costs may be greater when using a Third Party Tester, however.'
+- id: 238
+  category: signs_and_signals
+  question: What does a 'Do Not Enter' sign primarily warn you about?
+  choices:
+    A: The road ahead is under construction.
+    B: The road is a private driveway.
+    C: You are about to enter a one-way street going the wrong way.
+    D: The road is temporarily closed due to an accident.
+  answer: C
+  explanation: 'The manual states, ''Do Not Enter – Square: This sign warns you not
+    to enter a road or freeway. You will see this sign if you are going the wrong
+    way.'''
+- id: 239
+  category: driver_testing
+  question: What is the recommended minimum amount of time you should schedule a drive
+    test in advance?
+  choices:
+    A: One week.
+    B: Two weeks.
+    C: Three weeks.
+    D: Four weeks.
+  answer: C
+  explanation: The manual advises, 'It’s a good idea to schedule a minimum of three
+    weeks in advance of the date you want to take your test.'
+- id: 240
+  category: vehicle_information
+  question: 'For a vehicle to be acceptable for a drive test, the passenger seat must
+    be:'
+  choices:
+    A: Equipped with electronic adjustments and heating.
+    B: Covered in leather or a similar material.
+    C: Proper, secure, and reasonably clean.
+    D: Empty, with no items on or around it.
+  answer: C
+  explanation: The vehicle equipment checklist for the drive test includes 'Proper,
+    secure and reasonably clean passenger seat.'
+- id: 241
+  category: driver_testing
+  question: What must you do before you can take any test at the DMV?
+  choices:
+    A: Schedule an appointment at least one week in advance.
+    B: Pay the test fee and present proof of identity, birth date, and address.
+    C: Complete an online pre-screening questionnaire.
+    D: Surrender any out-of-state identification you may have.
+  answer: B
+  explanation: The manual states, 'Every time you take a test, you must first pay
+    the test fee and present proof of identity, date of birth, and current residence
+    address.'
+- id: 242
+  category: signs_and_signals
+  question: What does a 'Keep Right' sign indicate?
+  choices:
+    A: You must make a right turn at the next intersection.
+    B: Slower traffic must stay in the right lane.
+    C: A traffic island, median, or obstruction is ahead, and you should stay to the
+      right of it.
+    D: The road ahead curves to the right.
+  answer: C
+  explanation: The manual states that a 'Keep Right' sign means 'A traffic island,
+    median or obstruction divides the road ahead. Keep to the right.'
+- id: 243
+  category: signs_and_signals
+  question: When you approach an intersection with a 'No Turn on Red' sign, what must
+    you do?
+  choices:
+    A: You may turn right after stopping if no pedestrians are present.
+    B: You must wait for the signal to turn green before turning.
+    C: You may turn left from a one-way street onto another one-way street.
+    D: You may turn after yielding to all cross traffic.
+  answer: B
+  explanation: 'The manual specifies for a ''No Turn on Red'' sign: ''You may not
+    turn during the red light. You must wait for the signal to turn green.'''
+- id: 244
+  category: signs_and_signals
+  question: What does a 'Left Turn Yield on Green' sign mean?
+  choices:
+    A: You have the right-of-way to make a left turn on a green light.
+    B: Oncoming traffic must yield to you when you are turning left.
+    C: On a green circular signal, you must yield to oncoming traffic and pedestrians
+      before turning left.
+    D: You may only turn left when you have a green arrow.
+  answer: C
+  explanation: 'The manual states this sign means: ''On a green circular signal, yield
+    the right-of-way to oncoming traffic and pedestrians until it is safe to turn.'''
+- id: 245
+  category: signs_and_signals
+  question: If you see a 'Stop Here for Pedestrians' sign at a crosswalk, where must
+    you stop when a pedestrian is present?
+  choices:
+    A: At least 20 feet before the crosswalk.
+    B: At the stop line.
+    C: Anywhere before the crosswalk that provides a good view.
+    D: Only if the pedestrian is on your half of the road.
+  answer: B
+  explanation: 'The manual instructs: ''Stop at the stop line when a pedestrian is
+    in the crosswalk.'''
+- id: 246
+  category: signs_and_signals
+  question: 'A ''Winding Road'' sign warns you that:'
+  choices:
+    A: The road ahead is slippery when wet.
+    B: A sharp turn is immediately ahead.
+    C: The road contains a series of turns or curves.
+    D: The road ahead curves to the right, then left.
+  answer: C
+  explanation: The manual defines a 'Winding Road' sign as indicating 'The road contains
+    a series of turns or curves.'
+- id: 247
+  category: signs_and_signals
+  question: What action must a driver take when they see a 'Lane Reduction' sign?
+  choices:
+    A: Come to a complete stop before continuing.
+    B: Speed up to get ahead of traffic in the other lane.
+    C: Merge into the through lane as their lane is ending soon.
+    D: Exit the highway immediately.
+  answer: C
+  explanation: 'The manual states for a ''Lane Reduction'' sign: ''The indicated lane
+    ends soon. Vehicles in that lane must merge into the through lane.'''
+- id: 248
+  category: signs_and_signals
+  question: What does the 'Two-Way Traffic Ahead' sign warn you of?
+  choices:
+    A: You are on a divided highway that is about to end.
+    B: The one-way road you are on is about to join a two-way road.
+    C: You are permitted to pass other vehicles.
+    D: A merging lane is ahead.
+  answer: B
+  explanation: The manual explains that a 'Two-Way Traffic Ahead' sign means 'The
+    one-way road joins a two-way road ahead. You will be facing oncoming traffic.'
+- id: 249
+  category: signs_and_signals
+  question: What is the primary warning provided by a 'Low Clearance' sign?
+  choices:
+    A: The road ahead has a steep grade.
+    B: The overpass ahead is low, and your vehicle may be too tall to pass under it.
+    C: A railroad crossing is ahead.
+    D: The speed limit is reduced ahead.
+  answer: B
+  explanation: 'The manual states a ''Low Clearance'' sign means: ''The overpass ahead
+    has low clearance. Do not proceed if your vehicle is too tall to pass under it.'''
+- id: 250
+  category: signs_and_signals
+  question: 'A ''Slippery When Wet'' sign means:'
+  choices:
+    A: You should always drive below the speed limit in this area.
+    B: The pavement is unusually slick when it is wet.
+    C: The road is prone to flooding during heavy rain.
+    D: You should turn on your hazard lights when it rains.
+  answer: B
+  explanation: 'The manual''s definition for this sign is: ''The pavement is unusually
+    slick when wet.'''
+- id: 251
+  category: signs_and_signals
+  question: What is the purpose of the number on a green exit sign on a highway?
+  choices:
+    A: It indicates the distance to the next city.
+    B: It shows the route number of the highway you are on.
+    C: It helps you know which exit to take.
+    D: It is the recommended speed for the exit ramp.
+  answer: C
+  explanation: The manual states, 'The number on an exit sign helps you know which
+    exit to take.'
+- id: 252
+  category: signs_and_signals
+  question: Signs that point to historic locations, scenic areas, and parks are what
+    color?
+  choices:
+    A: Blue
+    B: Green
+    C: Yellow
+    D: Brown
+  answer: D
+  explanation: 'The manual specifies: ''Historic, Cultural, and Recreational Signs:
+    These brown signs point to historic and cultural locations. They also point to
+    scenic areas, picnic grounds, and parks.'''
+- id: 253
+  category: signs_and_signals
+  question: According to the manual, what should you do when approaching a steady
+    circular yellow traffic signal?
+  choices:
+    A: Speed up to clear the intersection before the light turns red.
+    B: Stop before entering the intersection, or if you cannot stop safely, drive
+      carefully through it.
+    C: Come to a complete stop and wait for the light to turn green.
+    D: Slow down and prepare to turn right.
+  answer: B
+  explanation: 'The manual states: ''A steady yellow signal warns you that the signal
+    is about to turn red. Stop before entering the intersection. If you cannot stop
+    safely, drive carefully through it.'''
+- id: 254
+  category: signs_and_signals
+  question: When facing a steady red arrow traffic signal, what turns are you allowed
+    to make?
+  choices:
+    A: No turns are allowed until the arrow turns green.
+    B: You may only turn in the direction of the arrow after stopping.
+    C: The same turns allowed for a steady circular red signal, after coming to a
+      complete stop.
+    D: You may turn right, but not left.
+  answer: C
+  explanation: 'The manual clarifies for a red arrow: ''The same turns allowed for
+    a steady red signal are allowed for a red arrow'' after stopping, unless a sign
+    prohibits it.'
+- id: 255
+  category: sharing_the_road
+  question: If a 'Right Turns Permitted' sign is posted for a transit-only lane, how
+    should you use the lane to make a right turn?
+  choices:
+    A: You can use the full length of the lane to prepare for your turn.
+    B: You must race to get ahead of any transit vehicles before turning.
+    C: You can briefly use the lane to turn, always yielding to transit vehicles and
+      merging behind them.
+    D: You are not allowed to enter the lane if a bus is visible.
+  answer: C
+  explanation: The manual states you can 'briefly use the transit lane to turn...
+    Always yield to transit vehicles and people riding bicycles in transit lanes.
+    Merge into the lane behind them after they pass.'
+- id: 256
+  category: signs_and_signals
+  question: When you approach a flashing yellow arrow signal, what does this indicate
+    about the status of oncoming traffic?
+  choices:
+    A: Oncoming traffic also has a flashing yellow arrow.
+    B: Oncoming traffic has a steady red signal and must stop.
+    C: Oncoming traffic has a steady green signal.
+    D: Oncoming traffic is preparing to stop for a red signal.
+  answer: C
+  explanation: The manual states that when you have a flashing yellow arrow, you must
+    yield to oncoming traffic, which has a steady green signal.
+- id: 257
+  category: safe_driving_rules
+  question: What is the key difference for a driver turning left when facing a steady
+    green arrow versus a steady circular green signal?
+  choices:
+    A: A green arrow means you must stop and wait for a gap, while a green circle
+      means you can turn immediately.
+    B: A green arrow gives you the right of way for the turn, while a green circle
+      requires you to yield to oncoming traffic and pedestrians.
+    C: Both signals mean the same thing, but the arrow is used in higher traffic areas.
+    D: A green arrow allows a left turn only, while a green circle allows left, right,
+      and straight movements.
+  answer: B
+  explanation: A steady green arrow means you have the right of way for the indicated
+    movement. A steady circular green signal permits a left turn, but you must first
+    yield to pedestrians and oncoming traffic.
+- id: 258
+  category: safe_driving_rules
+  question: When driving on a two-way road that does not have a painted center line,
+    what is your legal responsibility regarding road position?
+  choices:
+    A: You must drive as close to the right edge of the road as possible at all times.
+    B: You may use the center of the road if no traffic is approaching.
+    C: You must give at least half of the road to oncoming traffic.
+    D: The vehicle traveling at a higher speed has the right of way.
+  answer: C
+  explanation: 'The manual states: ''When a road has no center line and traffic moves
+    in opposite directions, drivers must give at least half the road to oncoming traffic.'''
+- id: 259
+  category: safe_driving_rules
+  question: Unless a different speed is posted, what is the maximum legal speed limit
+    on Oregon roads and highways that do not fall under another specific definition
+    (such as a school, business, or residential zone)?
+  choices:
+    A: 45 mph
+    B: 50 mph
+    C: 55 mph
+    D: 65 mph
+  answer: C
+  explanation: The statutory speed limit is 55 mph 'On all roads and highways not
+    meeting any other definition unless otherwise posted.'
+- id: 260
+  category: signs_and_signals
+  question: Which of the following correctly describes a Variable Advisory Speed sign
+    in Oregon?
+  choices:
+    A: It is black and white, says 'speed limit', and is legally enforceable.
+    B: It is yellow, says 'advisory speed', and recommends a speed for current conditions.
+    C: It is orange, says 'work zone', and applies only when workers are present.
+    D: It is blue, says 'minimum speed', and indicates the slowest you can legally
+      drive.
+  answer: B
+  explanation: The manual specifies that 'Variable advisory speed signs are yellow
+    and say, “advisory speed.” These signs recommend a speed based on driving conditions...
+    These are not speed limits...'
+- id: 261
+  category: sharing_the_road
+  question: According to the pedestrian fatality data in the manual, a pedestrian
+    has a 50% risk of death if they are struck by a vehicle traveling at what approximate
+    speed?
+  choices:
+    A: 23 mph
+    B: 35 mph
+    C: 42 mph
+    D: 58 mph
+  answer: C
+  explanation: The chart in the manual shows that a pedestrian hit by a vehicle traveling
+    at 42 mph has a 50% risk of death.
+- id: 262
+  category: signs_and_signals
+  question: In addition to separating traffic moving in opposite directions, what
+    is another primary use for a solid yellow pavement marking?
+  choices:
+    A: To mark the right edge of the roadway.
+    B: To indicate a bicycle lane.
+    C: To mark the left edge of one-way roads and ramps.
+    D: To designate a parking zone.
+  answer: C
+  explanation: The manual states that yellow markings are used to separate traffic
+    moving in opposite directions and 'to mark the left edge of one-way roads and
+    ramps...'
+- id: 263
+  category: safe_driving_rules
+  question: Under which specific circumstance are you legally permitted to drive across
+    a double solid yellow line?
+  choices:
+    A: To pass a slow-moving vehicle that is traveling under 25 mph.
+    B: To make a left turn to enter or exit a roadway, after yielding to oncoming
+      traffic.
+    C: If the road ahead is clear for at least 500 feet.
+    D: You are never permitted to cross a double solid yellow line.
+  answer: B
+  explanation: 'The manual states an exception for double solid yellow lines: ''You
+    may turn left, to enter or exit a roadway, across double solid yellow lines after
+    waiting for oncoming traffic to clear.'''
+- id: 264
+  category: signs_and_signals
+  question: If you are approaching an intersection and the traffic signal light turns
+    to a steady yellow, what is the correct and safest action to take?
+  choices:
+    A: Speed up to clear the intersection before the light turns red.
+    B: Stop immediately, even if you are in the middle of the intersection.
+    C: Stop before entering the intersection if you can do so safely.
+    D: Slow down and prepare to stop, but continue if the car behind you is close.
+  answer: C
+  explanation: 'The manual advises for a steady yellow signal: ''Stop before entering
+    the intersection. If you cannot stop safely, drive carefully through it.'''
+- id: 265
+  category: safe_driving_rules
+  question: If you must drive to the left of the center line to pass an obstruction,
+    such as a parked car or road debris, what must you do first?
+  choices:
+    A: Honk your horn to alert oncoming drivers.
+    B: Yield to any oncoming traffic.
+    C: Turn on your hazard lights.
+    D: Increase your speed to get around the obstruction quickly.
+  answer: B
+  explanation: 'The manual states: ''If you must drive to the left of the center line
+    to go around a road hazard or for any other reason, you must yield to oncoming
+    traffic.'''
+- id: 266
+  category: driver_responsibility
+  question: How does the Oregon Driver Manual define the act of 'yielding'?
+  choices:
+    A: Coming to a complete stop at all times.
+    B: Slowing down or stopping to allow another vehicle or pedestrian to continue
+      safely.
+    C: Giving a hand signal to allow another driver to proceed first.
+    D: Maintaining your speed and position, as you have the right-of-way.
+  answer: B
+  explanation: 'The manual defines yielding as: ''you must slow down or stop to allow
+    another vehicle or pedestrian to continue safely.'''
+- id: 267
+  category: signs_and_signals
+  question: How does a 'Variable Speed Limit' sign differ from a 'Variable Advisory
+    Speed' sign?
+  choices:
+    A: The Variable Speed Limit sign is yellow and recommends a speed, while the advisory
+      sign is black and white and is a legal limit.
+    B: The Variable Speed Limit sign is black and white and is an enforceable speed
+      limit, while the advisory sign is yellow and is a recommendation.
+    C: There is no difference; the terms are used interchangeably.
+    D: The Variable Speed Limit sign is only used in construction zones, while the
+      advisory sign is used for weather conditions.
+  answer: B
+  explanation: 'The manual distinguishes the two: ''Variable Speed Limit'' signs are
+    black and white, say ''speed limit,'' and are enforceable. ''Variable Advisory
+    Speed'' signs are yellow, say ''advisory speed,'' and are recommendations.'
+- id: 268
+  category: signs_and_signals
+  question: If you are driving on a road with a double center line, and the line on
+    your side of the lane is solid yellow, what does this indicate?
+  choices:
+    A: You are on a one-way street.
+    B: You are approaching a stop sign.
+    C: You are in a lane where passing is not allowed.
+    D: You may pass if no oncoming traffic is visible.
+  answer: C
+  explanation: 'The manual explains that for a double center line with one solid and
+    one broken line: ''A solid yellow line on your side of the lane indicates you
+    are not allowed to pass.'''
+- id: 269
+  category: signs_and_signals
+  question: What is the rule for making a turn when you are facing a steady red arrow
+    signal?
+  choices:
+    A: No turns are allowed under any circumstances.
+    B: You may turn after coming to a complete stop and yielding to traffic and pedestrians.
+    C: The same turns allowed for a steady circular red signal are allowed for a red
+      arrow.
+    D: You may only turn if a sign is posted that explicitly permits it.
+  answer: C
+  explanation: 'The manual states: ''A steady red arrow means stop and remain stopped
+    until the signal changes, except for allowed turns on red. The same turns allowed
+    for a steady red signal are allowed for a red arrow.'''
+- id: 270
+  category: signs_and_signals
+  question: What is the rule for driving over yellow diagonal stripes found within
+    a painted median?
+  choices:
+    A: You may drive over them to pass a slow-moving vehicle.
+    B: It is permitted to make a left turn across them if traffic is clear.
+    C: It is illegal to drive in or make a turn across these stripes.
+    D: You may use this area as a temporary waiting spot for a left turn.
+  answer: C
+  explanation: The manual states that yellow diagonal stripes are used to inform you
+    of fixed objects or areas where vehicle use is not allowed. It specifies, 'It
+    is illegal to drive in or make a turn across these stripes.'
+- id: 271
+  category: safe_driving_rules
+  question: What does a double solid white line between lanes of traffic moving in
+    the same direction indicate?
+  choices:
+    A: The lane is ending and you must merge soon.
+    B: Passing is permitted, but discouraged.
+    C: You are not allowed to change lanes.
+    D: The lane is reserved for high-occupancy vehicles.
+  answer: C
+  explanation: According to the manual, a double solid white line means you are not
+    allowed to change lanes and should stay in your lane. It is often accompanied
+    by a sign prohibiting lane changes.
+- id: 272
+  category: signs_and_signals
+  question: You encounter a lane painted solid red with the words 'BUS ONLY' on the
+    pavement. What does this mean?
+  choices:
+    A: It is a fire lane and must be kept clear at all times.
+    B: It is a Transit Only lane, and you may not drive your car in it.
+    C: You may use this lane to make a right turn within 100 feet.
+    D: It is an emergency stopping lane for all vehicles.
+  answer: B
+  explanation: The manual states that a solid red lane is a Transit Only lane, not
+    for cars. These lanes may also say 'BUS ONLY, BUS BIKE ONLY, or LRT'.
+- id: 273
+  category: signs_and_signals
+  question: What is the purpose of white chevrons painted on the road surface?
+  choices:
+    A: To indicate the point at which you are required to yield.
+    B: To inform you of fixed objects or areas where vehicle use is not allowed.
+    C: To mark a pedestrian crosswalk in a high-traffic area.
+    D: To guide you through a complex intersection into the proper lane.
+  answer: B
+  explanation: 'The manual states, ''White chevrons: May be used to inform you of
+    fixed objects in the road ahead or other areas where vehicle use is not allowed.'''
+- id: 274
+  category: defensive_driving
+  question: According to the manual, what is the correct procedure to determine if
+    you are following another vehicle too closely?
+  choices:
+    A: Ensure you can see the top of the vehicle in front of you over your hood.
+    B: Maintain at least three car lengths between your vehicle and the one ahead.
+    C: Honk your horn and see if the driver ahead reacts.
+    D: Count the seconds it takes you to reach a fixed object after the vehicle ahead
+      passes it.
+  answer: D
+  explanation: 'The manual outlines a specific method: ''Watch for when the rear of
+    the vehicle ahead passes something like a sign or pole. Count the seconds it takes
+    you to reach the same spot.'' A count of less than two seconds means you are too
+    close.'
+- id: 275
+  category: defensive_driving
+  question: Why should you increase your following distance when stopped on a hill?
+  choices:
+    A: To get a running start when traffic begins to move.
+    B: Because your brakes are less effective on an incline.
+    C: The vehicle ahead may roll back when it starts to move.
+    D: To allow emergency vehicles to pass between lanes.
+  answer: C
+  explanation: 'The manual lists several situations requiring increased following
+    distance, including: ''When stopped on a hill. The vehicle ahead may roll back
+    when it starts to move.'''
+- id: 276
+  category: defensive_driving
+  question: When driving on a multi-lane street alongside other vehicles, what is
+    the safest way to manage your side space cushion?
+  choices:
+    A: Maintain the exact same speed as the vehicle next to you.
+    B: Drive as close to the right edge of your lane as possible.
+    C: Drop back a little or move ahead of the other vehicle.
+    D: Signal to the other driver to slow down.
+  answer: C
+  explanation: 'To maintain a side space cushion, the manual advises: ''If possible,
+    drop back a little or move ahead of the other vehicle'' to avoid driving directly
+    alongside another car.'
+- id: 277
+  category: defensive_driving
+  question: How should you adjust your lane position when driving next to a row of
+    parked cars?
+  choices:
+    A: Move to the far left of your lane, crossing the center line if necessary.
+    B: Maintain your position in the center of the lane and increase your speed.
+    C: Move away from the parked cars, but without leaving your lane.
+    D: Sound your horn continuously to alert people near the parked cars.
+  answer: C
+  explanation: 'The manual recommends: ''Keep extra space between your vehicle and
+    parked cars by moving away from them without leaving your lane'' to avoid suddenly
+    opened doors or pedestrians.'
+- id: 278
+  category: sharing_the_road
+  question: If you are on a freeway and see a vehicle entering from an on-ramp, what
+    should you do to help them merge safely?
+  choices:
+    A: Speed up to get past the on-ramp before they enter.
+    B: Maintain your speed and lane position, as they are required to yield.
+    C: Move over a lane to your left, if there is no one next to you.
+    D: Flash your high beams to signal that they should wait.
+  answer: C
+  explanation: The manual states you should 'Make room for vehicles entering freeways.
+    If there is no one next to you, move over a lane.'
+- id: 279
+  category: defensive_driving
+  question: How can you use your vehicle's equipment to help maintain a safe space
+    cushion behind you when you need to slow down or stop?
+  choices:
+    A: Turn on your emergency flashers.
+    B: Gently press the brake to activate your brake lights.
+    C: Tap your horn lightly several times.
+    D: Flash your headlights on and off.
+  answer: B
+  explanation: The manual suggests you can help keep the driver behind you at a safe
+    distance by 'signaling in advance by gently pressing the brake when you have to
+    slow down or stop. Your brake lights will alert drivers behind you that you are
+    slowing down.'
+- id: 280
+  category: safe_driving_rules
+  question: What is the rule regarding crossing a wide solid white line, such as one
+    used for a turn lane or bike lane?
+  choices:
+    A: It is strictly prohibited.
+    B: It is permitted but discouraged.
+    C: It is only permitted in an emergency.
+    D: It is permitted without restriction.
+  answer: B
+  explanation: The manual states, 'Crossing a wide solid white line is permitted but
+    discouraged.' This is different from a double solid white line, which you are
+    not allowed to cross.
+- id: 281
+  category: signs_and_signals
+  question: What does a dotted white line on a freeway entrance ramp indicate?
+  choices:
+    A: The lane is about to end and you must exit.
+    B: You are entering the freeway and must merge into traffic.
+    C: The lane is for carpools only during peak hours.
+    D: It marks the beginning of a reduced speed zone.
+  answer: B
+  explanation: The manual specifies, 'When used at a freeway entrance ramp, it informs
+    you that you are entering the freeway and must merge into traffic.'
+- id: 282
+  category: signs_and_signals
+  question: If you see dotted white lines painted within an intersection, what is
+    their purpose?
+  choices:
+    A: To mark a temporary crosswalk.
+    B: To indicate where you must stop if the light turns red.
+    C: To show where parking is allowed during off-peak hours.
+    D: To help guide you through the intersection into the proper lane.
+  answer: D
+  explanation: 'The manual explains one use of dotted white lines: ''When used within
+    an intersection, it will help guide you through the intersection into the proper
+    lane.'''
+- id: 283
+  category: safe_driving_rules
+  question: Under what condition may you cross a painted median that has double solid
+    yellow lines on both sides?
+  choices:
+    A: To pass a vehicle that is turning left.
+    B: To make a left turn after waiting for oncoming traffic to clear.
+    C: To make a U-turn if no 'No U-Turn' sign is posted.
+    D: You may never legally cross a painted median.
+  answer: B
+  explanation: The manual states, 'You may make a left turn across a painted median
+    after waiting for oncoming traffic to clear. You may not use a painted median
+    as a turn lane.'
+- id: 284
+  category: signs_and_signals
+  question: What is the primary purpose of a solid white line used as an edge or fog
+    line?
+  choices:
+    A: To separate lanes of traffic going in opposite directions.
+    B: To indicate that passing is not allowed.
+    C: To help drivers stay on the road.
+    D: To mark the area where parking is permitted.
+  answer: C
+  explanation: The manual defines a solid white line as being 'used for an edge or
+    fog line to help drivers to stay on the road.'

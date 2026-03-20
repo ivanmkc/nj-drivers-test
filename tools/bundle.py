@@ -47,16 +47,12 @@ def build_bundle():
             "code": state_code,
             "name": cfg["name"],
             "agency": cfg["agency"],
-            "passingScorePct": cfg["passing_score_pct"],
-            "testQuestionCount": cfg["test_question_count"],
-            "languages": sorted(langs.keys()),
-            "totalQuestions": total,
-            "hasQuestions": total > 0,
+            "passing_score_pct": cfg["passing_score_pct"],
+            "test_question_count": cfg["test_question_count"],
+            "languages": langs,
         })
-        if langs:
-            questions[state_code] = langs
 
-    return {"states": states, "questions": questions}
+    return {"states": states}
 
 
 def write_bundle(bundle):
@@ -95,7 +91,8 @@ def copy_to_apps():
 if __name__ == "__main__":
     print("Building bundle...")
     bundle = build_bundle()
-    print(f"  {len(bundle['states'])} states, {sum(len(ls) for ls in bundle['questions'].values())} languages")
+    total_langs = sum(len(s["languages"]) for s in bundle["states"])
+    print(f"  {len(bundle['states'])} states, {total_langs} language files")
     write_bundle(bundle)
     print("Copying to apps...")
     copy_to_apps()

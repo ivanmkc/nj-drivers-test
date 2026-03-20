@@ -1,6 +1,6 @@
 metadata:
   source: 2025 Virginia Driver's Manual (dmv.virginia.gov)
-  total_questions: 234
+  total_questions: 279
   categories:
   - alcohol_drugs_health
   - defensive_driving
@@ -2487,19 +2487,6 @@ questions:
     yield the right-of-way to traffic and pedestrians. You must stop if necessary
     to let others pass safely.
   id: 202
-- image: do_not_enter.png
-  category: signs_and_signals
-  question: What does this sign mean?
-  choices:
-    A: Road closed ahead
-    B: No parking allowed
-    C: Do not enter this roadway
-    D: Dead end ahead
-  answer: C
-  explanation: A red and white DO NOT ENTER sign means you must not enter the road
-    or ramp where this sign is posted. It is usually seen at freeway off-ramps or
-    one-way streets where entering would put you in the path of oncoming traffic.
-  id: 203
 - image: wrong_way.png
   category: signs_and_signals
   question: If you see this sign, what should you do?
@@ -2512,31 +2499,7 @@ questions:
   explanation: A red and white WRONG WAY sign means you are traveling against traffic
     on a one-way road or highway ramp. Stop immediately and safely turn around or
     back up.
-  id: 204
-- image: one_way_left.png
-  category: signs_and_signals
-  question: What does this sign indicate?
-  choices:
-    A: Left turn only
-    B: Traffic flows in one direction — to the left
-    C: Keep left of the median
-    D: Highway exit to the left
-  answer: B
-  explanation: A black and white ONE WAY sign with an arrow indicates that traffic
-    on this street moves in only one direction — the direction the arrow points.
-  id: 205
-- image: no_u_turn.png
-  category: signs_and_signals
-  question: What does this sign prohibit?
-  choices:
-    A: Right turns
-    B: Left turns
-    C: U-turns
-    D: Passing other vehicles
-  answer: C
-  explanation: A white regulatory sign with a U-turn arrow crossed out means U-turns
-    are prohibited at this location.
-  id: 206
+  id: 203
 - image: no_left_turn.png
   category: signs_and_signals
   question: What action is prohibited by this sign?
@@ -2548,44 +2511,7 @@ questions:
   answer: B
   explanation: A white regulatory sign showing a left turn arrow crossed out means
     left turns are not allowed at this intersection.
-  id: 207
-- image: no_right_turn.png
-  category: signs_and_signals
-  question: What does this sign mean?
-  choices:
-    A: No U-turn allowed
-    B: No left turn allowed
-    C: No right turn allowed
-    D: No passing allowed
-  answer: C
-  explanation: A white regulatory sign showing a right turn arrow crossed out means
-    right turns are prohibited at this location.
-  id: 208
-- image: no_passing.png
-  category: signs_and_signals
-  question: What does this sign indicate?
-  choices:
-    A: Road narrows ahead
-    B: Do not pass other vehicles in this zone
-    C: Two-way traffic ahead
-    D: Keep right
-  answer: B
-  explanation: A yellow with black lettering NO PASSING ZONE pennant-shaped sign means
-    you are not allowed to pass other vehicles in this area. It marks the beginning
-    of a no-passing zone.
-  id: 209
-- image: keep_right.png
-  category: signs_and_signals
-  question: What does this sign instruct drivers to do?
-  choices:
-    A: Merge right
-    B: Turn right only
-    C: Keep to the right of a divider or obstruction
-    D: Right lane ends ahead
-  answer: C
-  explanation: A white regulatory KEEP RIGHT sign with an arrow means you must keep
-    to the right side of a traffic island, median, or obstruction.
-  id: 210
+  id: 204
 - image: speed_limit_25.png
   category: signs_and_signals
   question: What type of sign is this, based on its shape and color?
@@ -2597,7 +2523,7 @@ questions:
   answer: C
   explanation: White rectangular signs with black lettering are regulatory signs.
     Speed limit signs tell you the maximum legal speed for the area under ideal conditions.
-  id: 211
+  id: 205
 - image: deer_crossing.png
   category: signs_and_signals
   question: What does this yellow diamond-shaped sign warn you about?
@@ -2610,19 +2536,7 @@ questions:
   explanation: A yellow diamond-shaped sign with a deer silhouette warns that deer
     frequently cross the road in this area. Slow down and watch for animals, especially
     at dawn and dusk.
-  id: 212
-- image: pedestrian_crossing.png
-  category: signs_and_signals
-  question: What does this sign warn you about?
-  choices:
-    A: School zone ahead
-    B: Pedestrian crossing ahead
-    C: Hiking trail nearby
-    D: Bus stop ahead
-  answer: B
-  explanation: A yellow diamond-shaped sign with a pedestrian figure warns of a pedestrian
-    crossing ahead. Be prepared to stop for pedestrians crossing the road.
-  id: 213
+  id: 206
 - image: school_zone.png
   category: signs_and_signals
   question: What does the shape of this sign indicate?
@@ -2634,19 +2548,7 @@ questions:
   answer: C
   explanation: A pentagon-shaped (5-sided) fluorescent yellow-green sign indicates
     a school zone or school crossing. Slow down and watch for children.
-  id: 214
-- image: railroad_crossing.png
-  category: signs_and_signals
-  question: What does this circular yellow sign warn you about?
-  choices:
-    A: A roundabout ahead
-    B: A hospital zone
-    C: A railroad crossing ahead
-    D: A no-passing zone
-  answer: C
-  explanation: A circular yellow sign with a black X and two R's is the advance warning
-    sign for a railroad crossing ahead. Slow down, look, and listen for trains.
-  id: 215
+  id: 207
 - image: railroad_crossbuck.png
   category: signs_and_signals
   question: Where would you typically see this sign?
@@ -2658,19 +2560,7 @@ questions:
   answer: B
   explanation: The white X-shaped railroad crossbuck sign is placed at railroad crossings.
     It means you must yield to trains. If a train is approaching, you must stop.
-  id: 216
-- image: curve_right.png
-  category: signs_and_signals
-  question: What does this yellow diamond-shaped sign indicate?
-  choices:
-    A: Road ends ahead
-    B: Right turn required
-    C: A curve to the right ahead
-    D: Detour ahead
-  answer: C
-  explanation: A yellow diamond-shaped sign with a curved arrow warns of a curve in
-    the road ahead. Slow down before entering the curve.
-  id: 217
+  id: 208
 - image: sharp_turn_right.png
   category: signs_and_signals
   question: How does this sign differ from a curve sign?
@@ -2683,55 +2573,7 @@ questions:
   explanation: A sharp turn sign (with a more angled arrow) indicates a sharper turn
     than a curve sign. You need to reduce your speed more significantly before this
     turn.
-  id: 218
-- image: reverse_curve.png
-  category: signs_and_signals
-  question: What road condition does this sign warn about?
-  choices:
-    A: A winding road
-    B: A single curve ahead
-    C: A series of two curves in opposite directions
-    D: A roundabout ahead
-  answer: C
-  explanation: A reverse curve sign warns of two curves in opposite directions ahead.
-    Slow down and be prepared for the road to curve first one way, then the other.
-  id: 219
-- image: winding_road.png
-  category: signs_and_signals
-  question: What does this sign warn you to expect?
-  choices:
-    A: A single sharp curve
-    B: A slippery road surface
-    C: A series of curves or turns ahead
-    D: A hill ahead
-  answer: C
-  explanation: A winding road sign warns of a series of curves or turns ahead. Reduce
-    your speed and be alert for changing road conditions.
-  id: 220
-- image: merge.png
-  category: signs_and_signals
-  question: What does this sign tell you to prepare for?
-  choices:
-    A: A lane ending
-    B: Traffic merging from another road
-    C: A divided highway beginning
-    D: A road narrowing to one lane
-  answer: B
-  explanation: A yellow diamond-shaped merge sign warns that traffic from another
-    road will be merging into your lane. Be prepared to adjust your speed and position.
-  id: 221
-- image: road_narrows.png
-  category: signs_and_signals
-  question: What does this sign warn about?
-  choices:
-    A: Bridge ahead
-    B: Road narrows ahead
-    C: Lane ends
-    D: Divided highway ends
-  answer: B
-  explanation: This warning sign indicates the road ahead becomes narrower. Be prepared
-    for reduced road width and adjust your lane position.
-  id: 222
+  id: 209
 - image: divided_highway.png
   category: signs_and_signals
   question: What does this sign indicate is ahead?
@@ -2743,130 +2585,7 @@ questions:
   answer: C
   explanation: This sign warns that the road ahead becomes a divided highway with
     a median or barrier separating opposing traffic. Keep to the right.
-  id: 223
-- image: divided_highway_ends.png
-  category: signs_and_signals
-  question: What does this sign warn you about?
-  choices:
-    A: A divided highway begins
-    B: The divided highway ends and two-way traffic resumes
-    C: A merge area ahead
-    D: Road construction ahead
-  answer: B
-  explanation: This sign warns that the divided highway is ending. Opposing traffic
-    will no longer be separated by a median. Be prepared for two-way traffic.
-  id: 224
-- image: two_way_traffic.png
-  category: signs_and_signals
-  question: What does this sign warn you about?
-  choices:
-    A: A divided highway begins
-    B: A passing zone ahead
-    C: Two-way traffic ahead — traffic moves in both directions
-    D: A lane shift ahead
-  answer: C
-  explanation: This sign warns of two-way traffic ahead. You may be leaving a one-way
-    road or divided highway and will encounter vehicles traveling in the opposite
-    direction.
-  id: 225
-- image: slippery_when_wet.png
-  category: signs_and_signals
-  question: What road condition does this sign warn about?
-  choices:
-    A: Icy road conditions
-    B: The road may be slippery when wet
-    C: Winding road ahead
-    D: Uneven pavement
-  answer: B
-  explanation: A slippery when wet sign warns that the road surface may become very
-    slippery during rain or wet conditions. Reduce your speed and avoid sudden braking
-    or turning.
-  id: 226
-- image: hill.png
-  category: signs_and_signals
-  question: What does this sign warn you about?
-  choices:
-    A: A bump in the road
-    B: An uneven road surface
-    C: A steep hill or grade ahead
-    D: Road construction
-  answer: C
-  explanation: This sign warns of a steep hill or grade ahead. You may need to adjust
-    your speed and shift to a lower gear, especially in trucks or when towing.
-  id: 227
-- image: signal_ahead.png
-  category: signs_and_signals
-  question: What does this sign warn you to prepare for?
-  choices:
-    A: A stop sign ahead
-    B: A traffic signal ahead
-    C: A school crossing
-    D: A police checkpoint
-  answer: B
-  explanation: This sign warns of a traffic signal ahead. Be prepared to stop if the
-    light is red or yellow. This sign is often placed where the signal may not be
-    visible from a distance.
-  id: 228
-- image: stop_ahead.png
-  category: signs_and_signals
-  question: What does this sign tell you to expect ahead?
-  choices:
-    A: A yield sign
-    B: A traffic signal
-    C: A stop sign where you must stop
-    D: A speed bump
-  answer: C
-  explanation: This sign warns that there is a stop sign ahead. Begin slowing down
-    and prepare to come to a complete stop at the stop sign.
-  id: 229
-- image: cross_road.png
-  category: signs_and_signals
-  question: What does this sign warn about?
-  choices:
-    A: A railroad crossing ahead
-    B: A crossroad or intersection ahead
-    C: A hospital ahead
-    D: A pedestrian crossing
-  answer: B
-  explanation: This sign warns that a crossroad or 4-way intersection is ahead. Watch
-    for traffic entering from side roads.
-  id: 230
-- image: side_road.png
-  category: signs_and_signals
-  question: What does this sign warn you about?
-  choices:
-    A: A T-intersection ahead
-    B: A side road entering from the right
-    C: A curve in the road
-    D: A dead end
-  answer: B
-  explanation: This sign warns of a side road entering from the right. Watch for vehicles
-    entering the highway from the side road.
-  id: 231
-- image: added_lane.png
-  category: signs_and_signals
-  question: What does this sign mean?
-  choices:
-    A: Lanes are merging
-    B: A lane is ending
-    C: A new lane is being added — no merging needed
-    D: Right turn required
-  answer: C
-  explanation: An added lane sign means a new lane is joining the highway without
-    requiring merging. Traffic entering from the ramp has its own new lane.
-  id: 232
-- image: no_parking.png
-  category: signs_and_signals
-  question: What does this sign prohibit?
-  choices:
-    A: Stopping at any time
-    B: Parking in this area
-    C: Standing or idling
-    D: Loading or unloading
-  answer: B
-  explanation: A red and white NO PARKING sign means you cannot park your vehicle
-    in this area. You may briefly stop to load or unload passengers.
-  id: 233
+  id: 210
 - image: handicap_parking.png
   category: signs_and_signals
   question: Who is allowed to park in a space marked with this sign?
@@ -2879,4 +2598,862 @@ questions:
   explanation: A blue sign with the wheelchair symbol marks parking reserved for persons
     with disabilities. Only vehicles displaying a valid disability parking placard
     or license plate may park in these spaces. Violations carry heavy fines.
-  id: 234
+  id: 211
+- id: 212
+  category: alcohol_drugs_health
+  question: According to the driver's manual, how many people died in alcohol-related
+    crashes in Virginia in 2024?
+  choices:
+    A: '100'
+    B: '318'
+    C: '410'
+    D: '50'
+  answer: B
+  explanation: The introductory letter states that in 2024, 318 people died in alcohol-related
+    crashes in Virginia.
+- id: 213
+  category: safe_driving_rules
+  question: According to the manual's Table of Contents, in which section would you
+    find information about the danger of 'Over-correcting'?
+  choices:
+    A: Section 1 – Testing
+    B: Section 2 – Signals, Signs and Pavement Markings
+    C: Section 3 – Safe Driving
+    D: Section 4 – Seat Belts, Airbags, and Child Safety Seats
+  answer: C
+  explanation: The Table of Contents lists 'Over-correcting' on page 18, which falls
+    under Section 3 – Safe Driving.
+- id: 214
+  category: driver_responsibility
+  question: Who is identified in the introductory letter as the DMV Commissioner who
+    authored the message to new drivers?
+  choices:
+    A: The Governor of Virginia
+    B: The Secretary of Transportation
+    C: Gerald F. Lackey, Ph.D.
+    D: The Chief of the Virginia State Police
+  answer: C
+  explanation: The introductory letter to new drivers is signed by 'Gerald F. Lackey,
+    Ph.D. DMV Commissioner.'
+- id: 215
+  category: safe_driving_rules
+  question: The introductory letter notes that men are disproportionately killed in
+    crashes. Which of the following is NOT listed as a common deadly driving habit
+    for this group in the manual's introduction?
+  choices:
+    A: Driving too fast
+    B: Driving under the influence
+    C: Failing to yield the right-of-way
+    D: Not wearing seat belts
+  answer: C
+  explanation: The manual's introduction states, 'Men are driving too fast, they’re
+    driving under the influence, they’re driving distracted and they’re not wearing
+    their seat belts.' Failing to yield is not specifically mentioned in this list.
+- id: 216
+  category: driver_responsibility
+  question: According to the introductory letter, what is the stated goal of the Virginia
+    DMV Highway Safety Office?
+  choices:
+    A: To issue driver's licenses and vehicle titles.
+    B: To use data to understand deadly driving habits and keep drivers safe.
+    C: To collect traffic fines and manage the demerit point system.
+    D: To design and maintain Virginia's highway system.
+  answer: B
+  explanation: The introduction states, 'At the Virginia DMV Highway Safety Office,
+    we study data to understand the driving habits that are most likely to kill Virginians.
+    Our goal is to use this information to keep you safe.'
+- id: 217
+  category: safe_driving_rules
+  question: In the Virginia Driver's Manual, information on driving in fog, rain,
+    and snow is grouped under which main heading in the Table of Contents?
+  choices:
+    A: Dangerous driving behaviors
+    B: Visibility
+    C: Hazardous conditions
+    D: Sharing the road
+  answer: C
+  explanation: The Table of Contents shows that Fog, Rain, and Snow are sub-topics
+    under the main heading 'Hazardous conditions' on page 23.
+- id: 218
+  category: driver_responsibility
+  question: The introductory letter concludes by emphasizing a core principle for
+    all road users. What is this principle?
+  choices:
+    A: The driver is always right.
+    B: Speed limits are only suggestions.
+    C: Safety is everyone’s responsibility.
+    D: Passing is always permitted on the left.
+  answer: C
+  explanation: The letter concludes with the statement, 'Safety is everyone’s responsibility
+    and, as a new driver, it’s now yours too.'
+- id: 219
+  category: vehicle_information
+  question: According to the Table of Contents, which section of the driver's manual
+    is dedicated entirely to occupant protection systems like seat belts and air bags?
+  choices:
+    A: Section 1
+    B: Section 2
+    C: Section 3
+    D: Section 4
+  answer: D
+  explanation: The Table of Contents clearly shows that Section 4 is titled 'Seat
+    Belts, Airbags, and Child Safety Seats.'
+- id: 220
+  category: alcohol_drugs_health
+  question: According to the introductory letter in the driver's manual, what percentage
+    of drunk driving crashes are considered preventable?
+  choices:
+    A: 50%
+    B: 75%
+    C: 90%
+    D: 100%
+  answer: D
+  explanation: The manual states, 'Drunk driving crashes are 100% preventable...'
+- id: 221
+  category: signs_and_signals
+  question: In the driver's manual, traffic signs are broken down into sub-categories.
+    Under which section would you find these categories, such as 'Regulatory signs'
+    and 'Warning signs'?
+  choices:
+    A: Section 1 – Testing
+    B: Section 2 – Signals, Signs and Pavement Markings
+    C: Section 3 – Safe Driving
+    D: Section 4 – Seat Belts, Airbags, and Child Safety Seats
+  answer: B
+  explanation: The Table of Contents shows that 'Regulatory signs' and 'Warning signs'
+    are sub-topics within Section 2 – Signals, Signs and Pavement Markings.
+- id: 222
+  category: safe_driving_rules
+  question: The manual's introduction highlights several deadly driving habits. Which
+    of the following is one of the specific habits mentioned as a key to protecting
+    your life?
+  choices:
+    A: Avoiding highways during rush hour
+    B: Planning ahead for a sober ride home
+    C: Only driving during daylight hours
+    D: Using a GPS for all trips
+  answer: B
+  explanation: The introduction lists five key ways to protect your life, including
+    'Plan ahead for a sober ride home if you’re going out drinking.'
+- id: 223
+  category: driver_responsibility
+  question: According to the Table of Contents, information on what to do after 'Traffic
+    crashes' and how to handle 'Deer/large animal hazards' can be found in which section?
+  choices:
+    A: Section 1 – Testing
+    B: Section 2 – Pavement Markings
+    C: Section 3 – Safe Driving
+    D: Section 4 – Child Safety Seats
+  answer: C
+  explanation: The Table of Contents lists both 'Traffic crashes' and 'Deer/large
+    animal hazards' on page 25, under Section 3 – Safe Driving.
+- id: 224
+  category: driver_testing
+  question: According to the Table of Contents, Section 1 of the manual covers Testing.
+    Which of the following is NOT listed as one of the three main testing components
+    in this section?
+  choices:
+    A: Two-part knowledge exam
+    B: Road skills test
+    C: Vision screening
+    D: Drug screening
+  answer: D
+  explanation: The Table of Contents for Section 1 lists 'Two-part knowledge exam,'
+    'Road skills test,' and 'Vision screening.' It does not list drug screening.
+- id: 225
+  category: driver_responsibility
+  question: The introductory letter from the DMV Commissioner states that the 'most
+    important part' of the driver's manual is about what topic?
+  choices:
+    A: The specific point values for traffic violations
+    B: The actions you must take to protect your life while driving
+    C: The different shapes and colors of traffic signs
+    D: The process for renewing your license online
+  answer: B
+  explanation: The introduction states, '...what you’re about to read in the next
+    few paragraphs is the most important part of this driver’s manual – the actions
+    you must take to protect your life while driving.'
+- id: 226
+  category: safe_driving_rules
+  question: The introduction from the DMV Commissioner highlights that a specific
+    demographic accounted for 71% of all crash fatalities in Virginia in 2024. Which
+    demographic is this?
+  choices:
+    A: Teenage drivers
+    B: Senior citizens
+    C: Men
+    D: Motorcyclists
+  answer: C
+  explanation: The manual's introduction states, '71% of all people killed in crashes
+    in 2024 in Virginia were men.'
+- id: 227
+  category: driver_testing
+  question: According to the manual, you are exempt from taking the two-part knowledge
+    exam if you hold a valid driver's license from which of the following countries?
+  choices:
+    A: The United Kingdom
+    B: Mexico
+    C: Germany
+    D: Australia
+  answer: C
+  explanation: The manual states that you do not need to take the knowledge exam if
+    you hold a valid driver's license from another U.S. state, Canada, Germany, France,
+    or the Republic of Korea.
+- id: 228
+  category: driver_testing
+  question: In addition to several other countries, Virginia exempts drivers with
+    a valid license from which of the following countries from the road skills test?
+  choices:
+    A: Taiwan
+    B: Japan
+    C: Spain
+    D: Italy
+  answer: A
+  explanation: The manual specifies that you will need to take the road skills test
+    if you do not hold a valid driver’s license from another U.S. state, Canada, Germany,
+    France, the Republic of Korea, or Taiwan.
+- id: 229
+  category: driver_testing
+  question: Which of the following is true regarding language options for the Virginia
+    knowledge exam?
+  choices:
+    A: You must bring your own certified translator for any non-English language.
+    B: The exam is only offered in English and Spanish.
+    C: Translators are not permitted for tests in languages that are already offered
+      by the DMV.
+    D: American Sign Language is not an available option for the exam.
+  answer: C
+  explanation: The manual states that the exam is offered in many different languages
+    and American Sign Language, and therefore, 'translators may not be used for tests
+    in offered languages.'
+- id: 230
+  category: driver_testing
+  question: If you fail the knowledge exam three times and must complete the 8-hour
+    course based on the Virginia Driver's Manual, what is the rule regarding the course
+    completion date?
+  choices:
+    A: The course must be completed within 30 days of the third failure.
+    B: The course completion date must be after the date of the third failure.
+    C: You must enroll in the course before your third attempt.
+    D: The course can be completed at any time, before or after the third failure.
+  answer: B
+  explanation: The manual specifies for both age groups that 'The completion date
+    of the driver’s manual course must be after the date that you failed the knowledge
+    exam the third time.'
+- id: 231
+  category: driver_testing
+  question: Which of the following actions is explicitly prohibited while taking the
+    Virginia knowledge exam?
+  choices:
+    A: Asking the DMV staff for clarification on a question's wording.
+    B: Getting help while taking the exam.
+    C: Requesting an audio version of the test.
+    D: Taking the exam once per business day.
+  answer: B
+  explanation: The manual lists several prohibited actions, including 'get help while
+    taking the exam'.
+- id: 232
+  category: driver_testing
+  question: When providing a vehicle for the road skills test, which of the following
+    is a specific requirement mentioned in the manual?
+  choices:
+    A: The vehicle must be less than 10 years old.
+    B: The vehicle must have a working speedometer.
+    C: The vehicle must have a GPS navigation system.
+    D: The vehicle must be a four-door sedan.
+  answer: B
+  explanation: The manual states the vehicle must have 'working brakes, safety belts,
+    horn, lights, turn signals, mirrors and speedometer.'
+- id: 233
+  category: driver_testing
+  question: What is the purpose of the DMV form CSMA 19, the behind-the-wheel checklist?
+  choices:
+    A: It serves as a temporary learner's permit.
+    B: It is a medical certification form required for all drivers.
+    C: A licensed driver uses it to certify that an applicant has practiced specific
+      driving tasks.
+    D: It is an application to take the driver education course online.
+  answer: C
+  explanation: The manual describes the CSMA 19 as a checklist where 'A licensed driver
+    will need to certify on the form that he/she has been with you while you practiced
+    the driving tasks.'
+- id: 234
+  category: driver_testing
+  question: For driver's license applicants under the age of 18, where is the road
+    skills test typically administered?
+  choices:
+    A: At any DMV customer service center.
+    B: Only at a designated DMV testing facility.
+    C: As part of their public, private, or commercial driver education course.
+    D: By a law enforcement officer.
+  answer: C
+  explanation: The manual states, 'For applicants under 18, the road skills test will
+    be given as part of the driver education course taken at a public, private or
+    commercial driving school.'
+- id: 235
+  category: driver_testing
+  question: If a driver's license applicant younger than 18 fails the knowledge exam
+    three times, what must they do before taking the 8-hour driver's manual course?
+  choices:
+    A: Wait a period of 90 days.
+    B: Obtain a new learner's permit.
+    C: Present their certificate of completion for the classroom component of driver
+      education.
+    D: Complete 20 hours of supervised driving practice.
+  answer: C
+  explanation: The manual states that before taking the course, customers younger
+    than 18 must 'present your certificate of completion for the classroom component
+    of driver education to the driver training school that will be conducting the
+    driver’s manual course.'
+- id: 236
+  category: driver_testing
+  question: The Virginia Driver's Manual states that when testing, you cannot give
+    another person exam questions or answers. What is another explicitly forbidden
+    action?
+  choices:
+    A: Wearing headphones to block out noise.
+    B: Bringing a bottle of water into the testing area.
+    C: Trying to get test questions or answers before the exam.
+    D: Asking to retake the test on a different day if you fail.
+  answer: C
+  explanation: The manual explicitly states that when testing, you cannot 'try to
+    get test questions or answers before the exam'.
+- id: 237
+  category: driver_testing
+  question: To be eligible to take the road skills test at a DMV, the examiner will
+    require you to either present a driver's education certificate of completion or
+    what alternative?
+  choices:
+    A: Pay an additional testing fee.
+    B: Provide a written recommendation from a licensed driver.
+    C: Complete a behind-the-wheel checklist (form CSMA 19).
+    D: Pass a pre-test vehicle inspection performed by a certified mechanic.
+  answer: C
+  explanation: The manual states that to take the road skills test, the DMV examiner
+    requires you to either 'present an acceptable driver’s education certificate of
+    completion, or complete a behind-the-wheel checklist (DMV form CSMA 19).'
+- id: 238
+  category: driver_testing
+  question: The two-part knowledge exam tests your knowledge of traffic signs, motor
+    vehicle laws, and safe driving. From where are the exam questions taken?
+  choices:
+    A: The Virginia state vehicle code.
+    B: Federal transportation guidelines.
+    C: Information in the Virginia Driver's Manual.
+    D: A national standardized test question bank.
+  answer: C
+  explanation: The manual specifies, 'Exam questions are taken from information in
+    this manual.'
+- id: 239
+  category: driver_testing
+  question: When a licensed driver certifies the behind-the-wheel checklist (CSMA
+    19), what are they confirming in addition to observing the applicant's practice?
+  choices:
+    A: That the applicant's vehicle is safe for the road.
+    B: That the applicant has passed a professional driving course.
+    C: That the applicant has insurance.
+    D: That the applicant has complied with all learner’s permit requirements.
+  answer: D
+  explanation: The manual states a licensed driver certifies 'that he/she has been
+    with you while you practiced the driving tasks and that you have complied with
+    all requirements for learner’s permit holders while operating a motor vehicle.'
+- id: 240
+  category: driver_testing
+  question: For home-schooled applicants seeking information about taking the road
+    skills test, what specific document does the manual recommend they refer to?
+  choices:
+    A: The DMV form CSMA 19.
+    B: The Home-Schooled In-Car Driver Education Information Sheet (HS 3).
+    C: The Virginia Driver's Manual, Section 8.
+    D: The public school system's driver education curriculum.
+  answer: B
+  explanation: The manual states, 'If you are home schooled, refer to the Home-Schooled
+    In-Car Driver Education Information Sheet (HS 3) for more information about taking
+    the road skills test.'
+- id: 241
+  category: driver_testing
+  question: For an applicant age 18 or older who has not completed a driver's education
+    course, what is the requirement before they can take the road skills test for
+    the first time?
+  choices:
+    A: They must hold a learner's permit for 30 days.
+    B: They must hold a learner's permit for 60 days.
+    C: They must pass the vision screening twice.
+    D: They must complete an online safety course.
+  answer: B
+  explanation: Applicants age 18 or older must hold the learner’s permit for 60 days
+    prior to the first road skills test or complete a course of driver’s education.
+- id: 242
+  category: driver_testing
+  question: According to the manual, how frequently may an applicant take the road
+    skills test?
+  choices:
+    A: Twice per business day.
+    B: Once per week.
+    C: Only once per business day.
+    D: As many times as they can schedule it.
+  answer: C
+  explanation: The manual states, 'The test may be taken only once per business day.'
+- id: 243
+  category: license_system
+  question: What is the minimum horizontal vision required for a license restricted
+    to daylight hours only?
+  choices:
+    A: 40 degrees or better
+    B: 70 degrees or better
+    C: 100 degrees or better
+    D: 110 degrees or better
+  answer: B
+  explanation: To qualify for a license restricted to daylight hours only, you must
+    have 70 degrees, or better, horizontal vision.
+- id: 244
+  category: signs_and_signals
+  question: Under Virginia law, what is the only situation in which you may legally
+    make a turn at a red arrow light?
+  choices:
+    A: After coming to a complete stop, if the way is clear.
+    B: If you are turning from a one-way street onto another one-way street.
+    C: If a sign is posted at the intersection specifically allowing the turn after
+      a stop.
+    D: During daylight hours only.
+  answer: C
+  explanation: You may not proceed in the direction of a red arrow unless a sign is
+    posted at the intersection that reads 'Right on Red Arrow After Stop' or 'Left
+    on Red Arrow After Stop.'
+- id: 245
+  category: signs_and_signals
+  question: What is the correct procedure when you approach an intersection with a
+    flashing red arrow?
+  choices:
+    A: Slow down and proceed with caution without stopping.
+    B: Stop completely, yield to traffic and pedestrians, then proceed when clear.
+    C: Stop and wait for the light to turn green.
+    D: Treat it as a yield sign and only stop if necessary.
+  answer: B
+  explanation: The manual states that at a flashing red arrow, you must come to a
+    complete stop, yield the right-of-way to vehicles and pedestrians, and proceed
+    in the direction of the arrow when the way is clear.
+- id: 246
+  category: signs_and_signals
+  question: What must a driver do when encountering a flashing red light at a railroad
+    crossing?
+  choices:
+    A: Slow down and look for a train before crossing.
+    B: Stop only if a train is visibly approaching.
+    C: Come to a complete stop, even if you don't see a train.
+    D: Proceed with caution if the crossing gates are up.
+  answer: C
+  explanation: At a railroad crossing with a flashing red light, you must come to
+    a complete stop even if you don’t see a train.
+- id: 247
+  category: license_system
+  question: If you have laser surgery to correct your vision and want to remove the
+    'C' restriction from your license, what must you do?
+  choices:
+    A: Mail a letter from your doctor to the DMV headquarters.
+    B: Simply stop wearing your glasses while driving.
+    C: Wait for your license to expire and renew it in person.
+    D: Visit a DMV center and pass the vision screening without lenses or submit a
+      Vision Screening Report (MED 4).
+  answer: D
+  explanation: To have the 'C' restriction removed after laser surgery, you must visit
+    a DMV customer service center and pass the vision screening without wearing glasses
+    or contact lenses or submit a Vision Screening Report (MED 4).
+- id: 248
+  category: license_system
+  question: What is the minimum horizontal vision standard for an unrestricted Virginia
+    driver's license?
+  choices:
+    A: 70 degrees in one or both eyes.
+    B: 90 degrees in one or both eyes.
+    C: 110 degrees in one or both eyes.
+    D: 140 degrees in one or both eyes.
+  answer: C
+  explanation: The vision standards for an unrestricted driver's license are 20/40
+    or better vision and 110 degrees, or better, horizontal vision in one or both
+    eyes.
+- id: 249
+  category: sharing_the_road
+  question: When preparing to make a legal turn on a red light, what must you do immediately
+    after coming to a complete stop?
+  choices:
+    A: Honk your horn to alert pedestrians.
+    B: Turn on your hazard lights.
+    C: Inch forward into the crosswalk to get a better view.
+    D: Look both ways and yield the right-of-way to pedestrians and traffic.
+  answer: D
+  explanation: Before turning on red, you must come to a complete stop, then 'Look
+    both ways and yield the right-of-way to pedestrians and other traffic. Be sure
+    to check for less visible vehicles such as motorcycles, bicycles and mopeds.'
+- id: 250
+  category: driver_testing
+  question: If an applicant fails the road skills test at the DMV, what is the minimum
+    waiting period before they are allowed to take it again?
+  choices:
+    A: 24 hours
+    B: Two days
+    C: One week
+    D: There is no waiting period.
+  answer: B
+  explanation: The manual states, 'If you fail the road skills test, you must wait
+    two days to take it again.'
+- id: 251
+  category: license_system
+  question: For a driver with vision in only one eye to qualify for a daylight-only
+    restricted license, what are the specific horizontal vision requirements?
+  choices:
+    A: At least 70 degrees toward the nose and 70 degrees toward the temple.
+    B: At least 40 degrees toward the nose and 30 degrees toward the temple.
+    C: At least 30 degrees toward the nose and 40 degrees toward the temple.
+    D: A total horizontal vision of at least 90 degrees.
+  answer: C
+  explanation: For a person with vision in only one eye to get a daylight-only license,
+    they must have horizontal vision of at least 30 degrees or better when looking
+    toward their nose and 40 degrees or better when looking toward their temple.
+- id: 252
+  category: driver_responsibility
+  question: According to the manual, what should a driver who wears bioptic telescopic
+    lenses do to obtain specific licensing information?
+  choices:
+    A: Schedule a special appointment with a DMV supervisor.
+    B: Read the DMV publication MED 44 or call the DMV.
+    C: Enroll in a specialized driver education course.
+    D: Submit a standard driver's license application with a doctor's note.
+  answer: B
+  explanation: 'The manual advises: ''If you wear bioptic telescopic lenses, read
+    the DMV publication Driver’s Licensing Information for Bioptic Telescopic Lense
+    Wearers (MED 44) available at dmv.virginia.gov or contact DMV at (804) 497-7100.'''
+- id: 253
+  category: safe_driving_rules
+  question: In addition to obeying traffic signals, signs, and markings, what specific
+    action is mentioned as being illegal for avoiding traffic controls?
+  choices:
+    A: Making a U-turn at an intersection.
+    B: Driving slower than the posted speed limit.
+    C: Cutting through a parking lot or field.
+    D: Changing lanes within 100 feet of an intersection.
+  answer: C
+  explanation: The manual explicitly states, 'It is illegal to avoid these traffic
+    controls by cutting through a parking lot or field.'
+- id: 254
+  category: safe_driving_rules
+  question: When turning at an intersection with a solid green light but no specific
+    green turn arrow, what must you do?
+  choices:
+    A: You have the right-of-way over oncoming traffic.
+    B: Yield the right-of-way to oncoming vehicles and pedestrians.
+    C: Stop completely before entering the intersection to turn.
+    D: Turn quickly before the light changes.
+  answer: B
+  explanation: The manual states, 'If you are turning without a green arrow, you must
+    yield the right-of-way to vehicles coming from the other direction and pedestrians
+    in the intersection.'
+- id: 255
+  category: signs_and_signals
+  question: What does a lane use signal displaying a solid Red X indicate?
+  choices:
+    A: The lane is about to close, so move out safely.
+    B: The lane is for emergency vehicles only.
+    C: You are never permitted to drive in this lane.
+    D: The lane is open for travel in your direction.
+  answer: C
+  explanation: 'The manual clearly states: ''Red X: Never drive in a lane marked with
+    a red X signal.'''
+- id: 256
+  category: signs_and_signals
+  question: In the sequence of a Pedestrian Hybrid Beacon (PHB), what happens immediately
+    after the initial single flashing yellow light?
+  choices:
+    A: The light turns solid yellow.
+    B: Two solid red lights appear.
+    C: A green arrow appears, permitting you to go.
+    D: The beacon turns off completely.
+  answer: A
+  explanation: 'The manual describes the sequence: ''One yellow light at the bottom
+    flashes when a pedestrian activates the PHB. Next, the yellow light turns solid
+    to alert drivers to prepare to stop.'''
+- id: 257
+  category: signs_and_signals
+  question: According to the manual, what message is conveyed by signs that use the
+    color red combined with white?
+  choices:
+    A: Warning of upcoming hazards like a curve.
+    B: Motorist services information.
+    C: The concepts of stop, yield, do not, and no.
+    D: Destination and distance information.
+  answer: C
+  explanation: The manual states, 'Red used with white conveys stop, yield, do not,
+    and no. Stop signs, yield signs, do not enter or wrong way signs... are examples.'
+- id: 258
+  category: signs_and_signals
+  question: What type of information is typically displayed on signs that are black
+    and white?
+  choices:
+    A: Historical or cultural interests.
+    B: Regulatory information, such as speed limits and passing rules.
+    C: Warnings about school zones or pedestrian crossings.
+    D: Guidance for construction zones.
+  answer: B
+  explanation: The manual specifies, 'Black used with white conveys regulatory information.
+    Speed limit, do not pass, no turns are examples where the operation is regulated
+    by law...'
+- id: 259
+  category: signs_and_signals
+  question: A specialized class of warning signs uses a strong yellow/green color
+    with black to advise of what?
+  choices:
+    A: Incident management areas ahead.
+    B: Upcoming rest areas and gas stations.
+    C: School zones, pedestrian, and/or bicyclist activities.
+    D: Low overhead clearances.
+  answer: C
+  explanation: The manual states, 'A specialized class of warning signs uses a strong
+    yellow/green color with black to advise of school zone, pedestrian and/or bicyclist
+    activities.'
+- id: 260
+  category: safe_driving_rules
+  question: If you realize you have accidentally driven past a 'Do Not Enter' or 'Wrong
+    Way' sign, what is the correct procedure?
+  choices:
+    A: Continue driving until you find the next exit.
+    B: Stop and reverse back past the sign.
+    C: Honk your horn continuously to warn other drivers.
+    D: Immediately slow down, pull over, and cautiously turn around.
+  answer: D
+  explanation: 'The manual instructs: ''If you drive past these signs... Immediately
+    slow down, pull over, and cautiously turn around.'''
+- id: 261
+  category: safe_driving_rules
+  question: What does a 'Left Turn Yield on Green' sign indicate?
+  choices:
+    A: Left-turning traffic has the right-of-way over oncoming cars.
+    B: Oncoming traffic must stop and yield to you.
+    C: Traffic turning left does not have the right-of-way and must yield to oncoming
+      traffic.
+    D: All traffic at the intersection must stop before proceeding.
+  answer: C
+  explanation: The manual states this sign 'tells you that the traffic turning left
+    at a green light does not have the right-of-way and must yield to traffic coming
+    from the other direction.'
+- id: 262
+  category: signs_and_signals
+  question: What is the primary purpose of Lane Use Control signs?
+  choices:
+    A: To indicate the maximum legal speed for a particular lane.
+    B: To reserve lanes for buses and high occupancy vehicles.
+    C: To show where turns are required or permitted from specific lanes.
+    D: To warn of construction ahead in a specific lane.
+  answer: C
+  explanation: 'The manual says, ''Lane Use Control: These signs are used where turns
+    are required or where special turning movements are permitted for specific lanes.'''
+- id: 263
+  category: safe_driving_rules
+  question: Parking spaces marked with a disabled parking sign are reserved for whom?
+  choices:
+    A: Anyone for up to 15 minutes if they have their hazard lights on.
+    B: Only people who have been issued disabled parking permits.
+    C: Any driver over the age of 70, regardless of permit status.
+    D: Commercial vehicles making deliveries during business hours.
+  answer: B
+  explanation: 'The manual is clear: ''Disabled Parking: Parking spaces marked with
+    these signs are reserved for people with disabled parking permits.'''
+- id: 264
+  category: signs_and_signals
+  question: On a regulatory sign, what does a red circle with a slash through a symbol
+    universally mean?
+  choices:
+    A: The action shown by the symbol is recommended.
+    B: Caution is advised for the action shown by the symbol.
+    C: The action shown by the symbol is prohibited.
+    D: The action shown by the symbol is only allowed at certain times.
+  answer: C
+  explanation: The manual states, 'Remember that a red circle with a slash means NO
+    — the symbol inside the circle tells you what is prohibited.'
+- id: 265
+  category: signs_and_signals
+  question: What is the rule for a lane marked with a one-way or two-way left-turn
+    arrow lane use signal?
+  choices:
+    A: You may drive straight through in this lane if no one is turning.
+    B: You are only permitted to enter this lane to turn in the direction of the arrow.
+    C: This lane is closed to all traffic during peak hours.
+    D: You must yield to all other traffic before entering the lane.
+  answer: B
+  explanation: 'The manual states, ''Left-turn Arrow: You are permitted to enter in
+    a lane marked with a one-way or two-way arrow only to turn in the direction of
+    the arrow.'''
+- id: 266
+  category: signs_and_signals
+  question: What does a 'Divided Highway Begins' sign indicate, and what is the proper
+    response?
+  choices:
+    A: The highway is merging into one lane; prepare to merge.
+    B: The highway is ending; prepare to stop.
+    C: The highway is split by a median, and each roadway is one-way; you must keep
+      right.
+    D: The highway ahead has two-way traffic; move to the center of the road.
+  answer: C
+  explanation: The manual states, 'The highway ahead is split into two separate roadways
+    by a median or divider and each roadway is one-way. Keep right.'
+- id: 267
+  category: signs_and_signals
+  question: When you see a 'Lane Reduction' sign indicating the right lane is ending,
+    what is the correct procedure?
+  choices:
+    A: Drivers in the right lane have the right-of-way to merge left immediately.
+    B: Drivers in the left lane must stop to allow others to merge.
+    C: Drivers in the right lane must merge left when space opens, and drivers in
+      the left lane should allow them to merge smoothly.
+    D: All traffic must come to a complete stop and take turns merging.
+  answer: C
+  explanation: The manual states, 'The right lane ends soon. Drivers in the right
+    lane must merge left when space opens up. Drivers in the left lane should allow
+    other vehicles to merge smoothly.'
+- id: 268
+  category: signs_and_signals
+  question: What is the recommended action when you see a sign depicting a truck on
+    a steep incline (a 'Hill' sign)?
+  choices:
+    A: Speed up to maintain momentum.
+    B: Turn on your hazard lights.
+    C: Check your brakes.
+    D: Honk your horn to warn other drivers.
+  answer: C
+  explanation: 'The manual states for a Hill sign: ''A steep grade is ahead. Check
+    your brakes.'''
+- id: 269
+  category: sharing_the_road
+  question: When approaching or passing horse-drawn buggies, what action should you
+    specifically AVOID doing?
+  choices:
+    A: Slowing down.
+    B: Using your horn.
+    C: Providing at least three feet of clearance.
+    D: Passing only when the way is clear.
+  answer: B
+  explanation: 'The manual states regarding horse-drawn buggies: ''Slow down and don’t
+    use the horn.'''
+- id: 270
+  category: signs_and_signals
+  question: What does a 'T Intersection' sign mean?
+  choices:
+    A: You must make a U-turn as the road does not continue.
+    B: The roadway you are on ends ahead, and you must turn right or left after yielding.
+    C: A side road enters the highway at a sharp angle.
+    D: The highway ahead is temporarily closed for construction.
+  answer: B
+  explanation: The manual explains that for a T Intersection sign, 'The roadway you
+    are traveling on ends ahead at a stop sign. You must turn right or left after
+    yielding to oncoming traffic and pedestrians.'
+- id: 271
+  category: signs_and_signals
+  question: According to the manual, what is the key to safely navigating a road marked
+    with a 'Winding Road' sign?
+  choices:
+    A: Maintain a constant speed throughout all turns.
+    B: Use your high-beam headlights to see farther ahead.
+    C: Slow down for better control on all curves.
+    D: Stay in the center of your lane and do not adjust speed.
+  answer: C
+  explanation: 'The manual advises for a Winding Road: ''On all curves, slow down
+    for better control.'''
+- id: 272
+  category: signs_and_signals
+  question: If you report a dangerous condition at a railroad crossing using the emergency
+    phone number on the sign, what specific information must you provide to identify
+    the location?
+  choices:
+    A: The time of day and direction of travel.
+    B: The name of the nearest town or city.
+    C: Your vehicle's license plate number.
+    D: The posted crossing number.
+  answer: D
+  explanation: The manual states, 'Be sure to give the posted crossing number so that
+    the hazard can be identified correctly.'
+- id: 273
+  category: signs_and_signals
+  question: 'A ''Divided Highway Ends'' sign warns you that:'
+  choices:
+    A: You are approaching a toll booth.
+    B: The highway is closing and you must exit.
+    C: The median or divider is ending and traffic will now travel in both directions
+      on the same roadway.
+    D: The highway is beginning and you should move to the right lane.
+  answer: C
+  explanation: The manual states, 'The highway ahead no longer has a median or divider.
+    Traffic goes in both directions. Keep right.'
+- id: 274
+  category: signs_and_signals
+  question: When a 'Pedestrian Crossing' or 'Bicycle Crossing' sign is accompanied
+    by a second sign with an arrow, what does the arrow indicate?
+  choices:
+    A: The direction pedestrians or cyclists are coming from.
+    B: The actual location of the crosswalk or bike crossing.
+    C: A mandatory turn for vehicles.
+    D: The speed limit for the crossing area.
+  answer: B
+  explanation: 'The manual notes for both Pedestrian and Bicycle Crossing signs: ''A
+    second sign with an arrow may show the actual location of the crosswalk [or bike
+    crossing].'''
+- id: 275
+  category: signs_and_signals
+  question: At a railroad crossing with a crossbuck, flashing lights, and a gate,
+    what is the rule regarding the gate?
+  choices:
+    A: You may proceed with caution if you don't see a train.
+    B: You may drive around the gate if it has been down for more than a minute.
+    C: Stop when the lights flash and do not attempt to drive around the lowered gate.
+    D: Stop only if the gate is fully lowered; if it is still moving, you can cross.
+  answer: C
+  explanation: 'The manual is explicit: ''Stop when the lights begin to flash and
+    before the gate lowers. Remain stopped until the gates are raised and the lights
+    stop flashing. Do not attempt to drive around the lowered gate.'''
+- id: 276
+  category: signs_and_signals
+  question: 'A sign showing a sharp arrow bending right and then immediately left
+    warns you to:'
+  choices:
+    A: Prepare for a roundabout ahead.
+    B: Slow down for a sharp right turn, followed by a sharp left turn.
+    C: Choose either the right or left lane for an upcoming fork in the road.
+    D: Watch for merging traffic from both the right and left.
+  answer: B
+  explanation: 'The ''Sharp Right and Left Turns'' sign description says: ''Slow down
+    and be prepared for the road ahead to turn sharply right, then left.'''
+- id: 277
+  category: signs_and_signals
+  question: What must you do if you approach an overpass with a 'Low Clearance' sign?
+  choices:
+    A: Slow down and honk your horn before proceeding.
+    B: Do not proceed if your vehicle is taller than the height shown on the sign.
+    C: Stop and wait for an escort vehicle.
+    D: All trucks must stop, but passenger cars may proceed without checking height.
+  answer: B
+  explanation: 'The manual states for a Low Clearance Sign: ''Do not proceed if your
+    vehicle is taller than the height shown on the sign.'''
+- id: 278
+  category: signs_and_signals
+  question: 'An ''Expansion Joints'' sign warns drivers that a joint across the road
+    lanes:'
+  choices:
+    A: Is a designated stopping point for buses.
+    B: Creates a bump or may cause a loss of traction in wet weather.
+    C: Indicates the beginning of a bridge that freezes easily.
+    D: Is a place where motorcyclists are especially likely to lose control.
+  answer: B
+  explanation: The manual states, 'This sign is used when a joint across lanes creates
+    a bump or is wide enough to cause loss of traction in wet weather.' The sign specifically
+    for motorcyclist hazard is the 'Open Joints' sign.
+- id: 279
+  category: signs_and_signals
+  question: What specific hazard does the 'Right Curve - Side Road' sign alert you
+    to?
+  choices:
+    A: The road curves right and a side road joins from the left within the curve.
+    B: You must exit to the right because the main road ends.
+    C: The road curves right, and you must turn left onto a side road.
+    D: A T-intersection is located immediately after a right curve.
+  answer: A
+  explanation: 'The manual describes this sign: ''The road ahead curves right and
+    a side road joins from the left within the curve. Be alert for vehicles entering
+    the roadway you are traveling on.'''

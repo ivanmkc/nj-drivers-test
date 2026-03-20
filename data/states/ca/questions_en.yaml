@@ -1,7 +1,6 @@
 metadata:
-  source: //www.dmv.ca.gov/portal/handbook/california-driver-handbook/:2025 California
-    Driver Handbook (dmv.ca.gov)
-  total_questions: 100
+  source: 2025 California Driver Handbook (dmv.ca.gov)
+  total_questions: 284
   categories:
   - alcohol_drugs_health
   - defensive_driving
@@ -838,19 +837,6 @@ questions:
     yield the right-of-way to traffic and pedestrians. You must stop if necessary
     to let others pass safely.
   id: 68
-- image: do_not_enter.png
-  category: signs_and_signals
-  question: What does this sign mean?
-  choices:
-    A: Road closed ahead
-    B: No parking allowed
-    C: Do not enter this roadway
-    D: Dead end ahead
-  answer: C
-  explanation: A red and white DO NOT ENTER sign means you must not enter the road
-    or ramp where this sign is posted. It is usually seen at freeway off-ramps or
-    one-way streets where entering would put you in the path of oncoming traffic.
-  id: 69
 - image: wrong_way.png
   category: signs_and_signals
   question: If you see this sign, what should you do?
@@ -863,31 +849,7 @@ questions:
   explanation: A red and white WRONG WAY sign means you are traveling against traffic
     on a one-way road or highway ramp. Stop immediately and safely turn around or
     back up.
-  id: 70
-- image: one_way_left.png
-  category: signs_and_signals
-  question: What does this sign indicate?
-  choices:
-    A: Left turn only
-    B: Traffic flows in one direction — to the left
-    C: Keep left of the median
-    D: Highway exit to the left
-  answer: B
-  explanation: A black and white ONE WAY sign with an arrow indicates that traffic
-    on this street moves in only one direction — the direction the arrow points.
-  id: 71
-- image: no_u_turn.png
-  category: signs_and_signals
-  question: What does this sign prohibit?
-  choices:
-    A: Right turns
-    B: Left turns
-    C: U-turns
-    D: Passing other vehicles
-  answer: C
-  explanation: A white regulatory sign with a U-turn arrow crossed out means U-turns
-    are prohibited at this location.
-  id: 72
+  id: 69
 - image: no_left_turn.png
   category: signs_and_signals
   question: What action is prohibited by this sign?
@@ -899,44 +861,7 @@ questions:
   answer: B
   explanation: A white regulatory sign showing a left turn arrow crossed out means
     left turns are not allowed at this intersection.
-  id: 73
-- image: no_right_turn.png
-  category: signs_and_signals
-  question: What does this sign mean?
-  choices:
-    A: No U-turn allowed
-    B: No left turn allowed
-    C: No right turn allowed
-    D: No passing allowed
-  answer: C
-  explanation: A white regulatory sign showing a right turn arrow crossed out means
-    right turns are prohibited at this location.
-  id: 74
-- image: no_passing.png
-  category: signs_and_signals
-  question: What does this sign indicate?
-  choices:
-    A: Road narrows ahead
-    B: Do not pass other vehicles in this zone
-    C: Two-way traffic ahead
-    D: Keep right
-  answer: B
-  explanation: A black and white NO PASSING ZONE pennant-shaped sign means you are
-    not allowed to pass other vehicles in this area. It marks the beginning of a no-passing
-    zone.
-  id: 75
-- image: keep_right.png
-  category: signs_and_signals
-  question: What does this sign instruct drivers to do?
-  choices:
-    A: Merge right
-    B: Turn right only
-    C: Keep to the right of a divider or obstruction
-    D: Right lane ends ahead
-  answer: C
-  explanation: A white regulatory KEEP RIGHT sign with an arrow means you must keep
-    to the right side of a traffic island, median, or obstruction.
-  id: 76
+  id: 70
 - image: speed_limit_25.png
   category: signs_and_signals
   question: What type of sign is this, based on its shape and color?
@@ -948,7 +873,7 @@ questions:
   answer: C
   explanation: White rectangular signs with black lettering are regulatory signs.
     Speed limit signs tell you the maximum legal speed for the area under ideal conditions.
-  id: 77
+  id: 71
 - image: deer_crossing.png
   category: signs_and_signals
   question: What does this yellow diamond-shaped sign warn you about?
@@ -961,19 +886,7 @@ questions:
   explanation: A yellow diamond-shaped sign with a deer silhouette warns that deer
     frequently cross the road in this area. Slow down and watch for animals, especially
     at dawn and dusk.
-  id: 78
-- image: pedestrian_crossing.png
-  category: signs_and_signals
-  question: What does this sign warn you about?
-  choices:
-    A: School zone ahead
-    B: Pedestrian crossing ahead
-    C: Hiking trail nearby
-    D: Bus stop ahead
-  answer: B
-  explanation: A yellow diamond-shaped sign with a pedestrian figure warns of a pedestrian
-    crossing ahead. Be prepared to stop for pedestrians crossing the road.
-  id: 79
+  id: 72
 - image: school_zone.png
   category: signs_and_signals
   question: What does the shape of this sign indicate?
@@ -985,19 +898,7 @@ questions:
   answer: C
   explanation: A pentagon-shaped (5-sided) fluorescent yellow-green sign indicates
     a school zone or school crossing. Slow down and watch for children.
-  id: 80
-- image: railroad_crossing.png
-  category: signs_and_signals
-  question: What does this circular yellow sign warn you about?
-  choices:
-    A: A roundabout ahead
-    B: A hospital zone
-    C: A railroad crossing ahead
-    D: A no-passing zone
-  answer: C
-  explanation: A circular yellow sign with a black X and two R's is the advance warning
-    sign for a railroad crossing ahead. Slow down, look, and listen for trains.
-  id: 81
+  id: 73
 - image: railroad_crossbuck.png
   category: signs_and_signals
   question: Where would you typically see this sign?
@@ -1009,19 +910,7 @@ questions:
   answer: B
   explanation: The white X-shaped railroad crossbuck sign is placed at railroad crossings.
     It means you must yield to trains. If a train is approaching, you must stop.
-  id: 82
-- image: curve_right.png
-  category: signs_and_signals
-  question: What does this yellow diamond-shaped sign indicate?
-  choices:
-    A: Road ends ahead
-    B: Right turn required
-    C: A curve to the right ahead
-    D: Detour ahead
-  answer: C
-  explanation: A yellow diamond-shaped sign with a curved arrow warns of a curve in
-    the road ahead. Slow down before entering the curve.
-  id: 83
+  id: 74
 - image: sharp_turn_right.png
   category: signs_and_signals
   question: How does this sign differ from a curve sign?
@@ -1034,55 +923,7 @@ questions:
   explanation: A sharp turn sign (with a more angled arrow) indicates a sharper turn
     than a curve sign. You need to reduce your speed more significantly before this
     turn.
-  id: 84
-- image: reverse_curve.png
-  category: signs_and_signals
-  question: What road condition does this sign warn about?
-  choices:
-    A: A winding road
-    B: A single curve ahead
-    C: A series of two curves in opposite directions
-    D: A roundabout ahead
-  answer: C
-  explanation: A reverse curve sign warns of two curves in opposite directions ahead.
-    Slow down and be prepared for the road to curve first one way, then the other.
-  id: 85
-- image: winding_road.png
-  category: signs_and_signals
-  question: What does this sign warn you to expect?
-  choices:
-    A: A single sharp curve
-    B: A slippery road surface
-    C: A series of curves or turns ahead
-    D: A hill ahead
-  answer: C
-  explanation: A winding road sign warns of a series of curves or turns ahead. Reduce
-    your speed and be alert for changing road conditions.
-  id: 86
-- image: merge.png
-  category: signs_and_signals
-  question: What does this sign tell you to prepare for?
-  choices:
-    A: A lane ending
-    B: Traffic merging from another road
-    C: A divided highway beginning
-    D: A road narrowing to one lane
-  answer: B
-  explanation: A yellow diamond-shaped merge sign warns that traffic from another
-    road will be merging into your lane. Be prepared to adjust your speed and position.
-  id: 87
-- image: road_narrows.png
-  category: signs_and_signals
-  question: What does this sign warn about?
-  choices:
-    A: Bridge ahead
-    B: Road narrows ahead
-    C: Lane ends
-    D: Divided highway ends
-  answer: B
-  explanation: This warning sign indicates the road ahead becomes narrower. Be prepared
-    for reduced road width and adjust your lane position.
-  id: 88
+  id: 75
 - image: divided_highway.png
   category: signs_and_signals
   question: What does this sign indicate is ahead?
@@ -1094,130 +935,7 @@ questions:
   answer: C
   explanation: This sign warns that the road ahead becomes a divided highway with
     a median or barrier separating opposing traffic. Keep to the right.
-  id: 89
-- image: divided_highway_ends.png
-  category: signs_and_signals
-  question: What does this sign warn you about?
-  choices:
-    A: A divided highway begins
-    B: The divided highway ends and two-way traffic resumes
-    C: A merge area ahead
-    D: Road construction ahead
-  answer: B
-  explanation: This sign warns that the divided highway is ending. Opposing traffic
-    will no longer be separated by a median. Be prepared for two-way traffic.
-  id: 90
-- image: two_way_traffic.png
-  category: signs_and_signals
-  question: What does this sign warn you about?
-  choices:
-    A: A divided highway begins
-    B: A passing zone ahead
-    C: Two-way traffic ahead — traffic moves in both directions
-    D: A lane shift ahead
-  answer: C
-  explanation: This sign warns of two-way traffic ahead. You may be leaving a one-way
-    road or divided highway and will encounter vehicles traveling in the opposite
-    direction.
-  id: 91
-- image: slippery_when_wet.png
-  category: signs_and_signals
-  question: What road condition does this sign warn about?
-  choices:
-    A: Icy road conditions
-    B: The road may be slippery when wet
-    C: Winding road ahead
-    D: Uneven pavement
-  answer: B
-  explanation: A slippery when wet sign warns that the road surface may become very
-    slippery during rain or wet conditions. Reduce your speed and avoid sudden braking
-    or turning.
-  id: 92
-- image: hill.png
-  category: signs_and_signals
-  question: What does this sign warn you about?
-  choices:
-    A: A bump in the road
-    B: An uneven road surface
-    C: A steep hill or grade ahead
-    D: Road construction
-  answer: C
-  explanation: This sign warns of a steep hill or grade ahead. You may need to adjust
-    your speed and shift to a lower gear, especially in trucks or when towing.
-  id: 93
-- image: signal_ahead.png
-  category: signs_and_signals
-  question: What does this sign warn you to prepare for?
-  choices:
-    A: A stop sign ahead
-    B: A traffic signal ahead
-    C: A school crossing
-    D: A police checkpoint
-  answer: B
-  explanation: This sign warns of a traffic signal ahead. Be prepared to stop if the
-    light is red or yellow. This sign is often placed where the signal may not be
-    visible from a distance.
-  id: 94
-- image: stop_ahead.png
-  category: signs_and_signals
-  question: What does this sign tell you to expect ahead?
-  choices:
-    A: A yield sign
-    B: A traffic signal
-    C: A stop sign where you must stop
-    D: A speed bump
-  answer: C
-  explanation: This sign warns that there is a stop sign ahead. Begin slowing down
-    and prepare to come to a complete stop at the stop sign.
-  id: 95
-- image: cross_road.png
-  category: signs_and_signals
-  question: What does this sign warn about?
-  choices:
-    A: A railroad crossing ahead
-    B: A crossroad or intersection ahead
-    C: A hospital ahead
-    D: A pedestrian crossing
-  answer: B
-  explanation: This sign warns that a crossroad or 4-way intersection is ahead. Watch
-    for traffic entering from side roads.
-  id: 96
-- image: side_road.png
-  category: signs_and_signals
-  question: What does this sign warn you about?
-  choices:
-    A: A T-intersection ahead
-    B: A side road entering from the right
-    C: A curve in the road
-    D: A dead end
-  answer: B
-  explanation: This sign warns of a side road entering from the right. Watch for vehicles
-    entering the highway from the side road.
-  id: 97
-- image: added_lane.png
-  category: signs_and_signals
-  question: What does this sign mean?
-  choices:
-    A: Lanes are merging
-    B: A lane is ending
-    C: A new lane is being added — no merging needed
-    D: Right turn required
-  answer: C
-  explanation: An added lane sign means a new lane is joining the highway without
-    requiring merging. Traffic entering from the ramp has its own new lane.
-  id: 98
-- image: no_parking.png
-  category: signs_and_signals
-  question: What does this sign prohibit?
-  choices:
-    A: Stopping at any time
-    B: Parking in this area
-    C: Standing or idling
-    D: Loading or unloading
-  answer: B
-  explanation: A red and white NO PARKING sign means you cannot park your vehicle
-    in this area. You may briefly stop to load or unload passengers.
-  id: 99
+  id: 76
 - image: handicap_parking.png
   category: signs_and_signals
   question: Who is allowed to park in a space marked with this sign?
@@ -1230,4 +948,2512 @@ questions:
   explanation: A blue sign with the wheelchair symbol marks parking reserved for persons
     with disabilities. Only vehicles displaying a valid disability parking placard
     or license plate may park in these spaces. Violations carry heavy fines.
-  id: 100
+  id: 77
+- id: 78
+  category: safe_driving_rules
+  question: When parking next to a curb, how far away from the curb must your wheels
+    be?
+  choices:
+    A: No more than 6 inches
+    B: No more than 12 inches
+    C: No more than 18 inches
+    D: No more than 24 inches
+  answer: C
+  explanation: When you park alongside a curb on a level street, the front and back
+    wheels must be parallel and within 18 inches of the curb.
+- id: 79
+  category: sharing_the_road
+  question: You are driving on a road with a lane marked for high-occupancy vehicles
+    (HOV). What is the primary purpose of this lane?
+  choices:
+    A: To allow drivers to pass slower traffic
+    B: To provide a dedicated lane for emergency vehicles
+    C: To encourage carpooling and reduce traffic congestion
+    D: To serve as an extra lane during rush hour for all vehicles
+  answer: C
+  explanation: The purpose of HOV lanes is to promote carpooling and ridesharing to
+    move more people with fewer vehicles, thereby reducing traffic congestion.
+- id: 80
+  category: safe_driving_rules
+  question: It is illegal to park your vehicle within how many feet of a fire hydrant?
+  choices:
+    A: 10 feet
+    B: 15 feet
+    C: 20 feet
+    D: 25 feet
+  answer: B
+  explanation: Never park within 15 feet of a fire hydrant. This ensures emergency
+    vehicles have adequate access.
+- id: 81
+  category: safe_driving_rules
+  question: What is the proper procedure to use a center left-turn lane?
+  choices:
+    A: Enter the lane as early as possible to wait for a gap in traffic
+    B: Use the lane to pass slower vehicles before making your turn
+    C: Drive in the lane for no more than 200 feet before making your turn
+    D: Only enter the lane after coming to a complete stop in the regular travel lane
+  answer: C
+  explanation: The center left-turn lane should not be used for travel. You may only
+    drive for 200 feet in the center left-turn lane before making your turn.
+- id: 82
+  category: license_system
+  question: A driver with a provisional license (under 18) has what restriction regarding
+    passengers during the first 12 months?
+  choices:
+    A: They cannot transport any passengers
+    B: They cannot transport passengers under 20 years old, unless a licensed parent
+      or guardian is also in the vehicle
+    C: They can only transport immediate family members
+    D: They can transport anyone as long as it is during daylight hours
+  answer: B
+  explanation: For the first 12 months, a provisional driver cannot transport passengers
+    under 20 years old, unless they are accompanied by a licensed parent, guardian,
+    or other specified adult.
+- id: 83
+  category: safe_driving_rules
+  question: What does a curb painted blue indicate?
+  choices:
+    A: Loading zone for commercial vehicles only
+    B: Parking for a limited time, as indicated by a sign
+    C: Parking for persons with a disabled placard or license plates
+    D: No stopping, standing, or parking
+  answer: C
+  explanation: Blue curbs indicate parking is permitted only for a disabled person
+    who displays a placard or special license plates for disabled persons.
+- id: 84
+  category: safe_driving_rules
+  question: At a 'T' intersection without signs or signals, which vehicle has the
+    right-of-way?
+  choices:
+    A: The vehicle on the terminating road must yield to vehicles on the through road
+    B: The vehicle on the through road must yield to vehicles on the terminating road
+    C: The vehicle that arrived first has the right-of-way
+    D: The vehicle turning left has the right-of-way
+  answer: A
+  explanation: At a 'T' intersection where one road ends, traffic on the terminating
+    road must yield the right-of-way to all traffic on the through road.
+- id: 85
+  category: safe_driving_rules
+  question: 'When driving in heavy fog, you should use your:'
+  choices:
+    A: High-beam headlights
+    B: Low-beam headlights
+    C: Parking lights only
+    D: Emergency flashers
+  answer: B
+  explanation: In heavy fog, use your low-beam headlights. High beams will reflect
+    off the fog and cause glare, making it more difficult to see.
+- id: 86
+  category: penalties_and_points
+  question: For how long do most traffic violation points typically stay on your driving
+    record?
+  choices:
+    A: 12 months
+    B: 24 months
+    C: 39 months
+    D: 60 months
+  answer: C
+  explanation: A traffic conviction for a minor violation will generally stay on your
+    record for 39 months (3 years and 3 months).
+- id: 87
+  category: safe_driving_rules
+  question: When two vehicles meet on a steep, narrow mountain road where neither
+    can pass, who has the right-of-way?
+  choices:
+    A: The vehicle going uphill
+    B: The vehicle going downhill
+    C: The vehicle that is larger
+    D: The vehicle that reached the narrow spot first
+  answer: A
+  explanation: The vehicle facing downhill must yield the right-of-way by backing
+    up until the vehicle going uphill can pass. The vehicle facing downhill has greater
+    control when backing up.
+- id: 88
+  category: defensive_driving
+  question: 'To maintain a safe space cushion and see farther down the road, you should
+    scan your surroundings by looking ahead:'
+  choices:
+    A: 1-2 seconds
+    B: 3-5 seconds
+    C: 5-8 seconds
+    D: 10-15 seconds
+  answer: D
+  explanation: To avoid last-minute moves, you should scan the road 10-15 seconds
+    ahead of your vehicle so you can see hazards before you reach them.
+- id: 89
+  category: sharing_the_road
+  question: When you see a 'safety zone' marked by raised buttons or markers on a
+    roadway, what should you do?
+  choices:
+    A: You may drive through it if no pedestrians are present
+    B: You must not drive through the safety zone at any time
+    C: You may use it to make a left turn
+    D: You may drive through it at a speed no greater than 10 mph
+  answer: B
+  explanation: A safety zone is an area set aside for pedestrians. It is illegal to
+    drive through a safety zone at any time or for any reason.
+- id: 90
+  category: license_system
+  question: A minor (under 18) with a provisional license is not permitted to drive
+    between what hours, with some exceptions?
+  choices:
+    A: 10 p.m. and 6 a.m.
+    B: 11 p.m. and 5 a.m.
+    C: Midnight and 6 a.m.
+    D: 9 p.m. and 5 a.m.
+  answer: B
+  explanation: During the first 12 months of having a provisional license, a minor
+    cannot drive between 11 p.m. and 5 a.m., unless accompanied by a specified adult
+    or for valid exceptions.
+- id: 91
+  category: safe_driving_rules
+  question: What is the meaning of a curb painted green?
+  choices:
+    A: No stopping or parking
+    B: Parking for a limited time
+    C: Loading and unloading of passengers or freight
+    D: Parking for disabled persons only
+  answer: B
+  explanation: A green curb indicates that parking is allowed for a limited time.
+    The time limit may be posted on a sign or painted on the curb.
+- id: 92
+  category: defensive_driving
+  question: 'If your vehicle starts to hydroplane on a wet road, you should:'
+  choices:
+    A: Brake firmly to regain traction
+    B: Accelerate to get through the water quickly
+    C: Slow down gradually by easing your foot off the gas pedal
+    D: Turn the steering wheel sharply in the opposite direction of the skid
+  answer: C
+  explanation: If your vehicle begins to hydroplane, do not brake or turn suddenly.
+    Ease your foot off the gas pedal until the vehicle slows and you can feel the
+    road again.
+- id: 93
+  category: vehicle_information
+  question: 'It is legal to use your vehicle''s horn to:'
+  choices:
+    A: Urge a slow-moving driver to speed up
+    B: Alert other drivers that they made a mistake
+    C: Help avoid a collision
+    D: Greet a friend you see on the sidewalk
+  answer: C
+  explanation: The horn should only be used to ensure safe driving, such as to avoid
+    collisions, alert another driver of a hazard, or alert oncoming traffic on narrow
+    mountain roads.
+- id: 94
+  category: safe_driving_rules
+  question: 'If you arrive at an intersection where the traffic signals are not working,
+    you should:'
+  choices:
+    A: Slow down and proceed with caution
+    B: Stop, then proceed when it is safe
+    C: Treat the intersection as an uncontrolled intersection and yield to the right
+    D: Treat the intersection as a four-way stop
+  answer: D
+  explanation: If traffic signals are not working, you must treat the intersection
+    as if it were a four-way stop. Stop, yield to vehicles and pedestrians already
+    in the intersection, and then proceed when it is your turn.
+- id: 95
+  category: penalties_and_points
+  question: What is the penalty for abandoning an animal on a highway?
+  choices:
+    A: A warning from a peace officer
+    B: A small fine of up to $100
+    C: A fine of up to $1,000 and/or six months in jail
+    D: Community service only
+  answer: C
+  explanation: Abandoning an animal on a highway is a misdemeanor punishable by a
+    fine of up to $1,000, up to six months in jail, or both.
+- id: 96
+  category: safe_driving_rules
+  question: 'When making a left turn from a two-way street onto a one-way street,
+    you should start your turn from:'
+  choices:
+    A: The far right lane
+    B: Any lane, as long as you signal
+    C: The lane closest to the center line
+    D: The right-hand turn lane
+  answer: C
+  explanation: Begin the turn from the lane closest to the middle of the street (the
+    center line). Turn into any lane on the one-way street that is safely open.
+- id: 97
+  category: sharing_the_road
+  question: 'When sharing the road with a light-rail vehicle or streetcar, you should
+    be aware that:'
+  choices:
+    A: They can stop more quickly than a standard vehicle
+    B: They always have the right-of-way
+    C: You can pass them on the left or right side
+    D: They can interrupt traffic signals
+  answer: D
+  explanation: Be aware that light-rail vehicles can interrupt traffic signals to
+    ensure they can proceed through intersections without stopping.
+- id: 98
+  category: defensive_driving
+  question: If your accelerator becomes stuck and your vehicle keeps accelerating,
+    what is one of the first things you should do?
+  choices:
+    A: Turn off the ignition immediately
+    B: Shift to neutral and apply the brakes
+    C: Pump the gas pedal several times
+    D: Attempt to unstick the pedal with your hand
+  answer: B
+  explanation: If your accelerator gets stuck, you should shift your vehicle to neutral
+    and apply the brakes. This will disengage the engine from the wheels, allowing
+    you to slow down and stop safely.
+- id: 99
+  category: safe_driving_rules
+  question: What does 'double parking' mean, and is it legal?
+  choices:
+    A: Parking in a space for two cars; it is legal
+    B: Parking on the wrong side of the street; it is illegal
+    C: Parking in the street alongside a car that is already parked at the curb; it
+      is illegal
+    D: Parking for twice the posted time limit; it is illegal
+  answer: C
+  explanation: Double parking is when you park in the street on the side of another
+    vehicle that is stopped or parked at the curb. It is illegal and blocks the normal
+    flow of traffic.
+- id: 100
+  category: vehicle_information
+  question: What is the minimum legal tread depth for tires on a passenger vehicle
+    in California?
+  choices:
+    A: 1/32 of an inch
+    B: 1/16 of an inch
+    C: 3/32 of an inch
+    D: 4/32 of an inch
+  answer: A
+  explanation: The law requires that your tires have a minimum tread depth of 1/32
+    of an inch in any two adjacent grooves. Insufficient tread depth is unsafe.
+- id: 101
+  category: alcohol_drugs_health
+  question: 'If you are convicted of a first DUI, a court may sentence you to serve
+    up to:'
+  choices:
+    A: 48 hours in jail
+    B: 30 days in jail
+    C: 6 months in jail
+    D: 1 year in jail
+  answer: C
+  explanation: Penalties for a first DUI conviction can include up to 6 months in
+    jail, along with fines, fees, and a mandatory driver license suspension.
+- id: 102
+  category: signs_and_signals
+  question: What does a round yellow sign with a black 'X' and 'RR' letters indicate?
+  choices:
+    A: A crossroad ahead
+    B: A hospital zone ahead
+    C: You are approaching a railroad crossing
+    D: A road closure ahead
+  answer: C
+  explanation: A round yellow sign with a black 'X' and 'RR' is an advance warning
+    sign that you are approaching a railroad crossing. You should slow down, look,
+    and listen for a train.
+- id: 103
+  category: sharing_the_road
+  question: What is a key safety rule when sharing the road with light-rail vehicles?
+  choices:
+    A: You may turn in front of an approaching light-rail vehicle if you have a green
+      light.
+    B: Never turn in front of an approaching light-rail vehicle.
+    C: It is safe to drive on the light-rail tracks if there is no train in sight.
+    D: Light-rail vehicles must yield the right-of-way to cars at intersections.
+  answer: B
+  explanation: The manual emphasizes to never turn in front of an approaching light-rail
+    vehicle, as they move more quickly than freight trains and cannot stop quickly.
+- id: 104
+  category: license_system
+  question: 'For the first 12 months of having a provisional driver''s license, a
+    minor may not drive between 11 p.m. and 5 a.m. or transport passengers under 20
+    years of age unless:'
+  choices:
+    A: They are driving to a school-sponsored event.
+    B: They have a signed note from a parent or guardian.
+    C: They are accompanied by a licensed California parent, guardian, or other specified
+      adult 25 years of age or older.
+    D: They have completed an additional 10 hours of driving practice.
+  answer: C
+  explanation: A minor with a provisional license has strict time and passenger restrictions
+    for the first year, which are waived if they are accompanied by a licensed parent,
+    guardian, or other specified adult 25 years of age or older.
+- id: 105
+  category: signs_and_signals
+  question: 'A curb painted blue indicates a parking space reserved for:'
+  choices:
+    A: Loading and unloading of passengers or mail only.
+    B: Short-term parking, with the time limit posted on a sign.
+    C: Loading and unloading of freight only.
+    D: Persons with a disabled person placard or license plates.
+  answer: D
+  explanation: A blue curb indicates parking is reserved for persons with disabilities
+    who have a valid placard or special license plates.
+- id: 106
+  category: alcohol_drugs_health
+  question: If you are taking prescription or over-the-counter medication, what is
+    your responsibility before driving?
+  choices:
+    A: Assume it is safe to drive unless the label explicitly says 'Do not operate
+      heavy machinery.'
+    B: Read the warning labels and be aware of any potential side effects that could
+      impair your driving.
+    C: Only take half the prescribed dose if you plan to drive.
+    D: It is always legal to drive after taking any prescribed medication.
+  answer: B
+  explanation: It is your responsibility to know the effects of any medication you
+    take. Many prescription and over-the-counter drugs can cause drowsiness or dizziness,
+    making it unsafe to drive.
+- id: 107
+  category: sharing_the_road
+  question: When are you legally allowed to drive in a bicycle lane?
+  choices:
+    A: When you are within 200 feet of a turn you need to make.
+    B: When the main traffic lanes are blocked or congested.
+    C: To pass a slower vehicle ahead of you.
+    D: Never, it is for bicycles only.
+  answer: A
+  explanation: You may enter a bicycle lane to park (where permitted), to enter or
+    leave the roadway, or to prepare for a turn within 200 feet of the intersection.
+- id: 108
+  category: penalties_and_points
+  question: Under the Negligent Operator Treatment System (NOTS), you may be considered
+    a negligent operator if you get how many points on your driving record in 12 months?
+  choices:
+    A: 2 points
+    B: 4 points
+    C: 6 points
+    D: 8 points
+  answer: B
+  explanation: The DMV may consider you a negligent operator if you accumulate 4 points
+    in 12 months, 6 points in 24 months, or 8 points in 36 months, which can lead
+    to license probation or suspension.
+- id: 109
+  category: safe_driving_rules
+  question: In which of the following situations should you use your horn?
+  choices:
+    A: To express anger or frustration at another driver.
+    B: To get a slow driver to speed up.
+    C: To help avoid a collision by alerting another driver of your presence.
+    D: To greet a friend you see on the sidewalk.
+  answer: C
+  explanation: Your horn should only be used as a safety warning to help avoid collisions.
+    For example, use your horn to alert another driver who is in danger of hitting
+    you, or on narrow mountain roads where you cannot see at least 200 feet ahead.
+- id: 110
+  category: sharing_the_road
+  question: Regarding motorcyclists 'lane splitting' (riding between lanes of traffic),
+    which statement is true in California?
+  choices:
+    A: It is always illegal and highly dangerous.
+    B: It is legal, but motorcyclists should do so in a safe and prudent manner.
+    C: It is only legal on freeways with more than four lanes.
+    D: It is only legal when traffic is moving faster than 30 mph.
+  answer: B
+  explanation: California law allows for motorcycle lane splitting or filtering, provided
+    it is done in a safe and prudent manner. Drivers of other vehicles should be aware
+    of this and check their blind spots for motorcycles.
+- id: 111
+  category: signs_and_signals
+  question: 'When entering a roundabout, you must yield to:'
+  choices:
+    A: Vehicles on your right.
+    B: All vehicles, pedestrians, and bicyclists already in the roundabout.
+    C: All vehicles waiting to enter the roundabout.
+    D: Vehicles on your left that are signaling to exit.
+  answer: B
+  explanation: When approaching a roundabout, you must slow down and yield to all
+    traffic, including pedestrians and bicyclists, that is already circulating within
+    the roundabout.
+- id: 112
+  category: safe_driving_rules
+  question: To maintain the best control of your vehicle, especially one equipped
+    with airbags, where should you place your hands on the steering wheel?
+  choices:
+    A: At the 10 and 2 o'clock positions.
+    B: At the 8 and 4 o'clock positions.
+    C: Both hands at the top of the wheel.
+    D: One hand at the 12 o'clock position.
+  answer: B
+  explanation: The recommended hand positions are 9 and 3 o'clock or, to reduce the
+    risk of hand and arm injury from an airbag, a lower position such as 8 and 4 o'clock.
+    This provides better stability and safety.
+- id: 113
+  category: signs_and_signals
+  question: 'A curb painted green means you may park for:'
+  choices:
+    A: A limited time, as indicated by a posted sign or marking.
+    B: As long as you wish, provided you remain in your vehicle.
+    C: Loading or unloading passengers or mail only.
+    D: Emergency stopping only.
+  answer: A
+  explanation: A green curb indicates that parking is permitted for a limited time.
+    The time limit is usually shown on a nearby sign or painted on the curb itself.
+- id: 114
+  category: driver_responsibility
+  question: 'If you move, you must notify the DMV of your new address within:'
+  choices:
+    A: 5 days.
+    B: 10 days.
+    C: 30 days.
+    D: 60 days.
+  answer: B
+  explanation: California law requires you to notify the DMV of a change of address
+    within 10 days of moving. This can be done online, by mail, or in person.
+- id: 115
+  category: safe_driving_rules
+  question: You should signal your intention to turn at least how many feet before
+    making the turn?
+  choices:
+    A: 50 feet
+    B: 100 feet
+    C: 200 feet
+    D: 300 feet
+  answer: B
+  explanation: To alert other drivers, you should signal during the last 100 feet
+    before turning. Signaling earlier or later can confuse other drivers.
+- id: 116
+  category: sharing_the_road
+  question: When encountering a funeral procession, what is the proper and respectful
+    action to take?
+  choices:
+    A: You should yield the right-of-way to all vehicles in the procession.
+    B: You may interrupt or cut through the procession if you have a green light.
+    C: You should honk to show respect.
+    D: You can join the end of the procession to get through traffic faster.
+  answer: A
+  explanation: Out of respect, and for safety, drivers should yield the right-of-way
+    to all vehicles in a funeral procession. Do not cut through, join, or otherwise
+    interfere with the procession.
+- id: 117
+  category: signs_and_signals
+  question: 'A flashing yellow arrow traffic signal means:'
+  choices:
+    A: Stop and wait for a green arrow.
+    B: The protected turning time period is about to end.
+    C: You may turn in the direction of the arrow, but you must first yield to oncoming
+      traffic and pedestrians.
+    D: The traffic signal is broken; treat it as a stop sign.
+  answer: C
+  explanation: A flashing yellow arrow indicates that turns are permitted (unprotected),
+    but you must first yield to oncoming traffic and pedestrians before proceeding.
+- id: 118
+  category: alcohol_drugs_health
+  question: 'California''s ''Implied Consent'' law means that by driving a motor vehicle,
+    you have agreed to:'
+  choices:
+    A: Always have your driver's license with you.
+    B: Take a chemical test (breath, blood, or urine) for alcohol or drugs if requested
+      by a peace officer.
+    C: Consent to a search of your vehicle at any time.
+    D: Automatically be at fault in any collision you are involved in.
+  answer: B
+  explanation: The Implied Consent law states that if you are lawfully arrested for
+    a DUI, you have consented to take a chemical test to determine your blood alcohol
+    concentration (BAC) or the presence of drugs. Refusing this test has separate,
+    serious consequences.
+- id: 119
+  category: driver_testing
+  question: During your behind-the-wheel driving test, you will be asked to locate
+    and demonstrate the use of certain vehicle controls. Which of the following is
+    NOT a required item on this pre-drive checklist?
+  choices:
+    A: Windshield wipers
+    B: Defroster
+    C: Emergency flashers
+    D: Radio or audio system
+  answer: D
+  explanation: Before the driving test begins, the examiner will ask you to demonstrate
+    the operation of safety-critical equipment like headlights, wipers, defroster,
+    horn, and emergency flashers. The radio/audio system is not a required safety
+    item.
+- id: 120
+  category: sharing_the_road
+  question: What is a key characteristic of Neighborhood Electric Vehicles (NEVs)
+    that other drivers should be aware of?
+  choices:
+    A: They are allowed on all California freeways.
+    B: They reach a top speed of only 25 mph.
+    C: They are heavier and stop more slowly than standard cars.
+    D: They are only allowed to drive during daylight hours.
+  answer: B
+  explanation: NEVs are restricted to roads with a speed limit of 35 mph or less and
+    can only reach a maximum speed of 25 mph. Other drivers should be aware of their
+    lower speed and the potential for them to cause backups in faster-moving traffic.
+- id: 121
+  category: driver_testing
+  question: According to the website's CSS code, what is the pixel value assigned
+    to the 'huge' font size preset?
+  choices:
+    A: 32px
+    B: 40px
+    C: 42px
+    D: 50px
+  answer: B
+  explanation: 'The provided CSS defines the variable as `--wp--preset--font-size--huge:
+    40px;`.'
+- id: 122
+  category: driver_responsibility
+  question: The website's code includes a script to load a specific font from Google.
+    What is this font family called?
+  choices:
+    A: Arial
+    B: Times New Roman
+    C: Playfair Display
+    D: Courier New
+  answer: C
+  explanation: 'The JavaScript snippet contains `WebFontConfig = { google: { families:
+    [ ''Playfair+Display:400,700'' ] } };`, indicating the ''Playfair Display'' font
+    is being loaded.'
+- id: 123
+  category: signs_and_signals
+  question: In the website's CSS, what is the name of the preset gradient that transitions
+    from `rgb(2,3,129)` to `rgb(40,116,252)`?
+  choices:
+    A: Pale Ocean
+    B: Luminous Dusk
+    C: Midnight
+    D: Cool to Warm Spectrum
+  answer: C
+  explanation: 'The CSS code defines `--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129)
+    0%,rgb(40,116,252) 100%);`.'
+- id: 124
+  category: driver_responsibility
+  question: What is the `id` attribute of the HTML button element designed to show
+    the website's chatbot?
+  choices:
+    A: chatbot__show-btn
+    B: js-chatbot-dialog
+    C: js-chatbot-show
+    D: GTM-KHCVGH4
+  answer: C
+  explanation: The provided HTML for the button is `<button id="js-chatbot-show" ...>`.
+- id: 125
+  category: vehicle_information
+  question: The website's code includes an iframe for Google Tag Manager. What is
+    the ID specified for this service?
+  choices:
+    A: GTM-KHCVGH4
+    B: GTM-1234567
+    C: UA-XXXXX-Y
+    D: G-ABCDEFG
+  answer: A
+  explanation: The iframe's `src` attribute is 'https://www.googletagmanager.com/ns.html?id=GTM-KHCVGH4'.
+- id: 126
+  category: driver_testing
+  question: What is the defined value for the CSS preset spacing variable `--wp--preset--spacing--50`?
+  choices:
+    A: 1rem
+    B: 1.5rem
+    C: 2.25rem
+    D: 0.67rem
+  answer: B
+  explanation: 'The provided CSS code includes the definition: `--wp--preset--spacing--50:
+    1.5rem;`.'
+- id: 127
+  category: signs_and_signals
+  question: The CSS defines a preset color named 'luminous-vivid-amber'. What is its
+    corresponding hex color value?
+  choices:
+    A: '#f78da7'
+    B: '#ff6900'
+    C: '#fcb900'
+    D: '#00d084'
+  answer: C
+  explanation: 'The provided CSS defines the variable `--wp--preset--color--luminous-vivid-amber:
+    #fcb900;`.'
+- id: 128
+  category: signs_and_signals
+  question: According to the CSS styles, what is the name of the shadow preset defined
+    as `12px 12px 50px rgba(0, 0, 0, 0.4)`?
+  choices:
+    A: Natural
+    B: Sharp
+    C: Outlined
+    D: Deep
+  answer: D
+  explanation: The CSS variable `--wp--preset--shadow--deep` is defined as `12px 12px
+    50px rgba(0, 0, 0, 0.4);`.
+- id: 129
+  category: driver_testing
+  question: What is the pixel value for the CSS font size preset named 'normal'?
+  choices:
+    A: 18px
+    B: 21px
+    C: 28px
+    D: 32px
+  answer: B
+  explanation: 'The CSS code defines the preset font size as `--wp--preset--font-size--normal:
+    21px;`.'
+- id: 130
+  category: signs_and_signals
+  question: Which CSS preset gradient is defined as a transition from `rgb(202,248,128)`
+    to `rgb(113,206,126)`?
+  choices:
+    A: Electric Grass
+    B: Pale Ocean
+    C: Light Green Cyan to Vivid Green Cyan
+    D: Luminous Dusk
+  answer: A
+  explanation: 'The CSS defines `--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128)
+    0%,rgb(113,206,126) 100%);`.'
+- id: 131
+  category: driver_responsibility
+  question: A JavaScript snippet in the code is designed to modify the `<html>` element
+    upon loading. What class name does it replace?
+  choices:
+    A: js
+    B: no-js
+    C: wf-active
+    D: is-layout-flex
+  answer: B
+  explanation: The script contains the line `document.documentElement.className =
+    document.documentElement.className.replace('no-js', " ");`, which removes the
+    'no-js' class.
+- id: 132
+  category: signs_and_signals
+  question: What is the hex color code for the preset color named 'vivid-red'?
+  choices:
+    A: '#cf2e2e'
+    B: '#ff6900'
+    C: '#fcb900'
+    D: '#72aee6'
+  answer: A
+  explanation: 'The provided CSS defines the variable `--wp--preset--color--vivid-red:
+    #cf2e2e;`.'
+- id: 133
+  category: driver_testing
+  question: The CSS code defines a preset for 'x-large' font size. What is its value
+    in pixels?
+  choices:
+    A: 28px
+    B: 32px
+    C: 40px
+    D: 42px
+  answer: D
+  explanation: 'The CSS variable is defined as `--wp--preset--font-size--x-large:
+    42px;`.'
+- id: 134
+  category: signs_and_signals
+  question: What is the definition of the 'crisp' shadow preset in the website's CSS?
+  choices:
+    A: 6px 6px 9px rgba(0, 0, 0, 0.2)
+    B: 12px 12px 50px rgba(0, 0, 0, 0.4)
+    C: 6px 6px 0px rgb(0, 0, 0)
+    D: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0)
+  answer: C
+  explanation: 'The CSS defines the preset as `--wp--preset--shadow--crisp: 6px 6px
+    0px rgb(0, 0, 0);`.'
+- id: 135
+  category: driver_responsibility
+  question: The JavaScript code in the provided text loads a webfont script. From
+    what source protocol does it load the script?
+  choices:
+    A: Always 'https'
+    B: Always 'http'
+    C: Whichever protocol the page is currently using
+    D: FTP
+  answer: C
+  explanation: 'The script builds the source URL using `(''https:'' == document.location.protocol
+    ? ''https'' : ''http'') + ''://ajax.googleapis.com/...''`, which matches the current
+    page''s protocol.'
+- id: 136
+  category: signs_and_signals
+  question: Which preset gradient is defined by a linear gradient starting at `rgb(255,205,210)`
+    and ending at `rgb(198,40,40)`?
+  choices:
+    A: blush-light-purple
+    B: luminous-dusk
+    C: blush-bordeaux
+    D: luminous-vivid-orange-to-vivid-red
+  answer: C
+  explanation: 'The CSS code defines `--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(255,205,210)
+    0%,rgb(198,40,40) 100%);`.'
+- id: 137
+  category: driver_testing
+  question: What is the value of the smallest spacing preset, `--wp--preset--spacing--20`?
+  choices:
+    A: 0.44rem
+    B: 0.5em
+    C: 0.67rem
+    D: 1rem
+  answer: A
+  explanation: 'The CSS code defines the variable as `--wp--preset--spacing--20: 0.44rem;`.'
+- id: 138
+  category: driver_testing
+  question: What is the pixel value of the 'large' font size preset defined in the
+    website's CSS?
+  choices:
+    A: 21px
+    B: 28px
+    C: 32px
+    D: 40px
+  answer: C
+  explanation: 'The CSS defines the preset as `--wp--preset--font-size--large: 32px;`.'
+- id: 139
+  category: signs_and_signals
+  question: The CSS defines a shadow preset called 'outlined'. What is its specific
+    CSS definition?
+  choices:
+    A: 6px 6px 9px rgba(0, 0, 0, 0.2)
+    B: 12px 12px 50px rgba(0, 0, 0, 0.4)
+    C: 6px 6px 0px rgb(0, 0, 0)
+    D: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0)
+  answer: D
+  explanation: 'The CSS variable is defined as `--wp--preset--shadow--outlined: 6px
+    6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);`.'
+- id: 140
+  category: signs_and_signals
+  question: Which CSS color preset is assigned the hex code `#abb8c3`?
+  choices:
+    A: white
+    B: black
+    C: cyan-bluish-gray
+    D: pale-cyan-blue
+  answer: C
+  explanation: 'The CSS code includes the definition: `--wp--preset--color--cyan-bluish-gray:
+    #abb8c3;`.'
+- id: 141
+  category: driver_testing
+  question: The CSS code defines a preset spacing value of `5.06rem`. What is the
+    name of this spacing preset?
+  choices:
+    A: --wp--preset--spacing--60
+    B: --wp--preset--spacing--70
+    C: --wp--preset--spacing--80
+    D: --wp--preset--spacing--90
+  answer: C
+  explanation: 'The CSS defines `--wp--preset--spacing--80: 5.06rem;`.'
+- id: 142
+  category: signs_and_signals
+  question: The 'pale-ocean' gradient preset transitions between which two types of
+    colors?
+  choices:
+    A: A pale yellow to shades of blue-green
+    B: A light green to a darker green
+    C: A light purple to a dark blue
+    D: A light gray to a dark gray
+  answer: A
+  explanation: The CSS defines `--wp--preset--gradient--pale-ocean` with `rgb(255,245,203)`
+    (a pale yellow) and `rgb(182,227,212)` / `rgb(51,167,181)` (shades of blue-green).
+- id: 143
+  category: driver_responsibility
+  question: According to the JavaScript snippet, what does the code set the `async`
+    property of the new script element to?
+  choices:
+    A: 'false'
+    B: 'true'
+    C: '1'
+    D: It does not set the async property.
+  answer: B
+  explanation: The provided JavaScript contains the line `wf.async = 'true';`, which
+    sets the asynchronous property for the webfont loader script.
+- id: 144
+  category: driver_responsibility
+  question: According to the Secretary's Message, the California Driver's Handbook
+    is available in how many different languages to assist a diverse population of
+    drivers?
+  choices:
+    A: Three
+    B: Five
+    C: Seven
+    D: Nine
+  answer: D
+  explanation: The Secretary's Message in the handbook states, 'The California Driver’s
+    Handbook is available in nine languages and offers valuable information for Californians...'
+- id: 145
+  category: penalties_and_points
+  question: Which of the following specific payment types can be handled through the
+    DMV's online 'Make a Payment' portal?
+  choices:
+    A: Parking ticket fines
+    B: Dishonored check payments
+    C: Court-ordered restitution
+    D: Vehicle impound fees
+  answer: B
+  explanation: The text lists 'Dishonored Check Payment' as a specific option under
+    the 'Make a Payment' menu on the DMV website.
+- id: 146
+  category: license_system
+  question: The DMV website invites users to participate in a pilot program for what
+    new type of license under the 'Driver's Licenses & IDs' section?
+  choices:
+    A: A digital REAL ID
+    B: A mobile Driver's License (mDL)
+    C: An international driving permit
+    D: A temporary paper license
+  answer: B
+  explanation: Under the 'Driver's Licenses & IDs' menu, the option 'Join the mDL
+    Pilot' is listed, referring to the mobile Driver's License pilot program.
+- id: 147
+  category: driver_testing
+  question: Besides Driver Handbooks and Practice Tests, what other resource is offered
+    under the 'Testing' menu on the DMV website to help prepare drivers?
+  choices:
+    A: Live instructor Q&A sessions
+    B: A driving simulator
+    C: How-To Videos
+    D: A list of certified driving schools
+  answer: C
+  explanation: The 'Testing' menu on the DMV website lists 'How-To Videos' as a resource
+    for drivers, in addition to handbooks and practice tests.
+- id: 148
+  category: license_system
+  question: Which of the following is a specific case status you can check using the
+    DMV's online services?
+  choices:
+    A: Traffic school completion status
+    B: Vehicle smog check status
+    C: Driver Safety Case Status
+    D: Insurance claim status
+  answer: C
+  explanation: The 'Check Status' menu on the DMV website includes an option to check
+    'Driver Safety Case Status'.
+- id: 149
+  category: driver_responsibility
+  question: When using the DMV Virtual Assistant, what specific type of information
+    are you explicitly warned NOT to include in your chat?
+  choices:
+    A: Your driver's license number
+    B: Any personal information
+    C: Your vehicle's license plate number
+    D: Questions about traffic tickets
+  answer: B
+  explanation: The General Disclaimer for the DMV Virtual Assistant states, '...please
+    do not include any personal information.'
+- id: 150
+  category: vehicle_information
+  question: According to the DMV's online services menu, which of these tasks related
+    to vehicle registration can be completed online?
+  choices:
+    A: Submitting proof of insurance
+    B: Getting a vehicle safety inspection
+    C: Disputing a registration fee
+    D: Applying for a salvage title
+  answer: A
+  explanation: The 'Vehicle Registration' menu on the DMV website lists 'Submit Proof
+    of Insurance' as an available online service.
+- id: 151
+  category: sharing_the_road
+  question: Which section of the California Driver's Handbook specifically addresses
+    topics relevant to older drivers?
+  choices:
+    A: 'Section 8: Safe Driving'
+    B: 'Section 12: Driver Safety'
+    C: 'Section 13: Seniors and Driving'
+    D: 'Section 14: Glossary'
+  answer: C
+  explanation: 'The Table of Contents shows that ''Section 13: Seniors and Driving''
+    is dedicated to this topic.'
+- id: 152
+  category: penalties_and_points
+  question: Under the 'Make a Payment' section of the DMV website, which fee is specifically
+    listed as payable online?
+  choices:
+    A: A driver education course fee
+    B: A court traffic violation fine
+    C: A license reinstatement fee
+    D: A private parking citation
+  answer: C
+  explanation: The 'Make a Payment' menu on the DMV website explicitly lists 'Pay
+    Reinstatement Fee' as an online service.
+- id: 153
+  category: vehicle_information
+  question: If you need an official copy of your vehicle's history, which option should
+    you select from the DMV's online 'Vehicle Registration' menu?
+  choices:
+    A: New Registration
+    B: Request Vehicle Record
+    C: Renew Registration
+    D: Plates, Stickers, Placards
+  answer: B
+  explanation: The 'Vehicle Registration' menu includes the option 'Request Vehicle
+    Record' for obtaining a vehicle's history.
+- id: 154
+  category: driver_responsibility
+  question: The Secretary's Message states that a driver's license provides the opportunity
+    to travel to various places. Which of the following is NOT specifically mentioned
+    as a destination?
+  choices:
+    A: Essential services
+    B: A favorite vacation spot
+    C: International borders
+    D: Education
+  answer: C
+  explanation: The Secretary's Message mentions a license offers travel to 'essential
+    services, a favorite vacation spot, education, loved ones,' but does not mention
+    international borders.
+- id: 155
+  category: license_system
+  question: What is the title of Section 12 in the California Driver's Handbook?
+  choices:
+    A: Seniors and Driving
+    B: Vehicle Registration Requirements
+    C: Driver Safety
+    D: Alcohol and Drugs
+  answer: C
+  explanation: 'The Table of Contents lists ''Section 12: Driver Safety''.'
+- id: 156
+  category: driver_responsibility
+  question: What is the primary purpose of the machine translation services used for
+    the DMV chatbot, according to the disclaimer?
+  choices:
+    A: For legal compliance and enforcement
+    B: To provide a legally binding record of conversation
+    C: For information and convenience only
+    D: To guarantee the accuracy of all translated content
+  answer: C
+  explanation: The Third-Party Translation Disclaimer states, 'Machine translation
+    is provided for purposes of information and convenience only.'
+- id: 157
+  category: driver_testing
+  question: In addition to the Driver Handbooks, what other type of written material
+    is available under the 'Testing' menu on the DMV website?
+  choices:
+    A: DMV staff biographies
+    B: Specialty Driver Guides
+    C: Vehicle maintenance manuals
+    D: A list of traffic laws by county
+  answer: B
+  explanation: The 'Testing' menu on the DMV website lists 'Specialty Driver Guides'
+    as an available resource.
+- id: 158
+  category: license_system
+  question: According to the 'Check Status' menu, which of the following is NOT a
+    status you can check online?
+  choices:
+    A: Change of Address Status
+    B: DL/ID Renewal Status
+    C: Virtual Office Case Status
+    D: Driving School Accreditation Status
+  answer: D
+  explanation: The 'Check Status' menu lists Change of Address, DL/ID Renewal, and
+    Virtual Office Case statuses, but does not mention Driving School Accreditation.
+- id: 159
+  category: driver_responsibility
+  question: What warning does the DMV provide regarding saving a chat transcript from
+    the Virtual Assistant?
+  choices:
+    A: Transcripts are automatically deleted after 24 hours.
+    B: Transcripts are not legally admissible documents.
+    C: Use caution when using a public computer or device.
+    D: You must pay a fee to save the transcript.
+  answer: C
+  explanation: The General Disclaimer for the Virtual Assistant states, 'When your
+    chat is over, you can save the transcript. Use caution when using a public computer
+    or device.'
+- id: 160
+  category: license_system
+  question: If you need a copy of your own driving history, which option would you
+    choose from the 'Driver's Licenses & IDs' menu?
+  choices:
+    A: New DL/ID Card Application
+    B: Request Driver Record
+    C: Join the mDL Pilot
+    D: Renew DL/ID
+  answer: B
+  explanation: The 'Driver's Licenses & IDs' menu lists 'Request Driver Record' as
+    the service for obtaining a copy of your driving history.
+- id: 161
+  category: safe_driving_rules
+  question: The Secretary's Message emphasizes that all who use the roads must follow
+    the rules. Which of the following road users is NOT specifically mentioned in
+    this context?
+  choices:
+    A: Motorcycle riders
+    B: Pedestrians
+    C: Commercial vehicle drivers
+    D: Bicycle riders
+  answer: B
+  explanation: The Secretary's Message states, 'Whether driving a car, motorcycle,
+    commercial vehicle or riding a bicycle, it is critical we adhere to the rules...'
+    Pedestrians are not explicitly listed in this sentence.
+- id: 162
+  category: driver_responsibility
+  question: 'According to the handbook''s Table of Contents, which section immediately
+    follows ''Section 9: Alcohol and Drugs''?'
+  choices:
+    A: 'Section 8: Safe Driving (Continued)'
+    B: 'Section 11: Vehicle Registration Requirements'
+    C: 'Section 12: Driver Safety'
+    D: 'Section 10: Financial Responsibility, Insurance Requirements, and Collisions'
+  answer: D
+  explanation: The Table of Contents shows that Section 10, covering financial responsibility
+    and collisions, comes directly after Section 9 on alcohol and drugs.
+- id: 163
+  category: vehicle_information
+  question: Under which main menu on the DMV website would you find information about
+    replacing license plates, stickers, or placards?
+  choices:
+    A: Driver's Licenses & IDs
+    B: Make a Payment
+    C: Vehicle Registration
+    D: Check Status
+  answer: C
+  explanation: The 'Vehicle Registration' menu contains the sub-menu 'Plates, Stickers,
+    Placards'.
+- id: 164
+  category: penalties_and_points
+  question: What tool is provided under the 'Make a Payment' menu to help you determine
+    the cost of your vehicle registration?
+  choices:
+    A: Shopping Cart
+    B: Fee Calculator
+    C: Pay Late Registration Fee
+    D: Payments & Refunds
+  answer: B
+  explanation: The 'Make a Payment' menu lists a 'Fee Calculator' to help users determine
+    their fees.
+- id: 165
+  category: driver_responsibility
+  question: The introductory message in the California Driver's Handbook is from the
+    Secretary of which agency?
+  choices:
+    A: Department of Motor Vehicles
+    B: California Highway Patrol
+    C: California State Transportation Agency
+    D: Department of Justice
+  answer: C
+  explanation: The introductory message is signed by Toks Omishakin, Secretary of
+    the California State Transportation Agency.
+- id: 166
+  category: alcohol_drugs_health
+  question: The Secretary's message warns that operating a vehicle while distracted
+    or impaired could mean the difference between what?
+  choices:
+    A: A fine and a warning
+    B: Life and death
+    C: Keeping or losing your license
+    D: A misdemeanor and a felony
+  answer: B
+  explanation: The manual states, 'Do not operate a vehicle, motorcycle or bicycle
+    while distracted or impaired—it could mean the difference between life and death.'
+- id: 167
+  category: sharing_the_road
+  question: The warning to not operate while distracted or impaired applies to drivers
+    of vehicles, motorcycles, and what else?
+  choices:
+    A: Scooters
+    B: Skateboards
+    C: Commercial trucks
+    D: Bicycles
+  answer: D
+  explanation: 'The text explicitly states: ''Do not operate a vehicle, motorcycle
+    or bicycle while distracted or impaired...'''
+- id: 168
+  category: license_system
+  question: Why does the DMV recommend that you 'Try online first' for services like
+    renewals?
+  choices:
+    A: It is the only way to complete transactions
+    B: It can be a timesaver
+    C: It is required for all new drivers
+    D: It offers lower fees than in-person services
+  answer: B
+  explanation: The manual advises, 'Try online first, as it can be a timesaver.'
+- id: 169
+  category: driver_testing
+  question: In addition to various written languages, the California Driver's Handbook
+    is available as a video in which format?
+  choices:
+    A: Spanish with subtitles
+    B: Mandarin Chinese
+    C: American Sign Language
+    D: Audiobook format
+  answer: C
+  explanation: The manual provides an option for an 'American Sign Language Video'
+    available on YouTube.
+- id: 170
+  category: driver_testing
+  question: Which of the following is NOT one of the languages in which the PDF version
+    of the California Driver's Handbook is officially available?
+  choices:
+    A: Vietnamese
+    B: French
+    C: Russian
+    D: Punjabi
+  answer: B
+  explanation: The provided list of available languages for the PDF handbook includes
+    English, Spanish, Vietnamese, Russian, Armenian, Hindi, Punjabi, and Chinese,
+    but not French.
+- id: 171
+  category: driver_responsibility
+  question: According to the disclaimer, what is the DMV's position regarding the
+    accuracy of translations provided by Google™ Translate?
+  choices:
+    A: The DMV guarantees 95% accuracy
+    B: The DMV is unable to guarantee the accuracy
+    C: The DMV manually reviews all translations for accuracy
+    D: The DMV is liable for any minor inaccuracies
+  answer: B
+  explanation: The disclaimer states, 'The DMV is unable to guarantee the accuracy
+    of any translation provided by Google™ Translate and is therefore not liable for
+    any inaccurate information...'
+- id: 172
+  category: driver_responsibility
+  question: If any questions arise related to the information contained in a translated
+    version of the DMV website, what should you do?
+  choices:
+    A: Contact Google™ Translate support
+    B: Assume the translation is correct
+    C: File a formal complaint with the DMV
+    D: Refer to the English version
+  answer: D
+  explanation: The disclaimer advises, 'If any questions arise related to the information
+    contained in the translated website, please refer to the English version.'
+- id: 173
+  category: safe_driving_rules
+  question: What is the primary security instruction provided by the DMV when interacting
+    with its Virtual Assistant chatbot?
+  choices:
+    A: Speak clearly and slowly
+    B: Do not include any personal information
+    C: Only ask about vehicle registration
+    D: Have your driver's license number ready
+  answer: B
+  explanation: The disclaimer for the Virtual Assistant explicitly states, 'When interacting
+    with the Department of Motor Vehicles (DMV) Virtual Assistant, please do not include
+    any personal information.'
+- id: 174
+  category: license_system
+  question: The machine translation for the DMV chatbot and live chat services is
+    provided by whom?
+  choices:
+    A: DMV staff translators
+    B: Google™ Translate exclusively
+    C: Third-party vendors
+    D: An automated DMV system
+  answer: C
+  explanation: The disclaimer states, 'The DMV chatbot and live chat services use
+    third-party vendors to provide machine translation.'
+- id: 175
+  category: driver_responsibility
+  question: 'The Secretary''s message in the handbook emphasizes that driving or riding
+    is a:'
+  choices:
+    A: Constitutional right
+    B: Privilege
+    C: Mandatory skill
+    D: Lifelong requirement
+  answer: B
+  explanation: The text states, 'Remember that driving or riding is a privilege, and
+    above all, safety must be the priority.'
+- id: 176
+  category: safe_driving_rules
+  question: The Secretary's message advises drivers to put down their cell phone when
+    they are behind the wheel or what else?
+  choices:
+    A: In a parking lot
+    B: Stopped at a red light
+    C: Handlebars
+    D: In a school zone
+  answer: C
+  explanation: The message advises to 'put down that cell phone when behind the wheel
+    or handlebars,' referring to both cars and motorcycles/bicycles.
+- id: 177
+  category: driver_responsibility
+  question: The translation application tool on the DMV website is provided for what
+    stated purpose?
+  choices:
+    A: Legal compliance and enforcement
+    B: Official record-keeping
+    C: Replacing in-person translators
+    D: Information and convenience only
+  answer: D
+  explanation: The disclaimer states, 'This translation application tool is provided
+    for purposes of information and convenience only.'
+- id: 178
+  category: penalties_and_points
+  question: For compliance or enforcement purposes, what is considered the official
+    and accurate source for DMV program information?
+  choices:
+    A: The translated version of the website
+    B: The DMV Virtual Assistant
+    C: The web pages currently in English
+    D: A printed copy of the handbook
+  answer: C
+  explanation: The manual's disclaimer clarifies, 'The web pages currently in English
+    on the DMV website are the official and accurate source for the program information
+    and services the DMV provides.'
+- id: 179
+  category: license_system
+  question: According to the copyright information in the webpage footer, the State
+    of California holds the copyright for the content until which year?
+  choices:
+    A: '2024'
+    B: '2025'
+    C: '2026'
+    D: There is no copyright year listed
+  answer: C
+  explanation: The footer of the provided text includes the line 'Copyright &copy;
+    2026 State of California'.
+- id: 180
+  category: license_system
+  question: What is the stated goal of the DMV's efforts to modernize its interactions
+    with customers?
+  choices:
+    A: To eliminate all in-person appointments
+    B: To increase revenue from online fees
+    C: To make the digital experience easier, faster, and more convenient
+    D: To track driver behavior through online services
+  answer: C
+  explanation: The text states, 'The DMV has been modernizing interactions with its
+    customers, making Californians’ digital experience easier, faster and more convenient.'
+- id: 181
+  category: penalties_and_points
+  question: According to the disclaimer for the DMV's chatbot, what legal effect do
+    discrepancies created in a machine translation have?
+  choices:
+    A: They are legally binding if the user saves the transcript
+    B: They can be used for compliance but not enforcement
+    C: They are not binding and have no legal effect
+    D: They must be reported to the third-party vendor for correction
+  answer: C
+  explanation: The chatbot disclaimer states, 'Any discrepancies or differences created
+    in the translation are not binding and have no legal effect for compliance or
+    enforcement purposes.'
+- id: 182
+  category: safe_driving_rules
+  question: The Secretary of the California State Transportation Agency's message
+    states that above all else, what must be the priority when driving?
+  choices:
+    A: Speed
+    B: Convenience
+    C: Safety
+    D: Right-of-way
+  answer: C
+  explanation: The message clearly states, '...above all, safety must be the priority.'
+- id: 183
+  category: driver_responsibility
+  question: The DMV is not liable for inaccurate information or changes in page formatting
+    that result from using what?
+  choices:
+    A: The DMV Virtual Assistant
+    B: The Google™ Translate application tool
+    C: The online appointment system
+    D: The DMV's mobile application
+  answer: B
+  explanation: The disclaimer says the DMV 'is therefore not liable for any inaccurate
+    information or changes in the formatting of the pages resulting from the use of
+    the translation application tool.'
+- id: 184
+  category: license_system
+  question: The translation disclaimer specifies that Google™ Translate is a free
+    third-party service that is not ________ by the DMV.
+  choices:
+    A: Endorsed
+    B: Paid for
+    C: Controlled
+    D: Recommended
+  answer: C
+  explanation: The text states, 'Google™ Translate is a free third-party service,
+    which is not controlled by the DMV.'
+- id: 185
+  category: license_system
+  question: The DMV website provides links to its social media presence on several
+    platforms, including which of the following?
+  choices:
+    A: TikTok
+    B: Snapchat
+    C: Pinterest
+    D: LinkedIn
+  answer: D
+  explanation: The provided text shows icons for Facebook, X (Twitter), YouTube, Instagram,
+    and LinkedIn.
+- id: 186
+  category: sharing_the_road
+  question: According to the Secretary's message, a key safety action is to always
+    pay attention to other drivers, bicyclists, and who else?
+  choices:
+    A: Law enforcement officers
+    B: Road construction workers
+    C: Pedestrians
+    D: Emergency vehicles
+  answer: C
+  explanation: The message advises drivers to 'pay attention to other drivers, bicyclists
+    and pedestrians...'
+- id: 187
+  category: license_system
+  question: The DMV's modernization efforts, such as expanding online services, are
+    focused on improving the customer's ________ experience.
+  choices:
+    A: In-person
+    B: Telephone
+    C: Digital
+    D: Mail-in
+  answer: C
+  explanation: The text states that the DMV is 'making Californians’ digital experience
+    easier, faster and more convenient.'
+- id: 188
+  category: sharing_the_road
+  question: When driving near a large truck, where are its largest blind spots, also
+    known as 'No-Zones'?
+  choices:
+    A: Directly in front of the truck only
+    B: On the left (driver's) side only
+    C: On both sides, directly in front, and directly behind the truck
+    D: Only on the right side and directly behind the truck
+  answer: C
+  explanation: Large trucks have significant blind spots on all four sides. These
+    areas, called 'No-Zones,' are where your vehicle 'disappears' from the truck driver's
+    view.
+- id: 189
+  category: safe_driving_rules
+  question: At a 'T' intersection that does not have any stop or yield signs, who
+    has the right-of-way?
+  choices:
+    A: The vehicle on the through road
+    B: The vehicle on the road that ends
+    C: The vehicle that arrives first
+    D: The vehicle turning right
+  answer: A
+  explanation: At a 'T' intersection, traffic on the through road has the right-of-way.
+    Vehicles on the road that ends must yield to traffic and pedestrians on the through
+    road.
+- id: 190
+  category: license_system
+  question: 'For the first 12 months, a minor with a provisional driver''s license
+    is not allowed to transport passengers under 20 years of age unless:'
+  choices:
+    A: They are driving to a school-sponsored event
+    B: They are accompanied by a licensed California driver 25 years of age or older
+    C: The passengers are their siblings
+    D: They have maintained a clean driving record for 6 months
+  answer: B
+  explanation: A minor's provisional license restrictions are waived if they are accompanied
+    by a licensed parent, guardian, other licensed driver 25 years of age or older,
+    or a certified driving instructor.
+- id: 191
+  category: signs_and_signals
+  question: 'A curb painted green indicates that parking is:'
+  choices:
+    A: Allowed for an unlimited time
+    B: Allowed for a limited time, as indicated by a sign or curb marking
+    C: For loading and unloading of passengers or freight only
+    D: For emergency vehicles only
+  answer: B
+  explanation: A green curb means you may park for a limited time. The time limit
+    is often posted on a sign or painted directly on the curb.
+- id: 192
+  category: sharing_the_road
+  question: 'In California, it is legal for motorcyclists to ''lane split,'' which
+    means they can:'
+  choices:
+    A: Drive on the shoulder of the road to pass traffic
+    B: Drive between two lanes of stopped or slow-moving traffic
+    C: Use a designated bicycle lane if traffic is congested
+    D: Exceed the speed limit by 10 mph to keep traffic flowing
+  answer: B
+  explanation: Lane splitting, defined as driving a motorcycle between rows of stopped
+    or slow-moving vehicles in the same lane, is legal in California but must be done
+    in a safe and prudent manner.
+- id: 193
+  category: safe_driving_rules
+  question: 'When entering traffic from a stop, such as pulling out from a curb or
+    a private driveway, you need a gap of at least:'
+  choices:
+    A: Half a block on city streets and a full block on the highway
+    B: One car length for every 10 mph of traffic speed
+    C: Two seconds to merge safely
+    D: The length of a school bus
+  answer: A
+  explanation: When entering traffic, you need enough space to get up to the speed
+    of other vehicles. The handbook recommends a gap of about half a block on city
+    streets and a full block on the highway.
+- id: 194
+  category: safe_driving_rules
+  question: 'You may legally pass another vehicle on the right side:'
+  choices:
+    A: When the driver ahead of you is signaling a right turn
+    B: On a one-way street with two or more lanes of traffic moving in your direction
+    C: By driving on the unpaved shoulder of the road
+    D: When another driver is moving too slowly in the fast lane
+  answer: B
+  explanation: You may pass on the right when an open highway is clearly marked for
+    two or more lanes of travel in your direction, or on a one-way street. You may
+    also pass on the right if the driver ahead is signaling a left turn.
+- id: 195
+  category: signs_and_signals
+  question: 'A curb painted white means:'
+  choices:
+    A: No stopping, standing, or parking at any time
+    B: Loading zone for commercial vehicles only
+    C: You may stop only long enough to pick up or drop off passengers or mail
+    D: Parking for a limited time, as posted on a sign
+  answer: C
+  explanation: A white curb indicates you may stop only long enough to pick up or
+    drop off passengers or to deposit mail in an adjacent mailbox.
+- id: 196
+  category: vehicle_information
+  question: If your accelerator pedal becomes stuck while driving, what is the first
+    step you should take?
+  choices:
+    A: Turn off the ignition immediately to cut power to the engine
+    B: Shift to neutral and apply the brakes
+    C: Reach down and try to pull the pedal up with your hand
+    D: Pump the accelerator pedal rapidly to try and unstick it
+  answer: B
+  explanation: If your accelerator sticks, you should shift to neutral to disengage
+    the engine, apply the brakes firmly, and find a safe place to pull over. Turning
+    off the ignition while moving can lock the steering wheel.
+- id: 197
+  category: defensive_driving
+  question: 'To be prepared for road hazards and avoid last-minute moves, you should
+    scan the road ahead of your vehicle by a distance equivalent to:'
+  choices:
+    A: 1-2 seconds
+    B: 3-5 seconds
+    C: 10-15 seconds
+    D: 20-25 seconds
+  answer: C
+  explanation: The California Driver's Handbook recommends scanning the road 10-15
+    seconds ahead to see hazards early. This allows you time to react and avoid making
+    sudden or late moves.
+- id: 198
+  category: penalties_and_points
+  question: In California, a conviction for a serious traffic offense like a DUI or
+    hit-and-run will result in how many points being added to your driving record?
+  choices:
+    A: One point
+    B: Two points
+    C: Three points
+    D: Four points
+  answer: B
+  explanation: Offenses such as DUI, reckless driving, hit-and-run, and driving with
+    a suspended license are considered serious and result in two points on your driving
+    record.
+- id: 199
+  category: sharing_the_road
+  question: 'Neighborhood Electric Vehicles (NEVs) and Low-Speed Vehicles (LSVs) are
+    generally restricted to roads with a speed limit of:'
+  choices:
+    A: 25 mph or less
+    B: 35 mph or less
+    C: 45 mph or less
+    D: Any road except a freeway
+  answer: B
+  explanation: NEVs and LSVs are restricted to roadways with a posted speed limit
+    of 35 mph or less. They are not designed for high-speed roads.
+- id: 200
+  category: defensive_driving
+  question: 'A law enforcement vehicle is driving in a serpentine (S-shaped) pattern
+    across all lanes of traffic. This is a ''traffic break.'' You should:'
+  choices:
+    A: Pass the vehicle on the right shoulder
+    B: Slow down, turn on your hazard lights, and do not pass the officer
+    C: Continue at your current speed until the officer pulls you over
+    D: Immediately pull over to the right and stop
+  answer: B
+  explanation: A traffic break is used by law enforcement to slow or stop traffic
+    to remove hazards from the road. You must slow down, follow the officer at a safe
+    distance, and not attempt to pass.
+- id: 201
+  category: penalties_and_points
+  question: 'A first conviction for driving under the influence (DUI) of alcohol or
+    drugs can result in:'
+  choices:
+    A: A warning and a mandatory online driver education class
+    B: A minimum 30-day license suspension and a small fine
+    C: Up to six months in jail and thousands of dollars in fines and fees
+    D: A lifetime revocation of your driver's license
+  answer: C
+  explanation: Even a first DUI conviction is a serious criminal offense with significant
+    consequences, including potential jail time, license suspension, mandatory DUI
+    programs, and substantial financial costs.
+- id: 202
+  category: sharing_the_road
+  question: 'If you see animals or livestock on or near the roadway, you should:'
+  choices:
+    A: Honk your horn repeatedly to scare them off the road
+    B: Slow down, proceed with caution, and follow directions from the person in charge
+      of them
+    C: Speed up to pass them as quickly as possible
+    D: Assume the animals will not enter the road and maintain your speed
+  answer: B
+  explanation: When you encounter animals on the road, slow down and be prepared to
+    stop. If there is a person directing the animals, follow their instructions. Do
+    not make loud noises that could startle the animals and cause them to act unpredictably.
+- id: 203
+  category: driver_responsibility
+  question: 'California''s Compulsory Financial Responsibility Law requires every
+    driver and vehicle owner to:'
+  choices:
+    A: Pay an annual 'road usage' fee to the DMV
+    B: Maintain liability insurance or another form of financial responsibility
+    C: Have a valid credit card in the vehicle at all times
+    D: Pass a smog check every year, regardless of vehicle age
+  answer: B
+  explanation: This law requires that drivers and vehicle owners be able to pay for
+    damages they cause. This is typically done by maintaining liability insurance,
+    but other forms like a surety bond or a DMV-issued self-insurance certificate
+    are also acceptable.
+- id: 204
+  category: license_system
+  question: According to the webpage's data layer, what is the defined 'task' associated
+    with the California Driver's Handbook page?
+  choices:
+    A: informational,testing
+    B: educational,licensing
+    C: renewal,payment
+    D: vehicle_registration,forms
+  answer: B
+  explanation: The `dataLayer` JavaScript code on the page specifies `dataLayer.push({"task":"educational,licensing",...})`,
+    indicating the page's function is related to education and licensing.
+- id: 205
+  category: driver_responsibility
+  question: In the webpage's tracking script, what value is assigned to the 'conLang'
+    variable to specify the content language?
+  choices:
+    A: en-CA
+    B: eng
+    C: en_US
+    D: english
+  answer: C
+  explanation: The `dataLayer` script includes the key-value pair `"conLang":"en_US"`,
+    which designates the content language as US English.
+- id: 206
+  category: signs_and_signals
+  question: What is the hexadecimal color code for the CSS variable `--wp-admin-theme-color`
+    used in the website's styling?
+  choices:
+    A: '#7a00df'
+    B: '#313131'
+    C: '#005a87'
+    D: '#007cba'
+  answer: D
+  explanation: The `:root` style definitions in the CSS specify that `--wp-admin-theme-color`
+    is set to `#007cba`.
+- id: 207
+  category: defensive_driving
+  question: What is the standard border width, in pixels, defined by the CSS variable
+    `--wp-admin-border-width-focus` for focused elements?
+  choices:
+    A: 1px
+    B: 1.5px
+    C: 2px
+    D: 3px
+  answer: C
+  explanation: The CSS code defines the variable `--wp-admin-border-width-focus` with
+    a value of `2px`.
+- id: 208
+  category: signs_and_signals
+  question: Which hexadecimal color code is applied to elements with the class `.has-very-dark-gray-background-color`?
+  choices:
+    A: '#eee'
+    B: '#313131'
+    C: '#444'
+    D: '#ddd'
+  answer: B
+  explanation: The CSS rules state that `.has-very-dark-gray-background-color` sets
+    the `background-color` to `#313131`.
+- id: 209
+  category: signs_and_signals
+  question: The `.has-midnight-gradient-background` class creates a linear gradient.
+    What are the two main colors it transitions between?
+  choices:
+    A: '#330968 and #31cdcf'
+    B: '#fdd79a and #004a59'
+    C: '#020381 and #2874fc'
+    D: '#faaca8 and #dad0ec'
+  answer: C
+  explanation: The CSS for `.has-midnight-gradient-background` is defined as `linear-gradient(135deg,#020381,#2874fc)`.
+- id: 210
+  category: driver_testing
+  question: According to the CSS, what cursor style is applied to elements with the
+    class `.wp-element-button`?
+  choices:
+    A: default
+    B: pointer
+    C: wait
+    D: text
+  answer: B
+  explanation: The CSS rule `.wp-element-button{cursor:pointer}` indicates that the
+    cursor should change to a pointer (hand icon) when hovering over these elements.
+- id: 211
+  category: safe_driving_rules
+  question: When the `.screen-reader-text` element is focused, what `z-index` value
+    is it assigned to ensure it appears above other content?
+  choices:
+    A: '100'
+    B: '1000'
+    C: '10000'
+    D: '100000'
+  answer: D
+  explanation: The CSS for the focused state of `.screen-reader-text` includes `z-index:100000`.
+- id: 212
+  category: vehicle_information
+  question: What padding is applied to a `<h1>` heading element that also has a background,
+    according to the provided CSS?
+  choices:
+    A: 1em 2em
+    B: 1.25em 2.375em
+    C: 15px 23px 14px
+    D: 0.5em 1em 0.5em 0
+  answer: B
+  explanation: The CSS rule `h1:where(.wp-block-heading).has-background` specifies
+    a `padding` of `1.25em 2.375em`.
+- id: 213
+  category: signs_and_signals
+  question: For an image with the `is-style-circle-mask` style, what `border-radius`
+    value is used to create the circular shape?
+  choices:
+    A: 50%
+    B: 100px
+    C: 9999px
+    D: inherit
+  answer: C
+  explanation: The CSS rule `.wp-block-image.is-style-circle-mask img` sets the `border-radius`
+    to `9999px`, a common technique to ensure an element is rendered as a circle.
+- id: 214
+  category: safe_driving_rules
+  question: What are the margin settings for an image block with the `.alignright`
+    class?
+  choices:
+    A: 0.5em on top, 0 on right, 0.5em on bottom, 1em on left
+    B: 1em on top, 0.5em on right, 1em on bottom, 0.5em on left
+    C: 0.5em on all sides
+    D: 1em on top and bottom, 0.5em on left and right
+  answer: A
+  explanation: The CSS for `.wp-block-image .alignright` defines the margin as `margin:.5em
+    0 .5em 1em`, which corresponds to top, right, bottom, and left margins respectively.
+- id: 215
+  category: vehicle_information
+  question: For specific images with an auto-calculated size, what `contain-intrinsic-size`
+    is defined in the CSS to help the browser reserve space?
+  choices:
+    A: 1920px 1080px
+    B: 1024px 768px
+    C: 3000px 1500px
+    D: 800px 600px
+  answer: C
+  explanation: The first CSS rule provided sets `contain-intrinsic-size:3000px 1500px`
+    for images matching the selector.
+- id: 216
+  category: signs_and_signals
+  question: At what angle is the linear gradient for the `.has-hazy-dawn-gradient-background`
+    class set?
+  choices:
+    A: 90deg
+    B: 120deg
+    C: 135deg
+    D: 180deg
+  answer: C
+  explanation: The CSS for `.has-hazy-dawn-gradient-background` is defined as `linear-gradient(135deg,...)`,
+    indicating a 135-degree angle.
+- id: 217
+  category: safe_driving_rules
+  question: What `white-space` property is applied to the `.has-fit-text` class to
+    prevent text from wrapping?
+  choices:
+    A: normal
+    B: pre
+    C: nowrap
+    D: pre-wrap
+  answer: C
+  explanation: The CSS rule for `.has-fit-text` sets `white-space:nowrap!important`,
+    which forces the text to stay on a single line.
+- id: 218
+  category: vehicle_information
+  question: According to the global CSS rules, if an element has its `border-width`
+    set via an inline style, what `border-style` is automatically applied?
+  choices:
+    A: solid
+    B: dotted
+    C: dashed
+    D: none
+  answer: A
+  explanation: The rule `html :where([style*=border-width]){border-style:solid}` ensures
+    that any element with a specified border width will have a solid border style
+    by default.
+- id: 219
+  category: defensive_driving
+  question: What is the default opacity of the button within a `.wp-lightbox-container`
+    before a user interacts with it?
+  choices:
+    A: 1 (fully visible)
+    B: 0.5 (semi-transparent)
+    C: 0 (fully transparent/hidden)
+    D: 0.2 (mostly transparent)
+  answer: C
+  explanation: The CSS for `.wp-lightbox-container button` sets its default `opacity`
+    to `0`, making it invisible until an event like a hover changes it.
+- id: 220
+  category: alcohol_drugs_health
+  question: The button inside a lightbox container has a special visual effect applied
+    to the area behind it. What is the `blur` value for this `backdrop-filter` effect?
+  choices:
+    A: 4px
+    B: 8px
+    C: 16px
+    D: 20px
+  answer: C
+  explanation: The CSS for the lightbox button specifies `backdrop-filter:blur(16px)
+    saturate(180%)`. The blur value is `16px`.
+- id: 221
+  category: signs_and_signals
+  question: The `.has-atomic-cream-gradient-background` class transitions from a light
+    color to a dark color. What is the dark color in this gradient?
+  choices:
+    A: '#31cdcf'
+    B: '#004a59'
+    C: '#2874fc'
+    D: '#67a671'
+  answer: B
+  explanation: The CSS for `.has-atomic-cream-gradient-background` is defined as `linear-gradient(135deg,#fdd79a,#004a59)`,
+    with `#004a59` being the second (darker) color.
+- id: 222
+  category: penalties_and_points
+  question: On screens with a maximum width of 600px, what value is assigned to the
+    `--wp-admin--admin-bar--position-offset` variable for sticky elements?
+  choices:
+    A: var(--wp-admin--admin-bar--height,0px)
+    B: 0px
+    C: 32px
+    D: -1px
+  answer: B
+  explanation: The media query `@media screen and (max-width:600px)` contains a rule
+    that sets `--wp-admin--admin-bar--position-offset` to `0px` for smaller screens.
+- id: 223
+  category: safe_driving_rules
+  question: In the website's code, what is the specified `border-radius` for a standard
+    button link with the class '.wp-block-button__link'?
+  choices:
+    A: 4px
+    B: 10px
+    C: 50%
+    D: 9999px
+  answer: D
+  explanation: The CSS rule for '.wp-block-button__link' includes 'border-radius:9999px;',
+    which creates a 'pill' or oval shape for the button.
+- id: 224
+  category: driver_testing
+  question: The website's styling defines a class for large text called '.is-large-text'.
+    What font size does this class apply?
+  choices:
+    A: 1em
+    B: 2.25em
+    C: 3em
+    D: 8.4em
+  answer: B
+  explanation: 'The manual text specifies the CSS rule: ''.is-large-text{font-size:2.25em}''.'
+- id: 225
+  category: vehicle_information
+  question: What is the defined aspect ratio for the preset named '--wp--preset--aspect-ratio--16-9'?
+  choices:
+    A: 16/9
+    B: 9/16
+    C: 4/3
+    D: '1'
+  answer: A
+  explanation: 'The root styles in the provided text define ''--wp--preset--aspect-ratio--16-9:
+    16/9;''.'
+- id: 226
+  category: penalties_and_points
+  question: What is the stacking order value, or `z-index`, assigned to the main lightbox
+    overlay class '.wp-lightbox-overlay'?
+  choices:
+    A: '100'
+    B: '1000'
+    C: '100000'
+    D: '5000000'
+  answer: C
+  explanation: The CSS rule for '.wp-lightbox-overlay' sets its 'z-index' property
+    to '100000' to ensure it appears above other page content.
+- id: 227
+  category: alcohol_drugs_health
+  question: The style for a paragraph with a drop cap, defined as '.has-drop-cap',
+    sets the first letter to a very large font size. What is that font size?
+  choices:
+    A: 2.25em
+    B: 3em
+    C: 8.4em
+    D: 1.125em
+  answer: C
+  explanation: The CSS rule for '.has-drop-cap:not(:focus):first-letter' specifies
+    'font-size:8.4em;'.
+- id: 228
+  category: signs_and_signals
+  question: Which preset color name corresponds to the hex code '#00d084' in the website's
+    color palette?
+  choices:
+    A: light-green-cyan
+    B: vivid-green-cyan
+    C: pale-cyan-blue
+    D: electric-grass
+  answer: B
+  explanation: 'The text defines the variable ''--wp--preset--color--vivid-green-cyan:
+    #00d084;''.'
+- id: 229
+  category: sharing_the_road
+  question: The website defines a gradient preset named '--wp--preset--gradient--blush-bordeaux'.
+    What is the starting color of this gradient?
+  choices:
+    A: rgb(254,205,165)
+    B: rgb(254,45,45)
+    C: rgb(107,0,62)
+    D: rgb(255,206,236)
+  answer: A
+  explanation: The definition for '--wp--preset--gradient--blush-bordeaux' is 'linear-gradient(135deg,rgb(254,205,165)
+    0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%)'. The starting color at 0% is rgb(254,205,165).
+- id: 230
+  category: defensive_driving
+  question: For the lightbox zoom-out animation, what is the final state of the 'transform'
+    property in the '@keyframes lightbox-zoom-out' rule?
+  choices:
+    A: translate(-50%,-50%) scale(1)
+    B: translate(0,0) scale(0)
+    C: translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh
+      + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))
+    D: scale(0)
+  answer: C
+  explanation: The 'to' state of the '@keyframes lightbox-zoom-out' animation rule
+    sets the transform property to return the image to its original position and scale
+    on the page.
+- id: 231
+  category: safe_driving_rules
+  question: What is the specified `text-decoration` for the link inside a button,
+    styled with the class '.wp-block-button__link'?
+  choices:
+    A: underline
+    B: overline
+    C: line-through
+    D: none
+  answer: D
+  explanation: The CSS rule for '.wp-block-button__link' explicitly states 'text-decoration:none;'
+    to remove the default underline from the link.
+- id: 232
+  category: vehicle_information
+  question: What is the `font-weight` specified for the first letter in a paragraph
+    with a drop cap ('.has-drop-cap')?
+  choices:
+    A: '100'
+    B: '400'
+    C: '700'
+    D: '900'
+  answer: A
+  explanation: The CSS rule for '.has-drop-cap:not(:focus):first-letter' includes
+    'font-weight:100;', which indicates a very light or thin font weight.
+- id: 233
+  category: license_system
+  question: According to the website's code, what is the background color of a file
+    download button styled with the class '.wp-block-file__button'?
+  choices:
+    A: '#ffffff'
+    B: '#0077c8'
+    C: '#32373c'
+    D: '#cf2e2e'
+  answer: C
+  explanation: The CSS rule '.wp-block-file__button{background:#32373c;...}' sets
+    the background color to a dark gray.
+- id: 234
+  category: driver_responsibility
+  question: What is the `opacity` of the '.scrim' element within the lightbox overlay,
+    which provides a semi-transparent background?
+  choices:
+    A: '0.5'
+    B: '0.7'
+    C: '0.9'
+    D: '1.0'
+  answer: C
+  explanation: The CSS rule for '.wp-lightbox-overlay .scrim' sets the opacity to
+    '.9', making the background mostly opaque but still slightly transparent.
+- id: 235
+  category: safe_driving_rules
+  question: What is the duration of the transition effect for the lightbox button's
+    opacity, as defined in the CSS?
+  choices:
+    A: 0.2 seconds
+    B: 0.4 seconds
+    C: 1 second
+    D: There is no transition
+  answer: A
+  explanation: The rule '.wp-lightbox-container button{transition:opacity .2s ease}'
+    specifies a 0.2-second transition for the opacity property.
+- id: 236
+  category: sharing_the_road
+  question: The gradient preset '--wp--preset--gradient--pale-ocean' transitions between
+    three colors. What is the middle color in this gradient?
+  choices:
+    A: rgb(255,245,203)
+    B: rgb(51,167,181)
+    C: rgb(182,227,212)
+    D: rgb(113,206,126)
+  answer: C
+  explanation: The definition for '--wp--preset--gradient--pale-ocean' is 'linear-gradient(135deg,rgb(255,245,203)
+    0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%)'. The color at the 50% mark is rgb(182,227,212).
+- id: 237
+  category: penalties_and_points
+  question: What is the `z-index` of the close button within the lightbox overlay,
+    ensuring it appears above the image container?
+  choices:
+    A: '100'
+    B: '999999'
+    C: '5000000'
+    D: '9999999999'
+  answer: C
+  explanation: The CSS rule for '.wp-lightbox-overlay .close-button' sets the 'z-index'
+    to '5000000', placing it above most other lightbox elements.
+- id: 238
+  category: driver_testing
+  question: The website's CSS defines a font size for '.is-regular-text'. What is
+    this size?
+  choices:
+    A: .875em
+    B: 1em
+    C: 1.125em
+    D: 2.25em
+  answer: B
+  explanation: The provided text includes the rule '.is-regular-text{font-size:1em}',
+    which represents the standard or base font size.
+- id: 239
+  category: safe_driving_rules
+  question: When a paragraph has a background color, what padding is applied to it
+    according to the rule ':root :where(p.has-background)'?
+  choices:
+    A: 1em 2em
+    B: 1.25em 2.375em
+    C: 0.5em 1em
+    D: No padding is applied
+  answer: B
+  explanation: The CSS rule ':root :where(p.has-background){padding:1.25em 2.375em}'
+    specifies the padding for paragraphs that have a background style.
+- id: 240
+  category: signs_and_signals
+  question: What is the name of the gradient preset that is defined as 'linear-gradient(135deg,rgb(6,147,227)
+    0%,rgb(155,81,224) 100%)'?
+  choices:
+    A: vivid-cyan-blue-to-vivid-purple
+    B: cool-to-warm-spectrum
+    C: blush-light-purple
+    D: pale-ocean
+  answer: A
+  explanation: The provided text explicitly defines '--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple'
+    with this specific linear-gradient value.
+- id: 241
+  category: driver_responsibility
+  question: In the DMV website's design specifications, what is the definition of
+    the '--wp--preset--gradient--midnight' style?
+  choices:
+    A: A linear gradient from black to dark blue
+    B: A linear gradient from rgb(2,3,129) to rgb(40,116,252)
+    C: A radial gradient from dark purple to black
+    D: A linear gradient from rgb(255,245,203) to rgb(51,167,181)
+  answer: B
+  explanation: 'The provided text defines ''--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129)
+    0%,rgb(40,116,252) 100%);''.'
+- id: 242
+  category: driver_responsibility
+  question: When reviewing the DMV website's layout code, the '--wp--preset--font-size--medium'
+    is defined as what value?
+  choices:
+    A: 18px
+    B: 21px
+    C: 28px
+    D: 32px
+  answer: C
+  explanation: 'The provided text defines the medium font size preset as ''--wp--preset--font-size--medium:
+    28px;''.'
+- id: 243
+  category: driver_responsibility
+  question: The DMV website's CSS includes a preset for a 'tiny' font size. What is
+    its defined pixel value?
+  choices:
+    A: 14px
+    B: 18px
+    C: 20px
+    D: 12px
+  answer: A
+  explanation: 'The provided text lists the ''tiny'' font size as ''--wp--preset--font-size--tiny:
+    14px;''.'
+- id: 244
+  category: driver_responsibility
+  question: In the website's technical specifications, what is the value of the spacing
+    preset '--wp--preset--spacing--30'?
+  choices:
+    A: 0.44rem
+    B: 1rem
+    C: 0.67rem
+    D: 1.5rem
+  answer: C
+  explanation: 'The provided text defines this spacing preset as ''--wp--preset--spacing--30:
+    0.67rem;''.'
+- id: 245
+  category: driver_responsibility
+  question: The DMV website's layout rules define a spacing preset named '--wp--preset--spacing--40'.
+    What is its value?
+  choices:
+    A: 0.67rem
+    B: 1rem
+    C: 1.5rem
+    D: 2.25rem
+  answer: B
+  explanation: 'According to the provided text, the value for this spacing preset
+    is ''--wp--preset--spacing--40: 1rem;''.'
+- id: 246
+  category: driver_responsibility
+  question: Based on the provided website code, what is the defined value for the
+    spacing variable '--wp--preset--spacing--50'?
+  choices:
+    A: 1rem
+    B: 1.5rem
+    C: 2.25rem
+    D: 3.38rem
+  answer: B
+  explanation: 'The provided text specifies ''--wp--preset--spacing--50: 1.5rem;''.'
+- id: 247
+  category: driver_responsibility
+  question: According to the provided code, what is the CSS definition for the '--wp--preset--shadow--deep'
+    effect?
+  choices:
+    A: 6px 6px 9px rgba(0, 0, 0, 0.2)
+    B: 12px 12px 50px rgba(0, 0, 0, 0.4)
+    C: 6px 6px 0px rgba(0, 0, 0, 0.2)
+    D: 12px 12px 25px rgba(0, 0, 0, 0.5)
+  answer: B
+  explanation: 'The provided text defines the ''deep'' shadow preset as ''--wp--preset--shadow--deep:
+    12px 12px 50px rgba(0, 0, 0, 0.4);''.'
+- id: 248
+  category: driver_responsibility
+  question: The DMV website's color palette includes a preset named 'pale-pink'. What
+    is its corresponding hex color code?
+  choices:
+    A: '#ffffff'
+    B: '#cf2e2e'
+    C: '#f78da7'
+    D: '#abb8c3'
+  answer: C
+  explanation: 'The provided text lists the hex code for pale-pink in the full, un-truncated
+    CSS: ''--wp--preset--color--pale-pink: #f78da7;''.'
+- id: 249
+  category: driver_responsibility
+  question: According to the provided code, the color preset 'light-green-cyan' is
+    assigned which hex code?
+  choices:
+    A: '#7bdcb5'
+    B: '#00d084'
+    C: '#8ed1fc'
+    D: '#9b51e0'
+  answer: A
+  explanation: 'The provided text lists the hex code for this color in the full, un-truncated
+    CSS: ''--wp--preset--color--light-green-cyan: #7bdcb5;''.'
+- id: 250
+  category: driver_responsibility
+  question: A script on the DMV website is designed to enhance browser functionality.
+    What class name does it remove from the main HTML element upon loading?
+  choices:
+    A: js
+    B: no-script
+    C: no-js
+    D: html-fallback
+  answer: C
+  explanation: 'The provided JavaScript code includes the line: ''document.documentElement.className
+    = document.documentElement.className.replace(''no-js'', " ");'', which removes
+    the ''no-js'' class.'
+- id: 251
+  category: driver_responsibility
+  question: The script that loads webfonts for the DMV website includes a check to
+    ensure secure loading. How does it determine whether to use 'https' or 'http'?
+  choices:
+    A: It always defaults to 'https'
+    B: It checks if the browser is a modern version
+    C: It checks if the current page's protocol is 'https'
+    D: It always defaults to 'http'
+  answer: C
+  explanation: 'The code snippet ''wf.src = (''https:'' == document.location.protocol
+    ? ''https'' : ''http'')'' shows that it checks the protocol of the current document''s
+    location.'
+- id: 252
+  category: driver_responsibility
+  question: The DMV website uses Google Tag Manager for analytics, which is loaded
+    in a hidden iframe. What style properties are used to hide this element?
+  choices:
+    A: opacity:0; z-index:-1;
+    B: height:0; width:0;
+    C: display:none; visibility:hidden;
+    D: position:absolute; left:-9999px;
+  answer: C
+  explanation: The provided HTML for the iframe includes the attribute 'style="display:none;visibility:hidden"'.
+- id: 253
+  category: driver_responsibility
+  question: The button to activate the DMV chatbot has an accessibility attribute,
+    'aria-controls'. What value is assigned to this attribute?
+  choices:
+    A: js-chatbot-show
+    B: chatbot__show-btn
+    C: js-chatbot-dialog
+    D: GTM-KHCVGH4
+  answer: C
+  explanation: The provided button element code is '<button ... aria-controls="js-chatbot-dialog">',
+    indicating it controls the chatbot dialog element.
+- id: 254
+  category: driver_responsibility
+  question: In the website's CSS layout rules, what is the defined gap size for flexible
+    column blocks ('.wp-block-columns.is-layout-flex')?
+  choices:
+    A: 0.5em
+    B: 1.25em
+    C: 2em
+    D: 1rem
+  answer: C
+  explanation: 'The provided CSS states: '':where(.wp-block-columns.is-layout-flex){gap:
+    2em;}''.'
+- id: 255
+  category: driver_responsibility
+  question: According to the provided CSS, what is the specified gap size for post
+    template grids ('.wp-block-post-template.is-layout-grid')?
+  choices:
+    A: 2em
+    B: 1.25em
+    C: 0.5em
+    D: 1.5rem
+  answer: B
+  explanation: 'The provided CSS specifies: '':where(.wp-block-post-template.is-layout-grid){gap:
+    1.25em;}''.'
+- id: 256
+  category: driver_responsibility
+  question: The button element used to show the DMV chatbot is styled using a specific
+    CSS class. What is the name of that class?
+  choices:
+    A: js-chatbot-show
+    B: chatbot__show-btn
+    C: js-chatbot-dialog
+    D: wp-block-button
+  answer: B
+  explanation: The provided HTML for the button includes the attribute 'class="chatbot__show-btn"'.
+- id: 257
+  category: vehicle_information
+  question: According to the DMV's online 'Vehicle Registration' menu, which of the
+    following services is offered?
+  choices:
+    A: Calculate vehicle property tax
+    B: Submit Proof of Insurance
+    C: Report a vehicle sale
+    D: Apply for a commercial vehicle permit
+  answer: B
+  explanation: The text lists 'Submit Proof of Insurance' as an option under the 'Vehicle
+    Registration' menu on the DMV website.
+- id: 258
+  category: driver_responsibility
+  question: Under the 'Appointments' menu on the DMV website, what service allows
+    you to join the line at a DMV office remotely before you arrive?
+  choices:
+    A: Schedule Appointment
+    B: Virtual Office Visit
+    C: Get in Line Now
+    D: Online Testing
+  answer: C
+  explanation: The text shows 'Get in Line Now' as a service offered under the 'Appointments'
+    menu, which allows customers to secure their place in line at a physical office.
+- id: 259
+  category: driver_testing
+  question: In addition to Driver Handbooks and Practice Tests, what other type of
+    informational guide is available under the DMV's 'Testing' menu?
+  choices:
+    A: Vehicle Maintenance Manuals
+    B: Traffic Law Case Studies
+    C: Specialty Driver Guides
+    D: Insurance Comparison Charts
+  answer: C
+  explanation: The 'Testing' menu on the DMV website lists 'Specialty Driver Guides'
+    as an available resource for drivers.
+- id: 260
+  category: driver_responsibility
+  question: The DMV's 'Check Status' online service allows you to check the status
+    of various applications and cases. Which of the following is listed as a checkable
+    status?
+  choices:
+    A: REAL ID Application Status
+    B: Driving School Complaint Status
+    C: IBC Case Status
+    D: Smog Check Exemption Status
+  answer: C
+  explanation: The 'Check Status' menu on the DMV website specifically lists 'IBC
+    Case Status' as an option.
+- id: 261
+  category: driver_testing
+  question: What is the final section of the California Driver's Handbook, according
+    to the provided Table of Contents?
+  choices:
+    A: Driver Safety
+    B: Glossary
+    C: Index
+    D: Copyright
+  answer: B
+  explanation: 'The Table of Contents lists ''Section 14: Glossary'' as the last numbered
+    section of the handbook.'
+- id: 262
+  category: driver_responsibility
+  question: The Secretary's Message in the driver's handbook states that the handbook
+    is available in how many languages to serve Californians?
+  choices:
+    A: Three
+    B: Five
+    C: Seven
+    D: Nine
+  answer: D
+  explanation: The Secretary's Message explicitly states, 'The California Driver’s
+    Handbook is available in nine languages...'
+- id: 263
+  category: sharing_the_road
+  question: In the Secretary's Message, a driver's license is noted as enabling which
+    group of drivers to transport goods and support the economy?
+  choices:
+    A: Delivery drivers
+    B: Rideshare drivers
+    C: Truck drivers
+    D: Commuter van drivers
+  answer: C
+  explanation: The message states, 'It also enables truck drivers to transport goods
+    and services to support our economy.'
+- id: 264
+  category: driver_responsibility
+  question: What technology does the DMV use to provide translation for its chatbot
+    and live chat services?
+  choices:
+    A: In-house bilingual staff
+    B: A dedicated state translation department
+    C: Machine translation from third-party vendors
+    D: A community volunteer translation program
+  answer: C
+  explanation: The 'Third-Party Translation Disclaimer' states, 'The DMV chatbot and
+    live chat services use third-party vendors to provide machine translation.'
+- id: 265
+  category: driver_responsibility
+  question: If there are discrepancies or differences between the English version
+    of the DMV website and a translated version, what is the legal effect?
+  choices:
+    A: The translated version takes precedence if it is the user's native language.
+    B: Both versions are considered equally valid.
+    C: The discrepancies are not binding and have no legal effect.
+    D: A legal review is required to determine the correct information.
+  answer: C
+  explanation: The disclaimer states, 'Any discrepancies or differences created in
+    the translation are not binding and have no legal effect for compliance or enforcement
+    purposes.'
+- id: 266
+  category: driver_responsibility
+  question: Which of the following is listed as a primary link in the utility navigation
+    bar at the top of the DMV website?
+  choices:
+    A: Appointments
+    B: MyDMV
+    C: Locations & Hours
+    D: Contact Us
+  answer: B
+  explanation: The utility navigation bar, labeled 'nav-utility' in the text, contains
+    the links REAL ID, Online Services, Translate, and MyDMV.
+- id: 267
+  category: safe_driving_rules
+  question: Based on the handbook's Table of Contents, which section is extensive
+    enough that it is broken into multiple 'Continued' parts?
+  choices:
+    A: 'Section 6: Navigating the Roads'
+    B: 'Section 7: Laws and Rules of the Road'
+    C: 'Section 8: Safe Driving'
+    D: All of the above
+  answer: D
+  explanation: The provided Table of Contents shows 'Continued' entries for Section
+    6, Section 7, and Section 8, indicating they are all large sections.
+- id: 268
+  category: sharing_the_road
+  question: The Secretary's Message emphasizes that the rules of the road must be
+    followed by all users, including drivers of cars, commercial vehicles, and which
+    other two groups?
+  choices:
+    A: Pedestrians and skaters
+    B: Motorcycles and bicycles
+    C: Light-rail vehicles and buses
+    D: Scooters and mopeds
+  answer: B
+  explanation: The message states, 'Whether driving a car, motorcycle, commercial
+    vehicle or riding a bicycle, it is critical we adhere to the rules...'
+- id: 269
+  category: driver_responsibility
+  question: When your conversation with the DMV Virtual Assistant is over, what option
+    are you given regarding the conversation?
+  choices:
+    A: Rate the helpfulness of the assistant
+    B: Save the transcript
+    C: Email the conversation to yourself
+    D: Delete the conversation permanently
+  answer: B
+  explanation: The General Disclaimer for the Virtual Assistant states, 'When your
+    chat is over, you can save the transcript.'
+- id: 270
+  category: license_system
+  question: According to the 'Check Status' menu on the DMV website, you can check
+    the progress of which of these personal information updates?
+  choices:
+    A: Name Change Status
+    B: Gender Category Update Status
+    C: Voter Registration Status
+    D: Change of Address Status
+  answer: D
+  explanation: The 'Check Status' menu explicitly lists 'Change of Address Status'
+    as an option for users to track.
+- id: 271
+  category: license_system
+  question: According to the Table of Contents, which section of the California Driver's
+    Handbook covers the process of 'Getting an Instruction Permit and Driver’s License'?
+  choices:
+    A: Section 1
+    B: Section 2
+    C: Section 3
+    D: Section 4
+  answer: B
+  explanation: The handbook's Table of Contents clearly titles 'Section 2' as 'Getting
+    an Instruction Permit and Driver’s License'.
+- id: 272
+  category: driver_responsibility
+  question: What is the primary security warning given by the DMV regarding the use
+    of its Virtual Assistant?
+  choices:
+    A: Do not use it on a public Wi-Fi network
+    B: Do not include any personal information
+    C: Do not share your chat transcript
+    D: Do not use it for financial transactions
+  answer: B
+  explanation: The General Disclaimer for the DMV Virtual Assistant begins with the
+    instruction, 'please do not include any personal information.'
+- id: 273
+  category: driver_responsibility
+  question: 'According to the Secretary of the California State Transportation Agency,
+    driving or riding is considered a:'
+  choices:
+    A: Right
+    B: Requirement
+    C: Privilege
+    D: Hobby
+  answer: C
+  explanation: The Secretary's message states, 'Remember that driving or riding is
+    a privilege, and above all, safety must be the priority.'
+- id: 274
+  category: safe_driving_rules
+  question: 'The Secretary''s message in the driver''s handbook emphasizes that the
+    number one priority for all road users must be:'
+  choices:
+    A: Speed
+    B: Convenience
+    C: Safety
+    D: Following directions
+  answer: C
+  explanation: The text from the Secretary's message clearly states, '...above all,
+    safety must be the priority.'
+- id: 275
+  category: sharing_the_road
+  question: 'In addition to other drivers, the Secretary''s message specifically reminds
+    you to pay attention to:'
+  choices:
+    A: Road construction and animals
+    B: Traffic signs and signals only
+    C: Bicyclists and pedestrians
+    D: Emergency vehicles and law enforcement
+  answer: C
+  explanation: The message advises drivers to '...pay attention to other drivers,
+    bicyclists and pedestrians...'
+- id: 276
+  category: driver_testing
+  question: In addition to English and Spanish, the California Driver's Handbook is
+    available as a PDF in which of the following languages?
+  choices:
+    A: German
+    B: French
+    C: Korean
+    D: Vietnamese
+  answer: D
+  explanation: The text lists available PDF languages, which include 'ngôn ngữ tiếng
+    Việt (Vietnamese)' among others like Russian, Armenian, Hindi, Punjabi, and Chinese.
+- id: 277
+  category: driver_testing
+  question: For individuals who communicate using American Sign Language (ASL), where
+    can a video version of the driver's handbook be found?
+  choices:
+    A: On a special DVD from the DMV
+    B: On the main DMV website page
+    C: On YouTube
+    D: At local field offices
+  answer: C
+  explanation: The text includes a section for 'American Sign Language Video' with
+    a link to 'Play Video on YouTube'.
+- id: 278
+  category: driver_responsibility
+  question: According to the DMV's disclaimer, what is the primary purpose of providing
+    the Google™ Translate tool on its website?
+  choices:
+    A: For official legal translation
+    B: For information and convenience only
+    C: To replace the need for an interpreter
+    D: For filling out official forms in other languages
+  answer: B
+  explanation: The disclaimer states, 'This translation application tool is provided
+    for purposes of information and convenience only.'
+- id: 279
+  category: driver_responsibility
+  question: What is the legal effect of any discrepancies or differences created in
+    a machine translation of the DMV website or chatbot?
+  choices:
+    A: They are legally binding
+    B: They can be used for compliance purposes
+    C: They are not binding and have no legal effect
+    D: They must be reported to the DMV legal team
+  answer: C
+  explanation: The disclaimers for both the website and chatbot state, 'Any discrepancies
+    or differences created in the translation are not binding and have no legal effect
+    for compliance or enforcement purposes.'
+- id: 280
+  category: license_system
+  question: 'The Secretary''s message encourages people to use the DMV''s online services
+    because doing so can be a:'
+  choices:
+    A: Guaranteed approval
+    B: Timesaver
+    C: Way to avoid all fees
+    D: Method to get a temporary license
+  answer: B
+  explanation: The message states, 'Try online first, as it can be a timesaver.'
+- id: 281
+  category: driver_responsibility
+  question: 'According to the website footer, the content of the California DMV website
+    is copyrighted by:'
+  choices:
+    A: The Department of Motor Vehicles
+    B: Google™
+    C: The State of California
+    D: The California State Transportation Agency
+  answer: C
+  explanation: The footer contains the notice 'Copyright &copy; 2026 State of California'.
+- id: 282
+  category: driver_responsibility
+  question: Which of the following is listed in the website's footer as a legal or
+    policy information page?
+  choices:
+    A: Vehicle Registration
+    B: Conditions of Use
+    C: Practice Tests
+    D: Office Locations
+  answer: B
+  explanation: The footer navigation lists 'Conditions of Use' along with other policy
+    pages like 'Privacy Policy' and 'Cookie Policy'.
+- id: 283
+  category: vehicle_information
+  question: Which of the following types of DMV documents cannot be translated using
+    the website's automatic translation tool?
+  choices:
+    A: The Driver's Handbook
+    B: Website disclaimers
+    C: News releases
+    D: Publications
+  answer: D
+  explanation: The Google™ Translate Disclaimer explicitly lists 'Publications' as
+    one of the page types that cannot be translated.
+- id: 284
+  category: driver_responsibility
+  question: 'The DMV''s modernization efforts aim to make the digital experience for
+    customers:'
+  choices:
+    A: More secure but slower
+    B: Available only during business hours
+    C: Completely automated without human help
+    D: Easier, faster, and more convenient
+  answer: D
+  explanation: The text states, 'The DMV has been modernizing interactions with its
+    customers, making Californians’ digital experience easier, faster and more convenient.'

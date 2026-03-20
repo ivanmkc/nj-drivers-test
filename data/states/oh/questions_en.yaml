@@ -1,6 +1,6 @@
 metadata:
   source: Ohio Digest of Motor Vehicle Laws (publicsafety.ohio.gov)
-  total_questions: 220
+  total_questions: 280
   categories:
   - alcohol_drugs_health
   - defensive_driving
@@ -2305,19 +2305,6 @@ questions:
     yield the right-of-way to traffic and pedestrians. You must stop if necessary
     to let others pass safely.
   id: 188
-- image: do_not_enter.png
-  category: signs_and_signals
-  question: What does this sign mean?
-  choices:
-    A: Road closed ahead
-    B: No parking allowed
-    C: Do not enter this roadway
-    D: Dead end ahead
-  answer: C
-  explanation: A red and white DO NOT ENTER sign means you must not enter the road
-    or ramp where this sign is posted. It is usually seen at freeway off-ramps or
-    one-way streets where entering would put you in the path of oncoming traffic.
-  id: 189
 - image: wrong_way.png
   category: signs_and_signals
   question: If you see this sign, what should you do?
@@ -2330,31 +2317,7 @@ questions:
   explanation: A red and white WRONG WAY sign means you are traveling against traffic
     on a one-way road or highway ramp. Stop immediately and safely turn around or
     back up.
-  id: 190
-- image: one_way_left.png
-  category: signs_and_signals
-  question: What does this sign indicate?
-  choices:
-    A: Left turn only
-    B: Traffic flows in one direction — to the left
-    C: Keep left of the median
-    D: Highway exit to the left
-  answer: B
-  explanation: A black and white ONE WAY sign with an arrow indicates that traffic
-    on this street moves in only one direction — the direction the arrow points.
-  id: 191
-- image: no_u_turn.png
-  category: signs_and_signals
-  question: What does this sign prohibit?
-  choices:
-    A: Right turns
-    B: Left turns
-    C: U-turns
-    D: Passing other vehicles
-  answer: C
-  explanation: A white regulatory sign with a U-turn arrow crossed out means U-turns
-    are prohibited at this location.
-  id: 192
+  id: 189
 - image: no_left_turn.png
   category: signs_and_signals
   question: What action is prohibited by this sign?
@@ -2366,44 +2329,7 @@ questions:
   answer: B
   explanation: A white regulatory sign showing a left turn arrow crossed out means
     left turns are not allowed at this intersection.
-  id: 193
-- image: no_right_turn.png
-  category: signs_and_signals
-  question: What does this sign mean?
-  choices:
-    A: No U-turn allowed
-    B: No left turn allowed
-    C: No right turn allowed
-    D: No passing allowed
-  answer: C
-  explanation: A white regulatory sign showing a right turn arrow crossed out means
-    right turns are prohibited at this location.
-  id: 194
-- image: no_passing.png
-  category: signs_and_signals
-  question: What does this sign indicate?
-  choices:
-    A: Road narrows ahead
-    B: Do not pass other vehicles in this zone
-    C: Two-way traffic ahead
-    D: Keep right
-  answer: B
-  explanation: A black and white NO PASSING ZONE pennant-shaped sign means you are
-    not allowed to pass other vehicles in this area. It marks the beginning of a no-passing
-    zone.
-  id: 195
-- image: keep_right.png
-  category: signs_and_signals
-  question: What does this sign instruct drivers to do?
-  choices:
-    A: Merge right
-    B: Turn right only
-    C: Keep to the right of a divider or obstruction
-    D: Right lane ends ahead
-  answer: C
-  explanation: A white regulatory KEEP RIGHT sign with an arrow means you must keep
-    to the right side of a traffic island, median, or obstruction.
-  id: 196
+  id: 190
 - image: speed_limit_25.png
   category: signs_and_signals
   question: What type of sign is this, based on its shape and color?
@@ -2415,7 +2341,7 @@ questions:
   answer: C
   explanation: White rectangular signs with black lettering are regulatory signs.
     Speed limit signs tell you the maximum legal speed for the area under ideal conditions.
-  id: 197
+  id: 191
 - image: deer_crossing.png
   category: signs_and_signals
   question: What does this yellow diamond-shaped sign warn you about?
@@ -2428,19 +2354,7 @@ questions:
   explanation: A yellow diamond-shaped sign with a deer silhouette warns that deer
     frequently cross the road in this area. Slow down and watch for animals, especially
     at dawn and dusk.
-  id: 198
-- image: pedestrian_crossing.png
-  category: signs_and_signals
-  question: What does this sign warn you about?
-  choices:
-    A: School zone ahead
-    B: Pedestrian crossing ahead
-    C: Hiking trail nearby
-    D: Bus stop ahead
-  answer: B
-  explanation: A yellow diamond-shaped sign with a pedestrian figure warns of a pedestrian
-    crossing ahead. Be prepared to stop for pedestrians crossing the road.
-  id: 199
+  id: 192
 - image: school_zone.png
   category: signs_and_signals
   question: What does the shape of this sign indicate?
@@ -2452,19 +2366,7 @@ questions:
   answer: C
   explanation: A pentagon-shaped (5-sided) fluorescent yellow-green sign indicates
     a school zone or school crossing. Slow down and watch for children.
-  id: 200
-- image: railroad_crossing.png
-  category: signs_and_signals
-  question: What does this circular yellow sign warn you about?
-  choices:
-    A: A roundabout ahead
-    B: A hospital zone
-    C: A railroad crossing ahead
-    D: A no-passing zone
-  answer: C
-  explanation: A circular yellow sign with a black X and two R's is the advance warning
-    sign for a railroad crossing ahead. Slow down, look, and listen for trains.
-  id: 201
+  id: 193
 - image: railroad_crossbuck.png
   category: signs_and_signals
   question: Where would you typically see this sign?
@@ -2476,19 +2378,7 @@ questions:
   answer: B
   explanation: The white X-shaped railroad crossbuck sign is placed at railroad crossings.
     It means you must yield to trains. If a train is approaching, you must stop.
-  id: 202
-- image: curve_right.png
-  category: signs_and_signals
-  question: What does this yellow diamond-shaped sign indicate?
-  choices:
-    A: Road ends ahead
-    B: Right turn required
-    C: A curve to the right ahead
-    D: Detour ahead
-  answer: C
-  explanation: A yellow diamond-shaped sign with a curved arrow warns of a curve in
-    the road ahead. Slow down before entering the curve.
-  id: 203
+  id: 194
 - image: sharp_turn_right.png
   category: signs_and_signals
   question: How does this sign differ from a curve sign?
@@ -2501,55 +2391,7 @@ questions:
   explanation: A sharp turn sign (with a more angled arrow) indicates a sharper turn
     than a curve sign. You need to reduce your speed more significantly before this
     turn.
-  id: 204
-- image: reverse_curve.png
-  category: signs_and_signals
-  question: What road condition does this sign warn about?
-  choices:
-    A: A winding road
-    B: A single curve ahead
-    C: A series of two curves in opposite directions
-    D: A roundabout ahead
-  answer: C
-  explanation: A reverse curve sign warns of two curves in opposite directions ahead.
-    Slow down and be prepared for the road to curve first one way, then the other.
-  id: 205
-- image: winding_road.png
-  category: signs_and_signals
-  question: What does this sign warn you to expect?
-  choices:
-    A: A single sharp curve
-    B: A slippery road surface
-    C: A series of curves or turns ahead
-    D: A hill ahead
-  answer: C
-  explanation: A winding road sign warns of a series of curves or turns ahead. Reduce
-    your speed and be alert for changing road conditions.
-  id: 206
-- image: merge.png
-  category: signs_and_signals
-  question: What does this sign tell you to prepare for?
-  choices:
-    A: A lane ending
-    B: Traffic merging from another road
-    C: A divided highway beginning
-    D: A road narrowing to one lane
-  answer: B
-  explanation: A yellow diamond-shaped merge sign warns that traffic from another
-    road will be merging into your lane. Be prepared to adjust your speed and position.
-  id: 207
-- image: road_narrows.png
-  category: signs_and_signals
-  question: What does this sign warn about?
-  choices:
-    A: Bridge ahead
-    B: Road narrows ahead
-    C: Lane ends
-    D: Divided highway ends
-  answer: B
-  explanation: This warning sign indicates the road ahead becomes narrower. Be prepared
-    for reduced road width and adjust your lane position.
-  id: 208
+  id: 195
 - image: divided_highway.png
   category: signs_and_signals
   question: What does this sign indicate is ahead?
@@ -2561,130 +2403,7 @@ questions:
   answer: C
   explanation: This sign warns that the road ahead becomes a divided highway with
     a median or barrier separating opposing traffic. Keep to the right.
-  id: 209
-- image: divided_highway_ends.png
-  category: signs_and_signals
-  question: What does this sign warn you about?
-  choices:
-    A: A divided highway begins
-    B: The divided highway ends and two-way traffic resumes
-    C: A merge area ahead
-    D: Road construction ahead
-  answer: B
-  explanation: This sign warns that the divided highway is ending. Opposing traffic
-    will no longer be separated by a median. Be prepared for two-way traffic.
-  id: 210
-- image: two_way_traffic.png
-  category: signs_and_signals
-  question: What does this sign warn you about?
-  choices:
-    A: A divided highway begins
-    B: A passing zone ahead
-    C: Two-way traffic ahead — traffic moves in both directions
-    D: A lane shift ahead
-  answer: C
-  explanation: This sign warns of two-way traffic ahead. You may be leaving a one-way
-    road or divided highway and will encounter vehicles traveling in the opposite
-    direction.
-  id: 211
-- image: slippery_when_wet.png
-  category: signs_and_signals
-  question: What road condition does this sign warn about?
-  choices:
-    A: Icy road conditions
-    B: The road may be slippery when wet
-    C: Winding road ahead
-    D: Uneven pavement
-  answer: B
-  explanation: A slippery when wet sign warns that the road surface may become very
-    slippery during rain or wet conditions. Reduce your speed and avoid sudden braking
-    or turning.
-  id: 212
-- image: hill.png
-  category: signs_and_signals
-  question: What does this sign warn you about?
-  choices:
-    A: A bump in the road
-    B: An uneven road surface
-    C: A steep hill or grade ahead
-    D: Road construction
-  answer: C
-  explanation: This sign warns of a steep hill or grade ahead. You may need to adjust
-    your speed and shift to a lower gear, especially in trucks or when towing.
-  id: 213
-- image: signal_ahead.png
-  category: signs_and_signals
-  question: What does this sign warn you to prepare for?
-  choices:
-    A: A stop sign ahead
-    B: A traffic signal ahead
-    C: A school crossing
-    D: A police checkpoint
-  answer: B
-  explanation: This sign warns of a traffic signal ahead. Be prepared to stop if the
-    light is red or yellow. This sign is often placed where the signal may not be
-    visible from a distance.
-  id: 214
-- image: stop_ahead.png
-  category: signs_and_signals
-  question: What does this sign tell you to expect ahead?
-  choices:
-    A: A yield sign
-    B: A traffic signal
-    C: A stop sign where you must stop
-    D: A speed bump
-  answer: C
-  explanation: This sign warns that there is a stop sign ahead. Begin slowing down
-    and prepare to come to a complete stop at the stop sign.
-  id: 215
-- image: cross_road.png
-  category: signs_and_signals
-  question: What does this sign warn about?
-  choices:
-    A: A railroad crossing ahead
-    B: A crossroad or intersection ahead
-    C: A hospital ahead
-    D: A pedestrian crossing
-  answer: B
-  explanation: This sign warns that a crossroad or 4-way intersection is ahead. Watch
-    for traffic entering from side roads.
-  id: 216
-- image: side_road.png
-  category: signs_and_signals
-  question: What does this sign warn you about?
-  choices:
-    A: A T-intersection ahead
-    B: A side road entering from the right
-    C: A curve in the road
-    D: A dead end
-  answer: B
-  explanation: This sign warns of a side road entering from the right. Watch for vehicles
-    entering the highway from the side road.
-  id: 217
-- image: added_lane.png
-  category: signs_and_signals
-  question: What does this sign mean?
-  choices:
-    A: Lanes are merging
-    B: A lane is ending
-    C: A new lane is being added — no merging needed
-    D: Right turn required
-  answer: C
-  explanation: An added lane sign means a new lane is joining the highway without
-    requiring merging. Traffic entering from the ramp has its own new lane.
-  id: 218
-- image: no_parking.png
-  category: signs_and_signals
-  question: What does this sign prohibit?
-  choices:
-    A: Stopping at any time
-    B: Parking in this area
-    C: Standing or idling
-    D: Loading or unloading
-  answer: B
-  explanation: A red and white NO PARKING sign means you cannot park your vehicle
-    in this area. You may briefly stop to load or unload passengers.
-  id: 219
+  id: 196
 - image: handicap_parking.png
   category: signs_and_signals
   question: Who is allowed to park in a space marked with this sign?
@@ -2697,4 +2416,1031 @@ questions:
   explanation: A blue sign with the wheelchair symbol marks parking reserved for persons
     with disabilities. Only vehicles displaying a valid disability parking placard
     or license plate may park in these spaces. Violations carry heavy fines.
-  id: 220
+  id: 197
+- id: 198
+  category: driver_responsibility
+  question: What does the Ohio Driver Manual state about its legal authority in relation
+    to state law?
+  choices:
+    A: It supersedes the Ohio Revised Code if there is a conflict.
+    B: It is not a substitute for, and does not supersede, the Ohio Revised Code.
+    C: It contains all applicable motor vehicle laws in their entirety.
+    D: It serves as the primary legal document for traffic court proceedings.
+  answer: B
+  explanation: The manual states, 'This manual is not a substitute for, and does not
+    supersede, the Ohio Revised Code or the Ohio Administrative Code.'
+- id: 199
+  category: license_system
+  question: What is a potential outcome of the vision screening when applying for
+    an Ohio Driver License?
+  choices:
+    A: An automatic increase in your insurance rates.
+    B: A requirement to complete an advanced driving course.
+    C: The application of driving restrictions to your license.
+    D: Immediate issuance of a commercial driver license.
+  answer: C
+  explanation: The manual states, 'Driving restrictions could apply based upon vision
+    screening results.'
+- id: 200
+  category: sharing_the_road
+  question: According to the manual's table of contents, in which section can you
+    find information about Ohio's 'Move Over Law'?
+  choices:
+    A: 'Section 6: State Laws and Penalties'
+    B: 'Section 7: Special Driving Situations'
+    C: 'Section 9: Sharing the Road'
+    D: 'Section 10: Emergency Situations'
+  answer: C
+  explanation: 'The table of contents lists ''Move Over Laws'' under Section 9: Sharing
+    the Road.'
+- id: 201
+  category: safe_driving_rules
+  question: If you need to find information about the rules for parking, which section
+    of the Ohio Driver Manual should you consult?
+  choices:
+    A: 'Section 4: Rules of the Road'
+    B: 'Section 5: Learning to Drive'
+    C: 'Section 2: Before You Drive'
+    D: 'Section 11: Taking the Driving Test'
+  answer: B
+  explanation: 'The table of contents shows that ''Parking'' is a topic covered in
+    Section 5: Learning to Drive.'
+- id: 202
+  category: penalties_and_points
+  question: To learn about Ohio's child passenger restraint and safety laws, which
+    section of the manual should you study?
+  choices:
+    A: 'Section 2: Before You Drive'
+    B: 'Section 8: Safe Driving Tips'
+    C: 'Section 9: Sharing the Road'
+    D: 'Section 6: State Laws and Penalties'
+  answer: D
+  explanation: 'The table of contents lists ''Child Passenger Restraints/Safety Laws''
+    under Section 6: State Laws and Penalties.'
+- id: 203
+  category: safe_driving_rules
+  question: In which section of the manual can you find details about what to do in
+    case of a vehicle malfunction, such as a tire blowout?
+  choices:
+    A: 'Section 10: Emergency Situations'
+    B: 'Section 2: Before You Drive'
+    C: 'Section 7: Special Driving Situations'
+    D: 'Section 11: Taking the Driving Test'
+  answer: A
+  explanation: 'The table of contents indicates that ''Vehicle Malfunctions'' are
+    covered in Section 10: Emergency Situations.'
+- id: 204
+  category: vehicle_information
+  question: To find information on how to properly inspect your vehicle before driving,
+    which section of the manual should you consult?
+  choices:
+    A: 'Section 5: Learning to Drive'
+    B: 'Section 8: Safe Driving Tips'
+    C: 'Section 2: Before You Drive'
+    D: 'Section 11: Taking the Driving Test'
+  answer: C
+  explanation: 'The table of contents lists ''Inspecting Your Vehicle'' as the first
+    topic in Section 2: Before You Drive.'
+- id: 205
+  category: license_system
+  question: According to the 'How to Get Your Driver License' checklist, what must
+    you do before getting a Temporary Instruction Permit Identification Card (TIPIC)?
+  choices:
+    A: Schedule your driving test.
+    B: Complete a driver education course.
+    C: Renew your Ohio ID Card.
+    D: Gather proof of identity documents from the Acceptable Documents List.
+  answer: D
+  explanation: The checklist on page 1 lists 'Gather proof of identity documents using
+    the Acceptable Documents List' as a step before getting a TIPIC.
+- id: 206
+  category: signs_and_signals
+  question: If a driver wants to learn the meaning of different lane pavement markings,
+    which section of the manual provides this information?
+  choices:
+    A: 'Section 4: Rules of the Road'
+    B: 'Section 5: Learning to Drive'
+    C: 'Section 9: Sharing the Road'
+    D: 'Section 7: Special Driving Situations'
+  answer: A
+  explanation: 'The table of contents shows that ''Lane Pavement Markings'' is a topic
+    in Section 4: Rules of the Road.'
+- id: 207
+  category: license_system
+  question: Information about special programs like the 'Next of Kin – Emergency Contact
+    Information' and 'Living Will Designation' can be found in which section?
+  choices:
+    A: 'Section 1: How to Get Your Driver License'
+    B: 'Section 6: State Laws and Penalties'
+    C: 'Section 13: What Else Should I Know?'
+    D: 'Section 10: Emergency Situations'
+  answer: C
+  explanation: 'The table of contents lists ''Next of Kin – Emergency Contact Information''
+    and ''Living Will Designation'' under Section 13: What Else Should I Know?'
+- id: 208
+  category: safe_driving_rules
+  question: Which section of the manual would you study to understand the proper procedures
+    for navigating roundabouts or traffic circles?
+  choices:
+    A: 'Section 4: Rules of the Road'
+    B: 'Section 9: Sharing the Road'
+    C: 'Section 8: Safe Driving Tips'
+    D: 'Section 5: Learning to Drive'
+  answer: D
+  explanation: 'The table of contents shows that ''Roundabouts or Traffic Circles''
+    is a topic covered in Section 5: Learning to Drive.'
+- id: 209
+  category: license_system
+  question: According to the table of contents, where would a new resident find information
+    on obtaining an Ohio Driver License?
+  choices:
+    A: 'Section 1: How to Get Your Driver License'
+    B: 'Section 13: What Else Should I Know?'
+    C: 'Section 12: Purchase Your Driver License'
+    D: 'Section 6: State Laws and Penalties'
+  answer: B
+  explanation: 'The table of contents lists ''New Ohio Residents'' as the first topic
+    in Section 13: What Else Should I Know?'
+- id: 210
+  category: defensive_driving
+  question: The topic of 'Aggressive Driving' and its dangers are discussed in which
+    section of the Ohio Driver Manual?
+  choices:
+    A: 'Section 6: State Laws and Penalties'
+    B: 'Section 3: Be Alert'
+    C: 'Section 8: Safe Driving Tips'
+    D: 'Section 10: Emergency Situations'
+  answer: B
+  explanation: 'The table of contents lists ''Aggressive Driving'' as a topic in Section
+    3: Be Alert.'
+- id: 211
+  category: driver_testing
+  question: Which section of the manual details the requirements for the Abbreviated
+    Adult Driver Training Course?
+  choices:
+    A: 'Section 1: How to Get Your Driver License'
+    B: 'Section 5: Learning to Drive'
+    C: 'Section 11: Taking the Driving Test'
+    D: 'Section 12: Purchase Your Driver License'
+  answer: C
+  explanation: 'The table of contents lists ''Abbreviated Adult Driver Training Course''
+    as a topic in Section 11: Taking the Driving Test.'
+- id: 212
+  category: driver_responsibility
+  question: What is the official website provided in the manual for accessing Ohio
+    BMV services online?
+  choices:
+    A: www.ohio.gov/bmv
+    B: www.dmv.ohio.gov
+    C: www.bmv.ohio.gov
+    D: www.ohiodrivers.com
+  answer: C
+  explanation: The first page of the manual states, 'For additional information about
+    Ohio’s BMV services, visit the BMV website at www.bmv.ohio.gov.'
+- id: 213
+  category: license_system
+  question: What is the consequence if an applicant passes the knowledge test but
+    fails to purchase a Temporary Instruction Permit Identification Card (TIPIC) within
+    60 days?
+  choices:
+    A: They must pay a late fee when purchasing the TIPIC.
+    B: They must retake only the knowledge test.
+    C: They must retake both the vision screening and the knowledge test.
+    D: They receive a 30-day extension to purchase the TIPIC.
+  answer: C
+  explanation: 'The manual states: ''If a TIPIC is not purchased within 60 days, the
+    applicant must start over with the vision screening and knowledge test.'''
+- id: 214
+  category: license_system
+  question: For a TIPIC holder under the age of 16, who is legally permitted to occupy
+    the front passenger seat while they are driving?
+  choices:
+    A: Any licensed driver who is at least 18 years old.
+    B: A sibling who is at least 18 and has a valid driver license.
+    C: A person age 21 or older who acts in place of a parent (in loco parentis).
+    D: Any friend who has held a driver license for at least one year.
+  answer: C
+  explanation: 'The manual states: ''If under age 16, the driver must have a parent,
+    guardian, custodian, licensed driving instructor, or a person age 21 or older,
+    who acts in loco parentis, occupying the front passenger seat beside the permit
+    holder.'''
+- id: 215
+  category: license_system
+  question: A 16-year-old TIPIC holder is driving with a valid licensed driver who
+    is 21 but is not their parent or guardian. During which hours is this prohibited?
+  choices:
+    A: 10 p.m. to 5 a.m.
+    B: 11 p.m. to 7 a.m.
+    C: Midnight to 6 a.m.
+    D: 1 a.m. to 5 a.m.
+  answer: C
+  explanation: For a TIPIC holder age 16 to 17, driving with any valid licensed driver
+    age 21 or older is permitted, 'except from midnight to 6 a.m. when the driver
+    must be accompanied by a parent, guardian, or custodian who holds a valid Driver
+    License.'
+- id: 216
+  category: safe_driving_rules
+  question: According to the restrictions for all TIPIC holders, what is the rule
+    regarding the number of occupants in the vehicle?
+  choices:
+    A: The number of occupants is limited to four, regardless of vehicle size.
+    B: The total number of occupants cannot exceed the total number of installed safety
+      belts.
+    C: Only family members are allowed as passengers.
+    D: No more than one passenger is allowed in the back seat.
+  answer: B
+  explanation: For all ages, a TIPIC restriction is that the 'Total number of occupants
+    in the vehicle cannot exceed the total number of safety belts installed in the
+    vehicle.'
+- id: 217
+  category: license_system
+  question: For a temporary resident age 21 or older to obtain a Driver License, what
+    is the minimum amount of time they must hold a TIPIC after completing their driver
+    education requirements?
+  choices:
+    A: 7 days
+    B: 14 days
+    C: 30 days
+    D: 6 months
+  answer: B
+  explanation: 'The manual states: ''To obtain a Driver License, a driver that is
+    a temporary resident age 21 or older must... Hold the TIPIC for at least 14 days.'''
+- id: 218
+  category: license_system
+  question: A temporary resident holding an unexpired out-of-country license from
+    which of the following countries is NOT exempt from Ohio's driver education requirements?
+  choices:
+    A: Germany
+    B: Japan
+    C: Mexico
+    D: South Korea
+  answer: C
+  explanation: The manual states that temporary residents with licenses from 'Canada,
+    France, Germany, Japan, South Korea or Taiwan' are exempt. Mexico is not on this
+    list.
+- id: 219
+  category: vehicle_information
+  question: During a vehicle inspection, what is the requirement for the steering
+    assembly?
+  choices:
+    A: It must be a power-steering system.
+    B: It must have no excessive play in the steering wheel.
+    C: The steering wheel must have an airbag.
+    D: It must be able to turn the wheels lock-to-lock in under three rotations.
+  answer: B
+  explanation: Ohio law requires a 'Steering assembly that operates normally, with
+    no excessive play in the steering wheel.'
+- id: 220
+  category: vehicle_information
+  question: According to Ohio law, the two red reflectors on the rear of a vehicle
+    must be visible from what distance?
+  choices:
+    A: 100 feet
+    B: 300 feet
+    C: 500 feet
+    D: 1,000 feet
+  answer: B
+  explanation: The vehicle must have 'Two red reflectors on the rear of the vehicle,
+    visible from 300 feet.'
+- id: 221
+  category: vehicle_information
+  question: 'The white light that illuminates the rear license plate must be visible
+    from a distance of at least:'
+  choices:
+    A: 25 feet
+    B: 50 feet
+    C: 100 feet
+    D: 200 feet
+  answer: B
+  explanation: The vehicle must have a 'White light to illuminate the rear license
+    plate, visible from 50 feet.'
+- id: 222
+  category: vehicle_information
+  question: In addition to the service brake, what other braking system is required
+    on a vehicle, and what must it be capable of doing?
+  choices:
+    A: An anti-lock brake system (ABS) that prevents skidding.
+    B: A secondary hydraulic brake for emergency stops.
+    C: An engine brake for controlling speed on downgrades.
+    D: A parking brake that can hold the vehicle on a grade.
+  answer: D
+  explanation: A vehicle must have a 'Parking brake that is adequate to hold the vehicle
+    on a grade.'
+- id: 223
+  category: driver_testing
+  question: What is the maximum number of times an applicant is permitted to take
+    the knowledge test online through BMV Online Services within a six-month period?
+  choices:
+    A: One attempt
+    B: Two attempts
+    C: Three attempts
+    D: Unlimited attempts
+  answer: B
+  explanation: 'The manual states: ''Knowledge Testing is available... Online through
+    BMV Online Services (two attempts permitted in a six-month period).'''
+- id: 224
+  category: vehicle_information
+  question: Besides being in an unsafe condition that endangers a person, what else
+    does Ohio law prohibit on a vehicle?
+  choices:
+    A: Aftermarket window tinting of any kind.
+    B: Any non-factory modifications to the exhaust system.
+    C: Protruding objects or broken sharp edges.
+    D: Bumper stickers that may be distracting to other drivers.
+  answer: C
+  explanation: 'The manual states: ''Additionally, no vehicle is to be equipped with
+    or permitted to have protruding objects, broken sharp edges, or vehicle parts
+    that would be dangerous to a person coming in contact with them.'''
+- id: 225
+  category: license_system
+  question: When applying for a TIPIC, applicants must present documents to prove
+    several elements of identity. Which of the following is NOT one of the required
+    elements listed?
+  choices:
+    A: Full legal name
+    B: Proof of employment
+    C: Social Security number (if assigned)
+    D: Citizenship or legal presence
+  answer: B
+  explanation: The required elements are 'Full legal name, Date of birth, Social Security
+    number (if assigned), Citizenship or legal presence, Ohio street address.' Proof
+    of employment is not on the list.
+- id: 226
+  category: driver_testing
+  question: The Ohio driver's knowledge test is available in several languages. Which
+    of the following is NOT one of the languages offered directly by the BMV?
+  choices:
+    A: Somali
+    B: German
+    C: Haitian Creole
+    D: Russian
+  answer: B
+  explanation: The manual lists the available languages as 'American Sign Language
+    (ASL), Arabic, Chinese, English, French, Haitian Creole, Japanese, Russian, Somali,
+    and Spanish.' German is not on this list, and would require the applicant to provide
+    their own interpreter.
+- id: 227
+  category: driver_testing
+  question: Which of the following is a specific disability accommodation that is
+    available upon request at a Driver Exam Station for the knowledge or skills test?
+  choices:
+    A: A test proctor to read the questions aloud and record the answers.
+    B: An audio version of the knowledge test.
+    C: Use of a personal electronic translator device.
+    D: An extended time limit to complete the test.
+  answer: B
+  explanation: 'The manual states: ''Accommodations available upon request at the
+    Driver Exam Station include an audio knowledge test, printed paper knowledge test,
+    American Sign Language knowledge test, and visual instructions during driving
+    test...'''
+- id: 228
+  category: vehicle_information
+  question: According to Ohio law, what is the minimum distance from which a vehicle's
+    horn must be audible?
+  choices:
+    A: 100 feet
+    B: 200 feet
+    C: 300 feet
+    D: 500 feet
+  answer: B
+  explanation: The manual states the horn must be in good working order and audible
+    from 200 feet.
+- id: 229
+  category: vehicle_information
+  question: Where can a driver find the vehicle manufacturer's recommended tire pressure
+    level?
+  choices:
+    A: In the vehicle owner's manual
+    B: On the tire's sidewall
+    C: On the vehicle's door jamb
+    D: On the gas cap door
+  answer: C
+  explanation: The manual specifies that the vehicle manufacturer’s recommended tire
+    pressure is indicated on the door jamb.
+- id: 230
+  category: vehicle_information
+  question: When using the 'penny test' to check tire tread depth, what indicates
+    that the tires are too worn and need to be replaced?
+  choices:
+    A: The tread does not reach the top of the Lincoln Memorial on the back of the
+      penny.
+    B: You can see the top of President Lincoln's head.
+    C: The penny fits completely inside the deepest groove.
+    D: The tread is level with the edge of the penny.
+  answer: B
+  explanation: 'The manual states: ''Place the coin with President Abraham Lincoln’s
+    head into the tire’s deepest groove. If you see all of the President’s head, your
+    tires are too worn.'''
+- id: 231
+  category: safe_driving_rules
+  question: Under what circumstance should you avoid using your high beam headlights?
+  choices:
+    A: When driving on a rural road with no other cars
+    B: When driving in heavy fog or rain
+    C: When an oncoming vehicle is approaching
+    D: When driving faster than 55 mph
+  answer: C
+  explanation: Ohio law allows high beam headlights to be used at any time headlights
+    are used, except when an oncoming vehicle is approaching.
+- id: 232
+  category: safe_driving_rules
+  question: 'For proper driving posture and airbag safety, the top of the steering
+    wheel should be positioned:'
+  choices:
+    A: Level with your chin
+    B: No higher than the top of your shoulders
+    C: Directly in front of your face for best control
+    D: As low as possible while still being able to see the gauges
+  answer: B
+  explanation: The manual states that when your seat is adjusted properly, 'The top
+    of the steering wheel is no higher than the top of your shoulders and below chin
+    level.'
+- id: 233
+  category: safe_driving_rules
+  question: What is the correct way to wear a shoulder safety belt?
+  choices:
+    A: Tucked under your arm for comfort
+    B: Loosely draped over your shoulder
+    C: Behind your back if it is uncomfortable
+    D: Across the shoulder and chest with minimal slack
+  answer: D
+  explanation: The manual specifies that a shoulder belt should be worn across the
+    shoulder and chest with minimal, if any, slack, and warns not to wear it under
+    the arm or behind the back.
+- id: 234
+  category: driver_responsibility
+  question: What type of corrective lenses should be avoided when driving at night?
+  choices:
+    A: Bifocal lenses
+    B: Anti-glare lenses
+    C: Dark or tinted lenses
+    D: Any type of contact lenses
+  answer: C
+  explanation: The manual advises drivers to 'Avoid using dark or tinted corrective
+    lenses at night.'
+- id: 235
+  category: vehicle_information
+  question: What is the maximum allowable light transmission for the side windows
+    of the front seat in Ohio?
+  choices:
+    A: 70% light transmission
+    B: 50% light transmission, plus or minus 3%
+    C: 35% light transmission
+    D: There are no restrictions on side windows
+  answer: B
+  explanation: 'The manual states the window light transmission for ''Side windows
+    of front seat: 50% light transmission, plus or minus 3%.'''
+- id: 236
+  category: safe_driving_rules
+  question: According to the manual, what is the primary purpose of using your vehicle's
+    hazard lights?
+  choices:
+    A: To signal that you are about to make a turn in heavy traffic
+    B: To indicate that you are double-parked for a short time
+    C: To increase the visibility of a vehicle stopped on or near a roadway
+    D: To warn other drivers that you are driving slower than the speed limit
+  answer: C
+  explanation: The manual states to 'Use hazard lights to increase visibility of a
+    vehicle stopped on or near a roadway.'
+- id: 237
+  category: safe_driving_rules
+  question: To properly adjust the left-side mirror to reduce blind spots, where should
+    you position your head?
+  choices:
+    A: Leaning to the right, directly above the center console
+    B: Sitting upright in your normal driving position
+    C: Resting your head against the closed driver-side window
+    D: Leaning forward until your head is close to the steering wheel
+  answer: C
+  explanation: To adjust the left-side mirror, the manual instructs you to 'Rest your
+    head against the closed driver-side window' and adjust the mirror until the vehicle’s
+    left-edge is barely visible.
+- id: 238
+  category: driver_responsibility
+  question: Ohio's mandatory safety belt usage law requires which occupants of most
+    passenger vehicles to wear safety belts?
+  choices:
+    A: All occupants, regardless of seating position
+    B: Only the driver of the vehicle
+    C: Drivers and front-seat occupants
+    D: All occupants under the age of 18
+  answer: C
+  explanation: The manual states that Ohio's law 'requires drivers and front-seat
+    occupants of most passenger vehicles to wear safety belts.'
+- id: 239
+  category: vehicle_information
+  question: A vehicle's red stop lights (brake lights) must be visible from what minimum
+    distance when the brakes are applied?
+  choices:
+    A: 200 feet
+    B: 300 feet
+    C: 500 feet
+    D: 1000 feet
+  answer: C
+  explanation: The manual requires 'Two red stop lights (brake lights) visible from
+    500 feet when the brakes are applied.'
+- id: 240
+  category: safe_driving_rules
+  question: What is the primary mirror a driver should use for the view to the rear
+    of the vehicle?
+  choices:
+    A: The left-side outside mirror
+    B: The right-side outside mirror
+    C: The inside rear-view mirror
+    D: A combination of both outside mirrors
+  answer: C
+  explanation: The manual states, 'The rear-view mirror is the primary mirror for
+    the view to the rear.'
+- id: 241
+  category: vehicle_information
+  question: In addition to taillights and brake lights, a vehicle must have two red
+    reflectors on the rear that are visible from what distance?
+  choices:
+    A: 100 feet
+    B: 200 feet
+    C: 300 feet
+    D: 500 feet
+  answer: C
+  explanation: The manual lists a requirement for 'Two red reflectors on the rear
+    of the vehicle, visible from 300 feet.'
+- id: 242
+  category: safe_driving_rules
+  question: For drivers age 18 and older, which of the following is a legal use of
+    a cell phone while driving under Ohio's distracted driving law?
+  choices:
+    A: Manually typing a text message while stopped at a red light.
+    B: Holding the phone to your ear for a conversation, provided the call was started
+      with a single touch.
+    C: Supporting the phone with your shoulder to talk.
+    D: Watching a video while traffic is stopped on the highway due to a road closure.
+  answer: B
+  explanation: The law includes an exception for drivers 18 and older, allowing them
+    to hold a phone to the ear during a conversation if the call is initiated or ended
+    with a single touch or swipe.
+- id: 243
+  category: penalties_and_points
+  question: A driver age 18 or older commits a third distracted driving offense in
+    two years. What is a possible consequence in addition to a fine and points?
+  choices:
+    A: A mandatory defensive driving course
+    B: A 60-day license suspension
+    C: A possible 90-day license suspension
+    D: A permanent license revocation
+  answer: C
+  explanation: According to the manual, a third or subsequent distracted driving offense
+    in two years for a driver 18 or older can result in a possible 90-day suspension
+    of the Driver License, along with 4 points and a fine up to $500.
+- id: 244
+  category: penalties_and_points
+  question: What is the fine for a second violation of the distracted driving law
+    for a driver under the age of 18?
+  choices:
+    A: $150
+    B: $250
+    C: $300
+    D: $500
+  answer: C
+  explanation: The manual specifies that a second distracted driving violation for
+    a driver under 18 results in a $300 fine and a 1-year license suspension.
+- id: 245
+  category: safe_driving_rules
+  question: According to the manual, which of the following best defines aggressive
+    driving?
+  choices:
+    A: Unintentionally making a driving error due to fatigue.
+    B: Driving faster than the surrounding traffic.
+    C: Intentionally committing an action that endangers others or property.
+    D: Using a cell phone without a hands-free device.
+  answer: C
+  explanation: The manual defines aggressive driving as occurring when an individual
+    intentionally commits an action that endangers other persons or property.
+- id: 246
+  category: alcohol_drugs_health
+  question: Besides impairing judgment and reaction time, how can alcohol and drugs
+    specifically affect your vision while driving?
+  choices:
+    A: It can improve night vision.
+    B: It can cause blurred vision and reduce the ability to judge distance.
+    C: It has no effect on vision.
+    D: It only affects peripheral vision.
+  answer: B
+  explanation: The manual states that alcohol and drugs can affect vision by causing
+    blurred vision, reducing the ability to focus, and impairing the ability to judge
+    distance and speed.
+- id: 247
+  category: safe_driving_rules
+  question: When entering a limited access or interstate highway from an entrance
+    ramp, to whom must you yield the right-of-way?
+  choices:
+    A: To vehicles behind you on the ramp.
+    B: To drivers already on the highway.
+    C: To vehicles exiting the highway.
+    D: You have the right-of-way to merge.
+  answer: B
+  explanation: For the safety of all, you must yield the right-of-way to drivers already
+    on a limited access or interstate highway when you are on the entrance or acceleration
+    ramp.
+- id: 248
+  category: safe_driving_rules
+  question: When you are at an intersection preparing to make a left turn, to whom
+    must you yield the right-of-way?
+  choices:
+    A: To vehicles behind you.
+    B: To pedestrians on the side street.
+    C: To drivers in the opposing traffic lane.
+    D: To vehicles turning right from the opposite direction.
+  answer: C
+  explanation: The rules of the road require you to yield the right-of-way to drivers
+    in the opposing traffic lane when you are making a left turn.
+- id: 249
+  category: signs_and_signals
+  question: What does a traffic light marked with a green arrow indicate?
+  choices:
+    A: You must stop before turning.
+    B: You can turn in the direction of the arrow without stopping.
+    C: The opposing traffic also has a green light.
+    D: You must slow down and prepare to stop.
+  answer: B
+  explanation: The manual states that a traffic light marked with a green arrow indicates
+    you can turn in the direction of the arrow without stopping.
+- id: 250
+  category: safe_driving_rules
+  question: Under Ohio's distracted driving law, which of the following is an exception
+    for drivers under age 18?
+  choices:
+    A: Using a hands-free device to make a call.
+    B: Using a device for navigation purposes.
+    C: Changing the music on a phone while stopped at a red light.
+    D: There are no exceptions for drivers under age 18.
+  answer: B
+  explanation: For drivers under age 18, the law makes an exception for using a device
+    for navigation purposes or for making emergency services calls.
+- id: 251
+  category: safe_driving_rules
+  question: According to the manual, what is a primary effect of fatigue on a driver?
+  choices:
+    A: It makes reaction time faster.
+    B: It increases alertness.
+    C: It can decrease reaction time and affect vision.
+    D: It only affects driving during long trips.
+  answer: C
+  explanation: The manual states that fatigue, or physical/mental tiredness, can affect
+    your vision and decrease your reaction time.
+- id: 252
+  category: sharing_the_road
+  question: In addition to public safety vehicles and pedestrians, to which of the
+    following must a driver yield the right-of-way?
+  choices:
+    A: Mail delivery trucks.
+    B: Vehicles in a funeral procession.
+    C: Vehicles turning right on red.
+    D: Vehicles that are speeding.
+  answer: B
+  explanation: Ohio law requires drivers to yield the right-of-way to funeral processions
+    for the safety of all.
+- id: 253
+  category: penalties_and_points
+  question: A driver age 18 or older is cited for their first distracted driving offense
+    in two years. What can this driver do to potentially avoid the fine and points
+    assessment?
+  choices:
+    A: Pay the fine within 24 hours.
+    B: Contest the ticket in court.
+    C: Complete a distracted driving course.
+    D: Promise the officer not to do it again.
+  answer: C
+  explanation: The manual states that for a first distracted driving offense in two
+    years, completion of a distracted driving course can help the driver avoid the
+    fine and points.
+- id: 254
+  category: signs_and_signals
+  question: What is the primary purpose of Regulatory Signs?
+  choices:
+    A: To warn drivers of possible dangers ahead.
+    B: To provide information about points of interest and services.
+    C: To give notice to travelers of traffic laws or regulations.
+    D: To indicate the type of roadway, such as an interstate or state route.
+  answer: C
+  explanation: According to the manual, 'Regulatory Signs regulate the movement of
+    traffic. These signs give notice to travelers of traffic laws or regulations.'
+- id: 255
+  category: signs_and_signals
+  question: According to the warning sign for a narrow bridge, which vehicle has the
+    right-of-way?
+  choices:
+    A: The larger vehicle.
+    B: The vehicle traveling at a higher speed.
+    C: The vehicle that arrives at the bridge first.
+    D: The vehicle nearest the bridge.
+  answer: D
+  explanation: 'The manual text accompanying the narrow bridge warning sign states:
+    ''VEHICLE NEAREST THE BRIDGE HAS THE RIGHT OF WAY''.'
+- id: 256
+  category: sharing_the_road
+  question: If you encounter a person with a sign or flag directing traffic in a Work
+    Zone, what must you do?
+  choices:
+    A: Follow their instructions.
+    B: Use your horn to signal your intention to proceed.
+    C: Proceed with caution at the posted speed limit.
+    D: Stop and wait for a police officer to arrive.
+  answer: A
+  explanation: The manual states, 'In Work Zones, traffic may be controlled by a person
+    with a sign or flag directing traffic. You must follow their instructions.'
+- id: 257
+  category: signs_and_signals
+  question: What type of information do the shape and color of Route Number Signs
+    indicate?
+  choices:
+    A: The distance to the next city.
+    B: The location of hospitals and gas stations.
+    C: The type of roadway (interstate, U.S., state, etc.).
+    D: The presence of a work zone ahead.
+  answer: C
+  explanation: 'The manual explains that for ''Route Number Signs: The shape and color
+    of these signs indicate the type of roadway — interstate, U.S., state, city, county,
+    or local road.'''
+- id: 258
+  category: signs_and_signals
+  question: When driving on a road with a solid yellow line next to a broken yellow
+    line, what is true for the motorist in the lane with the solid line?
+  choices:
+    A: They may pass only when the road is clear.
+    B: Passing is prohibited.
+    C: They may pass only during daylight hours.
+    D: They must prepare to merge into the other lane.
+  answer: B
+  explanation: 'The manual states for a ''YELLOW SOLID LINE WITH A BROKEN (DASHED)
+    LINE'': ''Passing is prohibited for motorists traveling in the lane with the solid
+    line.'''
+- id: 259
+  category: safe_driving_rules
+  question: Besides making an immediate left turn, what is a prohibited use of a two-way
+    left turn only lane?
+  choices:
+    A: Stopping to wait for a gap in traffic.
+    B: Using it as a travel or passing lane.
+    C: Entering it from a side street.
+    D: Yielding to oncoming traffic within the lane.
+  answer: B
+  explanation: Regarding the two-way left turn only lane, the manual specifies, 'This
+    is not a lane used for traveling or passing.'
+- id: 260
+  category: vehicle_information
+  question: Before turning the key or pushing the start button to start your vehicle's
+    engine, what two things should you check?
+  choices:
+    A: Foot is on the accelerator and gear is in neutral.
+    B: Foot is on the brake pedal and gear is in park.
+    C: Headlights are on and mirrors are adjusted.
+    D: Gear is in 'D' (drive) and turn signal is on.
+  answer: B
+  explanation: 'The manual instructs: ''To start the engine, place your right foot
+    on the brake pedal and check the gear selector for park.'''
+- id: 261
+  category: defensive_driving
+  question: When preparing to stop your vehicle, what is the first step you should
+    take after identifying the need to stop?
+  choices:
+    A: Press the brake pedal with firm pressure.
+    B: Move your foot from the accelerator to the brake.
+    C: Check your mirrors for traffic to the rear.
+    D: Activate your emergency flashers.
+  answer: C
+  explanation: 'The procedure for stopping the vehicle is: ''Check your mirrors for
+    traffic to the rear of your vehicle. Move your foot from the accelerator to the
+    brake pedal.'''
+- id: 262
+  category: safe_driving_rules
+  question: When making a legal turn on a red light, what must a driver do after coming
+    to a full stop?
+  choices:
+    A: Proceed immediately if the path is clear.
+    B: Honk to alert pedestrians and other traffic.
+    C: Yield the right-of-way to all crossing traffic and pedestrians.
+    D: Wait for the traffic signal to turn green.
+  answer: C
+  explanation: The manual states a driver may proceed with a legal turn on red 'after
+    coming to a full stop and yielding the right-of-way to all crossing traffic and
+    to all pedestrians crossing the intersection.'
+- id: 263
+  category: signs_and_signals
+  question: Which of the following color combinations is used for Guide Signs that
+    provide information on services, points of interest, and directions?
+  choices:
+    A: Yellow and black.
+    B: Red and white.
+    C: Orange and black.
+    D: Green, brown, or blue.
+  answer: D
+  explanation: The manual explains, 'Guide Signs’ shapes may be square or rectangular,
+    and colors may be green, brown, or blue.'
+- id: 264
+  category: signs_and_signals
+  question: What is the distinctive background color for most Work Zone signs?
+  choices:
+    A: Yellow
+    B: White
+    C: Orange
+    D: Green
+  answer: C
+  explanation: 'The manual notes that ''Work Zone Signs: These signs generally have
+    a distinctive orange background.'''
+- id: 265
+  category: signs_and_signals
+  question: What does a single, broken (dashed) yellow line separating lanes of traffic
+    indicate?
+  choices:
+    A: Passing is prohibited for all vehicles.
+    B: It separates traffic moving in the same direction.
+    C: Vehicles traveling in either direction may pass when it is safe.
+    D: The lane is ending and you must merge.
+  answer: C
+  explanation: 'The manual specifies for a ''YELLOW BROKEN (DASHED) LINE'': ''Vehicles
+    traveling in either direction may pass vehicles traveling in the same direction
+    when safe to do so.'''
+- id: 266
+  category: safe_driving_rules
+  question: If a crosswalk is present at an intersection but there is also a stop
+    line painted on the road before the crosswalk, where must you stop?
+  choices:
+    A: On the crosswalk lines.
+    B: Anywhere before the intersection.
+    C: The stop line must be obeyed.
+    D: After the crosswalk but before the intersection.
+  answer: C
+  explanation: The manual clarifies, 'You must yield the right-of-way to pedestrians
+    entering or in a crosswalk. If there is a stop line before the crosswalk, the
+    stop line must be obeyed.'
+- id: 267
+  category: sharing_the_road
+  question: When approaching a public safety vehicle with flashing lights on a divided
+    highway, when are you NOT required to move to the right and stop?
+  choices:
+    A: When the vehicle is more than 500 feet behind you
+    B: When you are in the far left lane
+    C: When the vehicle is traveling in the opposite direction
+    D: During daylight hours
+  answer: C
+  explanation: The manual states you must yield to a public safety vehicle displaying
+    flashing lights "unless the vehicle is traveling in the opposite direction on
+    a divided highway."
+- id: 268
+  category: vehicle_information
+  question: When backing up your vehicle, where should you place your right arm for
+    optimal visibility and control?
+  choices:
+    A: On the steering wheel at the 4 o'clock position
+    B: On the back of the passenger seat
+    C: Out the driver's side window
+    D: On the center console
+  answer: B
+  explanation: The manual advises to "Place your right arm on the back of the passenger
+    seat and look directly through the rear window."
+- id: 269
+  category: defensive_driving
+  question: While backup cameras and mirrors are useful, what is the primary way you
+    should look when backing your vehicle?
+  choices:
+    A: By looking only at the backup camera display
+    B: By alternating between your side-view mirrors
+    C: By looking directly through the rear window
+    D: By opening the door and looking behind you
+  answer: C
+  explanation: The manual states to "look directly through the rear window" and notes
+    that mirrors and backup cameras may not show the entire area behind your vehicle.
+- id: 270
+  category: defensive_driving
+  question: When searching for oncoming and cross traffic at an intersection, what
+    is the recommended visual scanning pattern?
+  choices:
+    A: Look right, then left
+    B: Look straight ahead, then left and right
+    C: Look left, right, then left again
+    D: Look right, left, then right again
+  answer: C
+  explanation: The manual advises to search for oncoming and cross traffic at intersections
+    by looking "left, right, then left again."
+- id: 271
+  category: safe_driving_rules
+  question: According to the Ohio Driver Manual, what common error should you avoid
+    when making a right turn?
+  choices:
+    A: Signaling less than 100 feet before the turn
+    B: Turning into the lane furthest from the curb
+    C: Swinging wide to the left before the turn
+    D: Accelerating too slowly after the turn
+  answer: C
+  explanation: When making a right turn, the manual explicitly states to "Avoid swinging
+    wide to the left before making the turn."
+- id: 272
+  category: safe_driving_rules
+  question: When completing a left turn onto a four-lane highway, which lane should
+    you enter?
+  choices:
+    A: The right-most lane
+    B: Any available lane
+    C: The lane just to the right of the center dividing line
+    D: The far right lane to allow others to pass
+  answer: C
+  explanation: The manual states to "always turn left from the left-most portion of
+    your lane into the lane furthest left, just to the right of the center dividing
+    line of the street you’re turning onto. This pertains to four-lane highways as
+    well."
+- id: 273
+  category: signs_and_signals
+  question: Under what specific circumstance is a left turn on a red light permitted
+    in Ohio?
+  choices:
+    A: From any street onto a one-way street
+    B: From a two-way street onto a one-way street
+    C: From a one-way street onto a two-way street
+    D: From a one-way street onto another one-way street
+  answer: D
+  explanation: A left turn on red is permitted "only from the extreme left lane of
+    a one-way street onto another one-way street," unless a sign prohibits it.
+- id: 274
+  category: safe_driving_rules
+  question: Once you have entered a roundabout or traffic circle, what action is strictly
+    prohibited?
+  choices:
+    A: Using your turn signal to exit
+    B: Maintaining your speed
+    C: Changing lanes
+    D: Yielding to pedestrians
+  answer: C
+  explanation: The manual states, "Once you have entered the roundabout, keep moving.
+    Do not stop or change lanes."
+- id: 275
+  category: safe_driving_rules
+  question: Besides passing or avoiding an obstruction, which of the following is
+    a legal reason to drive on the left half of the roadway?
+  choices:
+    A: To get a better view around a curve
+    B: When directed by a police officer
+    C: If the right lane is moving too slowly
+    D: To avoid sun glare
+  answer: B
+  explanation: The manual lists several exceptions for driving on the right half of
+    the road, including when "Otherwise directed by a police officer or traffic control
+    device."
+- id: 276
+  category: defensive_driving
+  question: Before changing lanes, after checking your mirrors, what is the correct
+    way to check your blind spots?
+  choices:
+    A: Lean forward to see more in the side mirror
+    B: Turn your head and look over your shoulder
+    C: Briefly speed up to see past the car next to you
+    D: Rely solely on your vehicle's blind spot monitor
+  answer: B
+  explanation: The manual instructs drivers to check blind spots "by turning your
+    head and looking over your shoulder in the direction you plan to move."
+- id: 277
+  category: defensive_driving
+  question: What is a key defensive driving action you should take as you approach
+    any intersection?
+  choices:
+    A: Increase your speed to clear it quickly
+    B: Reduce your speed and search the area
+    C: Change to the leftmost lane
+    D: Focus only on the traffic signal
+  answer: B
+  explanation: The manual states, "At all intersections, reduce your speed and search
+    for" various hazards like traffic controls, vehicles, and pedestrians.
+- id: 278
+  category: defensive_driving
+  question: If you are waiting to turn and see an approaching vehicle with its turn
+    signal on, what should you do?
+  choices:
+    A: Immediately pull out, as they are required to turn
+    B: Wait to ensure the driver is actually turning before you proceed
+    C: Honk to acknowledge their signal
+    D: Flash your headlights to signal it is safe for them to turn
+  answer: B
+  explanation: The manual warns, "Do not assume the vehicle is turning. The driver
+    may turn after passing your vehicle or may have forgotten to turn off their signal."
+- id: 279
+  category: safe_driving_rules
+  question: If you are stopped at a stop sign and your view of crossing traffic is
+    blocked by a building or other large object, what should you do?
+  choices:
+    A: Wait for another car to go first and follow them closely
+    B: Honk your horn twice before proceeding slowly
+    C: Edge forward slowly to check for traffic before entering
+    D: Reverse and find a different, safer route
+  answer: C
+  explanation: The manual advises, "When stopped at a stop sign where you cannot see
+    crossing traffic, edge forward to check for traffic before entering the intersection."
+- id: 280
+  category: driver_responsibility
+  question: What crucial safety check should be performed *before* you even get into
+    your vehicle to back up?
+  choices:
+    A: Check your tire pressure
+    B: Check behind your vehicle for children or small objects
+    C: Adjust your mirrors and seat
+    D: Plan your route using a GPS
+  answer: B
+  explanation: The manual states, "Check behind your vehicle before you get in. Children
+    and small objects cannot be seen from the driver’s seat."
