@@ -3,6 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -43,10 +44,11 @@ jobs:
         working-directory: frontend
         run: npm run build
 
-      - name: Copy bundle to docs
+      - name: Copy data assets to docs
         run: |
           cp shared/questions_bundle.json docs/
           cp -r data/signs docs/
+          cp docs/i18n.json docs/i18n.json 2>/dev/null || true
 
       - uses: actions/upload-pages-artifact@v3
         with:
