@@ -48,10 +48,25 @@
   .lang-btn.active { border-color: var(--blue); background: var(--blue-light); color: var(--blue); }
   .lang-btn:disabled { opacity: 0.35; cursor: not-allowed; }
 
-  #state-screen { text-align: center; padding-top: 10vh; }
+  #state-screen { text-align: center; padding-top: 4vh; }
   #state-screen h1 { font-size: 28px; margin-bottom: 4px; color: var(--blue); }
-  #state-screen .sub { color: var(--gray); font-size: 15px; margin-bottom: 24px; }
-  .state-list { display: flex; flex-direction: column; gap: 10px; text-align: left; }
+  #state-screen .sub { color: var(--gray); font-size: 15px; margin-bottom: 16px; }
+  .search-box {
+    width: 100%; padding: 12px 16px 12px 40px; border: 2px solid var(--border); border-radius: var(--radius);
+    font-size: 16px; background: var(--card); color: var(--text); margin-bottom: 16px; outline: none;
+  }
+  .search-box:focus { border-color: var(--blue); }
+  .search-wrap { position: relative; text-align: left; }
+  .search-wrap .search-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--gray); font-size: 16px; pointer-events: none; }
+  .country-group { margin-bottom: 20px; text-align: left; }
+  .country-header {
+    font-size: 14px; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.5px;
+    padding: 8px 4px; border-bottom: 1px solid var(--border); margin-bottom: 8px; display: flex; align-items: center; gap: 8px;
+  }
+  .country-header .flag { font-size: 20px; }
+  .country-count { font-size: 12px; font-weight: 400; color: var(--gray); }
+  .no-results { color: var(--gray); font-size: 15px; padding: 40px 0; }
+  .state-list { display: flex; flex-direction: column; gap: 8px; text-align: left; }
   .state-card {
     display: flex; justify-content: space-between; align-items: center;
     padding: 16px; background: var(--card); border: 2px solid var(--border);
@@ -204,7 +219,11 @@
     <div class="lang-bar" id="lang-bar-state"></div>
     <h1 data-i18n="appTitle"></h1>
     <p class="sub" data-i18n="selectStateDesc"></p>
-    <div class="state-list" id="state-list"></div>
+    <div class="search-wrap">
+      <span class="search-icon">&#128269;</span>
+      <input type="text" class="search-box" id="state-search" placeholder="Search states..." oninput="filterStates()">
+    </div>
+    <div id="state-list-container"></div>
   </div>
 
   <!-- Start Screen -->
@@ -422,24 +441,83 @@ document.addEventListener('DOMContentLoaded', async () => {
   renderStatePicker();
 });
 
+// ---- Country config ----
+const COUNTRIES = {
+  'us': { name: 'United States', flag: '\u{1F1FA}\u{1F1F8}' },
+  'ca': { name: 'Canada', flag: '\u{1F1E8}\u{1F1E6}' },
+  'au': { name: 'Australia', flag: '\u{1F1E6}\u{1F1FA}' },
+  'uk': { name: 'United Kingdom', flag: '\u{1F1EC}\u{1F1E7}' },
+  'nz': { name: 'New Zealand', flag: '\u{1F1F3}\u{1F1FF}' },
+  'ie': { name: 'Ireland', flag: '\u{1F1EE}\u{1F1EA}' },
+  'sg': { name: 'Singapore', flag: '\u{1F1F8}\u{1F1EC}' },
+};
+
+function getCountry(code) {
+  if (code.startsWith('ca-')) return 'ca';
+  if (code.startsWith('au-')) return 'au';
+  if (code === 'uk') return 'uk';
+  if (code === 'nz') return 'nz';
+  if (code === 'ie') return 'ie';
+  if (code === 'sg') return 'sg';
+  return 'us';
+}
+
 // ---- State picker ----
-function renderStatePicker() {
+function renderStatePicker(filter) {
   buildLangBar('lang-bar-state');
-  const list = document.getElementById('state-list');
-  list.innerHTML = allStates.map(s => {
-    const hasQ = s.has_questions;
-    return `<div class="state-card ${hasQ ? '' : 'disabled'}" onclick="${hasQ ? `selectState('${s.code}')` : ''}">
-      <div>
-        <div class="sc-name">${s.name}</div>
-        <div class="sc-detail">${s.agency} &middot; ${t('passingScore', {pass_pct: s.passing_score_pct, pass_count: Math.ceil(s.test_question_count * s.passing_score_pct / 100), test_count: s.test_question_count})}</div>
-      </div>
-      <div class="sc-right">
-        ${hasQ
-          ? `<div class="sc-count">${t('questionsAvailable', {count: s.total_questions})}</div>`
-          : `<span class="sc-badge">${t('comingSoon')}</span>`}
-      </div>
-    </div>`;
-  }).join('');
+  const container = document.getElementById('state-list-container');
+  const query = (filter || '').toLowerCase().trim();
+
+  // Group by country
+  const groups = {};
+  for (const s of allStates) {
+    const country = getCountry(s.code);
+    if (!groups[country]) groups[country] = [];
+    if (query && !s.name.toLowerCase().includes(query) && !s.code.includes(query)) continue;
+    groups[country].push(s);
+  }
+
+  // Render groups (US first, then alphabetical)
+  const countryOrder = ['us', ...Object.keys(groups).filter(c => c !== 'us').sort()];
+  let html = '';
+  let totalShown = 0;
+
+  for (const country of countryOrder) {
+    const states = groups[country];
+    if (!states || states.length === 0) continue;
+    totalShown += states.length;
+    const info = COUNTRIES[country] || { name: country.toUpperCase(), flag: '' };
+
+    html += `<div class="country-group">`;
+    html += `<div class="country-header"><span class="flag">${info.flag}</span> ${info.name} <span class="country-count">(${states.length})</span></div>`;
+    html += `<div class="state-list">`;
+    html += states.map(s => {
+      const hasQ = s.has_questions;
+      return `<div class="state-card ${hasQ ? '' : 'disabled'}" onclick="${hasQ ? `selectState('${s.code}')` : ''}">
+        <div>
+          <div class="sc-name">${s.name}</div>
+          <div class="sc-detail">${s.agency} &middot; ${t('passingScore', {pass_pct: s.passing_score_pct, pass_count: Math.ceil(s.test_question_count * s.passing_score_pct / 100), test_count: s.test_question_count})}</div>
+        </div>
+        <div class="sc-right">
+          ${hasQ
+            ? `<div class="sc-count">${t('questionsAvailable', {count: s.total_questions})}</div>`
+            : `<span class="sc-badge">${t('comingSoon')}</span>`}
+        </div>
+      </div>`;
+    }).join('');
+    html += `</div></div>`;
+  }
+
+  if (totalShown === 0) {
+    html = `<div class="no-results">No states found matching "${esc(query)}"</div>`;
+  }
+
+  container.innerHTML = html;
+}
+
+function filterStates() {
+  const query = document.getElementById('state-search').value;
+  renderStatePicker(query);
 }
 
 function selectState(code) {
@@ -451,6 +529,8 @@ function selectState(code) {
 function goStatePicker() {
   showScreen('state-screen');
   applyI18n();
+  const searchBox = document.getElementById('state-search');
+  if (searchBox) searchBox.value = '';
   buildLangBar('lang-bar-state');
   renderStatePicker();
 }
