@@ -17,6 +17,7 @@ class Localizer: ObservableObject {
         loadTranslations()
     }
 
+    // swiftlint:disable:next function_body_length
     private func loadTranslations() {
         translations = [
             "en": [
