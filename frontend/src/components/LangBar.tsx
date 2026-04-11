@@ -1,20 +1,20 @@
-import { getAllLangs, getLangLabel } from '../i18n'
+import { getAllLangs, getLangLabel } from '../i18n';
 
 interface LangBarProps {
-  currentLang: string
-  availableLangs?: string[]
-  onSwitch: (lang: string) => void
+  currentLang: string;
+  availableLangs?: string[];
+  onSwitch: (lang: string) => void;
 }
 
 export default function LangBar({ currentLang, availableLangs, onSwitch }: LangBarProps) {
-  const allLangs = getAllLangs()
-  const available = new Set(availableLangs || allLangs)
+  const allLangs = getAllLangs();
+  const available = new Set(availableLangs || allLangs);
 
   return (
     <div className="flex justify-end gap-1 mb-3">
-      {allLangs.map(lang => {
-        const disabled = !available.has(lang)
-        const active = lang === currentLang && !disabled
+      {allLangs.map((lang) => {
+        const disabled = !available.has(lang);
+        const active = lang === currentLang && !disabled;
         return (
           <button
             key={lang}
@@ -26,8 +26,8 @@ export default function LangBar({ currentLang, availableLangs, onSwitch }: LangB
           >
             {getLangLabel(lang)}
           </button>
-        )
+        );
       })}
     </div>
-  )
+  );
 }
