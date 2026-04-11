@@ -5,7 +5,6 @@ import com.drivers.test.model.AnswerResponse
 import com.drivers.test.model.QuizQuestion
 import com.drivers.test.model.StateInfo
 import com.google.gson.Gson
-import com.google.gson.annotations.SerializedName
 import java.io.ByteArrayOutputStream
 import java.util.zip.GZIPInputStream
 
@@ -46,7 +45,11 @@ class ApiClient(context: Context) {
 
     fun fetchStates(): List<StateInfo> = bundle?.states ?: emptyList()
 
-    fun fetchQuiz(state: String, lang: String, count: Int): List<QuizQuestion> {
+    fun fetchQuiz(
+        state: String,
+        lang: String,
+        count: Int,
+    ): List<QuizQuestion> {
         val stateQuestions = bundle?.questions?.get(state) ?: return emptyList()
         val langQuestions = stateQuestions[lang] ?: stateQuestions["en"] ?: return emptyList()
         return langQuestions.shuffled().take(count).map { q ->
@@ -60,7 +63,11 @@ class ApiClient(context: Context) {
         }
     }
 
-    fun fetchAnswer(questionId: Int, state: String, lang: String): AnswerResponse? {
+    fun fetchAnswer(
+        questionId: Int,
+        state: String,
+        lang: String,
+    ): AnswerResponse? {
         val stateQuestions = bundle?.questions?.get(state) ?: return null
         val langQuestions = stateQuestions[lang] ?: stateQuestions["en"] ?: return null
         val q = langQuestions.find { it.id == questionId } ?: return null

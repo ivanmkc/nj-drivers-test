@@ -1,7 +1,6 @@
 package com.drivers.test.viewmodel
 
 import android.app.Application
-import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateListOf
@@ -70,12 +69,15 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun bestScore(): Int = quizHistory().maxOfOrNull { it.pct } ?: 0
+
     fun questionsSeen(): Int = store().questions.size
 
     fun countOptions(): List<Int> {
         val total = currentState?.totalQuestions ?: return listOf(10, 25, 50)
         val counts = mutableListOf<Int>()
-        for (n in listOf(10, 25, 50, 100)) { if (n <= total) counts.add(n) }
+        for (n in listOf(10, 25, 50, 100)) {
+            if (n <= total) counts.add(n)
+        }
         if (!counts.contains(total)) counts.add(total)
         return counts
     }
@@ -110,7 +112,10 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         return record.wrong to record.seen
     }
 
-    fun t(key: String, vars: Map<String, String> = emptyMap()): String {
+    fun t(
+        key: String,
+        vars: Map<String, String> = emptyMap(),
+    ): String {
         return localizer.t(key, currentLang, vars)
     }
 
@@ -143,9 +148,18 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         screen = AppScreen.HOME
     }
 
-    fun goStatePicker() { screen = AppScreen.STATE_PICKER }
-    fun goHome() { quizMode = QuizMode.RANDOM; screen = AppScreen.HOME }
-    fun showStats() { screen = AppScreen.STATS }
+    fun goStatePicker() {
+        screen = AppScreen.STATE_PICKER
+    }
+
+    fun goHome() {
+        quizMode = QuizMode.RANDOM
+        screen = AppScreen.HOME
+    }
+
+    fun showStats() {
+        screen = AppScreen.STATS
+    }
 
     fun startQuiz() {
         val state = currentState ?: return
@@ -161,9 +175,14 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         }
         questions.clear()
         questions.addAll(qs)
-        currentIndex = 0; correctCount = 0; wrongCount = 0
+        currentIndex = 0
+        correctCount = 0
+        wrongCount = 0
         sessionResults.clear()
-        answered = false; selectedAnswer = null; correctAnswer = null; explanation = null
+        answered = false
+        selectedAnswer = null
+        correctAnswer = null
+        explanation = null
         screen = AppScreen.QUIZ
     }
 
@@ -187,12 +206,18 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         if (!isCorrect) record.wrong++
         storage.saveStore(s, state.code)
 
-        sessionResults.add(SessionResult(
-            id = q.id, question = q.question,
-            yourAnswer = letter, yourAnswerText = q.choices[letter] ?: "",
-            correctAnswer = response.answer, correctAnswerText = q.choices[response.answer] ?: "",
-            correct = isCorrect, explanation = response.explanation,
-        ))
+        sessionResults.add(
+            SessionResult(
+                id = q.id,
+                question = q.question,
+                yourAnswer = letter,
+                yourAnswerText = q.choices[letter] ?: "",
+                correctAnswer = response.answer,
+                correctAnswerText = q.choices[response.answer] ?: "",
+                correct = isCorrect,
+                explanation = response.explanation,
+            ),
+        )
     }
 
     fun nextQuestion() {
@@ -201,16 +226,23 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
             finishQuiz()
             return
         }
-        answered = false; selectedAnswer = null; correctAnswer = null; explanation = null
+        answered = false
+        selectedAnswer = null
+        correctAnswer = null
+        explanation = null
     }
 
     private fun finishQuiz() {
         val state = currentState ?: return
         val s = storage.loadStore(state.code)
-        s.history.add(QuizHistoryEntry(
-            correct = correctCount, total = questions.size,
-            pct = resultPct, mode = quizMode.name.lowercase(),
-        ))
+        s.history.add(
+            QuizHistoryEntry(
+                correct = correctCount,
+                total = questions.size,
+                pct = resultPct,
+                mode = quizMode.name.lowercase(),
+            ),
+        )
         storage.saveStore(s, state.code)
         screen = AppScreen.RESULTS
     }

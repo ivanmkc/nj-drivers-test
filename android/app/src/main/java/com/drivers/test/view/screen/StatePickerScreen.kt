@@ -39,14 +39,19 @@ fun StatePickerScreen(vm: QuizViewModel) {
 
         Text(
             vm.t("appTitle"),
-            fontSize = 28.sp, fontWeight = FontWeight.Bold, color = c.blue,
-            modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center,
+            fontSize = 28.sp,
+            fontWeight = FontWeight.Bold,
+            color = c.blue,
+            modifier = Modifier.fillMaxWidth(),
+            textAlign = TextAlign.Center,
         )
         Spacer(Modifier.height(4.dp))
         Text(
             vm.t("selectStateDesc"),
-            fontSize = 15.sp, color = c.gray,
-            modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center,
+            fontSize = 15.sp,
+            color = c.gray,
+            modifier = Modifier.fillMaxWidth(),
+            textAlign = TextAlign.Center,
         )
         Spacer(Modifier.height(24.dp))
 
@@ -71,7 +76,10 @@ fun StatePickerScreen(vm: QuizViewModel) {
 }
 
 @Composable
-private fun StateCard(state: StateInfo, vm: QuizViewModel) {
+private fun StateCard(
+    state: StateInfo,
+    vm: QuizViewModel,
+) {
     val c = AppTheme.colors
 
     Row(
@@ -90,23 +98,30 @@ private fun StateCard(state: StateInfo, vm: QuizViewModel) {
             Text(state.name, fontSize = 17.sp, fontWeight = FontWeight.SemiBold)
             Spacer(Modifier.height(2.dp))
             Text(
-                "${state.agency} \u00B7 " + vm.t("passingScore", mapOf(
-                    "pass_pct" to "${state.passingScorePct}",
-                    "pass_count" to "${state.passCount}",
-                    "test_count" to "${state.testQuestionCount}",
-                )),
-                fontSize = 13.sp, color = c.gray,
+                "${state.agency} \u00B7 " + vm.t(
+                    "passingScore",
+                    mapOf(
+                        "pass_pct" to "${state.passingScorePct}",
+                        "pass_count" to "${state.passCount}",
+                        "test_count" to "${state.testQuestionCount}",
+                    ),
+                ),
+                fontSize = 13.sp,
+                color = c.gray,
             )
         }
         if (state.hasQuestions) {
             Text(
                 vm.t("questionsAvailable", mapOf("count" to "${state.totalQuestions}")),
-                fontSize = 13.sp, fontWeight = FontWeight.SemiBold, color = c.blue,
+                fontSize = 13.sp,
+                fontWeight = FontWeight.SemiBold,
+                color = c.blue,
             )
         } else {
             Text(
                 vm.t("comingSoon"),
-                fontSize = 11.sp, color = c.gray,
+                fontSize = 11.sp,
+                color = c.gray,
                 modifier = Modifier
                     .clip(RoundedCornerShape(10.dp))
                     .background(c.grayLight)
