@@ -4,7 +4,7 @@ line-length = 99
 exclude = ["__pycache__"]
 
 [tool.ruff.lint]
-select = ["E", "F", "W", "I", "UP"]
+select = ["E", "F", "W", "I", "UP", "B"]
 ignore = ["E501"]  # handled by ruff format; string literals are intentionally left long
 
 [tool.pyright]
