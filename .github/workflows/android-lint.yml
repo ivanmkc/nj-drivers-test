@@ -2,6 +2,7 @@ name: Android Lint (ktlint)
 
 on:
   push:
+    branches: [main]
     paths:
       - 'android/**'
       - '.github/workflows/android-lint.yml'
@@ -9,6 +10,10 @@ on:
     paths:
       - 'android/**'
       - '.github/workflows/android-lint.yml'
+
+concurrency:
+  group: android-lint-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   ktlint:
