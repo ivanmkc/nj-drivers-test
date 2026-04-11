@@ -419,7 +419,14 @@ struct ScoreChartView: View {
                 fillPath.closeSubpath()
 
                 let gradient = Gradient(colors: [AppTheme.blue.opacity(0.2), AppTheme.blue.opacity(0.02)])
-                context.fill(fillPath, with: .linearGradient(gradient, startPoint: CGPoint(x: 0, y: pad.top), endPoint: CGPoint(x: 0, y: pad.top + plotH)))
+                context.fill(
+                    fillPath,
+                    with: .linearGradient(
+                        gradient,
+                        startPoint: CGPoint(x: 0, y: pad.top),
+                        endPoint: CGPoint(x: 0, y: pad.top + plotH)
+                    )
+                )
             }
 
             // Dots
