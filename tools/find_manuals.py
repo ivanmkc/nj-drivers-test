@@ -9,6 +9,7 @@ Usage:
 import json
 import os
 import sys
+
 from google import genai
 
 MODEL = "gemini-2.5-flash"
@@ -72,7 +73,9 @@ ALL_STATES = {
 
 def find_existing():
     """Return set of state codes that already have question data."""
-    base = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "states")
+    base = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "states"
+    )
     existing = set()
     for code in os.listdir(base):
         en_path = os.path.join(base, code, "questions_en.yaml")
@@ -120,6 +123,7 @@ If you cannot find a direct PDF URL for a state, set manual_url to null."""
         ),
     )
 
+    assert response.text is not None, "Empty response from model"
     text = response.text.strip()
     if text.startswith("```"):
         text = text.split("\n", 1)[1]
@@ -182,7 +186,9 @@ def main():
             count = r.get("test_question_count", 25)
             url = r["manual_url"]
             source = r.get("source_description", f"{name} Driver's Manual")
-            print(f'  python3 tools/setup_state.py {code} "{name}" "{agency}" {pct} {count} "{url}" "{source}"')
+            print(
+                f'  python3 tools/setup_state.py {code} "{name}" "{agency}" {pct} {count} "{url}" "{source}"'
+            )
 
 
 if __name__ == "__main__":

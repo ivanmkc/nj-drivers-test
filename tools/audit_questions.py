@@ -15,6 +15,7 @@ Usage:
 import json
 import os
 import sys
+
 import yaml
 
 TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -74,9 +75,15 @@ def structural_audit(state_code: str, questions: list[dict]) -> list[str]:
             issues.append(f"Q{qid}: question very long ({len(qt)} chars)")
         # Category
         valid_cats = {
-            "license_system", "driver_testing", "driver_responsibility",
-            "safe_driving_rules", "defensive_driving", "alcohol_drugs_health",
-            "penalties_and_points", "sharing_the_road", "vehicle_information",
+            "license_system",
+            "driver_testing",
+            "driver_responsibility",
+            "safe_driving_rules",
+            "defensive_driving",
+            "alcohol_drugs_health",
+            "penalties_and_points",
+            "sharing_the_road",
+            "vehicle_information",
             "signs_and_signals",
         }
         cat = q.get("category", "")
@@ -107,11 +114,9 @@ def duplicate_audit(state_code: str, questions: list[dict]) -> list[str]:
 def content_audit(state_code: str, questions: list[dict], config: dict) -> list[str]:
     """Check question content for common issues."""
     issues = []
-    state_name = config.get("name", state_code.upper())
 
     for q in questions:
         qid = q.get("id", "?")
-        qt = q.get("question", "")
         choices = q.get("choices", {})
         answer = q.get("answer", "")
         explanation = q.get("explanation", "")
@@ -126,9 +131,13 @@ def content_audit(state_code: str, questions: list[dict], config: dict) -> list[
         for k, v in choices.items():
             vl = str(v).lower()
             if "all of the above" in vl and k != "D":
-                issues.append(f"Q{qid}: 'all of the above' should typically be choice D, found in {k}")
+                issues.append(
+                    f"Q{qid}: 'all of the above' should typically be choice D, found in {k}"
+                )
             if "none of the above" in vl and k != "D":
-                issues.append(f"Q{qid}: 'none of the above' should typically be choice D, found in {k}")
+                issues.append(
+                    f"Q{qid}: 'none of the above' should typically be choice D, found in {k}"
+                )
 
         # Check explanation exists
         if not explanation or len(str(explanation)) < 10:
@@ -154,6 +163,7 @@ def llm_audit(state_code: str, questions: list[dict], config: dict) -> list[str]
 
     # Sample 20 questions for LLM audit (to keep costs low)
     import random
+
     sample = random.sample(questions, min(20, len(questions)))
 
     prompt = f"""You are auditing driver's test questions for {state_name}.
@@ -177,6 +187,7 @@ Questions to audit:
                 max_output_tokens=4096,
             ),
         )
+        assert response.text is not None, "Empty response from model"
         text = response.text.strip()
         if text.startswith("```"):
             text = text.split("\n", 1)[1]
@@ -197,10 +208,9 @@ def main():
     state_codes = [a for a in sys.argv[1:] if a != "--llm"]
 
     if not state_codes:
-        state_codes = sorted([
-            d for d in os.listdir(STATES_DIR)
-            if os.path.isdir(os.path.join(STATES_DIR, d))
-        ])
+        state_codes = sorted(
+            [d for d in os.listdir(STATES_DIR) if os.path.isdir(os.path.join(STATES_DIR, d))]
+        )
 
     total_issues = 0
     total_questions = 0
@@ -212,9 +222,9 @@ def main():
             continue
 
         name = config.get("name", code.upper())
-        print(f"\n{'='*60}")
+        print(f"\n{'=' * 60}")
         print(f"{name} ({code.upper()}) — {len(questions)} questions")
-        print(f"{'='*60}")
+        print(f"{'=' * 60}")
         total_questions += len(questions)
 
         # Structural audit
@@ -247,7 +257,7 @@ def main():
         # LLM audit (optional)
         llm_issues = []
         if use_llm:
-            print(f"  Running LLM accuracy audit...")
+            print("  Running LLM accuracy audit...")
             llm_issues = llm_audit(code, questions, config)
             if llm_issues:
                 print(f"  LLM AUDIT ({len(llm_issues)} issues):")
@@ -257,10 +267,12 @@ def main():
         state_issues = len(struct_issues) + len(dup_issues) + len(content_issues) + len(llm_issues)
         total_issues += state_issues
         if state_issues == 0:
-            print(f"  ✓ All checks passed")
+            print("  ✓ All checks passed")
 
-    print(f"\n{'='*60}")
-    print(f"TOTAL: {total_questions} questions across {len(state_codes)} states, {total_issues} issues found")
+    print(f"\n{'=' * 60}")
+    print(
+        f"TOTAL: {total_questions} questions across {len(state_codes)} states, {total_issues} issues found"
+    )
 
 
 if __name__ == "__main__":

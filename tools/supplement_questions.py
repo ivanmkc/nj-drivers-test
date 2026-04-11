@@ -12,6 +12,7 @@ import json
 import os
 import sys
 import time
+
 import yaml
 from google import genai
 
@@ -47,7 +48,9 @@ Output format - JSON array:
 Categories to use: license_system, driver_testing, driver_responsibility, safe_driving_rules, defensive_driving, alcohol_drugs_health, penalties_and_points, sharing_the_road, vehicle_information, signs_and_signals"""
 
 
-def generate_batch(text_chunk: str, start_id: int, state_name: str, existing_summary: str, num_questions: int = 20) -> list[dict]:
+def generate_batch(
+    text_chunk: str, start_id: int, state_name: str, existing_summary: str, num_questions: int = 20
+) -> list[dict]:
     prompt = f"""\
 Generate {num_questions} NEW and UNIQUE multiple-choice driver's test questions from this section of the {state_name} driver's manual.
 Start question IDs at {start_id}.
@@ -69,6 +72,7 @@ Manual text:
             max_output_tokens=65536,
         ),
     )
+    assert response.text is not None, "Empty response from model"
     text = response.text.strip()
     if text.startswith("```"):
         text = text.split("\n", 1)[1]
@@ -128,14 +132,18 @@ def deduplicate(all_questions: list[dict]) -> list[dict]:
 
 def main():
     if len(sys.argv) < 3:
-        print("Usage: python supplement_questions.py <state_code> <manual_text_file> [target_count]")
+        print(
+            "Usage: python supplement_questions.py <state_code> <manual_text_file> [target_count]"
+        )
         sys.exit(1)
 
     state_code = sys.argv[1].lower()
     manual_file = sys.argv[2]
     target_count = int(sys.argv[3]) if len(sys.argv) > 3 else 300
 
-    state_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "states", state_code)
+    state_dir = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "states", state_code
+    )
     config_path = os.path.join(state_dir, "config.json")
     output_path = os.path.join(state_dir, "questions_en.yaml")
 
@@ -154,14 +162,16 @@ def main():
     print(f"{state_name}: {len(existing)} existing questions, target {target_count}")
 
     if len(existing) >= target_count:
-        print(f"Already at target count, skipping.")
+        print("Already at target count, skipping.")
         return
 
     existing_summary = summarize_existing(existing)
     # Truncate summary if too long (keep last 200 lines for context window)
     summary_lines = existing_summary.split("\n")
     if len(summary_lines) > 200:
-        existing_summary = "\n".join(summary_lines[:200]) + f"\n... and {len(summary_lines) - 200} more"
+        existing_summary = (
+            "\n".join(summary_lines[:200]) + f"\n... and {len(summary_lines) - 200} more"
+        )
 
     chunks = chunk_text(manual_text)
     total_chunks = len(chunks)
@@ -181,7 +191,9 @@ def main():
 
         for attempt in range(3):
             try:
-                questions = generate_batch(chunk, next_id, state_name, existing_summary, num_questions=qs_per_chunk)
+                questions = generate_batch(
+                    chunk, next_id, state_name, existing_summary, num_questions=qs_per_chunk
+                )
                 for q in questions:
                     q["id"] = next_id
                     next_id += 1
@@ -221,7 +233,9 @@ def main():
     with open(output_path, "w", encoding="utf-8") as f:
         yaml.dump(out_data, f, allow_unicode=True, default_flow_style=False, sort_keys=False)
 
-    print(f"\nDone! {len(existing)} existing + {len(new_questions)} new - {len(existing) + len(new_questions) - len(unique)} dupes = {len(unique)} total")
+    print(
+        f"\nDone! {len(existing)} existing + {len(new_questions)} new - {len(existing) + len(new_questions) - len(unique)} dupes = {len(unique)} total"
+    )
     print(f"Wrote to {output_path}")
 
 

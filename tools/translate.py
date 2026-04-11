@@ -10,6 +10,7 @@ import json
 import os
 import sys
 import time
+
 import yaml
 from google import genai
 
@@ -17,9 +18,18 @@ MODEL = "gemini-3-flash-preview"
 CLIENT = genai.Client(vertexai=True, project="adk-coding-agents", location="global")
 
 LANG_NAMES = {
-    "ja": "Japanese", "es": "Spanish", "zh": "Simplified Chinese",
-    "ko": "Korean", "pt": "Portuguese", "fr": "French", "de": "German",
-    "hi": "Hindi", "ar": "Arabic", "vi": "Vietnamese", "tl": "Tagalog", "ru": "Russian",
+    "ja": "Japanese",
+    "es": "Spanish",
+    "zh": "Simplified Chinese",
+    "ko": "Korean",
+    "pt": "Portuguese",
+    "fr": "French",
+    "de": "German",
+    "hi": "Hindi",
+    "ar": "Arabic",
+    "vi": "Vietnamese",
+    "tl": "Tagalog",
+    "ru": "Russian",
 }
 
 
@@ -52,6 +62,7 @@ Translate these driving test questions to {lang_name}. Return a JSON array with 
             max_output_tokens=8192,
         ),
     )
+    assert response.text is not None, "Empty response from model"
     text = response.text.strip()
     if text.startswith("```"):
         text = text.split("\n", 1)[1]
@@ -75,7 +86,9 @@ def main():
         print(f"Unknown language '{lang_code}'. Supported: {', '.join(LANG_NAMES.keys())}")
         sys.exit(1)
 
-    state_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "states", state_code)
+    state_dir = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "states", state_code
+    )
     input_path = os.path.join(state_dir, "questions_en.yaml")
     output_path = os.path.join(state_dir, f"questions_{lang_code}.yaml")
 
@@ -97,7 +110,11 @@ def main():
         batch = questions[i : i + batch_size]
         batch_num = i // batch_size + 1
         total_batches = (total + batch_size - 1) // batch_size
-        print(f"  Batch {batch_num}/{total_batches} (Q{batch[0]['id']}-Q{batch[-1]['id']})...", end=" ", flush=True)
+        print(
+            f"  Batch {batch_num}/{total_batches} (Q{batch[0]['id']}-Q{batch[-1]['id']})...",
+            end=" ",
+            flush=True,
+        )
 
         for attempt in range(3):
             try:
