@@ -1,0 +1,79 @@
+# SwiftLint configuration for DriversTest iOS app
+
+included:
+  - DriversTest/DriversTest/
+
+excluded:
+  - DriversTest/DriversTest.xcodeproj/
+  - DriversTest/DriversTestUITests/
+  - build/
+  - DerivedData/
+  - .build/
+
+# Disable rules that are too noisy for this codebase
+disabled_rules:
+  - todo
+  - trailing_comma
+
+# Opt-in rules that add value
+opt_in_rules:
+  - empty_count
+  - closure_spacing
+  - sorted_imports
+  - vertical_whitespace_closing_braces
+  - overridden_super_call
+
+# Rule configurations
+line_length:
+  warning: 150
+  error: 200
+  ignores_urls: true
+  ignores_interpolated_strings: true
+
+type_body_length:
+  warning: 300
+  error: 500
+
+file_length:
+  warning: 500
+  error: 1000
+
+function_body_length:
+  warning: 60
+  error: 100
+
+cyclomatic_complexity:
+  warning: 15
+  error: 25
+
+nesting:
+  type_level: 2
+  function_level: 3
+
+identifier_name:
+  min_length:
+    warning: 1
+  max_length:
+    warning: 60
+    error: 80
+  excluded:
+    - id
+    - x
+    - y
+    - i
+    - n
+    - p
+    - q
+    - s
+    - w
+
+large_tuple:
+  warning: 3
+  error: 4
+
+type_name:
+  min_length:
+    warning: 3
+  max_length:
+    warning: 50
+    error: 60
