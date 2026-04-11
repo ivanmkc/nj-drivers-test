@@ -1,67 +1,86 @@
-import { useState, useEffect, useCallback } from 'react'
-import type { Question, SessionResult } from '../types'
-import { t } from '../i18n'
-import { useStore } from '../hooks/useStore'
+import { useState, useEffect, useCallback } from 'react';
+import type { Question, SessionResult } from '../types';
+import { t } from '../i18n';
+import { useStore } from '../hooks/useStore';
 
 interface QuizScreenProps {
-  question: Question
-  currentIdx: number
-  totalQuestions: number
-  correctCount: number
-  wrongCount: number
-  store: ReturnType<typeof useStore>
-  basePath: string
-  onAnswer: (result: SessionResult, isCorrect: boolean) => void
-  onNext: () => void
+  question: Question;
+  currentIdx: number;
+  totalQuestions: number;
+  correctCount: number;
+  wrongCount: number;
+  store: ReturnType<typeof useStore>;
+  basePath: string;
+  onAnswer: (result: SessionResult, isCorrect: boolean) => void;
+  onNext: () => void;
 }
 
 export default function QuizScreen({
-  question, currentIdx, totalQuestions,
-  correctCount, wrongCount, store, basePath,
-  onAnswer, onNext,
+  question,
+  currentIdx,
+  totalQuestions,
+  correctCount,
+  wrongCount,
+  store,
+  basePath,
+  onAnswer,
+  onNext,
 }: QuizScreenProps) {
-  const [answered, setAnswered] = useState(false)
-  const [selected, setSelected] = useState<string | null>(null)
+  const [answered, setAnswered] = useState(false);
+  const [selected, setSelected] = useState<string | null>(null);
 
   useEffect(() => {
-    setAnswered(false)
-    setSelected(null)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [currentIdx])
+    setAnswered(false);
+    setSelected(null);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentIdx]);
 
-  const storeData = store.load()
-  const qStats = storeData.questions[String(question.id)]
-  const missRate = qStats?.wrong && qStats.seen ? Math.round((qStats.wrong / qStats.seen) * 100) : 0
+  const storeData = store.load();
+  const qStats = storeData.questions[String(question.id)];
+  const missRate =
+    qStats?.wrong && qStats.seen ? Math.round((qStats.wrong / qStats.seen) * 100) : 0;
 
-  const handleSelect = useCallback((letter: string) => {
-    if (answered) return
-    setAnswered(true)
-    setSelected(letter)
-    const isCorrect = letter === question.answer
-    onAnswer({
-      id: question.id,
-      question: question.question,
-      yourAnswer: letter,
-      yourAnswerText: question.choices[letter],
-      correctAnswer: question.answer,
-      correctAnswerText: question.choices[question.answer],
-      correct: isCorrect,
-      explanation: question.explanation,
-    }, isCorrect)
-  }, [answered, question, onAnswer])
+  const handleSelect = useCallback(
+    (letter: string) => {
+      if (answered) return;
+      setAnswered(true);
+      setSelected(letter);
+      const isCorrect = letter === question.answer;
+      onAnswer(
+        {
+          id: question.id,
+          question: question.question,
+          yourAnswer: letter,
+          yourAnswerText: question.choices[letter],
+          correctAnswer: question.answer,
+          correctAnswerText: question.choices[question.answer],
+          correct: isCorrect,
+          explanation: question.explanation,
+        },
+        isCorrect,
+      );
+    },
+    [answered, question, onAnswer],
+  );
 
-  const progressPct = (currentIdx / totalQuestions) * 100
-  const letters = ['A', 'B', 'C', 'D'].filter(l => question.choices[l])
+  const progressPct = (currentIdx / totalQuestions) * 100;
+  const letters = ['A', 'B', 'C', 'D'].filter((l) => question.choices[l]);
 
   return (
     <>
       <div className="h-1.5 bg-gray-200 rounded-full mb-4 overflow-hidden">
-        <div className="h-full bg-blue-600 rounded-full transition-all duration-300" style={{ width: `${progressPct}%` }} />
+        <div
+          className="h-full bg-blue-600 rounded-full transition-all duration-300"
+          style={{ width: `${progressPct}%` }}
+        />
       </div>
       <div className="flex justify-between items-center mb-3 text-sm text-gray-500">
-        <span>{currentIdx + 1} / {totalQuestions}</span>
+        <span>
+          {currentIdx + 1} / {totalQuestions}
+        </span>
         <span className="font-semibold">
-          <span className="text-green-600">{correctCount}</span> / <span className="text-red-600">{wrongCount}</span>
+          <span className="text-green-600">{correctCount}</span> /{' '}
+          <span className="text-red-600">{wrongCount}</span>
         </span>
       </div>
       <div>
@@ -78,28 +97,33 @@ export default function QuizScreen({
 
       {question.image && (
         <div className="text-center my-3">
-          <img src={`${basePath}signs/${question.image}`} alt="Road sign" className="max-w-full max-h-60 rounded-lg border border-gray-200 inline-block" />
+          <img
+            src={`${basePath}signs/${question.image}`}
+            alt="Road sign"
+            className="max-w-full max-h-60 rounded-lg border border-gray-200 inline-block"
+          />
         </div>
       )}
 
       <div className="flex flex-col gap-2.5 mb-4">
-        {letters.map(letter => {
-          let btnClass = 'bg-white border-gray-200 hover:border-blue-300 active:scale-[0.98] cursor-pointer'
-          let letterClass = 'bg-gray-100 text-gray-500'
+        {letters.map((letter) => {
+          let btnClass =
+            'bg-white border-gray-200 hover:border-blue-300 active:scale-[0.98] cursor-pointer';
+          let letterClass = 'bg-gray-100 text-gray-500';
 
           if (answered) {
-            const isCorrectAnswer = letter === question.answer
-            const isSelected = letter === selected
+            const isCorrectAnswer = letter === question.answer;
+            const isSelected = letter === selected;
             if (isCorrectAnswer) {
-              btnClass = 'border-green-600 bg-green-50'
-              letterClass = 'bg-green-600 text-white'
+              btnClass = 'border-green-600 bg-green-50';
+              letterClass = 'bg-green-600 text-white';
             } else if (isSelected) {
-              btnClass = 'border-red-600 bg-red-50'
-              letterClass = 'bg-red-600 text-white'
+              btnClass = 'border-red-600 bg-red-50';
+              letterClass = 'bg-red-600 text-white';
             } else {
-              btnClass = 'border-gray-200 bg-white opacity-70'
+              btnClass = 'border-gray-200 bg-white opacity-70';
             }
-            btnClass += ' cursor-default'
+            btnClass += ' cursor-default';
           }
 
           return (
@@ -108,12 +132,14 @@ export default function QuizScreen({
               onClick={() => handleSelect(letter)}
               className={`flex items-start gap-3 p-3.5 border-2 rounded-xl text-base leading-relaxed text-left w-full text-gray-900 transition-all ${btnClass}`}
             >
-              <span className={`shrink-0 w-7 h-7 flex items-center justify-center rounded-full font-bold text-sm ${letterClass}`}>
+              <span
+                className={`shrink-0 w-7 h-7 flex items-center justify-center rounded-full font-bold text-sm ${letterClass}`}
+              >
                 {letter}
               </span>
               <span>{question.choices[letter]}</span>
             </button>
-          )
+          );
         })}
       </div>
 
@@ -131,5 +157,5 @@ export default function QuizScreen({
         </>
       )}
     </>
-  )
+  );
 }

@@ -1,173 +1,170 @@
-import { useState, useEffect, useCallback } from 'react'
-import type { Bundle, StateSummary, Question, Screen, QuizMode, SessionResult } from './types'
-import { loadI18n, getLang, setLang } from './i18n'
-import { useStore } from './hooks/useStore'
-import LoadingScreen from './components/LoadingScreen'
-import StatePicker from './components/StatePicker'
-import StartScreen from './components/StartScreen'
-import QuizScreen from './components/QuizScreen'
-import ResultsScreen from './components/ResultsScreen'
-import StatsScreen from './components/StatsScreen'
+import { useState, useEffect, useCallback } from 'react';
+import type {
+  Bundle,
+  StateConfig,
+  StateSummary,
+  Question,
+  Screen,
+  QuizMode,
+  SessionResult,
+} from './types';
+import { loadI18n, getLang, setLang } from './i18n';
+import { useStore } from './hooks/useStore';
+import LoadingScreen from './components/LoadingScreen';
+import StatePicker from './components/StatePicker';
+import StartScreen from './components/StartScreen';
+import QuizScreen from './components/QuizScreen';
+import ResultsScreen from './components/ResultsScreen';
+import StatsScreen from './components/StatsScreen';
 
-const BASE = import.meta.env.BASE_URL
+const BASE = import.meta.env.BASE_URL;
 
 function shuffleArray<T>(arr: T[]): T[] {
-  const a = [...arr]
+  const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[a[i], a[j]] = [a[j], a[i]]
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
   }
-  return a
+  return a;
 }
 
 export default function App() {
-  const [screen, setScreen] = useState<Screen>('loading')
-  const [bundle, setBundle] = useState<Bundle | null>(null)
-  const [allStates, setAllStates] = useState<StateSummary[]>([])
-  const [currentState, setCurrentState] = useState<StateSummary | null>(null)
-  const [lang, setLangState] = useState(getLang())
-  const [quizMode, setQuizMode] = useState<QuizMode>('random')
-  const [selectedCount, setSelectedCount] = useState(50)
-  const [questions, setQuestions] = useState<Question[]>([])
-  const [currentIdx, setCurrentIdx] = useState(0)
-  const [correctCount, setCorrectCount] = useState(0)
-  const [wrongCount, setWrongCount] = useState(0)
-  const [sessionResults, setSessionResults] = useState<SessionResult[]>([])
+  const [screen, setScreen] = useState<Screen>('loading');
+  const [bundle, setBundle] = useState<Bundle | null>(null);
+  const [allStates, setAllStates] = useState<StateSummary[]>([]);
+  const [currentState, setCurrentState] = useState<StateSummary | null>(null);
+  const [lang, setLangState] = useState(getLang());
+  const [quizMode, setQuizMode] = useState<QuizMode>('random');
+  const [selectedCount, setSelectedCount] = useState(50);
+  const [questions, setQuestions] = useState<Question[]>([]);
+  const [currentIdx, setCurrentIdx] = useState(0);
+  const [correctCount, setCorrectCount] = useState(0);
+  const [wrongCount, setWrongCount] = useState(0);
+  const [sessionResults, setSessionResults] = useState<SessionResult[]>([]);
 
-  const store = useStore(currentState?.code ?? null)
+  const store = useStore(currentState?.code ?? null);
 
   // Load bundle and i18n
   useEffect(() => {
-    Promise.all([
-      loadI18n(BASE),
-      fetch(`${BASE}questions_bundle.json`).then(r => r.json()),
-    ]).then(([, bundleData]) => {
-      setBundle(bundleData)
-      const states: StateSummary[] = bundleData.states.map((s: any) => ({
-        code: s.code,
-        name: s.name,
-        agency: s.agency,
-        passing_score_pct: s.passing_score_pct,
-        test_question_count: s.test_question_count,
-        languages: Object.keys(s.languages),
-        total_questions: (s.languages.en || []).length,
-      }))
-      setAllStates(states)
+    Promise.all([loadI18n(BASE), fetch(`${BASE}questions_bundle.json`).then((r) => r.json())]).then(
+      ([, bundleData]) => {
+        setBundle(bundleData);
+        const states: StateSummary[] = bundleData.states.map((s: StateConfig) => ({
+          code: s.code,
+          name: s.name,
+          agency: s.agency,
+          passing_score_pct: s.passing_score_pct,
+          test_question_count: s.test_question_count,
+          languages: Object.keys(s.languages),
+          total_questions: (s.languages.en || []).length,
+        }));
+        setAllStates(states);
 
-      const saved = localStorage.getItem('quiz_state')
-      if (saved) {
-        const s = states.find(st => st.code === saved && st.total_questions > 0)
-        if (s) {
-          setCurrentState(s)
-          setScreen('start')
-          return
+        const saved = localStorage.getItem('quiz_state');
+        if (saved) {
+          const s = states.find((st) => st.code === saved && st.total_questions > 0);
+          if (s) {
+            setCurrentState(s);
+            setScreen('start');
+            return;
+          }
         }
-      }
-      setScreen('state-picker')
-    })
-  }, [])
+        setScreen('state-picker');
+      },
+    );
+  }, []);
 
   const switchLang = useCallback((newLang: string) => {
-    setLang(newLang)
-    setLangState(newLang)
-  }, [])
+    setLang(newLang);
+    setLangState(newLang);
+  }, []);
 
-  const selectState = useCallback((code: string) => {
-    const s = allStates.find(st => st.code === code)
-    if (s) {
-      setCurrentState(s)
-      localStorage.setItem('quiz_state', code)
-      setScreen('start')
-      setQuizMode('random')
-    }
-  }, [allStates])
+  const selectState = useCallback(
+    (code: string) => {
+      const s = allStates.find((st) => st.code === code);
+      if (s) {
+        setCurrentState(s);
+        localStorage.setItem('quiz_state', code);
+        setScreen('start');
+        setQuizMode('random');
+      }
+    },
+    [allStates],
+  );
 
-  const getQuestions = useCallback((stateCode: string, language: string): Question[] => {
-    if (!bundle) return []
-    const sd = bundle.states.find(s => s.code === stateCode)
-    if (!sd) return []
-    return sd.languages[language] || sd.languages['en'] || []
-  }, [bundle])
+  const getQuestions = useCallback(
+    (stateCode: string, language: string): Question[] => {
+      if (!bundle) return [];
+      const sd = bundle.states.find((s) => s.code === stateCode);
+      if (!sd) return [];
+      return sd.languages[language] || sd.languages['en'] || [];
+    },
+    [bundle],
+  );
 
   const startQuiz = useCallback(() => {
-    if (!currentState) return
-    let qs: Question[]
-    const allQs = getQuestions(currentState.code, lang)
+    if (!currentState) return;
+    let qs: Question[];
+    const allQs = getQuestions(currentState.code, lang);
 
     if (quizMode === 'weak') {
-      const storeData = store.load()
+      const storeData = store.load();
       const weakIds = Object.entries(storeData.questions)
         .filter(([, d]) => d.wrong > 0 && d.seen >= 1)
-        .sort((a, b) => (b[1].wrong / b[1].seen) - (a[1].wrong / a[1].seen))
-        .map(([id]) => parseInt(id))
-      const idSet = new Set(weakIds.slice(0, selectedCount))
-      qs = shuffleArray(allQs.filter(q => idSet.has(q.id))).slice(0, selectedCount)
+        .sort((a, b) => b[1].wrong / b[1].seen - a[1].wrong / a[1].seen)
+        .map(([id]) => parseInt(id));
+      const idSet = new Set(weakIds.slice(0, selectedCount));
+      qs = shuffleArray(allQs.filter((q) => idSet.has(q.id))).slice(0, selectedCount);
     } else {
-      qs = shuffleArray(allQs).slice(0, Math.min(selectedCount, allQs.length))
+      qs = shuffleArray(allQs).slice(0, Math.min(selectedCount, allQs.length));
     }
 
-    setQuestions(qs)
-    setCurrentIdx(0)
-    setCorrectCount(0)
-    setWrongCount(0)
-    setSessionResults([])
-    setScreen('quiz')
-  }, [currentState, lang, quizMode, selectedCount, getQuestions, store])
+    setQuestions(qs);
+    setCurrentIdx(0);
+    setCorrectCount(0);
+    setWrongCount(0);
+    setSessionResults([]);
+    setScreen('quiz');
+  }, [currentState, lang, quizMode, selectedCount, getQuestions, store]);
 
-  const recordAnswer = useCallback((result: SessionResult, isCorrect: boolean) => {
-    setSessionResults(prev => [...prev, result])
-    if (isCorrect) setCorrectCount(c => c + 1)
-    else setWrongCount(c => c + 1)
+  const recordAnswer = useCallback(
+    (result: SessionResult, isCorrect: boolean) => {
+      setSessionResults((prev) => [...prev, result]);
+      if (isCorrect) setCorrectCount((c) => c + 1);
+      else setWrongCount((c) => c + 1);
 
-    const storeData = store.load()
-    const qId = String(result.id)
-    if (!storeData.questions[qId]) {
-      storeData.questions[qId] = { seen: 0, wrong: 0, category: '' }
-    }
-    storeData.questions[qId].seen++
-    if (!isCorrect) storeData.questions[qId].wrong++
-    store.save(storeData)
-  }, [store])
-
-  const nextQuestion = useCallback(() => {
-    if (currentIdx + 1 >= questions.length) {
-      // Save result to history
-      const pct = Math.round(((correctCount + (currentIdx + 1 === questions.length ? 0 : 0)) / questions.length) * 100)
-      const storeData = store.load()
-      storeData.history.push({
-        date: new Date().toISOString(),
-        correct: correctCount,
-        total: questions.length,
-        pct,
-        mode: quizMode,
-      })
-      store.save(storeData)
-      setScreen('results')
-    } else {
-      setCurrentIdx(i => i + 1)
-    }
-  }, [currentIdx, questions.length, correctCount, store, quizMode])
+      const storeData = store.load();
+      const qId = String(result.id);
+      if (!storeData.questions[qId]) {
+        storeData.questions[qId] = { seen: 0, wrong: 0, category: '' };
+      }
+      storeData.questions[qId].seen++;
+      if (!isCorrect) storeData.questions[qId].wrong++;
+      store.save(storeData);
+    },
+    [store],
+  );
 
   const finishQuiz = useCallback(() => {
-    const pct = Math.round((correctCount / questions.length) * 100)
-    const storeData = store.load()
+    const pct = Math.round((correctCount / questions.length) * 100);
+    const storeData = store.load();
     storeData.history.push({
       date: new Date().toISOString(),
       correct: correctCount,
       total: questions.length,
       pct,
       mode: quizMode,
-    })
-    store.save(storeData)
-    setScreen('results')
-  }, [correctCount, questions.length, store, quizMode])
+    });
+    store.save(storeData);
+    setScreen('results');
+  }, [correctCount, questions.length, store, quizMode]);
 
   const goHome = useCallback(() => {
-    setScreen('start')
-    setQuizMode('random')
-  }, [])
+    setScreen('start');
+    setQuizMode('random');
+  }, []);
 
-  if (screen === 'loading') return <LoadingScreen />
+  if (screen === 'loading') return <LoadingScreen />;
 
   return (
     <div className="max-w-lg mx-auto px-4 py-4">
@@ -204,7 +201,9 @@ export default function App() {
           store={store}
           basePath={BASE}
           onAnswer={recordAnswer}
-          onNext={currentIdx + 1 >= questions.length ? finishQuiz : () => setCurrentIdx(i => i + 1)}
+          onNext={
+            currentIdx + 1 >= questions.length ? finishQuiz : () => setCurrentIdx((i) => i + 1)
+          }
         />
       )}
       {screen === 'results' && currentState && (
@@ -219,12 +218,8 @@ export default function App() {
         />
       )}
       {screen === 'stats' && currentState && (
-        <StatsScreen
-          state={currentState}
-          store={store}
-          onBack={goHome}
-        />
+        <StatsScreen state={currentState} store={store} onBack={goHome} />
       )}
     </div>
-  )
+  );
 }

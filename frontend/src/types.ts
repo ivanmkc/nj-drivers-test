@@ -1,65 +1,65 @@
 export interface Question {
-  id: number
-  category: string
-  question: string
-  choices: Record<string, string>
-  answer: string
-  explanation: string
-  image?: string
+  id: number;
+  category: string;
+  question: string;
+  choices: Record<string, string>;
+  answer: string;
+  explanation: string;
+  image?: string;
 }
 
 export interface StateConfig {
-  code: string
-  name: string
-  agency: string
-  passing_score_pct: number
-  test_question_count: number
-  languages: Record<string, Question[]>
+  code: string;
+  name: string;
+  agency: string;
+  passing_score_pct: number;
+  test_question_count: number;
+  languages: Record<string, Question[]>;
 }
 
 export interface Bundle {
-  states: StateConfig[]
+  states: StateConfig[];
 }
 
 export interface StateSummary {
-  code: string
-  name: string
-  agency: string
-  passing_score_pct: number
-  test_question_count: number
-  languages: string[]
-  total_questions: number
+  code: string;
+  name: string;
+  agency: string;
+  passing_score_pct: number;
+  test_question_count: number;
+  languages: string[];
+  total_questions: number;
 }
 
 export interface QuizStore {
-  history: QuizResult[]
-  questions: Record<string, QuestionStats>
+  history: QuizResult[];
+  questions: Record<string, QuestionStats>;
 }
 
 export interface QuizResult {
-  date: string
-  correct: number
-  total: number
-  pct: number
-  mode: string
+  date: string;
+  correct: number;
+  total: number;
+  pct: number;
+  mode: string;
 }
 
 export interface QuestionStats {
-  seen: number
-  wrong: number
-  category: string
+  seen: number;
+  wrong: number;
+  category: string;
 }
 
 export interface SessionResult {
-  id: number
-  question: string
-  yourAnswer: string
-  yourAnswerText: string
-  correctAnswer: string
-  correctAnswerText: string
-  correct: boolean
-  explanation: string
+  id: number;
+  question: string;
+  yourAnswer: string;
+  yourAnswerText: string;
+  correctAnswer: string;
+  correctAnswerText: string;
+  correct: boolean;
+  explanation: string;
 }
 
-export type Screen = 'loading' | 'state-picker' | 'start' | 'quiz' | 'results' | 'stats'
-export type QuizMode = 'random' | 'weak'
+export type Screen = 'loading' | 'state-picker' | 'start' | 'quiz' | 'results' | 'stats';
+export type QuizMode = 'random' | 'weak';
