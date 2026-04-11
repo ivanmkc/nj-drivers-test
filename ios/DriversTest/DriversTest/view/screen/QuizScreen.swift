@@ -72,7 +72,11 @@ struct QuizScreen: View {
 
                         // Question image
                         if let imageName = q.image,
-                           let path = Bundle.main.path(forResource: (imageName as NSString).deletingPathExtension, ofType: (imageName as NSString).pathExtension, inDirectory: "signs"),
+                           let path = Bundle.main.path(
+                               forResource: (imageName as NSString).deletingPathExtension,
+                               ofType: (imageName as NSString).pathExtension,
+                               inDirectory: "signs"
+                           ),
                            let uiImage = UIImage(contentsOfFile: path) {
                             Image(uiImage: uiImage)
                                 .resizable()
