@@ -6,6 +6,7 @@ import json
 import os
 import re
 import shutil
+
 import yaml
 
 TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -19,7 +20,6 @@ ANDROID_ASSETS = os.path.join(ROOT_DIR, "android", "app", "src", "main", "assets
 
 def build_bundle():
     states = []
-    questions = {}
 
     for state_code in sorted(os.listdir(STATES_DIR)):
         state_dir = os.path.join(STATES_DIR, state_code)
@@ -42,15 +42,16 @@ def build_bundle():
                 data = yaml.safe_load(f)
             langs[lang] = data["questions"]
 
-        total = len(langs.get("en", []))
-        states.append({
-            "code": state_code,
-            "name": cfg["name"],
-            "agency": cfg["agency"],
-            "passing_score_pct": cfg["passing_score_pct"],
-            "test_question_count": cfg["test_question_count"],
-            "languages": langs,
-        })
+        states.append(
+            {
+                "code": state_code,
+                "name": cfg["name"],
+                "agency": cfg["agency"],
+                "passing_score_pct": cfg["passing_score_pct"],
+                "test_question_count": cfg["test_question_count"],
+                "languages": langs,
+            }
+        )
 
     return {"states": states}
 

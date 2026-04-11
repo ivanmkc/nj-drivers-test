@@ -2,6 +2,7 @@ import gzip
 import json
 import os
 import random
+
 from flask import Flask, jsonify, request, send_from_directory
 
 app = Flask(__name__, static_folder="static")
@@ -78,16 +79,18 @@ def states():
         langs = sorted(STATES.get(code, {}).keys())
         total = len(STATES.get(code, {}).get("en", {}).get("questions", []))
         has_questions = total > 0
-        result.append({
-            "code": code,
-            "name": cfg["name"],
-            "agency": cfg["agency"],
-            "passing_score_pct": cfg["passing_score_pct"],
-            "test_question_count": cfg["test_question_count"],
-            "languages": langs,
-            "total_questions": total,
-            "has_questions": has_questions,
-        })
+        result.append(
+            {
+                "code": code,
+                "name": cfg["name"],
+                "agency": cfg["agency"],
+                "passing_score_pct": cfg["passing_score_pct"],
+                "test_question_count": cfg["test_question_count"],
+                "languages": langs,
+                "total_questions": total,
+                "has_questions": has_questions,
+            }
+        )
     return jsonify({"states": result})
 
 
@@ -98,17 +101,19 @@ def metadata():
         return jsonify({"error": "Missing or invalid state parameter"}), 400
     cfg = CONFIG[state]
     categories = sorted(set(q["category"] for q in data["questions"])) if data else []
-    return jsonify({
-        "state": state,
-        "state_name": cfg["name"],
-        "agency": cfg["agency"],
-        "total_questions": len(data["questions"]) if data else 0,
-        "categories": categories,
-        "passing_score_pct": cfg["passing_score_pct"],
-        "test_question_count": cfg["test_question_count"],
-        "languages": sorted(STATES.get(state, {}).keys()),
-        "language": lang,
-    })
+    return jsonify(
+        {
+            "state": state,
+            "state_name": cfg["name"],
+            "agency": cfg["agency"],
+            "total_questions": len(data["questions"]) if data else 0,
+            "categories": categories,
+            "passing_score_pct": cfg["passing_score_pct"],
+            "test_question_count": cfg["test_question_count"],
+            "languages": sorted(STATES.get(state, {}).keys()),
+            "language": lang,
+        }
+    )
 
 
 @app.route("/api/quiz")
@@ -122,7 +127,12 @@ def quiz(count=50):
     selected = random.sample(questions, count)
     quiz_questions = []
     for q in selected:
-        item = {"id": q["id"], "category": q["category"], "question": q["question"], "choices": q["choices"]}
+        item = {
+            "id": q["id"],
+            "category": q["category"],
+            "question": q["question"],
+            "choices": q["choices"],
+        }
         if q.get("image"):
             item["image"] = q["image"]
         quiz_questions.append(item)

@@ -10,6 +10,7 @@ import json
 import os
 import sys
 import time
+
 import yaml
 from google import genai
 
@@ -44,7 +45,9 @@ Output format - JSON array:
 Categories to use: license_system, driver_testing, driver_responsibility, safe_driving_rules, defensive_driving, alcohol_drugs_health, penalties_and_points, sharing_the_road, vehicle_information, signs_and_signals"""
 
 
-def generate_batch(text_chunk: str, start_id: int, state_name: str, num_questions: int = 15) -> list[dict]:
+def generate_batch(
+    text_chunk: str, start_id: int, state_name: str, num_questions: int = 15
+) -> list[dict]:
     prompt = f"""\
 Generate {num_questions} multiple-choice driver's test questions from this section of the {state_name} driver's manual.
 Start question IDs at {start_id}.
@@ -61,6 +64,7 @@ Manual text:
             max_output_tokens=8192,
         ),
     )
+    assert response.text is not None, "Empty response from model"
     text = response.text.strip()
     if text.startswith("```"):
         text = text.split("\n", 1)[1]
@@ -93,7 +97,9 @@ def main():
     state_code = sys.argv[1].lower()
     manual_file = sys.argv[2]
 
-    state_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "states", state_code)
+    state_dir = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "states", state_code
+    )
     config_path = os.path.join(state_dir, "config.json")
     output_path = os.path.join(state_dir, "questions_en.yaml")
 
