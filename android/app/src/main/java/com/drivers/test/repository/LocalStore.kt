@@ -2,7 +2,6 @@ package com.drivers.test.repository
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.drivers.test.model.QuestionRecord
 import com.drivers.test.model.QuizStore
 import com.drivers.test.model.WeakQuestion
 import com.google.gson.Gson
@@ -21,7 +20,10 @@ class LocalStore(context: Context) {
         }
     }
 
-    fun saveStore(store: QuizStore, stateCode: String) {
+    fun saveStore(
+        store: QuizStore,
+        stateCode: String,
+    ) {
         prefs.edit().putString("quiz_$stateCode", gson.toJson(store)).apply()
     }
 

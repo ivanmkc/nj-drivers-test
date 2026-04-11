@@ -4,8 +4,8 @@ import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.drivers.test.theme.DriversTestTheme
-import com.drivers.test.view.screen.StatePickerScreen
 import com.drivers.test.view.screen.HomeScreen
+import com.drivers.test.view.screen.StatePickerScreen
 import com.drivers.test.viewmodel.QuizViewModel
 import org.junit.Rule
 import org.junit.Test
@@ -13,7 +13,6 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 class DriversTestUITest {
-
     @get:Rule
     val composeTestRule = createComposeRule()
 
@@ -156,11 +155,14 @@ class DriversTestUITest {
     @Test
     fun homeScreen_showsPassingInfo() {
         val vm = createTestViewModelWithState()
-        val expected = vm.t("passingScore", mapOf(
-            "pass_pct" to "80",
-            "pass_count" to "40",
-            "test_count" to "50",
-        ))
+        val expected = vm.t(
+            "passingScore",
+            mapOf(
+                "pass_pct" to "80",
+                "pass_count" to "40",
+                "test_count" to "50",
+            ),
+        )
         composeTestRule.setContent {
             DriversTestTheme {
                 HomeScreen(vm = vm)
@@ -203,7 +205,7 @@ class DriversTestUITest {
 
     private fun createTestViewModel(): QuizViewModel {
         return QuizViewModel(
-            androidx.test.core.app.ApplicationProvider.getApplicationContext()
+            androidx.test.core.app.ApplicationProvider.getApplicationContext(),
         )
     }
 
@@ -225,23 +227,40 @@ class DriversTestUITest {
 
     private fun populateTestStates(vm: QuizViewModel) {
         vm.allStates.clear()
-        vm.allStates.addAll(listOf(
-            com.drivers.test.model.StateInfo(
-                code = "nj", name = "New Jersey", agency = "MVC",
-                passingScorePct = 80, testQuestionCount = 50,
-                languages = listOf("en"), totalQuestions = 332, hasQuestions = true,
+        vm.allStates.addAll(
+            listOf(
+                com.drivers.test.model.StateInfo(
+                    code = "nj",
+                    name = "New Jersey",
+                    agency = "MVC",
+                    passingScorePct = 80,
+                    testQuestionCount = 50,
+                    languages = listOf("en"),
+                    totalQuestions = 332,
+                    hasQuestions = true,
+                ),
+                com.drivers.test.model.StateInfo(
+                    code = "ny",
+                    name = "New York",
+                    agency = "DMV",
+                    passingScorePct = 70,
+                    testQuestionCount = 20,
+                    languages = listOf("en"),
+                    totalQuestions = 407,
+                    hasQuestions = true,
+                ),
+                com.drivers.test.model.StateInfo(
+                    code = "ca",
+                    name = "California",
+                    agency = "DMV",
+                    passingScorePct = 83,
+                    testQuestionCount = 36,
+                    languages = listOf("en"),
+                    totalQuestions = 0,
+                    hasQuestions = false,
+                ),
             ),
-            com.drivers.test.model.StateInfo(
-                code = "ny", name = "New York", agency = "DMV",
-                passingScorePct = 70, testQuestionCount = 20,
-                languages = listOf("en"), totalQuestions = 407, hasQuestions = true,
-            ),
-            com.drivers.test.model.StateInfo(
-                code = "ca", name = "California", agency = "DMV",
-                passingScorePct = 83, testQuestionCount = 36,
-                languages = listOf("en"), totalQuestions = 0, hasQuestions = false,
-            ),
-        ))
+        )
         vm.isLoading = false
     }
 }

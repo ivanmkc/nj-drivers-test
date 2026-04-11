@@ -49,12 +49,14 @@ fun ResultsScreen(vm: QuizViewModel) {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Text(
                     "${vm.resultPct}%",
-                    fontSize = 42.sp, fontWeight = FontWeight.Bold,
+                    fontSize = 42.sp,
+                    fontWeight = FontWeight.Bold,
                     color = if (vm.didPass) c.green else c.red,
                 )
                 Text(
                     if (vm.didPass) vm.t("pass") else vm.t("fail"),
-                    fontSize = 14.sp, fontWeight = FontWeight.SemiBold,
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.SemiBold,
                     color = if (vm.didPass) c.green else c.red,
                 )
             }
@@ -64,17 +66,24 @@ fun ResultsScreen(vm: QuizViewModel) {
 
         Text(
             if (vm.didPass) vm.t("congratulations") else vm.t("keepPracticing"),
-            fontSize = 22.sp, fontWeight = FontWeight.Bold,
+            fontSize = 22.sp,
+            fontWeight = FontWeight.Bold,
         )
         Spacer(Modifier.height(8.dp))
         Text(
-            vm.t("resultDetail", mapOf(
-                "correct" to "${vm.correctCount}",
-                "total" to "${vm.questions.size}",
-                "pass_pct" to "${state.passingScorePct}",
-                "agency" to state.agency,
-            )),
-            fontSize = 15.sp, color = c.gray, textAlign = TextAlign.Center, lineHeight = 22.sp,
+            vm.t(
+                "resultDetail",
+                mapOf(
+                    "correct" to "${vm.correctCount}",
+                    "total" to "${vm.questions.size}",
+                    "pass_pct" to "${state.passingScorePct}",
+                    "agency" to state.agency,
+                ),
+            ),
+            fontSize = 15.sp,
+            color = c.gray,
+            textAlign = TextAlign.Center,
+            lineHeight = 22.sp,
         )
 
         Spacer(Modifier.height(24.dp))
@@ -89,7 +98,8 @@ fun ResultsScreen(vm: QuizViewModel) {
         if (vm.wrongResults.isNotEmpty()) {
             Text(
                 vm.t("reviewMissed", mapOf("count" to "${vm.wrongResults.size}")),
-                fontSize = 18.sp, fontWeight = FontWeight.SemiBold,
+                fontSize = 18.sp,
+                fontWeight = FontWeight.SemiBold,
                 modifier = Modifier.fillMaxWidth(),
             )
             Spacer(Modifier.height(12.dp))
@@ -106,7 +116,10 @@ fun ResultsScreen(vm: QuizViewModel) {
 }
 
 @Composable
-private fun ReviewItem(result: SessionResult, vm: QuizViewModel) {
+private fun ReviewItem(
+    result: SessionResult,
+    vm: QuizViewModel,
+) {
     val c = AppTheme.colors
     Row(
         modifier = Modifier
@@ -120,11 +133,13 @@ private fun ReviewItem(result: SessionResult, vm: QuizViewModel) {
             Spacer(Modifier.height(6.dp))
             Text(
                 "${vm.t("yourAnswer")}: ${result.yourAnswer}: ${result.yourAnswerText}",
-                fontSize = 13.sp, color = c.gray,
+                fontSize = 13.sp,
+                color = c.gray,
             )
             Text(
                 "${vm.t("correct")}: ${result.correctAnswer}: ${result.correctAnswerText}",
-                fontSize = 13.sp, color = c.gray,
+                fontSize = 13.sp,
+                color = c.gray,
             )
             Spacer(Modifier.height(6.dp))
             Text(result.explanation, fontSize = 13.sp, color = c.gray, fontStyle = FontStyle.Italic)

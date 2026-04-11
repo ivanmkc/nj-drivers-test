@@ -9,8 +9,14 @@ import com.drivers.test.view.screen.*
 import com.drivers.test.viewmodel.QuizViewModel
 
 @Composable
-fun AppRoot(modifier: Modifier = Modifier, vm: QuizViewModel = viewModel()) {
-    DisposableEffect(Unit) { vm.loadStates(); onDispose {} }
+fun AppRoot(
+    modifier: Modifier = Modifier,
+    vm: QuizViewModel = viewModel(),
+) {
+    DisposableEffect(Unit) {
+        vm.loadStates()
+        onDispose {}
+    }
 
     when (vm.screen) {
         AppScreen.STATE_PICKER -> StatePickerScreen(vm)

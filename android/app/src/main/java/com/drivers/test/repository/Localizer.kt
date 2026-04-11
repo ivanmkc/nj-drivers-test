@@ -27,7 +27,8 @@ class Localizer {
             "missed" to "Missed",
             "congratulations" to "Congratulations!",
             "keepPracticing" to "Keep Practicing!",
-            "resultDetail" to "You got {correct} out of {total} correct. You need {pass_pct}% to pass the actual {agency} test.",
+            "resultDetail" to
+                "You got {correct} out of {total} correct. You need {pass_pct}% to pass the actual {agency} test.",
             "newQuiz" to "New Quiz",
             "reviewMissed" to "Review Missed Questions ({count})",
             "perfectScore" to "Perfect Score!",
@@ -115,7 +116,8 @@ class Localizer {
             "missed" to "Fallada",
             "congratulations" to "¡Felicidades!",
             "keepPracticing" to "¡Sigue Practicando!",
-            "resultDetail" to "Acertaste {correct} de {total}. Necesitas {pass_pct}% para aprobar el examen del {agency}.",
+            "resultDetail" to
+                "Acertaste {correct} de {total}. Necesitas {pass_pct}% para aprobar el examen del {agency}.",
             "newQuiz" to "Nuevo Examen",
             "reviewMissed" to "Revisar Preguntas Falladas ({count})",
             "perfectScore" to "¡Puntuación Perfecta!",
@@ -178,11 +180,16 @@ class Localizer {
             "resetConfirm" to "Cela effacera tout votre historique pour {state_name}. Continuer ?",
             "pass" to "RÉUSSI",
             "fail" to "ÉCHOUÉ",
-            "passingScore" to "Examen réel : {test_count} questions, {pass_count} bonnes réponses pour réussir ({pass_pct}%)",
+            "passingScore" to
+                "Examen réel : {test_count} questions, {pass_count} bonnes réponses pour réussir ({pass_pct}%)",
         ),
     )
 
-    fun t(key: String, lang: String, vars: Map<String, String> = emptyMap()): String {
+    fun t(
+        key: String,
+        lang: String,
+        vars: Map<String, String> = emptyMap(),
+    ): String {
         var s = translations[lang]?.get(key) ?: translations["en"]?.get(key) ?: key
         for ((k, v) in vars) {
             s = s.replace("{$k}", v)

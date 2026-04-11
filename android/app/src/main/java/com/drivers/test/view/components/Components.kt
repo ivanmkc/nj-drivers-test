@@ -4,7 +4,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -42,7 +41,11 @@ fun LanguageBar(
                     .padding(horizontal = 2.dp)
                     .clip(RoundedCornerShape(20.dp))
                     .background(if (isActive) c.blueLight else c.card)
-                    .border(1.5.dp, if (isActive) c.blue else MaterialTheme.colorScheme.outline, RoundedCornerShape(20.dp))
+                    .border(
+                        1.5.dp,
+                        if (isActive) c.blue else MaterialTheme.colorScheme.outline,
+                        RoundedCornerShape(20.dp),
+                    )
                     .clickable { onSwitch(lang) }
                     .padding(horizontal = 12.dp, vertical = 6.dp),
             )
@@ -72,7 +75,10 @@ fun PrimaryButton(
 }
 
 @Composable
-fun SecondaryButton(text: String, onClick: () -> Unit) {
+fun SecondaryButton(
+    text: String,
+    onClick: () -> Unit,
+) {
     val c = AppTheme.colors
     Box(
         modifier = Modifier
@@ -89,7 +95,10 @@ fun SecondaryButton(text: String, onClick: () -> Unit) {
 }
 
 @Composable
-fun StatItem(value: String, label: String) {
+fun StatItem(
+    value: String,
+    label: String,
+) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         Text(value, fontSize = 22.sp, fontWeight = FontWeight.Bold)
         Text(label, fontSize = 11.sp, color = AppTheme.colors.gray, fontWeight = FontWeight.Normal)
@@ -97,7 +106,11 @@ fun StatItem(value: String, label: String) {
 }
 
 @Composable
-fun StatCard(value: String, label: String, valueColor: Color = MaterialTheme.colorScheme.onSurface) {
+fun StatCard(
+    value: String,
+    label: String,
+    valueColor: Color = MaterialTheme.colorScheme.onSurface,
+) {
     val c = AppTheme.colors
     Column(
         modifier = Modifier

@@ -50,21 +50,30 @@ fun HomeScreen(vm: QuizViewModel) {
 
         Text(
             vm.t("title", mapOf("state" to state.code.uppercase(), "state_name" to state.name)),
-            fontSize = 28.sp, fontWeight = FontWeight.Bold, color = c.blue, textAlign = TextAlign.Center,
+            fontSize = 28.sp,
+            fontWeight = FontWeight.Bold,
+            color = c.blue,
+            textAlign = TextAlign.Center,
         )
         Spacer(Modifier.height(8.dp))
         Text(
             vm.t("subtitle", mapOf("state_name" to state.name, "agency" to state.agency)),
-            fontSize = 15.sp, color = c.gray, textAlign = TextAlign.Center,
+            fontSize = 15.sp,
+            color = c.gray,
+            textAlign = TextAlign.Center,
         )
         Spacer(Modifier.height(4.dp))
         Text(
-            vm.t("passingScore", mapOf(
-                "pass_pct" to "${state.passingScorePct}",
-                "pass_count" to "${state.passCount}",
-                "test_count" to "${state.testQuestionCount}",
-            )),
-            fontSize = 13.sp, color = c.gray,
+            vm.t(
+                "passingScore",
+                mapOf(
+                    "pass_pct" to "${state.passingScorePct}",
+                    "pass_count" to "${state.passCount}",
+                    "test_count" to "${state.testQuestionCount}",
+                ),
+            ),
+            fontSize = 13.sp,
+            color = c.gray,
         )
 
         Spacer(Modifier.height(16.dp))
@@ -89,7 +98,9 @@ fun HomeScreen(vm: QuizViewModel) {
                 }
                 Text(
                     vm.t("viewStats"),
-                    fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = c.blue,
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    color = c.blue,
                     modifier = Modifier.clickable { vm.showStats() },
                 )
             }
@@ -99,13 +110,17 @@ fun HomeScreen(vm: QuizViewModel) {
         // Mode selector
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             ModeButton(
-                title = vm.t("modeRandom"), desc = vm.t("modeRandomDesc"), icon = "\uD83C\uDFB2",
+                title = vm.t("modeRandom"),
+                desc = vm.t("modeRandomDesc"),
+                icon = "\uD83C\uDFB2",
                 isActive = vm.quizMode == QuizMode.RANDOM,
                 modifier = Modifier.weight(1f),
             ) { vm.quizMode = QuizMode.RANDOM }
 
             ModeButton(
-                title = vm.t("modeWeak"), desc = vm.t("modeWeakDesc"), icon = "\uD83C\uDFAF",
+                title = vm.t("modeWeak"),
+                desc = vm.t("modeWeakDesc"),
+                icon = "\uD83C\uDFAF",
                 isActive = vm.quizMode == QuizMode.WEAK,
                 badgeCount = vm.weakQuestions().size,
                 modifier = Modifier.weight(1f),
@@ -124,7 +139,8 @@ fun HomeScreen(vm: QuizViewModel) {
                 val isSelected = vm.selectedCount == count
                 Text(
                     text = if (isAll) "All" else "$count",
-                    fontSize = 16.sp, fontWeight = FontWeight.SemiBold,
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.SemiBold,
                     color = if (isSelected) Color.White else c.blue,
                     modifier = Modifier
                         .clip(RoundedCornerShape(12.dp))
@@ -148,7 +164,8 @@ fun HomeScreen(vm: QuizViewModel) {
 
         Text(
             vm.t("changeState"),
-            fontSize = 14.sp, color = c.gray,
+            fontSize = 14.sp,
+            color = c.gray,
             modifier = Modifier.clickable { vm.goStatePicker() }.padding(10.dp),
         )
 
@@ -161,8 +178,11 @@ fun HomeScreen(vm: QuizViewModel) {
 
 @Composable
 private fun ModeButton(
-    title: String, desc: String, icon: String,
-    isActive: Boolean, badgeCount: Int = 0,
+    title: String,
+    desc: String,
+    icon: String,
+    isActive: Boolean,
+    badgeCount: Int = 0,
     modifier: Modifier = Modifier,
     onClick: () -> Unit,
 ) {
@@ -179,12 +199,18 @@ private fun ModeButton(
         Text(icon, fontSize = 20.sp)
         Spacer(Modifier.height(4.dp))
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-            Text(title, fontSize = 14.sp, fontWeight = FontWeight.SemiBold,
-                color = if (isActive) c.blue else MaterialTheme.colorScheme.onSurface)
+            Text(
+                title,
+                fontSize = 14.sp,
+                fontWeight = FontWeight.SemiBold,
+                color = if (isActive) c.blue else MaterialTheme.colorScheme.onSurface,
+            )
             if (badgeCount > 0) {
                 Text(
                     "$badgeCount",
-                    fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color.White,
+                    fontSize = 11.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.White,
                     modifier = Modifier
                         .clip(RoundedCornerShape(10.dp))
                         .background(c.red)
