@@ -38,7 +38,7 @@ def load_questions(state_code: str) -> tuple[list[dict], dict]:
     return data.get("questions", []), config
 
 
-def structural_audit(state_code: str, questions: list[dict]) -> list[str]:
+def structural_audit(_state_code: str, questions: list[dict]) -> list[str]:
     """Check structural validity of questions."""
     issues = []
     seen_ids = set()
@@ -93,7 +93,7 @@ def structural_audit(state_code: str, questions: list[dict]) -> list[str]:
     return issues
 
 
-def duplicate_audit(state_code: str, questions: list[dict]) -> list[str]:
+def duplicate_audit(_state_code: str, questions: list[dict]) -> list[str]:
     """Check for duplicate questions within a state (skips image-based questions)."""
     issues = []
     seen = []
@@ -111,7 +111,7 @@ def duplicate_audit(state_code: str, questions: list[dict]) -> list[str]:
     return issues
 
 
-def content_audit(state_code: str, questions: list[dict], config: dict) -> list[str]:
+def content_audit(_state_code: str, questions: list[dict], _config: dict) -> list[str]:
     """Check question content for common issues."""
     issues = []
 
