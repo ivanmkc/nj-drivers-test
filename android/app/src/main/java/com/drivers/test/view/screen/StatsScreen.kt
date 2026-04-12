@@ -4,7 +4,7 @@ import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -26,6 +26,10 @@ import com.drivers.test.view.components.StatCard
 import com.drivers.test.viewmodel.QuizViewModel
 import kotlin.math.roundToInt
 
+private const val MAX_CHART_ENTRIES = 20
+private const val MAX_WEAK_DISPLAY = 15
+private const val DEFAULT_PASSING_PCT = 70
+
 @Composable
 fun StatsScreen(vm: QuizViewModel) {
     val c = AppTheme.colors
@@ -43,7 +47,12 @@ fun StatsScreen(vm: QuizViewModel) {
             modifier = Modifier.clickable { vm.goHome() },
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            Icon(Icons.Filled.ArrowBack, contentDescription = null, tint = c.blue, modifier = Modifier.size(18.dp))
+            Icon(
+                Icons.AutoMirrored.Filled.ArrowBack,
+                contentDescription = null,
+                tint = c.blue,
+                modifier = Modifier.size(18.dp),
+            )
             Spacer(Modifier.width(6.dp))
             Text(vm.t("back"), fontSize = 15.sp, fontWeight = FontWeight.SemiBold, color = c.blue)
         }
@@ -79,17 +88,17 @@ fun StatsScreen(vm: QuizViewModel) {
             val history = vm.quizHistory()
             if (history.size >= 2) {
                 ScoreChart(
-                    scores = history.takeLast(20).map { it.pct },
-                    passingPct = vm.currentState?.passingScorePct ?: 70,
-                    startIndex = (history.size - minOf(20, history.size)) + 1,
+                    scores = history.takeLast(MAX_CHART_ENTRIES).map { it.pct },
+                    passingPct = vm.currentState?.passingScorePct ?: DEFAULT_PASSING_PCT,
+                    startIndex = (history.size - minOf(MAX_CHART_ENTRIES, history.size)) + 1,
                     modifier = Modifier.fillMaxWidth().height(180.dp),
                 )
             } else {
                 Text(
                     if (history.isEmpty()) {
-                        "Take a quiz to see your progress"
+                        vm.t("statsEmpty")
                     } else {
-                        "Take one more quiz to see the chart"
+                        vm.t("statsOneMore")
                     },
                     fontSize = 14.sp,
                     color = c.gray,
@@ -117,7 +126,7 @@ fun StatsScreen(vm: QuizViewModel) {
         if (weak.isNotEmpty()) {
             Text(vm.t("mostMissed"), fontSize = 15.sp, fontWeight = FontWeight.SemiBold)
             Spacer(Modifier.height(12.dp))
-            weak.take(15).forEach { w ->
+            weak.take(MAX_WEAK_DISPLAY).forEach { w ->
                 Row(
                     modifier = Modifier.fillMaxWidth()
                         .clip(RoundedCornerShape(12.dp))
@@ -164,16 +173,16 @@ fun StatsScreen(vm: QuizViewModel) {
     if (showResetDialog) {
         AlertDialog(
             onDismissRequest = { showResetDialog = false },
-            title = { Text("Reset") },
+            title = { Text(vm.t("resetButton")) },
             text = { Text(vm.t("resetConfirm", mapOf("state_name" to (vm.currentState?.name ?: "")))) },
             confirmButton = {
                 TextButton(onClick = {
                     showResetDialog = false
                     vm.clearData()
-                }) { Text("Reset") }
+                }) { Text(vm.t("resetButton")) }
             },
             dismissButton = {
-                TextButton(onClick = { showResetDialog = false }) { Text("Cancel") }
+                TextButton(onClick = { showResetDialog = false }) { Text(vm.t("cancel")) }
             },
         )
     }

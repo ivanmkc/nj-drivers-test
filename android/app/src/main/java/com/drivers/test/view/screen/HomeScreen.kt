@@ -137,7 +137,7 @@ fun HomeScreen(vm: QuizViewModel) {
                 val isAll = count == state.totalQuestions
                 val isSelected = vm.selectedCount == count
                 Text(
-                    text = if (isAll) "All" else "$count",
+                    text = if (isAll) vm.t("all") else "$count",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.SemiBold,
                     color = if (isSelected) Color.White else c.blue,

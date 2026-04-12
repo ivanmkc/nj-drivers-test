@@ -37,9 +37,9 @@ data class AnswerResponse(
 // Local storage
 
 data class QuestionRecord(
-    var seen: Int = 0,
-    var wrong: Int = 0,
-    var category: String = "",
+    val seen: Int = 0,
+    val wrong: Int = 0,
+    val category: String = "",
 )
 
 data class QuizHistoryEntry(
@@ -51,8 +51,8 @@ data class QuizHistoryEntry(
 )
 
 data class QuizStore(
-    var history: MutableList<QuizHistoryEntry> = mutableListOf(),
-    var questions: MutableMap<String, QuestionRecord> = mutableMapOf(),
+    val history: List<QuizHistoryEntry> = emptyList(),
+    val questions: Map<String, QuestionRecord> = emptyMap(),
 )
 
 // Session

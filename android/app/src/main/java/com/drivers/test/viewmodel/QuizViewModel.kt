@@ -7,13 +7,26 @@ import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
-import com.drivers.test.model.*
+import com.drivers.test.model.AppScreen
+import com.drivers.test.model.QuestionRecord
+import com.drivers.test.model.QuizHistoryEntry
+import com.drivers.test.model.QuizMode
+import com.drivers.test.model.QuizQuestion
+import com.drivers.test.model.QuizStore
+import com.drivers.test.model.SessionResult
+import com.drivers.test.model.StateInfo
+import com.drivers.test.model.WeakQuestion
 import com.drivers.test.repository.ApiClient
 import com.drivers.test.repository.LocalStore
 import com.drivers.test.repository.Localizer
 import kotlin.math.roundToInt
 
 class QuizViewModel(application: Application) : AndroidViewModel(application) {
+    companion object {
+        private const val DEFAULT_QUESTION_COUNT = 50
+        private val QUESTION_COUNT_OPTIONS = listOf(10, 25, 50, 100)
+    }
+
     private val api = ApiClient(application)
     private val storage = LocalStore(application)
     val localizer = Localizer()
@@ -36,7 +49,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
     // Settings
     var quizMode by mutableStateOf(QuizMode.RANDOM)
-    var selectedCount by mutableIntStateOf(50)
+    var selectedCount by mutableIntStateOf(DEFAULT_QUESTION_COUNT)
 
     // Derived state helpers
     private var cachedStore: QuizStore? = null
@@ -85,9 +98,10 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     fun questionsSeen(): Int = store().questions.size
 
     fun countOptions(): List<Int> {
-        val total = currentState?.totalQuestions ?: return listOf(10, 25, 50)
+        val total = currentState?.totalQuestions
+            ?: return QUESTION_COUNT_OPTIONS.filter { it <= DEFAULT_QUESTION_COUNT }
         val counts = mutableListOf<Int>()
-        for (n in listOf(10, 25, 50, 100)) {
+        for (n in QUESTION_COUNT_OPTIONS) {
             if (n <= total) counts.add(n)
         }
         if (!counts.contains(total)) counts.add(total)
@@ -141,7 +155,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
             val saved = states.find { it.code == savedCode && it.hasQuestions }
             if (saved != null) {
                 currentState = saved
-                selectedCount = minOf(50, saved.totalQuestions)
+                selectedCount = minOf(DEFAULT_QUESTION_COUNT, saved.totalQuestions)
                 screen = AppScreen.HOME
             }
         }
@@ -156,7 +170,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         currentState = state
         invalidateStoreCache()
         storage.savedStateCode = state.code
-        selectedCount = minOf(50, state.totalQuestions)
+        selectedCount = minOf(DEFAULT_QUESTION_COUNT, state.totalQuestions)
         quizMode = QuizMode.RANDOM
         screen = AppScreen.HOME
     }
@@ -214,10 +228,13 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
         val s = storage.loadStore(state.code)
         val idStr = q.id.toString()
-        val record = s.questions.getOrPut(idStr) { QuestionRecord(category = q.category) }
-        record.seen++
-        if (!isCorrect) record.wrong++
-        storage.saveStore(s, state.code)
+        val record = s.questions[idStr] ?: QuestionRecord(category = q.category)
+        val updatedRecord = record.copy(
+            seen = record.seen + 1,
+            wrong = if (!isCorrect) record.wrong + 1 else record.wrong,
+        )
+        val updatedStore = s.copy(questions = s.questions + (idStr to updatedRecord))
+        storage.saveStore(updatedStore, state.code)
         invalidateStoreCache()
 
         sessionResults.add(
@@ -249,15 +266,15 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     private fun finishQuiz() {
         val state = currentState ?: return
         val s = storage.loadStore(state.code)
-        s.history.add(
-            QuizHistoryEntry(
+        val updatedStore = s.copy(
+            history = s.history + QuizHistoryEntry(
                 correct = correctCount,
                 total = questions.size,
                 pct = resultPct,
                 mode = quizMode.name.lowercase(),
             ),
         )
-        storage.saveStore(s, state.code)
+        storage.saveStore(updatedStore, state.code)
         invalidateStoreCache()
         screen = AppScreen.RESULTS
     }
