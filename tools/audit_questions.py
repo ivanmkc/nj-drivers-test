@@ -17,6 +17,7 @@ import os
 import sys
 
 import yaml
+from _util import strip_code_fences
 
 TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(TOOLS_DIR)
@@ -42,6 +43,18 @@ def structural_audit(_state_code: str, questions: list[dict]) -> list[str]:
     """Check structural validity of questions."""
     issues = []
     seen_ids = set()
+    valid_cats = {
+        "license_system",
+        "driver_testing",
+        "driver_responsibility",
+        "safe_driving_rules",
+        "defensive_driving",
+        "alcohol_drugs_health",
+        "penalties_and_points",
+        "sharing_the_road",
+        "vehicle_information",
+        "signs_and_signals",
+    }
     for i, q in enumerate(questions):
         qid = q.get("id", f"index-{i}")
         # Required fields
@@ -74,18 +87,6 @@ def structural_audit(_state_code: str, questions: list[dict]) -> list[str]:
         if len(qt) > 500:
             issues.append(f"Q{qid}: question very long ({len(qt)} chars)")
         # Category
-        valid_cats = {
-            "license_system",
-            "driver_testing",
-            "driver_responsibility",
-            "safe_driving_rules",
-            "defensive_driving",
-            "alcohol_drugs_health",
-            "penalties_and_points",
-            "sharing_the_road",
-            "vehicle_information",
-            "signs_and_signals",
-        }
         cat = q.get("category", "")
         if cat and cat not in valid_cats:
             issues.append(f"Q{qid}: unknown category '{cat}'")
@@ -143,11 +144,6 @@ def content_audit(_state_code: str, questions: list[dict], _config: dict) -> lis
         if not explanation or len(str(explanation)) < 10:
             issues.append(f"Q{qid}: missing or very short explanation")
 
-        # Check that question mentions state or is generic enough
-        # (just a warning, not necessarily wrong)
-        if q.get("image"):
-            continue  # sign questions are state-agnostic
-
     return issues
 
 
@@ -187,13 +183,9 @@ Questions to audit:
                 max_output_tokens=4096,
             ),
         )
-        assert response.text is not None, "Empty response from model"
-        text = response.text.strip()
-        if text.startswith("```"):
-            text = text.split("\n", 1)[1]
-            if text.endswith("```"):
-                text = text[: text.rfind("```")]
-            text = text.strip()
+        if response.text is None:
+            raise ValueError("Empty response from model")
+        text = strip_code_fences(response.text)
         found = json.loads(text)
         for item in found:
             issues.append(f"Q{item['id']}: {item['issue']}")
