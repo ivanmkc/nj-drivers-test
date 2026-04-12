@@ -48,6 +48,11 @@ class Localizer {
             "pass" to "PASS",
             "fail" to "FAIL",
             "passingScore" to "Real test: {test_count} questions, {pass_count} correct to pass ({pass_pct}%)",
+            "statsEmpty" to "Take a quiz to see your progress",
+            "statsOneMore" to "Take one more quiz to see the chart",
+            "cancel" to "Cancel",
+            "resetButton" to "Reset",
+            "all" to "All",
         ),
         "ja" to mapOf(
             "appTitle" to "運転免許テスト練習",
@@ -92,6 +97,11 @@ class Localizer {
             "pass" to "合格",
             "fail" to "不合格",
             "passingScore" to "本番: {test_count}問中{pass_count}問正解で合格 ({pass_pct}%)",
+            "statsEmpty" to "クイズを受けて進捗を確認しましょう",
+            "statsOneMore" to "もう1つクイズを受けてグラフを見ましょう",
+            "cancel" to "キャンセル",
+            "resetButton" to "リセット",
+            "all" to "全て",
         ),
         "es" to mapOf(
             "appTitle" to "Práctica de Examen de Conducir",
@@ -137,6 +147,11 @@ class Localizer {
             "pass" to "APROBADO",
             "fail" to "REPROBADO",
             "passingScore" to "Examen real: {test_count} preguntas, {pass_count} correctas para aprobar ({pass_pct}%)",
+            "statsEmpty" to "Toma un examen para ver tu progreso",
+            "statsOneMore" to "Toma un examen más para ver el gráfico",
+            "cancel" to "Cancelar",
+            "resetButton" to "Restablecer",
+            "all" to "Todos",
         ),
         "fr" to mapOf(
             "appTitle" to "Pratique d'examen de conduite",
@@ -182,6 +197,11 @@ class Localizer {
             "fail" to "ÉCHOUÉ",
             "passingScore" to
                 "Examen réel : {test_count} questions, {pass_count} bonnes réponses pour réussir ({pass_pct}%)",
+            "statsEmpty" to "Passez un quiz pour voir votre progression",
+            "statsOneMore" to "Passez un quiz de plus pour voir le graphique",
+            "cancel" to "Annuler",
+            "resetButton" to "Réinitialiser",
+            "all" to "Tout",
         ),
     )
 
