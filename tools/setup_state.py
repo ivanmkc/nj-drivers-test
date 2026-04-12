@@ -14,9 +14,11 @@ import subprocess
 import sys
 
 
-def main():
+def main() -> None:
     if len(sys.argv) < 7:
-        print("Usage: python setup_state.py <code> <name> <agency> <pass_pct> <test_count> <manual_url> [source_desc]")
+        print(
+            "Usage: python setup_state.py <code> <name> <agency> <pass_pct> <test_count> <manual_url> [source_desc]"
+        )
         sys.exit(1)
 
     code = sys.argv[1].lower()
@@ -64,10 +66,11 @@ def main():
             print("Extracting text from PDF...")
             try:
                 import fitz
+
                 doc = fitz.open(pdf_path)
                 text = ""
                 for page in doc:
-                    text += page.get_text() + "\n"
+                    text += str(page.get_text()) + "\n"
                 doc.close()
                 with open(manual_text_path, "w") as f:
                     f.write(text)
@@ -78,7 +81,9 @@ def main():
         else:
             print(f"Text already extracted: {manual_text_path}")
     else:
-        print(f"Manual URL is not a PDF. You'll need to manually extract text to {manual_text_path}")
+        print(
+            f"Manual URL is not a PDF. You'll need to manually extract text to {manual_text_path}"
+        )
         if not os.path.exists(manual_text_path):
             sys.exit(1)
 
@@ -86,18 +91,24 @@ def main():
     questions_path = os.path.join(state_dir, "questions_en.yaml")
     if not os.path.exists(questions_path):
         print(f"\nGenerating questions for {name}...")
-        subprocess.run([
-            sys.executable, os.path.join(base_dir, "tools", "generate_questions.py"),
-            code, manual_text_path
-        ], check=True)
+        subprocess.run(
+            [
+                sys.executable,
+                os.path.join(base_dir, "tools", "generate_questions.py"),
+                code,
+                manual_text_path,
+            ],
+            check=True,
+        )
     else:
         print(f"Questions already exist: {questions_path}")
 
     # Add sign questions
-    print(f"\nAdding sign questions...")
-    subprocess.run([
-        sys.executable, os.path.join(base_dir, "tools", "add_sign_questions.py"), code
-    ], check=True)
+    print("\nAdding sign questions...")
+    subprocess.run(
+        [sys.executable, os.path.join(base_dir, "tools", "add_sign_questions.py"), code],
+        check=True,
+    )
 
     # Translate
     translate_script = os.path.join(base_dir, "tools", "translate.py")

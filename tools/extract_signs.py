@@ -7,6 +7,7 @@ Usage:
 
 import os
 import sys
+
 import fitz  # PyMuPDF
 
 
@@ -57,7 +58,7 @@ def extract_images(pdf_path: str, output_dir: str, min_size: int = 50):
     return extracted
 
 
-def main():
+def main() -> None:
     if len(sys.argv) < 3:
         print("Usage: python extract_signs.py <pdf_path> <output_dir> [--min-size 50]")
         sys.exit(1)

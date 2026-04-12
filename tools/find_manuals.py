@@ -9,6 +9,8 @@ Usage:
 import json
 import os
 import sys
+
+from _util import strip_code_fences
 from google import genai
 
 MODEL = "gemini-2.5-flash"
@@ -72,7 +74,9 @@ ALL_STATES = {
 
 def find_existing():
     """Return set of state codes that already have question data."""
-    base = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "states")
+    base = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "states"
+    )
     existing = set()
     for code in os.listdir(base):
         en_path = os.path.join(base, code, "questions_en.yaml")
@@ -120,17 +124,14 @@ If you cannot find a direct PDF URL for a state, set manual_url to null."""
         ),
     )
 
-    text = response.text.strip()
-    if text.startswith("```"):
-        text = text.split("\n", 1)[1]
-        if text.endswith("```"):
-            text = text[: text.rfind("```")]
-        text = text.strip()
+    if response.text is None:
+        raise ValueError("Empty response from model")
+    text = strip_code_fences(response.text)
 
     return json.loads(text)
 
 
-def main():
+def main() -> None:
     existing = find_existing()
 
     if len(sys.argv) > 1:
@@ -182,7 +183,9 @@ def main():
             count = r.get("test_question_count", 25)
             url = r["manual_url"]
             source = r.get("source_description", f"{name} Driver's Manual")
-            print(f'  python3 tools/setup_state.py {code} "{name}" "{agency}" {pct} {count} "{url}" "{source}"')
+            print(
+                f'  python3 tools/setup_state.py {code} "{name}" "{agency}" {pct} {count} "{url}" "{source}"'
+            )
 
 
 if __name__ == "__main__":

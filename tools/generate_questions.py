@@ -10,7 +10,15 @@ import json
 import os
 import sys
 import time
+
 import yaml
+from _util import (
+    chunk_text,
+    deduplicate,
+    resolve_state_paths,
+    retry_with_backoff,
+    strip_code_fences,
+)
 from google import genai
 
 MODEL = "gemini-3.1-pro-preview"
@@ -44,7 +52,9 @@ Output format - JSON array:
 Categories to use: license_system, driver_testing, driver_responsibility, safe_driving_rules, defensive_driving, alcohol_drugs_health, penalties_and_points, sharing_the_road, vehicle_information, signs_and_signals"""
 
 
-def generate_batch(text_chunk: str, start_id: int, state_name: str, num_questions: int = 15) -> list[dict]:
+def generate_batch(
+    text_chunk: str, start_id: int, state_name: str, num_questions: int = 15
+) -> list[dict]:
     prompt = f"""\
 Generate {num_questions} multiple-choice driver's test questions from this section of the {state_name} driver's manual.
 Start question IDs at {start_id}.
@@ -61,31 +71,13 @@ Manual text:
             max_output_tokens=8192,
         ),
     )
-    text = response.text.strip()
-    if text.startswith("```"):
-        text = text.split("\n", 1)[1]
-        if text.endswith("```"):
-            text = text[: text.rfind("```")]
-        text = text.strip()
+    if response.text is None:
+        raise ValueError("Empty response from model")
+    text = strip_code_fences(response.text)
     return json.loads(text)
 
 
-def chunk_text(text: str, chunk_size: int = 10000, overlap: int = 500) -> list[str]:
-    chunks = []
-    start = 0
-    while start < len(text):
-        end = start + chunk_size
-        if end < len(text):
-            # Try to break at a paragraph boundary
-            newline_pos = text.rfind("\n\n", start + chunk_size - 1000, end + 500)
-            if newline_pos > start:
-                end = newline_pos
-        chunks.append(text[start:end])
-        start = end - overlap
-    return chunks
-
-
-def main():
+def main() -> None:
     if len(sys.argv) < 3:
         print("Usage: python generate_questions.py <state_code> <manual_text_file>")
         sys.exit(1)
@@ -93,9 +85,9 @@ def main():
     state_code = sys.argv[1].lower()
     manual_file = sys.argv[2]
 
-    state_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "states", state_code)
-    config_path = os.path.join(state_dir, "config.json")
-    output_path = os.path.join(state_dir, "questions_en.yaml")
+    paths = resolve_state_paths(state_code)
+    config_path = paths["config_path"]
+    output_path = paths["questions_en_path"]
 
     if not os.path.exists(config_path):
         print(f"Config not found: {config_path}")
@@ -119,42 +111,23 @@ def main():
         batch_num = i + 1
         print(f"  Chunk {batch_num}/{total_chunks}...", end=" ", flush=True)
 
-        for attempt in range(3):
-            try:
-                questions = generate_batch(chunk, next_id, state_name, num_questions=15)
-                # Re-number to avoid gaps
-                for q in questions:
-                    q["id"] = next_id
-                    next_id += 1
-                all_questions.extend(questions)
-                print(f"OK ({len(questions)} questions, total: {len(all_questions)})")
-                break
-            except Exception as e:
-                if attempt < 2:
-                    wait = 2 ** (attempt + 1)
-                    print(f"retry in {wait}s ({e})...", end=" ", flush=True)
-                    time.sleep(wait)
-                else:
-                    print(f"FAILED: {e}")
+        try:
+            questions = retry_with_backoff(
+                lambda ch=chunk, nid=next_id: generate_batch(ch, nid, state_name, num_questions=15)
+            )
+            # Re-number to avoid gaps
+            for q in questions:
+                q["id"] = next_id
+                next_id += 1
+            all_questions.extend(questions)
+            print(f"OK ({len(questions)} questions, total: {len(all_questions)})")
+        except Exception:
+            pass  # retry_with_backoff already printed the failure
 
         if i + 1 < total_chunks:
             time.sleep(1)
 
-    # Deduplicate by question text similarity
-    seen = set()
-    unique = []
-    for q in all_questions:
-        key = q["question"].lower().strip()
-        words = set(key.split())
-        is_dup = False
-        for existing_words in seen:
-            overlap = len(words & existing_words) / max(len(words | existing_words), 1)
-            if overlap > 0.5:
-                is_dup = True
-                break
-        if not is_dup:
-            seen.add(frozenset(words))
-            unique.append(q)
+    unique = deduplicate(all_questions)
 
     # Re-number
     for i, q in enumerate(unique, 1):

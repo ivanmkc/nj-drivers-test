@@ -15,17 +15,20 @@ Usage:
 import json
 import os
 import sys
-import yaml
 
-TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
-ROOT_DIR = os.path.dirname(TOOLS_DIR)
-STATES_DIR = os.path.join(ROOT_DIR, "data", "states")
+import yaml
+from _util import STATES_DIR, resolve_state_paths, strip_code_fences
+
+DUPLICATE_OVERLAP_THRESHOLD = 0.7
+MIN_QUESTION_LENGTH = 10
+MAX_QUESTION_LENGTH = 500
+LLM_AUDIT_SAMPLE_SIZE = 20
 
 
 def load_questions(state_code: str) -> tuple[list[dict], dict]:
-    state_dir = os.path.join(STATES_DIR, state_code)
-    q_path = os.path.join(state_dir, "questions_en.yaml")
-    config_path = os.path.join(state_dir, "config.json")
+    paths = resolve_state_paths(state_code)
+    q_path = paths["questions_en_path"]
+    config_path = paths["config_path"]
     if not os.path.exists(q_path):
         return [], {}
     with open(q_path) as f:
@@ -37,10 +40,22 @@ def load_questions(state_code: str) -> tuple[list[dict], dict]:
     return data.get("questions", []), config
 
 
-def structural_audit(state_code: str, questions: list[dict]) -> list[str]:
+def structural_audit(_state_code: str, questions: list[dict]) -> list[str]:
     """Check structural validity of questions."""
     issues = []
     seen_ids = set()
+    valid_cats = {
+        "license_system",
+        "driver_testing",
+        "driver_responsibility",
+        "safe_driving_rules",
+        "defensive_driving",
+        "alcohol_drugs_health",
+        "penalties_and_points",
+        "sharing_the_road",
+        "vehicle_information",
+        "signs_and_signals",
+    }
     for i, q in enumerate(questions):
         qid = q.get("id", f"index-{i}")
         # Required fields
@@ -68,17 +83,11 @@ def structural_audit(state_code: str, questions: list[dict]) -> list[str]:
         seen_ids.add(qid)
         # Question text length
         qt = q.get("question", "")
-        if len(qt) < 10:
+        if len(qt) < MIN_QUESTION_LENGTH:
             issues.append(f"Q{qid}: question too short ({len(qt)} chars)")
-        if len(qt) > 500:
+        if len(qt) > MAX_QUESTION_LENGTH:
             issues.append(f"Q{qid}: question very long ({len(qt)} chars)")
         # Category
-        valid_cats = {
-            "license_system", "driver_testing", "driver_responsibility",
-            "safe_driving_rules", "defensive_driving", "alcohol_drugs_health",
-            "penalties_and_points", "sharing_the_road", "vehicle_information",
-            "signs_and_signals",
-        }
         cat = q.get("category", "")
         if cat and cat not in valid_cats:
             issues.append(f"Q{qid}: unknown category '{cat}'")
@@ -86,7 +95,7 @@ def structural_audit(state_code: str, questions: list[dict]) -> list[str]:
     return issues
 
 
-def duplicate_audit(state_code: str, questions: list[dict]) -> list[str]:
+def duplicate_audit(_state_code: str, questions: list[dict]) -> list[str]:
     """Check for duplicate questions within a state (skips image-based questions)."""
     issues = []
     seen = []
@@ -97,21 +106,19 @@ def duplicate_audit(state_code: str, questions: list[dict]) -> list[str]:
         words = set(qt.split())
         for idx, existing_words in seen:
             overlap = len(words & existing_words) / max(len(words | existing_words), 1)
-            if overlap > 0.7:
+            if overlap > DUPLICATE_OVERLAP_THRESHOLD:
                 issues.append(f"Q{q['id']}: likely duplicate of Q{idx} (overlap={overlap:.0%})")
                 break
         seen.append((q["id"], frozenset(words)))
     return issues
 
 
-def content_audit(state_code: str, questions: list[dict], config: dict) -> list[str]:
+def content_audit(_state_code: str, questions: list[dict], _config: dict) -> list[str]:
     """Check question content for common issues."""
     issues = []
-    state_name = config.get("name", state_code.upper())
 
     for q in questions:
         qid = q.get("id", "?")
-        qt = q.get("question", "")
         choices = q.get("choices", {})
         answer = q.get("answer", "")
         explanation = q.get("explanation", "")
@@ -126,18 +133,17 @@ def content_audit(state_code: str, questions: list[dict], config: dict) -> list[
         for k, v in choices.items():
             vl = str(v).lower()
             if "all of the above" in vl and k != "D":
-                issues.append(f"Q{qid}: 'all of the above' should typically be choice D, found in {k}")
+                issues.append(
+                    f"Q{qid}: 'all of the above' should typically be choice D, found in {k}"
+                )
             if "none of the above" in vl and k != "D":
-                issues.append(f"Q{qid}: 'none of the above' should typically be choice D, found in {k}")
+                issues.append(
+                    f"Q{qid}: 'none of the above' should typically be choice D, found in {k}"
+                )
 
         # Check explanation exists
         if not explanation or len(str(explanation)) < 10:
             issues.append(f"Q{qid}: missing or very short explanation")
-
-        # Check that question mentions state or is generic enough
-        # (just a warning, not necessarily wrong)
-        if q.get("image"):
-            continue  # sign questions are state-agnostic
 
     return issues
 
@@ -154,7 +160,8 @@ def llm_audit(state_code: str, questions: list[dict], config: dict) -> list[str]
 
     # Sample 20 questions for LLM audit (to keep costs low)
     import random
-    sample = random.sample(questions, min(20, len(questions)))
+
+    sample = random.sample(questions, min(LLM_AUDIT_SAMPLE_SIZE, len(questions)))
 
     prompt = f"""You are auditing driver's test questions for {state_name}.
 For each question below, verify:
@@ -177,12 +184,9 @@ Questions to audit:
                 max_output_tokens=4096,
             ),
         )
-        text = response.text.strip()
-        if text.startswith("```"):
-            text = text.split("\n", 1)[1]
-            if text.endswith("```"):
-                text = text[: text.rfind("```")]
-            text = text.strip()
+        if response.text is None:
+            raise ValueError("Empty response from model")
+        text = strip_code_fences(response.text)
         found = json.loads(text)
         for item in found:
             issues.append(f"Q{item['id']}: {item['issue']}")
@@ -192,15 +196,14 @@ Questions to audit:
     return issues
 
 
-def main():
+def main() -> None:
     use_llm = "--llm" in sys.argv
     state_codes = [a for a in sys.argv[1:] if a != "--llm"]
 
     if not state_codes:
-        state_codes = sorted([
-            d for d in os.listdir(STATES_DIR)
-            if os.path.isdir(os.path.join(STATES_DIR, d))
-        ])
+        state_codes = sorted(
+            [d for d in os.listdir(STATES_DIR) if os.path.isdir(os.path.join(STATES_DIR, d))]
+        )
 
     total_issues = 0
     total_questions = 0
@@ -212,9 +215,9 @@ def main():
             continue
 
         name = config.get("name", code.upper())
-        print(f"\n{'='*60}")
+        print(f"\n{'=' * 60}")
         print(f"{name} ({code.upper()}) — {len(questions)} questions")
-        print(f"{'='*60}")
+        print(f"{'=' * 60}")
         total_questions += len(questions)
 
         # Structural audit
@@ -247,7 +250,7 @@ def main():
         # LLM audit (optional)
         llm_issues = []
         if use_llm:
-            print(f"  Running LLM accuracy audit...")
+            print("  Running LLM accuracy audit...")
             llm_issues = llm_audit(code, questions, config)
             if llm_issues:
                 print(f"  LLM AUDIT ({len(llm_issues)} issues):")
@@ -257,10 +260,12 @@ def main():
         state_issues = len(struct_issues) + len(dup_issues) + len(content_issues) + len(llm_issues)
         total_issues += state_issues
         if state_issues == 0:
-            print(f"  ✓ All checks passed")
+            print("  ✓ All checks passed")
 
-    print(f"\n{'='*60}")
-    print(f"TOTAL: {total_questions} questions across {len(state_codes)} states, {total_issues} issues found")
+    print(f"\n{'=' * 60}")
+    print(
+        f"TOTAL: {total_questions} questions across {len(state_codes)} states, {total_issues} issues found"
+    )
 
 
 if __name__ == "__main__":

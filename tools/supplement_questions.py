@@ -12,7 +12,15 @@ import json
 import os
 import sys
 import time
+
 import yaml
+from _util import (
+    chunk_text,
+    deduplicate,
+    resolve_state_paths,
+    retry_with_backoff,
+    strip_code_fences,
+)
 from google import genai
 
 MODEL = "gemini-2.5-pro"
@@ -47,7 +55,9 @@ Output format - JSON array:
 Categories to use: license_system, driver_testing, driver_responsibility, safe_driving_rules, defensive_driving, alcohol_drugs_health, penalties_and_points, sharing_the_road, vehicle_information, signs_and_signals"""
 
 
-def generate_batch(text_chunk: str, start_id: int, state_name: str, existing_summary: str, num_questions: int = 20) -> list[dict]:
+def generate_batch(
+    text_chunk: str, start_id: int, state_name: str, existing_summary: str, num_questions: int = 20
+) -> list[dict]:
     prompt = f"""\
 Generate {num_questions} NEW and UNIQUE multiple-choice driver's test questions from this section of the {state_name} driver's manual.
 Start question IDs at {start_id}.
@@ -69,27 +79,10 @@ Manual text:
             max_output_tokens=65536,
         ),
     )
-    text = response.text.strip()
-    if text.startswith("```"):
-        text = text.split("\n", 1)[1]
-        if text.endswith("```"):
-            text = text[: text.rfind("```")]
-        text = text.strip()
+    if response.text is None:
+        raise ValueError("Empty response from model")
+    text = strip_code_fences(response.text)
     return json.loads(text)
-
-
-def chunk_text(text: str, chunk_size: int = 8000, overlap: int = 400) -> list[str]:
-    chunks = []
-    start = 0
-    while start < len(text):
-        end = start + chunk_size
-        if end < len(text):
-            newline_pos = text.rfind("\n\n", start + chunk_size - 1000, end + 500)
-            if newline_pos > start:
-                end = newline_pos
-        chunks.append(text[start:end])
-        start = end - overlap
-    return chunks
 
 
 def load_existing(path: str) -> list[dict]:
@@ -108,36 +101,20 @@ def summarize_existing(questions: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def deduplicate(all_questions: list[dict]) -> list[dict]:
-    seen = set()
-    unique = []
-    for q in all_questions:
-        key = q["question"].lower().strip()
-        words = set(key.split())
-        is_dup = False
-        for existing_words in seen:
-            overlap = len(words & existing_words) / max(len(words | existing_words), 1)
-            if overlap > 0.5:
-                is_dup = True
-                break
-        if not is_dup:
-            seen.add(frozenset(words))
-            unique.append(q)
-    return unique
-
-
-def main():
+def main() -> None:
     if len(sys.argv) < 3:
-        print("Usage: python supplement_questions.py <state_code> <manual_text_file> [target_count]")
+        print(
+            "Usage: python supplement_questions.py <state_code> <manual_text_file> [target_count]"
+        )
         sys.exit(1)
 
     state_code = sys.argv[1].lower()
     manual_file = sys.argv[2]
     target_count = int(sys.argv[3]) if len(sys.argv) > 3 else 300
 
-    state_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "states", state_code)
-    config_path = os.path.join(state_dir, "config.json")
-    output_path = os.path.join(state_dir, "questions_en.yaml")
+    paths = resolve_state_paths(state_code)
+    config_path = paths["config_path"]
+    output_path = paths["questions_en_path"]
 
     if not os.path.exists(config_path):
         print(f"Config not found: {config_path}")
@@ -154,14 +131,16 @@ def main():
     print(f"{state_name}: {len(existing)} existing questions, target {target_count}")
 
     if len(existing) >= target_count:
-        print(f"Already at target count, skipping.")
+        print("Already at target count, skipping.")
         return
 
     existing_summary = summarize_existing(existing)
     # Truncate summary if too long (keep last 200 lines for context window)
     summary_lines = existing_summary.split("\n")
     if len(summary_lines) > 200:
-        existing_summary = "\n".join(summary_lines[:200]) + f"\n... and {len(summary_lines) - 200} more"
+        existing_summary = (
+            "\n".join(summary_lines[:200]) + f"\n... and {len(summary_lines) - 200} more"
+        )
 
     chunks = chunk_text(manual_text)
     total_chunks = len(chunks)
@@ -179,29 +158,26 @@ def main():
         qs_per_chunk = min(25, max(15, needed // total_chunks + 5))
         print(f"  Chunk {batch_num}/{total_chunks} ({qs_per_chunk} qs)...", end=" ", flush=True)
 
-        for attempt in range(3):
-            try:
-                questions = generate_batch(chunk, next_id, state_name, existing_summary, num_questions=qs_per_chunk)
-                for q in questions:
-                    q["id"] = next_id
-                    next_id += 1
-                new_questions.extend(questions)
-                print(f"OK ({len(questions)} new, total new: {len(new_questions)})")
-                break
-            except Exception as e:
-                if attempt < 2:
-                    wait = 2 ** (attempt + 1)
-                    print(f"retry in {wait}s ({e})...", end=" ", flush=True)
-                    time.sleep(wait)
-                else:
-                    print(f"FAILED: {e}")
+        try:
+            questions = retry_with_backoff(
+                lambda ch=chunk, nid=next_id, qpc=qs_per_chunk: generate_batch(
+                    ch, nid, state_name, existing_summary, num_questions=qpc
+                )
+            )
+            for q in questions:
+                q["id"] = next_id
+                next_id += 1
+            new_questions.extend(questions)
+            print(f"OK ({len(questions)} new, total new: {len(new_questions)})")
+        except Exception:
+            pass  # retry_with_backoff already printed the failure
 
         if i + 1 < total_chunks:
             time.sleep(1)
 
-    # Merge existing + new, then deduplicate
-    all_questions = existing + new_questions
-    unique = deduplicate(all_questions)
+    # Deduplicate new questions against existing ones, then merge
+    unique_new = deduplicate(new_questions, existing_questions=existing)
+    unique = existing + unique_new
 
     # Re-number
     for i, q in enumerate(unique, 1):
@@ -221,7 +197,10 @@ def main():
     with open(output_path, "w", encoding="utf-8") as f:
         yaml.dump(out_data, f, allow_unicode=True, default_flow_style=False, sort_keys=False)
 
-    print(f"\nDone! {len(existing)} existing + {len(new_questions)} new - {len(existing) + len(new_questions) - len(unique)} dupes = {len(unique)} total")
+    dupes = len(new_questions) - len(unique_new)
+    print(
+        f"\nDone! {len(existing)} existing + {len(new_questions)} new - {dupes} dupes = {len(unique)} total"
+    )
     print(f"Wrote to {output_path}")
 
 
