@@ -12,7 +12,7 @@ class Localizer: ObservableObject {
 
     private var translations: [String: [String: String]] = [:]
 
-    init() {
+    private init() {
         self.currentLang = LocalStore.shared.savedLanguage
         loadTranslations()
     }
@@ -63,6 +63,11 @@ class Localizer: ObservableObject {
                 "pass": "PASS",
                 "fail": "FAIL",
                 "passingScore": "Real test: {test_count} questions, {pass_count} correct to pass ({pass_pct}%)",
+                "statsEmpty": "Take a quiz to see your progress",
+                "statsOneMore": "Take one more quiz to see the chart",
+                "cancel": "Cancel",
+                "resetButton": "Reset",
+                "all": "All",
             ],
             "ja": [
                 "appTitle": "運転免許テスト練習",
@@ -107,6 +112,11 @@ class Localizer: ObservableObject {
                 "pass": "合格",
                 "fail": "不合格",
                 "passingScore": "本番: {test_count}問中{pass_count}問正解で合格 ({pass_pct}%)",
+                "statsEmpty": "クイズを受けて進捗を確認しましょう",
+                "statsOneMore": "もう1つクイズを受けてグラフを見ましょう",
+                "cancel": "キャンセル",
+                "resetButton": "リセット",
+                "all": "全て",
             ],
             "es": [
                 "appTitle": "Práctica de Examen de Conducir",
@@ -151,6 +161,11 @@ class Localizer: ObservableObject {
                 "pass": "APROBADO",
                 "fail": "REPROBADO",
                 "passingScore": "Examen real: {test_count} preguntas, {pass_count} correctas para aprobar ({pass_pct}%)",
+                "statsEmpty": "Toma un examen para ver tu progreso",
+                "statsOneMore": "Toma un examen más para ver el gráfico",
+                "cancel": "Cancelar",
+                "resetButton": "Restablecer",
+                "all": "Todos",
             ],
             "fr": [
                 "appTitle": "Pratique d'examen de conduite",
@@ -195,13 +210,18 @@ class Localizer: ObservableObject {
                 "pass": "RÉUSSI",
                 "fail": "ÉCHOUÉ",
                 "passingScore": "Examen réel : {test_count} questions, {pass_count} bonnes réponses pour réussir ({pass_pct}%)",
+                "statsEmpty": "Passez un test pour voir votre progrès",
+                "statsOneMore": "Passez un test de plus pour voir le graphique",
+                "cancel": "Annuler",
+                "resetButton": "Réinitialiser",
+                "all": "Tout",
             ],
         ]
     }
 
-    func t(_ key: String, vars: [String: String] = [:]) -> String {
+    func localized(_ key: String, substitutions: [String: String] = [:]) -> String {
         var s = translations[currentLang]?[key] ?? translations["en"]?[key] ?? key
-        for (k, v) in vars {
+        for (k, v) in substitutions {
             s = s.replacingOccurrences(of: "{\(k)}", with: v)
         }
         return s

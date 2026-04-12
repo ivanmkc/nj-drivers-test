@@ -14,13 +14,13 @@ struct StatsScreen: View {
                 } label: {
                     HStack(spacing: 6) {
                         Image(systemName: "chevron.left")
-                        Text(localizer.t("back"))
+                        Text(localizer.localized("back"))
                     }
                     .font(.system(size: 15, weight: .semibold))
                     .foregroundColor(AppTheme.blue)
                 }
 
-                Text(localizer.t("yourProgress"))
+                Text(localizer.localized("yourProgress"))
                     .font(.system(size: 22, weight: .bold))
 
                 // Top stats grid
@@ -29,22 +29,22 @@ struct StatsScreen: View {
                     GridItem(.flexible()),
                     GridItem(.flexible()),
                 ], spacing: 10) {
-                    StatCardView(value: "\(vm.quizHistory.count)", label: localizer.t("quizzes"), color: AppTheme.blue)
-                    StatCardView(value: "\(vm.averageScore)%", label: localizer.t("avgScore"), color: AppTheme.green)
-                    StatCardView(value: "\(vm.questionsSeen)", label: localizer.t("qsSeen"), color: .primary)
+                    StatCardView(value: "\(vm.quizHistory.count)", label: localizer.localized("quizzes"), color: AppTheme.blue)
+                    StatCardView(value: "\(vm.averageScore)%", label: localizer.localized("avgScore"), color: AppTheme.green)
+                    StatCardView(value: "\(vm.questionsSeen)", label: localizer.localized("qsSeen"), color: .primary)
                 }
 
                 LazyVGrid(columns: [
                     GridItem(.flexible()),
                     GridItem(.flexible()),
                 ], spacing: 10) {
-                    StatCardView(value: "\(vm.passStreak)", label: localizer.t("passStreak"), color: AppTheme.green)
-                    StatCardView(value: "\(vm.bestScore)%", label: localizer.t("bestScore"), color: .primary)
+                    StatCardView(value: "\(vm.passStreak)", label: localizer.localized("passStreak"), color: AppTheme.green)
+                    StatCardView(value: "\(vm.bestScore)%", label: localizer.localized("bestScore"), color: .primary)
                 }
 
                 // Score history chart
                 VStack(alignment: .leading, spacing: 12) {
-                    Text(localizer.t("scoreHistory"))
+                    Text(localizer.localized("scoreHistory"))
                         .font(.system(size: 15, weight: .semibold))
 
                     if vm.quizHistory.count >= 2 {
@@ -54,7 +54,7 @@ struct StatsScreen: View {
                         )
                         .frame(height: 180)
                     } else {
-                        Text(vm.quizHistory.isEmpty ? "Take a quiz to see your progress" : "Take one more quiz to see the chart")
+                        Text(vm.quizHistory.isEmpty ? localizer.localized("statsEmpty") : localizer.localized("statsOneMore"))
                             .font(.system(size: 14))
                             .foregroundColor(AppTheme.gray)
                             .frame(maxWidth: .infinity)
@@ -62,17 +62,12 @@ struct StatsScreen: View {
                     }
                 }
                 .padding(16)
-                .background(AppTheme.card)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 12)
-                        .stroke(AppTheme.border, lineWidth: 1)
-                )
-                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .cardStyle(borderWidth: 1)
 
                 // Category bars
                 if !vm.categoryStats.isEmpty {
                     VStack(alignment: .leading, spacing: 12) {
-                        Text(localizer.t("accuracyByCategory"))
+                        Text(localizer.localized("accuracyByCategory"))
                             .font(.system(size: 15, weight: .semibold))
 
                         ForEach(vm.categoryStats, id: \.category) { cat in
@@ -85,7 +80,7 @@ struct StatsScreen: View {
                 let weak = vm.weakQuestions
                 if !weak.isEmpty {
                     VStack(alignment: .leading, spacing: 12) {
-                        Text(localizer.t("mostMissed"))
+                        Text(localizer.localized("mostMissed"))
                             .font(.system(size: 15, weight: .semibold))
 
                         ForEach(weak.prefix(15)) { w in
@@ -101,21 +96,16 @@ struct StatsScreen: View {
                 Button {
                     showResetAlert = true
                 } label: {
-                    Text(localizer.t("resetAll"))
+                    Text(localizer.localized("resetAll"))
                         .font(.system(size: 15, weight: .semibold))
                         .foregroundColor(AppTheme.red)
                         .frame(maxWidth: .infinity)
                         .padding(12)
-                        .background(AppTheme.card)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 12)
-                                .stroke(AppTheme.redLight, lineWidth: 2)
-                        )
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .cardStyle(borderColor: AppTheme.redLight)
                 }
-                .alert(localizer.t("resetConfirm", vars: ["state_name": vm.currentState?.name ?? ""]), isPresented: $showResetAlert) {
-                    Button("Cancel", role: .cancel) {}
-                    Button("Reset", role: .destructive) {
+                .alert(localizer.localized("resetConfirm", substitutions: ["state_name": vm.currentState?.name ?? ""]), isPresented: $showResetAlert) {
+                    Button(localizer.localized("cancel"), role: .cancel) {}
+                    Button(localizer.localized("resetButton"), role: .destructive) {
                         vm.clearData()
                     }
                 }
