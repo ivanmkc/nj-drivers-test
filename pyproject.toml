@@ -10,4 +10,5 @@ ignore = ["E501"]  # handled by ruff format; string literals are intentionally l
 [tool.pyright]
 typeCheckingMode = "basic"
 include = ["tools/", "web/"]
+extraPaths = ["tools"]
 pythonVersion = "3.10"
