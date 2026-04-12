@@ -12,6 +12,7 @@ import sys
 import time
 
 import yaml
+from _util import strip_code_fences
 from google import genai
 
 MODEL = "gemini-3.1-pro-preview"
@@ -64,13 +65,9 @@ Manual text:
             max_output_tokens=8192,
         ),
     )
-    assert response.text is not None, "Empty response from model"
-    text = response.text.strip()
-    if text.startswith("```"):
-        text = text.split("\n", 1)[1]
-        if text.endswith("```"):
-            text = text[: text.rfind("```")]
-        text = text.strip()
+    if response.text is None:
+        raise ValueError("Empty response from model")
+    text = strip_code_fences(response.text)
     return json.loads(text)
 
 

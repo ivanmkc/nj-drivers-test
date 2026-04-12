@@ -12,6 +12,7 @@ import sys
 import time
 
 import yaml
+from _util import strip_code_fences
 from google import genai
 
 MODEL = "gemini-3-flash-preview"
@@ -62,13 +63,9 @@ Translate these driving test questions to {lang_name}. Return a JSON array with 
             max_output_tokens=8192,
         ),
     )
-    assert response.text is not None, "Empty response from model"
-    text = response.text.strip()
-    if text.startswith("```"):
-        text = text.split("\n", 1)[1]
-        if text.endswith("```"):
-            text = text[: text.rfind("```")]
-        text = text.strip()
+    if response.text is None:
+        raise ValueError("Empty response from model")
+    text = strip_code_fences(response.text)
     return json.loads(text)
 
 
@@ -101,6 +98,7 @@ def main():
 
     questions = data["questions"]
     translated = []
+    skipped = 0
     batch_size = 10
     total = len(questions)
 
@@ -128,11 +126,18 @@ def main():
                     print(f"retry in {wait}s ({e})...", end=" ", flush=True)
                     time.sleep(wait)
                 else:
-                    print(f"FAILED: {e}")
-                    translated.extend(batch)
+                    print(
+                        f"FAILED: {e} -- "
+                        f"WARNING: skipping {len(batch)} questions "
+                        f"(Q{batch[0]['id']}-Q{batch[-1]['id']})"
+                    )
+                    skipped += len(batch)
 
         if i + batch_size < total:
             time.sleep(1)
+
+    if skipped:
+        print(f"\nWARNING: {skipped}/{total} questions were skipped due to translation failures.")
 
     out_data = {
         "metadata": {
