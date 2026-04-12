@@ -14,7 +14,7 @@ import subprocess
 import sys
 
 
-def main():
+def main() -> None:
     if len(sys.argv) < 7:
         print(
             "Usage: python setup_state.py <code> <name> <agency> <pass_pct> <test_count> <manual_url> [source_desc]"

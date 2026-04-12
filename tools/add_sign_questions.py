@@ -458,7 +458,7 @@ SIGN_QUESTIONS = [
 ]
 
 
-def main():
+def main() -> None:
     if len(sys.argv) < 2:
         print("Usage: python add_sign_questions.py <state_code>")
         sys.exit(1)
