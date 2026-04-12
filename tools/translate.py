@@ -12,7 +12,7 @@ import sys
 import time
 
 import yaml
-from _util import strip_code_fences
+from _util import questions_path, resolve_state_paths, retry_with_backoff, strip_code_fences
 from google import genai
 
 MODEL = "gemini-3-flash-preview"
@@ -69,7 +69,7 @@ Translate these driving test questions to {lang_name}. Return a JSON array with 
     return json.loads(text)
 
 
-def main():
+def main() -> None:
     if len(sys.argv) < 3:
         print("Usage: python translate.py <state_code> <lang_code>")
         print(f"  Languages: {', '.join(LANG_NAMES.keys())}")
@@ -83,11 +83,9 @@ def main():
         print(f"Unknown language '{lang_code}'. Supported: {', '.join(LANG_NAMES.keys())}")
         sys.exit(1)
 
-    state_dir = os.path.join(
-        os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "states", state_code
-    )
-    input_path = os.path.join(state_dir, "questions_en.yaml")
-    output_path = os.path.join(state_dir, f"questions_{lang_code}.yaml")
+    paths = resolve_state_paths(state_code)
+    input_path = paths["questions_en_path"]
+    output_path = questions_path(state_code, lang_code)
 
     if not os.path.exists(input_path):
         print(f"Source file not found: {input_path}")
@@ -114,24 +112,16 @@ def main():
             flush=True,
         )
 
-        for attempt in range(3):
-            try:
-                result = translate_batch(batch, lang_name)
-                translated.extend(result)
-                print(f"OK ({len(result)} questions)")
-                break
-            except Exception as e:
-                if attempt < 2:
-                    wait = 2 ** (attempt + 1)
-                    print(f"retry in {wait}s ({e})...", end=" ", flush=True)
-                    time.sleep(wait)
-                else:
-                    print(
-                        f"FAILED: {e} -- "
-                        f"WARNING: skipping {len(batch)} questions "
-                        f"(Q{batch[0]['id']}-Q{batch[-1]['id']})"
-                    )
-                    skipped += len(batch)
+        try:
+            result = retry_with_backoff(lambda b=batch: translate_batch(b, lang_name))
+            translated.extend(result)
+            print(f"OK ({len(result)} questions)")
+        except Exception as e:
+            print(
+                f"WARNING: skipping {len(batch)} questions "
+                f"(Q{batch[0]['id']}-Q{batch[-1]['id']}): {e}"
+            )
+            skipped += len(batch)
 
         if i + batch_size < total:
             time.sleep(1)

@@ -131,7 +131,7 @@ If you cannot find a direct PDF URL for a state, set manual_url to null."""
     return json.loads(text)
 
 
-def main():
+def main() -> None:
     existing = find_existing()
 
     if len(sys.argv) > 1:

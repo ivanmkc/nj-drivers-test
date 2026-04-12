@@ -17,17 +17,18 @@ import os
 import sys
 
 import yaml
-from _util import strip_code_fences
+from _util import STATES_DIR, resolve_state_paths, strip_code_fences
 
-TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
-ROOT_DIR = os.path.dirname(TOOLS_DIR)
-STATES_DIR = os.path.join(ROOT_DIR, "data", "states")
+DUPLICATE_OVERLAP_THRESHOLD = 0.7
+MIN_QUESTION_LENGTH = 10
+MAX_QUESTION_LENGTH = 500
+LLM_AUDIT_SAMPLE_SIZE = 20
 
 
 def load_questions(state_code: str) -> tuple[list[dict], dict]:
-    state_dir = os.path.join(STATES_DIR, state_code)
-    q_path = os.path.join(state_dir, "questions_en.yaml")
-    config_path = os.path.join(state_dir, "config.json")
+    paths = resolve_state_paths(state_code)
+    q_path = paths["questions_en_path"]
+    config_path = paths["config_path"]
     if not os.path.exists(q_path):
         return [], {}
     with open(q_path) as f:
@@ -82,9 +83,9 @@ def structural_audit(_state_code: str, questions: list[dict]) -> list[str]:
         seen_ids.add(qid)
         # Question text length
         qt = q.get("question", "")
-        if len(qt) < 10:
+        if len(qt) < MIN_QUESTION_LENGTH:
             issues.append(f"Q{qid}: question too short ({len(qt)} chars)")
-        if len(qt) > 500:
+        if len(qt) > MAX_QUESTION_LENGTH:
             issues.append(f"Q{qid}: question very long ({len(qt)} chars)")
         # Category
         cat = q.get("category", "")
@@ -105,7 +106,7 @@ def duplicate_audit(_state_code: str, questions: list[dict]) -> list[str]:
         words = set(qt.split())
         for idx, existing_words in seen:
             overlap = len(words & existing_words) / max(len(words | existing_words), 1)
-            if overlap > 0.7:
+            if overlap > DUPLICATE_OVERLAP_THRESHOLD:
                 issues.append(f"Q{q['id']}: likely duplicate of Q{idx} (overlap={overlap:.0%})")
                 break
         seen.append((q["id"], frozenset(words)))
@@ -160,7 +161,7 @@ def llm_audit(state_code: str, questions: list[dict], config: dict) -> list[str]
     # Sample 20 questions for LLM audit (to keep costs low)
     import random
 
-    sample = random.sample(questions, min(20, len(questions)))
+    sample = random.sample(questions, min(LLM_AUDIT_SAMPLE_SIZE, len(questions)))
 
     prompt = f"""You are auditing driver's test questions for {state_name}.
 For each question below, verify:
@@ -195,7 +196,7 @@ Questions to audit:
     return issues
 
 
-def main():
+def main() -> None:
     use_llm = "--llm" in sys.argv
     state_codes = [a for a in sys.argv[1:] if a != "--llm"]
 
