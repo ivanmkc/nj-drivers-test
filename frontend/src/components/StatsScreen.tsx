@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import type { StateSummary } from '../types';
 import { t } from '../i18n';
 import { useStore } from '../hooks/useStore';
@@ -11,7 +11,7 @@ interface StatsScreenProps {
 }
 
 export default function StatsScreen({ state, store, onBack }: StatsScreenProps) {
-  const storeData = store.load();
+  const [storeData] = useState(() => store.load());
   const history = storeData.history;
 
   const avg = history.length

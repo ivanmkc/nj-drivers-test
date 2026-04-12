@@ -38,16 +38,24 @@ export default function App() {
   const [selectedCount, setSelectedCount] = useState(50);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIdx, setCurrentIdx] = useState(0);
-  const [correctCount, setCorrectCount] = useState(0);
-  const [wrongCount, setWrongCount] = useState(0);
   const [sessionResults, setSessionResults] = useState<SessionResult[]>([]);
+  const [error, setError] = useState<string | null>(null);
+
+  const correctCount = sessionResults.filter((r) => r.correct).length;
+  const wrongCount = sessionResults.filter((r) => !r.correct).length;
 
   const store = useStore(currentState?.code ?? null);
 
   // Load bundle and i18n
   useEffect(() => {
-    Promise.all([loadI18n(BASE), fetch(`${BASE}questions_bundle.json`).then((r) => r.json())]).then(
-      ([, bundleData]) => {
+    Promise.all([
+      loadI18n(BASE),
+      fetch(`${BASE}questions_bundle.json`).then((r) => {
+        if (!r.ok) throw new Error(`Failed to load questions: ${r.status}`);
+        return r.json();
+      }),
+    ])
+      .then(([, bundleData]) => {
         setBundle(bundleData);
         const states: StateSummary[] = bundleData.states.map((s: StateConfig) => ({
           code: s.code,
@@ -70,8 +78,10 @@ export default function App() {
           }
         }
         setScreen('state-picker');
-      },
-    );
+      })
+      .catch((err) => {
+        setError(err instanceof Error ? err.message : 'Failed to load application data');
+      });
   }, []);
 
   const switchLang = useCallback((newLang: string) => {
@@ -121,8 +131,6 @@ export default function App() {
 
     setQuestions(qs);
     setCurrentIdx(0);
-    setCorrectCount(0);
-    setWrongCount(0);
     setSessionResults([]);
     setScreen('quiz');
   }, [currentState, lang, quizMode, selectedCount, getQuestions, store]);
@@ -130,8 +138,6 @@ export default function App() {
   const recordAnswer = useCallback(
     (result: SessionResult, isCorrect: boolean) => {
       setSessionResults((prev) => [...prev, result]);
-      if (isCorrect) setCorrectCount((c) => c + 1);
-      else setWrongCount((c) => c + 1);
 
       const storeData = store.load();
       const qId = String(result.id);
@@ -163,6 +169,21 @@ export default function App() {
     setScreen('start');
     setQuizMode('random');
   }, []);
+
+  if (error) {
+    return (
+      <div className="max-w-lg mx-auto px-4 py-20 text-center">
+        <div className="text-red-600 text-lg font-semibold mb-2">Failed to load</div>
+        <div className="text-gray-600 text-sm mb-4">{error}</div>
+        <button
+          onClick={() => window.location.reload()}
+          className="px-6 py-2 bg-blue-600 text-white rounded-xl text-sm font-semibold cursor-pointer hover:bg-blue-700 transition-colors"
+        >
+          Retry
+        </button>
+      </div>
+    );
+  }
 
   if (screen === 'loading') return <LoadingScreen />;
 

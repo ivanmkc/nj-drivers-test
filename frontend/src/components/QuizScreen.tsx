@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import type { Question, SessionResult } from '../types';
 import { t } from '../i18n';
 import { useStore } from '../hooks/useStore';
@@ -35,7 +35,10 @@ export default function QuizScreen({
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [currentIdx]);
 
-  const storeData = store.load();
+  // Reload store data when the question changes (currentIdx is intentionally
+  // included to bust the memo after each answer is persisted via store.save).
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const storeData = useMemo(() => store.load(), [store, currentIdx]);
   const qStats = storeData.questions[String(question.id)];
   const missRate =
     qStats?.wrong && qStats.seen ? Math.round((qStats.wrong / qStats.seen) * 100) : 0;

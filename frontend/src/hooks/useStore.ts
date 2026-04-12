@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useMemo } from 'react';
 import type { QuizStore } from '../types';
 
 export function useStore(stateCode: string | null) {
@@ -26,5 +26,5 @@ export function useStore(stateCode: string | null) {
     if (key) localStorage.removeItem(key);
   }, [key]);
 
-  return { load, save, clear };
+  return useMemo(() => ({ load, save, clear }), [load, save, clear]);
 }

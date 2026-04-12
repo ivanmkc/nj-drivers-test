@@ -29,6 +29,7 @@ export function getLangLabel(lang: string) {
 
 export async function loadI18n(basePath: string) {
   const res = await fetch(`${basePath}i18n.json`);
+  if (!res.ok) throw new Error(`Failed to load i18n: ${res.status}`);
   i18nData = await res.json();
 }
 
