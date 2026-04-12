@@ -2,6 +2,8 @@ import { useState, useEffect, useMemo } from 'react';
 import type { StateSummary, QuizMode } from '../types';
 import { t } from '../i18n';
 import { useStore } from '../hooks/useStore';
+import { calcPassStreak, calcAverageScore } from '../utils';
+import { QUESTION_COUNT_OPTIONS, DEFAULT_QUESTION_COUNT } from '../constants';
 import LangBar from './LangBar';
 
 interface StartScreenProps {
@@ -40,23 +42,17 @@ export default function StartScreen({
 
   const counts = useMemo(() => {
     const total = state.total_questions;
-    const c = [10, 25, 50, 100].filter((n) => n <= total);
+    const c = QUESTION_COUNT_OPTIONS.filter((n) => n <= total);
     if (!c.includes(total)) c.push(total);
     return c;
   }, [state.total_questions]);
 
   useEffect(() => {
-    onSetCount(Math.min(50, state.total_questions));
+    onSetCount(Math.min(DEFAULT_QUESTION_COUNT, state.total_questions));
   }, [state.total_questions, onSetCount]);
 
-  const avg = history.length
-    ? Math.round(history.reduce((s, r) => s + r.pct, 0) / history.length)
-    : 0;
-  let streak = 0;
-  for (let i = history.length - 1; i >= 0; i--) {
-    if (history[i].pct >= state.passing_score_pct) streak++;
-    else break;
-  }
+  const avg = calcAverageScore(history);
+  const streak = calcPassStreak(history, state.passing_score_pct);
 
   const startDisabled = quizMode === 'weak' && weakCount === 0;
 

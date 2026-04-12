@@ -50,7 +50,7 @@ export default function StatePicker({
       .filter((c) => c !== 'us')
       .sort(),
   ];
-  let totalShown = 0;
+  const totalShown = order.reduce((sum, country) => sum + (groups[country]?.length ?? 0), 0);
 
   return (
     <>
@@ -85,7 +85,6 @@ export default function StatePicker({
         {order.map((country) => {
           const countryStates = groups[country];
           if (!countryStates?.length) return null;
-          totalShown += countryStates.length;
           const info = COUNTRIES[country] || { name: country.toUpperCase(), flag: '' };
           return (
             <div key={country} className="mb-5">

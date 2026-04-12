@@ -2,6 +2,8 @@ import { useState, useMemo } from 'react';
 import type { StateSummary } from '../types';
 import { t } from '../i18n';
 import { useStore } from '../hooks/useStore';
+import { calcPassStreak, calcAverageScore } from '../utils';
+import { MAX_WEAK_DISPLAY, GOOD_ACCURACY_PCT, FAIR_ACCURACY_PCT } from '../constants';
 import ScoreChart from './ScoreChart';
 
 interface StatsScreenProps {
@@ -14,17 +16,10 @@ export default function StatsScreen({ state, store, onBack }: StatsScreenProps) 
   const [storeData] = useState(() => store.load());
   const history = storeData.history;
 
-  const avg = history.length
-    ? Math.round(history.reduce((s, r) => s + r.pct, 0) / history.length)
-    : 0;
+  const avg = calcAverageScore(history);
   const best = history.length ? Math.max(...history.map((r) => r.pct)) : 0;
   const seen = Object.keys(storeData.questions).length;
-
-  let streak = 0;
-  for (let i = history.length - 1; i >= 0; i--) {
-    if (history[i].pct >= state.passing_score_pct) streak++;
-    else break;
-  }
+  const streak = calcPassStreak(history, state.passing_score_pct);
 
   const catStats = useMemo(() => {
     const stats: Record<string, { seen: number; correct: number }> = {};
@@ -121,7 +116,12 @@ export default function StatsScreen({ state, store, onBack }: StatsScreenProps) 
           <h4 className="text-sm font-semibold mb-3">{t('accuracyByCategory')}</h4>
           {catStats.map(([cat, data]) => {
             const pct = Math.round((data.correct / data.seen) * 100);
-            const color = pct >= 80 ? '#16a34a' : pct >= 60 ? '#ea580c' : '#dc2626';
+            const color =
+              pct >= GOOD_ACCURACY_PCT
+                ? '#16a34a'
+                : pct >= FAIR_ACCURACY_PCT
+                  ? '#ea580c'
+                  : '#dc2626';
             return (
               <div key={cat} className="flex items-center gap-2.5 mb-2 text-xs">
                 <span className="w-28 shrink-0 capitalize truncate">{cat.replace(/_/g, ' ')}</span>
@@ -143,7 +143,7 @@ export default function StatsScreen({ state, store, onBack }: StatsScreenProps) 
       {weakIds.length > 0 && (
         <div className="mb-6">
           <h4 className="text-sm font-semibold mb-3">{t('mostMissed')}</h4>
-          {weakIds.slice(0, 15).map((w) => (
+          {weakIds.slice(0, MAX_WEAK_DISPLAY).map((w) => (
             <div
               key={w.id}
               className="bg-white rounded-xl py-3 px-3.5 mb-2 border border-gray-200 border-l-4 border-l-orange-500"
