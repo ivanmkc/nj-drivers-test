@@ -146,7 +146,7 @@ fun StatsScreen(vm: QuizViewModel) {
         }
 
         // Reset
-        Divider()
+        HorizontalDivider()
         Spacer(Modifier.height(20.dp))
         Box(
             modifier = Modifier.fillMaxWidth()

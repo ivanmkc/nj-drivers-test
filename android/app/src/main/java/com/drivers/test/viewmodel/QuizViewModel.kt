@@ -21,8 +21,6 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     var screen by mutableStateOf(AppScreen.STATE_PICKER)
     var allStates = mutableStateListOf<StateInfo>()
     var currentState by mutableStateOf<StateInfo?>(null)
-    var isLoading by mutableStateOf(false)
-    var errorMessage by mutableStateOf<String?>(null)
     var currentLang by mutableStateOf(storage.savedLanguage)
 
     // Quiz state
@@ -41,9 +39,23 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     var selectedCount by mutableIntStateOf(50)
 
     // Derived state helpers
+    private var cachedStore: QuizStore? = null
+    private var cachedStoreCode: String? = null
+
     private fun store(): QuizStore {
         val state = currentState ?: return QuizStore()
-        return storage.loadStore(state.code)
+        if (cachedStoreCode == state.code) {
+            cachedStore?.let { return it }
+        }
+        val loaded = storage.loadStore(state.code)
+        cachedStore = loaded
+        cachedStoreCode = state.code
+        return loaded
+    }
+
+    private fun invalidateStoreCache() {
+        cachedStore = null
+        cachedStoreCode = null
     }
 
     fun weakQuestions(): List<WeakQuestion> {
@@ -142,6 +154,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
     fun selectState(state: StateInfo) {
         currentState = state
+        invalidateStoreCache()
         storage.savedStateCode = state.code
         selectedCount = minOf(50, state.totalQuestions)
         quizMode = QuizMode.RANDOM
@@ -205,6 +218,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         record.seen++
         if (!isCorrect) record.wrong++
         storage.saveStore(s, state.code)
+        invalidateStoreCache()
 
         sessionResults.add(
             SessionResult(
@@ -244,6 +258,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
             ),
         )
         storage.saveStore(s, state.code)
+        invalidateStoreCache()
         screen = AppScreen.RESULTS
     }
 

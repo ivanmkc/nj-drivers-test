@@ -167,6 +167,8 @@ fun QuizScreen(vm: QuizViewModel) {
     }
 }
 
+private data class ChoiceColors(val bg: Color, val border: Color, val letterBg: Color, val letterFg: Color)
+
 private enum class ChoiceState { NORMAL, CORRECT, WRONG, DISABLED }
 
 private fun choiceState(
@@ -190,10 +192,10 @@ private fun ChoiceButton(
 ) {
     val c = AppTheme.colors
     val (bg, borderColor, letterBg, letterFg) = when (state) {
-        ChoiceState.NORMAL -> listOf(c.card, MaterialTheme.colorScheme.outline, c.grayLight, c.gray)
-        ChoiceState.CORRECT -> listOf(c.greenLight, c.green, c.green, Color.White)
-        ChoiceState.WRONG -> listOf(c.redLight, c.red, c.red, Color.White)
-        ChoiceState.DISABLED -> listOf(c.card, MaterialTheme.colorScheme.outline, c.grayLight, c.gray)
+        ChoiceState.NORMAL -> ChoiceColors(c.card, MaterialTheme.colorScheme.outline, c.grayLight, c.gray)
+        ChoiceState.CORRECT -> ChoiceColors(c.greenLight, c.green, c.green, Color.White)
+        ChoiceState.WRONG -> ChoiceColors(c.redLight, c.red, c.red, Color.White)
+        ChoiceState.DISABLED -> ChoiceColors(c.card, MaterialTheme.colorScheme.outline, c.grayLight, c.gray)
     }
 
     Row(
