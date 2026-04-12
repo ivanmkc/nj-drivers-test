@@ -21,7 +21,7 @@ class ApiClient {
 
     private var bundle: QuestionBundle?
 
-    init() {
+    private init() {
         loadBundle()
     }
 

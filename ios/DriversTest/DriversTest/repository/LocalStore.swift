@@ -2,6 +2,7 @@ import Foundation
 
 class LocalStore {
     static let shared = LocalStore()
+    private init() {}
     private let defaults = UserDefaults.standard
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()

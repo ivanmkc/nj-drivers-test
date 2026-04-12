@@ -10,14 +10,14 @@ struct HomeScreen: View {
                 LanguageBarView(localizer: localizer, availableLangs: vm.currentState?.languages)
                     .padding(.bottom, 4)
 
-                Text(localizer.t("title", vars: [
+                Text(localizer.localized("title", substitutions: [
                     "state": vm.currentState?.code.uppercased() ?? "",
                     "state_name": vm.currentState?.name ?? "",
                 ]))
                 .font(.system(size: 28, weight: .bold))
                 .foregroundColor(AppTheme.blue)
 
-                Text(localizer.t("subtitle", vars: [
+                Text(localizer.localized("subtitle", substitutions: [
                     "state_name": vm.currentState?.name ?? "",
                     "agency": vm.currentState?.agency ?? "",
                 ]))
@@ -25,7 +25,7 @@ struct HomeScreen: View {
                 .foregroundColor(AppTheme.gray)
 
                 if let state = vm.currentState {
-                    Text(localizer.t("passingScore", vars: [
+                    Text(localizer.localized("passingScore", substitutions: [
                         "pass_pct": "\(state.passingScorePct)",
                         "pass_count": "\(state.passCount)",
                         "test_count": "\(state.testQuestionCount)",
@@ -42,15 +42,15 @@ struct HomeScreen: View {
                 // Mode selector
                 HStack(spacing: 8) {
                     ModeButton(
-                        title: localizer.t("modeRandom"),
-                        desc: localizer.t("modeRandomDesc"),
+                        title: localizer.localized("modeRandom"),
+                        desc: localizer.localized("modeRandomDesc"),
                         icon: "\u{1F3B2}",
                         isActive: vm.quizMode == .random
                     ) { vm.quizMode = .random }
 
                     ModeButton(
-                        title: localizer.t("modeWeak"),
-                        desc: localizer.t("modeWeakDesc"),
+                        title: localizer.localized("modeWeak"),
+                        desc: localizer.localized("modeWeakDesc"),
                         icon: "\u{1F3AF}",
                         isActive: vm.quizMode == .weak,
                         badgeCount: vm.weakQuestions.count
@@ -58,7 +58,7 @@ struct HomeScreen: View {
                 }
 
                 // Count selector
-                Text(localizer.t("numQuestions"))
+                Text(localizer.localized("numQuestions"))
                     .font(.system(size: 15, weight: .semibold))
 
                 HStack(spacing: 8) {
@@ -67,17 +67,13 @@ struct HomeScreen: View {
                         Button {
                             vm.selectedCount = count
                         } label: {
-                            Text(isAll ? "All" : "\(count)")
+                            Text(isAll ? localizer.localized("all") : "\(count)")
                                 .font(.system(size: 16, weight: .semibold))
                                 .padding(.horizontal, 20)
                                 .padding(.vertical, 10)
                                 .foregroundColor(vm.selectedCount == count ? .white : AppTheme.blue)
                                 .background(vm.selectedCount == count ? AppTheme.blue : AppTheme.card)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .stroke(AppTheme.blue, lineWidth: 2)
-                                )
-                                .clipShape(RoundedRectangle(cornerRadius: 12))
+                                .cardStyle(borderColor: AppTheme.blue)
                         }
                     }
                 }
@@ -87,7 +83,7 @@ struct HomeScreen: View {
                 Button {
                     vm.startQuiz()
                 } label: {
-                    Text(weakEmpty ? localizer.t("noWeakSpots") : localizer.t("startQuiz"))
+                    Text(weakEmpty ? localizer.localized("noWeakSpots") : localizer.localized("startQuiz"))
                         .font(.system(size: 18, weight: .semibold))
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
@@ -101,7 +97,7 @@ struct HomeScreen: View {
                 Button {
                     vm.goStatePicker()
                 } label: {
-                    Text(localizer.t("changeState"))
+                    Text(localizer.localized("changeState"))
                         .font(.system(size: 14))
                         .foregroundColor(AppTheme.gray)
                 }

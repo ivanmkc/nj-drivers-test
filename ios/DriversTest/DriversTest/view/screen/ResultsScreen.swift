@@ -17,7 +17,7 @@ struct ResultsScreen: View {
                         Text("\(vm.resultPct)%")
                             .font(.system(size: 42, weight: .bold))
                             .foregroundColor(vm.didPass ? AppTheme.green : AppTheme.red)
-                        Text(vm.didPass ? localizer.t("pass") : localizer.t("fail"))
+                        Text(vm.didPass ? localizer.localized("pass") : localizer.localized("fail"))
                             .font(.system(size: 14, weight: .semibold))
                             .foregroundColor(vm.didPass ? AppTheme.green : AppTheme.red)
                             .textCase(.uppercase)
@@ -25,11 +25,11 @@ struct ResultsScreen: View {
                 }
                 .padding(.top, 24)
 
-                Text(vm.didPass ? localizer.t("congratulations") : localizer.t("keepPracticing"))
+                Text(vm.didPass ? localizer.localized("congratulations") : localizer.localized("keepPracticing"))
                     .font(.system(size: 22, weight: .bold))
 
                 if let state = vm.currentState {
-                    Text(localizer.t("resultDetail", vars: [
+                    Text(localizer.localized("resultDetail", substitutions: [
                         "correct": "\(vm.correctCount)",
                         "total": "\(vm.questions.count)",
                         "pass_pct": "\(state.passingScorePct)",
@@ -45,7 +45,7 @@ struct ResultsScreen: View {
                 Button {
                     vm.goHome()
                 } label: {
-                    Text(localizer.t("newQuiz"))
+                    Text(localizer.localized("newQuiz"))
                         .font(.system(size: 18, weight: .semibold))
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
@@ -57,23 +57,18 @@ struct ResultsScreen: View {
                 Button {
                     vm.showStats()
                 } label: {
-                    Text(localizer.t("viewStats"))
+                    Text(localizer.localized("viewStats"))
                         .font(.system(size: 18, weight: .semibold))
                         .foregroundColor(AppTheme.blue)
                         .frame(maxWidth: .infinity)
                         .padding(16)
-                        .background(AppTheme.card)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 12)
-                                .stroke(AppTheme.blue, lineWidth: 2)
-                        )
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .cardStyle(borderColor: AppTheme.blue)
                 }
 
                 // Review section
                 if !vm.wrongResults.isEmpty {
                     VStack(alignment: .leading, spacing: 12) {
-                        Text(localizer.t("reviewMissed", vars: ["count": "\(vm.wrongResults.count)"]))
+                        Text(localizer.localized("reviewMissed", substitutions: ["count": "\(vm.wrongResults.count)"]))
                             .font(.system(size: 18, weight: .semibold))
 
                         ForEach(vm.wrongResults, id: \.id) { result in
@@ -84,9 +79,9 @@ struct ResultsScreen: View {
                     .padding(.top, 8)
                 } else {
                     VStack(spacing: 8) {
-                        Text(localizer.t("perfectScore"))
+                        Text(localizer.localized("perfectScore"))
                             .font(.system(size: 18, weight: .semibold))
-                        Text(localizer.t("perfectMsg"))
+                        Text(localizer.localized("perfectMsg"))
                             .font(.system(size: 15))
                             .foregroundColor(AppTheme.gray)
                     }
