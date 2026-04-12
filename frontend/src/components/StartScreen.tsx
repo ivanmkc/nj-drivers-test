@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import type { StateSummary, QuizMode } from '../types';
 import { t } from '../i18n';
 import { useStore } from '../hooks/useStore';
@@ -31,7 +31,7 @@ export default function StartScreen({
   onShowStats,
   onSwitchLang,
 }: StartScreenProps) {
-  const storeData = store.load();
+  const [storeData] = useState(() => store.load());
   const history = storeData.history;
 
   const weakCount = useMemo(() => {

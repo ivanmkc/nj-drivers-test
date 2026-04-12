@@ -41,7 +41,7 @@ export interface QuizResult {
   correct: number;
   total: number;
   pct: number;
-  mode: string;
+  mode: QuizMode;
 }
 
 export interface QuestionStats {
