@@ -12,10 +12,6 @@ enum AppScreen {
 
 // MARK: - API Response Models
 
-struct StatesResponse: Codable {
-    let states: [StateInfo]
-}
-
 struct StateInfo: Codable, Identifiable {
     let code: String
     let name: String
@@ -39,11 +35,6 @@ struct StateInfo: Codable, Identifiable {
         case totalQuestions = "total_questions"
         case hasQuestions = "has_questions"
     }
-}
-
-struct QuizResponse: Codable {
-    let questions: [QuizQuestion]
-    let total: Int
 }
 
 struct QuizQuestion: Codable, Identifiable {

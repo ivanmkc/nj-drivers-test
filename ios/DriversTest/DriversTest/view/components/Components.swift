@@ -406,7 +406,7 @@ struct ScoreChartView: View {
             }
 
             // Line
-            if points.count >= 2 {
+            if points.count >= 2, let lastPoint = points.last, let firstPoint = points.first {
                 var linePath = Path()
                 linePath.move(to: points[0])
                 for p in points.dropFirst() { linePath.addLine(to: p) }
@@ -414,8 +414,8 @@ struct ScoreChartView: View {
 
                 // Fill
                 var fillPath = linePath
-                fillPath.addLine(to: CGPoint(x: points.last!.x, y: pad.top + plotH))
-                fillPath.addLine(to: CGPoint(x: points.first!.x, y: pad.top + plotH))
+                fillPath.addLine(to: CGPoint(x: lastPoint.x, y: pad.top + plotH))
+                fillPath.addLine(to: CGPoint(x: firstPoint.x, y: pad.top + plotH))
                 fillPath.closeSubpath()
 
                 let gradient = Gradient(colors: [AppTheme.blue.opacity(0.2), AppTheme.blue.opacity(0.02)])
