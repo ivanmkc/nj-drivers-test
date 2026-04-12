@@ -55,22 +55,9 @@ fun StatePickerScreen(vm: QuizViewModel) {
         )
         Spacer(Modifier.height(24.dp))
 
-        if (vm.isLoading) {
-            CircularProgressIndicator(modifier = Modifier.align(Alignment.CenterHorizontally).padding(top = 40.dp))
-        } else if (vm.errorMessage != null) {
-            Column(
-                modifier = Modifier.fillMaxWidth().padding(top = 40.dp),
-                horizontalAlignment = Alignment.CenterHorizontally,
-            ) {
-                Text(vm.errorMessage.orEmpty(), color = c.red, textAlign = TextAlign.Center)
-                Spacer(Modifier.height(12.dp))
-                Button(onClick = { vm.loadStates() }) { Text("Retry") }
-            }
-        } else {
-            vm.allStates.forEach { state ->
-                StateCard(state, vm)
-                Spacer(Modifier.height(10.dp))
-            }
+        vm.allStates.forEach { state ->
+            StateCard(state, vm)
+            Spacer(Modifier.height(10.dp))
         }
     }
 }

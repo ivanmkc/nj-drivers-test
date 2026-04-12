@@ -5,8 +5,6 @@ import kotlin.math.ceil
 
 // API responses
 
-data class StatesResponse(val states: List<StateInfo>)
-
 data class StateInfo(
     val code: String,
     val name: String,
@@ -19,8 +17,6 @@ data class StateInfo(
 ) {
     val passCount: Int get() = ceil(testQuestionCount * passingScorePct / 100.0).toInt()
 }
-
-data class QuizResponse(val questions: List<QuizQuestion>, val total: Int)
 
 data class QuizQuestion(
     val id: Int,

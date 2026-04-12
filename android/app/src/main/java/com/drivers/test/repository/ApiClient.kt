@@ -73,6 +73,4 @@ class ApiClient(context: Context) {
         val q = langQuestions.find { it.id == questionId } ?: return null
         return AnswerResponse(id = q.id, answer = q.answer, explanation = q.explanation)
     }
-
-    fun signImageName(filename: String): String = "signs/$filename"
 }

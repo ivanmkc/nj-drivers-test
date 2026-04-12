@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -157,7 +156,7 @@ fun HomeScreen(vm: QuizViewModel) {
         val weakEmpty = vm.quizMode == QuizMode.WEAK && vm.weakQuestions().isEmpty()
         PrimaryButton(
             text = if (weakEmpty) vm.t("noWeakSpots") else vm.t("startQuiz"),
-            enabled = !weakEmpty && !vm.isLoading,
+            enabled = !weakEmpty,
         ) { vm.startQuiz() }
 
         Spacer(Modifier.height(10.dp))
@@ -168,11 +167,6 @@ fun HomeScreen(vm: QuizViewModel) {
             color = c.gray,
             modifier = Modifier.clickable { vm.goStatePicker() }.padding(10.dp),
         )
-
-        if (vm.isLoading) {
-            Spacer(Modifier.height(12.dp))
-            CircularProgressIndicator()
-        }
     }
 }
 
