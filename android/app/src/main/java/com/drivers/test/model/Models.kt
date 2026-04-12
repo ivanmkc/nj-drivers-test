@@ -5,8 +5,6 @@ import kotlin.math.ceil
 
 // API responses
 
-data class StatesResponse(val states: List<StateInfo>)
-
 data class StateInfo(
     val code: String,
     val name: String,
@@ -19,8 +17,6 @@ data class StateInfo(
 ) {
     val passCount: Int get() = ceil(testQuestionCount * passingScorePct / 100.0).toInt()
 }
-
-data class QuizResponse(val questions: List<QuizQuestion>, val total: Int)
 
 data class QuizQuestion(
     val id: Int,
@@ -41,9 +37,9 @@ data class AnswerResponse(
 // Local storage
 
 data class QuestionRecord(
-    var seen: Int = 0,
-    var wrong: Int = 0,
-    var category: String = "",
+    val seen: Int = 0,
+    val wrong: Int = 0,
+    val category: String = "",
 )
 
 data class QuizHistoryEntry(
@@ -55,8 +51,8 @@ data class QuizHistoryEntry(
 )
 
 data class QuizStore(
-    var history: MutableList<QuizHistoryEntry> = mutableListOf(),
-    var questions: MutableMap<String, QuestionRecord> = mutableMapOf(),
+    val history: List<QuizHistoryEntry> = emptyList(),
+    val questions: Map<String, QuestionRecord> = emptyMap(),
 )
 
 // Session

@@ -76,14 +76,18 @@ fun QuizScreen(vm: QuizViewModel) {
         Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
             Text(
                 q.category.replace("_", " ").uppercase(),
-                fontSize = 12.sp, fontWeight = FontWeight.SemiBold, color = c.blue,
+                fontSize = 12.sp,
+                fontWeight = FontWeight.SemiBold,
+                color = c.blue,
                 modifier = Modifier.clip(RoundedCornerShape(20.dp)).background(c.blueLight)
                     .padding(horizontal = 10.dp, vertical = 4.dp),
             )
             vm.questionMissInfo(q.id)?.let { (wrong, seen) ->
                 Text(
                     "${vm.t("missed")} ${(wrong.toDouble() / seen * 100).roundToInt()}%",
-                    fontSize = 12.sp, fontWeight = FontWeight.SemiBold, color = c.red,
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    color = c.red,
                     modifier = Modifier.clip(RoundedCornerShape(20.dp)).background(c.redLight)
                         .padding(horizontal = 10.dp, vertical = 4.dp),
                 )
@@ -102,7 +106,9 @@ fun QuizScreen(vm: QuizViewModel) {
             val bitmap = remember(assetPath) {
                 try {
                     context.assets.open(assetPath).use { BitmapFactory.decodeStream(it) }
-                } catch (e: Exception) { null }
+                } catch (e: Exception) {
+                    null
+                }
             }
             bitmap?.let {
                 Spacer(Modifier.height(12.dp))
@@ -138,7 +144,9 @@ fun QuizScreen(vm: QuizViewModel) {
             ) {
                 Box(modifier = Modifier.width(4.dp).fillMaxHeight().background(c.blue))
                 Text(
-                    exp, fontSize = 14.sp, lineHeight = 22.sp,
+                    exp,
+                    fontSize = 14.sp,
+                    lineHeight = 22.sp,
                     color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.8f),
                     modifier = Modifier.padding(12.dp),
                 )
@@ -159,9 +167,16 @@ fun QuizScreen(vm: QuizViewModel) {
     }
 }
 
+private data class ChoiceColors(val bg: Color, val border: Color, val letterBg: Color, val letterFg: Color)
+
 private enum class ChoiceState { NORMAL, CORRECT, WRONG, DISABLED }
 
-private fun choiceState(letter: String, answered: Boolean, selected: String?, correct: String?): ChoiceState {
+private fun choiceState(
+    letter: String,
+    answered: Boolean,
+    selected: String?,
+    correct: String?,
+): ChoiceState {
     if (!answered) return ChoiceState.NORMAL
     if (letter == correct) return ChoiceState.CORRECT
     if (letter == selected && letter != correct) return ChoiceState.WRONG
@@ -169,13 +184,18 @@ private fun choiceState(letter: String, answered: Boolean, selected: String?, co
 }
 
 @Composable
-private fun ChoiceButton(letter: String, text: String, state: ChoiceState, onClick: () -> Unit) {
+private fun ChoiceButton(
+    letter: String,
+    text: String,
+    state: ChoiceState,
+    onClick: () -> Unit,
+) {
     val c = AppTheme.colors
     val (bg, borderColor, letterBg, letterFg) = when (state) {
-        ChoiceState.NORMAL -> listOf(c.card, MaterialTheme.colorScheme.outline, c.grayLight, c.gray)
-        ChoiceState.CORRECT -> listOf(c.greenLight, c.green, c.green, Color.White)
-        ChoiceState.WRONG -> listOf(c.redLight, c.red, c.red, Color.White)
-        ChoiceState.DISABLED -> listOf(c.card, MaterialTheme.colorScheme.outline, c.grayLight, c.gray)
+        ChoiceState.NORMAL -> ChoiceColors(c.card, MaterialTheme.colorScheme.outline, c.grayLight, c.gray)
+        ChoiceState.CORRECT -> ChoiceColors(c.greenLight, c.green, c.green, Color.White)
+        ChoiceState.WRONG -> ChoiceColors(c.redLight, c.red, c.red, Color.White)
+        ChoiceState.DISABLED -> ChoiceColors(c.card, MaterialTheme.colorScheme.outline, c.grayLight, c.gray)
     }
 
     Row(
@@ -191,7 +211,9 @@ private fun ChoiceButton(letter: String, text: String, state: ChoiceState, onCli
     ) {
         Text(
             letter,
-            fontSize = 14.sp, fontWeight = FontWeight.Bold, color = letterFg,
+            fontSize = 14.sp,
+            fontWeight = FontWeight.Bold,
+            color = letterFg,
             modifier = Modifier
                 .size(28.dp)
                 .clip(CircleShape)

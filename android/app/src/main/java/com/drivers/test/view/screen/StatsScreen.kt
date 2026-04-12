@@ -26,6 +26,10 @@ import com.drivers.test.view.components.StatCard
 import com.drivers.test.viewmodel.QuizViewModel
 import kotlin.math.roundToInt
 
+private const val MAX_CHART_ENTRIES = 20
+private const val MAX_WEAK_DISPLAY = 15
+private const val DEFAULT_PASSING_PCT = 70
+
 @Composable
 fun StatsScreen(vm: QuizViewModel) {
     val c = AppTheme.colors
@@ -43,7 +47,12 @@ fun StatsScreen(vm: QuizViewModel) {
             modifier = Modifier.clickable { vm.goHome() },
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            Icon(Icons.Filled.ArrowBack, contentDescription = null, tint = c.blue, modifier = Modifier.size(18.dp))
+            Icon(
+                Icons.Filled.ArrowBack,
+                contentDescription = null,
+                tint = c.blue,
+                modifier = Modifier.size(18.dp),
+            )
             Spacer(Modifier.width(6.dp))
             Text(vm.t("back"), fontSize = 15.sp, fontWeight = FontWeight.SemiBold, color = c.blue)
         }
@@ -79,15 +88,20 @@ fun StatsScreen(vm: QuizViewModel) {
             val history = vm.quizHistory()
             if (history.size >= 2) {
                 ScoreChart(
-                    scores = history.takeLast(20).map { it.pct },
-                    passingPct = vm.currentState?.passingScorePct ?: 70,
-                    startIndex = (history.size - minOf(20, history.size)) + 1,
+                    scores = history.takeLast(MAX_CHART_ENTRIES).map { it.pct },
+                    passingPct = vm.currentState?.passingScorePct ?: DEFAULT_PASSING_PCT,
+                    startIndex = (history.size - minOf(MAX_CHART_ENTRIES, history.size)) + 1,
                     modifier = Modifier.fillMaxWidth().height(180.dp),
                 )
             } else {
                 Text(
-                    if (history.isEmpty()) "Take a quiz to see your progress" else "Take one more quiz to see the chart",
-                    fontSize = 14.sp, color = c.gray,
+                    if (history.isEmpty()) {
+                        vm.t("statsEmpty")
+                    } else {
+                        vm.t("statsOneMore")
+                    },
+                    fontSize = 14.sp,
+                    color = c.gray,
                     modifier = Modifier.fillMaxWidth().height(120.dp).wrapContentSize(),
                 )
             }
@@ -112,7 +126,7 @@ fun StatsScreen(vm: QuizViewModel) {
         if (weak.isNotEmpty()) {
             Text(vm.t("mostMissed"), fontSize = 15.sp, fontWeight = FontWeight.SemiBold)
             Spacer(Modifier.height(12.dp))
-            weak.take(15).forEach { w ->
+            weak.take(MAX_WEAK_DISPLAY).forEach { w ->
                 Row(
                     modifier = Modifier.fillMaxWidth()
                         .clip(RoundedCornerShape(12.dp))
@@ -126,7 +140,9 @@ fun StatsScreen(vm: QuizViewModel) {
                             Text(vm.t("missed"), fontSize = 12.sp, color = c.gray)
                             Text(
                                 "${w.wrong}/${w.seen} (${(w.missRate * 100).roundToInt()}%)",
-                                fontSize = 12.sp, fontWeight = FontWeight.SemiBold, color = c.red,
+                                fontSize = 12.sp,
+                                fontWeight = FontWeight.SemiBold,
+                                color = c.red,
                             )
                             Text("\u00B7", color = c.gray)
                             Text(w.category.replace("_", " "), fontSize = 12.sp, color = c.gray)
@@ -157,20 +173,26 @@ fun StatsScreen(vm: QuizViewModel) {
     if (showResetDialog) {
         AlertDialog(
             onDismissRequest = { showResetDialog = false },
-            title = { Text("Reset") },
+            title = { Text(vm.t("resetButton")) },
             text = { Text(vm.t("resetConfirm", mapOf("state_name" to (vm.currentState?.name ?: "")))) },
             confirmButton = {
-                TextButton(onClick = { showResetDialog = false; vm.clearData() }) { Text("Reset") }
+                TextButton(onClick = {
+                    showResetDialog = false
+                    vm.clearData()
+                }) { Text(vm.t("resetButton")) }
             },
             dismissButton = {
-                TextButton(onClick = { showResetDialog = false }) { Text("Cancel") }
+                TextButton(onClick = { showResetDialog = false }) { Text(vm.t("cancel")) }
             },
         )
     }
 }
 
 @Composable
-private fun CategoryBar(category: String, pct: Int) {
+private fun CategoryBar(
+    category: String,
+    pct: Int,
+) {
     val c = AppTheme.colors
     val barColor = when {
         pct >= 80 -> c.green
@@ -180,7 +202,9 @@ private fun CategoryBar(category: String, pct: Int) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         Text(
             category.replace("_", " ").replaceFirstChar { it.uppercase() },
-            fontSize = 13.sp, modifier = Modifier.width(110.dp), maxLines = 1,
+            fontSize = 13.sp,
+            modifier = Modifier.width(110.dp),
+            maxLines = 1,
         )
         Spacer(Modifier.width(10.dp))
         Box(
@@ -193,12 +217,23 @@ private fun CategoryBar(category: String, pct: Int) {
             )
         }
         Spacer(Modifier.width(10.dp))
-        Text("$pct%", fontSize = 13.sp, fontWeight = FontWeight.SemiBold, color = barColor, modifier = Modifier.width(36.dp))
+        Text(
+            "$pct%",
+            fontSize = 13.sp,
+            fontWeight = FontWeight.SemiBold,
+            color = barColor,
+            modifier = Modifier.width(36.dp),
+        )
     }
 }
 
 @Composable
-private fun ScoreChart(scores: List<Int>, passingPct: Int, startIndex: Int, modifier: Modifier) {
+private fun ScoreChart(
+    scores: List<Int>,
+    passingPct: Int,
+    startIndex: Int,
+    modifier: Modifier,
+) {
     val c = AppTheme.colors
     val textMeasurer = rememberTextMeasurer()
 
@@ -215,15 +250,22 @@ private fun ScoreChart(scores: List<Int>, passingPct: Int, startIndex: Int, modi
         for (pct in listOf(0, 25, 50, 75, 100)) {
             val y = padTop + plotH - (pct / 100f) * plotH
             drawLine(Color.LightGray, Offset(padLeft, y), Offset(size.width - padRight, y), 1f)
-            drawText(textMeasurer, "$pct%", topLeft = Offset(0f, y - 6.dp.toPx()),
-                style = TextStyle(fontSize = 10.sp, color = Color.Gray))
+            drawText(
+                textMeasurer,
+                "$pct%",
+                topLeft = Offset(0f, y - 6.dp.toPx()),
+                style = TextStyle(fontSize = 10.sp, color = Color.Gray),
+            )
         }
 
         // Passing line
         val passY = padTop + plotH - (passingPct / 100f) * plotH
         drawLine(
-            c.green.copy(alpha = 0.3f), Offset(padLeft, passY), Offset(size.width - padRight, passY),
-            strokeWidth = 2f, pathEffect = PathEffect.dashPathEffect(floatArrayOf(12f, 8f)),
+            c.green.copy(alpha = 0.3f),
+            Offset(padLeft, passY),
+            Offset(size.width - padRight, passY),
+            strokeWidth = 2f,
+            pathEffect = PathEffect.dashPathEffect(floatArrayOf(12f, 8f)),
         )
 
         // Points
@@ -262,9 +304,12 @@ private fun ScoreChart(scores: List<Int>, passingPct: Int, startIndex: Int, modi
         val step = if (n <= 10) 1 else 2
         points.forEachIndexed { i, p ->
             if (i % step == 0 || i == n - 1) {
-                drawText(textMeasurer, "#${startIndex + i}",
+                drawText(
+                    textMeasurer,
+                    "#${startIndex + i}",
                     topLeft = Offset(p.x - 10.dp.toPx(), size.height - padBottom + 4.dp.toPx()),
-                    style = TextStyle(fontSize = 10.sp, color = Color.Gray))
+                    style = TextStyle(fontSize = 10.sp, color = Color.Gray),
+                )
             }
         }
     }
