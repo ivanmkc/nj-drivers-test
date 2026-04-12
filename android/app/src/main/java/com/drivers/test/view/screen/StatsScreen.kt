@@ -4,7 +4,7 @@ import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -48,7 +48,7 @@ fun StatsScreen(vm: QuizViewModel) {
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Icon(
-                Icons.AutoMirrored.Filled.ArrowBack,
+                Icons.Filled.ArrowBack,
                 contentDescription = null,
                 tint = c.blue,
                 modifier = Modifier.size(18.dp),
@@ -155,7 +155,7 @@ fun StatsScreen(vm: QuizViewModel) {
         }
 
         // Reset
-        HorizontalDivider()
+        Divider()
         Spacer(Modifier.height(20.dp))
         Box(
             modifier = Modifier.fillMaxWidth()
