@@ -95,7 +95,7 @@ struct HomeScreen: View {
                         .background(weakEmpty ? AppTheme.blue.opacity(0.5) : AppTheme.blue)
                         .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
-                .disabled(weakEmpty || vm.isLoading)
+                .disabled(weakEmpty)
 
                 // Change state
                 Button {
@@ -106,9 +106,6 @@ struct HomeScreen: View {
                         .foregroundColor(AppTheme.gray)
                 }
 
-                if vm.isLoading {
-                    ProgressView()
-                }
             }
             .padding(.horizontal, 16)
             .padding(.top, 24)
