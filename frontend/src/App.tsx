@@ -10,6 +10,8 @@ import type {
 } from './types';
 import { loadI18n, getLang, setLang } from './i18n';
 import { useStore } from './hooks/useStore';
+import { shuffleArray } from './utils';
+import { DEFAULT_QUESTION_COUNT } from './constants';
 import LoadingScreen from './components/LoadingScreen';
 import StatePicker from './components/StatePicker';
 import StartScreen from './components/StartScreen';
@@ -19,15 +21,6 @@ import StatsScreen from './components/StatsScreen';
 
 const BASE = import.meta.env.BASE_URL;
 
-function shuffleArray<T>(arr: T[]): T[] {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
 export default function App() {
   const [screen, setScreen] = useState<Screen>('loading');
   const [bundle, setBundle] = useState<Bundle | null>(null);
@@ -35,7 +28,7 @@ export default function App() {
   const [currentState, setCurrentState] = useState<StateSummary | null>(null);
   const [lang, setLangState] = useState(getLang());
   const [quizMode, setQuizMode] = useState<QuizMode>('random');
-  const [selectedCount, setSelectedCount] = useState(50);
+  const [selectedCount, setSelectedCount] = useState(DEFAULT_QUESTION_COUNT);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIdx, setCurrentIdx] = useState(0);
   const [sessionResults, setSessionResults] = useState<SessionResult[]>([]);

@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react';
 import type { QuizResult } from '../types';
+import { CHART_HEIGHT, MAX_CHART_ENTRIES } from '../constants';
 
 interface ScoreChartProps {
   history: QuizResult[];
@@ -16,19 +17,19 @@ export default function ScoreChart({ history, passingPct }: ScoreChartProps) {
     const dpr = window.devicePixelRatio || 1;
     const rect = canvas.getBoundingClientRect();
     canvas.width = rect.width * dpr;
-    canvas.height = 180 * dpr;
-    canvas.style.height = '180px';
+    canvas.height = CHART_HEIGHT * dpr;
+    canvas.style.height = `${CHART_HEIGHT}px`;
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     ctx.scale(dpr, dpr);
 
-    const W = rect.width,
-      H = 180;
+    const W = rect.width;
+    const H = CHART_HEIGHT;
     const pad = { top: 20, right: 16, bottom: 30, left: 36 };
     const plotW = W - pad.left - pad.right;
     const plotH = H - pad.top - pad.bottom;
-    const data = history.slice(-20);
+    const data = history.slice(-MAX_CHART_ENTRIES);
     const n = data.length;
 
     ctx.clearRect(0, 0, W, H);
@@ -110,5 +111,12 @@ export default function ScoreChart({ history, passingPct }: ScoreChartProps) {
     });
   }, [history, passingPct]);
 
-  return <canvas ref={canvasRef} height={180} className="w-full" style={{ height: 180 }} />;
+  return (
+    <canvas
+      ref={canvasRef}
+      height={CHART_HEIGHT}
+      className="w-full"
+      style={{ height: CHART_HEIGHT }}
+    />
+  );
 }
