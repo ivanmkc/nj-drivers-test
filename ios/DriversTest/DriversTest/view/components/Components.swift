@@ -1,5 +1,24 @@
 import SwiftUI
 
+struct CardStyle: ViewModifier {
+    var cornerRadius: CGFloat = 12
+    var borderColor: Color = AppTheme.border
+    var borderWidth: CGFloat = 2
+
+    func body(content: Content) -> some View {
+        content
+            .background(AppTheme.card)
+            .overlay(RoundedRectangle(cornerRadius: cornerRadius).stroke(borderColor, lineWidth: borderWidth))
+            .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
+    }
+}
+
+extension View {
+    func cardStyle(cornerRadius: CGFloat = 12, borderColor: Color = AppTheme.border, borderWidth: CGFloat = 2) -> some View {
+        modifier(CardStyle(cornerRadius: cornerRadius, borderColor: borderColor, borderWidth: borderWidth))
+    }
+}
+
 // MARK: - LanguageBarView
 
 struct LanguageBarView: View {
@@ -25,11 +44,7 @@ struct LanguageBarView: View {
                         .padding(.vertical, 6)
                         .foregroundColor(lang == localizer.currentLang ? AppTheme.blue : AppTheme.gray)
                         .background(lang == localizer.currentLang ? AppTheme.blueLight : AppTheme.card)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(lang == localizer.currentLang ? AppTheme.blue : AppTheme.border, lineWidth: 1.5)
-                        )
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .cardStyle(cornerRadius: 20, borderColor: lang == localizer.currentLang ? AppTheme.blue : AppTheme.border, borderWidth: 1.5)
                 }
             }
         }
@@ -63,26 +78,21 @@ struct StatsBannerView: View {
     var body: some View {
         HStack {
             HStack(spacing: 16) {
-                StatItem(value: "\(vm.quizHistory.count)", label: localizer.t("quizzes"))
-                StatItem(value: "\(vm.averageScore)%", label: localizer.t("avgScore"))
-                StatItem(value: "\(vm.passStreak)", label: localizer.t("passStreak"))
+                StatItem(value: "\(vm.quizHistory.count)", label: localizer.localized("quizzes"))
+                StatItem(value: "\(vm.averageScore)%", label: localizer.localized("avgScore"))
+                StatItem(value: "\(vm.passStreak)", label: localizer.localized("passStreak"))
             }
             Spacer()
             Button {
                 vm.showStats()
             } label: {
-                Text(localizer.t("viewStats"))
+                Text(localizer.localized("viewStats"))
                     .font(.system(size: 14, weight: .semibold))
                     .foregroundColor(AppTheme.blue)
             }
         }
         .padding(14)
-        .background(AppTheme.card)
-        .overlay(
-            RoundedRectangle(cornerRadius: 12)
-                .stroke(AppTheme.border, lineWidth: 1)
-        )
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .cardStyle(borderWidth: 1)
     }
 }
 
@@ -120,11 +130,7 @@ struct ModeButton: View {
             .padding(12)
             .foregroundColor(isActive ? AppTheme.blue : .primary)
             .background(isActive ? AppTheme.blueLight : AppTheme.card)
-            .overlay(
-                RoundedRectangle(cornerRadius: 12)
-                    .stroke(isActive ? AppTheme.blue : AppTheme.border, lineWidth: 2)
-            )
-            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .cardStyle(borderColor: isActive ? AppTheme.blue : AppTheme.border)
         }
     }
 }
@@ -161,11 +167,7 @@ struct ChoiceButton: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(14)
             .background(cardBackground)
-            .overlay(
-                RoundedRectangle(cornerRadius: 12)
-                    .stroke(borderColor, lineWidth: 2)
-            )
-            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .cardStyle(borderColor: borderColor)
         }
         .disabled(state != .normal)
         .opacity(state == .disabled ? 0.7 : 1)
@@ -215,7 +217,7 @@ struct ReviewItemView: View {
                 .font(.system(size: 14, weight: .semibold))
 
             HStack(spacing: 4) {
-                Text(localizer.t("yourAnswer") + ":")
+                Text(localizer.localized("yourAnswer") + ":")
                     .font(.system(size: 13))
                     .foregroundColor(AppTheme.gray)
                 Text("\(result.yourAnswer): \(result.yourAnswerText)")
@@ -223,7 +225,7 @@ struct ReviewItemView: View {
             }
 
             HStack(spacing: 4) {
-                Text(localizer.t("correct") + ":")
+                Text(localizer.localized("correct") + ":")
                     .font(.system(size: 13))
                     .foregroundColor(AppTheme.gray)
                 Text("\(result.correctAnswer): \(result.correctAnswerText)")
@@ -270,12 +272,7 @@ struct StatCardView: View {
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 16)
-        .background(AppTheme.card)
-        .overlay(
-            RoundedRectangle(cornerRadius: 12)
-                .stroke(AppTheme.border, lineWidth: 1)
-        )
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .cardStyle(borderWidth: 1)
     }
 }
 
@@ -329,7 +326,7 @@ struct WeakItemView: View {
             Text("Q\(weak.id)")
                 .font(.system(size: 14, weight: .semibold))
             HStack(spacing: 4) {
-                Text(localizer.t("missed"))
+                Text(localizer.localized("missed"))
                     .font(.system(size: 12))
                     .foregroundColor(AppTheme.gray)
                 Text("\(weak.wrong)/\(weak.seen) (\(Int(round(weak.missRate * 100)))%)")
@@ -406,7 +403,7 @@ struct ScoreChartView: View {
             }
 
             // Line
-            if points.count >= 2 {
+            if points.count >= 2, let lastPoint = points.last, let firstPoint = points.first {
                 var linePath = Path()
                 linePath.move(to: points[0])
                 for p in points.dropFirst() { linePath.addLine(to: p) }
@@ -414,12 +411,19 @@ struct ScoreChartView: View {
 
                 // Fill
                 var fillPath = linePath
-                fillPath.addLine(to: CGPoint(x: points.last!.x, y: pad.top + plotH))
-                fillPath.addLine(to: CGPoint(x: points.first!.x, y: pad.top + plotH))
+                fillPath.addLine(to: CGPoint(x: lastPoint.x, y: pad.top + plotH))
+                fillPath.addLine(to: CGPoint(x: firstPoint.x, y: pad.top + plotH))
                 fillPath.closeSubpath()
 
                 let gradient = Gradient(colors: [AppTheme.blue.opacity(0.2), AppTheme.blue.opacity(0.02)])
-                context.fill(fillPath, with: .linearGradient(gradient, startPoint: CGPoint(x: 0, y: pad.top), endPoint: CGPoint(x: 0, y: pad.top + plotH)))
+                context.fill(
+                    fillPath,
+                    with: .linearGradient(
+                        gradient,
+                        startPoint: CGPoint(x: 0, y: pad.top),
+                        endPoint: CGPoint(x: 0, y: pad.top + plotH)
+                    )
+                )
             }
 
             // Dots

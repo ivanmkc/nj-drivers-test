@@ -10,35 +10,19 @@ struct StatePickerScreen: View {
                 LanguageBarView(localizer: localizer)
                     .padding(.bottom, 4)
 
-                Text(localizer.t("appTitle"))
+                Text(localizer.localized("appTitle"))
                     .font(.system(size: 28, weight: .bold))
                     .foregroundColor(AppTheme.blue)
 
-                Text(localizer.t("selectStateDesc"))
+                Text(localizer.localized("selectStateDesc"))
                     .font(.system(size: 15))
                     .foregroundColor(AppTheme.gray)
                     .padding(.bottom, 8)
 
-                if vm.isLoading {
-                    ProgressView()
-                        .padding(.top, 40)
-                } else if let error = vm.errorMessage {
-                    VStack(spacing: 12) {
-                        Text(error)
-                            .foregroundColor(AppTheme.red)
-                            .multilineTextAlignment(.center)
-                        Button("Retry") {
-                            vm.loadStates()
-                        }
-                        .buttonStyle(.borderedProminent)
-                    }
-                    .padding(.top, 40)
-                } else {
-                    ForEach(vm.allStates) { state in
-                        StateCard(state: state, localizer: localizer) {
-                            if state.hasQuestions {
-                                vm.selectState(state)
-                            }
+                ForEach(vm.allStates) { state in
+                    StateCard(state: state, localizer: localizer) {
+                        if state.hasQuestions {
+                            vm.selectState(state)
                         }
                     }
                 }
@@ -71,11 +55,11 @@ struct StateCard: View {
                 Spacer()
 
                 if state.hasQuestions {
-                    Text(localizer.t("questionsAvailable", vars: ["count": "\(state.totalQuestions)"]))
+                    Text(localizer.localized("questionsAvailable", substitutions: ["count": "\(state.totalQuestions)"]))
                         .font(.system(size: 13, weight: .semibold))
                         .foregroundColor(AppTheme.blue)
                 } else {
-                    Text(localizer.t("comingSoon"))
+                    Text(localizer.localized("comingSoon"))
                         .font(.system(size: 11))
                         .foregroundColor(AppTheme.gray)
                         .padding(.horizontal, 8)
@@ -85,19 +69,14 @@ struct StateCard: View {
                 }
             }
             .padding(16)
-            .background(AppTheme.card)
-            .overlay(
-                RoundedRectangle(cornerRadius: 12)
-                    .stroke(AppTheme.border, lineWidth: 2)
-            )
-            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .cardStyle()
             .opacity(state.hasQuestions ? 1 : 0.5)
         }
         .disabled(!state.hasQuestions)
     }
 
     private var passingText: String {
-        "\(state.agency) \u{00B7} " + localizer.t("passingScore", vars: [
+        "\(state.agency) \u{00B7} " + localizer.localized("passingScore", substitutions: [
             "pass_pct": "\(state.passingScorePct)",
             "pass_count": "\(state.passCount)",
             "test_count": "\(state.testQuestionCount)",

@@ -54,7 +54,7 @@ struct QuizScreen: View {
                                 .clipShape(RoundedRectangle(cornerRadius: 20))
 
                             if let miss = vm.questionMissInfo(q.id) {
-                                Text("\(localizer.t("missed")) \(Int(round(Double(miss.wrong) / Double(miss.seen) * 100)))%")
+                                Text("\(localizer.localized("missed")) \(Int(round(Double(miss.wrong) / Double(miss.seen) * 100)))%")
                                     .font(.system(size: 12, weight: .semibold))
                                     .foregroundColor(AppTheme.red)
                                     .padding(.horizontal, 10)
@@ -72,7 +72,11 @@ struct QuizScreen: View {
 
                         // Question image
                         if let imageName = q.image,
-                           let path = Bundle.main.path(forResource: (imageName as NSString).deletingPathExtension, ofType: (imageName as NSString).pathExtension, inDirectory: "signs"),
+                           let path = Bundle.main.path(
+                               forResource: (imageName as NSString).deletingPathExtension,
+                               ofType: (imageName as NSString).pathExtension,
+                               inDirectory: "signs"
+                           ),
                            let uiImage = UIImage(contentsOfFile: path) {
                             Image(uiImage: uiImage)
                                 .resizable()
@@ -127,7 +131,7 @@ struct QuizScreen: View {
                                     proxy.scrollTo("top", anchor: .top)
                                 }
                             } label: {
-                                Text(isLast ? localizer.t("seeResults") : localizer.t("next"))
+                                Text(isLast ? localizer.localized("seeResults") : localizer.localized("next"))
                                     .font(.system(size: 17, weight: .semibold))
                                     .foregroundColor(.white)
                                     .frame(maxWidth: .infinity)

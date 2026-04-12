@@ -2,7 +2,7 @@ import SwiftUI
 
 struct AppRoot: View {
     @StateObject private var vm = QuizViewModel()
-    @ObservedObject private var localizer = Localizer.shared
+    @StateObject private var localizer = Localizer.shared
 
     var body: some View {
         Group {

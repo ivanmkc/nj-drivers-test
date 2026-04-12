@@ -21,7 +21,7 @@ class ApiClient {
 
     private var bundle: QuestionBundle?
 
-    init() {
+    private init() {
         loadBundle()
     }
 
@@ -111,7 +111,4 @@ class ApiClient {
         return AnswerResponse(id: q.id, answer: q.answer, explanation: q.explanation)
     }
 
-    func signImageName(_ filename: String) -> String {
-        "signs/\(filename)"
-    }
 }

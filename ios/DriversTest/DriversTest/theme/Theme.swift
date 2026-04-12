@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct AppTheme {
+enum AppTheme {
     static let blue = Color("Blue")
     static let blueLight = Color("BlueLight")
     static let green = Color("Green")
