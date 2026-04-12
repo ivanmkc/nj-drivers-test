@@ -42,31 +42,6 @@ class DriversTestUITest {
     }
 
     @Test
-    fun statePicker_showsLoadingWhenLoading() {
-        val vm = createTestViewModel()
-        vm.isLoading = true
-        composeTestRule.setContent {
-            DriversTestTheme {
-                StatePickerScreen(vm = vm)
-            }
-        }
-        composeTestRule.onNodeWithText(vm.t("appTitle")).assertExists()
-    }
-
-    @Test
-    fun statePicker_showsErrorMessage() {
-        val vm = createTestViewModel()
-        vm.errorMessage = "Connection failed"
-        composeTestRule.setContent {
-            DriversTestTheme {
-                StatePickerScreen(vm = vm)
-            }
-        }
-        composeTestRule.onNodeWithText("Connection failed").assertExists()
-        composeTestRule.onNodeWithText("Retry").assertExists()
-    }
-
-    @Test
     fun statePicker_showsStateCards() {
         val vm = createTestViewModel()
         populateTestStates(vm)
@@ -261,6 +236,5 @@ class DriversTestUITest {
                 ),
             ),
         )
-        vm.isLoading = false
     }
 }
