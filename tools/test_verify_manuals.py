@@ -318,6 +318,7 @@ def test_main_exit_code_always_zero(tmp_path: Any, monkeypatch: pytest.MonkeyPat
     )
 
     def fake_verify_all(entries, **kwargs):
+        del entries, kwargs
         return [
             vm.VerifyResult(
                 code="xx",

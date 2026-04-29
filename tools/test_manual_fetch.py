@@ -39,6 +39,7 @@ def test_assemble_multi_pdf_concatenates_with_separators(tmp_path: Any) -> None:
     fake_texts = iter(["CH1 BODY", "CH2 BODY", "CH3 BODY"])
 
     def fake_fetch(url: str, *, cache_path: str | None = None) -> str:
+        del url, cache_path
         return next(fake_texts)
 
     with patch.object(mf, "fetch_pdf_text", side_effect=fake_fetch):
@@ -113,5 +114,5 @@ def test_http_get_uses_desktop_ua() -> None:
     fake_resp.raise_for_status = MagicMock()
     with patch.object(mf.requests, "get", return_value=fake_resp) as g:
         mf._http_get("https://example.gov/x")
-    args, kwargs = g.call_args
+    kwargs = g.call_args.kwargs
     assert kwargs["headers"]["User-Agent"].startswith("Mozilla/5.0")
