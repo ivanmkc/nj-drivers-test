@@ -49,7 +49,7 @@
 - [ ] OR — Oregon (DMV)
 - [ ] PA — Pennsylvania (PennDOT)
 - [ ] RI — Rhode Island (DMV)
-- [ ] SC — South Carolina (DMV)
+- [x] SC — South Carolina (DMV, 281 Qs, EN/ES)
 - [ ] SD — South Dakota (DPS)
 - [ ] TN — Tennessee (DOS)
 - [ ] TX — Texas (DPS)
