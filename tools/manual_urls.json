@@ -1,66 +1,113 @@
 [
   {
+    "_schema_doc": "Per-state driver-manual catalog. See docs/maintaining-state-data.md for the full schema. Required fields: code, name, agency, manual_url, passing_score_pct, test_question_count, source_description. Optional fields: urls (list[str], for multi-PDF manuals), edition (str), last_verified (ISO date written by tools/verify_manuals.py --update-timestamps). Strict JSON has no comment syntax, so this documentation lives as a sentinel object whose only key starts with underscore; tools/verify_manuals.py and setup_state.py skip it."
+  },
+  {
     "code": "ak",
     "name": "Alaska",
     "agency": "DMV",
-    "manual_url": "https://www.dot.alaska.gov/dmv/ak_manual/drivers_manual.pdf",
-    "source_description": "Alaska Driver Manual (dot.alaska.gov)",
+    "manual_url": "https://dmv.alaska.gov/media/t5ef5vi2/dlman.pdf",
+    "source_description": "Alaska Driver Manual (Oct 2025) (dmv.alaska.gov)",
     "passing_score_pct": 80,
-    "test_question_count": 20
+    "test_question_count": 20,
+    "edition": "2025-10",
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "al",
+    "name": "Alabama",
+    "agency": "ALEA",
+    "manual_url": "https://www.alea.gov/sites/default/files/inline-files/driverlicensemanual.pdf",
+    "source_description": "Alabama Driver Manual (alea.gov)",
+    "passing_score_pct": 80,
+    "test_question_count": 30,
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "ar",
+    "name": "Arkansas",
+    "agency": "ASP",
+    "manual_url": "https://dps.arkansas.gov/wp-content/uploads/Arkansas-DL-Manual-English.pdf",
+    "source_description": "Arkansas Driver License Test Study Guide (dps.arkansas.gov)",
+    "passing_score_pct": 80,
+    "test_question_count": 25,
+    "edition": "2026-01",
+    "last_verified": "2026-04-29"
   },
   {
     "code": "az",
     "name": "Arizona",
     "agency": "MVD",
-    "manual_url": "https://azdot.gov/sites/default/files/2023-09/Driver-License-Manual.pdf",
+    "manual_url": "https://apps.azdot.gov/files/mvd/mvd-forms-lib/99-0117.pdf",
     "source_description": "Arizona Driver License Manual (azdot.gov)",
     "passing_score_pct": 80,
-    "test_question_count": 30
+    "test_question_count": 30,
+    "edition": "2025",
+    "last_verified": "2026-04-29"
   },
   {
-    "code": "ar",
-    "name": "Arkansas",
-    "agency": "DFA",
-    "manual_url": "https://www.dfa.arkansas.gov/images/uploads/driverServices/driver_handbook.pdf",
-    "source_description": "Arkansas Driver Handbook (dfa.arkansas.gov)",
-    "passing_score_pct": 80,
-    "test_question_count": 25
+    "code": "ca",
+    "name": "California",
+    "agency": "DMV",
+    "manual_url": "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/",
+    "source_description": "2025 California Driver Handbook (dmv.ca.gov)",
+    "passing_score_pct": 83,
+    "test_question_count": 46,
+    "last_verified": "2026-04-29"
   },
   {
     "code": "co",
     "name": "Colorado",
     "agency": "DMV",
-    "manual_url": "https://dmv.colorado.gov/sites/dmv/files/DR2337_DriverHandbook.pdf",
-    "source_description": "Colorado Driver Handbook (dmv.colorado.gov)",
+    "manual_url": "https://dmv.colorado.gov/sites/dmv/files/documents/DR_2337_Jan2025.pdf",
+    "source_description": "Colorado Driver Handbook DR 2337 (Jan 2025) (dmv.colorado.gov)",
     "passing_score_pct": 80,
-    "test_question_count": 25
+    "test_question_count": 25,
+    "edition": "2025-01",
+    "last_verified": "2026-04-29"
   },
   {
     "code": "ct",
     "name": "Connecticut",
     "agency": "DMV",
-    "manual_url": "https://portal.ct.gov/-/media/DMV/2023_CT_Driver_Manual_English.pdf",
+    "manual_url": "https://portal.ct.gov/dmv/-/media/dmv/dmv-pdfs/drivers-manual-english.pdf",
     "source_description": "Connecticut Driver's Manual (portal.ct.gov)",
     "passing_score_pct": 80,
-    "test_question_count": 25
+    "test_question_count": 25,
+    "edition": "2025",
+    "last_verified": "2026-04-29"
   },
   {
     "code": "dc",
     "name": "District of Columbia",
     "agency": "DMV",
-    "manual_url": "https://dmv.dc.gov/sites/default/files/dc/sites/dmv/publication/attachments/DC_DMV_Driver_Manual_English.pdf",
-    "source_description": "DC DMV Driver Manual (dmv.dc.gov)",
+    "manual_url": "https://dmv.dc.gov/publication/dc-dmv-automobile-driver-manual",
+    "source_description": "DC DMV Automobile Driver Manual (dmv.dc.gov)",
     "passing_score_pct": 80,
-    "test_question_count": 25
+    "test_question_count": 30,
+    "edition": "2024",
+    "last_verified": "2026-04-29"
   },
   {
     "code": "de",
     "name": "Delaware",
     "agency": "DMV",
-    "manual_url": "https://www.dmv.de.gov/Driver_Services/handbooks/documents/dl_manual.pdf",
-    "source_description": "Delaware Driver's Manual (dmv.de.gov)",
+    "manual_url": "https://dmv.de.gov/forms/driver_serv_forms/pdfs/dr_frm_manual.pdf",
+    "source_description": "Delaware Driver Manual (Jul 2025) (dmv.de.gov)",
     "passing_score_pct": 80,
-    "test_question_count": 30
+    "test_question_count": 32,
+    "edition": "2025-07",
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "fl",
+    "name": "Florida",
+    "agency": "DHSMV",
+    "manual_url": "https://www.flhsmv.gov/pdf/handbooks/englishdriverhandbook.pdf",
+    "source_description": "2025 Florida Driver's Handbook (flhsmv.gov)",
+    "passing_score_pct": 80,
+    "test_question_count": 50,
+    "last_verified": "2026-04-29"
   },
   {
     "code": "ga",
@@ -75,37 +122,84 @@
     "code": "hi",
     "name": "Hawaii",
     "agency": "DOT",
-    "manual_url": "https://www.honolulu.gov/rep/site/csd/csd_docs/drivers_manual.pdf",
-    "source_description": "Hawaii Driver's Manual (honolulu.gov)",
+    "manual_url": "https://hidot.hawaii.gov/highways/files/2021/11/ENGLISH-Original-Hawaii-Drivers-Manual.pdf",
+    "source_description": "Hawaii Driver's Manual (hidot.hawaii.gov)",
     "passing_score_pct": 80,
-    "test_question_count": 30
+    "test_question_count": 30,
+    "last_verified": "2026-04-29",
+    "edition": "2018"
+  },
+  {
+    "code": "ia",
+    "name": "Iowa",
+    "agency": "DOT",
+    "manual_url": "https://iowadot.gov/mvd/driverslicense/dlmanual/dlmanual.pdf",
+    "source_description": "2025 Iowa Driver's Manual (iowadot.gov)",
+    "passing_score_pct": 80,
+    "test_question_count": 35,
+    "last_verified": "2026-04-29"
   },
   {
     "code": "id",
     "name": "Idaho",
     "agency": "ITD",
-    "manual_url": "https://itd.idaho.gov/wp-content/uploads/2024/01/Driver-Manual-2024.pdf",
-    "source_description": "Idaho Driver Manual (itd.idaho.gov)",
+    "manual_url": "https://itd.idaho.gov/wp-content/uploads/2025/10/driver_manual.pdf",
+    "source_description": "Idaho Driver's Handbook (Jul 2025) (itd.idaho.gov)",
     "passing_score_pct": 85,
-    "test_question_count": 40
+    "test_question_count": 40,
+    "edition": "2025-07",
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "il",
+    "name": "Illinois",
+    "agency": "SOS",
+    "manual_url": "https://www.ilsos.gov/publications/pdf_publications/dsd_a112.pdf",
+    "source_description": "2025 Illinois Rules of the Road (ilsos.gov)",
+    "passing_score_pct": 80,
+    "test_question_count": 35,
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "in",
+    "name": "Indiana",
+    "agency": "BMV",
+    "manual_url": "https://www.in.gov/bmv/licenses-permits-ids/files/drivers-manual.pdf",
+    "source_description": "2025 Indiana Driver's Manual (in.gov)",
+    "passing_score_pct": 84,
+    "test_question_count": 16,
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "ks",
+    "name": "Kansas",
+    "agency": "DOR",
+    "manual_url": "https://www.ksrevenue.gov/pdf/dlhb.pdf",
+    "source_description": "2025 Kansas Driving Handbook (ksrevenue.gov)",
+    "passing_score_pct": 80,
+    "test_question_count": 25,
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "ky",
+    "name": "Kentucky",
+    "agency": "KYTC",
+    "manual_url": "https://drive.ky.gov/Drivers/Documents/Kentucky-Driver-Manual.pdf",
+    "source_description": "Kentucky Driver Manual (drive.ky.gov)",
+    "passing_score_pct": 80,
+    "test_question_count": 40,
+    "last_verified": "2026-04-29"
   },
   {
     "code": "la",
     "name": "Louisiana",
     "agency": "OMV",
-    "manual_url": "http://web01.dps.louisiana.gov/DPSForms.nsf/8bad5589175b8981862575f20048ee65/5402fbe0178e092686257c1a005ff1cb?OpenDocument",
+    "manual_url": "https://dpsweb.dps.louisiana.gov/DPSForms.nsf/8bad5589175b8981862575f20048ee65/5402fbe0178e092686257c1a005ff1cb?OpenDocument",
     "source_description": "Louisiana Class D & E Driver's Guide (dps.louisiana.gov)",
     "passing_score_pct": 80,
-    "test_question_count": 40
-  },
-  {
-    "code": "me",
-    "name": "Maine",
-    "agency": "BMV",
-    "manual_url": "https://www.maine.gov/sos/bmv/licenses/motoristhandbook.pdf",
-    "source_description": "Maine Driver's License Manual (maine.gov/sos/bmv)",
-    "passing_score_pct": 80,
-    "test_question_count": 30
+    "test_question_count": 40,
+    "edition": "2017",
+    "last_verified": "2026-04-29"
   },
   {
     "code": "ma",
@@ -114,150 +208,339 @@
     "manual_url": "https://www.mass.gov/doc/english-drivers-manual/download",
     "source_description": "English Driver's Manual (Mass.Gov/RMV)",
     "passing_score_pct": 72,
-    "test_question_count": 25
+    "test_question_count": 25,
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "md",
+    "name": "Maryland",
+    "agency": "MVA",
+    "manual_url": "https://mva.maryland.gov/Documents/DL-002.pdf",
+    "source_description": "2025 Maryland Driver's Handbook (mva.maryland.gov)",
+    "passing_score_pct": 85,
+    "test_question_count": 25,
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "me",
+    "name": "Maine",
+    "agency": "BMV",
+    "manual_url": "https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/motoristhandbook.pdf",
+    "source_description": "Maine Motorist Handbook and Study Guide (maine.gov)",
+    "passing_score_pct": 80,
+    "test_question_count": 30,
+    "edition": "2025",
+    "last_verified": "2026-04-29"
   },
   {
     "code": "mi",
     "name": "Michigan",
     "agency": "SOS",
-    "manual_url": "https://www.michigan.gov/sos/-/media/Project/SOS/SOS-133.pdf",
-    "source_description": "What Every Driver Must Know (Michigan.gov/SOS)",
+    "manual_url": "https://www.michigan.gov/sos/resources/forms/what-every-driver-must-know",
+    "source_description": "What Every Driver Must Know (Oct 2025 ed.) (Michigan.gov/SOS)",
     "passing_score_pct": 80,
-    "test_question_count": 50
+    "test_question_count": 50,
+    "urls": [
+      "https://www.michigan.gov/sos/-/media/Project/Websites/sos/Resources/Forms-and-publications/WEDMK/WEDMK.pdf"
+    ],
+    "edition": "2025-10",
+    "last_verified": "2026-04-29"
   },
   {
     "code": "mn",
     "name": "Minnesota",
     "agency": "DVS",
-    "manual_url": "https://dps.mn.gov/divisions/dvs/forms-documents/Documents/Minnesota_Drivers_Manual.pdf",
-    "source_description": "Minnesota Driver's Manual (dps.mn.gov/dvs)",
+    "manual_url": "https://assets.dps.mn.gov/files/dvs/dvs-class-d-drivers-manual-english.pdf",
+    "source_description": "Minnesota Driver's Manual (May 2025) (dps.mn.gov)",
     "passing_score_pct": 80,
-    "test_question_count": 40
+    "test_question_count": 40,
+    "edition": "2025-05",
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "mo",
+    "name": "Missouri",
+    "agency": "DOR",
+    "manual_url": "https://dor.mo.gov/forms/Driver%20Guide.pdf",
+    "source_description": "2025 Missouri Driver Guide (dor.mo.gov)",
+    "passing_score_pct": 80,
+    "test_question_count": 25,
+    "last_verified": "2026-04-29"
   },
   {
     "code": "ms",
     "name": "Mississippi",
     "agency": "DPS",
-    "manual_url": "https://www.dps.ms.gov/sites/default/files/2024-12/Driver%27s%20License%20Manual.pdf",
-    "source_description": "Driver's License Manual (dps.ms.gov)",
+    "manual_url": "https://www.driverservicebureau.dps.ms.gov/sites/default/files/2025-02/1.15.2025%20Revised%20MDPS%20Driver's%20Manual.pdf",
+    "source_description": "Mississippi Driver's License Manual (Jan 2025) (driverservicebureau.dps.ms.gov)",
     "passing_score_pct": 80,
-    "test_question_count": 30
+    "test_question_count": 30,
+    "edition": "2025-01",
+    "last_verified": "2026-04-29"
   },
   {
     "code": "mt",
     "name": "Montana",
     "agency": "DOJ",
-    "manual_url": "https://opi.mt.gov/Portals/182/PageFiles/DriverEd/Adapted_Illustrated_Montana_Driver_Manual_2023.pdf",
-    "source_description": "Adapted Illustrated Montana Driver Manual (opi.mt.gov)",
+    "manual_url": "https://opi.mt.gov/Portals/182/Page%20Files/Driver%20Education/Curriculum/Resources%20and%20Extras/Montana-Driver-Manual.pdf",
+    "source_description": "Montana Driver Manual (opi.mt.gov)",
     "passing_score_pct": 82,
-    "test_question_count": 33
+    "test_question_count": 33,
+    "edition": "2023",
+    "last_verified": "2026-04-29"
   },
   {
-    "code": "ne",
-    "name": "Nebraska",
+    "code": "nc",
+    "name": "North Carolina",
     "agency": "DMV",
-    "manual_url": "https://dmv.nebraska.gov/sites/dmv.nebraska.gov/files/doc/drivers/manuals/2025ClassODriverManual.pdf",
-    "source_description": "2025 Class O Driver Manual (dmv.nebraska.gov)",
+    "manual_url": "https://www.ncdot.gov/dmv/license-id/driver-licenses/new-drivers/Documents/driver-handbook.pdf",
+    "source_description": "2025 North Carolina Driver's Handbook (ncdot.gov)",
     "passing_score_pct": 80,
-    "test_question_count": 25
-  },
-  {
-    "code": "nh",
-    "name": "New Hampshire",
-    "agency": "DOS",
-    "manual_url": "https://www.nh.gov/safety/divisions/dmv/forms/documents/dsmv500.pdf",
-    "source_description": "New Hampshire Driver's Manual (nh.gov/safety/divisions/dmv)",
-    "passing_score_pct": 80,
-    "test_question_count": 40
-  },
-  {
-    "code": "nm",
-    "name": "New Mexico",
-    "agency": "MVD",
-    "manual_url": "https://www.mvd.newmexico.gov/wp-content/uploads/2023/09/NM-Driver-Manual-English.pdf",
-    "source_description": "English Driver's Manual (mvd.newmexico.gov)",
-    "passing_score_pct": 72,
-    "test_question_count": 25
+    "test_question_count": 25,
+    "last_verified": "2026-04-29"
   },
   {
     "code": "nd",
     "name": "North Dakota",
     "agency": "DOT",
-    "manual_url": "https://www.dot.nd.gov/divisions/drivers/docs/manuals/noncommercial-manual.pdf",
+    "manual_url": "https://www.dot.nd.gov/sites/www/files/documents/Drivers%20-%20documents/noncommercial-manual.pdf",
     "source_description": "2025-2027 Noncommercial Driver License Manual (dot.nd.gov)",
     "passing_score_pct": 80,
-    "test_question_count": 25
+    "test_question_count": 25,
+    "edition": "2025-2027",
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "ne",
+    "name": "Nebraska",
+    "agency": "DMV",
+    "manual_url": "https://dmv.nebraska.gov/sites/dmv.nebraska.gov/files/doc/manuals/engdrivermanual.pdf",
+    "source_description": "Nebraska Class O Driver Manual (dmv.nebraska.gov)",
+    "passing_score_pct": 80,
+    "test_question_count": 25,
+    "last_verified": "2026-04-29",
+    "edition": "2025"
+  },
+  {
+    "code": "nh",
+    "name": "New Hampshire",
+    "agency": "DOS",
+    "manual_url": "https://www.dmv.nh.gov/sites/g/files/ehbemt416/files/inline-documents/nhdm.pdf",
+    "source_description": "New Hampshire Driver's Manual (dmv.nh.gov)",
+    "passing_score_pct": 80,
+    "test_question_count": 40,
+    "edition": "2024",
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "nj",
+    "name": "New Jersey",
+    "agency": "MVC",
+    "manual_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "source_description": "2025 New Jersey Driver Manual (www.njmvc.gov)",
+    "passing_score_pct": 80,
+    "test_question_count": 50,
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "nm",
+    "name": "New Mexico",
+    "agency": "MVD",
+    "manual_url": "https://www.mvd.newmexico.gov/mvd-drivers-license-manuals/",
+    "source_description": "MVD Driver's License Manuals (mvd.newmexico.gov)",
+    "passing_score_pct": 72,
+    "test_question_count": 25,
+    "edition": "2025",
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "nv",
+    "name": "Nevada",
+    "agency": "DMV",
+    "manual_url": "https://dmv.nv.gov/pdfforms/dlbook.pdf",
+    "source_description": "Nevada Driver's Handbook (dmv.nv.gov)",
+    "passing_score_pct": 80,
+    "test_question_count": 25,
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "ny",
+    "name": "New York",
+    "agency": "DMV",
+    "manual_url": "https://dmv.ny.gov/brochure/mv21.pdf",
+    "source_description": "MV-21 New York State Driver's Manual (dmv.ny.gov)",
+    "passing_score_pct": 70,
+    "test_question_count": 20,
+    "edition": "2024",
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "oh",
+    "name": "Ohio",
+    "agency": "BMV",
+    "manual_url": "https://publicsafety.ohio.gov/static/hsy7607.pdf",
+    "source_description": "Ohio Digest of Motor Vehicle Laws (publicsafety.ohio.gov)",
+    "passing_score_pct": 75,
+    "test_question_count": 40,
+    "last_verified": "2026-04-29"
   },
   {
     "code": "ok",
     "name": "Oklahoma",
     "agency": "DPS",
-    "manual_url": "https://oklahoma.gov/service/documents/oklahoma-driver-manual.pdf",
+    "manual_url": "https://oklahoma.gov/content/dam/service-oklahoma/Documents/OklahomaDriverManual.pdf",
     "source_description": "Oklahoma Driver Manual (oklahoma.gov)",
     "passing_score_pct": 75,
-    "test_question_count": 20
+    "test_question_count": 20,
+    "edition": "2025",
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "or",
+    "name": "Oregon",
+    "agency": "DMV",
+    "manual_url": "https://www.oregon.gov/odot/forms/dmv/37.pdf",
+    "source_description": "2025 Oregon Driver Manual (oregon.gov)",
+    "passing_score_pct": 80,
+    "test_question_count": 35,
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "pa",
+    "name": "Pennsylvania",
+    "agency": "PennDOT",
+    "manual_url": "https://www.pa.gov/content/dam/copapwp-pagov/en/penndot/documents/public/dvspubsforms/bdl/bdl-manuals/pa-drivers-manual-non-commercial/english/pub%2095.pdf",
+    "source_description": "PUB 95 Pennsylvania Driver's Manual (pa.gov)",
+    "passing_score_pct": 85,
+    "test_question_count": 18,
+    "edition": "2021-04",
+    "last_verified": "2026-04-29"
   },
   {
     "code": "ri",
     "name": "Rhode Island",
     "agency": "DMV",
-    "manual_url": "https://dmv.ri.gov/sites/g/files/xkgbur661/files/2022-09/RI_Driver_Manual.pdf",
+    "manual_url": "https://dmv.ri.gov/sites/g/files/xkgbur556/files/documents/manuals/Driver_Manual_FINAL.pdf",
     "source_description": "Rhode Island Driver's Manual (dmv.ri.gov)",
     "passing_score_pct": 80,
-    "test_question_count": 50
+    "test_question_count": 25,
+    "edition": "2024",
+    "last_verified": "2026-04-29"
   },
   {
     "code": "sc",
     "name": "South Carolina",
     "agency": "DMV",
-    "manual_url": "https://www.scdmvonline.com/-/media/Pdf-Files/dmv-manuals/Driver-Manual.pdf",
-    "source_description": "South Carolina Driver's Manual (scdmvonline.com)",
+    "manual_url": "https://dmv.sc.gov/sites/scdmv/files/2025-12/Drivers%20Manual%20-%20Forms%20and%20Manuals.pdf",
+    "source_description": "South Carolina Driver's Manual (Dec 2025) (dmv.sc.gov)",
     "passing_score_pct": 80,
-    "test_question_count": 30
+    "test_question_count": 30,
+    "edition": "2025-12",
+    "last_verified": "2026-04-29"
   },
   {
     "code": "sd",
     "name": "South Dakota",
     "agency": "DPS",
-    "manual_url": "https://dps.sd.gov/sites/default/files/2024-01/Driver_Manual_2024.pdf",
-    "source_description": "2024 Driver Manual (dps.sd.gov)",
+    "manual_url": "https://dps.sd.gov/application/files/9717/0863/8492/sd-driver-manual-rev-12-2023.pdf",
+    "source_description": "South Dakota Driver Manual (Dec 2023) (dps.sd.gov)",
     "passing_score_pct": 80,
-    "test_question_count": 25
+    "test_question_count": 25,
+    "edition": "2023-12"
+  },
+  {
+    "code": "tn",
+    "name": "Tennessee",
+    "agency": "DOS",
+    "manual_url": "https://www.tn.gov/content/dam/tn/safety/documents/DL_Manual.pdf",
+    "source_description": "2025 Tennessee Driver Handbook (tn.gov)",
+    "passing_score_pct": 80,
+    "test_question_count": 30,
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "tx",
+    "name": "Texas",
+    "agency": "DPS",
+    "manual_url": "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf",
+    "source_description": "2025 Texas Driver Handbook (dps.texas.gov)",
+    "passing_score_pct": 70,
+    "test_question_count": 30,
+    "last_verified": "2026-04-29"
   },
   {
     "code": "ut",
     "name": "Utah",
     "agency": "DLD",
-    "manual_url": "https://dld.utah.gov/wp-content/uploads/sites/17/2024/01/Driver-Handbook-2024-2025.pdf",
-    "source_description": "2024-2025 Utah Driver Handbook (dld.utah.gov)",
+    "manual_url": "https://dld.utah.gov/wp-content/uploads/Driver-Handbook-REV-3.2026.pdf",
+    "source_description": "Utah Driver Handbook 2025-2026 (Mar 2026 rev) (dld.utah.gov)",
     "passing_score_pct": 80,
-    "test_question_count": 50
+    "test_question_count": 50,
+    "edition": "2025-2026",
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "va",
+    "name": "Virginia",
+    "agency": "DMV",
+    "manual_url": "https://www.dmv.virginia.gov/webdoc/pdf/dmv39.pdf",
+    "source_description": "2025 Virginia Driver's Manual (dmv.virginia.gov)",
+    "passing_score_pct": 80,
+    "test_question_count": 35,
+    "last_verified": "2026-04-29"
   },
   {
     "code": "vt",
     "name": "Vermont",
     "agency": "DMV",
-    "manual_url": "https://dmv.vermont.gov/sites/dmv/files/2024-11/VN-007-Drivers_Manual.pdf",
-    "source_description": "Driver's License Manual (dmv.vermont.gov)",
+    "manual_url": "https://dmv.vermont.gov/sites/dmv/files/documents/VN-007-Drivers_Manual.pdf",
+    "source_description": "Vermont Driver's License Manual (dmv.vermont.gov)",
     "passing_score_pct": 80,
-    "test_question_count": 20
+    "test_question_count": 20,
+    "edition": "2024-11",
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "wa",
+    "name": "Washington",
+    "agency": "DOL",
+    "manual_url": "https://dol.wa.gov/media/pdf/4740/washington-state-driver-guide-plain-textpdf/download",
+    "source_description": "Washington State Driver Guide (plain-text) (dol.wa.gov)",
+    "passing_score_pct": 80,
+    "test_question_count": 25,
+    "edition": "2025",
+    "last_verified": "2026-04-29"
+  },
+  {
+    "code": "wi",
+    "name": "Wisconsin",
+    "agency": "DMV",
+    "manual_url": "https://wisconsindot.gov/Documents/dmv/shared/bds126-motorists-handbook.pdf",
+    "source_description": "2025 Wisconsin Motorists Handbook (wisconsindot.gov)",
+    "passing_score_pct": 80,
+    "test_question_count": 50,
+    "last_verified": "2026-04-29"
   },
   {
     "code": "wv",
     "name": "West Virginia",
     "agency": "DMV",
-    "manual_url": "https://transportation.wv.gov/DMV/Forms/Documents/Driver_Handbook.pdf",
-    "source_description": "Driver's Licensing Handbook (transportation.wv.gov)",
+    "manual_url": "https://transportation.wv.gov/DMV/DMVFormSearch/Drivers_Licensing_Handbook_web.pdf",
+    "source_description": "WV Driver's Licensing Handbook (Jul 2022) (transportation.wv.gov)",
     "passing_score_pct": 76,
-    "test_question_count": 25
+    "test_question_count": 25,
+    "edition": "2022-07",
+    "last_verified": "2026-04-29"
   },
   {
     "code": "wy",
     "name": "Wyoming",
     "agency": "DOT",
-    "manual_url": "https://www.dot.state.wy.us/home/driver_license_records/driver-manuals/2021_Class_C_Driver_License_Manual.pdf",
+    "manual_url": "https://www.dot.state.wy.us/files/live/sites/wydot/files/shared/Driver_Services/Help%20Documents%20and%20Manuals/2021_DriverManual_web_ClassC_w%20cover.pdf",
     "source_description": "2021 Class C Driver License Manual (dot.state.wy.us)",
     "passing_score_pct": 80,
-    "test_question_count": 25
+    "test_question_count": 25,
+    "edition": "2021",
+    "last_verified": "2026-04-29"
   }
 ]
