@@ -9,6 +9,7 @@
 ### Complete
 - [x] NJ — New Jersey (MVC, 332 Qs, EN/JA/ES)
 - [x] NY — New York (DMV, 407 Qs, EN/JA/ES)
+- [x] CO — Colorado (DMV, 255 Qs, EN/ES)
 
 ### To Do
 - [ ] AL — Alabama (DPS)
@@ -16,7 +17,6 @@
 - [ ] AZ — Arizona (MVD)
 - [ ] AR — Arkansas (DFA)
 - [ ] CA — California (DMV)
-- [ ] CO — Colorado (DMV)
 - [ ] CT — Connecticut (DMV)
 - [ ] DE — Delaware (DMV)
 - [ ] DC — District of Columbia (DMV)
