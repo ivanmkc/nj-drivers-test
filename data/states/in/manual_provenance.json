@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "code": "in",
+  "name": "Indiana",
+  "agency": "BMV",
+  "manual_url": "https://www.in.gov/bmv/licenses-permits-ids/files/drivers-manual.pdf",
+  "edition": "",
+  "source_description": "2025 Indiana Driver's Manual (in.gov)",
+  "downloaded_at": "2026-04-29T12:00:00Z",
+  "extracted_with": "PyMuPDF 1.27.2",
+  "pdf": {
+    "filename": "manual.pdf",
+    "size_bytes": 4715837,
+    "sha256": "3c0ac7c577a251a2f51a9ab1c95513e3101b1bf553e93c74cab66febe0dada1e",
+    "page_count": 84,
+    "recovered": true,
+    "compression": {
+      "tool": "ghostscript",
+      "preset": "ebook",
+      "command": "gs -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH",
+      "original_size_bytes": 37657039,
+      "original_sha256": "f5fdfcc4f845563c9bd203f75744c574576aac94d78c5d398a0fb366cc0e9e77"
+    }
+  },
+  "text": {
+    "filename": "manual_text.txt",
+    "char_count": 213012,
+    "sha256": "9ae3775615123b66404f20fdd7e839bd4b5de7f91d7085b48a825801d291c3f2"
+  },
+  "sources": []
+}
