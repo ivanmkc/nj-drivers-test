@@ -10,10 +10,17 @@
   "extracted_with": "PyMuPDF 1.27.2",
   "pdf": {
     "filename": "manual.pdf",
-    "size_bytes": 49586555,
-    "sha256": "e311de54ad0ee6f5913e18e694914a560dac3592987437290c271f53c0c7fa71",
+    "size_bytes": 15416935,
+    "sha256": "107ac52aea47cd50e6c10ce3583de6ed6ea2d7e51d05efda7571154c7d3da4e7",
     "page_count": 52,
-    "recovered": true
+    "recovered": true,
+    "compression": {
+      "tool": "ghostscript",
+      "preset": "ebook",
+      "command": "gs -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH",
+      "original_size_bytes": 49586555,
+      "original_sha256": "e311de54ad0ee6f5913e18e694914a560dac3592987437290c271f53c0c7fa71"
+    }
   },
   "text": {
     "filename": "manual_text.txt",
