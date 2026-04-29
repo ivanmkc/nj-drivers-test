@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "code": "pa",
+  "name": "Pennsylvania",
+  "agency": "PennDOT",
+  "manual_url": "https://www.pa.gov/content/dam/copapwp-pagov/en/penndot/documents/public/dvspubsforms/bdl/bdl-manuals/pa-drivers-manual-non-commercial/english/pub%2095.pdf",
+  "edition": "2021-04",
+  "source_description": "PUB 95 Pennsylvania Driver's Manual (pa.gov)",
+  "downloaded_at": "2026-04-29T12:00:00Z",
+  "extracted_with": "PyMuPDF 1.27.2",
+  "pdf": {
+    "filename": "manual.pdf",
+    "size_bytes": 1652138,
+    "sha256": "70fc8124c384209552551d41615fcbbbd1058b3205e6dd35811268aa4e5012a6",
+    "page_count": 104,
+    "recovered": true,
+    "compression": {
+      "tool": "ghostscript",
+      "preset": "ebook",
+      "command": "gs -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH",
+      "original_size_bytes": 8168037,
+      "original_sha256": "3a6e48560b81d1e8afb10a0f0cbeb840d7b452c42e736199f0aa1b2a8e02715e"
+    }
+  },
+  "text": {
+    "filename": "manual_text.txt",
+    "char_count": 326126,
+    "sha256": "b9163025b2ae4d96c71194ad176477070210373503a4e3c38948f1dffdabc41a"
+  },
+  "sources": []
+}
