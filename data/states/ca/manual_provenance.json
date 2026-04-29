@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "code": "ca",
+  "name": "California",
+  "agency": "DMV",
+  "manual_url": "https://www.dmv.ca.gov/portal/file/california-driver-handbook-pdf/",
+  "edition": "",
+  "source_description": "2025 California Driver Handbook (dmv.ca.gov)",
+  "downloaded_at": "2026-04-29T12:00:00Z",
+  "extracted_with": "PyMuPDF 1.27.2",
+  "pdf": {
+    "filename": "manual.pdf",
+    "size_bytes": 4249780,
+    "sha256": "b95652acbfaa45c0c11170e4b3cd22c05718c920e743d39d0c55f1c478c373e6",
+    "page_count": 92,
+    "recovered": true,
+    "compression": {
+      "tool": "ghostscript",
+      "preset": "ebook",
+      "command": "gs -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH",
+      "original_size_bytes": 10651870,
+      "original_sha256": "63c96b38efd7cf7d139e98f12dad5f4a412d336451740cd1506208ee13cf3b82"
+    }
+  },
+  "text": {
+    "filename": "manual_text.txt",
+    "char_count": 139344,
+    "sha256": "f620b11ff01d60dc6db1172deb3227cf44c17fe737a327f6ab81fae3c08fdd9d"
+  },
+  "sources": []
+}
