@@ -83,6 +83,13 @@ Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) 
 - **Questions**: 456
 - **Languages**: EN, ES
 
+### Michigan (MI)
+- **Source**: [What Every Driver Must Know (Oct 2025 ed.)](https://www.michigan.gov/sos/resources/forms/what-every-driver-must-know)
+- **Agency**: SOS
+- **Passing**: 80% (40/50 questions)
+- **Questions**: 350
+- **Languages**: EN, ES
+
 ### Missouri (MO)
 - **Source**: [2025 Missouri Driver Guide](https://dor.mo.gov/forms/Driver%20Guide.pdf)
 - **Agency**: DOR
@@ -174,11 +181,11 @@ Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) 
 - **Questions**: 321
 - **Languages**: EN, ES, JA
 
-## Not Yet Sourced (27)
+## Not Yet Sourced (26)
 
 The following states do not yet have question sets. Their DMV websites block automated PDF downloads, so the official manuals need to be downloaded manually in a browser and placed at `/tmp/<code>_manual.pdf` for processing.
 
-AK (Alaska), AR (Arkansas), AZ (Arizona), CO (Colorado), CT (Connecticut), DC (District of Columbia), DE (Delaware), HI (Hawaii), ID (Idaho), LA (Louisiana), ME (Maine), MI (Michigan), MN (Minnesota), MS (Mississippi), MT (Montana), ND (North Dakota), NE (Nebraska), NH (New Hampshire), NM (New Mexico), OK (Oklahoma), RI (Rhode Island), SC (South Carolina), SD (South Dakota), UT (Utah), VT (Vermont), WV (West Virginia), WY (Wyoming)
+AK (Alaska), AR (Arkansas), AZ (Arizona), CO (Colorado), CT (Connecticut), DC (District of Columbia), DE (Delaware), HI (Hawaii), ID (Idaho), LA (Louisiana), ME (Maine), MN (Minnesota), MS (Mississippi), MT (Montana), ND (North Dakota), NE (Nebraska), NH (New Hampshire), NM (New Mexico), OK (Oklahoma), RI (Rhode Island), SC (South Carolina), SD (South Dakota), UT (Utah), VT (Vermont), WV (West Virginia), WY (Wyoming)
 
 ## Road Sign Images
 
