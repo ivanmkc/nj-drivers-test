@@ -21,6 +21,11 @@
 
 ## 4. Wave 1: single-PDF, low risk
 
+> **Deferred — infrastructure-only PR.** Groups 4-7 require the GA work
+> (`add-state-georgia`) to land first and represent tens of hours of Gemini API
+> calls. They will be picked up in a follow-up session. This PR only delivers
+> Groups 1, 2, 3, and 8.
+
 - [ ] 4.1 For each of VT, WY, ND, SD, AK, DC, DE:
   - [ ] Run `setup_state.py` → `generate_questions.py` → `add_sign_questions.py`.
   - [ ] Spot-check 5 questions per state for manual-source citations.
