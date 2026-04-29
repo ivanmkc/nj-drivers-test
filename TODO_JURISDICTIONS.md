@@ -4,9 +4,9 @@
 - [x] Complete (questions + translations + sign images)
 - [ ] Not started
 
-## US States (50 + DC) — 28 / 51 complete
+## US States (50 + DC) — 29 / 51 complete
 
-### Complete (28)
+### Complete (29)
 - [x] AL — Alabama (ALEA, 292 Qs, EN/ES)
 - [x] AZ — Arizona (MVD, 295 Qs, EN/ES)
 - [x] CA — California (DMV, 284 Qs, EN/ES/JA)
@@ -30,13 +30,14 @@
 - [x] OH — Ohio (BMV, 280 Qs, EN/ES)
 - [x] OR — Oregon (DMV, 284 Qs, EN/ES/JA)
 - [x] PA — Pennsylvania (PennDOT, 507 Qs, EN/ES/JA)
+- [x] SC — South Carolina (DMV, 281 Qs, EN/ES)
 - [x] TN — Tennessee (DOS, 874 Qs, EN/ES/JA)
 - [x] TX — Texas (DPS, 417 Qs, EN/ES/JA)
 - [x] VA — Virginia (DMV, 279 Qs, EN/ES/JA)
 - [x] WA — Washington (DOL, 376 Qs, EN/ES/JA)
 - [x] WI — Wisconsin (DMV, 321 Qs, EN/ES/JA)
 
-### To Do (23)
+### To Do (22)
 - [ ] AK — Alaska (DMV)
 - [ ] AR — Arkansas (DFA)
 - [ ] CT — Connecticut (DMV)
@@ -54,7 +55,6 @@
 - [ ] ND — North Dakota (DOT)
 - [ ] OK — Oklahoma (DPS)
 - [ ] RI — Rhode Island (DMV)
-- [ ] SC — South Carolina (DMV)
 - [ ] SD — South Dakota (DPS)
 - [ ] UT — Utah (DLD)
 - [ ] VT — Vermont (DMV)
