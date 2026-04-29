@@ -24,7 +24,14 @@ from urllib.parse import urlparse
 
 import requests
 
-USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) drivers-test-fetch/1.0"
+# Full Chrome desktop UA. Bare "Mozilla/5.0" or Linux-suffixed UAs get 403/404
+# from several state CDNs (confirmed 2026-04-29 on michigan.gov, mass.gov,
+# publicsafety.ohio.gov, dmv.colorado.gov). Don't trim this without testing.
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/120.0.0.0 Safari/537.36"
+)
 TIMEOUT_SECONDS = 60
 
 
