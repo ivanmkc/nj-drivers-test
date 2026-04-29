@@ -4,7 +4,7 @@ All questions are generated from **official state driver manuals** using Gemini 
 
 Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) signs sourced from Wikimedia Commons — these are US government works in the public domain.
 
-## States (23)
+## States (24)
 
 ### Alabama (AL)
 - **Source**: [Alabama Driver Manual](https://www.alea.gov/sites/default/files/inline-files/driverlicensemanual.pdf)
@@ -74,6 +74,13 @@ Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) 
 - **Agency**: RMV
 - **Passing**: 72% (18/25 questions)
 - **Questions**: 456
+- **Languages**: EN, ES
+
+### Minnesota (MN)
+- **Source**: [Minnesota Driver's Manual (May 2025)](https://assets.dps.mn.gov/files/dvs/dvs-class-d-drivers-manual-english.pdf)
+- **Agency**: DVS
+- **Passing**: 80% (32/40 questions)
+- **Questions**: 383
 - **Languages**: EN, ES
 
 ### Missouri (MO)

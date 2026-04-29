@@ -9,6 +9,7 @@
 ### Complete
 - [x] NJ — New Jersey (MVC, 332 Qs, EN/JA/ES)
 - [x] NY — New York (DMV, 407 Qs, EN/JA/ES)
+- [x] MN — Minnesota (DVS, 383 Qs, EN/ES)
 
 ### To Do
 - [ ] AL — Alabama (DPS)
@@ -34,7 +35,6 @@
 - [ ] MD — Maryland (MVA)
 - [ ] MA — Massachusetts (RMV)
 - [ ] MI — Michigan (SOS)
-- [ ] MN — Minnesota (DVS)
 - [ ] MS — Mississippi (DPS)
 - [ ] MO — Missouri (DOR)
 - [ ] MT — Montana (MVD)
