@@ -4,7 +4,7 @@ All questions are generated from **official state driver manuals** using Gemini 
 
 Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) signs sourced from Wikimedia Commons — these are US government works in the public domain.
 
-## States (26)
+## States (27)
 
 ### Alabama (AL)
 - **Source**: [Alabama Driver Manual](https://www.alea.gov/sites/default/files/inline-files/driverlicensemanual.pdf)
@@ -26,6 +26,13 @@ Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) 
 - **Passing**: 83% (38/46 questions)
 - **Questions**: 284
 - **Languages**: EN, ES, JA
+
+### Colorado (CO)
+- **Source**: [Colorado Driver Handbook (DR 2337, January 2025)](https://dmv.colorado.gov/sites/dmv/files/documents/DR_2337_Jan2025.pdf)
+- **Agency**: DMV
+- **Passing**: 80% (20/25 questions)
+- **Questions**: 255
+- **Languages**: EN, ES
 
 ### Florida (FL)
 - **Source**: [2025 Florida Driver's Handbook](https://www.flhsmv.gov/pdf/handbooks/englishdriverhandbook.pdf)
@@ -188,11 +195,11 @@ Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) 
 - **Questions**: 321
 - **Languages**: EN, ES, JA
 
-## Not Yet Sourced (25)
+## Not Yet Sourced (24)
 
 The following states do not yet have question sets. Their DMV websites block automated PDF downloads, so the official manuals need to be downloaded manually in a browser and placed at `/tmp/<code>_manual.pdf` for processing.
 
-AK (Alaska), AR (Arkansas), CO (Colorado), CT (Connecticut), DC (District of Columbia), DE (Delaware), HI (Hawaii), ID (Idaho), LA (Louisiana), ME (Maine), MN (Minnesota), MS (Mississippi), MT (Montana), ND (North Dakota), NE (Nebraska), NH (New Hampshire), NM (New Mexico), OK (Oklahoma), RI (Rhode Island), SC (South Carolina), SD (South Dakota), UT (Utah), VT (Vermont), WV (West Virginia), WY (Wyoming)
+AK (Alaska), AR (Arkansas), CT (Connecticut), DC (District of Columbia), DE (Delaware), HI (Hawaii), ID (Idaho), LA (Louisiana), ME (Maine), MN (Minnesota), MS (Mississippi), MT (Montana), ND (North Dakota), NE (Nebraska), NH (New Hampshire), NM (New Mexico), OK (Oklahoma), RI (Rhode Island), SC (South Carolina), SD (South Dakota), UT (Utah), VT (Vermont), WV (West Virginia), WY (Wyoming)
 
 ## Road Sign Images
 

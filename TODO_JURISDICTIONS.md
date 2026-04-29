@@ -4,12 +4,13 @@
 - [x] Complete (questions + translations + sign images)
 - [ ] Not started
 
-## US States (50 + DC) — 26 / 51 complete
+## US States (50 + DC) — 27 / 51 complete
 
-### Complete (26)
+### Complete (27)
 - [x] AL — Alabama (ALEA, 292 Qs, EN/ES)
 - [x] AZ — Arizona (MVD, 295 Qs, EN/ES)
 - [x] CA — California (DMV, 284 Qs, EN/ES/JA)
+- [x] CO — Colorado (DMV, 255 Qs, EN/ES)
 - [x] FL — Florida (DHSMV, 345 Qs, EN/ES/JA)
 - [x] GA — Georgia (DDS, 390 Qs, EN/ES/JA)
 - [x] IA — Iowa (DOT, 237 Qs, EN/ES/JA)
@@ -34,10 +35,9 @@
 - [x] WA — Washington (DOL, 376 Qs, EN/ES/JA)
 - [x] WI — Wisconsin (DMV, 321 Qs, EN/ES/JA)
 
-### To Do (25)
+### To Do (24)
 - [ ] AK — Alaska (DMV)
 - [ ] AR — Arkansas (DFA)
-- [ ] CO — Colorado (DMV)
 - [ ] CT — Connecticut (DMV)
 - [ ] DE — Delaware (DMV)
 - [ ] DC — District of Columbia (DMV)
