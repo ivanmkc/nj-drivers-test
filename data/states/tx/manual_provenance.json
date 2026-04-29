@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "code": "tx",
+  "name": "Texas",
+  "agency": "DPS",
+  "manual_url": "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf",
+  "edition": "",
+  "source_description": "2025 Texas Driver Handbook (dps.texas.gov)",
+  "downloaded_at": "2026-04-29T12:00:00Z",
+  "extracted_with": "PyMuPDF 1.27.2",
+  "pdf": {
+    "filename": "manual.pdf",
+    "size_bytes": 2450762,
+    "sha256": "172cb70ebe1b0c1938d1f883c26057a397b5c558cb4ec0dad573019357c110b8",
+    "page_count": 91,
+    "recovered": true,
+    "compression": {
+      "tool": "ghostscript",
+      "preset": "ebook",
+      "command": "gs -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH",
+      "original_size_bytes": 28912252,
+      "original_sha256": "5239ff7c4ec7c15e643425fd3a0d4aaabafb358c58144c7a14218dfbe21e8a6d"
+    }
+  },
+  "text": {
+    "filename": "manual_text.txt",
+    "char_count": 271408,
+    "sha256": "650edfcb4a8d93182ae7b4f775755b5ee7b660364506553c7556104719f2fb54"
+  },
+  "sources": []
+}
