@@ -1,0 +1,82 @@
+name: Verify Manual Catalog
+
+on:
+  schedule:
+    # 1st of every month at 07:00 UTC.
+    - cron: "0 7 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+
+      - name: Install verify dependencies
+        run: pip install requests
+
+      - name: Run verify_manuals.py
+        id: verify
+        run: |
+          python3 tools/verify_manuals.py | tee verify_output.txt
+          # Capture summary line for the issue body. Always exit 0 so the
+          # workflow stays green and the tracking issue carries the signal.
+          echo "summary=$(grep '^summary:' verify_output.txt | head -1)" >> "$GITHUB_OUTPUT"
+
+      - name: Upload verification report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verify-manuals-report
+          path: verify_output.txt
+          retention-days: 90
+
+      - name: Update tracking issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SUMMARY: ${{ steps.verify.outputs.summary }}
+        run: |
+          set -euo pipefail
+          ISSUE_TITLE="Manual catalog verification — monthly tracker"
+          # Find an existing open tracking issue or create one.
+          ISSUE_NUMBER="$(gh issue list \
+            --search "in:title \"$ISSUE_TITLE\"" \
+            --state open \
+            --json number \
+            --jq '.[0].number // empty')"
+          BODY_FILE="$(mktemp)"
+          {
+            echo "Run: ${GITHUB_WORKFLOW} #${GITHUB_RUN_NUMBER}"
+            echo "Triggered: ${GITHUB_EVENT_NAME}"
+            echo "Commit: ${GITHUB_SHA}"
+            echo
+            echo "**Summary**: \`${SUMMARY:-no summary captured}\`"
+            echo
+            echo "<details><summary>Full report</summary>"
+            echo
+            echo '```'
+            cat verify_output.txt
+            echo '```'
+            echo "</details>"
+            echo
+            echo "Workflow run: <${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}>"
+          } > "$BODY_FILE"
+
+          if [ -z "${ISSUE_NUMBER:-}" ]; then
+            gh issue create \
+              --title "$ISSUE_TITLE" \
+              --body-file "$BODY_FILE" \
+              --label "infra,catalog,monthly"
+          else
+            gh issue comment "$ISSUE_NUMBER" --body-file "$BODY_FILE"
+          fi

@@ -146,4 +146,9 @@ Every question set **must** be grounded in a real official driver's manual. Neve
 
 ```bash
 python3 tools/audit_questions.py        # Validate all question data
+python3 tools/verify_manuals.py         # HEAD-check every catalog URL
 ```
+
+For ongoing catalog maintenance — refreshing a stale URL, adding a state,
+handling multi-PDF manuals, and interpreting the monthly tracking issue —
+see [`docs/maintaining-state-data.md`](docs/maintaining-state-data.md).
