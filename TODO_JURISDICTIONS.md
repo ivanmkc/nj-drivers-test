@@ -9,11 +9,11 @@
 ### Complete
 - [x] NJ — New Jersey (MVC, 332 Qs, EN/JA/ES)
 - [x] NY — New York (DMV, 407 Qs, EN/JA/ES)
+- [x] AZ — Arizona (MVD, 295 Qs, EN/ES)
 
 ### To Do
 - [ ] AL — Alabama (DPS)
 - [ ] AK — Alaska (DMV)
-- [ ] AZ — Arizona (MVD)
 - [ ] AR — Arkansas (DFA)
 - [ ] CA — California (DMV)
 - [ ] CO — Colorado (DMV)
