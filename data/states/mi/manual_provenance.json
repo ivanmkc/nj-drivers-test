@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "code": "mi",
+  "name": "Michigan",
+  "agency": "SOS",
+  "manual_url": "https://www.michigan.gov/sos/resources/forms/what-every-driver-must-know",
+  "edition": "2025-10",
+  "source_description": "What Every Driver Must Know (Oct 2025 ed.) (Michigan.gov/SOS)",
+  "downloaded_at": "2026-04-29T06:08:00Z",
+  "extracted_with": "PyMuPDF 1.27.2",
+  "pdf": {
+    "filename": "manual.pdf",
+    "note": "concatenated from sources[]",
+    "size_bytes": 2774466,
+    "sha256": "4700c0ad215c31fa5f3481ea109ec1393a27df1c037f02c2cf5d95d68c29b581",
+    "page_count": 92,
+    "recovered": true,
+    "compression": {
+      "tool": "ghostscript",
+      "preset": "ebook",
+      "command": "gs -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH",
+      "original_size_bytes": 10707706,
+      "original_sha256": "d7afd04a7270cf908fa47ba68b56712856b7c313c4751a4f9cd1c575281a7c11"
+    }
+  },
+  "text": {
+    "filename": "manual_text.txt",
+    "char_count": 201808,
+    "sha256": "79e6455b1c793ac4baead991429f3041ab495bd8475ed0ce59eccbe595c2b589"
+  },
+  "sources": [
+    {
+      "url": "https://www.michigan.gov/sos/-/media/Project/Websites/sos/Resources/Forms-and-publications/WEDMK/WEDMK.pdf",
+      "filename": "manual_part_1.pdf",
+      "size_bytes": 10707706,
+      "sha256": "d7afd04a7270cf908fa47ba68b56712856b7c313c4751a4f9cd1c575281a7c11"
+    }
+  ]
+}
