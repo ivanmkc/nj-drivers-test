@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "code": "or",
+  "name": "Oregon",
+  "agency": "DMV",
+  "manual_url": "https://www.oregon.gov/odot/forms/dmv/37.pdf",
+  "edition": "",
+  "source_description": "2025 Oregon Driver Manual (oregon.gov)",
+  "downloaded_at": "2026-04-29T12:00:00Z",
+  "extracted_with": "PyMuPDF 1.27.2",
+  "pdf": {
+    "filename": "manual.pdf",
+    "size_bytes": 4450216,
+    "sha256": "ea85db0a82b5343b1fc60224bb1cfd7619f7dfcd53825561a172b2a9f80acd73",
+    "page_count": 112,
+    "recovered": true,
+    "compression": {
+      "tool": "ghostscript",
+      "preset": "ebook",
+      "command": "gs -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH",
+      "original_size_bytes": 13386234,
+      "original_sha256": "1f294b0bae15b5de3de933adf6ce5beb8dd0d9573af9004bff76cd1a39fe029d"
+    }
+  },
+  "text": {
+    "filename": "manual_text.txt",
+    "char_count": 124946,
+    "sha256": "cb04597839032098133a75a4fda5a3b270e8a17cc8acb7ba647d546bc3860264"
+  },
+  "sources": []
+}
