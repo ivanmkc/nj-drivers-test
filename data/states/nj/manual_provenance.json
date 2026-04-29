@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "code": "nj",
+  "name": "New Jersey",
+  "agency": "MVC",
+  "manual_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+  "edition": "",
+  "source_description": "2025 New Jersey Driver Manual (www.njmvc.gov)",
+  "downloaded_at": "2026-04-29T12:00:00Z",
+  "extracted_with": "PyMuPDF 1.27.2",
+  "pdf": {
+    "filename": "manual.pdf",
+    "size_bytes": 35308487,
+    "sha256": "8104c6d2b741023439548bd83b4c950604f92a4d97aab42c4f79086a558f4172",
+    "page_count": 243,
+    "recovered": true,
+    "compression": {
+      "tool": "ghostscript",
+      "preset": "ebook",
+      "command": "gs -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH",
+      "original_size_bytes": 67048794,
+      "original_sha256": "8a39817ae134a219ef71d641ac4dc27c796e580811c04e2331e7b3e2f1ea257e"
+    }
+  },
+  "text": {
+    "filename": "manual_text.txt",
+    "char_count": 346861,
+    "sha256": "5a75b0afffddaa055977d16b23e5c456135a52a7eb2cc0476a6146a858cc99ca"
+  },
+  "sources": []
+}
