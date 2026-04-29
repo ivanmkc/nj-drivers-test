@@ -7,6 +7,7 @@
 ## US States (50 + DC)
 
 ### Complete
+- [x] GA — Georgia (DDS, 390 Qs, EN/JA/ES)
 - [x] NJ — New Jersey (MVC, 332 Qs, EN/JA/ES)
 - [x] NY — New York (DMV, 407 Qs, EN/JA/ES)
 
@@ -21,7 +22,6 @@
 - [ ] DE — Delaware (DMV)
 - [ ] DC — District of Columbia (DMV)
 - [ ] FL — Florida (DHSMV)
-- [ ] GA — Georgia (DDS)
 - [ ] HI — Hawaii (CDL)
 - [ ] ID — Idaho (ITD)
 - [ ] IL — Illinois (SOS)
