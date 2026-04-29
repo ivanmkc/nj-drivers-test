@@ -127,8 +127,8 @@ def test_verify_entry_403_then_ok_via_get_fallback() -> None:
     assert result.content_length == 3_145_728
 
 
-def test_verify_entry_redirect_to_200() -> None:
-    """allow_redirects=True means we see the final 200 — that's a pass."""
+def test_verify_entry_redirect_to_pdf_via_non_pdf_url() -> None:
+    """A /download endpoint that streams a PDF body is still ok."""
     entry = {"code": "ma", "manual_url": "https://www.mass.gov/doc/handbook/download"}
     final = _make_response(
         status=200,
@@ -136,14 +136,10 @@ def test_verify_entry_redirect_to_200() -> None:
         content_length=4_000_000,
         final_url="https://www.mass.gov/doc/english-drivers-manual/v2.pdf",
     )
-    # The path doesn't end in .pdf, so expected_pdf is False, but content-type
-    # is application/pdf — still flagged 'stale' because we expected text/html.
-    # That's a deliberate strictness: catalog should declare HTML or .pdf.
     sess = _session_returning(final)
     result = vm.verify_entry(entry, session=sess)
     assert result.http == 200
-    # Path didn't end in .pdf, so we expected HTML — got pdf -> stale.
-    assert result.verdict == "stale"
+    assert result.verdict == "ok"
 
 
 def test_verify_entry_html_index_ok() -> None:
@@ -337,3 +333,35 @@ def test_main_exit_code_always_zero(tmp_path: Any, monkeypatch: pytest.MonkeyPat
     monkeypatch.setattr(vm, "verify_all", fake_verify_all)
     rc = vm.main(["--catalog", str(catalog_file)])
     assert rc == 0
+
+
+# ---- catalog load/save with sentinel --------------------------------------
+
+
+def test_load_catalog_skips_schema_sentinel(tmp_path: Any) -> None:
+    catalog_file = tmp_path / "manual_urls.json"
+    catalog_file.write_text(
+        json.dumps(
+            [
+                {"_schema_doc": "see docs/maintaining-state-data.md"},
+                {"code": "vt", "manual_url": "https://dmv.vermont.gov/m.pdf"},
+            ]
+        )
+    )
+    entries = vm.load_catalog(str(catalog_file))
+    assert len(entries) == 1
+    assert entries[0]["code"] == "vt"
+
+
+def test_save_catalog_preserves_sentinel(tmp_path: Any) -> None:
+    catalog_file = tmp_path / "manual_urls.json"
+    sentinel = {"_schema_doc": "see docs/maintaining-state-data.md"}
+    catalog_file.write_text(
+        json.dumps([sentinel, {"code": "vt", "manual_url": "https://dmv.vermont.gov/m.pdf"}])
+    )
+    entries = vm.load_catalog(str(catalog_file))
+    entries[0]["last_verified"] = "2026-04-29"
+    vm.save_catalog(entries, str(catalog_file))
+    raw = json.loads(catalog_file.read_text())
+    assert raw[0] == sentinel
+    assert raw[1]["last_verified"] == "2026-04-29"

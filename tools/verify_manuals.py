@@ -73,20 +73,29 @@ class VerifyResult:
 
     @property
     def verdict(self) -> str:
-        """Single-word verdict: ``ok``, ``stale``, ``suspicious-host``, ``error``."""
+        """Single-word verdict: ``ok``, ``stale``, ``suspicious-host``, ``error``.
+
+        ``ok`` requires:
+        * No transport error.
+        * Host on the official-state-agency allowlist.
+        * HTTP 200 (after redirects).
+        * Content-Type is either ``application/pdf`` or ``text/html``.
+          When the URL path ends in ``.pdf``, the body MUST be ``application/pdf``
+          (otherwise the link has been silently retargeted to a landing page).
+        * Body is at least ``MIN_CONTENT_BYTES`` (or unknown — some servers
+          omit Content-Length).
+        """
         if self.error is not None:
             return "error"
         if not self.host_official:
             return "suspicious-host"
         if self.http != 200:
             return "stale"
-        if (
-            self.expected_pdf
-            and (self.content_type or "").split(";")[0].strip() != "application/pdf"
-        ):
+        ct = (self.content_type or "").split(";")[0].strip().lower()
+        if self.expected_pdf and ct != "application/pdf":
+            # .pdf URL silently retargeted to an HTML landing page.
             return "stale"
-        if not self.expected_pdf and not (self.content_type or "").startswith("text/html"):
-            # Allow HTML for non-pdf entries; anything else is suspect.
+        if ct not in ("application/pdf", "text/html"):
             return "stale"
         if self.content_length is not None and self.content_length < MIN_CONTENT_BYTES:
             return "stale"
@@ -287,6 +296,21 @@ def update_timestamps(
 
 
 def load_catalog(path: str = CATALOG_PATH) -> list[dict[str, Any]]:
+    """Load the catalog. Skips the leading ``_schema_doc`` sentinel if present.
+
+    Strict JSON doesn't allow comments, so the schema is documented at the top
+    of ``manual_urls.json`` via a sentinel object whose only key is
+    ``_schema_doc``. Real entries always have a ``code`` key.
+    """
+    with open(path) as f:
+        data = json.load(f)
+    if not isinstance(data, list):
+        raise ValueError(f"Expected JSON list at {path}, got {type(data).__name__}")
+    return [e for e in data if isinstance(e, dict) and "code" in e]
+
+
+def _load_raw_catalog(path: str) -> list[dict[str, Any]]:
+    """Load the raw JSON list, including any sentinel entries."""
     with open(path) as f:
         data = json.load(f)
     if not isinstance(data, list):
@@ -295,8 +319,16 @@ def load_catalog(path: str = CATALOG_PATH) -> list[dict[str, Any]]:
 
 
 def save_catalog(catalog: list[dict[str, Any]], path: str = CATALOG_PATH) -> None:
+    """Write back the catalog, preserving any leading sentinel (e.g. ``_schema_doc``)."""
+    try:
+        raw = _load_raw_catalog(path)
+        sentinels = [e for e in raw if isinstance(e, dict) and "code" not in e]
+    except (FileNotFoundError, ValueError):
+        sentinels = []
+    real_entries = [e for e in catalog if isinstance(e, dict) and "code" in e]
+    out = sentinels + real_entries
     with open(path, "w") as f:
-        json.dump(catalog, f, indent=2)
+        json.dump(out, f, indent=2)
         f.write("\n")
 
 
