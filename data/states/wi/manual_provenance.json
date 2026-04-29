@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "code": "wi",
+  "name": "Wisconsin",
+  "agency": "DMV",
+  "manual_url": "https://wisconsindot.gov/Documents/dmv/shared/bds126-motorists-handbook.pdf",
+  "edition": "",
+  "source_description": "2025 Wisconsin Motorists Handbook (wisconsindot.gov)",
+  "downloaded_at": "2026-04-29T12:00:00Z",
+  "extracted_with": "PyMuPDF 1.27.2",
+  "pdf": {
+    "filename": "manual.pdf",
+    "size_bytes": 2121330,
+    "sha256": "e82147e0f197d7fb1002e48bcb7e1a63353887506416058f3d84152c195d9568",
+    "page_count": 64,
+    "recovered": true,
+    "compression": {
+      "tool": "ghostscript",
+      "preset": "ebook",
+      "command": "gs -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH",
+      "original_size_bytes": 5073479,
+      "original_sha256": "9983bf68bce25ab758ad7db061be0d162aac4112a9804eb90a8a9c6044159ddd"
+    }
+  },
+  "text": {
+    "filename": "manual_text.txt",
+    "char_count": 96808,
+    "sha256": "0ba7ac920a29c9cbe3e5dc53f796468931566c39673685ca2b4c683c0b11b594"
+  },
+  "sources": []
+}
