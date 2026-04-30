@@ -29,7 +29,6 @@ python3 tools/setup_state.py <code> <name> <agency> <pass_pct> <test_count> <man
 python3 tools/generate_questions.py <code> data/states/<code>/manual.txt
 python3 tools/add_sign_questions.py <code>
 python3 tools/translate.py <code> es
-python3 tools/translate.py <code> ja
 
 # Web (Flask)
 cd web && python3 app.py                            # localhost:8080
@@ -51,7 +50,7 @@ cd android && ./gradlew ktlintCheck                 # Lint Kotlin code
 
 - **All questions must be grounded in official state driver manuals.** Never generate questions from LLM knowledge alone. Every state's `config.json` must include a real `manual_url`.
 - **YAML is the source format; JSON/gzip is compiled.** Edit questions in `data/states/<code>/questions_<lang>.yaml`, then run `bundle.py`. Never edit bundle files directly.
-- **English (en) is always required.** Spanish (es) and Japanese (ja) translations are optional. Translations are generated via Gemini, not hand-written.
+- **English (en) is always required.** Spanish (es) is high-value and should be generated for new states. Japanese (ja) is no longer in scope — existing JA files for already-shipped states stay; do NOT generate new ones. Translations are generated via Gemini, not hand-written.
 - **Bundle rebuilds on every app build.** iOS (Xcode run script phase), Android (Gradle `bundleQuestions` task), and CI all run `bundle.py` automatically.
 - **Python scripts run from the repo root.** Always `python3 tools/<script>.py`, not `cd tools && python3 script.py`.
 
