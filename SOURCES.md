@@ -4,13 +4,20 @@ All questions are generated from **official state driver manuals** using Gemini 
 
 Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) signs sourced from Wikimedia Commons — these are US government works in the public domain.
 
-## States (29)
+## States (30)
 
 ### Alabama (AL)
 - **Source**: [Alabama Driver Manual](https://www.alea.gov/sites/default/files/inline-files/driverlicensemanual.pdf)
 - **Agency**: ALEA
 - **Passing**: 80% (24/30 questions)
 - **Questions**: 292
+- **Languages**: EN, ES
+
+### Arkansas (AR)
+- **Source**: [Arkansas Driver License Study Guide, Volume 1 - Edition 10 (January 2026)](https://dps.arkansas.gov/wp-content/uploads/Arkansas-DL-Manual-English.pdf)
+- **Agency**: ASP
+- **Passing**: 80% (20/25 questions)
+- **Questions**: 296
 - **Languages**: EN, ES
 
 ### Arizona (AZ)
@@ -209,11 +216,11 @@ Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) 
 - **Questions**: 321
 - **Languages**: EN, ES, JA
 
-## Not Yet Sourced (22)
+## Not Yet Sourced (21)
 
 The following states do not yet have question sets. Their DMV websites block automated PDF downloads, so the official manuals need to be downloaded manually in a browser and placed at `/tmp/<code>_manual.pdf` for processing.
 
-AK (Alaska), AR (Arkansas), CT (Connecticut), DC (District of Columbia), DE (Delaware), HI (Hawaii), ID (Idaho), LA (Louisiana), ME (Maine), MS (Mississippi), MT (Montana), ND (North Dakota), NE (Nebraska), NH (New Hampshire), NM (New Mexico), OK (Oklahoma), RI (Rhode Island), SD (South Dakota), UT (Utah), VT (Vermont), WV (West Virginia), WY (Wyoming)
+AK (Alaska), CT (Connecticut), DC (District of Columbia), DE (Delaware), HI (Hawaii), ID (Idaho), LA (Louisiana), ME (Maine), MS (Mississippi), MT (Montana), ND (North Dakota), NE (Nebraska), NH (New Hampshire), NM (New Mexico), OK (Oklahoma), RI (Rhode Island), SD (South Dakota), UT (Utah), VT (Vermont), WV (West Virginia), WY (Wyoming)
 
 ## Road Sign Images
 

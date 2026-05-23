@@ -4,10 +4,11 @@
 - [x] Complete (questions + translations + sign images)
 - [ ] Not started
 
-## US States (50 + DC) — 29 / 51 complete
+## US States (50 + DC) — 30 / 51 complete
 
-### Complete (29)
+### Complete (30)
 - [x] AL — Alabama (ALEA, 292 Qs, EN/ES)
+- [x] AR — Arkansas (ASP, 296 Qs, EN/ES)
 - [x] AZ — Arizona (MVD, 295 Qs, EN/ES)
 - [x] CA — California (DMV, 284 Qs, EN/ES/JA)
 - [x] CO — Colorado (DMV, 255 Qs, EN/ES)
@@ -37,9 +38,8 @@
 - [x] WA — Washington (DOL, 376 Qs, EN/ES/JA)
 - [x] WI — Wisconsin (DMV, 321 Qs, EN/ES/JA)
 
-### To Do (22)
+### To Do (21)
 - [ ] AK — Alaska (DMV)
-- [ ] AR — Arkansas (DFA)
 - [ ] CT — Connecticut (DMV)
 - [ ] DE — Delaware (DMV)
 - [ ] DC — District of Columbia (DMV)
