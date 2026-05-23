@@ -4,7 +4,7 @@ All questions are generated from **official state driver manuals** using Gemini 
 
 Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) signs sourced from Wikimedia Commons — these are US government works in the public domain.
 
-## States (30)
+## States (31)
 
 ### Alabama (AL)
 - **Source**: [Alabama Driver Manual](https://www.alea.gov/sites/default/files/inline-files/driverlicensemanual.pdf)
@@ -88,6 +88,13 @@ Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) 
 - **Agency**: KYTC
 - **Passing**: 80% (32/40 questions)
 - **Questions**: 357
+- **Languages**: EN, ES
+
+### Louisiana (LA)
+- **Source**: [2017 Louisiana Class D & E Driver's Guide](https://dpsweb.dps.louisiana.gov/DPSForms.nsf/8bad5589175b8981862575f20048ee65/5402fbe0178e092686257c1a005ff1cb?OpenDocument)
+- **Agency**: OMV
+- **Passing**: 80% (32/40 questions)
+- **Questions**: 588
 - **Languages**: EN, ES
 
 ### Maryland (MD)
@@ -216,11 +223,11 @@ Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) 
 - **Questions**: 321
 - **Languages**: EN, ES, JA
 
-## Not Yet Sourced (21)
+## Not Yet Sourced (20)
 
 The following states do not yet have question sets. Their DMV websites block automated PDF downloads, so the official manuals need to be downloaded manually in a browser and placed at `/tmp/<code>_manual.pdf` for processing.
 
-AK (Alaska), CT (Connecticut), DC (District of Columbia), DE (Delaware), HI (Hawaii), ID (Idaho), LA (Louisiana), ME (Maine), MS (Mississippi), MT (Montana), ND (North Dakota), NE (Nebraska), NH (New Hampshire), NM (New Mexico), OK (Oklahoma), RI (Rhode Island), SD (South Dakota), UT (Utah), VT (Vermont), WV (West Virginia), WY (Wyoming)
+AK (Alaska), CT (Connecticut), DC (District of Columbia), DE (Delaware), HI (Hawaii), ID (Idaho), ME (Maine), MS (Mississippi), MT (Montana), ND (North Dakota), NE (Nebraska), NH (New Hampshire), NM (New Mexico), OK (Oklahoma), RI (Rhode Island), SD (South Dakota), UT (Utah), VT (Vermont), WV (West Virginia), WY (Wyoming)
 
 ## Road Sign Images
 
