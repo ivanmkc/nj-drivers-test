@@ -174,7 +174,7 @@ QUESTIONS TO JUDGE:
             response_mime_type="application/json",
             response_schema=FaithfulnessReport,
             thinking_config=types.ThinkingConfig(thinking_budget=0),
-            max_output_tokens=8192,
+            max_output_tokens=32768,
         ),
     )
     if response.text is None:
