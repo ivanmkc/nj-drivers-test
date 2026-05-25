@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "code": "dc",
+  "name": "District of Columbia",
+  "agency": "DMV",
+  "manual_url": "https://dmv.dc.gov/publication/dc-dmv-automobile-driver-manual",
+  "source_description": "DC DMV Automobile Driver Manual (dmv.dc.gov)",
+  "edition": "2024",
+  "downloaded_at": "2026-05-25T16:53:13Z",
+  "extracted_with": "",
+  "pdf": {
+    "filename": "manual.pdf",
+    "recovered": false
+  },
+  "text": {},
+  "sources": [],
+  "note": "DC DMV publishes the Automobile Driver Manual only as an Issuu flipbook (https://issuu.com/dcdmv/docs/dc_dmv_driver_manual_english_revised_final). No direct PDF is hosted on dmv.dc.gov. Issuu is fully JS-rendered (Next.js BAILOUT_TO_CLIENT_SIDE_RENDERING), so the source bytes aren't recoverable without browser automation. Third-party mirrors exist but the project's official-.gov-only rule excludes them. Resolution requires either (a) DC DMV publishing a direct PDF or (b) headless-browser automation to scrape Issuu (out of scope for this round)."
+}
