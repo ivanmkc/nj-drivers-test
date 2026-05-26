@@ -129,6 +129,123 @@ class TopicExtractionReport(BaseModel):
     )
 
 
+class TopicCoverageJudgment(BaseModel):
+    """LLM judgment for one topic against the question bank."""
+
+    topic: str = Field(description="The topic being judged, verbatim from input")
+    is_covered: bool = Field(
+        description=(
+            "True if at least one question in the bank tests this topic with adequate "
+            "depth (asks the test-taker to know a key fact about the topic). False if "
+            "the topic is unaddressed or only mentioned tangentially."
+        )
+    )
+    covering_question_ids: list[int] = Field(
+        default_factory=list,
+        max_length=5,
+        description="Up to 5 question IDs that test this topic (empty if not covered)",
+    )
+    note: str = Field(
+        default="",
+        description="One-sentence explanation (especially when is_covered=False)",
+    )
+
+
+class TopicCoverageReport(BaseModel):
+    judgments: list[TopicCoverageJudgment] = Field(
+        description="One judgment per input topic, in input order"
+    )
+
+
+# ---------------------------------------------------------------------------
+# Top-level structured report — saved to data/states/<code>/verification_report.json
+# ---------------------------------------------------------------------------
+
+
+class SourceInfo(BaseModel):
+    manual_url: str
+    manual_pdf_sha256: str | None = None
+    manual_text_sha256: str | None = None
+    manual_text_chars: int
+    manual_pages: int | None = None
+    edition: str | None = None
+
+
+class BankInfo(BaseModel):
+    total_questions: int
+    non_sign_questions: int
+    sign_questions: int
+    languages: list[str]
+
+
+class PrecisionMetric(BaseModel):
+    """Faithfulness gate output."""
+
+    method: str = (
+        "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions"
+    )
+    sample_size: int
+    judged_count: int
+    avg_fidelity: float
+    pct_at_10: float
+    pct_above_9: float
+    pct_above_7: float
+    pct_zero: float
+    flagged_question_ids: list[int]
+    verdict: str  # PASS | SOFT_WARN | HARD_FAIL
+    grade: str  # A-F
+
+
+class RecallMetric(BaseModel):
+    """Topic-coverage gate output (LLM-judged per topic)."""
+
+    method: str = (
+        "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic"
+    )
+    topics_total: int
+    topics_covered: int
+    coverage_pct: float
+    uncovered_topics: list[str]
+    verdict: str
+    grade: str
+
+
+class CoverageMetric(BaseModel):
+    """Structural distribution: category balance, density, sign ratio."""
+
+    method: str = "Category distribution + density (Qs/1000 manual chars) + sign ratio"
+    category_distribution: dict[str, int]
+    missing_categories: list[str]
+    over_concentrated_categories: list[str]  # >40% in one category
+    density_qs_per_1000_chars: float
+    sign_ratio_pct: float
+    verdict: str
+    grade: str
+
+
+class VerificationReport(BaseModel):
+    """Top-level structured verification artifact, written per-state.
+
+    Mirrors the unheard-past verify_book.py pattern: pydantic-typed, machine-readable,
+    reproducible, with measurable precision/recall/coverage metrics against the source
+    manual as ground truth.
+    """
+
+    schema_version: int = 1
+    code: str
+    name: str
+    verified_at: str  # ISO-8601 UTC
+    quiz_gates_version: str = "v1"
+    source: SourceInfo
+    bank: BankInfo
+    precision: PrecisionMetric
+    recall: RecallMetric
+    coverage: CoverageMetric
+    overall_verdict: str  # PASS | SOFT_WARN | HARD_FAIL | INCOMPLETE
+    overall_grade: str  # A | B | C | D | F | INCOMPLETE
+    notes: str = ""
+
+
 # ---------------------------------------------------------------------------
 # Gate 1: faithfulness
 # ---------------------------------------------------------------------------
@@ -263,23 +380,65 @@ MANUAL TEXT:
     return TopicExtractionReport.model_validate_json(response.text).topics
 
 
-def topic_covered(topic: CriticalTopic, questions: list[dict[str, Any]]) -> list[int]:
-    """Return question IDs that cover this topic.
-
-    A question covers the topic if it contains the topic's most-distinctive single keyword
-    (longest, after dropping stopwords). This is intentionally permissive — the gate is
-    a coarse signal; a v2 should swap this for an LLM-judged per-topic call.
-    """
-    if not topic.keywords:
-        return []
-    # Use the longest keyword as the strongest signal (filters generic stopwords).
-    anchor = max(topic.keywords, key=len).lower()
-    covering: list[int] = []
+def _format_questions_for_topic_judge(questions: list[dict[str, Any]]) -> str:
+    """Compact one-line-per-question summary for the topic-coverage LLM prompt."""
+    lines = []
     for q in questions:
-        text = (q.get("question", "") + " " + q.get("explanation", "")).lower()
-        if anchor in text:
-            covering.append(q["id"])
-    return covering
+        # Skip image questions — they don't carry topic-specific text.
+        if "image" in q:
+            continue
+        qid = q.get("id", "?")
+        qtext = q.get("question", "").replace("\n", " ").strip()
+        answer = q.get("answer", "")
+        choices = q.get("choices", {})
+        atext = str(choices.get(answer, "")).replace("\n", " ").strip()
+        # Truncate to keep prompt size bounded
+        if len(qtext) > 200:
+            qtext = qtext[:200] + "..."
+        if len(atext) > 100:
+            atext = atext[:100] + "..."
+        lines.append(f"Q{qid}: {qtext} → ({answer}) {atext}")
+    return "\n".join(lines)
+
+
+def judge_topic_coverage(
+    topics: list[CriticalTopic],
+    questions: list[dict[str, Any]],
+    state_name: str,
+) -> list[TopicCoverageJudgment]:
+    """LLM-judged per-topic coverage. Replaces brittle keyword matching."""
+    questions_block = _format_questions_for_topic_judge(questions)
+    topics_block = "\n".join(f"- {t.topic}" for t in topics)
+    prompt = f"""You are auditing a {state_name} driver's-test question bank for topic coverage.
+
+For each TOPIC below, judge whether at least one QUESTION in the bank tests it with adequate depth (the question asks the test-taker to know a key fact about the topic, not just mention it tangentially).
+
+TOPICS TO JUDGE ({len(topics)} total):
+{topics_block}
+
+QUESTIONS IN BANK (id, question text, correct-answer text):
+{questions_block}
+
+For each topic, return:
+- is_covered: true/false
+- covering_question_ids: up to 5 question IDs that test the topic
+- note: one sentence (especially useful when is_covered=false)
+
+The order of judgments MUST match the order of topics above."""
+    response = CLIENT.models.generate_content(
+        model=MODEL_JUDGE,
+        contents=prompt,
+        config=types.GenerateContentConfig(
+            temperature=0.0,
+            response_mime_type="application/json",
+            response_schema=TopicCoverageReport,
+            thinking_config=types.ThinkingConfig(thinking_budget=0),
+            max_output_tokens=32768,
+        ),
+    )
+    if response.text is None:
+        raise RuntimeError("Empty topic-coverage judge response")
+    return TopicCoverageReport.model_validate_json(response.text).judgments
 
 
 def run_coverage_gate(
@@ -287,9 +446,17 @@ def run_coverage_gate(
     manual_text: str,
     state_name: str,
 ) -> tuple[list[tuple[CriticalTopic, list[int]]], dict[str, Any]]:
-    """Run the coverage gate. Returns (per-topic results, summary stats)."""
+    """Run the recall (topic-coverage) gate via LLM judge."""
     topics = extract_critical_topics(manual_text, state_name)
-    results = [(t, topic_covered(t, questions)) for t in topics]
+    judgments = judge_topic_coverage(topics, questions, state_name)
+
+    # Align judgments to topics in case the LLM reordered.
+    by_topic = {j.topic.strip().lower(): j for j in judgments}
+    results = []
+    for t in topics:
+        j = by_topic.get(t.topic.strip().lower())
+        qids = j.covering_question_ids if (j and j.is_covered) else []
+        results.append((t, qids))
 
     n_topics = len(results)
     n_covered = sum(1 for _, qids in results if qids)
@@ -299,6 +466,7 @@ def run_coverage_gate(
         "total_topics": n_topics,
         "covered_topics": n_covered,
         "coverage_pct": round(coverage_pct, 1),
+        "uncovered_topics": [t.topic for t, qids in results if not qids],
         "verdict": _coverage_verdict(coverage_pct),
     }
     return results, summary
@@ -310,6 +478,73 @@ def _coverage_verdict(pct: float) -> str:
     if pct < SOFT_FAIL_COVERAGE_PCT:
         return "SOFT_WARN"
     return "PASS"
+
+
+# ---------------------------------------------------------------------------
+# Coverage gate (structural distribution — categories, density, sign ratio)
+# ---------------------------------------------------------------------------
+
+VALID_CATEGORIES = {
+    "license_system",
+    "driver_testing",
+    "driver_responsibility",
+    "safe_driving_rules",
+    "defensive_driving",
+    "alcohol_drugs_health",
+    "penalties_and_points",
+    "sharing_the_road",
+    "vehicle_information",
+    "signs_and_signals",
+}
+OVER_CONCENTRATION_PCT = 40.0
+
+
+def run_structural_coverage_gate(
+    questions: list[dict[str, Any]],
+    manual_text: str,
+) -> CoverageMetric:
+    """Compute category distribution, density, sign ratio — no LLM call."""
+    from collections import Counter
+
+    total = len(questions)
+    sign_count = sum(1 for q in questions if "image" in q)
+
+    cat_counts = Counter(q.get("category", "?") for q in questions)
+    distribution = dict(cat_counts)
+
+    missing = sorted(VALID_CATEGORIES - set(distribution.keys()))
+
+    over_concentrated = []
+    if total:
+        for cat, n in distribution.items():
+            if (n / total) * 100.0 > OVER_CONCENTRATION_PCT:
+                over_concentrated.append(cat)
+
+    density = (total / (len(manual_text) / 1000.0)) if manual_text else 0.0
+    sign_ratio = (sign_count / total * 100.0) if total else 0.0
+
+    # Verdict: deduct 5 per missing category, 10 per over-concentrated.
+    score = 100 - 5 * len(missing) - 10 * len(over_concentrated)
+    if score >= 90:
+        verdict, grade = "PASS", "A"
+    elif score >= 80:
+        verdict, grade = "PASS", "B"
+    elif score >= 70:
+        verdict, grade = "SOFT_WARN", "C"
+    elif score >= 60:
+        verdict, grade = "SOFT_WARN", "D"
+    else:
+        verdict, grade = "HARD_FAIL", "F"
+
+    return CoverageMetric(
+        category_distribution=distribution,
+        missing_categories=missing,
+        over_concentrated_categories=over_concentrated,
+        density_qs_per_1000_chars=round(density, 2),
+        sign_ratio_pct=round(sign_ratio, 1),
+        verdict=verdict,
+        grade=grade,
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -338,91 +573,229 @@ def _load_state(code: str) -> tuple[list[dict[str, Any]], str, str]:
     return questions, manual_text, state_name
 
 
+def _grade_precision(avg: float, pct_zero: float) -> str:
+    if pct_zero > MAX_HARD_FAIL_QUESTIONS_PCT:
+        return "F"
+    if avg >= 9.5:
+        return "A"
+    if avg >= 9.0:
+        return "B"
+    if avg >= 8.0:
+        return "C"
+    if avg >= 7.0:
+        return "D"
+    return "F"
+
+
+def _grade_recall(pct: float) -> str:
+    if pct >= 90:
+        return "A"
+    if pct >= 80:
+        return "B"
+    if pct >= 70:
+        return "C"
+    if pct >= 60:
+        return "D"
+    return "F"
+
+
+def _overall_grade(p: str, r: str, c: str) -> str:
+    if "F" in (p, r, c):
+        return "F"
+    rank = {"A": 4, "B": 3, "C": 2, "D": 1, "F": 0}
+    gpa = (rank[p] + rank[r] + rank[c]) / 3
+    if gpa >= 3.5:
+        return "A"
+    if gpa >= 2.5:
+        return "B"
+    if gpa >= 1.5:
+        return "C"
+    if gpa >= 0.5:
+        return "D"
+    return "F"
+
+
+def build_verification_report(
+    code: str,
+    questions: list[dict[str, Any]],
+    manual_text: str,
+    state_name: str,
+    sample_size: int | None,
+) -> VerificationReport:
+    """Run all three gates and assemble a structured VerificationReport."""
+    import hashlib
+    from datetime import datetime, timezone
+
+    state_dir = os.path.join(STATES_DIR, code)
+    config_path = os.path.join(state_dir, "config.json")
+    prov_path = os.path.join(state_dir, "manual_provenance.json")
+    es_path = os.path.join(state_dir, "questions_es.yaml")
+    ja_path = os.path.join(state_dir, "questions_ja.yaml")
+
+    config = json.load(open(config_path)) if os.path.exists(config_path) else {}
+    provenance = json.load(open(prov_path)) if os.path.exists(prov_path) else {}
+
+    languages = ["EN"]
+    if os.path.exists(es_path):
+        languages.append("ES")
+    if os.path.exists(ja_path):
+        languages.append("JA")
+
+    source = SourceInfo(
+        manual_url=config.get("manual_url", provenance.get("manual_url", "")),
+        manual_pdf_sha256=(provenance.get("pdf") or {}).get("sha256"),
+        manual_text_sha256=(provenance.get("text") or {}).get("sha256")
+        or hashlib.sha256(manual_text.encode()).hexdigest(),
+        manual_text_chars=len(manual_text),
+        manual_pages=(provenance.get("pdf") or {}).get("page_count"),
+        edition=provenance.get("edition"),
+    )
+
+    sign_count = sum(1 for q in questions if "image" in q)
+    bank = BankInfo(
+        total_questions=len(questions),
+        non_sign_questions=len(questions) - sign_count,
+        sign_questions=sign_count,
+        languages=languages,
+    )
+
+    # --- Precision (faithfulness) ---
+    print("[Precision: faithfulness]")
+    anchors, faith_summary = run_faithfulness_gate(questions, manual_text, state_name, sample_size)
+    n = faith_summary["total_judged"]
+    pct_at_10 = (sum(1 for a in anchors if a.fidelity == 10) / n * 100.0) if n else 0.0
+    pct_above_9 = (sum(1 for a in anchors if a.fidelity >= 9) / n * 100.0) if n else 0.0
+    pct_above_7 = (sum(1 for a in anchors if a.fidelity >= 7) / n * 100.0) if n else 0.0
+    pct_zero = (faith_summary["zero_fidelity"] / n * 100.0) if n else 0.0
+    precision = PrecisionMetric(
+        sample_size=sample_size if sample_size else 0,
+        judged_count=n,
+        avg_fidelity=faith_summary["avg_fidelity"],
+        pct_at_10=round(pct_at_10, 1),
+        pct_above_9=round(pct_above_9, 1),
+        pct_above_7=round(pct_above_7, 1),
+        pct_zero=round(pct_zero, 1),
+        flagged_question_ids=[a.question_id for a in anchors if a.fidelity < HARD_FAIL_FIDELITY],
+        verdict=faith_summary["verdict"],
+        grade=_grade_precision(faith_summary["avg_fidelity"], pct_zero),
+    )
+
+    # --- Recall (topic coverage, LLM-judged) ---
+    print("\n[Recall: topic-coverage, LLM-judged]")
+    _, recall_summary = run_coverage_gate(questions, manual_text, state_name)
+    recall = RecallMetric(
+        topics_total=recall_summary["total_topics"],
+        topics_covered=recall_summary["covered_topics"],
+        coverage_pct=recall_summary["coverage_pct"],
+        uncovered_topics=recall_summary["uncovered_topics"],
+        verdict=recall_summary["verdict"],
+        grade=_grade_recall(recall_summary["coverage_pct"]),
+    )
+
+    # --- Coverage (structural distribution) ---
+    print("\n[Coverage: structural distribution]")
+    coverage = run_structural_coverage_gate(questions, manual_text)
+
+    # --- Overall ---
+    rank = {"PASS": 0, "SOFT_WARN": 1, "HARD_FAIL": 2}
+    overall_verdict = max(
+        precision.verdict, recall.verdict, coverage.verdict, key=lambda v: rank[v]
+    )
+    overall_grade = _overall_grade(precision.grade, recall.grade, coverage.grade)
+
+    return VerificationReport(
+        code=code,
+        name=state_name,
+        verified_at=datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        source=source,
+        bank=bank,
+        precision=precision,
+        recall=recall,
+        coverage=coverage,
+        overall_verdict=overall_verdict,
+        overall_grade=overall_grade,
+    )
+
+
+def write_verification_report(code: str, report: VerificationReport) -> str:
+    """Write verification_report.json to data/states/<code>/."""
+    state_dir = os.path.join(STATES_DIR, code)
+    os.makedirs(state_dir, exist_ok=True)
+    out_path = os.path.join(state_dir, "verification_report.json")
+    with open(out_path, "w") as f:
+        f.write(report.model_dump_json(indent=2) + "\n")
+    return out_path
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("code", help="State code (e.g. 'nj')")
     parser.add_argument(
-        "--gate",
-        choices=["faithfulness", "coverage", "both"],
-        default="both",
-    )
-    parser.add_argument(
         "--sample",
         type=int,
         default=DEFAULT_SAMPLE_SIZE,
-        help=f"Random sample size for faithfulness (default {DEFAULT_SAMPLE_SIZE}, 0 = all)",
+        help=f"Random sample size for precision gate (default {DEFAULT_SAMPLE_SIZE}, 0 = all)",
     )
     parser.add_argument(
         "--block-on-fail",
         action="store_true",
         help="Exit 2 on hard fail (default: always exit 0 with report)",
     )
+    parser.add_argument(
+        "--write-report",
+        action="store_true",
+        help="Write data/states/<code>/verification_report.json with structured pydantic output",
+    )
     args = parser.parse_args(argv)
 
     questions, manual_text, state_name = _load_state(args.code)
     print(
-        f"\n{state_name} ({args.code.upper()}) — {len(questions)} questions, {len(manual_text):,} manual chars\n"
+        f"\n{state_name} ({args.code.upper()}) — {len(questions)} questions, {len(manual_text):,} manual chars"
     )
 
-    overall_verdict = "PASS"
+    sample = args.sample if args.sample > 0 else None
+    report = build_verification_report(args.code, questions, manual_text, state_name, sample)
 
-    if args.gate in ("faithfulness", "both"):
-        print("[Gate 1: Faithfulness]")
-        sample = args.sample if args.sample > 0 else None
-        anchors, summary = run_faithfulness_gate(questions, manual_text, state_name, sample)
-        _print_faithfulness(anchors, summary)
-        overall_verdict = _worst(overall_verdict, summary["verdict"])
+    # Pretty-print summary to stdout.
+    print(
+        f"\n  Precision: avg={report.precision.avg_fidelity}/10  "
+        f"pct@10={report.precision.pct_at_10}%  "
+        f"flagged={len(report.precision.flagged_question_ids)}  "
+        f"verdict={report.precision.verdict}  grade={report.precision.grade}"
+    )
+    print(
+        f"  Recall:    {report.recall.topics_covered}/{report.recall.topics_total} topics  "
+        f"({report.recall.coverage_pct}%)  "
+        f"verdict={report.recall.verdict}  grade={report.recall.grade}"
+    )
+    print(
+        f"  Coverage:  {len(report.coverage.category_distribution)} categories  "
+        f"density={report.coverage.density_qs_per_1000_chars} Qs/1k chars  "
+        f"signs={report.coverage.sign_ratio_pct}%  "
+        f"verdict={report.coverage.verdict}  grade={report.coverage.grade}"
+    )
+    if report.coverage.missing_categories:
+        print(f"             missing categories: {', '.join(report.coverage.missing_categories)}")
+    if report.coverage.over_concentrated_categories:
+        print(
+            f"             over-concentrated:  {', '.join(report.coverage.over_concentrated_categories)}"
+        )
+    if report.recall.uncovered_topics:
+        print(f"  Uncovered topics ({len(report.recall.uncovered_topics)}):")
+        for t in report.recall.uncovered_topics[:10]:
+            print(f"    - {t}")
+        if len(report.recall.uncovered_topics) > 10:
+            print(f"    ... and {len(report.recall.uncovered_topics) - 10} more")
 
-    if args.gate in ("coverage", "both"):
-        print("\n[Gate 2: Coverage]")
-        results, summary = run_coverage_gate(questions, manual_text, state_name)
-        _print_coverage(results, summary)
-        overall_verdict = _worst(overall_verdict, summary["verdict"])
+    print(f"\n  === Overall: {report.overall_verdict} (grade {report.overall_grade}) ===")
 
-    print(f"\n=== {state_name} verdict: {overall_verdict} ===")
+    if args.write_report:
+        out = write_verification_report(args.code, report)
+        print(f"\nWrote {out}")
+
     if not args.block_on_fail:
         return 0
-    return {"PASS": 0, "SOFT_WARN": 1, "HARD_FAIL": 2}[overall_verdict]
-
-
-def _worst(a: str, b: str) -> str:
-    rank = {"PASS": 0, "SOFT_WARN": 1, "HARD_FAIL": 2}
-    return a if rank[a] >= rank[b] else b
-
-
-def _print_faithfulness(anchors: list[QuestionAnchor], summary: dict[str, Any]) -> None:
-    print(
-        f"  judged={summary['total_judged']}  "
-        f"avg={summary['avg_fidelity']}/10  "
-        f"<{HARD_FAIL_FIDELITY}={summary['below_hard_threshold']}  "
-        f"<{SOFT_FAIL_FIDELITY}={summary['below_soft_threshold']}  "
-        f"zero={summary['zero_fidelity']}  "
-        f"verdict={summary['verdict']}"
-    )
-    flagged = [a for a in anchors if a.fidelity < HARD_FAIL_FIDELITY]
-    if flagged:
-        print(f"  Flagged ({len(flagged)} questions):")
-        for a in flagged[:20]:
-            print(f"    Q{a.question_id} fidelity={a.fidelity}: {a.issue}")
-        if len(flagged) > 20:
-            print(f"    ... and {len(flagged) - 20} more")
-
-
-def _print_coverage(
-    results: list[tuple[CriticalTopic, list[int]]],
-    summary: dict[str, Any],
-) -> None:
-    print(
-        f"  topics={summary['total_topics']}  "
-        f"covered={summary['covered_topics']}  "
-        f"pct={summary['coverage_pct']}%  "
-        f"verdict={summary['verdict']}"
-    )
-    uncovered = [(t, qids) for t, qids in results if not qids]
-    if uncovered:
-        print(f"  Uncovered topics ({len(uncovered)}):")
-        for t, _ in uncovered:
-            print(f"    - {t.topic}")
+    return {"PASS": 0, "SOFT_WARN": 1, "HARD_FAIL": 2}[report.overall_verdict]
 
 
 if __name__ == "__main__":
