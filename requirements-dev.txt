@@ -1,2 +1,5 @@
 ruff==0.15.10
 pyright==1.1.408
+# Used by tools/cross_state_dedupe.py for TF-IDF + cosine-similarity clustering
+# of question stems across states (item 7 of #59).
+scikit-learn==1.8.0
