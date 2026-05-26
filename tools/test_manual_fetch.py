@@ -22,6 +22,48 @@ def test_assemble_single_pdf_writes_file(tmp_path: Any) -> None:
     assert out.read_text() == "vermont chapter text"
 
 
+def test_extract_edition_revised_month_year() -> None:
+    text = "South Dakota Driver Manual\nRevised: December 2023\nDepartment of Public Safety"
+    assert mf._extract_edition_from_text(text) == "Rev December 2023"
+
+
+def test_extract_edition_revised_numeric() -> None:
+    assert mf._extract_edition_from_text("rev. 8/2023 issued by ...") == "Rev 08/2023"
+    assert mf._extract_edition_from_text("Revised 11/23 — internal copy") == "Rev 11/2023"
+
+
+def test_extract_edition_year_with_edition_word() -> None:
+    assert mf._extract_edition_from_text("2025 Driver's Handbook · published Jan 2025") == "2025"
+    assert mf._extract_edition_from_text("June 2016 Edition · DMV") == "June 2016"
+
+
+def test_extract_edition_year_range() -> None:
+    # Oregon style cover spread
+    assert mf._extract_edition_from_text("Oregon Driver Manual\n2026-2027") == "2026-2027"
+
+
+def test_extract_edition_standalone_month_year() -> None:
+    assert mf._extract_edition_from_text("NV DMV\nApril 2024") == "April 2024"
+
+
+def test_extract_edition_copyright_fallback() -> None:
+    assert mf._extract_edition_from_text("Some text\n© 2025 State of Foo, DMV") == "2025"
+
+
+def test_extract_edition_returns_empty_when_no_match() -> None:
+    # Just driving content with no date marker
+    assert (
+        mf._extract_edition_from_text("Drivers must yield at every uncontrolled intersection.")
+        == ""
+    )
+
+
+def test_extract_edition_picks_most_specific_first() -> None:
+    # Both "Revised April 2024" AND "© 2020" present — the rev pattern wins (higher specificity).
+    text = "Driver Manual · Revised April 2024 · © 2020"
+    assert mf._extract_edition_from_text(text) == "Rev April 2024"
+
+
 def test_assemble_prefers_recovery_url(tmp_path: Any) -> None:
     entry = {
         "code": "sd",

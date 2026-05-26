@@ -6,10 +6,12 @@ Usage:
     python translate.py ny es          # NY questions -> Spanish
 """
 
+import hashlib
 import json
 import os
 import sys
 import time
+from datetime import datetime, timezone
 
 import yaml
 from _util import questions_path, resolve_state_paths, retry_with_backoff, strip_code_fences
@@ -91,8 +93,10 @@ def main() -> None:
         print(f"Source file not found: {input_path}")
         sys.exit(1)
 
-    with open(input_path) as f:
-        data = yaml.safe_load(f)
+    with open(input_path, "rb") as f:
+        en_bytes = f.read()
+    en_sha256 = hashlib.sha256(en_bytes).hexdigest()
+    data = yaml.safe_load(en_bytes)
 
     questions = data["questions"]
     translated = []
@@ -136,6 +140,14 @@ def main() -> None:
             "total_questions": len(translated),
             "language": lang_code,
             "categories": data["metadata"].get("categories", []),
+            # Per #59 item 6: translation provenance. audit_questions.py flags
+            # ES whose en_source_sha256 doesn't match current questions_en.yaml,
+            # so a maintainer who regenerates EN without retranslating gets caught.
+            "translation": {
+                "translated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                "translated_by": MODEL,
+                "en_source_sha256": en_sha256,
+            },
         },
         "questions": translated,
     }
