@@ -214,6 +214,87 @@ def test_verify_entry_no_url() -> None:
     assert result.error == "no URL configured"
 
 
+# ---- recovery_url ----------------------------------------------------------
+
+
+def _sequential_session(*responses: MagicMock) -> MagicMock:
+    """Build a session whose .head returns a different response on each call."""
+    sess = MagicMock(spec=requests.Session)
+    sess.head.side_effect = list(responses)
+    sess.get.side_effect = list(responses)
+    return sess
+
+
+def test_verify_entry_recovery_promotes_to_recovered() -> None:
+    canonical_dead = _make_response(status=200, content_type="text/html", content_length=2000)
+    recovery_pdf = _make_response(
+        status=200, content_type="application/pdf", content_length=2_300_000
+    )
+    entry = {
+        "code": "sd",
+        "manual_url": "https://dps.sd.gov/files/sd-driver-manual.pdf",
+        "recovery_url": "https://web.archive.org/web/2024/https://dps.sd.gov/files/sd-driver-manual.pdf",
+    }
+    sess = _sequential_session(canonical_dead, recovery_pdf)
+    result = vm.verify_entry(entry, session=sess)
+    assert result.verdict == "recovered"
+    assert result.recovery_url == entry["recovery_url"]
+    assert result.recovery_http == 200
+    assert result.recovery_content_type == "application/pdf"
+
+
+def test_verify_entry_recovery_not_probed_when_canonical_ok() -> None:
+    canonical_pdf = _make_response(
+        status=200, content_type="application/pdf", content_length=2_000_000
+    )
+    entry = {
+        "code": "sd",
+        "manual_url": "https://dps.sd.gov/files/m.pdf",
+        "recovery_url": "https://web.archive.org/web/2024/https://dps.sd.gov/files/m.pdf",
+    }
+    sess = _session_returning(canonical_pdf)
+    result = vm.verify_entry(entry, session=sess)
+    assert result.verdict == "ok"
+    # Recovery probe never happened.
+    assert result.recovery_url is None
+    assert result.recovery_http is None
+
+
+def test_verify_entry_recovery_also_fails_stays_stale() -> None:
+    # Both canonical and recovery return text/html landing pages instead of
+    # PDFs. Verdict stays `stale` — recovery does NOT mask the failure.
+    canonical_dead = _make_response(status=200, content_type="text/html", content_length=2000)
+    recovery_dead = _make_response(status=200, content_type="text/html", content_length=1500)
+    entry = {
+        "code": "sd",
+        "manual_url": "https://dps.sd.gov/files/m.pdf",
+        "recovery_url": "https://web.archive.org/web/2024/https://dps.sd.gov/files/m.pdf",
+    }
+    sess = _sequential_session(canonical_dead, recovery_dead)
+    result = vm.verify_entry(entry, session=sess)
+    assert result.verdict == "stale"
+    assert result.recovery_url == entry["recovery_url"]
+    assert result.recovery_content_type == "text/html"
+
+
+def test_verify_entry_recovery_not_consulted_for_non_official_canonical() -> None:
+    # Invariant: recovery_url MAY NOT be used to bypass the host allowlist.
+    # An entry whose canonical host is non-official is `suspicious-host`, NOT
+    # `recovered`, regardless of recovery_url.
+    canonical_response = _make_response(
+        status=200, content_type="application/pdf", content_length=2_000_000
+    )
+    entry = {
+        "code": "xx",
+        "manual_url": "https://driving-tests.org/handbook.pdf",
+        "recovery_url": "https://web.archive.org/web/2024/https://driving-tests.org/handbook.pdf",
+    }
+    sess = _session_returning(canonical_response)
+    result = vm.verify_entry(entry, session=sess)
+    assert result.verdict == "suspicious-host"
+    assert result.recovery_url is None  # never probed
+
+
 # ---- update_timestamps ----------------------------------------------------
 
 
@@ -221,6 +302,7 @@ def test_update_timestamps_only_writes_ok() -> None:
     catalog = [
         {"code": "vt", "manual_url": "https://dmv.vermont.gov/m.pdf"},
         {"code": "ga", "manual_url": "https://dds.georgia.gov/dead.pdf"},
+        {"code": "sd", "manual_url": "https://dps.sd.gov/files/m.pdf"},
     ]
     results = [
         vm.VerifyResult(
@@ -241,11 +323,28 @@ def test_update_timestamps_only_writes_ok() -> None:
             expected_pdf=True,
             host_official=True,
         ),
+        vm.VerifyResult(
+            code="sd",
+            url="x",
+            http=200,
+            content_type="text/html",
+            content_length=2000,
+            expected_pdf=True,
+            host_official=True,
+            recovery_url="https://web.archive.org/web/2024/x",
+            recovery_http=200,
+            recovery_content_type="application/pdf",
+            recovery_content_length=2_300_000,
+        ),
     ]
     today = _dt.date(2026, 4, 29)
     updated = vm.update_timestamps(catalog, results, today=today)
+    # vt: ok -> stamped
     assert updated[0]["last_verified"] == "2026-04-29"
+    # ga: stale -> not stamped
     assert "last_verified" not in updated[1]
+    # sd: recovered -> stamped (bytes were retrieved, just not from canonical)
+    assert updated[2]["last_verified"] == "2026-04-29"
     # Original catalog is unmodified (function returns a new list).
     assert "last_verified" not in catalog[0]
 
