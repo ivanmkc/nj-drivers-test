@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "code": "id",
+  "name": "Idaho",
+  "verified_at": "2026-05-26T02:29:14Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://itd.idaho.gov/wp-content/uploads/2025/10/driver_manual.pdf",
+    "manual_pdf_sha256": "8d6d9fd4ca2d25042e17351516bccba7b9e29d566d431c10dbf398bd4ba9aafd",
+    "manual_text_sha256": "c9bde9f2aff2813b9be3925e96b5fb14e2bf3a2e3308585c03f4713f73583539",
+    "manual_text_chars": 200293,
+    "manual_pages": 139,
+    "edition": "2025-07"
+  },
+  "bank": {
+    "total_questions": 349,
+    "non_sign_questions": 315,
+    "sign_questions": 34,
+    "languages": [
+      "EN",
+      "ES"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 30,
+    "topics_covered": 30,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "license_system": 51,
+      "driver_testing": 29,
+      "defensive_driving": 37,
+      "safe_driving_rules": 78,
+      "vehicle_information": 26,
+      "sharing_the_road": 27,
+      "penalties_and_points": 21,
+      "driver_responsibility": 13,
+      "signs_and_signals": 58,
+      "alcohol_drugs_health": 9
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.74,
+    "sign_ratio_pct": 9.7,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

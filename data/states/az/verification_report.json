@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "code": "az",
+  "name": "Arizona",
+  "verified_at": "2026-05-26T02:25:51Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://apps.azdot.gov/files/mvd/mvd-forms-lib/99-0117.pdf",
+    "manual_pdf_sha256": "5c24a16e98abf67a060b3945d8cc2cb5ca7a09194bcba14c20429a4bf93359b7",
+    "manual_text_sha256": "3c2f7ff8f49e92ce46b6bbbc33eee43c1881afe793ffe3412e1c7dc4fffd4169",
+    "manual_text_chars": 161765,
+    "manual_pages": 74,
+    "edition": "2025"
+  },
+  "bank": {
+    "total_questions": 295,
+    "non_sign_questions": 261,
+    "sign_questions": 34,
+    "languages": [
+      "EN",
+      "ES"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 26,
+    "topics_covered": 24,
+    "coverage_pct": 92.3,
+    "uncovered_topics": [
+      "Restrictions on flashing red warning lights on vehicles",
+      "Organ and tissue donation registry during license application"
+    ],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "driver_responsibility": 18,
+      "penalties_and_points": 30,
+      "vehicle_information": 27,
+      "license_system": 33,
+      "driver_testing": 5,
+      "safe_driving_rules": 71,
+      "defensive_driving": 32,
+      "sharing_the_road": 19,
+      "signs_and_signals": 50,
+      "alcohol_drugs_health": 10
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.82,
+    "sign_ratio_pct": 11.5,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

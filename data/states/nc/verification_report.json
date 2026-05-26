@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "code": "nc",
+  "name": "North Carolina",
+  "verified_at": "2026-05-26T02:31:16Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://www.ncdot.gov/dmv/license-id/driver-licenses/new-drivers/Documents/driver-handbook.pdf",
+    "manual_pdf_sha256": "54993e101f66efe3d3def7b6dbd4742a56977d7dc7cd2c6f95deb4acf1e25eca",
+    "manual_text_sha256": "1b69abe20385ff804e77c6c8798cfaa634504e25e4e38cc85b749a5893dde3d7",
+    "manual_text_chars": 228540,
+    "manual_pages": 108,
+    "edition": ""
+  },
+  "bank": {
+    "total_questions": 376,
+    "non_sign_questions": 358,
+    "sign_questions": 18,
+    "languages": [
+      "EN",
+      "ES",
+      "JA"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 30,
+    "topics_covered": 30,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "safe_driving_rules": 76,
+      "driver_responsibility": 10,
+      "license_system": 90,
+      "sharing_the_road": 28,
+      "penalties_and_points": 34,
+      "driver_testing": 8,
+      "alcohol_drugs_health": 14,
+      "defensive_driving": 39,
+      "vehicle_information": 39,
+      "signs_and_signals": 38
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.65,
+    "sign_ratio_pct": 4.8,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

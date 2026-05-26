@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "code": "tn",
+  "name": "Tennessee",
+  "verified_at": "2026-05-26T02:33:34Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://www.tn.gov/content/dam/tn/safety/documents/DL_Manual.pdf",
+    "manual_pdf_sha256": "4f4d9769613c3d5cf0bbf1911ca94a9ceabbb15126d3d18a34f76f1dc5ee554b",
+    "manual_text_sha256": "8cb08b413145fef4b0c542ce05f689de2810035de924b80bd60af9bafae698a7",
+    "manual_text_chars": 561349,
+    "manual_pages": 135,
+    "edition": ""
+  },
+  "bank": {
+    "total_questions": 874,
+    "non_sign_questions": 856,
+    "sign_questions": 18,
+    "languages": [
+      "EN",
+      "ES",
+      "JA"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 24,
+    "topics_covered": 24,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "license_system": 129,
+      "driver_responsibility": 48,
+      "safe_driving_rules": 226,
+      "defensive_driving": 102,
+      "driver_testing": 40,
+      "sharing_the_road": 78,
+      "vehicle_information": 72,
+      "signs_and_signals": 79,
+      "alcohol_drugs_health": 32,
+      "penalties_and_points": 68
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.56,
+    "sign_ratio_pct": 2.1,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

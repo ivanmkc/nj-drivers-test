@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "code": "ks",
+  "name": "Kansas",
+  "verified_at": "2026-05-26T02:29:12Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://www.ksrevenue.gov/pdf/dlhb.pdf",
+    "manual_pdf_sha256": "1450c8b59b1c5f6247d20c1d00b3a759314df966a744c5ad20fe2d9c091fb4a5",
+    "manual_text_sha256": "91681eed8b12891efcb14c69fb8f1fb4821264053c0493d98f9cf3424aad8c3f",
+    "manual_text_chars": 291209,
+    "manual_pages": 112,
+    "edition": ""
+  },
+  "bank": {
+    "total_questions": 468,
+    "non_sign_questions": 450,
+    "sign_questions": 18,
+    "languages": [
+      "EN",
+      "ES",
+      "JA"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 27,
+    "topics_covered": 26,
+    "coverage_pct": 96.3,
+    "uncovered_topics": [
+      "Maximum speed limit in school zones"
+    ],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "safe_driving_rules": 150,
+      "vehicle_information": 48,
+      "license_system": 29,
+      "alcohol_drugs_health": 11,
+      "signs_and_signals": 51,
+      "penalties_and_points": 14,
+      "sharing_the_road": 43,
+      "driver_responsibility": 31,
+      "driver_testing": 29,
+      "defensive_driving": 62
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.61,
+    "sign_ratio_pct": 3.8,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

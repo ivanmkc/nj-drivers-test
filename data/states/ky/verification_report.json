@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "code": "ky",
+  "name": "Kentucky",
+  "verified_at": "2026-05-26T02:29:22Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://drive.ky.gov/Drivers/Documents/Kentucky-Driver-Manual.pdf",
+    "manual_pdf_sha256": "d8047d28f8358bb27cb393f3c87df22ae9732e4c3783a8116f105ef48102276b",
+    "manual_text_sha256": "6b3d2f66b85b8dbc4cc26244e44eb37351980c3a7d285d5695477f11e8c57c6d",
+    "manual_text_chars": 220106,
+    "manual_pages": 78,
+    "edition": ""
+  },
+  "bank": {
+    "total_questions": 357,
+    "non_sign_questions": 339,
+    "sign_questions": 18,
+    "languages": [
+      "EN",
+      "ES"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 30,
+    "topics_covered": 30,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "license_system": 40,
+      "penalties_and_points": 23,
+      "alcohol_drugs_health": 14,
+      "safe_driving_rules": 79,
+      "vehicle_information": 38,
+      "signs_and_signals": 36,
+      "sharing_the_road": 27,
+      "defensive_driving": 45,
+      "driver_responsibility": 26,
+      "driver_testing": 29
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.62,
+    "sign_ratio_pct": 5.0,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "code": "mn",
+  "name": "Minnesota",
+  "verified_at": "2026-05-26T02:29:21Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://assets.dps.mn.gov/files/dvs/dvs-class-d-drivers-manual-english.pdf",
+    "manual_pdf_sha256": "281569fb6a732fa37d3a9a4c5ac8fa4d50ff71c69190f20e58399ff59fd43b74",
+    "manual_text_sha256": "1eee214f85483d6cc1503f7a587f5f23fc4cc3b1c8085faf113f44e3158f2f8a",
+    "manual_text_chars": 223789,
+    "manual_pages": 104,
+    "edition": "2025-05"
+  },
+  "bank": {
+    "total_questions": 383,
+    "non_sign_questions": 349,
+    "sign_questions": 34,
+    "languages": [
+      "EN",
+      "ES"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 30,
+    "topics_covered": 30,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "sharing_the_road": 36,
+      "safe_driving_rules": 82,
+      "license_system": 63,
+      "driver_responsibility": 15,
+      "driver_testing": 23,
+      "vehicle_information": 25,
+      "alcohol_drugs_health": 18,
+      "penalties_and_points": 35,
+      "defensive_driving": 27,
+      "signs_and_signals": 59
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.71,
+    "sign_ratio_pct": 8.9,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

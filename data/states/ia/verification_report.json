@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "code": "ia",
+  "name": "Iowa",
+  "verified_at": "2026-05-26T02:25:24Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://iowadot.gov/mvd/driverslicense/dlmanual/dlmanual.pdf",
+    "manual_pdf_sha256": "7e1aebad9df027431f5ddf19256b3a93c0b5614418476039f54e1888640825a9",
+    "manual_text_sha256": "cf630ed6653f9790918a9f5e13a06934cc7e95a2d88ed74d276adf72edca6552",
+    "manual_text_chars": 133634,
+    "manual_pages": 68,
+    "edition": ""
+  },
+  "bank": {
+    "total_questions": 237,
+    "non_sign_questions": 219,
+    "sign_questions": 18,
+    "languages": [
+      "EN",
+      "ES",
+      "JA"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 26,
+    "topics_covered": 26,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "safe_driving_rules": 77,
+      "license_system": 14,
+      "alcohol_drugs_health": 6,
+      "driver_responsibility": 11,
+      "penalties_and_points": 6,
+      "driver_testing": 5,
+      "signs_and_signals": 40,
+      "sharing_the_road": 22,
+      "defensive_driving": 26,
+      "vehicle_information": 30
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.77,
+    "sign_ratio_pct": 7.6,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

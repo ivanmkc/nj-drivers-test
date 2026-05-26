@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "code": "wa",
+  "name": "Washington",
+  "verified_at": "2026-05-26T02:35:24Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://www.dol.wa.gov/driverslicense/docs/driverguide-en.pdf",
+    "manual_pdf_sha256": "23aaa7163f10b7b6d8dbcfffd99eb76a7d2e3fe8b8397441d54a3288ce4c3300",
+    "manual_text_sha256": "49f39b415a1ed905fd71c32f5f7c1534a37fafbdae7d53e416124d35c03bfa69",
+    "manual_text_chars": 173065,
+    "manual_pages": 81,
+    "edition": "2025"
+  },
+  "bank": {
+    "total_questions": 376,
+    "non_sign_questions": 358,
+    "sign_questions": 18,
+    "languages": [
+      "EN",
+      "ES",
+      "JA"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 7.03,
+    "pct_at_10": 56.7,
+    "pct_above_9": 63.3,
+    "pct_above_7": 66.7,
+    "pct_zero": 23.3,
+    "flagged_question_ids": [
+      58,
+      280,
+      217,
+      17,
+      112,
+      120,
+      259,
+      309,
+      102,
+      333
+    ],
+    "verdict": "HARD_FAIL",
+    "grade": "F"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 28,
+    "topics_covered": 25,
+    "coverage_pct": 89.3,
+    "uncovered_topics": [
+      "Blood alcohol concentration limits for minor drivers",
+      "Legal THC concentration limits for adult drivers",
+      "Hand signals for turning and stopping vehicles"
+    ],
+    "verdict": "PASS",
+    "grade": "B"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "driver_responsibility": 22,
+      "license_system": 30,
+      "safe_driving_rules": 96,
+      "vehicle_information": 38,
+      "penalties_and_points": 38,
+      "sharing_the_road": 38,
+      "signs_and_signals": 37,
+      "defensive_driving": 54,
+      "alcohol_drugs_health": 16,
+      "driver_testing": 7
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 2.17,
+    "sign_ratio_pct": 4.8,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "HARD_FAIL",
+  "overall_grade": "F",
+  "notes": ""
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "code": "ct",
+  "name": "Connecticut",
+  "verified_at": "2026-05-26T02:25:02Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://portal.ct.gov/dmv/-/media/dmv/dmv-pdfs/drivers-manual-english.pdf",
+    "manual_pdf_sha256": "7f79ea70ac8771fa40d7df35641fdcabd4952b7175205e2245ba392853c3581c",
+    "manual_text_sha256": "254c19885c8eab795d8e79106374e8de39b722de21a1251169eb4e0c98124db8",
+    "manual_text_chars": 208481,
+    "manual_pages": 60,
+    "edition": "2025"
+  },
+  "bank": {
+    "total_questions": 364,
+    "non_sign_questions": 330,
+    "sign_questions": 34,
+    "languages": [
+      "EN",
+      "ES"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 20,
+    "topics_covered": 19,
+    "coverage_pct": 95.0,
+    "uncovered_topics": [
+      "Suspension system"
+    ],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "driver_responsibility": 28,
+      "safe_driving_rules": 94,
+      "license_system": 31,
+      "penalties_and_points": 22,
+      "vehicle_information": 28,
+      "defensive_driving": 49,
+      "driver_testing": 9,
+      "signs_and_signals": 63,
+      "alcohol_drugs_health": 10,
+      "sharing_the_road": 30
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.75,
+    "sign_ratio_pct": 9.3,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

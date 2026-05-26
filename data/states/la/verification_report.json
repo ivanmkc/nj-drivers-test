@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "code": "la",
+  "name": "Louisiana",
+  "verified_at": "2026-05-26T02:29:33Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://dpsweb.dps.louisiana.gov/DPSForms.nsf/8bad5589175b8981862575f20048ee65/5402fbe0178e092686257c1a005ff1cb?OpenDocument",
+    "manual_pdf_sha256": "d629829cace0def41b18b82fdc27b6e86ea6e9002cecc2774929424ef9e2d3fa",
+    "manual_text_sha256": "822fa6b105754c3ff5a64de91a023d05bf92f7f6a5f3067b95ce1a6f198f3cf5",
+    "manual_text_chars": 368159,
+    "manual_pages": 145,
+    "edition": "2017"
+  },
+  "bank": {
+    "total_questions": 588,
+    "non_sign_questions": 554,
+    "sign_questions": 34,
+    "languages": [
+      "EN",
+      "ES"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 30,
+    "topics_covered": 30,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "driver_responsibility": 43,
+      "safe_driving_rules": 166,
+      "license_system": 53,
+      "vehicle_information": 69,
+      "sharing_the_road": 50,
+      "defensive_driving": 93,
+      "penalties_and_points": 23,
+      "driver_testing": 8,
+      "alcohol_drugs_health": 17,
+      "signs_and_signals": 66
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.6,
+    "sign_ratio_pct": 5.8,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "code": "nh",
+  "name": "New Hampshire",
+  "verified_at": "2026-05-26T02:32:47Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://www.dmv.nh.gov/sites/g/files/ehbemt416/files/inline-documents/nhdm.pdf",
+    "manual_pdf_sha256": "4af2af2ac8115a1a8c4a3a8dab50739998b3e159a37fc280addd10d05e737902",
+    "manual_text_sha256": "960d76e2c7f0bed5687cb20196f9dd976616eb97bfb6049d8a779d7cf664f7b0",
+    "manual_text_chars": 147741,
+    "manual_pages": 52,
+    "edition": "2025"
+  },
+  "bank": {
+    "total_questions": 268,
+    "non_sign_questions": 234,
+    "sign_questions": 34,
+    "languages": [
+      "EN",
+      "ES"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 30,
+    "topics_covered": 30,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "safe_driving_rules": 76,
+      "driver_responsibility": 15,
+      "license_system": 19,
+      "defensive_driving": 31,
+      "vehicle_information": 14,
+      "penalties_and_points": 14,
+      "sharing_the_road": 23,
+      "signs_and_signals": 56,
+      "driver_testing": 9,
+      "alcohol_drugs_health": 11
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.81,
+    "sign_ratio_pct": 12.7,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "code": "or",
+  "name": "Oregon",
+  "verified_at": "2026-05-26T02:33:47Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://www.oregon.gov/odot/forms/dmv/37.pdf",
+    "manual_pdf_sha256": "1f294b0bae15b5de3de933adf6ce5beb8dd0d9573af9004bff76cd1a39fe029d",
+    "manual_text_sha256": "fcc3548e6c17ce15cca886112b2ec99ac9f4af251fca8b01355158000b891a68",
+    "manual_text_chars": 125426,
+    "manual_pages": 112,
+    "edition": ""
+  },
+  "bank": {
+    "total_questions": 284,
+    "non_sign_questions": 273,
+    "sign_questions": 11,
+    "languages": [
+      "EN",
+      "ES",
+      "JA"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 25,
+    "topics_covered": 24,
+    "coverage_pct": 96.0,
+    "uncovered_topics": [
+      "Increasing following distance in hazardous weather conditions"
+    ],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "license_system": 18,
+      "driver_responsibility": 16,
+      "safe_driving_rules": 77,
+      "alcohol_drugs_health": 7,
+      "driver_testing": 20,
+      "penalties_and_points": 12,
+      "vehicle_information": 13,
+      "signs_and_signals": 66,
+      "sharing_the_road": 27,
+      "defensive_driving": 28
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 2.26,
+    "sign_ratio_pct": 3.9,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "code": "hi",
+  "name": "Hawaii",
+  "verified_at": "2026-05-26T02:25:35Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://hidot.hawaii.gov/highways/files/2021/11/ENGLISH-Original-Hawaii-Drivers-Manual.pdf",
+    "manual_pdf_sha256": "c83bc1fd3de6d37a5b17afe5ca7762eedfaadeac8de797290e7978e589a0dafc",
+    "manual_text_sha256": "1a1456d4c644efbeb5d6cbb7d4efeacb73dfb3996597396b1db242e727897ca5",
+    "manual_text_chars": 221379,
+    "manual_pages": 132,
+    "edition": "2018"
+  },
+  "bank": {
+    "total_questions": 376,
+    "non_sign_questions": 342,
+    "sign_questions": 34,
+    "languages": [
+      "EN",
+      "ES"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 30,
+    "topics_covered": 28,
+    "coverage_pct": 93.3,
+    "uncovered_topics": [
+      "Speed limits in business and residential districts",
+      "Legal parking distances from fire hydrants and intersections"
+    ],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "vehicle_information": 57,
+      "safe_driving_rules": 96,
+      "license_system": 37,
+      "driver_testing": 5,
+      "penalties_and_points": 8,
+      "driver_responsibility": 18,
+      "alcohol_drugs_health": 17,
+      "sharing_the_road": 38,
+      "signs_and_signals": 65,
+      "defensive_driving": 35
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.7,
+    "sign_ratio_pct": 9.0,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "code": "ri",
+  "name": "Rhode Island",
+  "verified_at": "2026-05-26T02:33:57Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://dmv.ri.gov/sites/g/files/xkgbur556/files/documents/manuals/Driver_Manual_FINAL.pdf",
+    "manual_pdf_sha256": "19e928fafe06b7f5f2bdcf6f6b8b2d8ebd6a029e556664a662f99c19b2a44386",
+    "manual_text_sha256": "c52cd8d349cf46430b5befee842704658c57840e94697c4c25a3a2f8f562c6c0",
+    "manual_text_chars": 219865,
+    "manual_pages": 79,
+    "edition": null
+  },
+  "bank": {
+    "total_questions": 374,
+    "non_sign_questions": 340,
+    "sign_questions": 34,
+    "languages": [
+      "EN",
+      "ES"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 25,
+    "topics_covered": 25,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "driver_responsibility": 23,
+      "license_system": 47,
+      "driver_testing": 19,
+      "safe_driving_rules": 93,
+      "penalties_and_points": 22,
+      "defensive_driving": 57,
+      "alcohol_drugs_health": 18,
+      "vehicle_information": 18,
+      "sharing_the_road": 21,
+      "signs_and_signals": 56
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.7,
+    "sign_ratio_pct": 9.1,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

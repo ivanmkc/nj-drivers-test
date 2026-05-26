@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "code": "nj",
+  "name": "New Jersey",
+  "verified_at": "2026-05-26T02:31:30Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "manual_pdf_sha256": "8a39817ae134a219ef71d641ac4dc27c796e580811c04e2331e7b3e2f1ea257e",
+    "manual_text_sha256": "5d4488e8b9154a0774a8b8e0698d08514cdc9f7029f456fdcc1c4a1c06f8bb33",
+    "manual_text_chars": 348322,
+    "manual_pages": 243,
+    "edition": ""
+  },
+  "bank": {
+    "total_questions": 307,
+    "non_sign_questions": 289,
+    "sign_questions": 18,
+    "languages": [
+      "EN",
+      "ES",
+      "JA"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 9.87,
+    "pct_at_10": 96.7,
+    "pct_above_9": 96.7,
+    "pct_above_7": 96.7,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [
+      259
+    ],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 25,
+    "topics_covered": 23,
+    "coverage_pct": 92.0,
+    "uncovered_topics": [
+      "name change reporting timeline for licensed drivers",
+      "commercial driver license classes and special endorsements"
+    ],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "license_system": 16,
+      "driver_testing": 3,
+      "driver_responsibility": 24,
+      "safe_driving_rules": 89,
+      "defensive_driving": 37,
+      "alcohol_drugs_health": 19,
+      "penalties_and_points": 32,
+      "sharing_the_road": 24,
+      "vehicle_information": 20,
+      "signs_and_signals": 43
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 0.88,
+    "sign_ratio_pct": 5.9,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

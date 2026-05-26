@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "code": "ga",
+  "name": "Georgia",
+  "verified_at": "2026-05-26T02:25:32Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://dds.georgia.gov/document/document/ga-drivers-manual-2023-2024/download",
+    "manual_pdf_sha256": "e311de54ad0ee6f5913e18e694914a560dac3592987437290c271f53c0c7fa71",
+    "manual_text_sha256": "769fe847d27a61098cdb06280ceedb487a1f8fcff516c9a0fb28bcaff566bd83",
+    "manual_text_chars": 232310,
+    "manual_pages": 52,
+    "edition": "2023-2024"
+  },
+  "bank": {
+    "total_questions": 390,
+    "non_sign_questions": 356,
+    "sign_questions": 34,
+    "languages": [
+      "EN",
+      "ES",
+      "JA"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 25,
+    "topics_covered": 24,
+    "coverage_pct": 96.0,
+    "uncovered_topics": [
+      "Using hand signals for vehicles without turn signals"
+    ],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "safe_driving_rules": 86,
+      "driver_responsibility": 28,
+      "penalties_and_points": 40,
+      "license_system": 70,
+      "driver_testing": 23,
+      "alcohol_drugs_health": 8,
+      "vehicle_information": 17,
+      "defensive_driving": 28,
+      "sharing_the_road": 29,
+      "signs_and_signals": 61
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.68,
+    "sign_ratio_pct": 8.7,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

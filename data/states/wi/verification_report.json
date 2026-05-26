@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "code": "wi",
+  "name": "Wisconsin",
+  "verified_at": "2026-05-26T02:35:24Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://wisconsindot.gov/Documents/dmv/shared/bds126-motorists-handbook.pdf",
+    "manual_pdf_sha256": "9983bf68bce25ab758ad7db061be0d162aac4112a9804eb90a8a9c6044159ddd",
+    "manual_text_sha256": "c00a6109afce6f08a3f3939e350c24837b20d9a7ca3b4023298a56f4b3f04828",
+    "manual_text_chars": 97763,
+    "manual_pages": 64,
+    "edition": ""
+  },
+  "bank": {
+    "total_questions": 321,
+    "non_sign_questions": 310,
+    "sign_questions": 11,
+    "languages": [
+      "EN",
+      "ES",
+      "JA"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 28,
+    "topics_covered": 28,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "driver_responsibility": 32,
+      "safe_driving_rules": 97,
+      "license_system": 28,
+      "defensive_driving": 27,
+      "driver_testing": 23,
+      "sharing_the_road": 27,
+      "penalties_and_points": 11,
+      "vehicle_information": 13,
+      "signs_and_signals": 60,
+      "alcohol_drugs_health": 3
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 3.28,
+    "sign_ratio_pct": 3.4,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

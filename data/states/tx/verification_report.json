@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "code": "tx",
+  "name": "Texas",
+  "verified_at": "2026-05-26T02:36:43Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf",
+    "manual_pdf_sha256": "5239ff7c4ec7c15e643425fd3a0d4aaabafb358c58144c7a14218dfbe21e8a6d",
+    "manual_text_sha256": "86fba862d57f4188dc52c2bc87ff7ea7a21679369862775a79558981eeac3a0d",
+    "manual_text_chars": 271332,
+    "manual_pages": 91,
+    "edition": ""
+  },
+  "bank": {
+    "total_questions": 417,
+    "non_sign_questions": 399,
+    "sign_questions": 18,
+    "languages": [
+      "EN",
+      "ES",
+      "JA"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 25,
+    "topics_covered": 25,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "driver_responsibility": 29,
+      "safe_driving_rules": 87,
+      "license_system": 76,
+      "defensive_driving": 27,
+      "sharing_the_road": 35,
+      "vehicle_information": 36,
+      "penalties_and_points": 44,
+      "alcohol_drugs_health": 24,
+      "signs_and_signals": 49,
+      "driver_testing": 10
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.54,
+    "sign_ratio_pct": 4.3,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

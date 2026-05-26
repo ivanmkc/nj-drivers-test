@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "code": "ms",
+  "name": "Mississippi",
+  "verified_at": "2026-05-26T02:30:56Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://www.driverservicebureau.dps.ms.gov/sites/default/files/2025-02/1.15.2025%20Revised%20MDPS%20Driver's%20Manual.pdf",
+    "manual_pdf_sha256": "6fd2b3dda657c340fd6a0a571ec5f91e33cb54d529eaef531774007620b4f3e0",
+    "manual_text_sha256": "78342a2195c506ef070bc8fd35daa091080441d8059bb391732e13df5ae536f1",
+    "manual_text_chars": 140117,
+    "manual_pages": 92,
+    "edition": "2025-01"
+  },
+  "bank": {
+    "total_questions": 252,
+    "non_sign_questions": 218,
+    "sign_questions": 34,
+    "languages": [
+      "EN",
+      "ES"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 28,
+    "topics_covered": 25,
+    "coverage_pct": 89.3,
+    "uncovered_topics": [
+      "Actions required when approaching a red stop sign",
+      "Meaning of divided highway warning signs on the road",
+      "Recognizing interstate and highway route guide markers"
+    ],
+    "verdict": "PASS",
+    "grade": "B"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "safe_driving_rules": 64,
+      "defensive_driving": 18,
+      "sharing_the_road": 17,
+      "driver_responsibility": 17,
+      "penalties_and_points": 15,
+      "license_system": 30,
+      "driver_testing": 6,
+      "vehicle_information": 28,
+      "signs_and_signals": 53,
+      "alcohol_drugs_health": 4
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.8,
+    "sign_ratio_pct": 13.5,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "code": "fl",
+  "name": "Florida",
+  "verified_at": "2026-05-26T02:25:31Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://www.flhsmv.gov/pdf/handbooks/englishdriverhandbook.pdf",
+    "manual_pdf_sha256": "5c0b8e495f955b9ee030058489b74b8876614251462211774c97ce98fb9ed269",
+    "manual_text_sha256": "f5c7699735bb5cb6548bca88a655d8f96778abe772b12f07a43ce0c37d4ccae6",
+    "manual_text_chars": 214816,
+    "manual_pages": 104,
+    "edition": ""
+  },
+  "bank": {
+    "total_questions": 345,
+    "non_sign_questions": 327,
+    "sign_questions": 18,
+    "languages": [
+      "EN",
+      "ES",
+      "JA"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 27,
+    "topics_covered": 27,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "penalties_and_points": 39,
+      "license_system": 55,
+      "safe_driving_rules": 71,
+      "signs_and_signals": 43,
+      "driver_responsibility": 20,
+      "driver_testing": 16,
+      "vehicle_information": 34,
+      "alcohol_drugs_health": 11,
+      "defensive_driving": 27,
+      "sharing_the_road": 29
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.61,
+    "sign_ratio_pct": 5.2,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

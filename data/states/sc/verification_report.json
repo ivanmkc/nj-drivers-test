@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "code": "sc",
+  "name": "South Carolina",
+  "verified_at": "2026-05-26T02:33:50Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://dmv.sc.gov/sites/scdmv/files/2025-12/Drivers%20Manual%20-%20Forms%20and%20Manuals.pdf",
+    "manual_pdf_sha256": "4a2b2dfde8c905f495aea2120cbf6b31d9ee7764625e39c01e0eaac3780198cc",
+    "manual_text_sha256": "05b39d893aed35e45b63e30836d711699099c92d24570e73ad95e0c05fff309c",
+    "manual_text_chars": 159739,
+    "manual_pages": 140,
+    "edition": "2025-12"
+  },
+  "bank": {
+    "total_questions": 281,
+    "non_sign_questions": 247,
+    "sign_questions": 34,
+    "languages": [
+      "EN",
+      "ES"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 25,
+    "topics_covered": 24,
+    "coverage_pct": 96.0,
+    "uncovered_topics": [
+      "Required documentation for United States citizen license applicants"
+    ],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "license_system": 33,
+      "driver_testing": 15,
+      "driver_responsibility": 13,
+      "safe_driving_rules": 69,
+      "penalties_and_points": 14,
+      "vehicle_information": 20,
+      "defensive_driving": 32,
+      "alcohol_drugs_health": 10,
+      "sharing_the_road": 24,
+      "signs_and_signals": 51
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.76,
+    "sign_ratio_pct": 12.1,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

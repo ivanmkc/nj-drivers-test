@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "code": "ny",
+  "name": "New York",
+  "verified_at": "2026-05-26T02:31:12Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://dmv.ny.gov/driver-license/drivers-manual",
+    "manual_pdf_sha256": "29619ff5befb83d85e8079142aa1c8f21ebebb4a4fbfd8b53b2058f4d38aa411",
+    "manual_text_sha256": "89a434774ed4028ccfd57a5903949df78b1cafbe9032aad57574a731a780b87f",
+    "manual_text_chars": 244581,
+    "manual_pages": 84,
+    "edition": "2024"
+  },
+  "bank": {
+    "total_questions": 391,
+    "non_sign_questions": 373,
+    "sign_questions": 18,
+    "languages": [
+      "EN",
+      "ES",
+      "JA"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 30,
+    "topics_covered": 29,
+    "coverage_pct": 96.7,
+    "uncovered_topics": [
+      "Proper use of seat belts and child safety seats"
+    ],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "driver_responsibility": 23,
+      "license_system": 52,
+      "penalties_and_points": 51,
+      "driver_testing": 21,
+      "safe_driving_rules": 66,
+      "vehicle_information": 51,
+      "alcohol_drugs_health": 28,
+      "defensive_driving": 34,
+      "sharing_the_road": 26,
+      "signs_and_signals": 39
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.6,
+    "sign_ratio_pct": 4.6,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

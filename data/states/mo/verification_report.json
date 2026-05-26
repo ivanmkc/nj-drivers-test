@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "code": "mo",
+  "name": "Missouri",
+  "verified_at": "2026-05-26T02:30:00Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://dor.mo.gov/forms/Driver%20Guide.pdf",
+    "manual_pdf_sha256": "861ad174501b46c3ec6f1ed7f9de73b4c60c9649b2b96fcdca815da937b1032c",
+    "manual_text_sha256": "ff285c29fb48ebddf3ccefefbbe2c2602aedd9ef81dfc36c88e11804abac22aa",
+    "manual_text_chars": 242926,
+    "manual_pages": 102,
+    "edition": ""
+  },
+  "bank": {
+    "total_questions": 394,
+    "non_sign_questions": 376,
+    "sign_questions": 18,
+    "languages": [
+      "EN",
+      "ES",
+      "JA"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 30,
+    "topics_covered": 29,
+    "coverage_pct": 96.7,
+    "uncovered_topics": [
+      "Adding a veteran designation to a missouri license"
+    ],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "driver_testing": 26,
+      "license_system": 57,
+      "penalties_and_points": 43,
+      "alcohol_drugs_health": 10,
+      "driver_responsibility": 23,
+      "safe_driving_rules": 83,
+      "vehicle_information": 43,
+      "sharing_the_road": 26,
+      "defensive_driving": 41,
+      "signs_and_signals": 42
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.62,
+    "sign_ratio_pct": 4.6,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

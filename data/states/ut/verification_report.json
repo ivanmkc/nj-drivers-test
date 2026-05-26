@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "code": "ut",
+  "name": "Utah",
+  "verified_at": "2026-05-26T02:33:59Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://dld.utah.gov/wp-content/uploads/Driver-Handbook-REV-3.2026.pdf",
+    "manual_pdf_sha256": "a0ee4daccde8eb7ba959960a34e25bc9ff4630390805d10993c1ca3011389c46",
+    "manual_text_sha256": "394f210c25751c87fc2547312902a9ecc6ce3ca75cd54b31c62dce9daac5dab3",
+    "manual_text_chars": 253419,
+    "manual_pages": 112,
+    "edition": "2025-2026"
+  },
+  "bank": {
+    "total_questions": 427,
+    "non_sign_questions": 393,
+    "sign_questions": 34,
+    "languages": [
+      "EN",
+      "ES"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 25,
+    "topics_covered": 23,
+    "coverage_pct": 92.0,
+    "uncovered_topics": [
+      "financial responsibility assumption for minor license applicants",
+      "social security verification documents for driver licenses"
+    ],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "sharing_the_road": 35,
+      "license_system": 55,
+      "penalties_and_points": 48,
+      "alcohol_drugs_health": 13,
+      "driver_testing": 23,
+      "safe_driving_rules": 100,
+      "vehicle_information": 50,
+      "signs_and_signals": 56,
+      "defensive_driving": 32,
+      "driver_responsibility": 15
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.68,
+    "sign_ratio_pct": 8.0,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

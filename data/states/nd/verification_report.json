@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "code": "nd",
+  "name": "North Dakota",
+  "verified_at": "2026-05-26T02:31:42Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://www.dot.nd.gov/sites/www/files/documents/Drivers%20-%20documents/noncommercial-manual.pdf",
+    "manual_pdf_sha256": "ab64830e432066dded224f4c790c4df7aace57c4b79dc06d7e94bd6d28d65250",
+    "manual_text_sha256": "8eef3b2a648e564cb968f3954d954194e0b669f54f791170e5994555926b1f15",
+    "manual_text_chars": 145669,
+    "manual_pages": 56,
+    "edition": "2025-2027"
+  },
+  "bank": {
+    "total_questions": 263,
+    "non_sign_questions": 229,
+    "sign_questions": 34,
+    "languages": [
+      "EN",
+      "ES"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 24,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 25,
+    "topics_covered": 25,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "driver_testing": 15,
+      "license_system": 31,
+      "vehicle_information": 12,
+      "alcohol_drugs_health": 9,
+      "safe_driving_rules": 59,
+      "penalties_and_points": 20,
+      "driver_responsibility": 18,
+      "signs_and_signals": 54,
+      "defensive_driving": 23,
+      "sharing_the_road": 22
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.81,
+    "sign_ratio_pct": 12.9,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

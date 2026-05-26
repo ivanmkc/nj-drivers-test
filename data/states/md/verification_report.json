@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "code": "md",
+  "name": "Maryland",
+  "verified_at": "2026-05-26T02:29:30Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://mva.maryland.gov/Documents/DL-002.pdf",
+    "manual_pdf_sha256": "093eedc5bd04bc270cbaaf260119da3791baf4069a86dea67b6dbd7f315bdfa9",
+    "manual_text_sha256": "cdeaa3450dc7281182abdace113e34b1bef78960cdb2f9d5ccc19493d2b2735c",
+    "manual_text_chars": 119815,
+    "manual_pages": 56,
+    "edition": ""
+  },
+  "bank": {
+    "total_questions": 202,
+    "non_sign_questions": 184,
+    "sign_questions": 18,
+    "languages": [
+      "EN",
+      "ES",
+      "JA"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 30,
+    "topics_covered": 30,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "driver_responsibility": 12,
+      "safe_driving_rules": 45,
+      "sharing_the_road": 22,
+      "driver_testing": 13,
+      "license_system": 19,
+      "defensive_driving": 19,
+      "penalties_and_points": 13,
+      "alcohol_drugs_health": 8,
+      "vehicle_information": 11,
+      "signs_and_signals": 40
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.69,
+    "sign_ratio_pct": 8.9,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "code": "nv",
+  "name": "Nevada",
+  "verified_at": "2026-05-26T02:31:15Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://dmv.nv.gov/pdfforms/dlbook.pdf",
+    "manual_pdf_sha256": "bee54213b4d11a1b27cf329d358816442439e393eb4154591d8316c8c5481397",
+    "manual_text_sha256": "bd577dcad780db1cb40678ce760e43896d4faadec34df211b5e6b1ed14a85062",
+    "manual_text_chars": 210362,
+    "manual_pages": 86,
+    "edition": ""
+  },
+  "bank": {
+    "total_questions": 346,
+    "non_sign_questions": 328,
+    "sign_questions": 18,
+    "languages": [
+      "EN",
+      "ES"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 30,
+    "judged_count": 30,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 30,
+    "topics_covered": 30,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "driver_testing": 14,
+      "driver_responsibility": 23,
+      "sharing_the_road": 25,
+      "license_system": 58,
+      "safe_driving_rules": 80,
+      "penalties_and_points": 31,
+      "vehicle_information": 42,
+      "defensive_driving": 28,
+      "signs_and_signals": 36,
+      "alcohol_drugs_health": 9
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.64,
+    "sign_ratio_pct": 5.2,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}
