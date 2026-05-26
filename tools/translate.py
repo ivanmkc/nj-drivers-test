@@ -133,6 +133,20 @@ def main() -> None:
     if skipped:
         print(f"\nWARNING: {skipped}/{total} questions were skipped due to translation failures.")
 
+    # Invariant (added after #59 follow-up): target IDs must be a 1:1 derivation
+    # from EN IDs. The translate-then-extra-add-sign-questions footgun was the
+    # historical source of misalignment; this assertion stops it at write time
+    # rather than at the audit step.
+    en_ids = {q.get("id") for q in questions if "id" in q}
+    tgt_ids = {q.get("id") for q in translated if "id" in q}
+    orphans = sorted(tgt_ids - en_ids)
+    if orphans:
+        raise ValueError(
+            f"Translation produced orphan IDs not in EN: {orphans[:10]}"
+            f"{'...' if len(orphans) > 10 else ''}. Aborting write to avoid shipping "
+            "a misaligned bank."
+        )
+
     out_data = {
         "metadata": {
             "source": data["metadata"].get("source", ""),
