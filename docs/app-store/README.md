@@ -18,11 +18,11 @@ docs/app-store/
     │   ├── 05-results-light.png
     │   └── 06-stats-light.png
     ├── ios-6.7/                     Composed for iPhone 6.7" slot (1290x2796)
-    │   ├── 01-01-home.png
-    │   ├── 02-02-state-picker.png
-    │   ├── 03-03-quiz.png
-    │   ├── 04-05-results.png
-    │   └── 05-06-stats.png
+    │   ├── 01-home.png
+    │   ├── 02-state-picker.png
+    │   ├── 03-quiz.png
+    │   ├── 05-results.png
+    │   └── 06-stats.png
     └── play-phone/                  Composed for Play phone slot (1080x1920)
         └── ...
 ```
