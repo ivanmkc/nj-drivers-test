@@ -4,15 +4,23 @@
   "name": "South Dakota",
   "agency": "DPS",
   "manual_url": "https://dps.sd.gov/application/files/9717/0863/8492/sd-driver-manual-rev-12-2023.pdf",
+  "recovery_url": "https://web.archive.org/web/20241125195101/https://dps.sd.gov/application/files/9717/0863/8492/sd-driver-manual-rev-12-2023.pdf",
   "edition": "Rev Dec 2023",
-  "source_description": "South Dakota Driver's Manual (Rev Dec 2023) (dps.sd.gov)",
-  "downloaded_at": "2026-04-29T12:00:00Z",
-  "extracted_with": "",
+  "source_description": "South Dakota Driver Manual (Rev Dec 2023) (dps.sd.gov, via Internet Archive)",
+  "downloaded_at": "2026-05-26T04:10:00Z",
+  "extracted_with": "wayback_machine_snapshot+PyMuPDF",
   "pdf": {
     "filename": "manual.pdf",
-    "recovered": false
+    "size_bytes": 2364323,
+    "sha256": "226066735036ea786c5ce4b1e869018c23f1f4f74d0b579177177a5575bfb280",
+    "page_count": 68,
+    "recovered": true
   },
-  "text": {},
+  "text": {
+    "filename": "manual_text.txt",
+    "char_count": 219691,
+    "sha256": "91acb8b92de9bd2988aef5453086be40380ada71f983de80f3f763d4914051c7"
+  },
   "sources": [],
-  "note": "URL https://dps.sd.gov/application/files/9717/0863/8492/sd-driver-manual-rev-12-2023.pdf 302-redirects to https://www.sd.gov/dps (ServiceNow-hosted DPS landing portal) on 2026-04-29 with full Chrome UA; response is a JS-rendered HTML shell (DOCTYPE html, title 'DPS Landing - Department of Public Safety'), not a PDF; SD DPS migrated its document hosting to ServiceNow and the original PDF path no longer serves the file; no question bank generated"
+  "note": "SD DPS migrated to a ServiceNow portal in 2025; every dps.sd.gov/application/files/* URL (including the canonical sd-driver-manual-rev-12-2023.pdf and the older 2018 edition) now 302-redirects to a JS-rendered shell at www.sd.gov/dps. PDF bytes recovered from Internet Archive snapshot captured 2024-11-25 19:51:01 UTC; byte-identical to the document SD published at the canonical URL."
 }

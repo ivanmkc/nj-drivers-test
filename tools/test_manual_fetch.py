@@ -22,6 +22,27 @@ def test_assemble_single_pdf_writes_file(tmp_path: Any) -> None:
     assert out.read_text() == "vermont chapter text"
 
 
+def test_assemble_prefers_recovery_url(tmp_path: Any) -> None:
+    entry = {
+        "code": "sd",
+        "manual_url": "https://dps.sd.gov/files/sd-driver-manual.pdf",
+        "recovery_url": "https://web.archive.org/web/2024/https://dps.sd.gov/files/sd-driver-manual.pdf",
+    }
+    out = tmp_path / "sd.txt"
+    called_with: list[str] = []
+
+    def capture(url: str, *, cache_path: str | None = None) -> str:
+        del cache_path
+        called_with.append(url)
+        return "sd manual via archive"
+
+    with patch.object(mf, "fetch_pdf_text", side_effect=capture):
+        mf.assemble_manual_text(entry, str(out))
+
+    assert called_with == [entry["recovery_url"]]
+    assert out.read_text() == "sd manual via archive"
+
+
 # ---- assemble_manual_text — multi-PDF concatenation -----------------------
 
 

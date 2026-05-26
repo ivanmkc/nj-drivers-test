@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "code": "sd",
+  "name": "South Dakota",
+  "verified_at": "2026-05-26T04:56:13Z",
+  "quiz_gates_version": "v1",
+  "source": {
+    "manual_url": "https://dps.sd.gov/application/files/9717/0863/8492/sd-driver-manual-rev-12-2023.pdf",
+    "manual_pdf_sha256": "226066735036ea786c5ce4b1e869018c23f1f4f74d0b579177177a5575bfb280",
+    "manual_text_sha256": "91acb8b92de9bd2988aef5453086be40380ada71f983de80f3f763d4914051c7",
+    "manual_text_chars": 217998,
+    "manual_pages": 68,
+    "edition": "Rev Dec 2023"
+  },
+  "bank": {
+    "total_questions": 372,
+    "non_sign_questions": 338,
+    "sign_questions": 34,
+    "languages": [
+      "EN",
+      "ES"
+    ]
+  },
+  "precision": {
+    "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
+    "sample_size": 60,
+    "judged_count": 60,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "recall": {
+    "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
+    "topics_total": 20,
+    "topics_covered": 20,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "coverage": {
+    "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
+    "category_distribution": {
+      "sharing_the_road": 31,
+      "safe_driving_rules": 97,
+      "driver_responsibility": 18,
+      "vehicle_information": 32,
+      "defensive_driving": 49,
+      "alcohol_drugs_health": 13,
+      "license_system": 45,
+      "driver_testing": 11,
+      "penalties_and_points": 21,
+      "signs_and_signals": 55
+    },
+    "missing_categories": [],
+    "over_concentrated_categories": [],
+    "density_qs_per_1000_chars": 1.71,
+    "sign_ratio_pct": 9.1,
+    "verdict": "PASS",
+    "grade": "A"
+  },
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
+  "notes": ""
+}

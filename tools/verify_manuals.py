@@ -77,10 +77,18 @@ class VerifyResult:
     error: str | None = None
     redirected_to: str | None = None
     notes: list[str] = field(default_factory=list)
+    # When the canonical URL fails but a `recovery_url` is set and returns a
+    # valid PDF, the verifier records the recovery probe here and emits the
+    # `recovered` verdict instead of `stale`.
+    recovery_url: str | None = None
+    recovery_http: int | None = None
+    recovery_content_type: str | None = None
+    recovery_content_length: int | None = None
+    recovery_error: str | None = None
 
     @property
     def verdict(self) -> str:
-        """Single-word verdict: ``ok``, ``stale``, ``suspicious-host``, ``error``.
+        """Single-word verdict: ``ok``, ``recovered``, ``stale``, ``suspicious-host``, ``error``.
 
         ``ok`` requires:
         * No transport error.
@@ -91,22 +99,51 @@ class VerifyResult:
           (otherwise the link has been silently retargeted to a landing page).
         * Body is at least ``MIN_CONTENT_BYTES`` (or unknown — some servers
           omit Content-Length).
+
+        ``recovered`` means the canonical URL would have been ``stale`` but
+        the entry's ``recovery_url`` returned a valid PDF. This is a soft
+        warning, not an error: the bytes were retrieved, just not from the
+        canonical host.
         """
         if self.error is not None:
             return "error"
         if not self.host_official:
             return "suspicious-host"
+        canonical_ok = self._canonical_ok()
+        if canonical_ok:
+            return "ok"
+        if self._recovery_ok():
+            return "recovered"
+        return "stale"
+
+    def _canonical_ok(self) -> bool:
         if self.http != 200:
-            return "stale"
+            return False
         ct = (self.content_type or "").split(";")[0].strip().lower()
         if self.expected_pdf and ct != "application/pdf":
-            # .pdf URL silently retargeted to an HTML landing page.
-            return "stale"
+            return False
         if ct not in ("application/pdf", "text/html"):
-            return "stale"
+            return False
         if self.content_length is not None and self.content_length < MIN_CONTENT_BYTES:
-            return "stale"
-        return "ok"
+            return False
+        return True
+
+    def _recovery_ok(self) -> bool:
+        if not self.recovery_url:
+            return False
+        if self.recovery_error is not None:
+            return False
+        if self.recovery_http != 200:
+            return False
+        ct = (self.recovery_content_type or "").split(";")[0].strip().lower()
+        if ct != "application/pdf":
+            return False
+        if (
+            self.recovery_content_length is not None
+            and self.recovery_content_length < MIN_CONTENT_BYTES
+        ):
+            return False
+        return True
 
 
 def _is_official_host(host: str) -> bool:
@@ -162,10 +199,46 @@ def _head_or_get(
     return resp, resp.url
 
 
+def _probe_url(
+    url: str, *, session: requests.Session
+) -> tuple[int | None, str | None, int | None, str | None, str | None]:
+    """Probe one URL. Returns (http, content_type, content_length, final_url, error_name)."""
+    try:
+        resp, final_url = _head_or_get(url, session=session)
+    except requests.RequestException as exc:
+        return None, None, None, None, type(exc).__name__
+
+    cl_raw = resp.headers.get("Content-Length")
+    try:
+        content_length = int(cl_raw) if cl_raw else None
+    except ValueError:
+        content_length = None
+    cr_raw = resp.headers.get("Content-Range")
+    if cr_raw and "/" in cr_raw:
+        try:
+            content_length = int(cr_raw.split("/", 1)[1])
+        except ValueError:
+            pass
+    return (
+        resp.status_code,
+        resp.headers.get("Content-Type"),
+        content_length,
+        final_url,
+        None,
+    )
+
+
 def verify_entry(
     entry: dict[str, Any], *, session: requests.Session | None = None
 ) -> VerifyResult:
-    """Verify a single catalog entry. Multi-URL entries verify the FIRST URL."""
+    """Verify a single catalog entry. Multi-URL entries verify the FIRST URL.
+
+    If the canonical probe would fail and the entry declares ``recovery_url``,
+    also probe the recovery URL. A successful recovery probe upgrades the
+    verdict from ``stale`` to ``recovered``. The ``recovery_url`` is never
+    subject to the host allowlist — by construction, ``manual_url`` must still
+    satisfy it, and the recovery is just where the bytes happen to live now.
+    """
     code = entry.get("code", "?")
     urls = entry.get("urls") or []
     primary_url = urls[0] if urls else entry.get("manual_url", "")
@@ -186,9 +259,8 @@ def verify_entry(
     host_official = _is_official_host(host)
 
     sess = session or requests.Session()
-    try:
-        resp, final_url = _head_or_get(primary_url, session=sess)
-    except requests.RequestException as exc:
+    http, ct, cl, final_url, err = _probe_url(primary_url, session=sess)
+    if err is not None:
         return VerifyResult(
             code=code,
             url=primary_url,
@@ -197,34 +269,33 @@ def verify_entry(
             content_length=None,
             expected_pdf=expected_pdf,
             host_official=host_official,
-            error=type(exc).__name__,
+            error=err,
         )
 
-    cl_raw = resp.headers.get("Content-Length")
-    try:
-        content_length = int(cl_raw) if cl_raw else None
-    except ValueError:
-        content_length = None
-
-    # If the response had a Range body, Content-Length reflects the slice size.
-    # Prefer Content-Range total when present (e.g. "bytes 0-1023/1234567").
-    cr_raw = resp.headers.get("Content-Range")
-    if cr_raw and "/" in cr_raw:
-        try:
-            content_length = int(cr_raw.split("/", 1)[1])
-        except ValueError:
-            pass
-
-    return VerifyResult(
+    result = VerifyResult(
         code=code,
         url=primary_url,
-        http=resp.status_code,
-        content_type=resp.headers.get("Content-Type"),
-        content_length=content_length,
+        http=http,
+        content_type=ct,
+        content_length=cl,
         expected_pdf=expected_pdf,
         host_official=host_official,
         redirected_to=final_url if final_url and final_url != primary_url else None,
     )
+
+    # If the canonical probe didn't pass cleanly and the entry has a
+    # recovery_url, probe it. (Host allowlist NOT consulted for recovery_url —
+    # see invariant in the dataclass docstring.)
+    recovery_url = entry.get("recovery_url", "")
+    if recovery_url and host_official and not result._canonical_ok():
+        result.recovery_url = recovery_url
+        r_http, r_ct, r_cl, _, r_err = _probe_url(recovery_url, session=sess)
+        result.recovery_http = r_http
+        result.recovery_content_type = r_ct
+        result.recovery_content_length = r_cl
+        result.recovery_error = r_err
+
+    return result
 
 
 def verify_all(
@@ -296,7 +367,7 @@ def update_timestamps(
     for entry in catalog:
         new_entry = dict(entry)
         result = by_code.get(entry.get("code", ""))
-        if result is not None and result.verdict == "ok":
+        if result is not None and result.verdict in ("ok", "recovered"):
             new_entry["last_verified"] = today.isoformat()
         updated.append(new_entry)
     return updated
@@ -376,7 +447,16 @@ def main(argv: list[str] | None = None) -> int:
         + f"  total={len(results)}"
     )
 
-    failures = [r for r in results if r.verdict != "ok"]
+    recovered = [r for r in results if r.verdict == "recovered"]
+    if recovered:
+        print("\nrecovered (canonical URL broken; fetched via recovery_url):")
+        for r in recovered:
+            print(
+                f"  {r.code}: canonical http={r.http} ct={r.content_type}; "
+                f"recovery http={r.recovery_http} ct={r.recovery_content_type}"
+            )
+
+    failures = [r for r in results if r.verdict not in ("ok", "recovered")]
     if failures:
         print("\nfailures:")
         for r in failures:
@@ -391,8 +471,8 @@ def main(argv: list[str] | None = None) -> int:
     if args.update_timestamps:
         updated = update_timestamps(catalog, results)
         save_catalog(updated, args.catalog)
-        ok_count = sum(1 for r in results if r.verdict == "ok")
-        print(f"\nUpdated last_verified on {ok_count} entries -> {args.catalog}")
+        bumped = sum(1 for r in results if r.verdict in ("ok", "recovered"))
+        print(f"\nUpdated last_verified on {bumped} entries -> {args.catalog}")
 
     return 0
 

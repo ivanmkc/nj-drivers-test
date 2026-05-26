@@ -4,7 +4,7 @@ All questions are generated from **official state driver manuals** using Gemini 
 
 Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) signs sourced from Wikimedia Commons — these are US government works in the public domain.
 
-## States (49)
+## States (50)
 
 ### Alaska (AK)
 - **Source**: [Alaska Driver Manual (Oct 2025) (dmv.alaska.gov)](https://dmv.alaska.gov/media/t5ef5vi2/dlman.pdf)
@@ -286,6 +286,14 @@ Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) 
 - **Questions**: 281
 - **Languages**: EN, ES
 
+### South Dakota (SD)
+- **Source (canonical)**: [South Dakota Driver Manual (Rev Dec 2023) (dps.sd.gov)](https://dps.sd.gov/application/files/9717/0863/8492/sd-driver-manual-rev-12-2023.pdf)
+- **Source (actual)**: [Internet Archive snapshot, captured 2024-11-25](https://web.archive.org/web/20241125195101/https://dps.sd.gov/application/files/9717/0863/8492/sd-driver-manual-rev-12-2023.pdf) — SD DPS migrated to a ServiceNow portal in 2025 and every `dps.sd.gov/application/files/*` URL now 302-redirects to a JS-rendered shell at `www.sd.gov/dps`. The archive snapshot is byte-identical to the canonical publication.
+- **Agency**: DPS
+- **Passing**: 80% (20/25 questions)
+- **Questions**: 372
+- **Languages**: EN, ES
+
 ### Tennessee (TN)
 - **Source**: [2025 Tennessee Driver Handbook (tn.gov)](https://www.tn.gov/content/dam/tn/safety/documents/DL_Manual.pdf)
 - **Agency**: DOS
@@ -349,11 +357,11 @@ Road sign images are official MUTCD (Manual on Uniform Traffic Control Devices) 
 - **Questions**: 281
 - **Languages**: EN, ES
 
-## Not Yet Sourced (2)
+## Not Yet Sourced (1)
 
 The following jurisdictions have only stub provenance entries (`recovered: false`). Their question banks cannot be regenerated until a recoverable PDF source is found.
 
-DC (District of Columbia), SD (South Dakota)
+- **DC** (District of Columbia) — DC DMV publishes the Auto Driver Manual only as an Issuu flipbook (`https://issuu.com/dcdmv/docs/dc_dmv_driver_manual_english_revised_final`); no direct PDF on `dmv.dc.gov`. Wayback's CDX index has zero captures of the auto manual as PDF. Recovery requires headless-browser scraping of the Issuu flipbook, which is deferred.
 
 ## Road Sign Images
 

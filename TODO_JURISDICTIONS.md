@@ -4,9 +4,9 @@
 - [x] Complete (questions + translations + sign images)
 - [ ] Not started
 
-## US States (50 + DC) — 49 / 51 complete
+## US States (50 + DC) — 50 / 51 complete
 
-### Complete (49)
+### Complete (50)
 - [x] AK — Alaska (DMV, 292 Qs, EN/ES)
 - [x] AL — Alabama (ALEA, 292 Qs, EN/ES)
 - [x] AR — Arkansas (ASP, 296 Qs, EN/ES)
@@ -47,6 +47,7 @@
 - [x] PA — Pennsylvania (PennDOT, 507 Qs, EN/ES/JA)
 - [x] RI — Rhode Island (DMV, 374 Qs, EN/ES)
 - [x] SC — South Carolina (DMV, 281 Qs, EN/ES)
+- [x] SD — South Dakota (DPS, 372 Qs, EN/ES — Dec 2023 ed., recovered from Internet Archive)
 - [x] TN — Tennessee (DOS, 874 Qs, EN/ES/JA)
 - [x] TX — Texas (DPS, 417 Qs, EN/ES/JA)
 - [x] UT — Utah (DLD, 427 Qs, EN/ES)
@@ -57,9 +58,8 @@
 - [x] WV — West Virginia (DMV, 407 Qs, EN/ES)
 - [x] WY — Wyoming (DOT, 281 Qs, EN/ES)
 
-### Not Yet Sourced (2)
-- [ ] DC — District of Columbia (DMV, recovered:false stub)
-- [ ] SD — South Dakota (DPS, recovered:false stub)
+### Not Yet Sourced (1)
+- [ ] DC — District of Columbia (DMV, recovered:false stub — Issuu-only, no PDF on dmv.dc.gov; Wayback has no captures)
 
 ## Canadian Provinces & Territories (13)
 

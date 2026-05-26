@@ -114,6 +114,15 @@ def assemble_manual_text(entry: dict[str, Any], out_path: str, *, force: bool = 
     code = entry.get("code", "manual")
     urls = entry.get("urls") or []
     manual_url = entry.get("manual_url", "")
+    recovery_url = entry.get("recovery_url", "")
+
+    # When `recovery_url` is set, the canonical `manual_url` is known-broken
+    # (e.g., agency migrated hosting) and we download from an Internet Archive
+    # snapshot instead. `manual_url` stays the source of truth for *what* was
+    # published; `recovery_url` is *where the bytes live now*.
+    effective_url = recovery_url or manual_url
+    if recovery_url:
+        print(f"  using recovery_url (canonical {manual_url} is broken)")
 
     parts: list[str] = []
     if urls:
@@ -125,14 +134,14 @@ def assemble_manual_text(entry: dict[str, Any], out_path: str, *, force: bool = 
             text = fetch_pdf_text(url, cache_path=cache)
             parts.append(f"\n\n=== chapter {i} ===\n\n")
             parts.append(text)
-    elif manual_url and _is_pdf_url(manual_url):
-        # Single-PDF: existing happy path.
+    elif effective_url and _is_pdf_url(effective_url):
+        # Single-PDF: existing happy path (recovery_url-aware).
         cache = os.path.join("/tmp", f"{code}_manual.pdf")
-        parts.append(fetch_pdf_text(manual_url, cache_path=cache))
-    elif manual_url:
+        parts.append(fetch_pdf_text(effective_url, cache_path=cache))
+    elif effective_url:
         # HTML index: scrape main-content text.
-        print(f"  scraping HTML at {manual_url}")
-        parts.append(fetch_html_text(manual_url))
+        print(f"  scraping HTML at {effective_url}")
+        parts.append(fetch_html_text(effective_url))
     else:
         raise ValueError(f"Catalog entry for {code!r} has neither manual_url nor urls.")
 
