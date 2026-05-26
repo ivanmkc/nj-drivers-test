@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "ak",
   "name": "Alaska",
-  "verified_at": "2026-05-26T02:25:35Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:02:25Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://dmv.alaska.gov/media/t5ef5vi2/dlman.pdf",
     "manual_pdf_sha256": "779ca2b672e248b9373effcd1381726aac1979fc19c20c4d9e767476b7bb1ebd",
@@ -23,25 +23,845 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 258,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "PREPARED BY ALASKA DEPARTMENT OF ADMINISTRATION DIVISION OF MOTOR VEHICLES"
+      ],
+      "2": [
+        "The contents of this manual are NOT intended to serve as a precise statement of all the Statutes and Regulations of the State of Alaska"
+      ],
+      "3": [
+        "THIS MANUAL MAY NOT BE USED DURING THE TEST"
+      ],
+      "4": [
+        "a safe driver must constantly demonstrate a courteous attitude and exercise sound judgment."
+      ],
+      "5": [
+        "AN UNINFORMED, unskilled driver is a traffic hazard."
+      ],
+      "6": [
+        "Renew a license or permit"
+      ],
+      "7": [
+        "See the mailing status for an issued license or permit"
+      ],
+      "8": [
+        "Take a practice knowledge test",
+        "Schedule a driving test",
+        "Get a certified driving record"
+      ],
+      "9": [
+        "Alcohol and Driving ..................................................... 14-19"
+      ],
+      "10": [
+        "Child Restraints, Safety Belts ...................................... 20-23"
+      ],
+      "11": [
+        "Point System ................................................................ 11"
+      ],
+      "12": [
+        "Signs.......................................................................38-53"
+      ],
+      "13": [
+        "Distracted Driving ........................................................ 24",
+        "Texting ......................................................................... 24"
+      ],
+      "14": [
+        "As a beginning driver the privilege to drive represents a steppingstone in your life."
+      ],
+      "15": [
+        "an Alaska driver’s license must be obtained by the end of a 90-day period after entry into the state."
+      ],
+      "16": [
+        "A member of the armed forces of the United States, and their spouse who is over the age of 18",
+        "A member’s dependents are not exempt."
+      ],
+      "17": [
+        "Class D is the license used for operating passenger vehicles."
+      ],
+      "18": [
+        "Individuals who are 14 or 15 years of age may obtain a M2 license for motor scooters with an engine displacement of less than 50 cc."
+      ],
+      "19": [
+        "Certified United States birth certificate. The certificate must have a raised seal",
+        "Hospital issued certificates and baptismal certificates are not acceptable.",
+        "Dependent military ID’S are not acceptable as a primary document."
+      ],
+      "20": [
+        "the signer may become liable for damages in a motor vehicle crash."
+      ],
+      "21": [
+        "only the person who signed the parental consent form can withdraw consent."
+      ],
+      "22": [
+        "The licensed driver must be at least 21 years of age and have at least one year of driving experience for the same type or class of vehicle you are driving."
+      ],
+      "23": [
+        "If you are 16 or 17, you must have a valid instruction permit for 6 months before the DMV can issue you a provisional Class D license."
+      ],
+      "24": [
+        "Each type of non-commercial instruction permit issued is valid for 2 years and can only be renewed one time."
+      ],
+      "25": [
+        "The fee for an original instruction permit is $15.00."
+      ],
+      "26": [
+        "If you are under 21 years of age your driver’s license will expire 90 days after your 21st birthday. An alcohol awareness test must be passed prior to renewing."
+      ],
+      "27": [
+        "A license must be signed by the licensee to be valid."
+      ],
+      "28": [
+        "Conviction of driving while license is cancelled, suspended, revoked, or in violation of a limited license will result in a jail sentence of not less than 10 days."
+      ],
+      "29": [
+        "For motorcycles or motor scooters, you must be within visual sight and under the immediate supervision of the licensed driver."
+      ],
+      "30": [
+        "Applicants who are 16 or 17 years of age must have a valid instruction permit for at least 6 months before they can be issued a license."
+      ],
+      "31": [
+        "MAY NOT operate a motor vehicle between the hours of 1:00 am and 5:00 am unless accompanied by a parent, legal guardian, or a person at least 21 years of age"
+      ],
+      "32": [
+        "MAY carry, without a parent in the vehicle, passengers if they are siblings."
+      ],
+      "33": [
+        "MAY operate a motor vehicle between the hours of 1:00am and 5:00am to or from your place of employment or within the scope of your employment"
+      ],
+      "34": [
+        "your parent, legal guardian, or employer must certify that you have had at least 40 hours of driving experience"
+      ],
+      "35": [
+        "To qualify you must have, in each eye or with both eyes together, at least 20/40 vision."
+      ],
+      "36": [
+        "An alcohol awareness written test must be taken after your 21st birthday prior to an original or renewal driver license."
+      ],
+      "37": [
+        "Normally, you must wait two business days to retake the test."
+      ],
+      "38": [
+        "No one is allowed to accompany you and the examiner during the driving test."
+      ],
+      "39": [
+        "You will automatically fail for any of the following: 1. Violation of a traffic law"
+      ],
+      "40": [
+        "DMV will not refund the driver’s test fee if you cancel your appointment within 72 hours of the test"
+      ],
+      "41": [
+        "If failed, the test may be retaken the following day."
+      ],
+      "42": [
+        "To remove a provisional restriction a new parental consent must be provided, and a new driver license issued for a fee of $15.00."
+      ],
+      "43": [
+        "Dependents of military personnel (other than the spouse) who plan to drive in this state must obtain an Alaskan license."
+      ],
+      "44": [
+        "Individuals who have a license or permit and who have changed their name or address must notify the Division of Motor Vehicles, in writing, within 30 days of the change."
+      ],
+      "45": [
+        "Head coverings for religious or medical reasons may remain but must be moved above the forehead to allow a full facial picture to be taken."
+      ],
+      "46": [
+        "Accumulating 12 points in 12 months or 18 points in 24 months requires the mandatory suspension or revocation of the driving privilege"
+      ],
+      "47": [
+        "A provisional license holder who accumulates 6 or more points in a 12-month period or 9 or more points in a 24-month period must complete a driver improvement course"
+      ],
+      "48": [
+        "The minimum amount of liability insurance coverage is $50,000/$100,000 for bodily injury or death and $25,000 for property damage."
+      ],
+      "49": [
+        "If there is an injury, or total property damage is $2000 or more, and the crash occurred within a municipality, immediately contact the local police department by dialing 911."
+      ],
+      "50": [
+        "Report the crash to the Department of Administration, Division of Motor Vehicles, within 10 days.",
+        "This report is not required if the crash was investigated by a police officer."
+      ],
+      "51": [
+        "Proof of insurance is required from all the drivers involved in the crash regardless of who caused the crash.",
+        "If you are involved in a crash... property damage in excess of $501, you must provide - within 15 days - proof of insurance to the Division of Motor Vehicles."
+      ],
+      "52": [
+        "If you were uninsured or fail to provide the proof within 15 days, your driver’s license will be suspended for 90 days for a first occurrence"
+      ],
+      "53": [
+        "Upon striking an unattended vehicle or private property such as a fence, stop and attempt to locate the owner. If unable to do so leave a written note containing your name, address, and telephone number."
+      ],
+      "54": [
+        "Third Party testers typically offer vehicles for your use during the test and provide more flexible testing hours compared to the DMV."
+      ],
+      "55": [
+        "No limited “work purpose” license is available should a suspension or revocation of the driving privilege be required."
+      ],
+      "56": [
+        "A DDC may be taken once every 12 months for a point reduction."
+      ],
+      "57": [
+        "you must obtain written proof from that state showing the suspension or revocation has terminated before an Alaska license can be issued."
+      ],
+      "58": [
+        "If there is a reasonable possibility that you may be found liable in a civil court, your privilege to drive will be suspended for up to three years."
+      ],
+      "59": [
+        "• Fleeing or attempting to elude a Police Officer ............................................................. 10"
+      ],
+      "60": [
+        "• Leaving the scene of a crash ......................................................................................... 9"
+      ],
+      "61": [
+        "10 to 19 mph over limit .................................................................................. 4"
+      ],
+      "62": [
+        "submitting an “SR22” insurance filing form. This type of insurance filing requires the insurance company to notify the Division of Motor Vehicles if your liability insurance coverage lapses or is cancelled."
+      ],
+      "63": [
+        "SUSPENSION The privilege of operating a motor vehicle is temporarily taken away.",
+        "REVOCATION The privilege of operating a motor vehicle is taken away and the license is revoked. At the end of revocation, when reinstatement requirements are met, a new license may be obtained."
+      ],
+      "64": [
+        "Driving privileges must be suspended for: 1. Operating or owning an uninsured vehicle involved in a crash."
+      ],
+      "65": [
+        "Driving privileges must be revoked for the following court convictions:",
+        "4. Failure to stop and render aid at the scene when involved in a personal injury crash."
+      ],
+      "66": [
+        "The Division of Motor Vehicles must revoke driving privileges, administratively, for the following offenses:",
+        "7. Minors (under 21) using a false driver’s license to obtain alcohol."
+      ],
+      "67": [
+        "When you operate or drive a motor vehicle in the State of Alaska, you are consenting to a chemical test of your breath for the purpose of determining the alcohol concentration of your blood or breath."
+      ],
+      "68": [
+        "Law enforcement officers to require a sample of your blood or urine for alcohol or con- trolled substance testing if you are involved in a crash that causes death or serious physical injury to another person."
+      ],
+      "69": [
+        "Refusal to submit to chemical testing will result in two criminal charges – DUI and Refusal – which the court can treat separately."
+      ],
+      "70": [
+        "During a revocation period, there is no limited “work purpose” driving privileges for a person who refuses to submit to chemical testing."
+      ],
+      "71": [
+        "Refusal to submit to preliminary breath testing is an infraction."
+      ],
+      "72": [
+        "Failure to stop for school bus while bus is loading or unloading .................... 6"
+      ],
+      "73": [
+        "10 points on your driving record",
+        "DUI’s stay on your record forever"
+      ],
+      "74": [
+        "The revocation periods are 60 days for a first offense and 1 year for subsequent offenses."
+      ],
+      "75": [
+        "If you are under 21 and you operate a motor vehicle... after consuming alcohol in any amount, you can be arrested or cited"
+      ],
+      "76": [
+        "30 days for a first offense"
+      ],
+      "77": [
+        "90 days for a first offense; 1 year if you have been previously convicted of DUI or Refusal"
+      ],
+      "78": [
+        "Prior convictions of DWI/DUI or Refusal occurring in Alaska or another state within the last 15 years can be used to determine the revocation period."
+      ],
+      "79": [
+        "You must apply within seven (7) days of the \"Date Issued\" on the front side of this notice"
+      ],
+      "80": [
+        "A person’s judgment is the first ability impaired by drinking alcohol."
+      ],
+      "81": [
+        "Alcohol is a depressant, not a stimulant. It slows normal reflexes, interferes with judgment, reduces alertness, and impairs vision."
+      ],
+      "82": [
+        "The same amount of alcohol is present in 12 ounces of beer as in a single shot (1 1/2 ounce) of 80 proof alcohol or 4 ounces of wine."
+      ],
+      "83": [
+        "Black coffee, fresh air, food, or a cold shower might wake you up, but they won’t sober you up.",
+        "Only time will help."
+      ],
+      "84": [
+        "It takes an average of one hour to cancel the effects of one drink."
+      ],
+      "85": [
+        "If you have been convicted of only one DUI or Refusal you will need to have the IID installed for a minimum of six (6) months."
+      ],
+      "86": [
+        "At the same time, alcohol creates a false sense of confidence, and a feeling your driving is not affected."
+      ],
+      "87": [
+        "Almost 45 percent of all traffic deaths each year involve alcohol."
+      ],
+      "88": [
+        "0.08% — Serious deterioration in driving performance"
+      ],
+      "89": [
+        "The penalties for driving under the influence of a controlled substance are the same as outlined previously for driving under the influence of alcohol."
+      ],
+      "90": [
+        "A 15-pound infant will suddenly weigh 450 pounds because of the forces unleashed in just a 30-mph collision."
+      ],
+      "91": [
+        "The chances of being killed are almost 25 times greater if you’re thrown from the car."
+      ],
+      "92": [
+        "More than 80% of all collisions occur at speeds less than 40 miles per hour"
+      ],
+      "93": [
+        "Loose belts do not indicate that the belts are inoperative.",
+        "Belts manufactured after 1974 utilize an inertia reel that makes the belt system “car sensitive,” meaning that they lock when the car slows down too quickly."
+      ],
+      "94": [
+        "less than one year of age or a child one year of age or older who weighs less than 20 pounds shall be properly secured in a rear-facing child safety seat"
+      ],
+      "95": [
+        "over four years of age but less than eight years of age who is less than 57 inches in height and weighs 20 or more pounds but less than 65 pounds shall be properly secured in a booster seat"
+      ],
+      "96": [
+        "A driver may be fined up to $50 and may receive two demerit points on their operator’s license for failure to restrain passengers under age 16."
+      ],
+      "97": [
+        "allows the court to waive the $15 fine for persons convicted under this law if that person donates $15 to the EMS organization."
+      ],
+      "98": [
+        "Vehicle operators acting in the course of employment delivering mail or newspapers from inside the vehicle to roadside boxes."
+      ],
+      "99": [
+        "The combination of other drugs and alcohol increases the effects of each individual drug.",
+        "Such combinations can be fatal, especially if you’re driving."
+      ],
+      "100": [
+        "Collisions involving fire or submersion make up less than 1/2 of 1% of all traffic collisions."
+      ],
+      "101": [
+        "The driver is also responsible for all passengers under the age of 16 years.",
+        "The driver is responsible for ensuring that all passengers under the age of 16 are properly restrained"
+      ],
+      "102": [
+        "Children less than 1 year of age or children older than 1 year but less than 20 pounds to be secured in a rear-facing car seat."
+      ],
+      "103": [
+        "Children over 4 and less than 8 years of age who are under 4’9” and less than 65 pounds to be properly secured in a car seat or booster seat."
+      ],
+      "104": [
+        "All children younger than 13 years old should be restrained in the rear seats of vehicles for optimal protection."
+      ],
+      "105": [
+        "Don't ever text and drive, surf the web or read your email while driving. It is dangerous and against the law in Alaska."
+      ],
+      "106": [
+        "Always secure your pets properly before you start to drive."
+      ],
+      "107": [
+        "More fatal crashes occurred during daylight hours with normal surface, clear weather conditions, and the vehicle in good mechanical condition than under any other condition."
+      ],
+      "108": [
+        "The driver is the greatest singular cause of traffic crashes."
+      ],
+      "109": [
+        "Orange flags and signs indicate “high hazard area” (maintenance and construction.)"
+      ],
+      "110": [
+        "It is suggested your speed not exceed 5 mph when backing."
+      ],
+      "111": [
+        "with your left hand at the top of the steering wheel, turn your body and head to the right and look out the rear window."
+      ],
+      "112": [
+        "A person may not drive with more people in the front seat than the seat was designed for"
+      ],
+      "113": [
+        "AS 28.35.140 requires drivers on a two-lane roadway outside of an urban area to safely pull over when there are five or more vehicles immediately behind."
+      ],
+      "114": [
+        "When towing a trailer or the road surface is wet or slippery, increase the four seconds to six or more."
+      ],
+      "115": [
+        "While this chart recommends the use of the 4 second rule, 13 AAC 02.090 requires at a minimum the 2 second rule."
+      ],
+      "116": [
+        "Flash brake lights when preparing to stop."
+      ],
+      "117": [
+        "Business district, 20 mph.*"
+      ],
+      "118": [
+        "Alley, 15 mph. *"
+      ],
+      "119": [
+        "The impact is 4 times greater at 40 mph than at 20 mph. The braking distance is also 4 times longer."
+      ],
+      "120": [
+        "A person may not drive a vehicle upon a highway at a speed greater than will permit them to stop within the assured clear distance ahead."
+      ],
+      "121": [
+        "Lamps reveal person or vehicle at 100 feet 20 mph or less"
+      ],
+      "122": [
+        "Reckless driving — A willful disregard for the safety of persons or property. Conviction will result in a license revocation."
+      ],
+      "123": [
+        "Give emergency vehicles on the shoulder additional safety by ‘Moving Over’ it’s the law AS 28.35.185."
+      ],
+      "124": [
+        "Fines for traffic offenses occurring in the corridor are doubled."
+      ],
+      "125": [
+        "directional signal of intention to turn or move a vehicle right or left must be given continuously during the last 100 feet traveled by the vehicle before turning."
+      ],
+      "126": [
+        "3. Keep front wheels straight while waiting."
+      ],
+      "127": [
+        "unless the towing vehicle weighs more than 15,000 pounds, has three or more axles, and is equipped with an air brake system"
+      ],
+      "128": [
+        "the driver of the vehicle on the left must yield to the driver of the vehicle on the right."
+      ],
+      "129": [
+        "A non-motorized user has the right of way through uncontrolled intersections to motorized vehicles."
+      ],
+      "130": [
+        "Bicyclists are also required to use hand signals to signal a turn."
+      ],
+      "131": [
+        "the driver of the vehicle on the left must yield to the driver of the vehicle on the right.",
+        "Yield to vehicle on the right."
+      ],
+      "132": [
+        "Most roundabouts are designed for speeds of about 15-20mph."
+      ],
+      "133": [
+        "Once inside, do not stop.",
+        "In roundabout vehicles travel counterclockwise around a center island"
+      ],
+      "134": [
+        "Stop sign — stop behind the crosswalk, at painted stop line or behind the intersecting roadway shoulder line."
+      ],
+      "135": [
+        "Red flashing light — stop, then proceed when the way is clear, and it is safe to do so."
+      ],
+      "136": [
+        "Center lanes are reserved for decelerating in advance of turning left. You may not use a center lane for passing."
+      ],
+      "137": [
+        "The end of a “no passing zone” does not mean it is safe to pass. It means there is increased visibility ahead."
+      ],
+      "138": [
+        "When being passed it is unlawful to increase your speed."
+      ],
+      "139": [
+        "When approaching within 100 feet of or when traversing an intersection or railroad crossing"
+      ],
+      "140": [
+        "Warning signs alert drivers to actual or potentially dangerous conditions ahead."
+      ],
+      "141": [
+        "Five-sided signs warn of school areas and school crosswalks requiring reduced speed.",
+        "SCHOOL SIGN • black on yellow"
+      ],
+      "142": [
+        "A red circle with a diagonal slash indicates prohibited movement."
+      ],
+      "143": [
+        "Destination, route guidance, and place names are provided to you on guide signs.",
+        "GUIDE SIGN • white on green"
+      ],
+      "144": [
+        "At a signaled intersection, when light turns green, yield to pedestrians and vehicles caught in intersection."
+      ],
+      "145": [
+        "Reduce speed to 20 as marked for school crosswalks",
+        "School zone, 20 mph.*"
+      ],
+      "146": [
+        "about 90% survive at a collision speed of 25, mph"
+      ],
+      "147": [
+        "Never pass vehicles stopped at a crosswalk. There may be people crossing where you can’t see."
+      ],
+      "148": [
+        "Walk on the left side of the highway facing oncoming traffic."
+      ],
+      "149": [
+        "Right turn - right arm fully extended to right or left arm extended and bent up at elbow"
+      ],
+      "150": [
+        "Alaska Law AS 28.15.231 (b) states that no points are assessed for traffic violations when using a bicycle."
+      ],
+      "151": [
+        "If you’re going to wear headphones while biking be sure to always keep one earbud out."
+      ],
+      "152": [
+        "Drivers turning left in front of oncoming motorcyclists cause a large percentage of car/cycle crashes."
+      ],
+      "153": [
+        "Do not depend on only your mirrors- turn your head to look for bicyclists that may be next to them or approaching."
+      ],
+      "154": [
+        "Flag persons generally wear orange vests, shirts or jackets, and use red flags or stop/slow paddles to direct traffic through work zones."
+      ],
+      "155": [
+        "Never cross a street on a “stale” green traffic light that has about run out of time"
+      ],
+      "156": [
+        "Youngsters under age nine lack the physical and mental development to interact safely in that environment"
+      ],
+      "157": [
+        "Steep downgrade ahead requires trucks to slow and shift to lower gear."
+      ],
+      "158": [
+        "Do not pass when vehicles are turning, especially on the side to which they are making the turn."
+      ],
+      "159": [
+        "many say it’s difficult to judge how far away motorcyclists are or how fast they are traveling."
+      ],
+      "160": [
+        "Drivers turning left in front of oncoming motorcyclists cause a large percentage of car/cycle crashes."
+      ],
+      "161": [
+        "The same four second following distance should be given to motorcyclists as given other vehicles."
+      ],
+      "162": [
+        "Motorcycles need a full lane width like other vehicles.",
+        "Never move into the same lane with a motorcycle, even if the lane is wide and the cyclist is riding to one side."
+      ],
+      "163": [
+        "Turn signals do not turn off automatically on most motorcycles.",
+        "BE SURE THE RIDER IS TURNING and not continuing straight into your path with a forgotten turn signal still blinking."
+      ],
+      "164": [
+        "Drivers approaching a school bus from the rear may not pass the school bus when red signal lights are flashing and shall bring their vehicles to a complete stop before reaching the school bus"
+      ],
+      "165": [
+        "Driver upon a highway with separated roadways providing two or more lanes in each direction need not stop when approaching a school bus which is headed in the opposite direction"
+      ],
+      "166": [
+        "This safety device is required on all slow-moving (25 mph or less) vehicles."
+      ],
+      "167": [
+        "During daylight, the bright fluorescent orange solid triangle in the center of the SMV emblem is highly visible."
+      ],
+      "168": [
+        "Right turns are permitted only after a full stop, when the turn can be made safely, and is not restricted by a “No turn on red” sign."
+      ],
+      "169": [
+        "Do not make the movement indicated by the arrow.",
+        "No turns are allowed until the arrow changes to green or flashing yellow."
+      ],
+      "170": [
+        "Stop behind the crosswalk, stop line, or if none, before entering the intersection.",
+        "Look in all directions for approaching traffic and pedestrians and proceed only when it is safe to do so."
+      ],
+      "171": [
+        "If a signal does not have any of its bulbs functioning... the intersection is uncontrolled. You must stop. Yield to traffic approaching the intersection on your right."
+      ],
+      "172": [
+        "YOU MUST FOLLOW THE DIRECTIONS OF A POLICE OFFICER, FIREPERSON, OR AUTHORIZED FLAG PERSON REGARDLESS OFSIGNS OR SIGNALS"
+      ],
+      "173": [
+        "STEADY ORANGE UPRAISED HAND Pedestrians shall not leave the sidewalk or enter the roadway in the direction of the signal."
+      ],
+      "174": [
+        "Railroad grade crossings usually cause the motorcyclist to slow down and rise off the seat to help cushion the shock of a rough crossing. The rider also may change direction"
+      ],
+      "175": [
+        "FLASHING ORANGE DON’T WALK Pedestrians may not enter the roadway... However, those already in roadway may proceed to the other side."
+      ],
+      "176": [
+        "Steady Yellow X Clear the lane in a safe manner. A Red X signal is about to appear."
+      ],
+      "177": [
+        "Pavement markings have the same force of law as signs or signals."
+      ],
+      "178": [
+        "Yellow markings, such as center lines, separate traffic flow going in opposite directions.",
+        "White markings, such as lane lines, separate traffic going in the same direction."
+      ],
+      "179": [
+        "Solid yellow center lines indicate where passing is not permitted; although, turning into a driveway across them is allowed."
+      ],
+      "180": [
+        "It is not permissible to use the center left turn lane as a driving, accelerating, or passing lane."
+      ],
+      "181": [
+        "If you find you are in the wrong lane to turn when entering an intersection, do not turn or impede so you can turn. Continue around the block."
+      ],
+      "182": [
+        "Never shift gears on the crossing. If your vehicle has a manual transmission, shift down and do not change gears while crossing the tracks."
+      ],
+      "183": [
+        "Be prepared to stop if a train is within 1500 feet of the crossing."
+      ],
+      "184": [
+        "Once outside, run away from both the tracks and the vehicle. Run in the direction that the train is coming"
+      ],
+      "185": [
+        "Directly below the dispatch number on the ENS sign is a Department of Transportation number that identifies the exact location of the crossing in question."
+      ],
+      "186": [
+        "Special legends such as “STOP AHEAD,” “SCHOOL,” and “R X R” indicate special conditions to the driver... requires extreme caution on the part of the motorist. Pay special heed to these legends and be prepared to stop."
+      ],
+      "187": [
+        "Stop lines indicate the farthest point into the intersection an automobile may extend to allow the driver a clear view of approaching traffic."
+      ],
+      "188": [
+        "Never get trapped on a crossing. When traffic is heavy, wait on the approach to a crossing until you are sure you can clear the crossing."
+      ],
+      "189": [
+        "After the vehicle has passed it takes an interval of time for the pupil to readjust to the less intense light. This is called glare recovery time."
+      ],
+      "190": [
+        "Headlights must be turned on from 1/2 hour after sunset to 1/2 hour before sunrise."
+      ],
+      "191": [
+        "Headlights must be turned on in daytime when visibility is reduced to 1000 feet or less by fog, rain, snow, smoke, or dust."
+      ],
+      "192": [
+        "Change headlights to low beam (dim) 500 feet or more from oncoming vehicle."
+      ],
+      "193": [
+        "Parking lights denote a parked vehicle. Do not use only parking lights, day, or night, when vehicle is in motion."
+      ],
+      "194": [
+        "Raise hood or tie white cloth or handkerchief on left door handle or radio antenna."
+      ],
+      "195": [
+        "Take a break and get out from the vehicle every 100 miles."
+      ],
+      "196": [
+        "you are required to pull your motor vehicle off the roadway at the first opportunity to pull over safely if there are five or more vehicles are behind you"
+      ],
+      "197": [
+        "Be aware of a truck’s “deaf spot.” Partial vacuum often prevents truck drivers from hearing your horn."
+      ],
+      "198": [
+        "Use the acceleration lane to get up to cruising speed before attempting to merge into the traffic stream."
+      ],
+      "199": [
+        "If you miss an exit don’t back up. Go to the next exit."
+      ],
+      "200": [
+        "The first half hour after a rain often makes hard surface roads slippery.",
+        "Oil, dirt, and tire dust mixed with water forms a slippery combination."
+      ],
+      "201": [
+        "Keep your fuel tank full in cold weather to prevent moisture condensation in the fuel tank."
+      ],
+      "202": [
+        "If an animal does run in front of your vehicle, brake firmly but do not swerve.",
+        "Swerving can cause a vehicle-vehicle collision or cause the vehicle to strike a pedestrian"
+      ],
+      "203": [
+        "Turn the front wheels in the direction of the skid.",
+        "Don’t Oversteer or Overcorrect."
+      ],
+      "204": [
+        "When parking on a downhill, turn front wheels toward curb. On an uphill, turn front wheels away from curb."
+      ],
+      "205": [
+        "In parallel parking the wheels must be within 12 inches of near curb."
+      ],
+      "206": [
+        "15 ft. from fire hydrant"
+      ],
+      "207": [
+        "yield the right-of-way by slowing and pulling to the right-hand edge of the roadway, clear of an intersection and stopping"
+      ],
+      "208": [
+        "A vehicle may not follow an emergency vehicle traveling in response to an emergency closer than 500 feet."
+      ],
+      "209": [
+        "If you are contacted by an officer and you have a deadly weapon concealed on your person, you must notify the officer immediately."
+      ],
+      "210": [
+        "Deer and moose often travel in pairs or groups, so if an animal is spotted crossing the road, slow down and be alert for others that may follow."
+      ],
+      "211": [
+        "Shaded areas, protected areas, and bridges become slippery before the balance of the road surface and stay so longer."
+      ],
+      "212": [
+        "The chief responsibility for avoiding a collision lies with the driver who is leaving a parking space."
+      ],
+      "213": [
+        "When encountering stationary emergency vehicles or tow trucks with overhead flashing lights on a four-lane road, drivers must pull to the lane opposite the emergency vehicle/tow truck"
+      ],
+      "214": [
+        "Proof of insurance may be displayed on a mobile device."
+      ],
+      "215": [
+        "30 ft. from stop sign"
+      ],
+      "216": [
+        "signal immediately to show the officer your intentions and pull over to the right as soon as it is safe to do so, even if you are in the left lane of a four-lane roadway."
+      ],
+      "217": [
+        "Don’t apply brakes.",
+        "Concentrate on steering.",
+        "Slow down gradually."
+      ],
+      "218": [
+        "Slap pedal hard with foot.",
+        "Use brakes.",
+        "Shift to neutral."
+      ],
+      "219": [
+        "Use parking brake.",
+        "Shift to lower gear.",
+        "Rub tires on curb."
+      ],
+      "220": [
+        "Brake lightly and intermittently.",
+        "Turn back on to pavement at slow speed."
+      ],
+      "221": [
+        "A driver of a motor vehicle when traveling on a downgrade may not coast with the gears of the vehicle in neutral, or with the clutch disengaged."
+      ],
+      "222": [
+        "Do not turn around near a curve or hill when the driver cannot see 500 feet or more in each direction."
+      ],
+      "223": [
+        "Unless directed by police, fire or construction flag personnel, it is illegal to back on a “controlled access” highway, or on its entrance or exit ramps."
+      ],
+      "224": [
+        "Alaska non-commercial registered vehicles must have a single rear license plate with valid year and month tabs."
+      ],
+      "225": [
+        "Foot brake. Adequate to stop passenger vehicle within 25 feet at a speed of 20 miles per hour."
+      ],
+      "226": [
+        "Horn. Capable of emitting sound audible under normal conditions from not less than 200 feet."
+      ],
+      "227": [
+        "Symptoms— headache, dizziness, nausea, and vomiting.",
+        "A colorless, odorless, poisonous gas from vehicle exhaust can make you a dangerous driver and even cost you your life. It paralyzes before it kills."
+      ],
+      "228": [
+        "A car traveling at 55 mph can stop in about 130 to 140 feet, however a truck needs 400 feet to stop."
+      ],
+      "229": [
+        "The No-Zone represents the blind spots around the front, back, and sides of trucks and buses where crashes are more likely to occur because truck drivers have limited visibility."
+      ],
+      "230": [
+        "Dry brakes by driving slowly in low gear and apply brakes lightly."
+      ],
+      "231": [
+        "A car traveling at 55 mph can stop in about 130 to 140 feet, however a truck needs 400 feet to stop."
+      ],
+      "232": [
+        "When passing, look for the whole front of the truck in your rear-view mirror before pulling in front of the truck, and then don’t slow down!"
+      ],
+      "233": [
+        "Truck drivers sometimes need to swing wide to the left so that they can safely negotiate a right turn",
+        "If you get in between the truck and the curb, you’ll be caught in a “squeeze” and can suffer a serious collision."
+      ],
+      "234": [
+        "Remember, 6 inches of water will reach the bottom of most passenger cars, causing loss of control or possible stalling."
+      ],
+      "235": [
+        "Two feet of moving water can carry away most vehicles including sport utility vehicles and pick-up trucks."
+      ],
+      "236": [
+        "Fuel consumption increases about 5% for every five miles per hour driven above 60 mph."
+      ],
+      "237": [
+        "Use your car's air conditioner when driving more than 40 mph. Today's air conditioners create less drag on the engine than driving with the windows open."
+      ],
+      "238": [
+        "\"Two-second'' rule: Pick an object in front of you, like a signpost or tree. When the vehicle in front of you reaches that object, count out \"one-one thousand, two-one thousand ...\""
+      ],
+      "239": [
+        "At 50 mph, your vehicle will go another 55 feet in the three- quarters of a second it takes to react."
+      ],
+      "240": [
+        "Never pump the brakes if your vehicle has antilock brakes."
+      ],
+      "241": [
+        "As a rule of thumb, tum off your car for stops anticipated to be longer than 30-60 seconds."
+      ],
+      "242": [
+        "When you need to make multiple stops, go to your farthest destination first to warm up your engine more quickly for better fuel economy."
+      ],
+      "243": [
+        "Tires must have at least 2/32 inches of tread depth.",
+        "If you slide a penny into a tread groove and can see the top of Lincoln's head, your tires are worn out."
+      ],
+      "244": [
+        "Clogged filters reduce mileage by 10%."
+      ],
+      "245": [
+        "Loose, damaged, or missing fuel tank caps cause 147 million gallons of fuel to evaporate each year."
+      ],
+      "246": [
+        "You can improve your fuel economy 1-2% by using the manufacturer's recommended grade of motor oil."
+      ],
+      "247": [
+        "A tune up can improve gas mileage by an average of 4%."
+      ],
+      "248": [
+        "Automobile Accidents are the No. 1 Killer of Teens in America"
+      ],
+      "249": [
+        "Can you see all his head? If yes, your tires are too worn - don't drive on them and get them replaced."
+      ],
+      "250": [
+        "Use the pressure gauge to check your tires (make sure you check when they are cold)."
+      ],
+      "251": [
+        "Replace them at least yearly if you live in a sunny/hot or cold region, and twice a year if you live in a dusty or dry region."
+      ],
+      "252": [
+        "WARNING: Never open the radiator cap on a hot car! Wait until the car has cooled down first."
+      ],
+      "253": [
+        "The penalty for littering in Alaska is a fine up to $1000; a maximum of 90 days imprisonment"
+      ],
+      "254": [
+        "Up to 45% of Alaska’s liter comes from uncovered or unsecured truck loads."
+      ],
+      "255": [
+        "Privilege - Driving is a privilege, not a right.",
+        "Driving is a privilege, not a right."
+      ],
+      "256": [
+        "Tired Driving- Research shows that tired drivers can be as dangerous as drunk drivers."
+      ],
+      "257": [
+        "Earmarks include speeding, frequent lane changes, cutting in and cutting other drivers off"
+      ],
+      "258": [
+        "Breaking the law means accumulating points on your driving record, fines, and penalties, and even the loss of your driver license."
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 27,
-    "topics_covered": 27,
-    "coverage_pct": 100.0,
-    "uncovered_topics": [],
+    "topics_total": 28,
+    "topics_covered": 25,
+    "coverage_pct": 89.3,
+    "uncovered_topics": [
+      "Required vehicle inspection prior to the driving road test",
+      "Minimum liability insurance coverage amounts for bodily injury",
+      "Point assignment for speeding in a school zone or crosswalk"
+    ],
     "verdict": "PASS",
-    "grade": "A"
+    "grade": "B"
   },
   "coverage": {
     "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
@@ -63,6 +883,20 @@
     "sign_ratio_pct": 11.6,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 258,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "az",
   "name": "Arizona",
-  "verified_at": "2026-05-26T02:25:51Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T22:54:04Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://apps.azdot.gov/files/mvd/mvd-forms-lib/99-0117.pdf",
     "manual_pdf_sha256": "5c24a16e98abf67a060b3945d8cc2cb5ca7a09194bcba14c20429a4bf93359b7",
@@ -23,25 +23,834 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
-    "avg_fidelity": 10.0,
-    "pct_at_10": 100.0,
-    "pct_above_9": 100.0,
-    "pct_above_7": 100.0,
-    "pct_zero": 0.0,
-    "flagged_question_ids": [],
+    "sample_size": 0,
+    "judged_count": 261,
+    "avg_fidelity": 9.96,
+    "pct_at_10": 99.6,
+    "pct_above_9": 99.6,
+    "pct_above_7": 99.6,
+    "pct_zero": 0.4,
+    "flagged_question_ids": [
+      258
+    ],
+    "evidence_by_question_id": {
+      "1": [
+        "You are required by law to notify MVD within 10-days of any change to your name or address."
+      ],
+      "2": [
+        "The program’s goal is to change or modify risky or unsafe driving behavior."
+      ],
+      "3": [
+        "Third Party providers are authorized by MVD to perform Level I inspections."
+      ],
+      "4": [
+        "Identification Card (ID)",
+        "65 & over No fee"
+      ],
+      "5": [
+        "most offices are closed until noon on the second Wednesday of each month."
+      ],
+      "6": [
+        "Bring your out-of-state driver license – it will be used as a secondary form of identification and may waive the written/road test."
+      ],
+      "7": [
+        "Abandoned Vehicle Fee $500",
+        "Abandoned Vehicle Fee (on federal land) $600"
+      ],
+      "8": [
+        "Details of the motor vehicle laws can be found in Arizona Revised Statutes at azleg.gov under Title 28 “Transportation”"
+      ],
+      "9": [
+        "Traffic survival schools are licensed by the Arizona Chapter of the National Safety Council (NSC)."
+      ],
+      "10": [
+        "Services available at AZMVDNow.gov",
+        "• Permit Test @ Home"
+      ],
+      "11": [
+        "Travel Driver License $25"
+      ],
+      "12": [
+        "They often offer convenient extended hours on weekends and evenings."
+      ],
+      "13": [
+        "If you wish to have your new address displayed on your credential, you may apply and purchase a replacement license."
+      ],
+      "14": [
+        "Motor Vehicle Record Uncertified 39-month $3"
+      ],
+      "15": [
+        "MVD, in collaboration with the Arizona Department of Education, also approves high school driver education programs."
+      ],
+      "16": [
+        "You may report a change of address online at AZMVDNow.gov"
+      ],
+      "17": [
+        "You will need to present appropriate identification in both your new and previous names."
+      ],
+      "18": [
+        "Upon discharge, military personnel may work in Arizona for up to 90 days, without obtaining an Arizona driver license"
+      ],
+      "19": [
+        "available to enrolled members of a federally recognized Indian Tribe located in Arizona."
+      ],
+      "20": [
+        "submit proof satisfactory to MVD that the applicant’s presence in the United States is authorized under federal law."
+      ],
+      "21": [
+        "You will also have to respond to the following directions in English:"
+      ],
+      "22": [
+        "If your vehicle is a 1972 model or newer, it must be equipped with seat belts, and these belts must be properly fastened and adjusted."
+      ],
+      "23": [
+        "vehicle Advanced Driver Assistance Systems (ADAS), including but not limited to auto-drive and parking assistance, are prohibited during the road test."
+      ],
+      "24": [
+        "$15,000 property damage liability."
+      ],
+      "25": [
+        "$25,000 bodily injury liability for one person and $50,000 for two or more persons."
+      ],
+      "26": [
+        "If you have outstanding or unresolved actions in another state, an Arizona license will not be issued."
+      ],
+      "27": [
+        "Remain in Arizona for a total of seven months or more during any calendar year, regardless of your permanent residence."
+      ],
+      "28": [
+        "An “out-of-state student” enrolled with seven or more semester hours is not considered a resident, even if employed."
+      ],
+      "29": [
+        "Submitting a false voter registration is a Class 6 felony."
+      ],
+      "30": [
+        "18 years of age or older",
+        "A United States citizen.",
+        "A resident of Arizona."
+      ],
+      "31": [
+        "You must be registered to vote 29 days before an election in order to qualify to vote in the upcoming election."
+      ],
+      "32": [
+        "You must present a statement about the medical condition, signed by a licensed physician or registered nurse practitioner to obtain a medical code on your license."
+      ],
+      "33": [
+        "Your Social Security number will be used to verify your identity and to comply with child support laws. It will not be used as your driver license number."
+      ],
+      "34": [
+        "If you are at least 15 years and 6 months of age you may be issued a graduated and/or a motorcycle instruction permit."
+      ],
+      "35": [
+        "you must be accompanied by a Class A, B, C or D licensed driver at least 21 years of age, who occupies the seat beside you."
+      ],
+      "36": [
+        "you are prohibited from carrying passengers or operating a motorcycle on freeways or interstate highways between sunset and sunrise"
+      ],
+      "37": [
+        "Driving directly to or from a sanctioned school-sponsored activity, place of employment, a sanctioned religious activity or a family emergency."
+      ],
+      "38": [
+        "For the first 6 months, a driver with a graduated driver license shall not drive a motor vehicle containing more than one passenger under the age of 18, unless: • The passengers are the teen driver’s siblings"
+      ],
+      "39": [
+        "parent or guardian must certify in writing that the applicant either has completed at least 30 hours of supervised driving practice, including at least 10 hours at night"
+      ],
+      "40": [
+        "First conviction of a traffic violation: • Must attend Traffic Survival School. • Violation goes on driving record."
+      ],
+      "41": [
+        "Second conviction of a traffic violation: 3-month suspension of driving privilege."
+      ],
+      "42": [
+        "The adult will be responsible for any negligence or willful misconduct when you are driving."
+      ],
+      "43": [
+        "male applicants under 26 years of age consent to registration with the Selective Service as part of the application process."
+      ],
+      "44": [
+        "You must be at least 18 years of age to apply for an operator license."
+      ],
+      "45": [
+        "at any time when there is not enough light to clearly see persons or vehicles at a distance of 500 feet."
+      ],
+      "46": [
+        "An applicant for a motorcycle license or endorsement who is under 18 must have held an Arizona motorcycle instruction permit for at least six months."
+      ],
+      "47": [
+        "Class C: Any single vehicle... designed to transport 16 or more passengers including the driver"
+      ],
+      "48": [
+        "Persons over the age of 65 or anyone receiving Federal Supplemental Security Income disability checks receive the card free of charge."
+      ],
+      "49": [
+        "Current Arizona credentials will be sufficient until May 7, 2025."
+      ],
+      "50": [
+        "All federally compliant credentials will be printed with a yellow star shape insignia near the upper right corner of the credential."
+      ],
+      "51": [
+        "Two documents or mail issued from a business, organization or government agency that contain: • Applicant name • Physical residential address"
+      ],
+      "52": [
+        "If your license is more than 12 years old, you must visit an MVD office to obtain the duplicate so that your photo may be updated."
+      ],
+      "53": [
+        "When you buy a vehicle, Arizona law requires that you apply for a title within 15 days of purchase or transfer."
+      ],
+      "54": [
+        "A 5-year registration option is offered for vehicles that do not require an emissions test during the five years of the registration period."
+      ],
+      "55": [
+        "The following equipment must be in working order: • Brakes • Speedometer • Turn signals • Windshield (intact) • Horn • Tires in good condition • Seat belts • Driver and front passenger side windows • Emergency flashers"
+      ],
+      "56": [
+        "Before putting the vehicle in motion, check your turn signals and brakes to ensure they are in working order."
+      ],
+      "57": [
+        "place Abraham Lincoln’s head into one of the grooves. Part of Lincoln’s head should be covered by the tread."
+      ],
+      "58": [
+        "Find the recommended psi (pounds per square inch for your vehicle, typically on the door jamb."
+      ],
+      "59": [
+        "Each front seat occupant of a motor vehicle per federal and state motor vehicle safety standards must either: • Have the lap and shoulder belt properly adjusted and fastened"
+      ],
+      "60": [
+        "place Abraham Lincoln’s head into one of the grooves. Part of Lincoln’s head should be covered by the tread."
+      ],
+      "61": [
+        "The operator of a motor vehicle must require all passengers under the age of 16 years to buckle up."
+      ],
+      "62": [
+        "The lap belt prevents ejection and protects your lower body."
+      ],
+      "63": [
+        "transporting a child who is under five years of age unless that child is properly secured in a child restraint system."
+      ],
+      "64": [
+        "children between five and eight years of age are required to be in a child restraint system until they are a minimum of four feet, nine inches tall."
+      ],
+      "65": [
+        "Children age 12 years and under should never ride in the front seat of a car."
+      ],
+      "66": [
+        "Dial 511 any time, day or night for up-to-the-minute reports about: • Traffic Conditions and Road Closures"
+      ],
+      "67": [
+        "If the vehicle does not pass, you will be given 30 days to have the problem fixed and have a follow-up emission test re-check."
+      ],
+      "68": [
+        "prevent any of its load from dropping, sifting leaking or otherwise escaping from the vehicle.” (A.R.S. 28-1098.A.)."
+      ],
+      "69": [
+        "Cars and trucks must have both a foot brake and a parking brake."
+      ],
+      "70": [
+        "they should be positioned to fit against the back of your head and to line up with the middle of the ear."
+      ],
+      "71": [
+        "It is against the law to use a muffler “cut-out,” bypass or similar device."
+      ],
+      "72": [
+        "Every vehicle that is made or loaded so that the driver’s view to the rear is blocked must have at least one outside driver side mirror that shows the view of the highway for at least 200 feet to the rear."
+      ],
+      "73": [
+        "Hazard warning signal lights (emergency flashers should be activated whenever your vehicle is stopped on the roadway or shoulder of the road."
+      ],
+      "74": [
+        "Courtesy and consideration toward others are the most important driving attitudes you can develop. They are the key to safe driving."
+      ],
+      "75": [
+        "A wireless device may only be used while driving in order to report an emergency."
+      ],
+      "76": [
+        "When driving in a curve or turn, if you look generally to the outside of your lane of travel while in the curve, you are more likely stay within your lane."
+      ],
+      "77": [
+        "To avoid the need for last minute decision making, look ahead for a distance of about one city block."
+      ],
+      "78": [
+        "You can use the “3-6 second” rule to determine if you have enough cushion between you and the vehicle you are following."
+      ],
+      "79": [
+        "Most rear end crashes are caused by following too closely."
+      ],
+      "80": [
+        "When sharing a lane with a bicycle, allow at least 3 feet of clearance between you and the bicycle."
+      ],
+      "81": [
+        "If another driver is following too closely, gradually slow down and give additional cushion between you and the vehicle in front of you."
+      ],
+      "82": [
+        "Don’t assume that a vehicle or a motorcycle using a turn signal is actually going to make a turn, wait until after you see the other driver commit to the turn before entering the roadway."
+      ],
+      "83": [
+        "The law designates which lanes and positions you must use when turning and requires you to signal at least 100 feet before you turn."
+      ],
+      "84": [
+        "If you plan to turn beyond an intersection, do not signal until you are in the intersection (drivers in the intersection may pull into your path)."
+      ],
+      "85": [
+        "When you can see the entire front or both headlights of the vehicle you passed in your rearview mirror, look over your shoulder to be sure the lane is clear"
+      ],
+      "86": [
+        "Do not rely on your mirrors alone to see other vehicles or motorcycles. Look over your shoulder to see if the way is clear before changing lanes."
+      ],
+      "87": [
+        "Signaling lets other drivers know you are going to do something different and gives them time to react to your move. Signaling does not give you the right-of-way."
+      ],
+      "88": [
+        "While operating a motor vehicle, both hands should be on the steering wheel, allowing the driver full control of the vehicle."
+      ],
+      "89": [
+        "Avoid driving in someone else’s blind spot... Speed up or drop back but never stay for an extended time in a blind spot area."
+      ],
+      "90": [
+        "Passing on the right is permitted only when it is safe and: • The driver of the other vehicle is turning left"
+      ],
+      "91": [
+        "Approaching within 100 feet of a street crossing."
+      ],
+      "92": [
+        "Always enter a roundabout to the right of the central island."
+      ],
+      "93": [
+        "roundabouts are designed for speeds of 15-20 mph."
+      ],
+      "94": [
+        "allow traffic on a cross street (above or below the freeway to briefly switch to the left side of the roadway"
+      ],
+      "95": [
+        "only when transporting the person who was issued the placard or plate."
+      ],
+      "96": [
+        "Turn around so that you can look directly through the rear window. Do not depend on your mirrors or backup cameras."
+      ],
+      "97": [
+        "Leave approximately two feet between you and the forward car."
+      ],
+      "98": [
+        "If you park on an uphill grade, turn your wheels to the left"
+      ],
+      "99": [
+        "If there is no curb, turn the wheels to the right so that the car will roll away from the center of the road"
+      ],
+      "100": [
+        "Within 15 feet of a fire hydrant."
+      ],
+      "101": [
+        "On a crosswalk or within 20 feet of a crosswalk at an intersection."
+      ],
+      "102": [
+        "Traffic entering a freeway must yield right-of-way to traffic already on the freeway.",
+        "Match the speed of your vehicle to the speed of traffic in the right lane of the freeway."
+      ],
+      "103": [
+        "Set your parking brake, shift into park or leave the vehicle in gear (for manual transmission), and turn off the engine."
+      ],
+      "104": [
+        "If you miss your exit, do not stop. Never back up on a highway. Get off the highway at the next exit and look for signs showing you how to rejoin the road"
+      ],
+      "105": [
+        "A gore area is the space between a through roadway and an entrance or exit ramp.",
+        "It is against the law to drive over or park in any part of a gore area."
+      ],
+      "106": [
+        "At those times, the HOV lanes are restricted to car pool vehicles, motorcycle or buses."
+      ],
+      "107": [
+        "A steady yellow light is a warning that the light is about to turn red. If you have not entered the intersection, you should come to a safe stop."
+      ],
+      "108": [
+        "A flashing red light has the same meaning as a stop sign."
+      ],
+      "109": [
+        "When approaching an intersection with an inoperative traffic control signal, treat it as you would a 4-way stop."
+      ],
+      "110": [
+        "At a “T” intersection, the driver on the street which ends must yield the right-of-way to vehicles on the cross street."
+      ],
+      "111": [
+        "You may not pass another vehicle that is stopped for a pedestrian, even if you have a clear lane or a green traffic signal."
+      ],
+      "112": [
+        "To signal for assistance on the freeway, turn on your emergency flashers or raise the hood of the car.",
+        "Avoid stopping your vehicle on or near freeway ramps.",
+        "Do not walk along the freeway."
+      ],
+      "113": [
+        "Solid Red Lights – STOP. Pedestrian is in the crosswalk."
+      ],
+      "114": [
+        "If two vehicles arrive at the intersection at about the same time, both must stop and the driver of the vehicle on the left must yield the right-of-way to the driver on the right."
+      ],
+      "115": [
+        "A flashing yellow arrow means you should slow down and turn with caution if the roadway is clear. Yield the right-of-way to any oncoming vehicle or pedestrian before making your turn."
+      ],
+      "116": [
+        "As you approach and enter a highway travel lane, increase your speed to match that of vehicles already on the road."
+      ],
+      "117": [
+        "Stay to the right and only use the left lane for passing.",
+        "If you are traveling on a highway with three lanes, treat the far right lane as a slower-speed through lane and the far left lane as the passing lane."
+      ],
+      "118": [
+        "Where not prohibited by signs, a right turn may be made after coming to a complete stop, when motor traffic and pedestrian traffic are clear."
+      ],
+      "119": [
+        "Flashing Red Lights – STOP. Then proceed with caution after pedestrian finishes crossing the driver’s half of the roadway."
+      ],
+      "120": [
+        "When entering the roadway from an alley or driveway, you must stop before reaching the sidewalk."
+      ],
+      "121": [
+        "If you run a red light and cause a crash that results in life-threatening injuries to another driver or passenger, you may be fined up to $500 and your driving privilege may be suspended for three months."
+      ],
+      "122": [
+        "Failure to complete the course results in an indefinite suspension of your driving privilege."
+      ],
+      "123": [
+        "The driver shall maintain a distance of at least 500 feet behind a fire department vehicle responding to an emergency and at least 300 feet behind a police vehicle responding to an emergency."
+      ],
+      "124": [
+        "If it’s not safe or possible to move over, motorists must slow down and use caution."
+      ],
+      "125": [
+        "You are not required to stop for a school bus on a divided roadway when traveling in the opposite direction.",
+        "Roadway striping by itself does not constitute a physical separation of the roadway."
+      ],
+      "126": [
+        "25 mph in any business or residential district."
+      ],
+      "127": [
+        "15 mph when approaching a school crosswalk."
+      ],
+      "128": [
+        "Orange signs with black letters indicate recommended safe speeds due to the curvature or grade of the road or other special conditions at that location."
+      ],
+      "129": [
+        "When driving in bad weather, double the following distance from the vehicle in front of you and reduce speed appropriately."
+      ],
+      "130": [
+        "Remember to drive in the right lane and allow faster moving vehicles to pass whenever you are driving slower than traffic around you."
+      ],
+      "131": [
+        "Triangle This shape requires that you yield the right-of-way to cross traffic or to merging traffic."
+      ],
+      "132": [
+        "Drivers must yield the right-of-way to any vehicle that is part of a funeral procession being led by a funeral escort vehicle flashing a red or a blue light."
+      ],
+      "133": [
+        "The maximum speed from the first sign to past the school crossing sign is 15 mph."
+      ],
+      "134": [
+        "Passing another vehicle in a school crossing zone is prohibited."
+      ],
+      "135": [
+        "you must stop no closer than 15 feet from the nearest railroad track when you observe any of the following: • Flashing red lights"
+      ],
+      "136": [
+        "Get out of your vehicle if it stalls on the tracks."
+      ],
+      "137": [
+        "These reference “posts” are set 2 feet off the right shoulder and are about 1 mile apart."
+      ],
+      "138": [
+        "When signs are posted, fines for a speed violation are doubled."
+      ],
+      "139": [
+        "Orange is the basic color for these devices."
+      ],
+      "140": [
+        "Double solid yellow lines mean that passing is not allowed in either direction. You may not cross the lines unless you are turning left."
+      ],
+      "141": [
+        "White You may stop only long enough to pick up or drop off passengers."
+      ],
+      "142": [
+        "Yellow You may stop only long enough to load or unload. Stay with your car."
+      ],
+      "143": [
+        "If you will be traveling on a one-way street for several blocks, it is best to stay in the center lane. The left and right lanes will be used by turning vehicles."
+      ],
+      "144": [
+        "A broken yellow line alongside a solid yellow line indicates that passing is permitted only in one direction. If the broken yellow line is on your side, you may pass"
+      ],
+      "145": [
+        "Yellow center lines indicate that there is two-way traffic, flowing in both directions."
+      ],
+      "146": [
+        "Only cross the solid line on the right edge of the roadway in case of emergency or to avoid a road hazard."
+      ],
+      "147": [
+        "These lanes are usually marked by double-dashed yellow lines."
+      ],
+      "148": [
+        "When turning right at a red light, you must first stop completely before reaching the marked or unmarked crosswalk."
+      ],
+      "149": [
+        "This is the only left turn situation where, unless signs prohibit it, you may make the turn against a red light after stopping and yielding to traffic and pedestrians."
+      ],
+      "150": [
+        "This lane is bordered on either side by two yellow lines – the inner line is broken, the outer line is solid."
+      ],
+      "151": [
+        "Do not use the two-way left turn lane for passing, for thru traffic or to accelerate in order to merge with thru traffic."
+      ],
+      "152": [
+        "White headlights show a train approaching, red taillights show it moving away."
+      ],
+      "153": [
+        "U-turns are permitted at almost all of the light rail intersections in the 20-mile METRO system to allow vehicles to cross the tracks. Left turns and U-turns are controlled with traffic signals."
+      ],
+      "154": [
+        "Motorists are required to allow a minimum safe distance of 3 feet when passing a bicyclist traveling in the same direction."
+      ],
+      "155": [
+        "It is not safe for motorists to honk their horn at bicyclists when passing, as this may startle them and cause them to crash."
+      ],
+      "156": [
+        "If the lane in which the person is operating a bicycle is too narrow for a bicycle and motor vehicle to travel safely side-by-side."
+      ],
+      "157": [
+        "When riding at night, have a white head lamp visible from 500 feet, and a rear reflector."
+      ],
+      "158": [
+        "Most car/motorcycle crashes are the result of a car turning in front of a motorcycle, usually because the driver did not see the motorcycle or misjudged how close it was"
+      ],
+      "159": [
+        "A double solid white line separates two lanes of traffic going in the same direction. Crossing a double solid white line is prohibited."
+      ],
+      "160": [
+        "METRO travels in its own track-way, separated from traffic by six-inch curbs."
+      ],
+      "161": [
+        "The posted speed limit does not exceed 45 miles per hour.",
+        "The motorcycle does not travel faster than 15 miles per hour.",
+        "The street is divided into at least 2 adjacent lanes traveling in the same direction."
+      ],
+      "162": [
+        "Motorcyclists may shift within their lane to avoid oil, potholes or debris."
+      ],
+      "163": [
+        "Watch out for the blind spots, or the “No-Zone”, around large trucks and buses.",
+        "Trucks have large blind spots around the front and back sides of the vehicle."
+      ],
+      "164": [
+        "Trucks make wide right turns and sometimes must leave an open space to the right just before the turn.",
+        "To avoid a collision, do not pass a truck on the right if there is any possibility that it might make a right turn."
+      ],
+      "165": [
+        "The vehicle with the sign cannot travel faster than 25 mph."
+      ],
+      "166": [
+        "Driver perception time (length of time it takes to see and recognize a dangerous situation – the average is 0.75 seconds)."
+      ],
+      "167": [
+        "Allow at least a 3-second following distance for most driving situations."
+      ],
+      "168": [
+        "When driving on slippery roads, you should double your following distance to 6 seconds or more"
+      ],
+      "169": [
+        "When a truck or bus is passing you on the left, move as far as possible to the right of your lane and slow down.",
+        "As the vehicle passes, accelerate slowly to keep the trailer pulling in a straight path."
+      ],
+      "170": [
+        "The first rule is to slow down to make up for reduced visibility and reaction time."
+      ],
+      "171": [
+        "The smaller size of a motorcycle may make it hard to spot in traffic, and it may appear to be farther away and traveling slower than it actually is."
+      ],
+      "172": [
+        "If you move into that space and have to brake suddenly, you cut the truck’s available stopping distance in half, placing you and your passengers in danger."
+      ],
+      "173": [
+        "A tailwind will increase your speed, so you will have to decelerate and begin braking earlier to stop."
+      ],
+      "174": [
+        "To make a wide turn, operators or farm machinery may first pull to the left, then turn to the right."
+      ],
+      "175": [
+        "When a truck or bus is passing you on the left, move as far as possible to the right of your lane and slow down."
+      ],
+      "176": [
+        "Turn off your lights and take your foot off the brake.",
+        "Stay in the vehicle with your seat belts buckled."
+      ],
+      "177": [
+        "Be extra careful during the 30 minutes after rain begins; grime and oil on the road surface mix with water and make the road slippery."
+      ],
+      "178": [
+        "In a heavy rain, your tires can ride on a film of water, and at 50 mph your tires can lose all contact with the road."
+      ],
+      "179": [
+        "Take your foot off the accelerator.",
+        "Do not brake."
+      ],
+      "180": [
+        "Two vehicles should not meet in deep water; one should go entirely through before another starts from the other direction. This reduces the possibility of stalling caused by waves of water."
+      ],
+      "181": [
+        "A driver of a vehicle who drives around barricades set up due to flooding is liable for the expenses of any emergency response that is required to remove the driver"
+      ],
+      "182": [
+        "When driving in fog, use low beams only and look for road edge markings to guide you."
+      ],
+      "183": [
+        "Watch for ice on bridges and in shady areas (bridge surfaces freeze before other road surfaces)."
+      ],
+      "184": [
+        "Use high beams on highways when no other vehicle is coming toward you within 500 feet."
+      ],
+      "185": [
+        "When following another car, use low beams whenever you are within 200 feet."
+      ],
+      "186": [
+        "Glance toward the right side of the road, then look ahead to determine the position of the other vehicle."
+      ],
+      "187": [
+        "Stop every hour to walk and exercise. This will help keep you alert."
+      ],
+      "188": [
+        "If you see that message, safely move toward the nearest highway exit as soon as possible."
+      ],
+      "189": [
+        "While wrong-way drivers are usually in the left or HOV lane, they enter highways from the right via off-ramps."
+      ],
+      "190": [
+        "Passengers riding in a bus, limousine, taxi or the living area of a motor home are exempt."
+      ],
+      "191": [
+        "If you are under 21, any trace of alcohol, marijuana, medications or illegal drugs that impair your ability to drive safely will result in stiff penalties, and your license will be suspended for 2 years."
+      ],
+      "192": [
+        "First conviction – a period of not more than 30 days.",
+        "Upon convicting a person of knowingly purchasing for or providing spirituous liquor to a minor, the court may direct MVD to suspend the person’s driver license"
+      ],
+      "193": [
+        "You may be cited for aggressive driving if you commit a series of acts... exceed the posted speed limit and commit two of the following violations"
+      ],
+      "194": [
+        "First offense — You will be required to attend a Traffic Survival School course and your license may be suspended for 30 days."
+      ],
+      "195": [
+        "A person who has had a seizure within 90 days of applying for a driver license is required to report that medical condition to MVD."
+      ],
+      "196": [
+        "Five groups of drivers have been identified as at risk for crashes due to sleepiness: shift workers, business travelers, commercial drivers, those with sleep disorders and young people."
+      ],
+      "197": [
+        "You will be required to pay the appropriate application fee and a $20 reinstatement fee"
+      ],
+      "198": [
+        "Failure to stop and render aid at the site, if you are involved in a traffic crash."
+      ],
+      "199": [
+        "Your driving privilege will be suspended for two or more convictions for: • Reckless driving. • Racing on the highways."
+      ],
+      "200": [
+        "A vehicle shall be impounded or immobilized when any of the following apply: • The person’s driving privilege is suspended or revoked for any reason."
+      ],
+      "201": [
+        "Remember, being under the legal limit of 0.08 BAC does not mean that it is legal or safe for you to drive and you can still be arrested for driving under the influence."
+      ],
+      "202": [
+        "It does not include the trunk or the area behind the last upright seat of a vehicle not equipped with a trunk."
+      ],
+      "203": [
+        "Anger is the emotion that probably occurs most often while driving, especially in heavy traffic."
+      ],
+      "204": [
+        "A person who already has a driver license and who has a seizure or other medical condition is required to cease driving, notify MVD and have a medical exam."
+      ],
+      "205": [
+        "If you accumulate 8 or more points within any 12-month period, you are required to attend Traffic Survival School (TSS), or your driving privilege may be suspended."
+      ],
+      "206": [
+        "Leaving the scene of a crash 6"
+      ],
+      "207": [
+        "Reckless Driving 8",
+        "Speeding 3",
+        "Wrong-way driving 2"
+      ],
+      "208": [
+        "Have been convicted of running a red light (or flashing red light). TSS is mandatory in addition to paying all court fines/fees."
+      ],
+      "209": [
+        "The penalty for refusal or unsuccessful completion is a 12-month suspension of your driver license"
+      ],
+      "210": [
+        "If you are cited for driving on a revoked or suspended license, your vehicle may be impounded by the law enforcement agency for up to 30 days."
+      ],
+      "211": [
+        "A person that is convicted of not having or failing to produce evidence of current financial responsibility within the vehicle shall receive a suspension... for: 3 months for a first violation."
+      ],
+      "212": [
+        "MVD is then required to update the person’s record to prohibit the renewal of any vehicle registrations with that person as an owner."
+      ],
+      "213": [
+        "First offense – Your driving privilege will be suspended for 6 months."
+      ],
+      "214": [
+        "If you are stopped for driving under the influence and a test shows that you have an alcohol concentration of 0.08 percent or more... you will lose your driving privilege on the spot."
+      ],
+      "215": [
+        "If you are under 21, your license may be suspended if there is any alcohol concentration."
+      ],
+      "216": [
+        "First offense – you will be jailed for not less than 10 consecutive days"
+      ],
+      "217": [
+        "This category of DUI applies to a person with an alcohol concentration of 0.15 or higher."
+      ],
+      "218": [
+        "If the alcohol concentration is 0.20 or higher, you will be jailed not less than 45 days and will not be eligible for suspended sentence."
+      ],
+      "219": [
+        "This category of DUI applies to a person who... commits a DUI while a person under 15 is in the vehicle."
+      ],
+      "220": [
+        "You will be sent to prison for not more than 2 years and, in addition to any other penalty required by law, your license will be revoked for 1 year."
+      ],
+      "221": [
+        "The driver blows into the device before attempting to turn the ignition.",
+        "While the vehicle is in operation, the driver must blow into the device at random intervals."
+      ],
+      "222": [
+        "Hold the steering wheel tightly and keep your vehicle going straight.",
+        "Ease off the gas pedal; do not apply the brakes."
+      ],
+      "223": [
+        "Do not use water if gasoline is burning since this will spread the flames."
+      ],
+      "224": [
+        "Opening the radiator cap while the engine is hot may allow steam to escape and cause severe burns."
+      ],
+      "225": [
+        "Firmly grip the steering wheel with both hands to complete the turn and move to the right side of the road."
+      ],
+      "226": [
+        "Try the high beam/low beam switch. This may restore normal function."
+      ],
+      "227": [
+        "Pump the brakes rapidly. This may build up enough pressure to stop your vehicle."
+      ],
+      "228": [
+        "brace yourself between the steering wheel and the back of the seat and release your brake an instant before impact."
+      ],
+      "229": [
+        "Head for the shoulder and get off of the road away from the oncoming driver."
+      ],
+      "230": [
+        "The child is the most likely to move suddenly, so you need a larger space cushion to the right. In this case, moving closer to the center line is the correct compromise."
+      ],
+      "231": [
+        "Turn the wheel quickly in the direction you want your vehicle to follow (in the direction of the skid)."
+      ],
+      "232": [
+        "The Executive Hearing Office conducts hearings which have been requested by individuals or businesses contesting an Order issued by MVD."
+      ],
+      "233": [
+        "A common crash related to debris is a driver swerving to avoid the hazard, losing control of their vehicle and leaving the roadway."
+      ],
+      "234": [
+        "A common crash related to debris is a driver swerving to avoid the hazard, losing control of their vehicle and leaving the roadway."
+      ],
+      "235": [
+        "If the animal is not yet on the road, do not sound your horn, as that may startle the animal and cause it to run out in front of you."
+      ],
+      "236": [
+        "You should provide: Driver License number. Name and address. Insurance company name and policy number. Information on witnesses of the crash. License plate numbers."
+      ],
+      "237": [
+        "Turn off the ignition of vehicles involved in the crash."
+      ],
+      "238": [
+        "State law requires a driver involved in a minor crash without injuries to remove a vehicle from the roadway if it is operable and can be moved safely."
+      ],
+      "239": [
+        "Suspended for 1 year if involving only damage to a vehicle."
+      ],
+      "240": [
+        "Revoked for 10 years, not including the time you are incarcerated, if involving a death."
+      ],
+      "241": [
+        "Turn on your interior lights if you are pulled over at night to assist with visibility."
+      ],
+      "242": [
+        "Wait for the officer’s instructions before reaching for your driver’s license or vehicle documents."
+      ],
+      "243": [
+        "Let the officer know if you have a weapon in the vehicle upon first contact."
+      ],
+      "244": [
+        "However, the refusal to sign a traffic ticket may result in your arrest."
+      ],
+      "245": [
+        "Rather, you may seek to contest the decision in court through established legal channels."
+      ],
+      "246": [
+        "shall not be held liable or at fault for the crash based solely on the fact the vehicle was moved."
+      ],
+      "247": [
+        "Revoked for 3 years if involving injury other than death or serious physical injury."
+      ],
+      "248": [
+        "Jumper cables"
+      ],
+      "249": [
+        "Flares"
+      ],
+      "250": [
+        "Jumper cables"
+      ],
+      "251": [
+        "Motor oil"
+      ],
+      "252": [
+        "Jack, lug wrench and spare tire"
+      ],
+      "253": [
+        "Hand tools (screwdriver, pliers, wrenches)"
+      ],
+      "254": [
+        "Absorbent cloths"
+      ],
+      "255": [
+        "Note pad and pencil"
+      ],
+      "256": [
+        "Arizona Department of Transportation Motor Vehicle Division"
+      ],
+      "257": [
+        "azdot.gov"
+      ],
+      "259": [
+        "Hand tools (screwdriver, pliers, wrenches)"
+      ],
+      "260": [
+        "Jack, lug wrench and spare tire"
+      ],
+      "261": [
+        "Always be Prepared Consider packing an emergency kit containing all or some of the items listed below:",
+        "Flares",
+        "Jumper cables",
+        "Jack, lug wrench and spare tire"
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 26,
-    "topics_covered": 24,
-    "coverage_pct": 92.3,
+    "topics_total": 28,
+    "topics_covered": 27,
+    "coverage_pct": 96.4,
     "uncovered_topics": [
-      "Restrictions on flashing red warning lights on vehicles",
-      "Organ and tissue donation registry during license application"
+      "Organ and tissue donation registry enrollment process"
     ],
     "verdict": "PASS",
     "grade": "A"
@@ -66,6 +875,20 @@
     "sign_ratio_pct": 11.5,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 261,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

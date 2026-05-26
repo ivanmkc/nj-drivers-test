@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "sc",
   "name": "South Carolina",
-  "verified_at": "2026-05-26T02:33:50Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:14:53Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://dmv.sc.gov/sites/scdmv/files/2025-12/Drivers%20Manual%20-%20Forms%20and%20Manuals.pdf",
     "manual_pdf_sha256": "4a2b2dfde8c905f495aea2120cbf6b31d9ee7764625e39c01e0eaac3780198cc",
@@ -23,25 +23,808 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 247,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "Class D: Allows you to drive non-commercial passenger vehicles, such as cars and trucks, which do not exceed 26,000 pounds GVW."
+      ],
+      "2": [
+        "Class E: Allows you to operate non-commercial, single unit vehicles that exceed 26,000 pounds GVW."
+      ],
+      "3": [
+        "Class F: Allows you to drive non-commercial, combination vehicles that exceed 26,000 pounds GVW."
+      ],
+      "4": [
+        "Class G: Allows you to operate a moped. ... (Minimum age 15)."
+      ],
+      "5": [
+        "You are only required to pass the vision and knowledge test to get a moped license."
+      ],
+      "6": [
+        "Class M: Allows you to operate a two-wheel motorcycle, a two-wheel motorcycle with a detachable sidecar, or a three-wheel vehicle."
+      ],
+      "7": [
+        "If you have a valid driver’s license or permit in any of the other four classifications, you are not required to obtain a license to drive a moped."
+      ],
+      "8": [
+        "With a Class D driver’s license, you may also operate a moped or three-wheel vehicle (excluding a two-wheel motorcycle with a detachable sidecar)."
+      ],
+      "9": [
+        "The gross vehicle weight rating (GVWR) or gross vehicle weight (GVW) determines which class of license you will need."
+      ],
+      "10": [
+        "Class E: Allows you to operate non-commercial, single unit vehicles that exceed 26,000 pounds GVW.",
+        "Class F: Allows you to drive non-commercial, combination vehicles that exceed 26,000 pounds GVW."
+      ],
+      "11": [
+        "This manual is your guide to good driving.",
+        "Its purpose is to help you learn traffic control devices, signs, pavement markings, and proper behavior"
+      ],
+      "12": [
+        "Class F: Allows you to drive non-commercial, combination vehicles that exceed 26,000 pounds GVW.",
+        "Examples of Class F vehicles include trucks and motor homes with a towed trailer or vehicle."
+      ],
+      "13": [
+        "Class E: Allows you to operate non-commercial, single unit vehicles that exceed 26,000 pounds GVW.",
+        "Examples of Class E vehicles include trucks and motor homes."
+      ],
+      "14": [
+        "Due to possible legislative changes in federal and state law and SCDMV Policy, the information in this manual may not always be current."
+      ],
+      "15": [
+        "With a Class D driver’s license, you may also operate a moped or three-wheel vehicle",
+        "With a Class E driver’s license, you may also operate a moped or three-wheel vehicle",
+        "Class M: Allows you to operate a two-wheel motorcycle... or a three-wheel vehicle."
+      ],
+      "16": [
+        "Class C: Any single vehicle... designed to transport 16 or more passengers, including the driver"
+      ],
+      "17": [
+        "Each qualified driver will have only one driver’s license, endorsed for one or more of the classifications.",
+        "It is illegal to have more than one valid driver’s license."
+      ],
+      "18": [
+        "When driving you must have a valid driver’s license, vehicle registration, and valid insurance card in your possession"
+      ],
+      "19": [
+        "if a licensed driver who is at least 21 years old and has at least one year of driving experience is in the front seat with you."
+      ],
+      "20": [
+        "You must hold your beginner’s permit for at least 180 days, regardless of your age, before you may apply for any type of license."
+      ],
+      "21": [
+        "If you are 15 or 16, you must practice driving for at least 40 hours, including ten hours of night driving"
+      ],
+      "22": [
+        "You completed a driver’s education course (eight hours in the classroom and six hours driving)."
+      ],
+      "23": [
+        "If you are at least 15 ½, but less than 16, and have met the requirements listed in this section, you are eligible for a conditional license."
+      ],
+      "24": [
+        "You cannot have more than two passengers under 21 in the vehicle with you unless you are with a licensed adult who is at least 21."
+      ],
+      "25": [
+        "You may drive alone from 6 a.m. to 6 p.m. (8 p.m. during daylight savings time)."
+      ],
+      "26": [
+        "If you are under 17 and receive six or more points on your record before you have held your license for one year, your license will be suspended for six months."
+      ],
+      "27": [
+        "The special restricted license with a waiver allows you to drive by yourself until midnight if you work or participate in certain extracurricular activities."
+      ],
+      "28": [
+        "You will earn full driving privileges at 17, or after keeping your conditional or special restricted license for one year, if you received no traffic offenses and were not at-fault in any collisions."
+      ],
+      "29": [
+        "Bring a letter from your school, church, work, or extracurricular activity that says why you need this waiver"
+      ],
+      "30": [
+        "you must apply for an SC license or ID within forty-five (45) days of moving to SC"
+      ],
+      "31": [
+        "You will automatically fail the skills test if you do not use your seat belt."
+      ],
+      "32": [
+        "If you fail the skills test on your second attempt, you must wait seven calendar days before you can be re-tested regardless of age or driving experience."
+      ],
+      "33": [
+        "The SCDMV does not require a skills test for a moped license."
+      ],
+      "34": [
+        "If you do not return your plate before you cancel your SC insurance, you could owe up to $400 in fees."
+      ],
+      "35": [
+        "You will earn full driving privileges at 17, or after keeping your conditional or special restricted license for one year"
+      ],
+      "36": [
+        "If your out-of-state license is expired for more than nine months, you must pass the knowledge, skills, and vision tests before you can get an SC license."
+      ],
+      "37": [
+        "If you are a US citizen, you may choose to renew your driver's license online for an eight-year license."
+      ],
+      "38": [
+        "Written material or electronic devices of any kind are not allowed in the knowledge test area. Examples of electronic devices are a cell phone, laptop, and tablet reader"
+      ],
+      "39": [
+        "Active-duty military personnel will be exempt from the vision screening requirements when providing their Leave and Earning Statement (LES) dated within 31 days"
+      ],
+      "40": [
+        "An SCDMV employee will test you. You and the employee are the only people allowed in or around the vehicle."
+      ],
+      "41": [
+        "An International Driving Permit serves as a language translation to be used with your valid driver's license.",
+        "It is not an actual license but it translates your foreign language license into English."
+      ],
+      "42": [
+        "The vehicle must be safe and have all of the following in working condition:",
+        "Defroster"
+      ],
+      "43": [
+        "You will receive a sleeve in the mail from the SCDMV that is to be wrapped around your license."
+      ],
+      "44": [
+        "If you are a US citizen, you may choose to renew your driver's license online for an eight-year license.",
+        "If you are not a US citizen, you cannot renew your driver's license online."
+      ],
+      "45": [
+        "You have not received more than five points on your record in the last two years."
+      ],
+      "46": [
+        "If your driver’s license is expired for more than nine months, you must visit an SCDMV branch, pass a vision, knowledge, and a skills test"
+      ],
+      "47": [
+        "Points are reduced by half after one year from the violation date on the ticket."
+      ],
+      "48": [
+        "If you are 17 or older and have six or more points on your driving record, the SCDMV will send you a letter to drive more carefully."
+      ],
+      "49": [
+        "If your point total reaches 12 or more, your license will be suspended."
+      ],
+      "50": [
+        "If you hold a beginner’s permit, conditional or special restricted driver’s license and you accumulate six or more points, your driving privileges will be suspended"
+      ],
+      "51": [
+        "The course must be eight hours of classroom training.",
+        "The course cannot be completed online.",
+        "The course must be taken after the date of violation(s)."
+      ],
+      "52": [
+        "A reduction in points may only be made one time in a three-year period."
+      ],
+      "53": [
+        "If the DUI or DUAC violation was on October 1, 2014 or later, you must have had a BAC of 0.14 percent or less."
+      ],
+      "54": [
+        "You must be enrolled in the Alcohol and Drug Safety Action Program (ADSAP)."
+      ],
+      "55": [
+        "To and from your place of employment, college, or residence"
+      ],
+      "56": [
+        "You may only receive one route-restricted license in your lifetime for the following suspensions:",
+        "Alcohol Violation",
+        "Implied Consent"
+      ],
+      "57": [
+        "Provide the company name of your vehicle insurance"
+      ],
+      "58": [
+        "Mail your application and payment at least three weeks before your expiration date."
+      ],
+      "59": [
+        "If approved, a route restricted license costs $100."
+      ],
+      "60": [
+        "have filed for an administrative hearing within 30 days"
+      ],
+      "61": [
+        "If your suspension is rescinded or overturned, you must return the TAL before you are able to apply for your regular license."
+      ],
+      "62": [
+        "The SCDMV is required to send your name, address, date of birth, sex, Social Security number, and date of application to the US Selective Service when you reach the age of 18"
+      ],
+      "63": [
+        "If you choose to be an organ donor before your 18th birthday, your parent or legal guardian shall make the final decision regarding donation."
+      ],
+      "64": [
+        "Cigarettes and cigarette butts are considered litter and should be kept inside your vehicle until they can be disposed of properly."
+      ],
+      "65": [
+        "You must be at least 16 years old and have a valid driver’s license to drive a golf cart."
+      ],
+      "66": [
+        "only on secondary streets and highways with posted speed limits of thirty-five miles an hour or less."
+      ],
+      "67": [
+        "Avoid using dark or tinted corrective lenses at night, even if you think they help with glare. These types of lenses reduce the light you need to see clearly."
+      ],
+      "68": [
+        "The minimum vision standards do not require a greater degree of vision than 20/40 corrected in one eye."
+      ],
+      "69": [
+        "Effective May 18, 2024, standard vision screening certificates will be valid for 36 months."
+      ],
+      "70": [
+        "Plan to stop about every 100 miles or 2 hours during long trips."
+      ],
+      "71": [
+        "If you start feeling tired stop driving and pull off at the next exit or rest area to take a 15 to 20 minute nap or find a place to sleep for the night."
+      ],
+      "72": [
+        "It is unlawful in SC to use a wireless electronic communication device while operating a motor vehicle if it requires the use of either hand."
+      ],
+      "73": [
+        "Aggressive driving occurs when an individual intentionally commits an action that endangers other persons or property."
+      ],
+      "74": [
+        "Aggressive driving occurs when an individual intentionally commits an action that endangers other persons or property."
+      ],
+      "75": [
+        "Alcohol and other impairing drugs are involved in approximately 40% of all traffic collisions in which someone is killed each year."
+      ],
+      "76": [
+        "Vision is impacted at 0.02 percent blood alcohol content (BAC) for all drivers."
+      ],
+      "77": [
+        "Impairment starts with the first drink. Even one drink of alcohol can affect a person’s ability to operate a motor vehicle."
+      ],
+      "78": [
+        "If you are under 21 years of age and register a BAC of 0.02 percent or greater, your privilege to drive will be suspended immediately for at least three months."
+      ],
+      "79": [
+        "If you refuse to take the test(s) for intoxicants, you will immediately lose your driving privileges for at least six months."
+      ],
+      "80": [
+        "SC’s implied consent law is based on the principle that when you get your driver’s license, you have implicitly consented to a lawfully- requested test to determine the alcohol content of your blood, breath, or urine"
+      ],
+      "81": [
+        "the law applies to the state where you were arrested, not the state where you got your license."
+      ],
+      "82": [
+        "you can still be convicted for driving impaired even if you have a BAC of only 0.05 or a lower BAC in combination with drugs"
+      ],
+      "83": [
+        "Pep pills, “uppers,” and diet pills can make you feel nervous, dizzy, unable to concentrate, and may affect your vision."
+      ],
+      "84": [
+        "These drugs could multiply the effects of alcohol or have additional effects of their own."
+      ],
+      "85": [
+        "If you are angry or worried, it is best to give yourself time to “cool off”.",
+        "It is best to stay off the road until your symptoms have passed."
+      ],
+      "86": [
+        "As age progresses, hearing and eyesight are often less keen."
+      ],
+      "87": [
+        "It takes you quite a long time to get going again after the light has turned green."
+      ],
+      "88": [
+        "On the inside doorframe, you should see a sticker. Make a note of what the PSI number is on the sticker."
+      ],
+      "89": [
+        "PSI means Pounds per Square Inch which is the measurement for tire pressure."
+      ],
+      "90": [
+        "If the number on your gauge is higher than the number on the doorframe, let air out of your tires."
+      ],
+      "91": [
+        "Place the penny with Lincoln’s head going first into the deepest-looking groove.",
+        "Can you see all of his head? If yes, your tires are too worn—don’t drive on them."
+      ],
+      "92": [
+        "There should be at least 10 inches between your chest and the steering wheel."
+      ],
+      "93": [
+        "Adjust head restraints so the head restraint contacts the back of your head and not below the level of your ears."
+      ],
+      "94": [
+        "To set the left side mirror, the driver must rest his or her head against the closed window on the left"
+      ],
+      "95": [
+        "a law enforcement officer has the authority to stop a driver if the officer has a clear and unobstructed view of a driver or occupant of a motor vehicle not wearing a safety belt"
+      ],
+      "96": [
+        "A shoulder harness is worn across the shoulder and chest with minimal, if any, slack."
+      ],
+      "97": [
+        "You must never place a rear-facing child safety seat in front of an air bag."
+      ],
+      "98": [
+        "Children age seven and younger must sit in a car seat in the back seat of the vehicle to avoid injury from an air bag"
+      ],
+      "99": [
+        "Children at least age four who have outgrown their forward-facing car seat must be secured by a booster seat",
+        "Lap and shoulder belts must be used to secure this car seat."
+      ],
+      "100": [
+        "A child at least age 8 or at least 57 inches tall may be restrained by an adult safety belt if the child can be secured properly"
+      ],
+      "101": [
+        "A driver who fails to properly secure their load is guilty of a misdemeanor and may face a fine and the cost to have the substance of their load cleaned up."
+      ],
+      "102": [
+        "A load must be securely fastened and is only considered secure when nothing can slide, shift, fall, or sift onto the roadway or become airborne."
+      ],
+      "103": [
+        "When taking your driving test, you will not be allowed to use certain safety features, such as parking assist and cruise control."
+      ],
+      "104": [
+        "When taking your driving test, you will not be allowed to use certain safety features, such as parking assist and cruise control."
+      ],
+      "105": [
+        "Be aware that safety features may not work properly in certain conditions such as rain, snow, ice, fog, hills, and curves."
+      ],
+      "106": [
+        "To start the engine, place your right foot on the brake pedal and check the gear selector lever for park."
+      ],
+      "107": [
+        "Accelerate gradually and smoothly with the top of your foot on the pedal and the heel of your foot on the floor."
+      ],
+      "108": [
+        "Check your mirrors for traffic at the rear of your vehicle. Move your foot from the accelerator to the brake pedal."
+      ],
+      "109": [
+        "Use your fingers to grip the steering wheel instead of the palms of your hands and keep your thumbs up along the face of the steering wheel."
+      ],
+      "110": [
+        "Place your left hand at the 7 to 9 o’clock position and your right hand at the 3 to 5 o’clock position."
+      ],
+      "111": [
+        "2 and 10 o’clock is not recommended because it can be dangerous in vehicles equipped with airbags."
+      ],
+      "112": [
+        "Use hand-over-hand steering when turning the wheel at low speeds, such as at an intersection or when parking the vehicle."
+      ],
+      "113": [
+        "The only time that 12 o’clock is recommended is when backing a vehicle to the left or right and the driver has to turn in the seat"
+      ],
+      "114": [
+        "Check behind the vehicle before you get in it. Children and small objects cannot be seen from the driver’s seat."
+      ],
+      "115": [
+        "Place your right arm on the back of the passenger seat to the right and look directly through the rear window."
+      ],
+      "116": [
+        "Occasionally check your mirrors when backing up but keep in mind that these mirrors do not show the area immediately behind your vehicle."
+      ],
+      "117": [
+        "no one should assume he or she automatically has the right-of-way."
+      ],
+      "118": [
+        "You should yield the right-of-way to: pedestrians, bicyclists, and other drivers who are still in the intersection"
+      ],
+      "119": [
+        "the driver on your right at a four-way intersection controlled by stop signs if both of you arrive at the intersection at the same time"
+      ],
+      "120": [
+        "yield the right-of-way to: drivers on a public highway if you are entering the highway from a driveway or a private road"
+      ],
+      "121": [
+        "Therefore, you should stop your vehicle and wait for the next green light."
+      ],
+      "122": [
+        "An exception to this rule permits traffic facing a red signal to turn right except where a sign prohibits a right turn on red.",
+        "When turning on red you must stop before entering the crosswalk on the near side of the turn and yield right-of-way"
+      ],
+      "123": [
+        "Flashing RED Traffic Light—This means you must stop behind a stop line, crosswalk, or intersection before entering and use the same procedure as you would at a stop sign"
+      ],
+      "124": [
+        "These signs are usually yellow with black lettering or symbols and are typically diamond shaped."
+      ],
+      "125": [
+        "Work Zone Signs—These are generally diamond- or rectangular-shaped and orange with black letters or symbols."
+      ],
+      "126": [
+        "If you endanger a highway worker you may be fined and have points assessed against your driving record."
+      ],
+      "127": [
+        "Some regulatory signs have a red circle with a red slash over a symbol, which prohibit certain actions."
+      ],
+      "128": [
+        "If a stop line is not present, then stop at the point nearest the intersection where you (the driver) can see in both directions without entering the cross traffic lane."
+      ],
+      "129": [
+        "Yield Sign—A yield sign is a red and white downward-pointing triangle with red letters."
+      ],
+      "130": [
+        "This sign tells you where a lane is reserved for the use of left turning vehicles from either direction and is not to be used for through traffic or passing other vehicles."
+      ],
+      "131": [
+        "If your vehicle ever gets stuck on a track, contact the emergency phone number listed on the blue sign and provide the crossing information."
+      ],
+      "132": [
+        "Speed Limit Signs—These black and white signs indicate the maximum legal speed allowed in ideal conditions."
+      ],
+      "133": [
+        "drivers in the opposing traffic lane when you are making a left turn;"
+      ],
+      "134": [
+        "Guide Signs—These signs are square or rectangular and are green, brown, or blue."
+      ],
+      "135": [
+        "The first number after the letter “S” is the number of the county the road is in and the last number is the road number."
+      ],
+      "136": [
+        "In the event of a hurricane, a mandatory evacuation may be declared for the coastal areas of SC. This sign indicates the road or highway is used as an evacuation route"
+      ],
+      "137": [
+        "One-direction roadway— passing permitted",
+        "White Lane Markings"
+      ],
+      "138": [
+        "If there is a stop line before the crosswalk, the stop line must be obeyed first."
+      ],
+      "139": [
+        "Avoid swinging wide to the left before making the turn."
+      ],
+      "140": [
+        "Identify and enter the lane from which you will turn.",
+        "Stay in that lane until the turn is completed."
+      ],
+      "141": [
+        "Use this type of turnabout only when the road or street is too narrow to make a U-turn and you cannot go around the block.",
+        "This type of turn should only be used on a two-lane roadway that is not busy."
+      ],
+      "142": [
+        "The three-point turn must be performed without hitting the curb, driving off the road surface, or using a side street or driveway."
+      ],
+      "143": [
+        "You should always look left, then right, and left again before entering the intersection."
+      ],
+      "144": [
+        "Do not turn into a lane just because an approaching vehicle has a turn signal active.",
+        "The driver with an active turn signal may plan to turn after they go past your vehicle or may have forgotten to turn the signal off from a prior turn."
+      ],
+      "145": [
+        "By shifting cross street traffic to the left side of the street between the signalized crossover intersections, vehicles on the crossroad making a left turn on to or off of ramps do not conflict"
+      ],
+      "146": [
+        "This eliminates the need for left-turning vehicles to cross the paths of approaching through vehicles."
+      ],
+      "147": [
+        "the RCUT intersection requires drivers to turn right onto the main road and then make a u-turn maneuver at a one-way median opening"
+      ],
+      "148": [
+        "Vehicles travel counterclockwise around a raised center island with entering traffic yielding the right-of-way to circulating traffic."
+      ],
+      "149": [
+        "Roundabouts are safer than traditional intersections because they eliminate head-on and high-speed right angle collisions."
+      ],
+      "150": [
+        "You must stop for the entire time a school bus is stopped or preparing to stop with its red or amber lights flashing or its stop arm extended.",
+        "On any two-lane highway"
+      ],
+      "151": [
+        "A driver of a vehicle does not have to stop upon meeting a stopped school bus when traveling in the opposite direction on a multi-lane highway",
+        "A multi-lane highway or multi-lane private road is defined as a highway or private road that consists of four lanes, having at least two traffic lanes in each direction."
+      ],
+      "152": [
+        "Do not park more than 18 inches from the curb or edge of pavement."
+      ],
+      "153": [
+        "only if that vehicle is driven by or transporting the person with the disability whose name is on the license plate registration or placard registration certificate."
+      ],
+      "154": [
+        "Headed downhill, with or without curb: turn wheels to the right (except when parking left on a one way- street)."
+      ],
+      "155": [
+        "Headed uphill, with curb: turn wheels to the center of the street with the back of the front tire against the curb."
+      ],
+      "156": [
+        "For a manual transmission, the car should be set in ﬁrst or reverse."
+      ],
+      "157": [
+        "This is done by turning your head and looking over your shoulder in the direction you plan to move."
+      ],
+      "158": [
+        "Use the acceleration lane to reach the speed of other vehicles before pulling onto the roadway."
+      ],
+      "159": [
+        "move to the deceleration lane, check for the posted speed, and adjust your speed accordingly."
+      ],
+      "160": [
+        "On multi-lane roads, the left-most lane is to be used for passing slower vehicles."
+      ],
+      "161": [
+        "Never pass on the shoulder, whether it is paved or not.",
+        "The shoulder is a hard surface on the right side of the roadway that is to be used as an emergency stopping lane and not for through traffic."
+      ],
+      "162": [
+        "When it is safe to pass, signal your intentions 100 feet or more before passing."
+      ],
+      "163": [
+        "Continue to pass until the complete front of the passed vehicle is visible in your rearview mirror."
+      ],
+      "164": [
+        "Stay in your lane.",
+        "Maintain a constant speed to allow the driver to pass you."
+      ],
+      "165": [
+        "stay in your current lane of traffic until you reach the point of merge. Then take turns with the other drivers to, safely and smoothly, ease into the open lane of traffic."
+      ],
+      "166": [
+        "Reducing the overall length of traffic backup by as much as 40%."
+      ],
+      "167": [
+        "Ideally, you should try to look at what is occurring 20 to 30 seconds in front of your vehicle."
+      ],
+      "168": [
+        "Always reduce speed before entering a curve to a safe speed"
+      ],
+      "169": [
+        "Hydroplaning occurs when the steering tires ride on a layer of water on top of the road surface"
+      ],
+      "170": [
+        "six inches of water will reach the bottom of most passenger cars, causing loss of control or possible stalling."
+      ],
+      "171": [
+        "Two feet of moving water can carry away most vehicles, including sport utility vehicles and pick-up trucks."
+      ],
+      "172": [
+        "Several things may affect your stopping distance: Speed",
+        "Your perception time",
+        "Your reaction time—This is the time and distance it takes for you to react",
+        "Braking distance—This is the time and distance it takes for your brakes to slow and stop your vehicle."
+      ],
+      "173": [
+        "The average driver has a reaction time of ¾ second to 1 second."
+      ],
+      "174": [
+        "You should always try to keep a minimum following distance of 4 seconds between your vehicle and the vehicle in front."
+      ],
+      "175": [
+        "When traffic is moving at highway speeds and there are no backups, it makes sense to move sooner to the lane that will remain open."
+      ],
+      "176": [
+        "Do not attempt to pass when an oncoming vehicle is approaching, when your view is blocked by a curve or a hill, while at intersections, or before a highway-railroad crossing or bridge."
+      ],
+      "177": [
+        "You should always try to keep a minimum following distance of 4 seconds between your vehicle and the vehicle in front."
+      ],
+      "178": [
+        "Increase your following distance: On slippery roads"
+      ],
+      "179": [
+        "Avoid driving next to other vehicles for long periods of time. You may be in their blind spot and this reduces the space you may need to avoid a collision."
+      ],
+      "180": [
+        "On rainy, snowy, or foggy days; use your low-beam lights and slow down"
+      ],
+      "181": [
+        "You should not use your horn when near blind pedestrians.",
+        "Using your horn inappropriately could scare or anger another road user."
+      ],
+      "182": [
+        "It is state law that you must use a turn signal 100 feet or more before changing lanes, turning left or right, or when merging into traffic."
+      ],
+      "183": [
+        "You have three options to avoid a collision or to reduce its impact. These options are braking, steering, or accelerating."
+      ],
+      "184": [
+        "Press on the brake pedal as hard as you can and keep applying constant pressure. Do not pump the brakes because this will deactivate ABS."
+      ],
+      "185": [
+        "Release pressure from the brake or accelerator.",
+        "Look where you want to go and steer the vehicle in the direction you want to go."
+      ],
+      "186": [
+        "If your vehicle leaves the paved road surface due to an uneven surface drop-off, slow down gradually when safe to do so, and steer gently back onto the pavement."
+      ],
+      "187": [
+        "Use the parking brake. Pull on the parking brake handle in the center console or push the parking brake foot pedal slowly so you will not lock the rear wheels and cause a skid."
+      ],
+      "188": [
+        "Grip the steering wheel firmly and keep the vehicle going straight.",
+        "Slow down gradually. Take your foot off the accelerator pedal.",
+        "Do not brake. Allow the vehicle to slow by itself or brake gently if necessary."
+      ],
+      "189": [
+        "Keep a strong grip on the steering wheel. Be aware that the steering wheel may be difficult to turn, but it is still able to be turned."
+      ],
+      "190": [
+        "Signal before reducing speed when: Turning off a roadway that does not have separate turning or exiting lanes"
+      ],
+      "191": [
+        "keeping a steady speed, signaling in advance, and keeping more space to the front of your vehicle before you reduce speed or turn."
+      ],
+      "192": [
+        "place them about 200 to 300 feet behind the vehicle, giving other drivers some time to change lanes if necessary."
+      ],
+      "193": [
+        "If your vehicle is accelerating out of control, you should: 1) Turn off the engine."
+      ],
+      "194": [
+        "enter your emergency contact information on your SCDMV record through SCDMV’s website at dmv.sc.gov."
+      ],
+      "195": [
+        "When a pedestrian is crossing a street guided by a dog or carrying a white cane, you must come to a complete stop."
+      ],
+      "196": [
+        "When making a right turn on red, you must be prepared to yield the right-of-way to pedestrians."
+      ],
+      "197": [
+        "Do not stop, park, or drive on a designated bicycle path or lane unless you are entering or leaving an alley or driveway"
+      ],
+      "198": [
+        "Sounding your horn to alert your presence may startle bicyclists and cause them to steer into your path resulting in a collision."
+      ],
+      "199": [
+        "Allow a motorcyclist a full lane width. Do not share the lane."
+      ],
+      "200": [
+        "Motorcycle turn signals may not self-cancel and the motorcyclist may have forgotten to turn them off."
+      ],
+      "201": [
+        "When following a motorcyclist allow for a minimum 4 second following distance or more in wet conditions"
+      ],
+      "202": [
+        "The no zone is the area around commercial vehicles... where vehicles disappear from the commercial driver’s view into blind spots."
+      ],
+      "203": [
+        "If you cannot see the driver’s face in the side view mirror, he or she cannot see you."
+      ],
+      "204": [
+        "Be particularly careful around bicyclists when the roadway is wet or covered with sand or gravel. These conditions affect bicycles much more than vehicles."
+      ],
+      "205": [
+        "When driving next to parked or stopped vehicles, pedestrians can walk out between these vehicles."
+      ],
+      "206": [
+        "If you cannot see the driver’s face in the side view mirror, he or she cannot see you."
+      ],
+      "207": [
+        "traveling at 55 mph, requires a minimum of 335 feet before coming to a complete stop"
+      ],
+      "208": [
+        "When passing a large vehicle, look for the whole front of the vehicle in your rear-view mirror before pulling in front"
+      ],
+      "209": [
+        "large vehicles have huge blind spots directly behind them that extend up to 200 feet."
+      ],
+      "210": [
+        "large vehicles must drive slowly, approximately 35 mph, and therefore use the right lane.",
+        "near truck weigh stations, where large vehicles will be attempting to re-enter faster moving traffic."
+      ],
+      "211": [
+        "To avoid a collision, do not turn until the truck or bus has completed its turn.",
+        "If you try to get in between the truck or bus and the curb, you will be squeezed in-between the vehicle"
+      ],
+      "212": [
+        "keep as far as possible to the right side of the roadway to avoid a side-swept collision and to reduce the wind turbulence between the two vehicles"
+      ],
+      "213": [
+        "These stop lines help to set you farther back at an intersection to give larger vehicles more turning space."
+      ],
+      "214": [
+        "stay calm, activate your turn signal, and pull to the side of the roadway as soon and safely as possible."
+      ],
+      "215": [
+        "To assist with visibility, turn on your interior lights as soon as you stop to help the officer see inside your vehicle."
+      ],
+      "216": [
+        "If the documents are out of your reach, tell the officer where they are and ask if you may reach for them."
+      ],
+      "217": [
+        "Your acceptance of a traffic ticket document is not considered an admission of guilt."
+      ],
+      "218": [
+        "Slow down and yield the right-of-way by making a lane change into a lane away from the authorized emergency vehicle, if safety and traffic conditions permit."
+      ],
+      "219": [
+        "If a lane change is unsafe, slow down and proceed with caution while maintaining a safe speed for traffic conditions."
+      ],
+      "220": [
+        "A fluorescent or reflective orange and red triangle displayed on the rear of a vehicle... means the vehicle is traveling less than 25 mph."
+      ],
+      "221": [
+        "Pass with caution and do not use your horn or “rev” your vehicle’s engine because this may scare the animal and cause a collision."
+      ],
+      "222": [
+        "Dim your high beams when you are 500 feet or more away from any oncoming vehicle."
+      ],
+      "223": [
+        "Use your low beams when following another vehicle that is less than 200 feet in front of you."
+      ],
+      "224": [
+        "If a vehicle comes toward you with its high beams on, glance toward the right side of the road to keep from being distracted or momentarily blinded"
+      ],
+      "225": [
+        "In fog, rain, or snow, use your low beams. Light from your high beams may cause glare and make it more difficult to see ahead."
+      ],
+      "226": [
+        "Work zone signs have orange backgrounds and black letters or symbols."
+      ],
+      "227": [
+        "If you endanger a highway worker you may be fined and have points assessed against your driving record."
+      ],
+      "228": [
+        "Increase your following distance by adding... at least two additional seconds for driving on unfamiliar roadways at night."
+      ],
+      "229": [
+        "Take turns crossing a bridge; generally, the first driver to the bridge has the right-of-way."
+      ],
+      "230": [
+        "Be especially careful on bridges, overpasses, and infrequently traveled roadways because they tend to freeze first."
+      ],
+      "231": [
+        "Keep a full tank of gasoline to prevent condensation within your gas tank, which may freeze."
+      ],
+      "232": [
+        "If you have ABS, do not pump the brakes. Apply steady pressure to the brakes."
+      ],
+      "233": [
+        "If your vehicle gets stuck in the snow, do not spin your wheels. This will only dig the vehicle in deeper."
+      ],
+      "234": [
+        "Sixty percent of the cargo weight of a trailer should go in the front (nearest the towing vehicle) and 40 percent in the back."
+      ],
+      "235": [
+        "If the trailer begins to sway or whip, steer straight and reduce speed gradually; do not apply the brakes."
+      ],
+      "236": [
+        "The maximum recommended speed for most vehicle-trailer combinations is 55 mph."
+      ],
+      "237": [
+        "When backing up a trailer, go slowly. Keep your hand at the bottom of the steering wheel."
+      ],
+      "238": [
+        "If the trailer starts to jackknife – STOP – and pull ahead to straighten out; then start again."
+      ],
+      "239": [
+        "When you begin to hook up a trailer, don’t pause or stop to do something else, always finish the process first."
+      ],
+      "240": [
+        "When going down a grade, slow down BEFORE starting down the hill."
+      ],
+      "241": [
+        "Alcohol and other impairing drugs reduces your: Judgment",
+        "1. Alcohol and other impairing drugs a. reduce your judgment."
+      ],
+      "242": [
+        "Two-direction roadway—passing permitted when dashed line is on your side",
+        "2. A yellow dashed line on your side of the roadway only means... c. passing is permitted on your side."
+      ],
+      "243": [
+        "Regulatory Signs—These signs are square or rectangular or have a special shape and are white with black, red, or green letters or symbols.",
+        "6. Regulatory signs are: ... c. white."
+      ],
+      "244": [
+        "Always be prepared to yield to pedestrians even if they are not in a crosswalk.",
+        "7. If a pedestrian is crossing in the middle of the street... even if it is illegal, you a. must stop for them."
+      ],
+      "245": [
+        "Allow a motorcyclist a full lane width. Do not share the lane.",
+        "8. Motorcycle operators have the right to a. use a complete traffic lane."
+      ],
+      "246": [
+        "Allow as much space as possible and slow down when approaching or passing a bicyclist.",
+        "9. When approaching or passing a bicyclist, you should a. slow down and allow as much space as possible."
+      ],
+      "247": [
+        "Use your high beams whenever there are no oncoming vehicles.",
+        "10. When driving at night use your high beams when... c. there is no oncoming traffic approaching."
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 25,
-    "topics_covered": 24,
-    "coverage_pct": 96.0,
-    "uncovered_topics": [
-      "Required documentation for United States citizen license applicants"
-    ],
+    "topics_total": 28,
+    "topics_covered": 28,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
     "verdict": "PASS",
     "grade": "A"
   },
@@ -65,6 +848,22 @@
     "sign_ratio_pct": 12.1,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 247,
+      "avg_fidelity": 9.98,
+      "pct_at_10": 99.6,
+      "pct_above_9": 99.6,
+      "pct_above_7": 99.6,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [
+        230
+      ],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

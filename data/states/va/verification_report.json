@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "va",
   "name": "Virginia",
-  "verified_at": "2026-05-26T02:33:54Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:21:44Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.dmv.virginia.gov/webdoc/pdf/dmv39.pdf",
     "manual_pdf_sha256": "886137824ac880e7356d1d1ab2de5c3d38beef9a7287dbaa74d80d3b883a9428",
@@ -24,21 +24,837 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
-    "avg_fidelity": 10.0,
-    "pct_at_10": 100.0,
-    "pct_above_9": 100.0,
-    "pct_above_7": 100.0,
-    "pct_zero": 0.0,
-    "flagged_question_ids": [],
+    "sample_size": 0,
+    "judged_count": 268,
+    "avg_fidelity": 9.51,
+    "pct_at_10": 95.1,
+    "pct_above_9": 95.1,
+    "pct_above_7": 95.1,
+    "pct_zero": 4.9,
+    "flagged_question_ids": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      212,
+      214,
+      215,
+      216,
+      218,
+      222,
+      225,
+      226
+    ],
+    "evidence_by_question_id": {
+      "3": [
+        "Virginia has a zero tolerance law against underage drinking"
+      ],
+      "7": [
+        "Use the two-, three- and four-second rule to determine if you are following far enough behind the vehicle ahead of you."
+      ],
+      "8": [
+        "Two-part knowledge exam .................................................3",
+        "The two-part knowledge exam is given on a computer"
+      ],
+      "9": [
+        "Suspension for failing to satisfy child support-related requirements"
+      ],
+      "10": [
+        "Dangerous driving behaviors",
+        "Drowsy driving"
+      ],
+      "11": [
+        "Insurance monitoring program ...............................30",
+        "DMV will suspend your driving privilege if: you do not submit the requested insurance policy information"
+      ],
+      "12": [
+        "Light rail ................................................................20",
+        "Light Rail: There is a light rail train system in Norfolk called The Tide."
+      ],
+      "13": [
+        "Administrative License Suspension .........................30",
+        "Administrative License Suspension If you refuse a breath test or your BAC is .08 percent or higher"
+      ],
+      "14": [
+        "Vision screening ...................................................................4",
+        "Tests will include a vision screening and may include a two-part knowledge exam and a road skills test."
+      ],
+      "15": [
+        "You must correctly answer all ten traffic sign questions in part one of the exam before you can take part two of the exam."
+      ],
+      "16": [
+        "You must answer at least 80 percent of these questions correctly to pass part two."
+      ],
+      "17": [
+        "If you fail the exam and you are under age 18, by law you must wait a full 15 days before you can retake the exam."
+      ],
+      "18": [
+        "If you fail the knowledge exam three times, you will not be able to take it a fourth time until you complete and pass the classroom component of driver education."
+      ],
+      "19": [
+        "You must provide a vehicle for the road skills test (cannot be taken in an autocycle)."
+      ],
+      "20": [
+        "Applicants age 18 or older must hold the learner’s permit for 60 days prior to the first road skills test"
+      ],
+      "21": [
+        "If you fail the road skills test, you must wait two days to take it again."
+      ],
+      "22": [
+        "If you need to wear glasses or contact lenses to pass the vision screening, you must wear them when you drive. Your license will display a C for this restriction."
+      ],
+      "23": [
+        "20/40 or better vision in one or both eyes, and",
+        "110 degrees, or better, horizontal vision in one or both eyes"
+      ],
+      "24": [
+        "A daylight driving only restricted license permits you to drive only during the period of time beginning a half-hour after sunrise and ending a half-hour before sunset."
+      ],
+      "25": [
+        "It is illegal to avoid these traffic controls by cutting through a parking lot or field."
+      ],
+      "26": [
+        "You may not turn right on red if signs are posted at the intersection that read “No Turn on Red,” or if a red arrow pointing to the right is displayed."
+      ],
+      "27": [
+        "You may turn left at a red light if you are on a one-way street and turning left onto another one-way street while the traffic signal displays a red light."
+      ],
+      "28": [
+        "Obey all signs and signals unless directed by a police officer; always follow the officer’s direction."
+      ],
+      "29": [
+        "If you fail the road skills test at DMV three times, you will not be able to take it a fourth time until you complete and pass the in-vehicle part of driver education"
+      ],
+      "30": [
+        "You may turn left at a red light if you are on a one-way street and turning left onto another one-way street while the traffic signal displays a red light. Before turning, you must come to a complete stop."
+      ],
+      "31": [
+        "A red arrow means you must stop if you intend to move in the direction of the arrow.",
+        "You may not proceed in the direction of the arrow as long as the red arrow is displayed, unless signs are posted at the intersection that read “Right on Red Arrow After Stop”"
+      ],
+      "32": [
+        "When traffic signals are not working because of a power outage or other problem and not displaying any lights, you are required to stop, proceeding through the intersection as though it were an all-way stop."
+      ],
+      "33": [
+        "Yellow X or Yellow Diagonal Downward Arrow: These signals mean that you should move out of the lane as soon as safely possible."
+      ],
+      "34": [
+        "the PHB’s two red lights alternate flashing, telling the driver that if the crosswalk is now clear, they may proceed with caution."
+      ],
+      "35": [
+        "Orange and black and pink and black signs are used to advise and warn in construction (orange) and incident (pink) areas."
+      ],
+      "36": [
+        "Pentagon (School Zone/School Crossing): This five-sided shape marks school zones and warns you about school crossings."
+      ],
+      "37": [
+        "Diamond (Warning): These signs warn you of special conditions or hazards ahead. Slow down and drive with caution."
+      ],
+      "38": [
+        "During rain, snow and ice, you may receive a ticket for driving too fast for the conditions even if you are driving at or less than the posted speed limit."
+      ],
+      "39": [
+        "No Left Turn: Left turns are against the law. In Virginia, U-turns are considered as two left turns and are illegal if this sign is posted."
+      ],
+      "40": [
+        "Flashing yellow light: A flashing yellow light means slow down and proceed with caution."
+      ],
+      "41": [
+        "The brown sign is used to advise of historical or cultural interests that might exist in the area."
+      ],
+      "42": [
+        "If you have not entered the intersection, stop; or, if unsafe to stop, cautiously go through it."
+      ],
+      "43": [
+        "If a traffic light changes from red to flashing yellow arrow while a pedestrian is in the intersection, allow the pedestrian to cross the street before turning."
+      ],
+      "44": [
+        "If you get to the intersection at the same time as other vehicles, the driver on the left must yield to the driver on the right."
+      ],
+      "45": [
+        "Advisory Speed: This sign indicates the maximum safe speed for a highway exit."
+      ],
+      "46": [
+        "State law requires motorists to pass with at least three feet of clearance when the way is clear."
+      ],
+      "47": [
+        "Slippery When Wet: When pavement is wet, reduce your speed... Increase the distance between your car and the one ahead of you."
+      ],
+      "48": [
+        "Entering traffic must yield the right-of-way to traffic already in the circle and travel in a counter clockwise direction."
+      ],
+      "49": [
+        "Get out of the car right away and run diagonally away from the tracks in the direction of the oncoming train."
+      ],
+      "50": [
+        "If you are convicted of using a handheld communications device in a highway work zone, you will be fined $250."
+      ],
+      "51": [
+        "If you are convicted of exceeding the speed limit in a highway work zone, you may be fined up to $500."
+      ],
+      "52": [
+        "This sign marks the beginning of a no passing zone. You may not pass cars ahead of you in your lane, even if the way is clear."
+      ],
+      "53": [
+        "Note: School buses must always stop at railroad crossings, even when the lights are not flashing."
+      ],
+      "54": [
+        "When driving near the devices, keep your vehicle in the middle of the lane and obey the posted speed limit.",
+        "Don’t change lanes until you are completely clear of the work zone."
+      ],
+      "55": [
+        "Remember, the color orange marks a work zone and means slow down and be alert."
+      ],
+      "56": [
+        "Open Joints: Slow down. Open joints on bridges or ramps could cause a motorcyclist to lose control of the motorcycle."
+      ],
+      "57": [
+        "Merge: Two lanes of traffic moving in the same direction are about to become one. Drivers in both lanes are responsible for merging safely."
+      ],
+      "58": [
+        "Low Ground Railroad Crossing: A steep slope where the railroad tracks cross the road may cause the bottom of low vehicles to get caught or drag on the tracks."
+      ],
+      "59": [
+        "As you leave the work zone, stay in your lane and maintain your speed. Don’t change lanes until you are completely clear of the work zone."
+      ],
+      "60": [
+        "Slow Moving Vehicles traveling at 25 MPH or less... must display these signs when using a public highway."
+      ],
+      "61": [
+        "Red reflectors on the pavement show areas not to be entered or used.",
+        "They are positioned on the road surface so that only traffic flowing in the wrong direction would observe them."
+      ],
+      "62": [
+        "You may not cross the lines unless you are making a left turn or passing pedestrians, bicyclists, and riders of scooters or skateboards"
+      ],
+      "63": [
+        "They are used to show lane assignment in intersections and interchanges where there might otherwise be a tendency to drift out of a lane"
+      ],
+      "64": [
+        "However, they may not travel further than 150 feet in this lane."
+      ],
+      "65": [
+        "is used on travel lanes too narrow for motor vehicles and bicycles to share side-by-side."
+      ],
+      "66": [
+        "Drivers must stop for a red traffic signal behind all bicycle boxes, not inside the box."
+      ],
+      "67": [
+        "Right turns on red are not allowed at these intersections."
+      ],
+      "68": [
+        "HOV lanes are reserved for buses, vanpools, carpools, other high occupancy vehicles, motorcycles, and certain clean special fuel vehicles."
+      ],
+      "69": [
+        "if you do enter one of those lanes by mistake, do not stop.",
+        "Cameras will photograph the car’s license plate number and the registered vehicle’s owner will be billed for the toll."
+      ],
+      "70": [
+        "Yellow — Stop only long enough to load or unload. Stay with your car."
+      ],
+      "71": [
+        "Rumble strips should be slowly driven over, not swerved around."
+      ],
+      "72": [
+        "Double solid white lines separate lanes of traffic going in the same direction. ... You may not cross these lines."
+      ],
+      "73": [
+        "Yield line is a line of triangles extending across the roadway that may be used with a yield sign to show the point at which you must yield or stop"
+      ],
+      "74": [
+        "If your steering wheel were a clock, your hands should be at the 8 o’clock and 4 o’clock positions."
+      ],
+      "75": [
+        "if you are driving 20 or more miles per hour (MPH) above the speed limit, or over 85 MPH, a law enforcement officer may charge you with reckless driving"
+      ],
+      "76": [
+        "35 MPH for unpaved roads and 55 MPH for all other roads."
+      ],
+      "77": [
+        "It is illegal to use radar detectors in Virginia."
+      ],
+      "78": [
+        "If you don’t obey a law enforcement officer’s signal to stop and the officer pursues you and is killed as a direct result of the pursuit, you will be guilty of a Class 4 felony."
+      ],
+      "79": [
+        "You do not have to stop if you are traveling in the opposite direction on a roadway with a median or barrier dividing the road and the bus is on the opposite side"
+      ],
+      "80": [
+        "Reaction distance: The distance your vehicle travels between the time you recognize a problem and the time you apply the brakes."
+      ],
+      "81": [
+        "For example, wet pavement can double your braking distance."
+      ],
+      "82": [
+        "Remember, never pump antilock brakes."
+      ],
+      "83": [
+        "slow down to 10 miles per hour below the posted speed limit and pass at least two feet to the left of the vehicle."
+      ],
+      "84": [
+        "Never follow an emergency vehicle closer than 500 feet when its lights are flashing."
+      ],
+      "85": [
+        "After entering the roundabout, drivers must travel in a counter-clockwise direction."
+      ],
+      "86": [
+        "the driver on the left must allow the driver on the right to go first."
+      ],
+      "87": [
+        "If the traffic lights at an intersection are not working, all vehicles coming to the intersection must stop. The driver on the left must yield to the driver on the right."
+      ],
+      "88": [
+        "When entering a roadway from a private road or driveway, you must stop and yield to all traffic and pedestrians."
+      ],
+      "89": [
+        "You must yield to funeral processions. Do not cut through, join or interfere with a funeral procession."
+      ],
+      "90": [
+        "Violations can result in court suspension of your driver’s license and demerit points on your driving record."
+      ],
+      "91": [
+        "Use your vehicle’s right turn signal to let drivers around you know what you want to do."
+      ],
+      "92": [
+        "The left lane is for passing only, not cruising."
+      ],
+      "93": [
+        "Return to the right lane as soon as you can see the front of the passed vehicle in your rearview mirror."
+      ],
+      "94": [
+        "reduce speed and pass at least three feet to the left.",
+        "State law requires motorists to pass cyclists with at least three feet of clearance."
+      ],
+      "95": [
+        "When being passed, don’t speed up. Maintain a steady speed or slow down."
+      ],
+      "96": [
+        "Passing is unlawful and unsafe:",
+        "when a solid line marks the left side of your lane"
+      ],
+      "97": [
+        "Gradually reduce your speed, look in the direction you want to go, slowly steer back onto the roadway."
+      ],
+      "98": [
+        "Keep your front wheels pointed straight ahead until you are actually going to make the left turn.",
+        "This prevents you from being pushed into oncoming traffic if another vehicle crashes into you from behind."
+      ],
+      "99": [
+        "both vehicles should turn in front of each other so that the passenger sides of the vehicles are beside each other."
+      ],
+      "100": [
+        "In business districts, cities and towns, U-turns are allowed only at intersections."
+      ],
+      "101": [
+        "You should signal at least three or four seconds, 100 feet, ahead of the turn."
+      ],
+      "102": [
+        "Slow or Stop Left hand and arm pointing downward"
+      ],
+      "103": [
+        "3 seconds 35-45 MPH"
+      ],
+      "104": [
+        "Increase your following distance when driving: behind a large vehicle that blocks your vision"
+      ],
+      "105": [
+        "If possible, move over to another lane, or gently tap your brakes to flash your brake lights and slow down."
+      ],
+      "106": [
+        "Expert drivers try to focus their eyes 20 to 30 seconds ahead. In the city, that equals approximately one block."
+      ],
+      "107": [
+        "Check from left to right and then left again before entering an intersection."
+      ],
+      "108": [
+        "Use your rearview mirror to check the traffic behind you frequently, about every 10 seconds."
+      ],
+      "109": [
+        "The best way to see a car in your blind spot is by quickly turning your head and glancing over your shoulder"
+      ],
+      "110": [
+        "Failing to stop and causing serious bodily damage or death can result in a Class 1 misdemeanor."
+      ],
+      "111": [
+        "Bicyclists are allowed to ride in the center of the lane, when necessary, such as when they are about to turn left or when the lane is too narrow to share side-by-side with a car."
+      ],
+      "112": [
+        "Allow yourself plenty of braking distance by adding an extra second to the following distance rule. In inclement weather, double this distance."
+      ],
+      "113": [
+        "The size of a motorcycle can cause you to misjudge the motorcycle’s speed and distance."
+      ],
+      "114": [
+        "Drivers are required to come to a full stop for a pedestrian using a cane or guide dog, as this indicates blindness or vision impairment."
+      ],
+      "115": [
+        "Never stop, pass or shift on train tracks."
+      ],
+      "116": [
+        "Low speed vehicles may be operated on public roads with speed limits of 35 MPH or less"
+      ],
+      "117": [
+        "If you can’t see the driver’s face in his side view mirror, then he can’t see you."
+      ],
+      "118": [
+        "When passing, look for the entire front of the truck in your rearview mirror before pulling in front."
+      ],
+      "119": [
+        "if your trailer starts to sway, slow down"
+      ],
+      "120": [
+        "The most common mistake that drivers make when backing up is failing to look both ways behind them."
+      ],
+      "121": [
+        "You may not park more than one foot from the curb."
+      ],
+      "122": [
+        "Parking uphill — with curb Turn front wheels left"
+      ],
+      "123": [
+        "within 15 feet of a fire hydrant"
+      ],
+      "124": [
+        "within 50 feet of a railroad crossing"
+      ],
+      "125": [
+        "The single biggest contributor to crashes is failing to identify a risk."
+      ],
+      "126": [
+        "Virginia law requires motorists to use headlights during inclement weather such as rain, fog, snow or sleet when visibility is reduced to 500 feet."
+      ],
+      "127": [
+        "You must use your headlights whenever you use your windshield wipers as a result of bad weather."
+      ],
+      "128": [
+        "When following, use low-beams whenever you are within 200 feet of the vehicle ahead."
+      ],
+      "129": [
+        "Glance toward the side of the road, then look quickly ahead to determine the other vehicle’s position."
+      ],
+      "130": [
+        "Use high-beam headlights on highways, unless another vehicle is within 500 feet coming toward you."
+      ],
+      "131": [
+        "Glance toward the side of the road, then look quickly ahead to determine the other vehicle’s position.",
+        "Even if the other driver does not dim his headlights, do not turn on your high-beam headlights."
+      ],
+      "132": [
+        "Use low-beam headlights in heavy fog and look for road edge markings to guide you."
+      ],
+      "133": [
+        "When rain begins, during the first half-hour, roads are more likely to be slippery due to oil on the road surface mixing with water."
+      ],
+      "134": [
+        "Remove snow and ice from your entire car, including the roof, hood and rear of the vehicle, before you start driving."
+      ],
+      "135": [
+        "Watch for ice on bridges and in shady areas. Bridges freeze before other road surfaces."
+      ],
+      "136": [
+        "if you are convicted of aggressive driving, your license could be suspended for ten days or for as long as six months."
+      ],
+      "137": [
+        "If you see an aggressive driver, stay out of the way.",
+        "Avoid eye contact and ignore his gestures and shouting."
+      ],
+      "138": [
+        "Stop at a safe place and take a nap. As little as 10 to 20 minutes of sleep can make a big difference.",
+        "Rolling down a window, chewing gum, turning up the radio, or consuming caffeine... are not reliable methods"
+      ],
+      "139": [
+        "drivers age 21 or older are considered to be driving under the influence (DUI) if your blood alcohol content (BAC) is .08 percent or higher."
+      ],
+      "140": [
+        "If under age 21, you can be convicted of illegal consumption of alcohol if your BAC is at least .02 but less than .08."
+      ],
+      "141": [
+        "Twelve ounces of beer is the same as a shot of liquor or a five-ounce glass of wine."
+      ],
+      "142": [
+        "Only time can decrease intoxication. Coffee, cold showers or exercise will not sober you up."
+      ],
+      "143": [
+        "Virginia law prohibits drivers from holding cell phones or any other wireless communication devices while driving except in a driver emergency or the vehicle is lawfully parked or stopped."
+      ],
+      "144": [
+        "Annually, driver distraction accounts for roughly 17 percent of all traffic crashes in Virginia."
+      ],
+      "145": [
+        "Combining alcohol with other drugs usually multiplies the effects of both and can have a disastrous effect on your ability to drive."
+      ],
+      "146": [
+        "Drivers must move vehicles from the road immediately if the vehicles are able to be moved, no one is injured and the driver is capable of safely doing so."
+      ],
+      "147": [
+        "Law enforcement officers are required to forward a written crash report to DMV when a traffic crash results in injury or the death of any person or total property damage is in excess of $3,000."
+      ],
+      "148": [
+        "If you cannot locate anyone, leave a note that can be found easily at the scene of the crash.",
+        "You must also report the crash to the police within 24 hours."
+      ],
+      "149": [
+        "If a collision with a deer or other animal is unavoidable, do not swerve. Brake firmly, stay in your lane, and come to a controlled stop."
+      ],
+      "150": [
+        "If you are pulled over at night, turn on your vehicle’s interior lights."
+      ],
+      "151": [
+        "Sign the citation; this is not an admission of guilt. Refusal to sign the citation may result in your arrest."
+      ],
+      "152": [
+        "Under Virginia law, the driver and all passengers, both front and rear, must wear safety belts."
+      ],
+      "153": [
+        "Pregnant women are much safer if buckled up by wearing the belt as low on the pelvis as possible."
+      ],
+      "154": [
+        "If you are convicted of violating the child restraint law, you will be fined $50."
+      ],
+      "155": [
+        "The safest place to install a child safety seat is in the center of the back seat."
+      ],
+      "156": [
+        "It is illegal to transport children under age 16 in the bed of a pickup truck, even if equipped with a camper shell."
+      ],
+      "157": [
+        "Move your seat back so that you are at least ten inches from the steering wheel."
+      ],
+      "158": [
+        "If your steering wheel is adjustable, tilt it downward. This points the air bag toward your chest instead of your head and neck."
+      ],
+      "159": [
+        "All children under age 8 must be properly secured in a child safety seat or booster seat"
+      ],
+      "160": [
+        "Children should ride rear facing from birth to 2 years, or as long as the safety seat manufacturer allows."
+      ],
+      "161": [
+        "If the vehicle does not have a back seat, a rear facing child seat may be placed in the front passenger seat if the vehicle is not equipped with a passenger side air bag or if the passenger air bag is turned off."
+      ],
+      "162": [
+        "If your license is suspended, your privilege to drive has been withdrawn temporarily.",
+        "Revocation means that your privilege to drive has been terminated."
+      ],
+      "163": [
+        "The court or DMV will suspend or revoke your privilege to drive if you are convicted of any of the following offenses: ... making a false statement to DMV"
+      ],
+      "164": [
+        "The court may suspend or revoke your driving privilege if you are convicted of the following offenses: reckless or aggressive driving"
+      ],
+      "165": [
+        "After your second conviction for a demerit point traffic violation ... committed when you were under age 18, DMV will suspend your driving privilege for 90 days."
+      ],
+      "166": [
+        "Your third conviction will result in a revocation of your driving privilege for one year or until you reach age 18, whichever is longer."
+      ],
+      "167": [
+        "DMV will require you to complete a driver improvement clinic if you accumulate 12 demerit points within 12 months or 18 points within 24 months."
+      ],
+      "168": [
+        "If you receive 18 demerit points within 12 months or 24 points within 24 months, DMV will suspend your driving privilege for 90 days and require that you complete a driver improvement clinic."
+      ],
+      "169": [
+        "DMV is concerned about any condition that impairs the driver's: level of consciousness, perception (vision), judgment, motor skills"
+      ],
+      "170": [
+        "When registering a motor vehicle, you must sign a statement on the registration application that you have liability insurance coverage for your motor vehicle, or pay the $500 uninsured motor vehicle fee."
+      ],
+      "171": [
+        "if your license has been expired for one year or more, you must show proof of legal presence and pass the two-part knowledge, road skills and vision exams to have your driving privilege reinstated."
+      ],
+      "172": [
+        "suspend your driving privilege if you: are late making child support payments by 90 days or $5,000"
+      ],
+      "173": [
+        "Under implied consent laws, if you operate a motor vehicle on Virginia’s public roads, you agree to take a breath test upon request."
+      ],
+      "174": [
+        "your driving privilege will be automatically suspended: for seven days, for a first offense"
+      ],
+      "175": [
+        "The passenger area means the area that seats the driver and passengers and any area within the driver’s reach, including an unlocked glove compartment."
+      ],
+      "176": [
+        "Conviction of any DUI offense involving a juvenile passenger (age 17 or younger) in the vehicle at the time of the offense carries an additional mandatory five-day jail term"
+      ],
+      "177": [
+        "Your vehicle will be impounded immediately for 30 days if you are caught driving after your license has been suspended for an alcohol-related offense."
+      ],
+      "178": [
+        "you may be responsible for paying the cost (up to $1,000) for law enforcement, emergency medical services, fire fighters and rescue personnel"
+      ],
+      "179": [
+        "a suspension of your driving privilege for one year from the date of conviction"
+      ],
+      "180": [
+        "face mandatory suspension of your driver’s license for at least six months but not more than one year"
+      ],
+      "181": [
+        "The licensed driver with you may be age 18, 19, or 20 if he or she is your legal guardian, brother, sister, half-brother, half-sister, step brother or stepsister."
+      ],
+      "182": [
+        "If you are age 19 or older, you must hold a learner’s permit for 60 days, or present a driver’s education certificate of completion to apply for a driver’s license."
+      ],
+      "183": [
+        "A driver’s license allows you to operate any vehicle or small truck less than 26,001 pounds that is exempt from commercial driver’s license (CDL) requirements."
+      ],
+      "184": [
+        "If you wish to operate a school bus designed to carry 15 occupants (including the driver), you do not need to obtain a commercial driver’s license.",
+        "However, you will need to take the commercial driver and school bus tests to obtain the school bus endorsement on your driver’s license."
+      ],
+      "185": [
+        "An international driver’s license is not a valid driver’s license and does not allow you to drive. It is only a foreign translation of your existing valid driver’s license"
+      ],
+      "186": [
+        "International driver’s licenses marketed by private sector businesses are not valid and do not allow you to legally operate a motor vehicle."
+      ],
+      "187": [
+        "You will receive your new driver’s license in the mail. For security, DMV does not issue licenses in customer service centers."
+      ],
+      "188": [
+        "If you move, you are required to notify DMV within 30 days."
+      ],
+      "189": [
+        "If you are a new Virginia resident and drive, you must obtain a Virginia driver’s license within 60 days of moving here."
+      ],
+      "190": [
+        "Title and register your vehicle and obtain Virginia license plates within 30 days of moving to Virginia."
+      ],
+      "191": [
+        "License plates must be displayed on the front and rear of the vehicle."
+      ],
+      "192": [
+        "If any part of Lincoln’s head is covered by the tread, you’re driving with the safe amount of tread."
+      ],
+      "193": [
+        "The recommended PSI (pounds per square inch) is located in the vehicle owner’s manual or the driver’s side door jamb of the vehicle."
+      ],
+      "194": [
+        "Paying the uninsured motor vehicle fee does not provide insurance coverage, but it allows you to register and operate the vehicle in Virginia for a one-year period."
+      ],
+      "195": [
+        "Before you cancel your insurance, return the license plates to DMV and cancel the registration."
+      ],
+      "196": [
+        "pay a $600 noncompliance fee or apply and be approved for a payment plan"
+      ],
+      "197": [
+        "If you are under age 18, you can indicate your wishes to donate by checking yes; by law, your parents and guardians must make the final decision."
+      ],
+      "198": [
+        "When you brake, apply the brakes gently.",
+        "7. If you are driving on an icy or slippery road and have to stop: a. Apply brakes gently."
+      ],
+      "199": [
+        "Slow or Stop Left hand and arm pointing downward",
+        "8. The correct hand signal for stopping is: ... c. Left hand and arm pointing downward."
+      ],
+      "200": [
+        "10. If you are involved in a crash, you must: ... c. Stop, help any injured, report the crash to the police, exchange information and notify your insurance company."
+      ],
+      "213": [
+        "Section 3 – Safe Driving",
+        "Over-correcting .................................................................18"
+      ],
+      "217": [
+        "Hazardous conditions ........................................................23",
+        "Fog ........................................................................23",
+        "Rain ......................................................................23"
+      ],
+      "219": [
+        "Section 4 – Seat Belts, Airbags, and Child Safety Seats"
+      ],
+      "220": [
+        "Alcohol-related crashes are not accidents. They can be prevented!"
+      ],
+      "221": [
+        "Section 2 – Signals, Signs and Pavement Markings",
+        "Regulatory signs .....................................................7",
+        "Warning signs ........................................................8"
+      ],
+      "223": [
+        "Traffic crashes ....................................................25",
+        "Deer/large animal hazards ..................................................25",
+        "Section 3 – Safe Driving"
+      ],
+      "224": [
+        "Two-part knowledge exam .................................................3",
+        "Road skills test ...................................................................4",
+        "Vision screening .................................................................4"
+      ],
+      "227": [
+        "You will need to take the knowledge exam if you do not hold a valid driver’s license from another U. S. state, Canada, Germany, France, or the Republic of Korea."
+      ],
+      "228": [
+        "You will need to take the road skills test if you do not hold a valid driver’s license from another U. S. state, Canada, Germany, France, the Republic of Korea, or Taiwan."
+      ],
+      "229": [
+        "the exam is offered in many different languages and American Sign Language. Therefore, translators may not be used for tests in offered languages."
+      ],
+      "230": [
+        "The completion date of the driver’s manual course must be after the date that you failed the knowledge exam the third time."
+      ],
+      "231": [
+        "get help while taking the exam"
+      ],
+      "232": [
+        "The vehicle must have a valid safety inspection sticker, license plates, registration card and decals, working brakes, safety belts, horn, lights, turn signals, mirrors and speedometer."
+      ],
+      "233": [
+        "complete a behind-the-wheel checklist (DMV form CSMA 19 available at dmv.virginia.gov or any DMV office) that describes specific driving tasks that you may be asked to perform",
+        "A licensed driver will need to certify on the form that he/she has been with you while you practiced the driving tasks"
+      ],
+      "234": [
+        "For applicants under 18, the road skills test will be given as part of the driver education course taken at a public, private or commercial driving school."
+      ],
+      "235": [
+        "Before you can take this course, you must present your certificate of completion for the classroom component of driver education to the driver training school"
+      ],
+      "236": [
+        "try to get test questions or answers before the exam",
+        "give another person exam questions or answers"
+      ],
+      "237": [
+        "present an acceptable driver’s education certificate of completion, or",
+        "complete a behind-the-wheel checklist (DMV form CSMA 19 available at dmv.virginia.gov or any DMV office)"
+      ],
+      "238": [
+        "Exam questions are taken from information in this manual."
+      ],
+      "239": [
+        "A licensed driver will need to certify on the form that he/she has been with you while you practiced the driving tasks and that you have complied with all requirements for learner’s permit holders"
+      ],
+      "240": [
+        "If you are home schooled, refer to the Home-Schooled In-Car Driver Education Information Sheet (HS 3) for more information about taking the road skills test."
+      ],
+      "241": [
+        "Applicants age 18 or older must hold the learner’s permit for 60 days prior to the first road skills test or complete a course of driver’s education"
+      ],
+      "242": [
+        "The test may be taken only once per business day."
+      ],
+      "243": [
+        "70 degrees, or better, horizontal vision."
+      ],
+      "244": [
+        "unless signs are posted at the intersection that read “Right on Red Arrow After Stop” or “Left on Red Arrow After Stop.”"
+      ],
+      "245": [
+        "At a flashing red arrow, come to a complete stop, yield the right-of-way to vehicles coming from the other direction and pedestrians in the intersection, and proceed in the direction of the arrow"
+      ],
+      "246": [
+        "At a railroad crossing, you must come to a complete stop even if you don’t see a train."
+      ],
+      "247": [
+        "you must visit a DMV customer service center and pass the vision screening without wearing glasses or contact lenses or submit a Vision Screening Report (MED 4)."
+      ],
+      "248": [
+        "110 degrees, or better, horizontal vision in one or both eyes"
+      ],
+      "249": [
+        "Before turning, you must come to a complete stop. Look both ways and yield the right-of-way to pedestrians and other traffic."
+      ],
+      "250": [
+        "If you fail the road skills test, you must wait two days to take it again."
+      ],
+      "251": [
+        "at least 30 degrees or better when looking toward your nose and 40 degrees or better when looking toward your temple"
+      ],
+      "252": [
+        "read the DMV publication Driver’s Licensing Information for Bioptic Telescopic Lense Wearers (MED 44) available at dmv.virginia.gov or contact DMV at (804) 497-7100."
+      ],
+      "253": [
+        "It is illegal to avoid these traffic controls by cutting through a parking lot or field."
+      ],
+      "254": [
+        "If you are turning without a green arrow, you must yield the right-of-way to vehicles coming from the other direction and pedestrians in the intersection."
+      ],
+      "255": [
+        "Red X: Never drive in a lane marked with a red X signal."
+      ],
+      "256": [
+        "One yellow light at the bottom flashes when a pedestrian activates the PHB. Next, the yellow light turns solid to alert drivers to prepare to stop."
+      ],
+      "257": [
+        "Red used with white conveys stop, yield, do not, and no."
+      ],
+      "258": [
+        "Black used with white conveys regulatory information. Speed limit, do not pass, no turns are examples where the operation is regulated by law"
+      ],
+      "259": [
+        "A specialized class of warning signs uses a strong yellow/green color with black to advise of school zone, pedestrian and/or bicyclist activities."
+      ],
+      "260": [
+        "If you drive past these signs you are going in the wrong direction... Immediately slow down, pull over, and cautiously turn around."
+      ],
+      "261": [
+        "It tells you that the traffic turning left at a green light does not have the right-of-way and must yield to traffic coming from the other direction."
+      ],
+      "262": [
+        "Lane Use Control: These signs are used where turns are required or where special turning movements are permitted for specific lanes."
+      ],
+      "263": [
+        "Disabled Parking: Parking spaces marked with these signs are reserved for people with disabled parking permits."
+      ],
+      "264": [
+        "Remember that a red circle with a slash means NO — the symbol inside the circle tells you what is prohibited."
+      ],
+      "265": [
+        "Left-turn Arrow: You are permitted to enter in a lane marked with a one-way or two-way arrow only to turn in the direction of the arrow."
+      ],
+      "266": [
+        "Divided Highway Begins: The highway ahead is split into two separate roadways by a median or divider and each roadway is one-way. Keep right."
+      ],
+      "267": [
+        "Lane Reduction: The right lane ends soon. Drivers in the right lane must merge left when space opens up. Drivers in the left lane should allow other vehicles to merge smoothly."
+      ],
+      "268": [
+        "Hill: A steep grade is ahead. Check your brakes."
+      ],
+      "269": [
+        "Horse-Drawn Buggies: Regularly travel in this area. Slow down and don’t use the horn."
+      ],
+      "270": [
+        "T Intersection: The roadway you are traveling on ends ahead at a stop sign. You must turn right or left after yielding to oncoming traffic and pedestrians."
+      ],
+      "271": [
+        "Winding Road: The road ahead winds with a series of turns or curves. On all curves, slow down for better control."
+      ],
+      "272": [
+        "Be sure to give the posted crossing number so that the hazard can be identified correctly."
+      ],
+      "273": [
+        "The highway ahead no longer has a median or divider. Traffic goes in both directions. Keep right."
+      ],
+      "274": [
+        "A second sign with an arrow may show the actual location of the crosswalk.",
+        "A second sign with an arrow may show the actual location of the bike crossing."
+      ],
+      "275": [
+        "Stop when the lights begin to flash and before the gate lowers. Remain stopped until the gates are raised and the lights stop flashing. Do not attempt to drive around the lowered gate."
+      ],
+      "276": [
+        "Slow down and be prepared for the road ahead to turn sharply right, then left."
+      ],
+      "277": [
+        "Do not proceed if your vehicle is taller than the height shown on the sign."
+      ],
+      "278": [
+        "This sign is used when a joint across lanes creates a bump or is wide enough to cause loss of traction in wet weather."
+      ],
+      "279": [
+        "The road ahead curves right and a side road joins from the left within the curve. Be alert for vehicles entering the roadway you are traveling on."
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 28,
-    "topics_covered": 28,
+    "topics_total": 30,
+    "topics_covered": 30,
     "coverage_pct": 100.0,
     "uncovered_topics": [],
     "verdict": "PASS",
@@ -65,7 +881,232 @@
     "verdict": "PASS",
     "grade": "A"
   },
-  "overall_verdict": "PASS",
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 268,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    },
+    "ja": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 200,
+      "avg_fidelity": 0.1,
+      "pct_at_10": 1.0,
+      "pct_above_9": 1.0,
+      "pct_above_7": 1.0,
+      "pct_zero": 99.0,
+      "drift_flagged_ids": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200
+      ],
+      "verdict": "HARD_FAIL",
+      "grade": "F"
+    }
+  },
+  "overall_verdict": "HARD_FAIL",
   "overall_grade": "A",
   "notes": ""
 }

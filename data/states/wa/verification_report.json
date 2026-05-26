@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "wa",
   "name": "Washington",
-  "verified_at": "2026-05-26T02:35:24Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:23:16Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.dol.wa.gov/driverslicense/docs/driverguide-en.pdf",
     "manual_pdf_sha256": "23aaa7163f10b7b6d8dbcfffd99eb76a7d2e3fe8b8397441d54a3288ce4c3300",
@@ -24,40 +24,1009 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
-    "avg_fidelity": 7.03,
-    "pct_at_10": 56.7,
-    "pct_above_9": 63.3,
-    "pct_above_7": 66.7,
-    "pct_zero": 23.3,
+    "sample_size": 0,
+    "judged_count": 358,
+    "avg_fidelity": 6.34,
+    "pct_at_10": 50.8,
+    "pct_above_9": 55.0,
+    "pct_above_7": 58.1,
+    "pct_zero": 29.1,
     "flagged_question_ids": [
-      58,
-      280,
-      217,
+      1,
+      2,
+      5,
+      10,
       17,
-      112,
-      120,
-      259,
-      309,
+      18,
+      19,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      33,
+      36,
+      38,
+      50,
+      54,
+      55,
+      58,
+      60,
+      61,
+      62,
+      64,
+      65,
+      67,
+      71,
+      76,
+      79,
+      81,
+      82,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      93,
+      101,
       102,
-      333
+      103,
+      107,
+      112,
+      119,
+      120,
+      121,
+      129,
+      130,
+      133,
+      135,
+      136,
+      137,
+      139,
+      140,
+      144,
+      146,
+      147,
+      157,
+      158,
+      170,
+      171,
+      172,
+      173,
+      175,
+      178,
+      180,
+      181,
+      182,
+      184,
+      185,
+      186,
+      190,
+      193,
+      201,
+      202,
+      208,
+      209,
+      210,
+      212,
+      213,
+      217,
+      219,
+      221,
+      222,
+      226,
+      229,
+      231,
+      233,
+      235,
+      242,
+      243,
+      246,
+      247,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      271,
+      272,
+      277,
+      278,
+      280,
+      281,
+      282,
+      283,
+      284,
+      291,
+      292,
+      293,
+      294,
+      295,
+      296,
+      297,
+      298,
+      300,
+      306,
+      307,
+      311,
+      314,
+      315,
+      318,
+      319,
+      322,
+      328,
+      332,
+      333,
+      334,
+      338,
+      341,
+      342,
+      346,
+      348,
+      350,
+      351
     ],
+    "evidence_by_question_id": {
+      "1": [
+        "Washington State requires you to have and carry proof of liability insurance."
+      ],
+      "2": [
+        "Standard driver licenses will no longer be an acceptable form of identification for airport security checkpoints"
+      ],
+      "3": [
+        "Children up to age 2 must ride in a rear-facing car seat."
+      ],
+      "4": [
+        "Ages 4 and older must ride in a car or booster seat until the vehicle lap and shoulder seat belts fit properly— typically, between the ages of 8 and 12 years of age.",
+        "Age and size: 4 years to 4’9”"
+      ],
+      "6": [
+        "Fines double for offenses committed while driving in construction areas when workers are present."
+      ],
+      "7": [
+        "Slow down to at least 10 mph below the posted speed limit. Never drive faster than 50 mph in an emergency zone."
+      ],
+      "8": [
+        "Roadside response vehicles could include tow trucks, solid waste trucks, incident response, highway maintenance, utility vehicles, law enforcement, fire trucks, and ambulances."
+      ],
+      "9": [
+        "In special circumstances, law enforcement, construction workers, maintenance personnel, and school crossing guards can direct traffic."
+      ],
+      "11": [
+        "The state keeps a record of license applications, traffic infractions, convictions for motor vehicle violations, collision involvement, and Failure-to-Appear notices."
+      ],
+      "12": [
+        "Enhanced driver license and ID Suitable for: Identification Operating a motor vehicle (driver license only) Domestic air travel",
+        "Enhanced licenses and IDs meet REAL ID standards."
+      ],
+      "13": [
+        "The shoulder belt should lie snug across the shoulder and chest, and not cross the neck or face. The lap belt should securely and snugly restrain the hips, below the stomach."
+      ],
+      "14": [
+        "Yellow = General and unexpected road conditions warning",
+        "Fluorescent Yellow Green = Warning of school, pedestrian, and bicycling activity"
+      ],
+      "15": [
+        "In License Express, you can: ... Pre-apply for an instruction permit.",
+        "If you are enrolling in a driver training course: You can apply for your permit as early as 15 years old."
+      ],
+      "16": [
+        "In License Express, you can: ... Manage your vehicle tabs."
+      ],
+      "20": [
+        "Secure your load: Driving with an unsecured load is both against the law and extremely dangerous.",
+        "Check inside your vehicle. ... Are loose items safely secured?"
+      ],
+      "21": [
+        "Express toll lanes and high occupancy toll lanes provide toll-free express trips"
+      ],
+      "23": [
+        "3.4: Avoiding distracted driving",
+        "Washington State has strict laws against distracted driving. You cannot hold any electronic device"
+      ],
+      "24": [
+        "5.7: Vehicle failures",
+        "Accelerator: If the vehicle keeps going faster and faster: Quickly shift to neutral."
+      ],
+      "25": [
+        "3.1: Impaired driving",
+        "Cannabis and driving",
+        "Medications and driving"
+      ],
+      "26": [
+        "2.1: Report of sale",
+        "Chapter 2: Vehicles"
+      ],
+      "27": [
+        "4.5: Sharing with motorcycles",
+        "4.6: Sharing with bicyclists"
+      ],
+      "29": [
+        "5.6: Road and driving conditions",
+        "Skidding: Skids are caused when the tires can no longer grip the road."
+      ],
+      "30": [
+        "Certificate of ownership (title)",
+        "The Department of Licensing will issue a Certificate of Ownership (also known as the title)"
+      ],
+      "31": [
+        "New residents that are licensed in another state have 30 days to obtain a Washington State driver license."
+      ],
+      "32": [
+        "You are a Washington resident if any of the following are true:",
+        "You are registered to vote in Washington."
+      ],
+      "34": [
+        "Standard driver licenses will no longer be an acceptable form of identification for airport security checkpoints",
+        "Standard driver license and ID Suitable for: Operating a motor vehicle (driver license only)"
+      ],
+      "35": [
+        "practice driving with a licensed driver who has 5 or more years of experience"
+      ],
+      "37": [
+        "Washington teens ages 16 and 17 move through two restricted phases of licensing before being granted an unrestricted driver license: 1) the instruction permit and 2) the intermediate driver license."
+      ],
+      "39": [
+        "Enhanced driver license and ID Suitable for: International border crossing by land or sea",
+        "Enhanced licenses and IDs meet REAL ID standards."
+      ],
+      "40": [
+        "If you are not enrolling in a driver training course: You can take the knowledge exam after you turn 15½. Once you pass, you’ll get your permit."
+      ],
+      "41": [
+        "Complete at least 40 hours of day driving and 10 hours of night driving with a licensed driver who has 3 or more years of experience. (Parents, guardians, or responsible adults must attest to this.)",
+        "This form gives you permission to apply, certifies you have at least 50 hours of driving experience"
+      ],
+      "42": [
+        "Ensure a traffic safety course completed in another state meets Washington’s minimum requirement (30 hours of classroom and 6 hours of behind-the-wheel instruction)."
+      ],
+      "43": [
+        "No driving between 1 a.m. and 5 a.m. unless accompanied by a parent, guardian, or licensed driver at least age 25"
+      ],
+      "44": [
+        "No passengers under age 20 except immediate family members"
+      ],
+      "45": [
+        "No driving between 1 a.m. and 5 a.m. unless accompanied by a parent, guardian, or licensed driver at least age 25"
+      ],
+      "46": [
+        "No passengers under age 20 except immediate family members"
+      ],
+      "47": [
+        "2nd Violation: License is suspended for 6 months or until you turn 18, whichever comes first."
+      ],
+      "48": [
+        "Intermediate license laws also restrict the use of cell phones and wireless communication devices while you’re driving",
+        "You can only use your phone to report an emergency."
+      ],
+      "49": [
+        "You don’t need to get a new license when you turn 18. Intermediate driver license restrictions are automatically lifted."
+      ],
+      "51": [
+        "Your knowledge exam score is only valid for 2 years."
+      ],
+      "52": [
+        "You and the examiner are the only people allowed in the vehicle during the exam. We make exceptions for service animals and sign language interpreters."
+      ],
+      "53": [
+        "In this situation, turn your body to see the path of travel behind you."
+      ],
+      "55": [
+        "If you renew your license after it has expired, you might need to pay an additional fee."
+      ],
+      "56": [
+        "If your address changes, update your information in License Express within 10 days of the change."
+      ],
+      "57": [
+        "If you refuse to be tested, you could lose your driving privilege for 90 to 730 days, or until you reach age 21, whichever is longer."
+      ],
+      "59": [
+        "A legally licensed and registered vehicle must be used for the driving exam.",
+        "The vehicle needs to... be in safe operating condition. Brake lights, signal lights, and seat belts must work."
+      ],
+      "60": [
+        "Drivers can lose driving privileges for several reasons, include the ones listed below... Driving without insurance"
+      ],
+      "63": [
+        "2nd Violation: License is suspended for 6 months or until you turn 18, whichever comes first."
+      ],
+      "64": [
+        "You need to follow the instructions on the back of the ticket within 15 days to avoid having your driving privileges suspended."
+      ],
+      "66": [
+        "You can register to vote on the Secretary of State website, sos.wa.gov, or you can register at any driver licensing office.",
+        "Residents who are 16 and 17 years old can opt to pre-register to vote"
+      ],
+      "67": [
+        "You can register with the United States Selective Service System when applying for a license or ID card."
+      ],
+      "68": [
+        "When you apply for your license, you’ll be asked if you are a twin.",
+        "Universities might contact people who identify as a twin with the Department of Licensing."
+      ],
+      "69": [
+        "International border crossing by land or sea",
+        "Standard licenses and IDs do not meet REAL ID standards.",
+        "Enhanced licenses and IDs meet REAL ID standards."
+      ],
+      "70": [
+        "As a driver, you are part of a community that includes a variety of vehicles, roads, and people.",
+        "Risk awareness includes being mindful of other road users, weather conditions, and potential distractions."
+      ],
+      "71": [
+        "Alcohol is the most common impairing substance involved in impaired driving crashes.",
+        "Polydrug use is the most common impairment involved in fatal crashes."
+      ],
+      "72": [
+        "In Washington, vehicle crashes are a leading causes of death for people ages 16 to 25."
+      ],
+      "73": [
+        "Driving with a suspended or revoked license",
+        "Driving with a suspended license could result in losing your vehicle and/or getting arrested."
+      ],
+      "74": [
+        "Staff at driver licensing offices can help you get your driver license or ID card.",
+        "There are a variety of IDs, licenses, and endorsements for Washington residents."
+      ],
+      "75": [
+        "$10,000 or more, payable for injury to or destruction of property of others in any one collision"
+      ],
+      "76": [
+        "Washington State requires you to have and carry proof of liability insurance."
+      ],
+      "77": [
+        "Tire tread shouldn't be less than 2/32 of an inch."
+      ],
+      "78": [
+        "The proper inflation pressure for your tires can be found on the Tire and Loading Information label"
+      ],
+      "80": [
+        "When you leave your car running while parked, especially in a garage, it can release harmful gases like carbon monoxide, which can be lethal."
+      ],
+      "83": [
+        "Secure your load so loose items don’t release into the air or slide, shift, or fall onto the road and cause a crash."
+      ],
+      "87": [
+        "Low tire pressure can affect your car handling and speed.",
+        "Keep your tires properly inflated for better gas mileage."
+      ],
+      "92": [
+        "Your chest should be at least 10 inches from the steering wheel to leave space for the airbag."
+      ],
+      "94": [
+        "It is illegal to drive or ride in a vehicle without wearing a seat belt",
+        "Every person in a moving vehicle must wear a seat belt"
+      ],
+      "95": [
+        "The driver will be fined for any passengers under age 16 who are not properly wearing a seat belt or secured in a child safety restraint."
+      ],
+      "96": [
+        "The lap belt should securely and snugly restrain the hips, below the stomach."
+      ],
+      "97": [
+        "Ages 4 and older must ride in a car or booster seat until the vehicle lap and shoulder seat belts fit properly— typically, between the ages of 8 and 12 years of age.",
+        "Age and size: 4 years to 4’9”"
+      ],
+      "98": [
+        "Airbags are also why children under the age of 13 should never ride in the front seat."
+      ],
+      "99": [
+        "Children up to age 2 must ride in a rear-facing car seat.",
+        "A child should remain in each stage of restraint as long as the seat allows for the best protection."
+      ],
+      "100": [
+        "Intermediate license laws also restrict the use of cell phones and wireless communication devices while you’re driving, even with hands-free technology.",
+        "You can only use your phone to report an emergency."
+      ],
+      "101": [
+        "Using hands-free devices is permitted, but anything that takes your eyes and mind off the road can still be dangerous."
+      ],
+      "102": [
+        "It is illegal to drive or ride in a vehicle without wearing a seat belt or using child safety restraints RCW 46.61.687 and RCW 46.61.688."
+      ],
+      "104": [
+        "Remember: If you have an instruction permit or intermediate license, you cannot use a cell phone or any mobile electronic device while driving, even if it is hands-free.",
+        "You can only use your phone to report an emergency."
+      ],
+      "105": [
+        "If a traffic signal isn’t working, treat the intersection like a four-way stop. Come to a complete stop. Yield to traffic on your right."
+      ],
+      "106": [
+        "Solid Yellow Slow down. This means the light is changing to red. When you see a yellow light, slow down and prepare to stop."
+      ],
+      "107": [
+        "Yellow Arrow Slow down. A yellow arrow means the light is going to turn red soon. Prepare to stop and give the right-of-way to oncoming traffic."
+      ],
+      "108": [
+        "After coming to a complete stop at a red light, you can turn left onto a one-way street if you don’t see a “no turn on red” sign and you have plenty of room to enter traffic."
+      ],
+      "109": [
+        "Wait until a pedestrian has cleared your lane and one additional lane before proceeding."
+      ],
+      "110": [
+        "Yellow = General and unexpected road conditions warning",
+        "Traffic signs tell you about traffic rules, hazards... The shape and color of these signs... give clues",
+        "Diamond shaped and yellow with black lettering or symbols."
+      ],
+      "111": [
+        "It can take up to a mile for a train to come to a full stop."
+      ],
+      "112": [
+        "A flashing yellow light has the same meaning as a yield sign."
+      ],
+      "113": [
+        "If there is anything on or close to the railroad tracks, call the number on the blue and white Emergency Notification System sign."
+      ],
+      "114": [
+        "Agricultural and farm vehicles designed to go 25 mph or less will have a triangle sign or emblem on the back."
+      ],
+      "115": [
+        "Fines double for offenses committed while driving in construction areas when workers are present."
+      ],
+      "116": [
+        "White = Regulatory",
+        "Traffic signs tell you about traffic rules, hazards, roadway directions, and the location of roadway services."
+      ],
+      "117": [
+        "The maximum speed limit is for ideal conditions. Reduce your speed when road conditions require it"
+      ],
+      "118": [
+        "These digital signs attempt to distribute the flow of traffic by posting changing speed limits."
+      ],
+      "120": [
+        "No passing zone"
+      ],
+      "121": [
+        "You can be fined for parking in stalls without displaying the required placard and/or for blocking the access aisle."
+      ],
+      "122": [
+        "A dashed white line between lanes of traffic means you can cross it to change lanes if it is safe."
+      ],
+      "123": [
+        "If the dashed line is on your side of the road, you may pass if it's safe to do so.",
+        "You’re not allowed to pass when the solid yellow line is on your side of the road."
+      ],
+      "124": [
+        "Stay behind the white line until the bicycle box is clear.",
+        "You can’t turn right on red near a bicycle box."
+      ],
+      "125": [
+        "Roundabouts are designed for speeds between 15 and 25 mph."
+      ],
+      "126": [
+        "A steady yellow X means the lane is changing direction, and you should move out of the lane as soon as it’s safe."
+      ],
+      "127": [
+        "Every intersection is legally defined as a crosswalk regardless of whether a crosswalk marking is present."
+      ],
+      "128": [
+        "A yield sign means you must slow down and allow traffic that has the right-of-way to cross first.",
+        "Red = Prohibitive or restricted action",
+        "White = Regulatory"
+      ],
+      "129": [
+        "These lanes are usually marked by double-dashed white lines."
+      ],
+      "131": [
+        "You shouldn’t travel farther than 300 feet in a center lane."
+      ],
+      "132": [
+        "Don’t drive in reverse on the road, even if you miss your turn or exit. It’s illegal to back up on a shoulder or freeway."
+      ],
+      "134": [
+        "Turn on your interior lights if you’re pulled over at night."
+      ],
+      "138": [
+        "The speed limit is 25 mph, and pedestrians and bicyclists have the right-of-way at all times."
+      ],
+      "141": [
+        "Pull up behind other vehicles already in line. Ferry line-cutting is a traffic offense that can lead to a fine."
+      ],
+      "142": [
+        "Wait for the officer’s instructions before reaching for your driver license or vehicle documents."
+      ],
+      "143": [
+        "Express toll lanes and high occupancy toll lanes provide toll-free express trips for buses, vanpools, carpools, and motorcycles, but they also give individual drivers the option to pay the toll"
+      ],
+      "145": [
+        "For that reason, do not make a U-turn on a curve or when approaching the crest of a hill."
+      ],
+      "147": [
+        "It’s illegal to park a vehicle in any electric vehicle charging station if the vehicle is not connected to the charging equipment."
+      ],
+      "148": [
+        "The law determines who must yield (give up) the right-of-way."
+      ],
+      "149": [
+        "Wait until a pedestrian has cleared your lane and one additional lane before proceeding."
+      ],
+      "150": [
+        "If the pedestrian is using a wheelchair, cane, guide dog, or other service animal, wait until they have completely crossed the street before continuing.",
+        "Don’t honk. It could confuse or frighten the animal or pedestrian."
+      ],
+      "151": [
+        "Uncontrolled intersections don’t have signs, but the normal right-of-way rules apply.",
+        "If two vehicles arrive at approximately the same time, yield to the one on the right.",
+        "A vehicle is already in the intersection."
+      ],
+      "152": [
+        "Drive through the roundabout and pull over if an emergency vehicle approaches, just like you would at any other intersection."
+      ],
+      "153": [
+        "Drivers traveling in the opposite direction as the bus don’t need to stop when the red lights flash or the stop sign extends IF: There are three or more lanes."
+      ],
+      "154": [
+        "Fines are doubled for anyone who passes a stopped school bus."
+      ],
+      "155": [
+        "Yield to any transit vehicle traveling in the same direction as you that has signaled and is pulling back onto the roadway."
+      ],
+      "156": [
+        "Make sure there is enough space for you to cross or turn without blocking the intersection."
+      ],
+      "157": [
+        "Fines double for offenses committed while driving in construction areas when workers are present."
+      ],
+      "159": [
+        "Yield to any transit vehicle traveling in the same direction as you that has signaled and is pulling back onto the roadway."
+      ],
+      "160": [
+        "Open the door with your hand that’s farthest from the door. This is called the “Dutch Reach” method. It forces your body to turn, which allows you to see approaching bicyclists."
+      ],
+      "161": [
+        "It’s a crime to leave a child under the age of 16 unattended in a parked vehicle while the motor is running."
+      ],
+      "162": [
+        "Within 15 feet of a fire hydrant."
+      ],
+      "163": [
+        "Within 30 feet of a traffic signal, stop sign, or yield sign."
+      ],
+      "164": [
+        "White means that only short stops are permitted."
+      ],
+      "165": [
+        "On hills with tall curbs, turn your steering wheel away from the curb until the back of your front tire touches the curb."
+      ],
+      "166": [
+        "Turn your steering wheel toward the curb until the front of your front tire touches the curb."
+      ],
+      "167": [
+        "Make sure your vehicle is no more than 12 inches from the curb."
+      ],
+      "168": [
+        "In the image above, the driver’s hands are at 9:00 and 3:00.",
+        "When using this method, your hands should be at 9 and 3 or 10 and 2."
+      ],
+      "169": [
+        "Pick out a marker, such as a road sign or utility pole, that you think is 15 seconds ahead of your vehicle."
+      ],
+      "174": [
+        "Fines after your first violation can be doubled."
+      ],
+      "176": [
+        "You can only use your phone to report an emergency."
+      ],
+      "177": [
+        "Intermediate license laws also restrict the use of cell phones and wireless communication devices while you’re driving, even with hands-free technology.",
+        "You can only use your phone to report an emergency."
+      ],
+      "179": [
+        "It is against the law to drive a vehicle while wearing earbuds, earphones, headphones, or headsets that broadcast sound or cancel noise."
+      ],
+      "183": [
+        "Pick out a marker, such as a road sign or utility pole, that you think is 15 seconds ahead of your vehicle."
+      ],
+      "187": [
+        "Put on your turn signal at least 100 feet before you turn left or right across oncoming traffic."
+      ],
+      "188": [
+        "After coming to a complete stop at a red light, you can turn right if you don’t see a “no turn on red” sign",
+        "After coming to a complete stop at a red light, you can turn left onto a one-way street"
+      ],
+      "189": [
+        "If you stop on the stop line, but your view of a cross street is blocked, edge forward slowly until you can see."
+      ],
+      "191": [
+        "Do not disregard warning signals. Even if you don’t see a train, trust the signals. Trains might be closer, quieter, and moving faster than they appear. Trains can come from either direction and run on any track."
+      ],
+      "192": [
+        "Blind zones are the areas around a vehicle you can’t see from the driver’s seat.",
+        "Move your head, neck, and body so that both eyes can see if your blind zones are clear."
+      ],
+      "194": [
+        "The 12 position is recommended only when backing a vehicle. In this situation, turn your body to see the path of travel behind you."
+      ],
+      "195": [
+        "Washington law says you need to have your headlights on a half hour after sunset to a half hour before sunrise."
+      ],
+      "196": [
+        "remember to switch back to regular headlights when you are: 500 feet in front of an oncoming vehicle."
+      ],
+      "197": [
+        "remember to switch back to regular headlights when you are: ... 300 feet when you’re behind."
+      ],
+      "198": [
+        "Headlights help you see, but they also help people see you!",
+        "When it’s rainy, snowy, foggy, or smoky."
+      ],
+      "199": [
+        "If a vehicle comes toward you with its high beams on, look toward the right side of the road to keep from being distracted by the headlights."
+      ],
+      "200": [
+        "It is essential to look for vehicles and cyclists behind you when you ... slow down",
+        "If you know someone is following too closely or coming up too fast, you will have time to do something about it"
+      ],
+      "201": [
+        "When it’s rainy, snowy, foggy, or smoky. Headlights help you see, but they also help people see you!"
+      ],
+      "203": [
+        "Don’t honk. It could confuse or frighten the animal or pedestrian.",
+        "Don’t pass until it’s safe for you and the bicyclist."
+      ],
+      "204": [
+        "Warn other road users by placing emergency flares 200 to 300 feet behind the vehicle."
+      ],
+      "205": [
+        "Lift the hood or tie a white cloth to the antenna, side mirror, or door handle to signal an emergency."
+      ],
+      "206": [
+        "They have bigger blind zones, sometimes called “no zones.”",
+        "Avoid driving alongside large vehicles for too long."
+      ],
+      "207": [
+        "Signal 100 feet before you make your move."
+      ],
+      "209": [
+        "If you know someone is following too closely or coming up too fast, you will have time to do something about it (change lanes, tap on the brakes, speed up, or slow down)."
+      ],
+      "210": [
+        "Higher speeds create more energy, requiring more time and space to stop or change direction."
+      ],
+      "211": [
+        "Reduce your speed before entering the curve. This helps maintain traction and prevents your vehicle from skidding or veering off the road.",
+        "Avoid braking or accelerating suddenly while in the curve. This can disrupt your vehicle’s balance and lead to a loss of control."
+      ],
+      "212": [
+        "Snowy roads will require a larger following distance and dramatically reduced speed."
+      ],
+      "213": [
+        "During winter months, you can improve traction by adding chains to your tires or changing to studded tires."
+      ],
+      "214": [
+        "Overpasses and other types of bridges can have icy spots even when the rest of the road doesn’t."
+      ],
+      "215": [
+        "If it starts to rain on a hot day, the pavement can be very slippery for the first few minutes. Heat causes the oil in the asphalt to come to the surface."
+      ],
+      "216": [
+        "Overpasses and other types of bridges can have icy spots even when the rest of the road doesn’t."
+      ],
+      "218": [
+        "Take your foot off the accelerator.",
+        "Keep the steering wheel steady. Avoid overcorrecting or jerking the steering wheel.",
+        "Maintain your focus on the road while you calmly wait for your tires to regain traction."
+      ],
+      "219": [
+        "Be prepared to encounter slow vehicles in the right lane.",
+        "Be patient and slow down."
+      ],
+      "220": [
+        "Use the entire on-ramp, your turn signal, and your mirrors to merge into a safe space on the interstate.",
+        "creating space to merge might require you to adjust your speed, faster or slower."
+      ],
+      "223": [
+        "Fines double for offenses committed while driving in construction areas when workers are present."
+      ],
+      "224": [
+        "Drive at a speed that will allow you to stop within the glow of your headlights (usually 400 feet)."
+      ],
+      "225": [
+        "Drive at a speed that will allow you to stop within the glow of your headlights (usually 400 feet)."
+      ],
+      "227": [
+        "Even if you’re driving under the posted speed limit, you can get a ticket for traveling too fast for road conditions."
+      ],
+      "228": [
+        "Keep right except to pass. When there are multiple lanes traveling in the same direction, drive in the right lane."
+      ],
+      "230": [
+        "If you know someone is following too closely or coming up too fast, you will have time to do something about it (change lanes, tap on the brakes, speed up, or slow down)."
+      ],
+      "232": [
+        "Familiarity with your vehicle reference points will help you judge distance when you park, turn, back, and stop."
+      ],
+      "234": [
+        "Don’t drive into oncoming traffic to pass a pedestrian or bicyclist.",
+        "Never cross into oncoming traffic to pass a bicyclist."
+      ],
+      "236": [
+        "Make sure there is enough space for you to cross or turn without blocking the intersection."
+      ],
+      "237": [
+        "If you know someone is following too closely or coming up too fast, you will have time to do something about it (change lanes, tap on the brakes, speed up, or slow down)."
+      ],
+      "238": [
+        "Move over into a farther lane.",
+        "Slow down to at least 10 mph below the posted speed limit."
+      ],
+      "239": [
+        "Keep right except to pass. When there are multiple lanes traveling in the same direction, drive in the right lane.",
+        "Road rage is an angry response to something that happened on the road"
+      ],
+      "240": [
+        "Allow even more following room when it’s raining or the road surface is slick.",
+        "Weather conditions and slippery surfaces can be serious problems for motorcyclists."
+      ],
+      "241": [
+        "If you stop on the stop line, but your view of a cross street is blocked, edge forward slowly until you can see.",
+        "Make sure there is enough space for you to cross or turn without blocking the intersection."
+      ],
+      "242": [
+        "Identify the space where you’ll park, check traffic, and signal."
+      ],
+      "243": [
+        "There could be more than one hazard at the same time. It’s your responsibility as a driver to determine which hazard requires the most urgent response."
+      ],
+      "244": [
+        "Make sure there is enough space for you to cross or turn without blocking the intersection."
+      ],
+      "245": [
+        "Additionally, some motorcycles don’t have turn signals that turn off automatically."
+      ],
+      "248": [
+        "wait until you can clearly see both of their headlights in your rearview mirror before merging in front of them."
+      ],
+      "249": [
+        "Drive in bicycle lanes only when turning or crossing the lane to park near the curb."
+      ],
+      "250": [
+        "Leave at least 3 feet between the bicyclist and the widest part of your vehicle."
+      ],
+      "251": [
+        "Let the bicyclist clear the intersection before making a turn. If you’re going to turn right, don’t pass a bicyclist just before the turn."
+      ],
+      "258": [
+        "Legally, bicyclists may use the full lane and ride where they’re most visible to you and other drivers."
+      ],
+      "268": [
+        "Drivers pulling into a lane in front of a motorcycle or turning in front of an oncoming motorcycle might not see the motorcycle."
+      ],
+      "269": [
+        "some motorcycles don’t have turn signals that turn off automatically.",
+        "Make sure you’re alert and paying careful attention when driving alongside a motorcycle."
+      ],
+      "270": [
+        "They’re entitled to the same lane width as all other vehicles.",
+        "Never move into the same lane alongside a motorcyclist, even if the lane is wide"
+      ],
+      "271": [
+        "Leave a lot of room to stop in front of you when you’re following a motorcycle."
+      ],
+      "272": [
+        "Never move into the same lane alongside a motorcyclist, even if the lane is wide",
+        "You cannot share a lane with a bicyclist."
+      ],
+      "273": [
+        "Snowplows can force snow up and off the road, causing blizzard-like conditions. This can reduce visibility for drivers following too closely."
+      ],
+      "274": [
+        "It takes a loaded truck with properly adjusted brakes, traveling at 55 mph, 450 feet to come to a complete stop."
+      ],
+      "275": [
+        "If you are near a large vehicle and can’t see the driver’s mirrors, the driver can’t see you."
+      ],
+      "276": [
+        "large vehicles might require more than one lane to complete a turn.",
+        "Don’t pass a large vehicle when the driver is turning."
+      ],
+      "279": [
+        "Look for people who: Can’t see you, such as... pedestrians with their back to you"
+      ],
+      "285": [
+        "Move your head, neck, and body so that both eyes can see if your blind zones are clear."
+      ],
+      "286": [
+        "If you use corrective glasses or contact lenses, this will be recorded on your license.",
+        "Remember to always wear your glasses or contacts while driving."
+      ],
+      "287": [
+        "Move your head, neck, and body so that both eyes can see if your blind zones are clear.",
+        "Constantly check your mirrors for any changes to your driving situation."
+      ],
+      "288": [
+        "Watch for movement to identify potential hazards and people who could be planning to cross the road.",
+        "Remember that they may be able to see something you can’t see from your lane position."
+      ],
+      "289": [
+        "Avoid using dark or tinted corrective lenses at night.",
+        "Tinted or colored lenses reduce your vision."
+      ],
+      "290": [
+        "Drivers who are deaf or hard of hearing can often adjust by learning to rely more on vision and staying more alert."
+      ],
+      "291": [
+        "Plan to stop about every 100 miles or 2 hours during long trips."
+      ],
+      "299": [
+        "recreational use of marijuana, THC, and other cannabis products (edibles, patches, vapes, tinctures, and topicals)"
+      ],
+      "301": [
+        "Over-the-counter drugs taken for headaches, colds, or allergies can make a person drowsy, which could affect your driving."
+      ],
+      "302": [
+        "Impaired driving is a criminal behavior. It doesn’t matter if the drug is prescribed, obtained over-the-counter, bought in a retail setting, or considered an illicit substance."
+      ],
+      "303": [
+        "Mixing alcohol, cannabis, or other drugs can produce effects greater than any drug on its own.",
+        "Many drugs multiply the effects of alcohol or have other side effects."
+      ],
+      "304": [
+        "For drivers age 21 and older, having a BAC of .08% or higher is considered a DUI and can result in legal consequences."
+      ],
+      "305": [
+        "Drivers under age 21 have the same potential consequences for anything more than 0 nanograms of active THC per milliliter of blood in their system."
+      ],
+      "308": [
+        "Under The Implied Consent Law (RCW 46.20.308), everyone who drives in Washington agrees to be tested if an officer suspects they are under the influence of alcohol or drugs."
+      ],
+      "309": [
+        "If you refuse to be tested, you could lose your driving privilege for 90 to 730 days, or until you reach age 21, whichever is longer."
+      ],
+      "310": [
+        "Driving privileges suspended for 90 days to 4 years"
+      ],
+      "312": [
+        "Alcohol- and drug-related offenses appear on your driving record for life."
+      ],
+      "313": [
+        "Open alcohol and cannabis products can only be transported in a trunk or truck bed.",
+        "Alcohol or cannabis containers cannot be kept in storage compartments accessible to the driver."
+      ],
+      "316": [
+        "Minors who receive an alcohol, drug, or firearm offense run the risk of delaying their license until they are 17 years of age."
+      ],
+      "317": [
+        "If you’re not feeling well but need to go somewhere, please let someone else drive."
+      ],
+      "320": [
+        "Allow plenty of time for your trip. Choose to be patient with yourself and others.",
+        "If you’re feeling anxious when you’re driving, you might be preoccupied",
+        "Concentrate only on the numbers to quiet everything else in your head."
+      ],
+      "321": [
+        "Drive to an area where there are other people and open businesses if you feel you’re being followed or harassed by another driver."
+      ],
+      "322": [
+        "Press or pump your brakes. Antilock brakes will help control the rotation of the wheels to slow down faster."
+      ],
+      "323": [
+        "Slow down gradually. Take your foot off the accelerator.",
+        "Do not brake. Allow the vehicle to slow by itself, or brake gently if necessary."
+      ],
+      "324": [
+        "Be aware that the steering wheel might be difficult to turn, but you can turn it.",
+        "Don’t brake hard. Instead, brake with steady pressure on the pedal, slow down, and then pull off the roadway."
+      ],
+      "325": [
+        "Quickly shift to neutral.",
+        "Pull off the road when safe to do so.",
+        "Turn off the engine."
+      ],
+      "326": [
+        "A hazard might require you to change your speed or direction.",
+        "There could be times you’ll need to accelerate quickly to avoid a hazard."
+      ],
+      "327": [
+        "Hit the brakes hard, and feel the ABS keep the wheels from locking up."
+      ],
+      "329": [
+        "Skids are caused when the tires can no longer grip the road. High speeds and slippery roads increase the possibility of skidding"
+      ],
+      "330": [
+        "Take your foot off the accelerator.",
+        "Steer in the same direction your vehicle is moving.",
+        "Adjust the wheel until your tires have regained traction and are going in the direction you’re steering."
+      ],
+      "331": [
+        "Protect yourself from whiplash by making sure the headrest is even with your ears."
+      ],
+      "332": [
+        "Airbags and seat belts work together to keep you safe in the event of a crash."
+      ],
+      "335": [
+        "Move the vehicle to the side of the road, but near the collision site, as soon as possible."
+      ],
+      "336": [
+        "Help anyone who isn’t already walking and talking. Check for breathing, then check for bleeding."
+      ],
+      "337": [
+        "Do not give injured people anything to drink — not even water."
+      ],
+      "338": [
+        "File a collision report form, within 4 days of a crash, if a law enforcement officer doesn’t do this for you."
+      ],
+      "339": [
+        "call the number on the blue and white Emergency Notification System sign. Give the crossing ID number to the dispatcher."
+      ],
+      "340": [
+        "New residents have 30 days to complete their vehicle registration."
+      ],
+      "343": [
+        "The title shows the registered and legal owner(s) of the vehicle",
+        "Keep it in a safe place but not in the vehicle."
+      ],
+      "344": [
+        "The purchaser must bring the signed title to a licensing office to transfer ownership within 15 days to avoid penalty fees."
+      ],
+      "345": [
+        "If you sell, trade, gift, or dispose of your vehicle, file a Vehicle Report of Sale form within five days."
+      ],
+      "347": [
+        "The school zone speed limit is 20 mph because higher speeds increase the risk of fatal crashes."
+      ],
+      "349": [
+        "In Washington, vehicle crashes are a leading causes of death for people ages 16 to 25. This age group is more susceptible to fatal and serious injury crashes."
+      ],
+      "352": [
+        "In special circumstances, law enforcement, construction workers, maintenance personnel, and school crossing guards can direct traffic.",
+        "Work zone signs... warn you people are working near the roadway."
+      ],
+      "353": [
+        "Service signs show the location of various services, such as hospitals, electric vehicle charging stations, and rest areas."
+      ],
+      "354": [
+        "Destination signs show directions and distances to various locations, such as cities, airports, or state lines",
+        "For example: city mileage, optional exit and exit only, and highway signs."
+      ],
+      "355": [
+        "Keep Right: This sign reminds you to stay in the right lane unless you’re passing another vehicle."
+      ],
+      "356": [
+        "Keep Right: This sign reminds you to stay in the right lane unless you’re passing another vehicle.",
+        "Keep right except to pass. When there are multiple lanes traveling in the same direction, drive in the right lane."
+      ],
+      "357": [
+        "In License Express, you can: ... Manage your vehicle tabs.",
+        "Renew online through License Express, or at a driver licensing office."
+      ],
+      "358": [
+        "Fatal crash common factors include: Speed Impairment Distractions",
+        "Smart driving habits are the foundation of a safe and enjoyable driving experience. Good drivers are: Alert... Focused... Sober."
+      ]
+    },
     "verdict": "HARD_FAIL",
     "grade": "F"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 28,
-    "topics_covered": 25,
-    "coverage_pct": 89.3,
+    "topics_total": 30,
+    "topics_covered": 27,
+    "coverage_pct": 90.0,
     "uncovered_topics": [
-      "Blood alcohol concentration limits for minor drivers",
-      "Legal THC concentration limits for adult drivers",
-      "Hand signals for turning and stopping vehicles"
+      "Washington driver license number and account",
+      "Hand signals for turning and stopping",
+      "Limitations of advanced driver assistance systems"
     ],
     "verdict": "PASS",
-    "grade": "B"
+    "grade": "A"
   },
   "coverage": {
     "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
@@ -79,6 +1048,34 @@
     "sign_ratio_pct": 4.8,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 358,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 99.7,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    },
+    "ja": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 358,
+      "avg_fidelity": 9.99,
+      "pct_at_10": 99.7,
+      "pct_above_9": 99.7,
+      "pct_above_7": 99.7,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [
+        333
+      ],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "HARD_FAIL",
   "overall_grade": "F",

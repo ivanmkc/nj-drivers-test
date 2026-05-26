@@ -1,16 +1,16 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "nv",
   "name": "Nevada",
-  "verified_at": "2026-05-26T02:31:15Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:10:47Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://dmv.nv.gov/pdfforms/dlbook.pdf",
     "manual_pdf_sha256": "bee54213b4d11a1b27cf329d358816442439e393eb4154591d8316c8c5481397",
     "manual_text_sha256": "bd577dcad780db1cb40678ce760e43896d4faadec34df211b5e6b1ed14a85062",
     "manual_text_chars": 210362,
     "manual_pages": 86,
-    "edition": ""
+    "edition": "March 2024"
   },
   "bank": {
     "total_questions": 346,
@@ -23,14 +23,1067 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 328,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "The knowledge test for your Nevada license is based on the information in this manual."
+      ],
+      "2": [
+        "For specific laws, please refer to the Nevada Revised Statutes (NRS)."
+      ],
+      "3": [
+        "NRS copies are available in the public libraries and online at leg.state.nv.us/law1.html."
+      ],
+      "4": [
+        "Page 67 - Added information on blind pedestrians"
+      ],
+      "5": [
+        "Driver Authorization Card (DAC)"
+      ],
+      "6": [
+        "Commercial Driver License (CDL)"
+      ],
+      "7": [
+        "Page 20 - Added information on Medical Indicators"
+      ],
+      "8": [
+        "High-Occupancy Vehicle Lanes"
+      ],
+      "9": [
+        "CHAPTER 2 - BUCKLE UP",
+        "Unattended Children and Pets"
+      ],
+      "10": [
+        "you will find information on the knowledge, skills, abilities and attitudes you need to drive safely."
+      ],
+      "11": [
+        "Passing Another Vehicle.................................................................................. 47",
+        "Passing Bicyclists............................................................................................ 48",
+        "Passing Parked Vehicles .................................................................................. 48"
+      ],
+      "12": [
+        "DEPARTMENT OF MOTOR VEHICLES",
+        "555 Wright Way",
+        "Carson City, Nevada 89711-0400"
+      ],
+      "13": [
+        "CHAPTER 1 - GETTING YOUR NEVADA DRIVER’S LICENSE .................................................6",
+        "Human Trafficking – No Child for Sale ................................................................................ 22"
+      ],
+      "14": [
+        "this handbook does not give the exact wording of traffic laws and it does not discuss all of them."
+      ],
+      "15": [
+        "Drivers moving into Nevada from another state must apply for a license within 30 days after becoming a resident."
+      ],
+      "16": [
+        "You need a Nevada driver license if you live or work in Nevada (excluding border state employees or military members stationed in Nevada)"
+      ],
+      "17": [
+        "You must also be at least 16 years old and provide proof of your full legal name"
+      ],
+      "18": [
+        "A Social Security Number is not necessary to obtain a Driver Authorization Card (DAC)."
+      ],
+      "19": [
+        "A first-time Nevada driver license issued to persons under age 65 will be valid for eight years"
+      ],
+      "20": [
+        "Driver licenses for individuals aged 65 and older are valid for four years."
+      ],
+      "21": [
+        "Identification Cards are valid for eight years."
+      ],
+      "22": [
+        "the expiration of your driver license will coincide with the departure date that is electronically verified by the Department of Homeland Security (DHS), or one year if no date is provided by DHS."
+      ],
+      "23": [
+        "The co-signer shares liability for any damages caused by the minor’s negligence or willful misconduct while driving."
+      ],
+      "24": [
+        "A resident of Nevada may hold only one driver’s license or identification card."
+      ],
+      "25": [
+        "you must surrender it to get a Nevada license or identification card. All surrendered licenses and identification cards will be voided and returned to you."
+      ],
+      "26": [
+        "Your vision will be tested when you apply for your Nevada driver’s license. All other tests may be waived if all of these criteria apply:"
+      ],
+      "27": [
+        "You have had fewer than 3 moving violations in the past 4 years, and have not had your license suspended, revoked, or canceled."
+      ],
+      "28": [
+        "A first-time Nevada driver license issued to persons under age 65 will be valid for eight years and expires on your birthday"
+      ],
+      "29": [
+        "provide proof of your full legal name, age, Social Security Number if one has been issued to you, and Nevada residency."
+      ],
+      "30": [
+        "You have had no DUI convictions within the past 7 years.",
+        "You are age 21 or older.",
+        "You have had fewer than 3 moving violations in the past 4 years"
+      ],
+      "31": [
+        "An active-duty member of the U.S. Armed Forces and you have a valid license from your home state."
+      ],
+      "32": [
+        "If your driving privilege is currently suspended, revoked, canceled or denied in another state, you will not be allowed a Nevada license until the out-of-state issue is resolved. You may qualify for an identification card during this period."
+      ],
+      "33": [
+        "W-2 (with full SSN)",
+        "Handwritten paystubs are not acceptable."
+      ],
+      "34": [
+        "Real ID licenses or ID cards are marked with a gold Nevada outline and a star cutout, indicating the card meets federal identification standards."
+      ],
+      "35": [
+        "Standard licenses or ID cards are marked with the phrase “NOT FOR REAL ID PURPOSES” indicating the card does not meet federal identification standards."
+      ],
+      "36": [
+        "To meet the new requirements, applicants must present two documents proving Nevada residency."
+      ],
+      "37": [
+        "A Driver Authorization Card is valid for four years and will expire on your birthday."
+      ],
+      "38": [
+        "All renewals and address changes must be completed in person."
+      ],
+      "39": [
+        "A Driver Authorization Card is not valid for federal or state identification purposes and cannot be used to determine eligibility for any benefits, licenses or services issued or provided by the State of Nevada."
+      ],
+      "40": [
+        "Any document in a foreign language must be properly translated to English by a DMV-approved translator before it can be accepted. Abstract translations will not be accepted."
+      ],
+      "41": [
+        "you will be asked to present legal documentation reflecting your name change, such as a marriage certificate, divorce decree (must reference a name change), spouse’s death certificate, adoption record or court order."
+      ],
+      "42": [
+        "The applicant must present an original or certified copy of any two of the following documents which reflect a residential address in Nevada."
+      ],
+      "43": [
+        "A $25.00 fee is charged for all initial knowledge and/or skills tests administered."
+      ],
+      "44": [
+        "The use of a cellular phone during a drive test will result in automatic failure."
+      ],
+      "45": [
+        "Passengers and animals are not allowed in the vehicle during the road test."
+      ],
+      "46": [
+        "When taking your driving test, you will not be allowed to use certain safety features such as parking assist, cruise control, etc."
+      ],
+      "47": [
+        "Revoked for 185 days if a blood, breath or urine test indicates at least 0.02% but less than 0.08% by weight of alcohol in your blood."
+      ],
+      "48": [
+        "Suspended for at least 30 days but not more than 6 months or have issuance delayed for 30 days for a first offense of habitual truancy."
+      ],
+      "49": [
+        "Suspended or issuance delayed for up to one year for handling or possessing a firearm or having a firearm under your control in violation of NRS 202.300."
+      ],
+      "50": [
+        "The log must be completed in blue or black ink before arriving for your drive test."
+      ],
+      "51": [
+        "The DMV-301 form must be signed and dated within the previous 60 days from which the form is being submitted."
+      ],
+      "52": [
+        "you need to complete 100 hours of behind-the-wheel driving experience, 10 hours of which must be completed in the dark."
+      ],
+      "53": [
+        "If you are applying for a motorcycle license, all 100 hours of driving experience must be completed during daylight hours only."
+      ],
+      "54": [
+        "Suspended for a period of not less than six months but not more than two years if found guilty of participating in, or organizing, an unauthorized speed contest."
+      ],
+      "55": [
+        "A $10 fee is charged for any retests needed before you can get your license."
+      ],
+      "56": [
+        "a minor shall not operate a motor vehicle between the hours of 10 p.m. and 5 a.m. unless he/she is driving to or from a scheduled event."
+      ],
+      "57": [
+        "will not be allowed to carry passengers under the age of 18 (except for immediate family members) for the first 6 months they drive per NRS 483.2523."
+      ],
+      "58": [
+        "Is 21 years of age or older;",
+        "Has at least one year of licensed driving experience; and",
+        "Is seated beside you."
+      ],
+      "59": [
+        "You must be in direct visual supervision of a licensed motorcycle driver on a motorcycle who is 21 years of age or older",
+        "The supervising driver is not allowed to be in a car or truck during the direct supervision of a permitted motorcycle driver."
+      ],
+      "60": [
+        "Class B – Single vehicle – Gross Vehicle Weight Rating (GVWR) over 26,000 pounds; may tow a vehicle under 10,000 pounds"
+      ],
+      "61": [
+        "Restriction G — Daylight driving only"
+      ],
+      "62": [
+        "18 years of age or older will be issued a permit that is valid for six months and may be renewed only once every five years."
+      ],
+      "63": [
+        "Failing the motorcycle skills test administered by the DMV two or more times will result in a permanent denial of future motorcycle instruction permits per NRS 483.280."
+      ],
+      "64": [
+        "Minors must also remain free of any at-fault crashes, moving violation convictions and any type of alcohol or drug conviction for six months prior to receiving a driver’s license."
+      ],
+      "65": [
+        "F – Commercial License exemption for:",
+        "Firefighters while operating fire equipment"
+      ],
+      "66": [
+        "Class C – Cars, vans, pickups; may tow a vehicle 10,000 pounds or less Combination of vehicles may not exceed 70 feet"
+      ],
+      "67": [
+        "When driving with a motorcycle instruction permit, you may drive during daylight hours only. You may not carry passengers or drive on freeways or other high-speed roadways."
+      ],
+      "68": [
+        "is designed to carry 16 or more passengers, including the driver"
+      ],
+      "69": [
+        "You may operate a moped if you have a Nevada driver license (any classification) or you may apply for a Class M license with an accompanying restriction"
+      ],
+      "70": [
+        "it is your responsibility to renew on or before your expiration date."
+      ],
+      "71": [
+        "Nevada does not automatically extend the license expiration date for military personnel.",
+        "Active-duty military personnel who are temporarily out-of-state may renew a Nevada license through the mail."
+      ],
+      "72": [
+        "Under Nevada law, you are required to notify the DMV of any address or name change within 30 days."
+      ],
+      "73": [
+        "Address changes must be completed in person if you hold a commercial driver license."
+      ],
+      "74": [
+        "Name changes must be made in person at a local DMV office.",
+        "You will be asked to complete an application and provide acceptable legal documentation reflecting your name change"
+      ],
+      "75": [
+        "Drivers age 14 and 15 who have demonstrated family hardship or who need to drive to and from school."
+      ],
+      "76": [
+        "Individuals who have served half of their required suspension or revocation periods."
+      ],
+      "77": [
+        "A Nevada identification card is valid for eight years and expires on your birthday"
+      ],
+      "78": [
+        "If you want a Nevada identification card, you must: • Be at least 10 years old;"
+      ],
+      "79": [
+        "If you receive 12 or more demerits in a 12-month period, you will be required to reinstate your driving privileges before you are eligible to receive a driver license."
+      ],
+      "80": [
+        "You must present a completed Confidential Physician Report (DMV Form DLD-7) indicating one (1) of the medical codes that is listed on the form."
+      ],
+      "81": [
+        "Minors who wish to be organ donors may have a parent or guardian sign and affidavit on the DMV-002 application indicating the parent or guardian understands they cannot amend or revoke the donation."
+      ],
+      "82": [
+        "Your life always comes frst. If you are sick or injured and taken to a hospital, the priority is always to save your life."
+      ],
+      "83": [
+        "Not in control of own identification documents (ID/passport)",
+        "Restricted or controlled communication--not allowed to speak for themselves",
+        "Demeanor - fear, anxiety, depression, submissive, tense, nervous"
+      ],
+      "84": [
+        "Report suspected human trafficking to the U.S. Department of Homeland Security: 1-866-347-2423 or ice.gov/tips.",
+        "Do not at any time attempt to confront a suspected trafficker directly or alert a victim to your suspicions."
+      ],
+      "85": [
+        "Reinstatement fee for alcohol or controlled substance related offense .......................$120.00"
+      ],
+      "86": [
+        "Change of address only................................................................................................$3.25"
+      ],
+      "87": [
+        "If it is a 1970 model or newer, it must have lap-type seat belts for each passenger of the vehicle. It must also have shoulder harnesses for use in the front seat."
+      ],
+      "88": [
+        "The driver and any passengers age six and older must wear safety belts if the vehicle is equipped with them."
+      ],
+      "89": [
+        "Children under age six and those who measure less than 57 inches tall must be in an approved child restraint system pursuant per NRS 484B.157."
+      ],
+      "90": [
+        "Children under the age of two must be secured in a rear-facing child restraint system in the back seat of the motor vehicle."
+      ],
+      "91": [
+        "unless the child is being supervised by and is within sight of a person at least 12 years old."
+      ],
+      "92": [
+        "Violations of these laws are misdemeanor offenses.",
+        "It is illegal to leave a dog or cat unattended in a vehicle during periods of extreme heat or cold."
+      ],
+      "93": [
+        "Failure to restrain children under age six and those measuring less than 57 inches may result in fines, community service, and/or the suspension of your driver’s license."
+      ],
+      "94": [
+        "In a crash, the airbag explodes from the dashboard at 200 mph, smashing through the safety seat into the back of the baby’s head."
+      ],
+      "95": [
+        "Older children may ride in the front if necessary, but the vehicle seat should be moved back as far as possible."
+      ],
+      "96": [
+        "Adjust the driver’s seat to improve visibility and so all controls can be comfortably reached."
+      ],
+      "97": [
+        "Any license suspension, revocation, or cancellation requires payment of the reinstatement fee, the fee for an original license and any applicable testing fees."
+      ],
+      "98": [
+        "Law enforcement, firefighters and other officials may use reasonable force to rescue the animal."
+      ],
+      "99": [
+        "place Lincoln’s head into one of the grooves.",
+        "If any part of Lincoln’s head is covered by the tread, the tire has a safe amount of tread."
+      ],
+      "100": [
+        "recommended pounds per square inch (psi) located in the vehicle owner’s manual or the driver’s side door jamb of the vehicle."
+      ],
+      "101": [
+        "Brown — recreation and scenic area information"
+      ],
+      "102": [
+        "Pennant — no passing"
+      ],
+      "103": [
+        "At a four-way stop, wait for other vehicles already in the intersection. Allow vehicles that reach the intersection before you to go first."
+      ],
+      "104": [
+        "Drive to the right edge of the road and stop until the emergency vehicle(s) have passed. However, never stop in an intersection."
+      ],
+      "105": [
+        "Violations in work zones result in increased traffic fines."
+      ],
+      "106": [
+        "When traffic control lights are not working, drivers must come to a full stop before proceeding through the intersection."
+      ],
+      "107": [
+        "If they are already in the intersection, they should continue moving and clear it safely."
+      ],
+      "108": [
+        "A flashing red light means that drivers must come to a full stop.",
+        "The signal has the same meaning as a stop sign."
+      ],
+      "109": [
+        "A flashing yellow arrow means drivers must yield to oncoming traffic and pedestrians."
+      ],
+      "110": [
+        "Drivers may make a left turn at a red light only when you are turning from a one-way street onto another one-way street that has traffic moving to the left."
+      ],
+      "111": [
+        "Pentagon (5 sides) — school zones and school crossings"
+      ],
+      "112": [
+        "Yield the right-of-way to vehicles making a U-turn from an intersection."
+      ],
+      "113": [
+        "Pedestrians facing a green turn arrow are not to cross unless a pedestrian signal or police officer allows them to do so."
+      ],
+      "114": [
+        "while the Don’t Walk or wait indication or an upraised hand symbol is illuminated and flashing but is not accompanied by a countdown timer, a pedestrian may not proceed across the roadway."
+      ],
+      "115": [
+        "The majority of pedestrian fatalities occur between intersections (mid-block)."
+      ],
+      "116": [
+        "When solid white lines separate lanes of traffic moving in the same direction, do not change lanes or pass."
+      ],
+      "117": [
+        "Drivers may not travel more than 200 feet in a center turn lane before making a left-hand turn"
+      ],
+      "118": [
+        "If a train is coming, drivers must stop at least 15 feet from the tracks."
+      ],
+      "119": [
+        "Do not shift gears while crossing the tracks."
+      ],
+      "120": [
+        "Never park within 50 feet of the nearest rail of a railroad."
+      ],
+      "121": [
+        "Violating the direction of a school crossing guard is a misdemeanor in Nevada."
+      ],
+      "122": [
+        "Nevada law prohibits the operator of a vehicle from making a U-turn in a school zone except when there are no children present, it is a day when no school is in session"
+      ],
+      "123": [
+        "Failure to yield the right-of-way is the leading cause of crashes in Nevada."
+      ],
+      "124": [
+        "At an intersection where there are no traffic signs or signals, the vehicle on your right should usually go first."
+      ],
+      "125": [
+        "You must immediately drive to the right side of the road, clear of any intersection, and stop until the emergency vehicle has passed."
+      ],
+      "126": [
+        "A person who is blind or visually impaired, on foot and using a guide dog or other service animal, or carrying a white cane or walking stick, has the right-of-way"
+      ],
+      "127": [
+        "A vehicle going straight ahead that is already in the intersection has the right-of-way over one turning left."
+      ],
+      "128": [
+        "A driver must yield the right-of-way, come to a full stop if necessary, and take precautions before proceeding to avoid a crash or injury."
+      ],
+      "129": [
+        "25 mph ............. Business and residential areas and school zones"
+      ],
+      "130": [
+        "This means that in addition to any posted speed limits, drivers must consider: • The amount and type of traffic • The weather and the distance you can see"
+      ],
+      "131": [
+        "When there are two or more lanes of traffic moving in the same direction, slower traffic must move to the right and allow other drivers to pass."
+      ],
+      "132": [
+        "Using the merge or acceleration lane, look for an opening in traffic. Use your turn signal and accelerate to - or near - the speed of freeway traffic.",
+        "Do not stop before merging unless necessary"
+      ],
+      "133": [
+        "Look ahead much farther down the road - at least 20 to 30 seconds."
+      ],
+      "134": [
+        "Pull up to the stop line and stop at a red light;",
+        "Wait for the green light; and finally",
+        "When the light turns green, proceed along the ramp and merge onto the freeway safely."
+      ],
+      "135": [
+        "If you are in a carpool of two or more people, you may use the HOV ramp meter bypass lane without stopping."
+      ],
+      "136": [
+        "A yellow X with MERGE means the lane is ending and the driver should prepare to safely merge into another open lane."
+      ],
+      "137": [
+        "A red X with CLOSED means drivers cannot drive in the lane under the red X.",
+        "Drivers must safely merge into another open lane."
+      ],
+      "138": [
+        "Motorcycles are eligible",
+        "2+ persons must be human, not pets.",
+        "Electric cars... Unless 2+ persons.",
+        "Trucks with 2+ axles... Even if 2+ persons."
+      ],
+      "139": [
+        "$250 fine"
+      ],
+      "140": [
+        "70+ mph ............ Rural interstate freeways"
+      ],
+      "141": [
+        "On these roads, drivers should leave the extreme left lane for faster traffic."
+      ],
+      "142": [
+        "A down green arrow with OPEN means drivers are allowed to drive the posted speed limit in the lane below the green arrow."
+      ],
+      "143": [
+        "A double solid white line means that you cannot cross the lines to enter or exit the car pool lane."
+      ],
+      "144": [
+        "Vehicles with more than 2 axles (or vehicle-trailer combinations) are not eligible"
+      ],
+      "145": [
+        "If you miss the exit ramp, never turn around or back up. Go to the next exit, get back on the freeway in the opposite direction, and return to the exit."
+      ],
+      "146": [
+        "push the brake pedal down hard, hold it down firmly and steer in the direction you want the car to go."
+      ],
+      "147": [
+        "removing steady pressure from the brake pedal or pumping the brakes will disengage, or “turn off,” the ABS."
+      ],
+      "148": [
+        "The rear-end collision is the number one crash type on Nevada’s streets and highways."
+      ],
+      "149": [
+        "Highway safety studies show normal reaction times are 2 to 2.5 seconds."
+      ],
+      "150": [
+        "if you double your speed – say from 30 mph to 60 mph – your braking distance does not become twice as long. It becomes four times as long."
+      ],
+      "151": [
+        "Most cars will begin to lose traction and hydroplane between speeds of 35 and 55 mph in heavy rainfall."
+      ],
+      "152": [
+        "When you are driving at freeway speeds you need to look ahead at least 20 to 30 seconds."
+      ],
+      "153": [
+        "If you are driving 40 mph or less, stay at least two seconds behind the vehicle in front of you."
+      ],
+      "154": [
+        "You should look left, right, and left again just before entering the intersection."
+      ],
+      "155": [
+        "You may use the device to report an emergency if stopping the vehicle would be inadvisable, impractical or dangerous."
+      ],
+      "156": [
+        "You will know your ABS is not working if the ABS symbol stays lighted on the dashboard long after the car has started."
+      ],
+      "157": [
+        "To stop your vehicle, three things must occur:",
+        "You have to see and understand the reason for stopping (“perception”).",
+        "Your brain has to send a message telling your foot to step on the brake pedal (“reaction”)."
+      ],
+      "158": [
+        "If you are stopped at night, turn on the interior light. Good lighting assists good communication."
+      ],
+      "159": [
+        "Keep your hands in plain view at all times (preferably on the steering wheel) and refrain from making any sudden movements."
+      ],
+      "160": [
+        "All traffic moves in ONE DIRECTION around the roundabout – COUNTERCLOCKWISE."
+      ],
+      "161": [
+        "large commercial trucks and trailers which are permitted to use the truck apron provided around the center island",
+        "Cars should not use the truck apron."
+      ],
+      "162": [
+        "Always stay in the designated crosswalks.",
+        "Never cross to the central island."
+      ],
+      "163": [
+        "Right turn — Extend left arm with elbow bent upward at about a 90-degree angle"
+      ],
+      "164": [
+        "Signal your turn at least 100 feet ahead (about 10 car lengths) on city streets or 300 feet (30 car lengths) on open highways."
+      ],
+      "165": [
+        "When turning left, keep your wheels pointed straight ahead until you begin to actually complete the turn."
+      ],
+      "166": [
+        "Never make a U-turn: At or on a railroad crossing."
+      ],
+      "167": [
+        "prohibits the operator of a vehicle from making a U-turn in a school zone except when there are no children present, it is a day when no school is in session"
+      ],
+      "168": [
+        "After you have passed, pull back into your lane when you can see the vehicle you passed in your rear-view mirror."
+      ],
+      "169": [
+        "you should never exceed the speed limit to pass and you may never use the shoulder of the road to pass."
+      ],
+      "170": [
+        "If comfortable riding in traffic, take the lane and circulate with the vehicles"
+      ],
+      "171": [
+        "Slowing or stop — Extend left arm downward, with palm of hand to the rear"
+      ],
+      "172": [
+        "turn your left signal light on 100 feet ahead in business or residential areas."
+      ],
+      "173": [
+        "turn your left signal light on 100 feet ahead in business or residential areas or 300 feet ahead in other areas."
+      ],
+      "174": [
+        "At or within 100 feet of a street crossing;"
+      ],
+      "175": [
+        "Preparing for a left turn at an intersection"
+      ],
+      "176": [
+        "Never pass on the right when doing so would result in driving off the paved portion of the highway."
+      ],
+      "177": [
+        "pass to the left of the bicycle at a safe distance, which must be at least three feet."
+      ],
+      "178": [
+        "The legal parking position is with the front and rear wheels within 18 inches of the curb."
+      ],
+      "179": [
+        "Your vehicle should be visible for 200 feet (about 20 car lengths) in each direction."
+      ],
+      "180": [
+        "This will cause the steering to lock if you try to turn the steering wheel and you will lose control of your vehicle."
+      ],
+      "181": [
+        "Green allows you to park for a limited time. The amount of time is usually shown on a sign."
+      ],
+      "182": [
+        "When headed uphill and there is a curb, turn your front tires away from the curb."
+      ],
+      "183": [
+        "Within 15 feet of a fire hydrant in a place where parallel parking is permitted"
+      ],
+      "184": [
+        "Within 50 feet of the nearest rail of a railroad"
+      ],
+      "185": [
+        "Turn on your four-way flashers to warn other traffic.",
+        "Walking along a freeway is dangerous."
+      ],
+      "186": [
+        "DO NOT STOP ON A FREEWAY EXCEPT FOR AN EMERGENCY."
+      ],
+      "187": [
+        "Turn on your four-way flashers to warn other traffic."
+      ],
+      "188": [
+        "The minimum fine for doing so is $250."
+      ],
+      "189": [
+        "These parking spaces may be needed by individuals with a higher degree of impairment, who require the assistance of machinery, such as lifts"
+      ],
+      "190": [
+        "These technologies assist the driver but do not drive the vehicle by themselves."
+      ],
+      "191": [
+        "Most of these technologies are passive, meaning they warn the driver of a potential issue but do not automatically prevent a problem or crash."
+      ],
+      "192": [
+        "The driver should safely monitor and maneuver their vehicle during backing. These include checking side mirrors, rear-view mirror, over the shoulder (head checks)"
+      ],
+      "193": [
+        "The driver should always check their mirrors and look over their shoulders before changing lanes."
+      ],
+      "194": [
+        "showing the vehicle’s surroundings through a virtual bird’s-eye view above the vehicle",
+        "Surround-View Monitor or Around-View Monitor System"
+      ],
+      "195": [
+        "detected while driving at low speeds - generally around 25 mph."
+      ],
+      "196": [
+        "The warning system alone will not automatically brake for the driver."
+      ],
+      "197": [
+        "a constant tone means the vehicle is too close to an object."
+      ],
+      "198": [
+        "The primary purpose of these technologies is to perform a component of the driving function in specific circumstances.",
+        "assist the driver in making adjustments, such as braking or steering."
+      ],
+      "199": [
+        "sense slow or stopped traffic or objects ahead and will urgently apply the brakes if the driver fails to respond."
+      ],
+      "200": [
+        "Lane Keeping Assist",
+        "Lane assistance systems return you to your lane if you drift out of it."
+      ],
+      "201": [
+        "if they do not act, this feature may gently steer the driver into their lane."
+      ],
+      "202": [
+        "In bad weather and other unsafe driving conditions, it is advised not to use ACC."
+      ],
+      "203": [
+        "The driver is still responsible for braking and monitoring the environment.",
+        "The driver is responsible for braking."
+      ],
+      "204": [
+        "Do not look directly into the headlights of oncoming vehicles; look down and to the right side of your lane."
+      ],
+      "205": [
+        "From a half hour after sunset until a half hour before sunrise."
+      ],
+      "206": [
+        "Change to low beams when you are at least 500 feet before any oncoming vehicles"
+      ],
+      "207": [
+        "and 300 feet before any vehicle you are following."
+      ],
+      "208": [
+        "Stopping distances on slippery roads may be 2 to 10 times greater than on dry pavement."
+      ],
+      "209": [
+        "if your vehicle has an anti-lock braking system (ABS), a firm, continuous pressure on the brake pedal is needed"
+      ],
+      "210": [
+        "Studded snow tires may only be used from October 1 through April 30."
+      ],
+      "211": [
+        "Try pumping the brake pedal. If the brakes still do not respond:",
+        "Use the emergency parking brake."
+      ],
+      "212": [
+        "NEVER place the vehicle into “park.”"
+      ],
+      "213": [
+        "To dry the brakes, put your car in low gear, drive slowly and lightly apply the brakes.",
+        "Test them about every 200 feet, continuing until braking action returns to normal."
+      ],
+      "214": [
+        "Shift to neutral.",
+        "Apply the brakes.",
+        "Pull off the highway to the right (if possible) and stop."
+      ],
+      "215": [
+        "Whenever persons or vehicles cannot be clearly seen at a distance of 1,000 feet."
+      ],
+      "216": [
+        "NEVER place the vehicle into “park.”"
+      ],
+      "217": [
+        "DO NOT USE WATER because burning gasoline will float on water and spread the fire."
+      ],
+      "218": [
+        "If your car continues to hold the lane, slow down and then gently apply the brakes.",
+        "Use your four-way flashers to warn other drivers!"
+      ],
+      "219": [
+        "Do not swing into the lane the approaching vehicle has left because the other driver may suddenly realize his or her mistake and turn back into the proper lane."
+      ],
+      "220": [
+        "Driver fatigue, inattention and speeding are all major factors in these crashes."
+      ],
+      "221": [
+        "Instead, stay on the shoulder until you have your vehicle completely under control and gently ease back onto the road."
+      ],
+      "222": [
+        "Grip the steering wheel firmly.",
+        "Ease up on the gas pedal to slow down. Do not hit the brakes!"
+      ],
+      "223": [
+        "Less than 1 inch of water can cause a driver to lose control of his or her car."
+      ],
+      "224": [
+        "Most vehicles can float in 2 feet of water or less."
+      ],
+      "225": [
+        "Fines for speeding double in work zones!"
+      ],
+      "226": [
+        "Orange speed limit signs are advisory and indicate slower, safer speeds."
+      ],
+      "227": [
+        "Decrease the vehicle speed to a speed that is reasonable and proper and less than the posted speed limit.",
+        "Proceed with caution."
+      ],
+      "228": [
+        "Public transit buses",
+        "Emergency vehicles which may use a paved shoulder include:"
+      ],
+      "229": [
+        "Most crashes between large commercial trucks and smaller cars are caused by the car drivers."
+      ],
+      "230": [
+        "The “no-zone” is the area around large commercial trucks or buses where cars “disappear” into blind spots."
+      ],
+      "231": [
+        "The “no-zone” is the area around large commercial trucks or buses where cars “disappear” into blind spots."
+      ],
+      "232": [
+        "These large vehicles need nearly twice the time and distance to stop as cars."
+      ],
+      "233": [
+        "Large commercial truck and bus drivers sometimes need to swing wide to the left in order to safely make a right turn",
+        "Trying to “squeeze” between a commercial vehicle and the curb could be an invitation to disaster!"
+      ],
+      "234": [
+        "“Motorcycles and mopeds may, with the consent of the drivers, be operated no more than two abreast in a single traffic lane.”"
+      ],
+      "235": [
+        "Because motorcyclists use their balance to steer their vehicles, the blinding effect of high beams can be far more dangerous to them"
+      ],
+      "236": [
+        "Nevada defines these difference based on motor size, horsepower... and 30 miles per hour maximum speed on a flat or near-flat surface."
+      ],
+      "237": [
+        "Preparing to make a left turn (turn must be made within one-quarter mile from entering lane)",
+        "Moped operators must remain in the extreme right-hand lane of any road unless:"
+      ],
+      "238": [
+        "on divided highways, you are only required to stop when you are traveling in the same direction as the school bus."
+      ],
+      "239": [
+        "Motorists who cause even a minor collision with a bicycle or pedestrian... may be charged with reckless driving. Penalties include a driver’s license suspension."
+      ],
+      "240": [
+        "Motorists may not stop, park or drive on a designated bicycle path or lane unless they are entering or leaving an alley or driveway"
+      ],
+      "241": [
+        "Anyone under the age of 18 may not ride on the bed of a flatbed truck or within the bed of a pickup truck in Nevada if the truck is being driven on a paved highway.",
+        "The exception to this is if you are being driven in a parade authorized by a local authority or if the vehicle is being used while farming or ranching."
+      ],
+      "242": [
+        "Turn signals are not self-canceling on most motorcycles.",
+        "Before you make a lane change or turn that depends on what path a motorcycle is taking, be sure you know what the motorcyclist is doing."
+      ],
+      "243": [
+        "Cyclists Should Not... Ride on the wrong side of the road; Wear a headset (headphones, cellular phone earpiece, etc.) when riding; or Ride at night without required lights and reflectors"
+      ],
+      "244": [
+        "When a traffic signal turns green, drivers must yield to persons who are still crossing the street.",
+        "Pedestrians have the right of way over motorists making a right-hand turn."
+      ],
+      "245": [
+        "A crosswalk exists anywhere two streets intersect, even at a “T” intersection. A crosswalk exists even if it is not painted or marked."
+      ],
+      "246": [
+        "It is illegal for motorists to overtake any vehicle that is slowing down or stopped until the motorist slows down enough to determine why the other vehicle has slowed or stopped."
+      ],
+      "247": [
+        "Do not stop your car more than five feet from the crosswalk. A pedestrian who is blind or visually impaired uses the sound of your engine as a guide."
+      ],
+      "248": [
+        "If they take a step back and pull in their cane, they are letting you know you can go."
+      ],
+      "249": [
+        "Non-commercial Class C drivers may tow a single vehicle or a combination of vehicles with a gross vehicle weight rating (GVWR) of 10,000 pounds or less and a total length of no more than 70 feet."
+      ],
+      "250": [
+        "Gross combination weight (GCW) — The total weight of a powered unit plus trailer(s) plus the load."
+      ],
+      "251": [
+        "Too much weight on the steering axle can make steering difficult and cause damage to the steering axle and tires."
+      ],
+      "252": [
+        "too little weight on the driving axles can cause poor traction and the drive wheels may spin easily."
+      ],
+      "253": [
+        "The safety chains are attached and crossed.",
+        "The safety chains and electric lines are not tangled, pinched or dragging."
+      ],
+      "254": [
+        "If there is no sidewalk, pedestrians should walk on the side of the road facing the traffic."
+      ],
+      "255": [
+        "If a crossing guard is present, motorists must wait until the guard is completely out of the crosswalk before proceeding."
+      ],
+      "256": [
+        "Do not give a blind or visually impaired pedestrian verbal direction.",
+        "Do not honk at a blind or visually impaired person.",
+        "Waiting 3-4 seconds is a good rule of thumb."
+      ],
+      "257": [
+        "Go slowly around turns.",
+        "Keep the cargo as close to the ground as possible."
+      ],
+      "258": [
+        "A disadvantage to this type of hitch is that it takes up most of the space in the bed of the truck"
+      ],
+      "259": [
+        "Before backing your vehicle under the trailer, make sure the trailer brakes are locked."
+      ],
+      "260": [
+        "Inspect the trailer and the load-securing devices again within 50 miles after beginning an extended trip."
+      ],
+      "261": [
+        "Make any needed adjustments and inspect again after you have driven for 3 hours or 150 miles."
+      ],
+      "262": [
+        "Empty trucks actually require greater stopping distances because they have less traction."
+      ],
+      "263": [
+        "When backing with a trailer, turn the steering wheel in the opposite direction."
+      ],
+      "264": [
+        "Backing toward the right side is very dangerous because you can’t see as well."
+      ],
+      "265": [
+        "As soon as you see the trailer getting off course, correct it by turning the top of the steering wheel in the direction of the drift."
+      ],
+      "266": [
+        "If driving a vehicle that cannot make the right turn without swinging into another lane, turn wide as you complete the turn. Keep the rear of your trailer close to the curb."
+      ],
+      "267": [
+        "Don’t turn wide to the left as you start the turn. A following driver may think you are turning left and try to pass you on the right."
+      ],
+      "268": [
+        "If you turn too soon, the left side of your vehicle may hit another vehicle due to off-tracking."
+      ],
+      "269": [
+        "If there are two turning lanes, always take the right hand turn lane."
+      ],
+      "270": [
+        "The weight of a vehicle changes its height. An empty trailer is higher than a loaded one."
+      ],
+      "271": [
+        "Do not assume that the height posted at bridges and overpasses is correct.",
+        "Repaving or packed snow may have reduced the clearances since the height was posted."
+      ],
+      "272": [
+        "Railroad tracks can stick up several inches.",
+        "Don’t take a chance on getting hung up halfway across."
+      ],
+      "273": [
+        "When towing a combination of vehicles, the heaviest vehicle must always be in the first position behind the towing vehicle.",
+        "The lighter vehicle should be in the rear."
+      ],
+      "274": [
+        "Large combination vehicles that are empty take longer to stop than when they are fully loaded.",
+        "When lightly loaded, the very stiff suspension springs and strong brakes give poor traction and make it very easy to lock up the wheels."
+      ],
+      "275": [
+        "Release the brakes to get traction back.",
+        "Do not use the trailer hand brake (if there is one) to straighten out the rig."
+      ],
+      "276": [
+        "The earliest and best way to recognize that the trailer has started to skid is by seeing it in your mirrors."
+      ],
+      "277": [
+        "The minimum coverage is $25,000 for bodily injury or death of one person in any one crash;"
+      ],
+      "278": [
+        "the driver will be required to pay a reinstatement fee and applicable fines (starting at $250 and totaling up to $1,750) for each registered vehicle covered by that insurance."
+      ],
+      "279": [
+        "If you are in a crash that is not investigated by law enforcement and the crash causes $750 or more in damages or anyone is injured, you must complete and send a Report of Crash Form (SR-1)"
+      ],
+      "280": [
+        "you must complete and send a Report of Crash Form (SR-1) within 10 days"
+      ],
+      "281": [
+        "If there is only damage to a vehicle or other property (no injuries) and the vehicle can be moved safely, move to a location that does not obstruct traffic and return to the scene."
+      ],
+      "282": [
+        "If the crash involves an unattended vehicle or other property, you must give the owner your name, address, driver license number, registration and insurance information"
+      ],
+      "283": [
+        "Even traffic violations that occur in other states are added to your Nevada driving record."
+      ],
+      "284": [
+        "Convictions related to DUI (Driving Under the Influence) stay on your record for seven years."
+      ],
+      "285": [
+        "If you receive 12 or more points in any 12-month period, your license will be suspended."
+      ],
+      "286": [
+        "you may have three points removed by completing a traffic safety course at a school approved by the DMV."
+      ],
+      "287": [
+        "If you receive 12 or more points in any 12-month period, your license will be suspended."
+      ],
+      "288": [
+        "Reckless driving ............................................................................................ 8"
+      ],
+      "289": [
+        "A conviction of a major traffic offense, such as DUI or causing substantial bodily harm, will result in your license being revoked. These offenses are not assigned demerit points."
+      ],
+      "290": [
+        "greater than two nanograms per milliliter of blood (five nanograms per milliliter of blood for marijuana metabolite)."
+      ],
+      "291": [
+        "you will not be eligible for a license, permit or privilege to drive for a period of one year for first offense"
+      ],
+      "292": [
+        "Driver license is revoked for 185 days",
+        ".02% alcohol concentration for drivers under 21 years of age"
+      ],
+      "293": [
+        "Jail sentence or residential confinement of 10 days to 6 months",
+        "Second DUI offense within 7 years:"
+      ],
+      "294": [
+        "Prison sentence of 2 to 20 years",
+        "DUI causing death or serious injury:"
+      ],
+      "295": [
+        ".04% or more but less than .08% if you hold a commercial driver license"
+      ],
+      "296": [
+        "The driving privileges of DUI offenders can be immediately reinstated if a driver license with an ignition interlock restriction is issued"
+      ],
+      "297": [
+        "It is also illegal to alter your license in any way, lend it to someone else or use another person’s license."
+      ],
+      "298": [
+        "Following too closely ...................................................................................... 4"
+      ],
+      "299": [
+        "will be required by the court to undergo evaluation for alcohol or drug abuse."
+      ],
+      "300": [
+        "Fine of $400 to $1,000",
+        "First DUI offense:"
+      ],
+      "301": [
+        "a driver under the age of 21 who is convicted of a DUI, will be required by the court to undergo evaluation for alcohol or drug abuse."
+      ],
+      "302": [
+        "It does not apply to the living quarters of motor homes or house trailers, or to the passenger areas of commercial buses, limousines or taxis."
+      ],
+      "303": [
+        "If you had passengers under the age of 15 in the vehicle you were driving, the court will consider that as an aggravating factor in determining your sentence."
+      ],
+      "304": [
+        "the court will impose an additional $60 fine to cover the costs of the chemical analysis."
+      ],
+      "305": [
+        "Driving at night with headlights off",
+        "These are all clues to driving under the influence of alcohol or drugs:"
+      ],
+      "306": [
+        "report a suspected drunk driver or any highway emergency on a cellular phone anywhere in Nevada by dialing *NHP (*647)."
+      ],
+      "307": [
+        "If you receive 12 or more points in any 12-month period, your license will be suspended."
+      ],
+      "308": [
+        "If a crash occurs with more than $750 in damage (personal injury or property damage) and you do not have liability insurance, your driver license and vehicle registration are suspended."
+      ],
+      "309": [
+        "Graffiti: If a person is found guilty of a graffiti violation."
+      ],
+      "310": [
+        "Drivers must register their vehicles within 30 days of establishing residency in Nevada"
+      ],
+      "311": [
+        "Out-of-state insurance is not accepted.",
+        "You must either notify your insurance carrier that you have moved or purchase a new policy in Nevada."
+      ],
+      "312": [
+        "If a driver cancels their Nevada insurance and does not obtain new insurance, they must cancel their Nevada vehicle registration and surrender their license plates on the same day."
+      ],
+      "313": [
+        "hybrid-electric vehicles that are up to five model years old... are exempt."
+      ],
+      "314": [
+        "Licenses are not automatically reinstated following suspension or revocation.",
+        "Drivers must: Reapply at a DMV office.",
+        "Pay the required reinstatement fees."
+      ],
+      "315": [
+        "GET ONLINE, NOT IN LINE"
+      ],
+      "316": [
+        "The Nevada DMV offers more than two dozen online services"
+      ],
+      "317": [
+        "online services including address changes, movement permits and personalized plate orders."
+      ],
+      "318": [
+        "online services including address changes, movement permits and personalized plate orders."
+      ],
+      "319": [
+        "online services including address changes, movement permits and personalized plate orders."
+      ],
+      "320": [
+        "Schedule an appointment at our offices in Carson City, Henderson, Las Vegas and Reno."
+      ],
+      "321": [
+        "We’ll send you text reminders and there is a separate check-in line once you arrive."
+      ],
+      "322": [
+        "there is a separate check-in line once you arrive."
+      ],
+      "323": [
+        "Kiosks print license plate decals and driver histories on the spot."
+      ],
+      "324": [
+        "Kiosks print license plate decals and driver histories on the spot."
+      ],
+      "325": [
+        "Many accept cash."
+      ],
+      "326": [
+        "See dmv.nv.gov/kiosk for locations."
+      ],
+      "327": [
+        "Motorcycle Safety Foundation"
+      ],
+      "328": [
+        "Schedule an appointment at our offices in Carson City, Henderson, Las Vegas and Reno."
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
@@ -63,6 +1116,22 @@
     "sign_ratio_pct": 5.2,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 328,
+      "avg_fidelity": 9.99,
+      "pct_at_10": 99.7,
+      "pct_above_9": 99.7,
+      "pct_above_7": 99.7,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [
+        269
+      ],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

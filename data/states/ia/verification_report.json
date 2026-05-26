@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "ia",
   "name": "Iowa",
-  "verified_at": "2026-05-26T02:25:24Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T22:59:09Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://iowadot.gov/mvd/driverslicense/dlmanual/dlmanual.pdf",
     "manual_pdf_sha256": "7e1aebad9df027431f5ddf19256b3a93c0b5614418476039f54e1888640825a9",
@@ -24,21 +24,706 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 219,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "Buckle up, no matter where you’re sitting in the vehicle."
+      ],
+      "2": [
+        "Give your full attention to the task of driving."
+      ],
+      "3": [
+        "You can visit any location; It doesn’t have to be the one closest to where you live."
+      ],
+      "4": [
+        "license renewal, are available online if you are age 18 or older and meet other requirements."
+      ],
+      "5": [
+        "There are several websites out there selling information that we provide for free."
+      ],
+      "6": [
+        "In Iowa, anyone operating a motor vehicle, motorcycle, or moped on public roads is required to have a permit or license."
+      ],
+      "7": [
+        "Lived in Iowa continuously for 30 days."
+      ],
+      "8": [
+        "Enrolled your child in an Iowa public school."
+      ],
+      "9": [
+        "Registered to vote in this state."
+      ],
+      "10": [
+        "Driving a military vehicle while on duty with the U.S. Armed Forces."
+      ],
+      "11": [
+        "Driving farm equipment between the home farm and any nearby farmland or farm operation within two miles."
+      ],
+      "12": [
+        "Driving with a current license from your home state or country while in Iowa as a visitor or student."
+      ],
+      "13": [
+        "Drive sober."
+      ],
+      "14": [
+        "Receive public assistance from the state of Iowa."
+      ],
+      "15": [
+        "Driving farm equipment between the home farm and any nearby farmland or farm operation within two miles."
+      ],
+      "16": [
+        "Drivers of vehicles in Iowa must also carry current proof of registration and an insurance card (printed or electronic) to verify proof of liability insurance."
+      ],
+      "17": [
+        "Failure to do so could result in fines and possible impoundment of the vehicle."
+      ],
+      "18": [
+        "Complete a vision screening."
+      ],
+      "19": [
+        "BLUE Services for travelers. Directs you to places such as rest areas, tourist sites, hospitals, lodging, fuel stations, restaurants, and tourist attractions."
+      ],
+      "20": [
+        "FLUORESCENT PINK Warning and guide signs for incident management such as crash clean up, debris removal, traffic, etc."
+      ],
+      "21": [
+        "PENNANT This sign will be on the left side of the road. It warns you of a no passing zone."
+      ],
+      "22": [
+        "Maximum speed limits are for ideal driving conditions."
+      ],
+      "23": [
+        "Some regulatory signs have a red circle with a red slash over a symbol. These indicate you cannot do something"
+      ],
+      "24": [
+        "Stop at the stop line if one is present. If necessary, you may then pull forward to the stop sign or the edge of the intersection"
+      ],
+      "25": [
+        "HILL This sign is a warning to all vehicles that the road ahead goes down a hill. You should check your brakes before going down the hill."
+      ],
+      "26": [
+        "HORSE-DRAWN VEHICLE Be alert for slow-moving, horse-drawn vehicles on the roadways. Reduce your speed and pass slowly.",
+        "FARM MACHINERY Be alert for slow-moving, farm equipment on the roadways. Reduce your speed and pass slowly."
+      ],
+      "27": [
+        "Pedestrian conveyances are defined as any human-powered device by which a pedestrian may move other than by walking",
+        "Pedestrian conveyances include, but are not limited to: Wheelchairs Strollers Bicycles Skateboards Scooters"
+      ],
+      "28": [
+        "The new law states that vehicles must yield the right of way to pedestrians on foot and those using any human powered device, also known as a pedestrian conveyance."
+      ],
+      "29": [
+        "A reflective orange triangle on the rear of a vehicle means it is traveling 35 mph or less."
+      ],
+      "30": [
+        "Mile markers show the number of miles from where the Interstate route entered the state you are traveling in."
+      ],
+      "31": [
+        "Flashing red Treat it the same as a stop sign."
+      ],
+      "32": [
+        "Flashing yellow arrow Yield to oncoming traffic and pedestrians; then turn left proceeding with caution. Oncoming traffic has a green light."
+      ],
+      "33": [
+        "Solid yellow Do not enter the intersection if you can stop safely. If you cannot stop safely, proceed through the intersection with caution."
+      ],
+      "34": [
+        "All school buses, charter buses, drivers carrying passengers for hire (such as Uber or Lyft)... must stop within 15 to 50 feet of railroad tracks before crossing."
+      ],
+      "35": [
+        "If your vehicle gets stuck or stalls at a crossing, get everyone out and far away immediately, even if you do not see a train."
+      ],
+      "36": [
+        "Call the number on the blue and white Emergency Notification System (ENS) sign. Share the crossing ID number with the dispatcher."
+      ],
+      "37": [
+        "Passively protected railroad crossings do not have lights or gates. They will only be marked with a crossbuck and a stop or yield sign."
+      ],
+      "38": [
+        "When stopped, leave at least 15 feet between the front and rear of your vehicle and the nearest rail."
+      ],
+      "39": [
+        "Multiple tracks may mean multiple trains. Ensure you can clearly see down the tracks in both directions before proceeding."
+      ],
+      "40": [
+        "The shape of a route sign indicates the type of roadway it is - interstate, U.S. highway, Iowa route, county road, etc."
+      ],
+      "41": [
+        "Steady green arrow Drivers can proceed with the left or right turn. Oncoming traffic must stop. Do not go straight. Drive only in the direction of the arrow."
+      ],
+      "42": [
+        "If a police officer or highway traffic signal directs highway traffic to proceed, you do not have to stop. You also do not have to stop if the crossing is marked with an “EXEMPT” sign."
+      ],
+      "43": [
+        "Orange is the basic color of these signs and warning devices."
+      ],
+      "44": [
+        "Stay alert and drive cautiously as fines may double in work area zones."
+      ],
+      "45": [
+        "White lines separate traffic moving in the same direction. Yellow lines separate traffic moving in opposite directions."
+      ],
+      "46": [
+        "Yield lines consist of a row of solid white triangles pointing toward approaching vehicles."
+      ],
+      "47": [
+        "A flashing yellow “X” means the lane is only for turning."
+      ],
+      "48": [
+        "A steady yellow “X” means that the use of the lane is changing and you should move out of it as soon as it is safe to do so."
+      ],
+      "49": [
+        "Shared left-turn lanes are reserved for vehicles making left turns from either direction.",
+        "the lane cannot be used for passing."
+      ],
+      "50": [
+        "On a road with three or more lanes stay in the right or center lane except to pass. If there is a lot of entering traffic, it’s best to use the center lane."
+      ],
+      "51": [
+        "Never pass on the shoulder, whether it is paved or not.",
+        "Other drivers will not expect you to be there and may pull off the road without looking."
+      ],
+      "52": [
+        "Motorists may only drive in bicycle lanes when making turning movements and must look carefully beside and behind their vehicle for bicyclists and cross with care."
+      ],
+      "53": [
+        "Motorists should pay close attention and look for bicyclists before crossing green pavement. Motorists should not stop on green pavement."
+      ],
+      "54": [
+        "Shared lane pavement markings, also called “sharrows” alert motorists of the presence of bicyclists, encourage safe passing of bicyclists by motorists",
+        "Unlike bike lanes, sharrows do not designate a particular portion of the roadway for the exclusive use of bicycles."
+      ],
+      "55": [
+        "Then the top two red lights become solid, and motorists must stop for pedestrians."
+      ],
+      "56": [
+        "If your vehicle is approaching a person being led by a harnessed service animal, walking with a cane that is white or white with a red tip, the person is likely visually impaired."
+      ],
+      "57": [
+        "Reserved lanes are marked by signs stating that the lane is reserved for special use, and often have a white diamond posted at the side of the road and/or painted on the road surface."
+      ],
+      "58": [
+        "The law says who must yield the right-of-way; it does not give anyone the right-of-way."
+      ],
+      "59": [
+        "FAILURE TO YIELD THE RIGHT-OF-WAY IS THE #1 CAUSE OF TRAFFIC-RELATED FATALITIES IN IOWA."
+      ],
+      "60": [
+        "For vehicles arriving at the same time, the vehicle to the right gets to go first."
+      ],
+      "61": [
+        "If you are in an intersection (including roundabouts), drive through the intersection before you pull over."
+      ],
+      "62": [
+        "Stay at least 500 feet behind any emergency vehicle using lights and sirens."
+      ],
+      "63": [
+        "When you see amber warning lights flashing, you must slow your vehicle to no more than 20 mph and be prepared to stop."
+      ],
+      "64": [
+        "When meeting the bus in one of the opposite two lanes (or more), you do not need to stop, even if the bus has stopped with lights flashing and stop arm out."
+      ],
+      "65": [
+        "Violating this law may result in your license being suspended for up to 180 days."
+      ],
+      "66": [
+        "If there is a curb, park within 18 inches of the curb or closer."
+      ],
+      "67": [
+        "Closer than five feet from a fire hydrant; or in a designated hydrant red zone."
+      ],
+      "68": [
+        "If a lane change is not possible, prohibited by law, or unsafe, you must slow down and be prepared to stop."
+      ],
+      "69": [
+        "Violating this law may result in your license being suspended for up to one year."
+      ],
+      "70": [
+        "Iowa law requires that you move your vehicle out of the driving lanes of traffic if the vehicle is operable and can be safely moved."
+      ],
+      "71": [
+        "Cars, trucks, and ATVs/UTVs need two separate braking systems, a foot brake and a parking brake."
+      ],
+      "72": [
+        "Be ready to yield the right-of-way, even at times the bicyclists should yield to you. They have no defense against a vehicle"
+      ],
+      "73": [
+        "You also need at least one red light on the back of the vehicle, and it should be visible for at least 500 feet."
+      ],
+      "74": [
+        "Dirt on the lenses can cut the light’s effectiveness by 50 percent."
+      ],
+      "75": [
+        "Iowa law requires tinted windshields and windows to the immediate right or left of the driver to allow at least 70 percent of the light through."
+      ],
+      "76": [
+        "Check tire air pressure with an air pressure gauge when the tires are cold."
+      ],
+      "77": [
+        "Fumes from a leaky exhaust can cause death in a very short time.",
+        "NEVER LEAVE YOUR ENGINE RUNNING IN THE GARAGE"
+      ],
+      "78": [
+        "You must be able to see at least 200 feet behind you in your rearview mirror."
+      ],
+      "79": [
+        "There should be at least 10 inches between the steering wheel and your chest"
+      ],
+      "80": [
+        "The head restraint should be at the center of the driver’s head."
+      ],
+      "81": [
+        "Left-side mirror: Lean your head toward the left-side window, and set the left mirror so you can barely see the side of the car."
+      ],
+      "82": [
+        "Adaptive cruise control No",
+        "During a driving test, you may be assisted by vehicle safety technologies such as back-up cameras but should not be assisted by vehicle convenience technologies like adaptive cruise control."
+      ],
+      "83": [
+        "Automatic parallel parking No",
+        "Convenience technologies are not permitted for use during the driving test process."
+      ],
+      "84": [
+        "It should only be used as a warning to others."
+      ],
+      "85": [
+        "Check tire tread with a penny. Stick the penny into the tread “head” first."
+      ],
+      "86": [
+        "These include checking all the following: • side mirrors • rear-view mirror • over the shoulders (head checks)"
+      ],
+      "87": [
+        "When the driver shifts into reverse, the rear camera activates to show the area behind the vehicle."
+      ],
+      "88": [
+        "You can use the turn signal or activate the feature through a button usually located on the turn signal lever."
+      ],
+      "89": [
+        "The around-view monitor processes video from four cameras, displaying the composite footage on the screen as if there is a single birds-eye view camera right above the vehicle."
+      ],
+      "90": [
+        "detected when driving at low speeds, generally around 25 mph."
+      ],
+      "91": [
+        "A crash is imminent when the beeps become continuous."
+      ],
+      "92": [
+        "Tracks the vehicle’s speed and location via GPS and warns you to slow down when approaching curves and exits."
+      ],
+      "93": [
+        "The warning alone will not automatically brake for the driver."
+      ],
+      "94": [
+        "The forward collision warning system scans the traffic ahead 20 times per second up to 500 feet in front of your vehicle"
+      ],
+      "95": [
+        "you should carefully slow the car to the appropriate posted speed limit by releasing the accelerator or lightly braking. Don’t slam the brakes"
+      ],
+      "96": [
+        "This feature relies on roadway markings to operate."
+      ],
+      "97": [
+        "They may not detect objects that are flat on the ground, below the bumper, too close to the vehicle, or too far from it."
+      ],
+      "98": [
+        "Warns you if one or more vehicles are about to enter the backing path. Can detect vehicles that might be crossing during backing."
+      ],
+      "99": [
+        "the vehicle will slow down rapidly or stop on its own to avoid a crash."
+      ],
+      "100": [
+        "the driver should not become complacent and dependent on blind spot monitors alone",
+        "continue to check: side mirrors rear-view mirror over the shoulders (head checks)"
+      ],
+      "101": [
+        "Sensors need to be kept clean in order for them to function properly."
+      ],
+      "102": [
+        "Do not depend on the automatic reverse braking technology. Continue to check mirrors, check over the shoulder (head checks), and use rear cameras if equipped."
+      ],
+      "103": [
+        "This feature will not work when lane lines are faint or covered with snow or dirt."
+      ],
+      "104": [
+        "Convenience technologies are not permitted for use during the driving test process."
+      ],
+      "105": [
+        "In bad weather and other unsafe driving conditions, it is advised not to use any cruise control, including ACC."
+      ],
+      "106": [
+        "Helps guide you into a parallel parking spot. You are still responsible for braking and monitoring the environment."
+      ],
+      "107": [
+        "Never stay alongside a large vehicle such as a truck or bus. These vehicles have large blind spots and it is hard for them to see you."
+      ],
+      "108": [
+        "The sun can create blind spots with reflections off any of your window surfaces. The front windshield is the most common place for glaring reflections and blind spots."
+      ],
+      "109": [
+        "If you are pregnant, you can safely wear the belt across the pelvis, as low under your abdomen as possible."
+      ],
+      "110": [
+        "The violation of this law is punishable with up to a $50 fine per passenger and $100 per passenger under 18."
+      ],
+      "111": [
+        "A child under one year old and weighing less than 20 pounds must be secured in a rear-facing child restraint system."
+      ],
+      "112": [
+        "A child under six years old must be secured in a child restraint system (a safety seat or booster seat, not a seat belt)."
+      ],
+      "113": [
+        "A child under the age of 18 cannot ride in the rear of a moving pickup truck."
+      ],
+      "114": [
+        "Over half of all traffic deaths happen within 25 miles of home. Many occur on roads with speed limits of less than 45 mph."
+      ],
+      "115": [
+        "make sure there are no loose objects in your vehicle that could injure someone in the event of a sudden stop or crash.",
+        "make sure there are no objects on the floor that could roll under the brake pedal"
+      ],
+      "116": [
+        "Do not drive in another driver’s blind spot. Either speed up or slow down so the other driver can see your vehicle."
+      ],
+      "117": [
+        "At 55 miles per hour, a 20-pound object hits with 1,000 pounds of force."
+      ],
+      "118": [
+        "Cognitive — doing something that causes the driver’s mind to wander or focus elsewhere. (E.g., listening to music or having a conversation)."
+      ],
+      "119": [
+        "prohibited from making and receiving calls and talking on the phone while driving unless their vehicle is at a complete stop off the traveled portion of the roadway."
+      ],
+      "120": [
+        "You can’t call, text, or dial unless using hands-free or voice activation."
+      ],
+      "121": [
+        "defined as having a blood alcohol concentration (BAC) of .08 or higher"
+      ],
+      "122": [
+        "you are contractually agreeing to consent to a field sobriety test upon demand by law enforcement"
+      ],
+      "123": [
+        "automatic one year revocation of your license and a minimum $1,250 fine."
+      ],
+      "124": [
+        "An underage driver is considered to be operating while intoxicated with a BAC of .02 or more."
+      ],
+      "125": [
+        "Open containers of alcoholic beverages may be transported in the trunk of a vehicle."
+      ],
+      "126": [
+        "Being awake for 18 hours straight is as impairing as a blood alcohol concentration (BAC) of 0.08 percent"
+      ],
+      "127": [
+        "Preparing for the Road Ahead – Iowa 511",
+        "Visit www.511ia.org or download the free mobile app to stay up to date on the latest travel conditions"
+      ],
+      "128": [
+        "N – “Neutral” to leave the engine idle"
+      ],
+      "129": [
+        "Step 1: Depress the clutch with your left foot"
+      ],
+      "130": [
+        "REACTION DISTANCE + BRAKING DISTANCE = STOPPING DISTANCE"
+      ],
+      "131": [
+        "A person receiving safety-related information including emergency, traffic, and weather alerts."
+      ],
+      "132": [
+        "An inexperienced or beginning driver should maintain at least a three-second following distance under normal driving conditions."
+      ],
+      "133": [
+        "When road conditions are slippery or the vehicle in front of you blocks your view, a following distance of six or more seconds is recommended."
+      ],
+      "134": [
+        "Press on the brake pedal as hard as you can and keep pressing.",
+        "Do not let up on the brake pedal. The ABS will only work with the brake pedal pushed down."
+      ],
+      "135": [
+        "if the vehicle behind you is following too closely, tap your brake pedal three or four times quickly."
+      ],
+      "136": [
+        "When a visually impaired person with a cane (often white or red-tipped) or guide dog is walking in front of you"
+      ],
+      "137": [
+        "25 mph in a residential district or school district"
+      ],
+      "138": [
+        "On the interstate system there is a minimum speed of 40 mph."
+      ],
+      "139": [
+        "Your hands should be placed on opposite sides of the steering wheel at 9 and 3 o’clock or slightly lower at 7 and 5 o’clock."
+      ],
+      "140": [
+        "Shift your hips and turn around to get a good view behind the vehicle.",
+        "Drape your right arm over the back of the seat, grasp the top of the steering wheel with your left hand, and look over your right shoulder through the rear window."
+      ],
+      "141": [
+        "if the speed limit is faster than 45 mph, you must signal at least 300 feet before you turn."
+      ],
+      "142": [
+        "If there are streets, driveways, or entrances between you and where you want to turn, wait until you have passed them to signal."
+      ],
+      "143": [
+        "You may also make a left turn at a red light if you are turning from the left lane of a one-way street onto another one-way street."
+      ],
+      "144": [
+        "When you turn your head to check the blind spots, make sure you keep the steering wheel straight"
+      ],
+      "145": [
+        "a vehicle traveling 60 mph will travel 3 times further than a vehicle traveling 30 mph before coming to a stop."
+      ],
+      "146": [
+        "Three-point turns are generally not a safe maneuver and can increase your risk and exposure to collisions."
+      ],
+      "147": [
+        "When you turn your head to check the blind spots, make sure you keep the steering wheel straight"
+      ],
+      "148": [
+        "When you see the front of the passed car in the rearview mirror and your vehicle is well clear, signal intent, gently and slowly move back to the original lane"
+      ],
+      "149": [
+        "Yellow lines separate traffic moving in opposite directions.",
+        "Yellow lines separate traffic traveling in different directions"
+      ],
+      "150": [
+        "Do not pass within 100 feet of a railroad crossing."
+      ],
+      "151": [
+        "94 percent of serious crashes are due to dangerous choices or errors people make behind the wheel."
+      ],
+      "152": [
+        "Check your mirrors frequently and scan conditions 20 to 30 seconds ahead of you."
+      ],
+      "153": [
+        "Having an alternate path of travel also is essential, so always leave yourself an out — a place to move your vehicle if your immediate path of travel is suddenly blocked."
+      ],
+      "154": [
+        "The safest roadways are when all vehicles travel the same speed but do not exceed the speed limit."
+      ],
+      "155": [
+        "These vehicles may have a slow-moving vehicle sign (an orange triangle or flashing lights) on the back."
+      ],
+      "156": [
+        "If you are being tailgated, move slightly to the right and give the tailgater a better view of what is ahead",
+        "Try slowing down and encouraging the driver behind you to pass."
+      ],
+      "157": [
+        "Iowa law requires the use of both headlights from sunset to sunrise or whenever visibility is 500 feet or less"
+      ],
+      "158": [
+        "A good rule of thumb is to turn your headlights on whenever you turn your windshield wipers on."
+      ],
+      "159": [
+        "You are coming to a place where you cannot see what is ahead, such as exiting a narrow alley."
+      ],
+      "160": [
+        "If you are stalled in a traveled lane, you and your passengers should exit the vehicle quickly and stand in a safe area"
+      ],
+      "161": [
+        "Look left, right, and left again for approaching vehicles and pedestrians."
+      ],
+      "162": [
+        "Beware of the “false” turn signal. Do not turn just because an approaching vehicle has a turn signal on. The driver may plan to turn beyond you or has forgotten to turn the signal off"
+      ],
+      "163": [
+        "Stop at the stop sign, look left and proceed into the median when safe to do so.",
+        "Remain stopped in the median. Look right. Cross or turn left when it is safe to do so."
+      ],
+      "164": [
+        "Acceleration and merge area: Use this area to bring your vehicle up to the speed of traffic and merge when safe to do so. Do not completely stop on the ramp unless absolutely necessary."
+      ],
+      "165": [
+        "Drivers on the side road wanting to turn left or cross the four-lane highway will turn right onto the highway, merge into the left lane and then make a U-turn at a designated median opening."
+      ],
+      "166": [
+        "The unique design is unusual because it directs drivers on the opposite side of the road briefly before diverging back into the correct direction."
+      ],
+      "167": [
+        "Roundabouts are intersections that direct traffic in a counterclockwise direction around a center island."
+      ],
+      "168": [
+        "They have no stop signs or traffic signals. Yield signs, directional signs, and pavement markings guide traffic through the intersection."
+      ],
+      "169": [
+        "Exit: Signal, then exit the roundabout to your right. Yield to anyone in the crosswalk."
+      ],
+      "170": [
+        "Ride in the middle of the lane to prevent vehicles from passing. Yield to anyone in the crosswalks."
+      ],
+      "171": [
+        "Do not change lanes in the roundabout."
+      ],
+      "172": [
+        "Do not pass or drive beside trucks or buses. They may straddle lanes or may not see you."
+      ],
+      "173": [
+        "Slow down, avoid sudden turning, accelerate and brake slowly, and increase your following distance."
+      ],
+      "174": [
+        "Uncontrolled intersections are more common on gravel roads. They are not controlled by yield or stop signs."
+      ],
+      "175": [
+        "AT AN UNCONTROLLED INTERSECTION, THE VEHICLE ON THE LEFT SHOULD YIELD."
+      ],
+      "176": [
+        "Use low beam headlights to make your vehicle more visible to others during extremely dusty conditions"
+      ],
+      "177": [
+        "If you are blinded by another vehicle’s headlights, slow down and watch the white stripe at the right edge of the pavement."
+      ],
+      "178": [
+        "If an animal is encountered, and there isn’t time to stop, don’t swerve or veer as this will likely result in a more severe crash."
+      ],
+      "179": [
+        "If you can’t see the truck driver in the truck’s mirror, the truck driver can’t see you."
+      ],
+      "180": [
+        "Truck drivers sometimes need to swing widely to the left in order to safely negotiate a right turn.",
+        "Cutting in between the truck and the curb increase the possibility of a crash."
+      ],
+      "181": [
+        "Intersections are the most likely places for car/motorcycle collisions to occur."
+      ],
+      "182": [
+        "When driving behind a motorcycle, allow at least a 3-4 second following distance."
+      ],
+      "183": [
+        "When passing bicyclists, you must completely change lanes, giving the bicyclist the entire lane like you would with any other vehicle."
+      ],
+      "184": [
+        "Never pass another vehicle that has stopped or is slowing down for a pedestrian.",
+        "Remember, you might not be able to see the pedestrian when you approach a stopped vehicle, so be aware."
+      ],
+      "185": [
+        "In Iowa it is legal for you to break a vehicle’s window in order to provide medical attention to a person or animal trapped inside."
+      ],
+      "186": [
+        "DO NOT USE CRUISE CONTROL DURING INCLEMENT WEATHER."
+      ],
+      "187": [
+        "there are typically no red flashing lights, warning bells, crossing gates or pavement markings at rural road railroad crossings."
+      ],
+      "188": [
+        "October, November and May are the peak months for deer collisions; however, they can occur at any time of the year."
+      ],
+      "189": [
+        "Turn signals do not automatically shut off on a motorcycle and riders occasionally forget to cancel them after a turn is completed."
+      ],
+      "190": [
+        "Drive slower than normal and increase your following distance to five or six seconds."
+      ],
+      "191": [
+        "DO NOT USE CRUISE CONTROL DURING INCLEMENT WEATHER.",
+        "Do not use cruise control in icy or snowy conditions."
+      ],
+      "192": [
+        "As little as 6 inches of water may sweep away a vehicle, including SUVs and pickups."
+      ],
+      "193": [
+        "Wait for the vehicle to fill with water. Once the vehicle is full, the doors are easier to open."
+      ],
+      "194": [
+        "Don’t use high beams — they reflect off the fog, causing glare and reduced visibility."
+      ],
+      "195": [
+        "pull over, duck down below the windows in the vehicle, keep your seat belt fastened, and cover your head"
+      ],
+      "196": [
+        "moisture freezes quickly due to circulating air both above and below the road surface."
+      ],
+      "197": [
+        "Stopping distances can be 10 times greater in ice and snow."
+      ],
+      "198": [
+        "Snowplows typically operate at 25-35 mph."
+      ],
+      "199": [
+        "Never pass on the shoulder side of a plow. Plows will move snow to the shoulders."
+      ],
+      "200": [
+        "The steering wheel will be difficult to turn, but you can turn it.",
+        "The brakes will still work, but you will have to push very hard on the brake pedal."
+      ],
+      "201": [
+        "Pump the brake pedal several times. This will often build up enough brake pressure to allow you to stop."
+      ],
+      "202": [
+        "Quickly shift to neutral.",
+        "Pull off the road when safe to do so.",
+        "Turn off the engine after stopping."
+      ],
+      "203": [
+        "Failure to do so within 72 hours of the incident will result in the loss of your driving privileges"
+      ],
+      "204": [
+        "If the key is removed, the steering wheel will lock. This may cause loss of control of the vehicle"
+      ],
+      "205": [
+        "Vehicle insurance information",
+        "Vehicle registration",
+        "Driver’s license"
+      ],
+      "206": [
+        "you will need to discuss what expenses you will have to cover for them as well."
+      ],
+      "207": [
+        "When engaging with a law enforcement officer, remain calm and follow instructions."
+      ],
+      "208": [
+        "you may choose to have an indicator added to your license or ID."
+      ],
+      "209": [
+        "This type of indicator is printed on your license/ID and will also be visible in the database"
+      ],
+      "210": [
+        "This helps the officer be better prepared to interact with you."
+      ],
+      "211": [
+        "On busy streets or highways, it may be safest to pull over into a parking lot or on a less busy side street."
+      ],
+      "212": [
+        "Do not stop in the travel lane."
+      ],
+      "213": [
+        "Turn off your vehicle, keep your hands visible (recommended on the steering wheel), remain calm, and follow the officer’s instructions."
+      ],
+      "214": [
+        "keep your hands visible (recommended on the steering wheel)"
+      ],
+      "215": [
+        "This publication is intended as general information and is not a substitute for legal advice."
+      ],
+      "216": [
+        "Take our practice knowledge test online at iowadot.gov/mvd/driverslicense/manuals-and-practice-tests"
+      ],
+      "217": [
+        "Vehicle insurance information",
+        "Vehicle registration",
+        "Driver’s license"
+      ],
+      "218": [
+        "contact Iowa DOT Civil Rights at 515-239-1111 or by email at civil.rights@iowadot.us."
+      ],
+      "219": [
+        "Refer to your liability coverage to assess what expenses will need to be paid and what you are eligible to receive."
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 26,
-    "topics_covered": 26,
+    "topics_total": 30,
+    "topics_covered": 30,
     "coverage_pct": 100.0,
     "uncovered_topics": [],
     "verdict": "PASS",
@@ -64,6 +749,32 @@
     "sign_ratio_pct": 7.6,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 219,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    },
+    "ja": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 219,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 99.5,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

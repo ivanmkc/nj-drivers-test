@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "mn",
   "name": "Minnesota",
-  "verified_at": "2026-05-26T02:29:21Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:06:29Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://assets.dps.mn.gov/files/dvs/dvs-class-d-drivers-manual-english.pdf",
     "manual_pdf_sha256": "281569fb6a732fa37d3a9a4c5ac8fa4d50ff71c69190f20e58399ff59fd43b74",
@@ -23,21 +23,1108 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 349,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "However, you need to be at least 15 years old to ride one.",
+        "Electric-assist bicycles are not mopeds, so you can ride them on most bike trails."
+      ],
+      "2": [
+        "Children under 13 years old must now ride in the back seat if it is available."
+      ],
+      "3": [
+        "These road users don’t have seat belts or airbags, so you need to stay alert and be careful when sharing the road with them."
+      ],
+      "4": [
+        "The law removes the need to show proof of legal presence in the U.S."
+      ],
+      "5": [
+        "You can now use internet and cable bills as utility bills."
+      ],
+      "6": [
+        "That way, if you are involved in a crash, law enforcement officers will know that there is someone at home who depends on you."
+      ],
+      "7": [
+        "Veterans with a 100 percent total service-connected disability are now exempt from sales, registration and wheelage taxes for up to two vehicles."
+      ],
+      "8": [
+        "If you are 21 and older and have a valid, unexpired license from another U.S. state, you will no longer need to take the written test"
+      ],
+      "9": [
+        "Providing this data is voluntary — you are not required to share information — and the data is classified as private."
+      ],
+      "10": [
+        "If you are 15 years old, you may be able to get a driver’s license for your own medical needs or the medical needs of your relatives."
+      ],
+      "11": [
+        "If you are under age 16 and work on a farm, you may be eligible for the restricted farm license, even if your parent or guardian does not own the farm."
+      ],
+      "12": [
+        "The license expires 15 months after it is issued and is canceled if you break traffic laws and lose driving privileges."
+      ],
+      "13": [
+        "if you provide proof that you are a U.S. citizen... when applying for or renewing a driver’s license or identification card, you will be automatically registered to vote."
+      ],
+      "14": [
+        "If you are serving a sentence longer than six months in a jail or correctional facility... you can now renew your driver’s licenses and identification cards remotely."
+      ],
+      "15": [
+        "your DD-214 form that shows honorable or honorable conditions with 181 days of consecutive service."
+      ],
+      "16": [
+        "It is a crime to interfere with the work of a DVS employee. Minnesota Statute 609.50, Subdivision 5."
+      ],
+      "17": [
+        "Start your application online using the pre-application feature no more than 30 days before visiting a driver’s license office"
+      ],
+      "18": [
+        "I have my certificate of enrollment (“Blue Card”) proving that I completed classroom instruction and am signed up for behind-the-wheel instruction"
+      ],
+      "19": [
+        "I am at least 15 years old."
+      ],
+      "20": [
+        "Doors must open from the inside and outside."
+      ],
+      "21": [
+        "I have held an instruction permit for the last six months without a conviction for a moving violation or an alcohol or controlled substance violation."
+      ],
+      "22": [
+        "If 19 years of age or older: ❏ I have had my instruction permit for at least three months."
+      ],
+      "23": [
+        "If your Minnesota driver’s license has been expired for more than one year but less than five years, you must pass a written test and a vision test before applying for a new license."
+      ],
+      "24": [
+        "If you are 21 years of age or older and moving to Minnesota from another state... you can get a license by passing a vision test and completing an application."
+      ],
+      "25": [
+        "You have 60 days (30 days for commercial drivers) once you become a Minnesota resident to get your Minnesota license or permit."
+      ],
+      "26": [
+        "If you are moving to Minnesota from a country other than the U.S. or Canada, you must pass a written test, a vision test and a road test even if you have a valid license from your former country."
+      ],
+      "27": [
+        "You temporarily drive a farm tractor or other farm implement on a public road."
+      ],
+      "28": [
+        "I have my certificate of course completion (“White Card”) proving that I completed driver education."
+      ],
+      "29": [
+        "If your former state license is expired less than one year, you are required to pass the written test."
+      ],
+      "30": [
+        "I understand that if I do not have a licensed driver with me, my road test may be cancelled."
+      ],
+      "31": [
+        "You can drive this vehicle in Minnesota for up to 90 days in any calendar year without a valid license or permit."
+      ],
+      "32": [
+        "You are 18 years old or younger and have had an instruction permit for less than six months."
+      ],
+      "33": [
+        "If you do not have one of these items, you must present two documents. One document must contain your full name and your date of birth."
+      ],
+      "34": [
+        "Only applicants who can provide proof of identity, full legal name, Social Security number, photographic identity, Minnesota residency and U.S. citizenship are eligible"
+      ],
+      "35": [
+        "A $15 fee is required in addition to the fee for a driver’s license or ID card."
+      ],
+      "36": [
+        "The translator is not related by blood or marriage to the subject of the document."
+      ],
+      "37": [
+        "Social Security numbers are not printed on or embedded in driver’s licenses or identification cards."
+      ],
+      "38": [
+        "If you fail two consecutive written tests, a $10 fee is charged for the third and any subsequent tests."
+      ],
+      "39": [
+        "Your normal or corrected vision must be at least 20/40, and your peripheral vision must be at least 105 degrees."
+      ],
+      "40": [
+        "If you are under 18, you must also present a certificate of enrollment (“Blue Card” or “Pink Card”) from an approved driver education course"
+      ],
+      "41": [
+        "DVS will verify your documents and may not accept them if they are laminated or altered.",
+        "We cannot accept photocopies of identification documents"
+      ],
+      "42": [
+        "You may take only one written test per day and must score 80 percent to pass."
+      ],
+      "43": [
+        "Two documents proving your current residency in Minnesota."
+      ],
+      "44": [
+        "The road test includes three parts: demonstrating your vehicle’s safety equipment, showing your vehicle control skills and performing a driving test."
+      ],
+      "45": [
+        "Neighborhood electric vehicles (NEVs) are not allowed."
+      ],
+      "46": [
+        "You may use a vehicle with a backup camera, but the camera should not be the only method of observation when backing up."
+      ],
+      "47": [
+        "Involving your vehicle in a crash that you could have avoided, even if you are not legally at fault."
+      ],
+      "48": [
+        "you must submit a physician’s statement within 30 days of the diagnosis."
+      ],
+      "49": [
+        "You must be supervised by a driver aged 21 or older."
+      ],
+      "50": [
+        "you must hold an instruction permit for at least six months before taking the road test."
+      ],
+      "51": [
+        "you may not use or talk on a cell phone while driving, including with a hands-free device."
+      ],
+      "52": [
+        "If you are unable to pass the safety equipment demonstration, you will not be allowed to finish the road test that day."
+      ],
+      "53": [
+        "Your permit is valid for two years of practice driving with a licensed supervising driver sitting in the front passenger seat."
+      ],
+      "54": [
+        "Ability to perform the 90-degree backing skill maneuver, which simulates backing into a 10-foot-wide driveway or parking space."
+      ],
+      "55": [
+        "If you fail the road test four times, you must complete at least six hours of behind-the-wheel instruction with a licensed instructor before taking the test again."
+      ],
+      "56": [
+        "You will need two application forms with notarized signatures from your parents: one for the instruction permit and one for the provisional license."
+      ],
+      "57": [
+        "No passengers, including pets, children or interpreters, are allowed."
+      ],
+      "58": [
+        "Complete 30 hours of classroom instruction and be enrolled in behind-the-wheel instruction"
+      ],
+      "59": [
+        "you may not use or talk on a cell phone while driving, including with a hands-free device."
+      ],
+      "60": [
+        "If not taking the parent class, your teen must submit a log showing at least 50 hours of supervised driving, including 15 nighttime hours."
+      ],
+      "61": [
+        "During the first six months, you must not drive from midnight to 5 a.m. unless you are:",
+        "Driving between home and work.",
+        "Accompanied by a licensed driver who is at least 25 years old."
+      ],
+      "62": [
+        "During the second six months, you may have no more than three passengers under 20 unless accompanied by a parent or guardian."
+      ],
+      "63": [
+        "If you are convicted of a crash-related moving violation... while you are driving without a license as a teenager, you cannot get a license, instruction permit or provisional license until you are 18."
+      ],
+      "64": [
+        "Obtain an instruction permit and hold it for three months.",
+        "If you lose driving privileges due to a crash-related moving violation or an alcohol/controlled substance-related violation while driving with your provisional license, you cannot regain a license until age 18."
+      ],
+      "65": [
+        "If you upgrade from a provisional license with no violations on your record, you will receive a $3.50 credit toward the fee."
+      ],
+      "66": [
+        "You may drive alone to perform farm work during daylight hours within 40 miles of the farmhouse."
+      ],
+      "67": [
+        "You may be issued this license at age 15 when there are no licensed drivers in the household"
+      ],
+      "68": [
+        "An electric-assist bicycle is not considered a moped, and you do not need a test or a license to ride one. However, you must be at least 15 years old."
+      ],
+      "69": [
+        "All single-unit vehicles (cars, pickups and small trucks) with these exceptions: – Those with a gross vehicle weight of 26,001 pounds or more."
+      ],
+      "70": [
+        "Vehicles designed to carry more than 15 passengers (including the driver)."
+      ],
+      "71": [
+        "Any farm truck transporting agricultural products, farm machinery or farm supplies (including hazardous materials) within 150 miles of the farm."
+      ],
+      "72": [
+        "Note: You may have immediate family members under age 20 as passengers during both time periods."
+      ],
+      "73": [
+        "If you are under 18, you must certify that you have driven for at least 10 hours under the supervision of a licensed driver who is at least 21 years old."
+      ],
+      "74": [
+        "It has a gross vehicle weight of more than 10,000 pounds, but the combined gross vehicle weight of the vehicle and trailer is 26,000 pounds or less."
+      ],
+      "75": [
+        "You must pass additional written tests to receive all endorsements and specialized road tests to receive the bus, school bus and motorcycle endorsements."
+      ],
+      "76": [
+        "You can tow vehicles with a gross vehicle weight of 10,000 pounds or less when operating a Class B power unit."
+      ],
+      "77": [
+        "You may obtain a CDL before you turn 21; however, the license will carry specific restrictions."
+      ],
+      "78": [
+        "A driver’s license issued by the state of Minnesota typically expires on your birthday and must be renewed every four years after you reach 21 years old."
+      ],
+      "79": [
+        "To renew your license, you must pass a vision test."
+      ],
+      "80": [
+        "If you change your name or address before your license expires, you must apply for a duplicate license within 30 days."
+      ],
+      "81": [
+        "You must renew your license within one year of your separation or discharge from active military service by presenting your Minnesota driver’s license and your DD-214 military discharge papers."
+      ],
+      "82": [
+        "If you are a U.S. citizen or resident between the ages of 18 and 26, you will be registered with the U.S. Selective Service, more commonly known as the draft, when you apply for any Minnesota license or ID card."
+      ],
+      "83": [
+        "DVS will not issue an identification card to someone who already has a valid driver’s license or instruction permit without a downgrade statement stating the person is giving up their driving privileges."
+      ],
+      "84": [
+        "You can fast track your driver’s license or state ID card for an additional fee of $20."
+      ],
+      "85": [
+        "You may not fast track your services when applying for the first time, for enhanced driver’s licenses and ID cards, or when upgrading a license."
+      ],
+      "86": [
+        "All cars and trucks must have at least two separate brake systems, like the foot brake and the parking/ emergency brake."
+      ],
+      "87": [
+        "Pickup trucks and vans must have front bumpers and either rear bumpers or reflectors."
+      ],
+      "88": [
+        "Use your horn to avoid a crash. Do not honk unnecessarily or to announce your arrival."
+      ],
+      "89": [
+        "High beam headlights must make objects visible on the road at least 350 feet ahead."
+      ],
+      "90": [
+        "Turn on your headlights at sunset and keep them on until sunrise."
+      ],
+      "91": [
+        "dirty headlights can reduce light output by up to 75 percent."
+      ],
+      "92": [
+        "Snowplows, road maintenance equipment and authorized emergency vehicles can use blue lights."
+      ],
+      "93": [
+        "Find your vehicle’s recommended tire pressure on a sticker inside the driver’s door or in the owner’s manual."
+      ],
+      "94": [
+        "A tire is illegal if the tread is less than one-sixteenth inch deep."
+      ],
+      "95": [
+        "If it transmits less than 50 percent or reflects more than 20 percent of available light, you can only use it on the rear window of a pickup truck or the rear and side windows of a van"
+      ],
+      "96": [
+        "On all wide roads, you must drive on the right side of the road except:",
+        "When the road has three marked lanes."
+      ],
+      "97": [
+        "On two-lane highways with a speed limit of 55 mph or higher, you can increase your speed by 10 mph when lawfully passing another vehicle."
+      ],
+      "98": [
+        "If you approach an intersection at an unlawful speed, you lose the right-of-way privilege associated with driving at a lawful speed."
+      ],
+      "99": [
+        "10 mph — in alleys"
+      ],
+      "100": [
+        "30 mph — on urban or town roads"
+      ],
+      "101": [
+        "If you drive over 100 mph, your driving privileges will be revoked for at least six months."
+      ],
+      "102": [
+        "A surcharge of at least $25 is added to the speeding fine if you break this law."
+      ],
+      "103": [
+        "A surcharge of at least $25 is added to the speeding fine if you break this law."
+      ],
+      "104": [
+        "Activate your signal at least 100 feet before turning."
+      ],
+      "105": [
+        "Do not use hand signals at night or when driving a vehicle that blocks other drivers from seeing your hand signals."
+      ],
+      "106": [
+        "While waiting to turn, keep your wheels straight and your foot on the brake. If your vehicle is struck from behind, you are less likely to be pushed into oncoming traffic."
+      ],
+      "107": [
+        "You can make a left turn from a one-way street onto another one-way street while the traffic light is red in certain situations."
+      ],
+      "108": [
+        "If an emergency vehicle approaches, exit the roundabout immediately and then pull over."
+      ],
+      "109": [
+        "They are also illegal near the tops of hills and on curves where other drivers cannot see you from 1,000 feet away."
+      ],
+      "110": [
+        "At a J-turn, drivers on the side street approaching the divided highway always make a right turn."
+      ],
+      "111": [
+        "On highways with more than one lane in the same direction, drive in the right-hand lane when available.",
+        "The exceptions to this rule are: ■ When overtaking and passing another vehicle in the same direction."
+      ],
+      "112": [
+        "The design of your vehicle and the position of the roof pillars determine the location of your blind spots.",
+        "Dirty windshields and glaring lights can also create temporary blind spots."
+      ],
+      "113": [
+        "In multi-lane roundabouts, if two large vehicles approach and drive through at the same time, the driver on the right must yield to the vehicle on the left"
+      ],
+      "114": [
+        "On gravel or dirt roads, you need to slow down because it takes longer to stop and is easier to skid when turning."
+      ],
+      "115": [
+        "You must not make U-turns on interstate freeways."
+      ],
+      "116": [
+        "Drive counterclockwise until you reach your exit."
+      ],
+      "117": [
+        "Don’t rely solely on mirrors; you may miss vehicles in your blind spots."
+      ],
+      "118": [
+        "Return to the right lane when you can see the entire vehicle you have just passed in your rearview mirror."
+      ],
+      "119": [
+        "You must return to the right side of the road before coming within 100 feet of an oncoming vehicle."
+      ],
+      "120": [
+        "Do not pass ■ On a curve or hill where you cannot clearly see the road ahead for at least 700 feet."
+      ],
+      "121": [
+        "When the vehicle you are overtaking is making or about to make, a left turn.",
+        "Do not pass by driving in a bicycle lane, on the shoulder, or off the pavement or main part of the road."
+      ],
+      "122": [
+        "Continue looking out the rear window while backing up. Do not rely solely on your mirrors or back-up camera."
+      ],
+      "123": [
+        "When you parallel park, your vehicle’s wheels closest to the side of the road should be no more than 12 inches from the curb."
+      ],
+      "124": [
+        "Within 10 feet of a fire hydrant"
+      ],
+      "125": [
+        "Within 50 feet of the nearest rail of a railroad crossing"
+      ],
+      "126": [
+        "When the front of a parked vehicle points uphill, and there is a curb, wheels should be turned away from the curb."
+      ],
+      "127": [
+        "You must have at least one white or amber front light and one red taillight illuminated on your vehicle. Both lights must be visible from at least 500 feet."
+      ],
+      "128": [
+        "Law enforcement can stop motorists solely for seat belt violations.",
+        "You as the driver and all of your passengers, including those in the back seat, must wear a properly adjusted and fastened seat belt."
+      ],
+      "129": [
+        "You are not legally required to wear a seat belt if you are: ■ Driving a passenger vehicle in reverse."
+      ],
+      "130": [
+        "Adjust the lap belt to fit snugly across your hipbones or upper thighs. It should never be positioned across your abdomen or the soft part of your stomach."
+      ],
+      "131": [
+        "Children under 2 years of age must ride in a rear-facing car seat until they reach the weight or height limit of the car seat."
+      ],
+      "132": [
+        "A child from 4 to 9 years old must use a booster seat and be secured with a safety belt if they are too tall or too heavy for the car seat."
+      ],
+      "133": [
+        "Child restraint systems expire six years from the date of manufacture. If no date is listed, follow the six-year recommendation."
+      ],
+      "134": [
+        "Keep your hands at the 8 and 4 o’clock or 9 and 3 o’clock positions on the steering wheel. Avoid the 10 and 2 o’clock position."
+      ],
+      "135": [
+        "If you do not have it with you, provide it within 72 hours."
+      ],
+      "136": [
+        "If convicted of operating an uninsured vehicle, you may be fined up to $1,000 and sentenced to up to 90 days in jail."
+      ],
+      "137": [
+        "Motorcycle drivers in this state must have liability insurance... No-fault and uninsured driver insurance coverage is optional."
+      ],
+      "138": [
+        "You have up to 60 days after becoming a resident to register your vehicle in Minnesota."
+      ],
+      "139": [
+        "Exceptions: ... Using the device in voice-activated or hands-free mode"
+      ],
+      "140": [
+        "If you are convicted of two or more violations... you will be required to pay a $275 fine in addition to the court-specified fine."
+      ],
+      "141": [
+        "Before entering a road from an alley, private driveway, parking lot or parking ramp. Always stop before crossing a sidewalk or crosswalk."
+      ],
+      "142": [
+        "They will activate the lights at least 300 feet before it stops in a speed zone of more than 35 mph."
+      ],
+      "143": [
+        "When you see a school bus that is stopped with its red lights flashing and its stop arm extended, you must stop your vehicle at least 20 feet from the bus."
+      ],
+      "144": [
+        "If you are driving on a divided roadway, you do not need to stop for a school bus with red lights flashing if it is on the opposite side of the divider."
+      ],
+      "145": [
+        "Property damage only: If the crash only results in property damage, you do not need to notify law enforcement.",
+        "If you damage property other than a vehicle, inform the property owner."
+      ],
+      "146": [
+        "If you are driving on a divided roadway, you do not need to stop for a school bus with red lights flashing if it is on the opposite side of the divider."
+      ],
+      "147": [
+        "When your vehicle is used to violate the school bus stop arm law, you are guilty of a petty misdemeanor if you own or lease the vehicle."
+      ],
+      "148": [
+        "Violating this law is a misdemeanor. A second violation within a year is a gross misdemeanor."
+      ],
+      "149": [
+        "Intersections without traffic lights or signals: When you reach an intersection at the same time as another driver, the driver on the left must yield to the one on the right."
+      ],
+      "150": [
+        "Uncontrolled “T” intersections: When you approach an uncontrolled “T” intersection, you must yield to all cross traffic if you are the one turning."
+      ],
+      "151": [
+        "When driving in the right lane, you must yield to transit and metro mobility buses merging from a bus stop or shoulder."
+      ],
+      "152": [
+        "On a one-way road, pull to the nearest side and stop."
+      ],
+      "153": [
+        "If you are in an intersection, proceed through it before stopping."
+      ],
+      "154": [
+        "the “Move Over Law” requires you to move to the lane farthest away from the vehicle if it is safe to do so."
+      ],
+      "155": [
+        "Only vehicles on official emergency business are allowed to follow within 500 feet of a firefighting vehicle on an emergency run."
+      ],
+      "156": [
+        "Reckless driving means driving a vehicle while knowingly disregarding a substantial and unjustifiable risk that may harm others or their property"
+      ],
+      "157": [
+        "If stopped after dark, turn on your vehicle’s interior light."
+      ],
+      "158": [
+        "If the documents are out of reach, tell the officer where they are located before reaching for them."
+      ],
+      "159": [
+        "When the officer first approaches, inform them that you have a firearm and where it is located, while keeping your hands on the steering wheel."
+      ],
+      "160": [
+        "When a funeral procession identifies itself with headlights or hazard warning lights, you must yield to the entire procession."
+      ],
+      "161": [
+        "If you need to reach for an item, tell the officer what you need to locate and wait for verbal permission before doing so."
+      ],
+      "162": [
+        "You are not admitting guilt or responsibility by accepting a citation; you are acknowledging receipt of the citation and promising to appear in court if required."
+      ],
+      "163": [
+        "Fleeing a police officer in a motor vehicle is illegal and dangerous. Violating this law is a felony."
+      ],
+      "164": [
+        "If a death occurs: You may be sentenced to up to 10 years in prison, fined up to $20,000 or both."
+      ],
+      "165": [
+        "Watch for blind pedestrians who may have a white or metallic cane or a guide dog. Do not use your horn or rev your engine as it may distract them."
+      ],
+      "166": [
+        "It is illegal to pass a vehicle that has stopped for a pedestrian. If another vehicle has stopped, look for pedestrians in the crosswalk and be prepared to stop."
+      ],
+      "167": [
+        "If walking on the road is necessary, stay on the left side or face oncoming traffic."
+      ],
+      "168": [
+        "You must keep at least 3 feet between the side of your car and the bicyclist."
+      ],
+      "169": [
+        "You are allowed to cross the center of the roadway to pass a bicyclist, even in a no passing zone, when it is safe to do so."
+      ],
+      "170": [
+        "At stop signs, slow to a speed that allows stopping before entering the intersection or crosswalk. If no vehicle is nearby, you may turn or proceed without stopping."
+      ],
+      "171": [
+        "Signal a right turn by holding your left arm out and bending it upward.",
+        "You can also hold your right arm straight out to indicate a right turn."
+      ],
+      "172": [
+        "Yield the right of way to pedestrians and give an audible signal before passing them."
+      ],
+      "173": [
+        "The bicycle has come to a complete stop.",
+        "The traffic signal shows a red light for an unreasonable time.",
+        "No vehicle or person is approaching the roadway to be crossed or entered."
+      ],
+      "174": [
+        "A “motorized bicycle” is a moped and is defined by its speed capacity, which is 30 mph or less."
+      ],
+      "175": [
+        "Motorized bicycles are not allowed on sidewalks, freeways, or lanes and trails designated for pedestrians and bicycles."
+      ],
+      "176": [
+        "Your following distance from a motorcycle should be the same as, or greater than, your following distance from other vehicles."
+      ],
+      "177": [
+        "Crashes at urban intersections are the most common motorcycle-car collisions."
+      ],
+      "178": [
+        "Anyone with a Class D driver’s license may drive an NEV, but only on streets with speed limits of 35 mph or less."
+      ],
+      "179": [
+        "It takes three to five seconds longer to pass a commercial vehicle than a car."
+      ],
+      "180": [
+        "Turbulence will push the vehicles away from each other, not toward each other."
+      ],
+      "181": [
+        "An average passenger car traveling at 55 mph can stop within 130 to 140 feet. A fully loaded tractor-trailer may need more than 400 feet to stop completely."
+      ],
+      "182": [
+        "If you stop behind a commercial vehicle on an upgrade, allow space for the truck to roll back slightly. Position your vehicle on the left side of your lane so the driver can see you in the side mirror."
+      ],
+      "183": [
+        "The rear wheels of a turning vehicle follow a shorter path than the front wheels, the longer the vehicle, the greater the difference.",
+        "To avoid a collision, do not pass a commercial vehicle on the right side if there is a possibility that it might make a right turn."
+      ],
+      "184": [
+        "Some truck drivers may not be able to see up to 20 feet in front of the cab, on either side of the trailer, and up to 200 feet to the rear."
+      ],
+      "185": [
+        "When you see these lights or gates activated, do not proceed across the tracks. Stop your vehicle at least 10 feet from the nearest rail or gate."
+      ],
+      "186": [
+        "It is illegal to pass any vehicle within 100 feet of a railroad crossing."
+      ],
+      "187": [
+        "Move back into your lane only when you can see the front of the commercial vehicle in your rearview mirror."
+      ],
+      "188": [
+        "If a motorcyclist attempts to pass you, maintain your lane position and speed, and allow the rider to complete the pass."
+      ],
+      "189": [
+        "It is safe to cross when traffic ahead has moved and you can proceed without stopping within 10 feet past the rails."
+      ],
+      "190": [
+        "Many car-commercial vehicle collisions occur at intersections because the driver of the car misjudges the speed and distance of the commercial vehicle."
+      ],
+      "191": [
+        "Do not shift gears while your vehicle is within a crossing. If your vehicle has a manual transmission, shift down before entering the crossing."
+      ],
+      "192": [
+        "Every highway-rail crossing has an Emergency Notification System (ENS) sign that provides a 24/7 telephone number to call to report problems or emergencies at the railroad location."
+      ],
+      "193": [
+        "Failure to obey a flag person in a work zone will result in a violation and financial penalty.",
+        "Disobeying the speed limit in a work zone will result in a violation and financial penalty."
+      ],
+      "194": [
+        "When you see the “lane closed ahead” sign and traffic is backing up, stay in your current lane until the point of merge.",
+        "Take turns with other drivers to safely and smoothly merge into the remaining lane."
+      ],
+      "195": [
+        "Reduces the overall length of traffic backups by up to 40 percent."
+      ],
+      "196": [
+        "Brown: Indicates historic, cultural or recreational sites"
+      ],
+      "197": [
+        "Orange: Warns and controls in construction zones"
+      ],
+      "198": [
+        "A red circle with a red slash mark across a symbol indicates that you should not take a certain course of action."
+      ],
+      "199": [
+        "Do not drive slower than the minimum posted limit unless bad weather or poor road conditions make it necessary."
+      ],
+      "200": [
+        "You must share the center lane and use it only for making left turns when traveling in either direction."
+      ],
+      "201": [
+        "The diamond symbol indicates that the traffic lane is reserved for specific use or certain types of vehicles."
+      ],
+      "202": [
+        "An “exempt” sign means that bus and truck drivers, who are usually required to stop at railroad crossings, may proceed without stopping. However, drivers still need to look in both directions for trains."
+      ],
+      "203": [
+        "you may park at an angle and occupy two standard parking spaces if you have a valid disability parking permit or license plates."
+      ],
+      "204": [
+        "These yellow or fluorescent yellow-green, pentagon-shaped warning signs indicate that a school or an approved school crosswalk is ahead."
+      ],
+      "205": [
+        "This sign is on the left side of a two-way highway. It warns of the beginning of a no passing zone."
+      ],
+      "206": [
+        "This emblem must be displayed on all vehicles that travel at speeds of 30 mph or less"
+      ],
+      "207": [
+        "Animal-drawn vehicles are required to have a light or lamp visible within 500 feet from sunset to sunrise"
+      ],
+      "208": [
+        "In this example, vehicles in the right lane must merge into left-lane traffic. Right-lane vehicles must yield."
+      ],
+      "209": [
+        "The roadway will gain an additional lane of traffic. New traffic will not have to merge."
+      ],
+      "210": [
+        "Motorists who violate the posted speed limit in work zones when workers are present will be assessed a $300 fine."
+      ],
+      "211": [
+        "Brown signs point out historic sites, parks and other points of interest."
+      ],
+      "212": [
+        "Blue signs direct you to services such as telephones, gas, food, motels, hospitals and rest areas."
+      ],
+      "213": [
+        "If a traffic signal is not functioning, treat the intersection like an uncontrolled intersection."
+      ],
+      "214": [
+        "Directed by a traffic-control agent or a peace officer."
+      ],
+      "215": [
+        "If certain conditions are met, you may make a left turn from a one-way road onto a one way cross street while the traffic light is red."
+      ],
+      "216": [
+        "Treat a flashing red light as a stop sign. Come to a complete stop, yield to vehicles and pedestrians who reach the intersection before you, and proceed when the intersection is clear."
+      ],
+      "217": [
+        "If you are waiting in the intersection to make a turn and the signal turns from yellow to red, complete the turn as soon as it is safe. Do not back up."
+      ],
+      "218": [
+        "A flashing yellow light or arrow means “caution.” Proceed through the intersection with caution."
+      ],
+      "219": [
+        "Pedestrians already in the intersection may continue walking to the other side at a normal pace."
+      ],
+      "220": [
+        "A steady yellow X means you should prepare to move safely into another lane."
+      ],
+      "221": [
+        "A flashing yellow X means you can use the lane below the flashing yellow X to make a left turn.",
+        "You must use caution because left-turning vehicles from the other direction may be using the same lane."
+      ],
+      "222": [
+        "Only one car may proceed each time the light is green.",
+        "When the ramps are metered, you must take turns entering the highway at the light each time the light turns green."
+      ],
+      "223": [
+        "Shorter and thicker white dashes: The lane is ending."
+      ],
+      "224": [
+        "Double solid white lines: You must not change lanes.",
+        "Solid white line: You should not change lanes."
+      ],
+      "225": [
+        "Yellow lines separate traffic moving in opposite directions."
+      ],
+      "226": [
+        "A center lane between lanes of traffic traveling in opposite directions may be designated for left turns only.",
+        "This type of lane is marked by parallel solid and dashed yellow lines."
+      ],
+      "227": [
+        "Carpool lanes are restricted to vehicles with two or more occupants.",
+        "They are marked by a diamond symbol or with “Carpool Only” signs."
+      ],
+      "228": [
+        "When an officer is present, obey any hand signals you are given rather than traffic signals, signs or pavement markings."
+      ],
+      "229": [
+        "Most traffic officers signal drivers to stop by holding up one hand with the palm facing the vehicle and giving a long blast on the whistle."
+      ],
+      "230": [
+        "SIPDE is a five-step process used to make appropriate judgments and apply them correctly in different traffic situations.",
+        "Scan Identify Predict Decide Execute"
+      ],
+      "231": [
+        "Predict: Consider the speed, distance and direction of hazards to anticipate how they may affect you."
+      ],
+      "232": [
+        "Applying the ‘Three-Second Rule’ helps you keep a safe distance between your car and the vehicle ahead of you. This rule is for standard-length vehicles driving in ideal conditions."
+      ],
+      "233": [
+        "If the vehicle behind you is following too closely, slow down slightly and allow it to pass."
+      ],
+      "234": [
+        "When road conditions are poor, or if you are driving a vehicle longer than the standard length, increase your following distance to a four- or five-second count."
+      ],
+      "235": [
+        "The length of time from perceiving the danger to using the brakes, which is about 3/4 of a second."
+      ],
+      "236": [
+        "When you are within 1,000 feet of an oncoming vehicle or following another vehicle at a distance of 200 feet or less, your headlights must remain on low beam."
+      ],
+      "237": [
+        "Use them during weather conditions that include rain, snow, hail, sleet or fog, and any time you cannot clearly see the road ahead for at least 500 feet."
+      ],
+      "238": [
+        "If you are blinded by the glare, use the white line along the edge of the road as a reference."
+      ],
+      "239": [
+        "Buses can use the shoulder only when main-line traffic speeds are less than 35 miles per hour."
+      ],
+      "240": [
+        "A diverging diamond interchange is designed so that traffic lanes cross over at each end of the bridge, eliminating left-hand turns across opposing traffic."
+      ],
+      "241": [
+        "It is illegal to stop or park a vehicle on an interstate freeway, except in an emergency.",
+        "Running out of fuel is not considered an emergency, and you could receive a citation."
+      ],
+      "242": [
+        "If you have flares or reflectors, place them from 100 to 500 feet behind your vehicle on the right edge of the main road."
+      ],
+      "243": [
+        "Stay at least 500 feet back from any firefighting vehicle."
+      ],
+      "244": [
+        "If you miss your exit, proceed to the next one. Do not back up or make a U-turn to return to the desired exit."
+      ],
+      "245": [
+        "Driver distraction or inattention is a leading factor in crashes in Minnesota, accounting for at least 25 percent of all crashes annually."
+      ],
+      "246": [
+        "Drivers under age 18 with an instruction permit or provisional license are prohibited from using a cell phone, whether handheld or hands-free, except to call 911 in an emergency."
+      ],
+      "247": [
+        "It is also illegal to wear headphones or earphones in both ears simultaneously to listen to a radio or other sound-producing device."
+      ],
+      "248": [
+        "It is illegal to drive a vehicle packed with a load or occupied by more than three people in the front seat."
+      ],
+      "249": [
+        "If a load extends four feet or more from the rear of any vehicle, a red, yellow or orange flag at least 16 inches square must be attached to the end of the load."
+      ],
+      "250": [
+        "Passenger vehicles may not carry loads that extend beyond the line of the fenders on the left side and more than six inches beyond the fender line on the right side."
+      ],
+      "251": [
+        "If you pull a camper or trailer with your vehicle, you must maintain at least 500 feet of following distance from other vehicles."
+      ],
+      "252": [
+        "All trailers with a gross vehicle weight of 3,000 pounds or more must be equipped with brakes."
+      ],
+      "253": [
+        "You must be at least 18 years old to drive a recreational vehicle combination."
+      ],
+      "254": [
+        "A recreational vehicle combination may not be more than 70 feet in length."
+      ],
+      "255": [
+        "Avoid using cruise control on slippery roads."
+      ],
+      "256": [
+        "watch for the flashing white, yellow and blue lights of snowplows."
+      ],
+      "257": [
+        "If you become stranded while traveling in cold weather, stay with your vehicle."
+      ],
+      "258": [
+        "If you are confronted by an aggressive driver, do not challenge them. Stay out of their way, avoid eye contact"
+      ],
+      "259": [
+        "When loaded, 10 to 15 percent of the trailer’s weight should be balanced on the hitch between the trailer and vehicle."
+      ],
+      "260": [
+        "stay with your vehicle.",
+        "Attach a red flag to your radio antenna or door handle."
+      ],
+      "261": [
+        "Stop as often as you need to — at least once every 100 miles or every two hours."
+      ],
+      "262": [
+        "take your foot off the accelerator and brake until you can turn in the desired direction."
+      ],
+      "263": [
+        "press down on the brake pedal and continue to steer the vehicle until you regain control."
+      ],
+      "264": [
+        "Your headlights must be used when you cannot see more than 500 feet ahead and when it is raining, snowing, sleeting or hailing. Keep them on low beam to reduce glare."
+      ],
+      "265": [
+        "In heavy rain, standard cars may begin to hydroplane at 35 mph."
+      ],
+      "266": [
+        "Do not coast down steep hills with your transmission in neutral."
+      ],
+      "267": [
+        "hold the steering wheel tightly, steer straight ahead and slowly ease your foot off the accelerator."
+      ],
+      "268": [
+        "If your brake pedal suddenly sinks all the way to the floor, try pumping the pedal to build pressure."
+      ],
+      "269": [
+        "Stay on the shoulder and slowly release the gas pedal. After you have reduced your speed, turn back onto the pavement."
+      ],
+      "270": [
+        "Deer are most active from dusk to dawn, so be especially alert during those times."
+      ],
+      "271": [
+        "If a vehicle is traveling toward you in your lane, move to the right. Do not use the left lane to avoid the vehicle.",
+        "If the vehicle continues toward you, steer off the road to the right if necessary to avoid a crash."
+      ],
+      "272": [
+        "Walk quickly at a 45-degree angle away from the tracks in the direction from which the train is approaching."
+      ],
+      "273": [
+        "Even in extremely cold weather, leave at least one window partially open to let in fresh air.",
+        "Occupants of an idling vehicle can suffer carbon monoxide poisoning if ventilation is not adequate."
+      ],
+      "274": [
+        "If the passing vehicle must drop back, speed up to make sure there is adequate room for the vehicle to move into the lane behind you."
+      ],
+      "275": [
+        "Remember, 6 inches of water will reach the bottom of most passenger cars, causing loss of control or possible stalling."
+      ],
+      "276": [
+        "2 feet of moving water can carry away most vehicles, including SUVs and pickup trucks."
+      ],
+      "277": [
+        "Most vehicles will float on the surface of the water for 30 to 60 seconds. If your vehicle enters deep water, get out of the vehicle immediately."
+      ],
+      "278": [
+        "Vehicle doors cannot be opened until the water pressure inside the car is equal to that outside."
+      ],
+      "279": [
+        "Do not use water to put out the fire — this will actually spread the blaze."
+      ],
+      "280": [
+        "If the temperature is still too high, turning on the heater will help draw hot air away from the engine."
+      ],
+      "281": [
+        "If your headlights suddenly go out, try using your parking lights, hazard warning lights or turn signals — one of them may work and give you enough light to guide you off the road."
+      ],
+      "282": [
+        "If this does not work, apply the brakes and shift into neutral to disengage the engine. Next, choose a safe path and steer to the shoulder of the road."
+      ],
+      "283": [
+        "If you must get out, jump from the vehicle with both feet together and shuffle your feet on the ground as you move away from the scene."
+      ],
+      "284": [
+        "Early symptoms of carbon monoxide poisoning include sudden fatigue, headache, dizziness and nausea."
+      ],
+      "285": [
+        "When temperatures are cold, carbon monoxide can get trapped inside the garage even when the garage door is open completely."
+      ],
+      "286": [
+        "Fail to stop for a school bus with its stop arm extended and its red lights flashing, within five years of a conviction for the same offense."
+      ],
+      "287": [
+        "Falsely identify yourself to a police officer."
+      ],
+      "288": [
+        "Are convicted of driving in excess of 100 mph."
+      ],
+      "289": [
+        "Are convicted of failing to stop, identify yourself and render aid when involved in a motor vehicle crash, especially one that involves death or personal injury to others."
+      ],
+      "290": [
+        "If you drive over 100 mph, your driving privileges will be revoked for at least six months."
+      ],
+      "291": [
+        "Traveling to and from your place of employment.",
+        "Traveling to and from chemical dependency treatment or counseling.",
+        "Traveling to and from a post-secondary institution where you are enrolled."
+      ],
+      "292": [
+        "Your license will be canceled for 60 days or until the correct information is provided, whichever is longer."
+      ],
+      "293": [
+        "Alcohol is involved in more than one-third of the deaths on Minnesota roads each year."
+      ],
+      "294": [
+        "don’t use any drug to hide fatigue — the only cure for fatigue is rest."
+      ],
+      "295": [
+        "Alcohol reduces the range of eye movement, decreasing peripheral vision."
+      ],
+      "296": [
+        "A 12-ounce beer, a 5-ounce glass of wine, a typical mixed drink and a 9-ounce wine cooler usually contain about the same amount of alcohol."
+      ],
+      "297": [
+        "The term “proof” refers to the strength of a drink and is equal to twice the percentage of alcohol it contains.",
+        "For example, a bottle of 80-proof whiskey contains 40 percent alcohol."
+      ],
+      "298": [
+        "The body eliminates 95 percent of alcohol through oxidation by the liver."
+      ],
+      "299": [
+        "The only way to reduce your alcohol concentration is to wait.",
+        "Drinking coffee, exercising and taking cold showers do not increase the rate of oxidation."
+      ],
+      "300": [
+        "A person with an alcohol concentration of 0.08 percent or higher (0.04 percent if driving a commercial vehicle) who is in control of a moving or parked vehicle can be arrested for driving while impaired (DWI)."
+      ],
+      "301": [
+        "A person with an alcohol concentration of 0.08 percent or higher (0.04 percent if driving a commercial vehicle) who is in control of a moving or parked vehicle can be arrested for driving while impaired (DWI).",
+        "If a law enforcement officer can prove that alcohol caused the driver to commit driving errors, the driver can be arrested for DWI with an alcohol concentration as low as 0.04 percent."
+      ],
+      "302": [
+        "Possession and use of a drug prescribed by a doctor is permitted if the doctor informs the driver that it will not affect their ability to drive safely."
+      ],
+      "303": [
+        "Are convicted of a gross misdemeanor for failing to stop for a school bus with its stop arm extended and its red lights flashing."
+      ],
+      "304": [
+        "Impaired drivers tend to over-steer, which can result in weaving and running off the road."
+      ],
+      "305": [
+        "A person with an alcohol concentration of 0.08 percent or higher (0.04 percent if driving a commercial vehicle) who is in control of a moving or parked vehicle can be arrested for driving while impaired (DWI)."
+      ],
+      "306": [
+        "Refusing to take this test is a crime and will result in a revocation of driving privileges for one to six years, depending on the number of offenses on record."
+      ],
+      "307": [
+        "Are involved in an alcohol-related crash that caused personal injury, property damage or death."
+      ],
+      "308": [
+        "Have a child younger than 16 years of age in the vehicle at the time of the stop."
+      ],
+      "309": [
+        "Minimum of 90-day revocation (30 days if you plead guilty to DWI)."
+      ],
+      "310": [
+        "If the device detects an alcohol concentration at or above 0.02 percent, it prevents the vehicle from starting."
+      ],
+      "311": [
+        "You may be charged with a felony DWI if you are arrested for a fourth DWI in a 10-year period"
+      ],
+      "312": [
+        "If convicted of this offense, you will have your driving privileges suspended for 30 days."
+      ],
+      "313": [
+        "If your alcohol concentration is less than 0.04 but detectable, you will be put out of service for 24 hours."
+      ],
+      "314": [
+        "You may keep these products in the trunk of a vehicle",
+        "You must not keep these products in the utility compartment or glove compartment of a vehicle."
+      ],
+      "315": [
+        "Loss of license for a minimum of three years if the third offense occurred within 10 years of the first two offenses."
+      ],
+      "316": [
+        "A work permit is not an option if you had an alcohol concentration of 0.16 percent or greater."
+      ],
+      "317": [
+        "If the offense occurs while you are operating a commercial motor vehicle that is placarded for hazardous materials, you will lose your commercial driver’s license for at least three years."
+      ],
+      "318": [
+        "You must not drink or have an open container of any alcoholic beverage inside a motor vehicle when it is on a public street or highway."
+      ],
+      "319": [
+        "You must not drink or have an open container of any alcoholic beverage inside a motor vehicle when it is on a public street or highway."
+      ],
+      "320": [
+        "It is also unlawful to allow a passenger to drink, or to have an open container of, any alcoholic beverage inside a motor vehicle."
+      ],
+      "321": [
+        "You must not use, possess or sell controlled substances in a motor vehicle."
+      ],
+      "322": [
+        "Renew your vehicle registration.",
+        "Online services and information are available at drive.mn.gov."
+      ],
+      "323": [
+        "Find approved driver education schools and improvement clinics.",
+        "Online services and information are available at drive.mn.gov."
+      ],
+      "324": [
+        "MnDOT road conditions ........................................................................................ 511"
+      ],
+      "325": [
+        "your data will be automatically sent to the Office of the Secretary of State to register you to vote."
+      ],
+      "326": [
+        "If you do not wish to be registered to vote after providing DVS with citizenship documents, you must opt out with the Office of the Secretary of State."
+      ],
+      "327": [
+        "Donating organs is a beautiful and selfless act that can save and heal up to 75 lives."
+      ],
+      "328": [
+        "When you apply for a Minnesota license or identification card, you can indicate your wish to become a donor after death."
+      ],
+      "329": [
+        "Drivers under the age of 18 can also designate themselves as donors with their parent’s consent."
+      ],
+      "330": [
+        "Organs are allocated to recipients based on medical urgency, length of time waiting, genetic matching and geography."
+      ],
+      "331": [
+        "There is no charge for donation to the donor or their family."
+      ],
+      "332": [
+        "The donation process does not prevent an open casket funeral."
+      ],
+      "333": [
+        "DVS will not send your data to the Office of the Secretary of State if you provided these documents before Oct. 1, 2023."
+      ],
+      "334": [
+        "Vision screening.......................................................................................... 12, 15"
+      ],
+      "335": [
+        "J-turns.................................................................................................................................................... 32"
+      ],
+      "336": [
+        "Ignition Interlock ............................................................................................................. 92, 93"
+      ],
+      "337": [
+        "Peace Corps and federal foreign service employees ........................................................................ 20"
+      ],
+      "338": [
+        "What to do and expect when stopped by law enforcement ................................................................. 45"
+      ],
+      "339": [
+        "Provisional license ................................................................................................7, 14, 15, 16, 17, 77"
+      ],
+      "340": [
+        "Motorized bicycles .......................................................................................................... 18, 49"
+      ],
+      "341": [
+        "Safety seat ........................................................................................................................................... 38"
+      ],
+      "342": [
+        "Roundabouts ........................................................................................................................................ 30"
+      ],
+      "343": [
+        "Fleeing a police officer .......................................................................................................................... 46"
+      ],
+      "344": [
+        "Highway work zones.............................................................................................................................. 53"
+      ],
+      "345": [
+        "Revocation ....................................................................................................................................... 87"
+      ],
+      "346": [
+        "Road test....................................................................................................................................... 6, 95",
+        "Written test........................................................ 2, 6, 8, 11, 15, 16, 17, 40, 87, 95"
+      ],
+      "347": [
+        "Graduated Driver’s Licensing ........................................................................................................... 15"
+      ],
+      "382": [
+        "Never crowd a snowplow. Pass snowplows only when you can see the entire vehicle.",
+        "Stay well behind plows to avoid flying sanding materials, snow and ice that could hit your vehicle."
+      ],
+      "383": [
+        "Obey snow emergency parking rules to avoid towing and fines.",
+        "When a significant amount of snow accumulates, city officials may declare a snow emergency."
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 30,
-    "topics_covered": 30,
+    "topics_total": 26,
+    "topics_covered": 26,
     "coverage_pct": 100.0,
     "uncovered_topics": [],
     "verdict": "PASS",
@@ -63,6 +1150,20 @@
     "sign_ratio_pct": 8.9,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 349,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 99.7,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

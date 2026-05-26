@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "ok",
   "name": "Oklahoma",
-  "verified_at": "2026-05-26T02:34:00Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:13:20Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://oklahoma.gov/content/dam/service-oklahoma/Documents/OklahomaDriverManual.pdf",
     "manual_pdf_sha256": "4850f92208fe34cd6540dc54ae572f32f43907b311aa2ffbc58c835bc917d808",
@@ -23,25 +23,879 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 273,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "Your license to operate a motor vehicle on Oklahoma’s streets and highways is a privilege the state grants under certain conditions."
+      ],
+      "2": [
+        "The tests will be given and evaluated by a professional driver examiner from Service Oklahoma, according to state and national standards."
+      ],
+      "3": [
+        "Drivers with an out-of-state license must apply for an Oklahoma Driver License when they establish residency."
+      ],
+      "4": [
+        "Upon establishing residency, your vehicles must be registered in Oklahoma."
+      ],
+      "5": [
+        "4. Anyone operating a farm tractor or implement solely for farm/ranch activities"
+      ],
+      "6": [
+        "1. Nonresidents at least 16 years old who are properly licensed to drive in their home state or country."
+      ],
+      "7": [
+        "3. Nonresident students enrolled at an Oklahoma college or university and their spouses and children with valid licenses from their home states."
+      ],
+      "8": [
+        "Notarized documents or photocopies are not acceptable."
+      ],
+      "9": [
+        "A valid Oklahoma Driver License, originally issued after November 1, 2007."
+      ],
+      "10": [
+        "A name change resulting from marriage... shall appear on the driver license... exactly as stated on the marriage certificate"
+      ],
+      "11": [
+        "Applicants for renewals with an expired Oklahoma license or Oklahoma ID card expired more than 1 year must provide a document from primary identification list."
+      ],
+      "12": [
+        "For a common law marriage, “Affidavit of Common Law Marriage” containing the notarized signatures of the husband and wife, with another primary source."
+      ],
+      "13": [
+        "It is not an official legal reference to Oklahoma traffic laws. Still, it explains in everyday language the knowledge and skills you will need to drive safely"
+      ],
+      "14": [
+        "Applicants requesting replacement of a lost, stolen or mutilated Oklahoma Driver License or ID card must furnish, at a minimum, a primary form of identification."
+      ],
+      "15": [
+        "If USCIS document is the primary ID (including 1-551), applicant must provide proof of name change from USCIS before any change will be made."
+      ],
+      "16": [
+        "Legal name changes should be reported to the Social Security Administration before changes are made on your license or identification card."
+      ],
+      "17": [
+        "Beginning May 7, 2025, a REAL ID License or Identification Card or valid federal identification document (i.e., U.S. Passport) will be required to: Board a domestic flight"
+      ],
+      "18": [
+        "Bring valid proof of auto liability insurance if you’re taking the driving test."
+      ],
+      "19": [
+        "Class D Learner Permit | 15 | You must be taking or have passed an approved driver education course"
+      ],
+      "20": [
+        "Must present Work Zone Safe completion certificate."
+      ],
+      "21": [
+        "You may ride only between the hours of 4:30 a.m. and 9:00 p.m."
+      ],
+      "22": [
+        "You cannot carry a passenger. These restrictions are lifted at age 16 once the “motorcycle only” restriction is removed."
+      ],
+      "23": [
+        "a vehicle designed to transport 16 or more passengers, including the driver."
+      ],
+      "24": [
+        "A helmet is required for anyone under 18 years of age."
+      ],
+      "25": [
+        "A Learner Permit is valid only while a licensed driver, 21 or older, sits beside the driver."
+      ],
+      "26": [
+        "you may not drive on a highway with a posted minimum speed limit, such as an interstate or turnpike."
+      ],
+      "27": [
+        "A receipt for an application for presence in the U.S. is NOT proof of legal presence."
+      ],
+      "28": [
+        "who has a valid Oklahoma Driver License with a motorcycle endorsement added and who has visual contact with the operator."
+      ],
+      "29": [
+        "Titles or ecclesiastical names will not be placed on a driver license or an identification card."
+      ],
+      "30": [
+        "You will be eligible for Skills Tests 14 days after obtaining the permit."
+      ],
+      "31": [
+        "You must have a custodial parent or legal guardian sign the consent form if you are under 18."
+      ],
+      "32": [
+        "Students are required to complete 30 hours of classroom training and 55 hours of actual behind-the-wheel training"
+      ],
+      "33": [
+        "restricts their driving time to the hours of 5 a.m. to 10 p.m. with the exceptions for driving to work, school, church"
+      ],
+      "34": [
+        "limiting teens with a restricted license to one passenger unless all passengers live in the same household"
+      ],
+      "35": [
+        "You will remain at your current GDL level (learner or intermediate) until 6 months from the date of conviction has elapsed."
+      ],
+      "36": [
+        "If you fail the written test, by law you must wait at least one day before retesting."
+      ],
+      "37": [
+        "The car you are using must have a valid tag and you must show the security verification form."
+      ],
+      "38": [
+        "No pets or additional people can be in the car with you and the examiner."
+      ],
+      "39": [
+        "Skills tests will not be conducted when roads are considered by the examiner to be slick or hazardous."
+      ],
+      "40": [
+        "Must be 16 years old and have had your permit for at least 6 months to take the driving test."
+      ],
+      "41": [
+        "Must have had your permit for at least 30 days to take the driving test."
+      ],
+      "42": [
+        "Out-of-State Transfer of a valid Class D license | VISION: R | WRITTEN: D | DRIVING: D"
+      ],
+      "43": [
+        "must also be willing to assume financial and legal responsibility if you violate the law, damage property or cause personal injury while riding your cycle."
+      ],
+      "44": [
+        "This number will not appear on your license or ID card."
+      ],
+      "45": [
+        "Tires - Must have a minimum tread depth 2/32”, no ply or cord exposed in the tread."
+      ],
+      "46": [
+        "You do not own your license. It is the property of the State of Oklahoma"
+      ],
+      "47": [
+        "When you move, you must notify Service Oklahoma within 10 days"
+      ],
+      "48": [
+        "Horn - Must be audible at 200 feet."
+      ],
+      "49": [
+        "Until you are 18, your license is probationary"
+      ],
+      "50": [
+        "Checking the YES box will cause a red heart ♥ to be printed on the face of the Driver License"
+      ],
+      "51": [
+        "You must show your license to anyone with whom you are involved in a collision."
+      ],
+      "52": [
+        "It expires on the last day of the month.",
+        "Your license can be issued for either 4 or 8 years from the month in which you paid your fee for your license."
+      ],
+      "53": [
+        "Military personnel stationed outside Oklahoma do not have to renew until 60 days after they return to Oklahoma"
+      ],
+      "54": [
+        "Damage such as star breaks or impact points that can be felt by touch will not pass."
+      ],
+      "55": [
+        "You can fail the driving test for too many errors, dangerous driving, law violations, traffic collisions or refusing to perform a maneuver."
+      ],
+      "56": [
+        "register with the Oklahoma Department of Corrections within 10 days and local law enforcement within 3 days."
+      ],
+      "57": [
+        "The logo is an American flag with the word “Veteran” underneath it."
+      ],
+      "58": [
+        "If your license is expired over 1 year, you must visit a Service Oklahoma location or a licensed operator location who is approved to accept a certified birth certificate or United States passport."
+      ],
+      "59": [
+        "Failure to notify Service Oklahoma when you change your name or address can result in the suspension of your license without your receiving notice of the suspension."
+      ],
+      "60": [
+        "On conviction, a fine of up to $500 or 6 months in jail or both."
+      ],
+      "61": [
+        "9 = Accompanied by licensed driver 21 years of age or older in the front seat. For people learning to drive."
+      ],
+      "62": [
+        "6 = Food, fruit or candy within reach of the driver. For people with insulin-dependent diabetes."
+      ],
+      "63": [
+        "Restriction “T” = Graduated driver license Driving allowed from 5 a.m. to 10 p.m. Unless for activities related to school, church or work"
+      ],
+      "64": [
+        "0 = Motorcycle only. Riders under 16 are restricted to a motor scooter or motorcycle... to ride only between 4:30 a.m. and 9:00 p.m."
+      ],
+      "65": [
+        "Service Oklahoma will suspend the driver license of the uninsured driver... involved in a collision where there is any injury or property damage of $500 or more."
+      ],
+      "66": [
+        "■$25,000 of property damage",
+        "All the minimum liability limits are per accident."
+      ],
+      "67": [
+        "A fine of up to $250.00, 30 days in jail or both • Suspension of license and registration."
+      ],
+      "68": [
+        "To fraudulently create, manufacture or counterfeit a security verification form may result in a felony conviction"
+      ],
+      "69": [
+        "Every driver and front-seat passenger must wear a properly adjusted and fastened safety seat belt system."
+      ],
+      "70": [
+        "Every driver, when transporting a child under 8 years of age... must provide for the protection of said child by properly using a child passenger restraint system."
+      ],
+      "71": [
+        "Both you and the person who lets you drive the car can be arrested.",
+        "It is illegal to let another person drive your vehicle or a vehicle that you are responsible for unless that person has a valid driver license."
+      ],
+      "72": [
+        "When a restriction is no longer needed, such as a learner or physical restriction or if it is in error, contact a driver license examiner at a Service Oklahoma location."
+      ],
+      "73": [
+        "The child passenger restraint system must be rear-facing until the child reaches 2 years of age or until the child reaches the weight or height limit of the system"
+      ],
+      "74": [
+        "the Highway Safety Administration recommends putting children under 12 in the back seat."
+      ],
+      "75": [
+        "the back seat is at least 26 percent safer than the front seat because most serious crashes involve the front of the vehicle."
+      ],
+      "76": [
+        "YELLOW General Warning"
+      ],
+      "77": [
+        "a rectangle is always a regulatory sign, telling you about laws and regulations or giving you instructions."
+      ],
+      "78": [
+        "guilty of a felony punishable by imprisonment for not more than 2 years and a fine of $1,000.00 or both such fine and imprisonment."
+      ],
+      "79": [
+        "You must stop before the pedestrian crosswalk, even if it isn’t marked."
+      ],
+      "80": [
+        "Speed limit sign. This is the highest speed you can travel under ideal conditions."
+      ],
+      "81": [
+        "WARNING SIGNS are diamond-shaped, with a yellow background and black letters.",
+        "They signal conditions immediately ahead, such as road hazards, changes in direction or other situations."
+      ],
+      "82": [
+        "Steep hill ahead. All drivers approach with caution. You may want to use a lower gear to slow your vehicle."
+      ],
+      "83": [
+        "Stripes sloping downward to the right mean bear to the right.",
+        "The diagonal stripes on a warning sign or barricade show the direction in which the traffic is to pass."
+      ],
+      "84": [
+        "Slow down and be prepared to stop within 15-50 feet of the first track."
+      ],
+      "85": [
+        "SCHOOL BUSES, CHURCH BUSES, MOTOR COACHES and any vehicles hauling explosives or flammable liquids are required by law to stop."
+      ],
+      "86": [
+        "A child at least four 4 years of age but younger than 8 years of age, if not taller than 4 feet 9 inches in height, shall be properly secured by use of a child passenger restraint system or a seat belt."
+      ],
+      "87": [
+        "Enter this lane only to make a left turn. You must not pass in this lane."
+      ],
+      "88": [
+        "Quiet Zones are areas where trains do not blow their horn during normal operation.",
+        "Train engineers still reserve the right to blow the horn when appropriate.",
+        "Horn may still be sounded for emergency situations or for other safety reasons"
+      ],
+      "89": [
+        "Speeding fines are doubled in a construction or maintenance zone when workers or equipment are present."
+      ],
+      "90": [
+        "misdemeanor punishable by a fine between $100.00 to $1,000.00 and/or up to 30 days in jail plus liability for damage to property and injury or death of another person."
+      ],
+      "91": [
+        "traveling on public highways at speeds of 25 MPH or less."
+      ],
+      "92": [
+        "Numbering on north-south highways starts at the southern line and on east-west highways at the western line."
+      ],
+      "93": [
+        "It’s the only lawful place on the highway where you can throw trash. Litter barrels are located at all rest and picnic areas and all turnpike toll stations."
+      ],
+      "94": [
+        "Color-blind people know the color by the position of the lights: Red on top—Yellow in the middle—Green on the bottom."
+      ],
+      "95": [
+        "you may turn left from a one-way street into a one-way street unless there are signs forbidding the turn."
+      ],
+      "96": [
+        "Flashing Yellow Arrow: Left Turn – Reduce speed and cautiously proceed with left turn after yielding to oncoming traffic and pedestrians."
+      ],
+      "97": [
+        "A flashing red light means the same as a stop sign: You may go when it’s safe to cross the intersection."
+      ],
+      "98": [
+        "You must obey traffic signals, except when an officer is directing traffic. Then you must obey the traffic officer at all times."
+      ],
+      "99": [
+        "“Flashing”—Don’t leave the curb, but continue if already in the intersection."
+      ],
+      "100": [
+        "Yellow Clear the lane. If flashing, left turn permitted."
+      ],
+      "101": [
+        "YELLOW SOLID LINE IN YOUR LANE: DO NOT PASS",
+        "Two-lane, two-way traffic. No passing for traffic in the right lane (solid line in that lane)."
+      ],
+      "102": [
+        "When two vehicles approach at the same time, the driver on the left yields to the driver on the right, as shown."
+      ],
+      "103": [
+        "A vehicle must stop 15 feet from a blind person in the roadway or at an intersection."
+      ],
+      "104": [
+        "It is mandatory revocation of driver license for one year for failing to stop for a school bus with red loading/unloading lights flashing."
+      ],
+      "105": [
+        "Move over to a lane that isn't next to the stopped vehicle if it's safe to do so.",
+        "If you can’t safely change lanes, slow down and drive carefully."
+      ],
+      "106": [
+        "When the funeral lead vehicle enters an intersection, the remaining vehicles in the procession may follow through the intersection regardless of any traffic control devices."
+      ],
+      "107": [
+        "Slow down before you enter, then increase your speed until you’ve cleared the intersection. DO NOT slow down while you’re turning or crossing!"
+      ],
+      "108": [
+        "If an officer signals you to stop while you’re driving in the left lane, you must still pull over to the right shoulder, even if that means crossing several lanes of traffic."
+      ],
+      "109": [
+        "You DON’T have to stop for a school bus when— the bus is on a different roadway",
+        "Approaching traffic not required to stop for School Bus on a divided highway"
+      ],
+      "110": [
+        "A Secondary Crash is any crash that occurs because of another crash or incident.",
+        "Many times, secondary crashes happen because a driver becomes distracted by the sight of a crash and take their eyes off the road"
+      ],
+      "111": [
+        "If traffic is stopped and is blocking an intersection, stop before reaching the crosswalk and wait for the traffic to move."
+      ],
+      "112": [
+        "When entering or crossing a public road from a private road, alley, driveway or building— stop before the sidewalk or crosswalk, then go when it’s safe to do so."
+      ],
+      "113": [
+        "Yellow and white pavement markings show you: • Where visibility is limited and passing is dangerous."
+      ],
+      "114": [
+        "When other people don’t follow the rules of right-of-way, you should yield—even if the right-of-way belongs to you—when there is a possibility of damage or injury."
+      ],
+      "115": [
+        "A driver should approach a TIM scene with caution, awareness, and responsibility... Do not Rubberneck"
+      ],
+      "116": [
+        "Stop outside the crosswalk, not in the crosswalk."
+      ],
+      "117": [
+        "Yellow Dashes—Traffic moves in opposite directions on each side of the line. Passing is permitted when it’s safe."
+      ],
+      "118": [
+        "Solid White Line—Traffic moves in the same direction on each side of the line, but passing is hazardous"
+      ],
+      "119": [
+        "Drivers from either direction may use the center lane for left turns. Enter this center lane only to make a left turn. You must not pass in this lane."
+      ],
+      "120": [
+        "Driving too slowly is against the law because it’s dangerous."
+      ],
+      "121": [
+        "Stay 3 seconds behind the vehicle in front of you. Allow 4 seconds in bad weather."
+      ],
+      "122": [
+        "Watch 15-20 seconds ahead for cars braking, entering and exiting."
+      ],
+      "123": [
+        "Never turn around on the expressway.",
+        "Keep driving to the next exit, get off and re-enter the highway in the other direction."
+      ],
+      "124": [
+        "You must yield to vehicles already on the expressway.",
+        "Enter in the acceleration lane and stay to the right."
+      ],
+      "125": [
+        "Signal right at least 100 feet before the exit."
+      ],
+      "126": [
+        "Check ahead for at least 200 feet of clear roadway without a “No Passing Zone.”"
+      ],
+      "127": [
+        "don’t return to the right lane until you can see that car in the rearview mirror."
+      ],
+      "128": [
+        "The vehicle in front of you is making or about to make a left turn.",
+        "You can never legally pass on the right by driving off the pavement"
+      ],
+      "129": [
+        "DO NOT PASS within 100 feet of an obstructed view",
+        "Watch for bridges, viaducts, tunnels, overpasses, railroad crossings, intersections"
+      ],
+      "130": [
+        "Stay in your lane and move right if being passed on the left.",
+        "Don’t increase your speed."
+      ],
+      "131": [
+        "If a car approaches from the other direction while you’re being passed, slow down and let the passing driver pull in front of you."
+      ],
+      "132": [
+        "You should signal for at least 100 feet or 1/3 of a block before you turn, slow down or stop."
+      ],
+      "133": [
+        "SLOW OR STOP Arm and hand pointed down with palm to the rear"
+      ],
+      "134": [
+        "If you are hit from the rear while your wheels are turned, the impact can push you right into oncoming cars."
+      ],
+      "135": [
+        "Select the proper gear before entering the intersection and accelerate slightly through the turn.",
+        "Don’t shift gears in the intersection."
+      ],
+      "136": [
+        "Recommended speed when turning 10 mph or less."
+      ],
+      "137": [
+        "When you are meeting another driver at an intersection and both of you want to turn left, each will turn to the left of the other."
+      ],
+      "138": [
+        "Place your right arm on the back of the seat and look directly through the rear window."
+      ],
+      "139": [
+        "Never use your rearview mirror for backing up."
+      ],
+      "140": [
+        "Consider all the conditions that affect your driving, drive at a speed that is safe for those conditions and be able to stop without hitting anyone."
+      ],
+      "141": [
+        "Upon conviction of speeding, you may be fined up to $654.00 and sentenced to 30 days in jail."
+      ],
+      "142": [
+        "Fines double in school and con­struction zones when workers or equipment are present."
+      ],
+      "143": [
+        "Turnpikes 80 mph"
+      ],
+      "144": [
+        "School zones on any highway outside of a municipality in a properly marked zone 25 mph"
+      ],
+      "145": [
+        "Don’t overdrive your lights—adjust your speed so you can stop within the distance you can see."
+      ],
+      "146": [
+        "If you suspect another driver is targeting you, go to a safe place such as a police, fire or gas station, where there are people.",
+        "DO NOT drive home."
+      ],
+      "147": [
+        "Your stopping distance depends on: Your own reaction time. Weather and road conditions. The weight of your vehicle. The condition of your brakes."
+      ],
+      "148": [
+        "Reaction About .66 seconds Brain tells foot to brake"
+      ],
+      "149": [
+        "Flat tire or blowout—Take your foot off the gas pedal and apply your brakes cautiously. NEVER brake suddenly."
+      ],
+      "150": [
+        "If you run off the pavement—Hold the steering wheel firmly. Apply your brakes lightly and reduce your speed until you can safely return to the pavement."
+      ],
+      "151": [
+        "if the car starts to skid, take your foot off the brake and turn the steering wheel in the direction of the skid"
+      ],
+      "152": [
+        "The first few drops loosen built-up grease and dirt on the road surface, covering it with a slippery film"
+      ],
+      "153": [
+        "Hydroplaning means that your tires lose contact with the road surface and ride on the film of water."
+      ],
+      "154": [
+        "Allow one car length for every 10 miles per hour of speed OR Use the “three-second rule”"
+      ],
+      "155": [
+        "leave at least 200 feet between each vehicle so other cars or trucks can enter the line safely."
+      ],
+      "156": [
+        "at higher speeds or on wet pavement, they may have better traction and be able to stop more quickly than a car."
+      ],
+      "157": [
+        "Tap the brakes slightly, about one second apart. Braking suddenly can make the car skid."
+      ],
+      "158": [
+        "at higher speeds or on wet pavement, they may have better traction and be able to stop more quickly than a car."
+      ],
+      "159": [
+        "Allow at least one car length for every 10 mph of speed or apply the three-second rule."
+      ],
+      "160": [
+        "Watch for brake lights on the four or five cars down the line. It will increase your response time."
+      ],
+      "161": [
+        "If these tactics fail, pull over, stop and let the tailgater pass."
+      ],
+      "162": [
+        "Set the parking brake.",
+        "Put the gear in low, reverse or “park.”",
+        "Turn off the motor."
+      ],
+      "163": [
+        "If your vehicle breaks down, move it completely off the highway. Turn on the emergency flashers."
+      ],
+      "164": [
+        "Tap the horn to warn pedestrians nearby."
+      ],
+      "165": [
+        "you may park parallel to any curb and within 18 inches of the curb."
+      ],
+      "166": [
+        "Parallel park as in the previous section, but stop within six inches of the curb."
+      ],
+      "167": [
+        "Facing downhill—To brace your car when parking downhill, turn your wheels toward the curb"
+      ],
+      "168": [
+        "the drivers already traveling have the right-of-way."
+      ],
+      "169": [
+        "Making a false statement in an application or unauthorized use of a permit is a misdemeanor."
+      ],
+      "170": [
+        "Within 15 feet of a fire hydrant."
+      ],
+      "171": [
+        "Within 50 feet of the nearest rail of a railroad crossing."
+      ],
+      "172": [
+        "No person shall stop, park or leave a vehicle unattended except when necessary to avoid conflict with other traffic"
+      ],
+      "173": [
+        "Pedestrians in a crosswalk have the right-of-way over most vehicles, whether the crosswalk is marked or not."
+      ],
+      "174": [
+        "Yield to blind pedestrians carrying a white or chrome cane or using a guide dog."
+      ],
+      "175": [
+        "If you see the car in the lane next to you, stop suddenly for no apparent reason, slow down and look out."
+      ],
+      "176": [
+        "leaving a safe distance between the motor vehicle and the bicycle of not less than 3 feet"
+      ],
+      "177": [
+        "honk your horn briefly as a signal that you’re going to pass. Don’t blast your horn"
+      ],
+      "178": [
+        "The lane is too narrow for both a car and a bicycle to safely share the lane. In this case, it is safest to let the bicycle take the full lane."
+      ],
+      "179": [
+        "If you see this flag on a bicycle, slow down; the bicycle rider may have impaired hearing."
+      ],
+      "180": [
+        "If no danger is present, cyclists can proceed without stopping."
+      ],
+      "181": [
+        "Cyclists must stop at a red light before entering the intersection.",
+        "If it's safe, cyclists can proceed through the red light."
+      ],
+      "182": [
+        "two-thirds of car/motorcycle collisions are caused not by the motorcyclist but by the driver who turned in front of the motorcycle."
+      ],
+      "183": [
+        "Allow at least a three-second following distance so the cyclist has enough time to maneuver or stop in an emergency."
+      ],
+      "184": [
+        "You should not try to share a lane with a motorcycle and respect its space and position in traffic."
+      ],
+      "185": [
+        "don’t pass too close or too fast, as the blast of air can blow a motorcycle out of control."
+      ],
+      "186": [
+        "All operators of motorcycles must have an M endorsement on their driver license."
+      ],
+      "187": [
+        "At intersections, where most collisions and injuries occur, wait until the rider’s intentions are absolutely clear"
+      ],
+      "188": [
+        "the single headlight and single taillight of a motorcycle can blend into the lights of other vehicles."
+      ],
+      "189": [
+        "the operator shall wear ANSI-approved goggles or face shield material designed to protect against foreign objects."
+      ],
+      "190": [
+        "A truck’s blind spots are immediately in front on either side of the cab and up to 200 feet in the rear."
+      ],
+      "191": [
+        "stay to the left in your lane so the driver can see you.",
+        "leave extra space in front of your car in case the truck rolls back slightly when it starts to move."
+      ],
+      "192": [
+        "If the driver blinks the truck’s lights after you pass, it’s a signal that you are cleared to pull back in front of the truck."
+      ],
+      "193": [
+        "keep as far as possible to the right side of the road to avoid being sideswiped and to reduce the wind turbulence",
+        "The turbulence pushes vehicles apart; it does not suck them together."
+      ],
+      "194": [
+        "Trucks make wide right turns and often must leave an open space on the right side.",
+        "If you are between the truck and the curb, the driver may not be able to see you and your car can be crunched or sideswiped."
+      ],
+      "195": [
+        "A train traveling at 55 mph takes a mile or more to stop."
+      ],
+      "196": [
+        "Most collisions occur within 25 miles of the driver’s home."
+      ],
+      "197": [
+        "the driver of such vehicle shall stop within 50 feet but not less than 15 feet from the nearest rail"
+      ],
+      "198": [
+        "A train approaching within approximately 1500 feet of the highway crossing emits a signal audible from such distance"
+      ],
+      "199": [
+        "Railroad Crossbuck Signs—Crossbucks are found at most public crossings. Treat them the same as a YIELD sign"
+      ],
+      "200": [
+        "the trucker may not be able to see the first 10-20 feet of concrete in front of the bumper"
+      ],
+      "201": [
+        "Because of their weight, trucks travel faster downhill and slower uphill. You may have to increase your speed to pass a truck on a downhill grade."
+      ],
+      "202": [
+        "run at a 45-degree angle away from the tracks in the direction that the train is coming, as shown in the picture to the right, then immediately dial 911"
+      ],
+      "203": [
+        "Watch for vehicles that must stop at highway-railway crossings. • Trucks carrying hazardous materials • School bus • Church bus • Passenger bus"
+      ],
+      "204": [
+        "If you are crossing the tracks and the warning lights begin flashing or the gates start coming down, don’t stop. KEEP MOVING!"
+      ],
+      "205": [
+        "The ENS is a blue and white emergency sign with a unique number assigned to each grade crossing and identifies the exact location of the crossing to the railroads."
+      ],
+      "206": [
+        "Dim your high beam headlights to low beams within 1000 feet of an oncoming vehicle"
+      ],
+      "207": [
+        "within 600 feet of the vehicle you are following."
+      ],
+      "208": [
+        "Beginning 30 minutes after sunset and 30 minutes before sunrise."
+      ],
+      "209": [
+        "when your speed drops below 10 mph as you’re coming to a stop."
+      ],
+      "210": [
+        "Don’t “ride the clutch,” meaning don’t drive with your foot resting on the clutch pedal."
+      ],
+      "211": [
+        "Generally, your left hand should be between 9:00 and 10:30 and your right hand between 2:00 and 4:00."
+      ],
+      "212": [
+        "You feel drowsy and/or dizzy. Lights seem brighter. The skin has a blue color; lips turn blue. Your forehead tightens."
+      ],
+      "213": [
+        "In congested traffic, close the fresh-air vent."
+      ],
+      "214": [
+        "be sure you have a physical copy of your vehicle insurance and registration in your vehicle in accordance with Oklahoma law."
+      ],
+      "215": [
+        "Never pass at a highway-rail crossing. Don’t pass cars or bicyclists. The bicycle tires can get caught on the tracks and the rider can be thrown across your path."
+      ],
+      "216": [
+        "be sure you have a physical copy of your vehicle insurance and registration in your vehicle in accordance with Oklahoma law."
+      ],
+      "217": [
+        "Cognitive: Thinking about anything other than driving"
+      ],
+      "218": [
+        "Learner's Permit or Intermediate License holders can be suspended or have their license canceled for using a hand-held electronic device"
+      ],
+      "219": [
+        "DO NOT swerve to avoid hitting the animal. This may result in a more serious crash than if your vehicle collided with the animal."
+      ],
+      "220": [
+        "Deer/vehicle crashes most often occur from October to December."
+      ],
+      "221": [
+        "Most vehicles will float in just 2 feet (24 inches) of water, even SUVs!"
+      ],
+      "222": [
+        "6 inches of water may be enough to cause you to lose control of your vehicle.",
+        "You can be knocked off your feet by 6 inches of fast-moving water"
+      ],
+      "223": [
+        "If the crash is minor and your vehicle is blocking the flow of traffic, you must move it or have it moved."
+      ],
+      "224": [
+        "leave the driver’s and vehicle owner’s name and address, and provide the information from the insurance verification form on the damaged property"
+      ],
+      "225": [
+        "DO NOT try to move an injured person unless it is a life-or-death necessity."
+      ],
+      "226": [
+        "Mixing drugs can be especially dangerous, because they react with each other and multiply the harmful effects on your concentration and coordination."
+      ],
+      "227": [
+        "A 12-ounce can of beer, a 5-ounce glass of wine and a cocktail with 1.5 ounces of 80-proof distilled spirits all contain the same amount of alcohol."
+      ],
+      "228": [
+        "Driving skills, especially your judgment, are affected almost immediately."
+      ],
+      "229": [
+        "If your license is revoked under the Oklahoma Implied Consent Law, the revocation period will be from 180 days to 2 years"
+      ],
+      "230": [
+        "Commercial drivers or public transit drivers are also prohibited from making hand-held phone calls while driving."
+      ],
+      "231": [
+        "The very act of driving or being in actual physical control of a motor vehicle means that you have agreed to take one or more tests to determine your blood alcohol content (BAC)."
+      ],
+      "232": [
+        "Refusal to take the test upon request by a law enforcement officer will result in an automatic revocation of your driving privilege, even if you have not been drinking."
+      ],
+      "233": [
+        "BAC OVER 0.05 BUT LESS THAN 0.08 On conviction, a fine of $100–$500, up to 6 months in jail or both"
+      ],
+      "234": [
+        "imprisonment in jail for not less than ten days nor more than 1 year and a fine of not more than $1,000"
+      ],
+      "235": [
+        "Second offense within 10 years a felony imprisonment for not less than 1 year, not to exceed 5 years and a fine of not more than $2,500"
+      ],
+      "236": [
+        "For 180 days on the first revocation"
+      ],
+      "237": [
+        "For example, drivers on amphetamines are four times more likely to be involved in a car crash."
+      ],
+      "238": [
+        "it is illegal for anyone to drive with any detectable level of cannabis in their system."
+      ],
+      "239": [
+        "Has ANY measurable quantity of alcohol in the person’s blood or breath at the time a test is administered."
+      ],
+      "240": [
+        "measurable amount of BAC, the revocation would be for a period of SIX MONTHS."
+      ],
+      "241": [
+        "At the discretion of the court, a period of: 6 months 1 year 2 years or until the person attains the age of 21 years, whichever period of time is longer"
+      ],
+      "242": [
+        "Observations and information gathered by the arresting officer are also evidence that may be used in court and can result in a conviction without a BAC test."
+      ],
+      "243": [
+        "BAC OVER 0.05 BUT LESS THAN 0.08 On conviction, a fine of $100–$500, up to 6 months in jail or both",
+        "When Service Oklahoma receives notice of a conviction, Service Oklahoma will also suspend the person’s driving privilege as follows: First suspension—30 days"
+      ],
+      "244": [
+        "Third or subsequent offense imprisonment for not less than 1 year, not to exceed 10 years and fine of not more than $5,000"
+      ],
+      "245": [
+        "Before you take a drug, check the label for warnings about side effects such as drowsiness or nervousness."
+      ],
+      "246": [
+        "It's a felony You could spend 7 years in prison You could face a $10,000 fine",
+        "A FAKE ID CAN GET YOU BEHIND BARS..."
+      ],
+      "247": [
+        "There is a $25.00 fee for a copy of your driving record. (Effective July 1, 2010)",
+        "Service Oklahoma will provide the driving record to people over 65 at no charge."
+      ],
+      "248": [
+        "Service Oklahoma will provide the driving record to people over 65 at no charge."
+      ],
+      "249": [
+        "If you accumulate 10 or more points within 5 years, your license will be suspended."
+      ],
+      "250": [
+        "Reckless driving.............................................................................................................................................................................. 4"
+      ],
+      "251": [
+        "Failure to stop or remain stopped for a school bus loading or unloading............................................. 4",
+        "Speed in excess of 25 mph above posted limit..........................................................................................3",
+        "Careless driving................................................................................................................................................................2"
+      ],
+      "252": [
+        "A license issued to a person under 18 is considered probationary.",
+        "Until you are 18, your license is probationary (you are in a trial period to show you can drive safely and legally)."
+      ],
+      "253": [
+        "Service Oklahoma can, at its discretion, cancel or suspend your license for any moving traffic violation."
+      ],
+      "254": [
+        "Any felony in which a motor vehicle is used.",
+        "State law requires that the driving privilege be revoked (withdrawn) for 6 months to 3 years for a conviction of any of the following:"
+      ],
+      "255": [
+        "If under age 21, driving or being in actual physical control of a motor vehicle with any measurable quantity of alcohol."
+      ],
+      "256": [
+        "Oklahoma law authorizes a Medical Advisory Committee, composed of medical doctors, to recommend standards for the physical, emotional and mental capacity"
+      ],
+      "257": [
+        "Operating a defective vehicle.................................................................................................................................1"
+      ],
+      "258": [
+        "Records request form must be complete with your full name, date of birth and driver license number."
+      ],
+      "259": [
+        "Loan your license or identification card to any other person",
+        "Display or cause or permit to be displayed or possess a license or identification card issued to you that has altered information",
+        "Use a false or fictitious name on any application for a license or identification card."
+      ],
+      "260": [
+        "Speed in excess of 25 mph above posted limit..........................................................................................3"
+      ],
+      "261": [
+        "Left of center or wrong way on one way........................................................................................................................2"
+      ],
+      "262": [
+        "Operating a defective vehicle.................................................................................................................................1"
+      ],
+      "263": [
+        "Two (2) points are deducted for each 12-month period in which there are no convictions of any pointable traffic violations."
+      ],
+      "264": [
+        "Points are reduced to zero if there are no traffic violation convictions for three consecutive years."
+      ],
+      "265": [
+        "Two (2) points are deducted for successful completion of a Service Oklahoma-approved Driver Compliance or Defensive Driving Course."
+      ],
+      "266": [
+        "Credit for completing the course can be given once every 24 months."
+      ],
+      "267": [
+        "$25,000 for injury or death of one person"
+      ],
+      "268": [
+        "If you are in a collision, you must show your proof of insurance to the other driver and to the other people involved."
+      ],
+      "269": [
+        "Failure to keep an updated address with Service Oklahoma could result in a suspension without your knowledge."
+      ],
+      "270": [
+        "A fine of up to $250, 30 days in jail or both, PLUS suspension of license and registration"
+      ],
+      "271": [
+        "Suspension of license and registration.",
+        "A fine of up to $250.00, 30 days in jail or both • Suspension of license and registration."
+      ],
+      "272": [
+        "The point total cannot go below zero."
+      ],
+      "273": [
+        "All other violations (excluding the violations requiring suspension or revocation action)...........1"
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 30,
-    "topics_covered": 29,
-    "coverage_pct": 96.7,
-    "uncovered_topics": [
-      "Meaning of a red circle with a line through it"
-    ],
+    "topics_total": 25,
+    "topics_covered": 25,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
     "verdict": "PASS",
     "grade": "A"
   },
@@ -65,6 +919,20 @@
     "sign_ratio_pct": 11.1,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 273,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 99.6,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

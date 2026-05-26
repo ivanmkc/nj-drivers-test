@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "sd",
   "name": "South Dakota",
-  "verified_at": "2026-05-26T04:56:13Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:17:10Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://dps.sd.gov/application/files/9717/0863/8492/sd-driver-manual-rev-12-2023.pdf",
     "manual_pdf_sha256": "226066735036ea786c5ce4b1e869018c23f1f4f74d0b579177177a5575bfb280",
@@ -23,21 +23,1086 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 60,
-    "judged_count": 60,
+    "sample_size": 0,
+    "judged_count": 338,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "merge into the lane farthest from the vehicle at least three hundred feet before the vehicle and proceed with caution"
+      ],
+      "2": [
+        "at least three hundred feet before the vehicle, motorists must slow to a speed",
+        "merge into the lane farthest from the vehicle at least three hundred feet before the vehicle"
+      ],
+      "3": [
+        "motorists must slow to a speed that is at least twenty miles per hour less than the posted speed limit"
+      ],
+      "4": [
+        "five miles per hour when the speed limit is posted at twenty miles per hour or less"
+      ],
+      "5": [
+        "approaching any stopped vehicle making use of amber, yellow or blue warning lights"
+      ],
+      "6": [
+        "emergency vehicle making use of its red visual signals"
+      ],
+      "7": [
+        "BE IN SHAPE TO DRIVE",
+        "Aggressive Driving ........................................................................................................................................... 16"
+      ],
+      "8": [
+        "Child Passenger Safety Laws ........................................................................................................................................... 23"
+      ],
+      "9": [
+        "BEFORE YOU DRIVE",
+        "Adjusting Your Mirrors...…………………………………………………………………………………………………………………………………………………………….22"
+      ],
+      "10": [
+        "RULES OF THE ROAD",
+        "Yielding Right-of-Way ..................................................................................................................................... 29"
+      ],
+      "11": [
+        "BASIC DRIVING",
+        "Backing Up ...................................................................................................................................................................................... 27"
+      ],
+      "12": [
+        "Changing Lanes ............................................................................................................................................................................... 43",
+        "Adjusting to Traffic and Interstate Driving ...................................................................................................................................... 43"
+      ],
+      "13": [
+        "Financial Responsibility ................................................................................................................................................................... 14"
+      ],
+      "14": [
+        "BE IN SHAPE TO DRIVE",
+        "Alcohol, Other Drugs, and Driving .................................................................................................................................................. 16"
+      ],
+      "15": [
+        "South Dakota Codified Law 32-31-6.2"
+      ],
+      "16": [
+        "If you have a valid out of state non-commercial license, you are required to apply for a South Dakota driver license within 90 days of establishing residency in South Dakota."
+      ],
+      "17": [
+        "If you are a CDL holder, you must apply for a South Dakota license within 30 days of establishing residency in South Dakota."
+      ],
+      "18": [
+        "Are at least 14 years of age"
+      ],
+      "19": [
+        "Non-residents who are at least 16 years of age can drive on a valid operator license from their home state."
+      ],
+      "20": [
+        "South Dakota law states that every licensee shall always have their driver license in their immediate possession when operating a motor vehicle."
+      ],
+      "21": [
+        "Have parent/guardian consent if under the age of 18 (required for every application completed)"
+      ],
+      "22": [
+        "Have no unpaid fines for moving traffic violations"
+      ],
+      "23": [
+        "DOCUMENT REQUIREMENTS (photocopies are not acceptable)"
+      ],
+      "24": [
+        "Two documents proving physical address in South Dakota (must be less than one year old)"
+      ],
+      "25": [
+        "A hospital-issued certificate is not acceptable."
+      ],
+      "26": [
+        "A Certified Birth Certificate issued by Puerto Rico must be certified as being issued on or after July 1, 2010."
+      ],
+      "27": [
+        "If your name has changed from your current driver license or ID card, you will need to provide proof of the name change (Marriage Certificate, Divorce Decree, or Court Order)"
+      ],
+      "28": [
+        "Second document proving identity (such as social security card, W-2 form, military ID, tribal ID, or another document approved by examiner)"
+      ],
+      "29": [
+        "If you want a license to drive a commercial motor vehicle, you will need to read the Commercial Driver License (CDL) Manual."
+      ],
+      "30": [
+        "Turn in all existing driver license(s) or identification card(s)"
+      ],
+      "31": [
+        "It must be a certified copy and have the stamp or raised seal of the issuing authority.",
+        "A church, chapel or similarly issued certificate is not acceptable.",
+        "Photocopies and faxes are not acceptable."
+      ],
+      "32": [
+        "Social Security Card",
+        "W-2 form",
+        "Two documents proving physical address in South Dakota (less than one year old)."
+      ],
+      "33": [
+        "Two documents proving physical address in South Dakota (must be less than one year old)"
+      ],
+      "34": [
+        "provide a receipt from a South Dakota hotel/motel, campground or RV park to prove one night of stay within the last year"
+      ],
+      "35": [
+        "DD-214 Form which shows honorable discharge status from active duty"
+      ],
+      "36": [
+        "Any male applicant aged 18 to 25 must submit on his application that he has registered with the Selective Service"
+      ],
+      "37": [
+        "Regular Driver License or Instruction Permit (upgrade, new, renewal, or transfer from out-of-state) ........... $28.00"
+      ],
+      "38": [
+        "the fee allows you three attempts to pass a test within a 6-month period."
+      ],
+      "39": [
+        "Persons who have accumulated child support arrearages of $1,000 or more."
+      ],
+      "40": [
+        "To obtain an Instruction Permit, you must be at least 14 years of age"
+      ],
+      "41": [
+        "must hold the valid permit continuously for 275 days (180 days if successful completion ... of an approved Department of Education driver education course)"
+      ],
+      "42": [
+        "The driver must complete 50 hours of adult supervised driving on an Instruction Permit (must include 10 hours in inclement weather and 10 hours after dark)."
+      ],
+      "43": [
+        "Instruction Permit holders may not use any type of wireless communication device while operating a motor vehicle upon public roadways."
+      ],
+      "44": [
+        "not have been convicted of a traffic violation during the six months prior to application for the Restricted Minor’s Permit."
+      ],
+      "45": [
+        "The supervising adult must have a valid driver’s license and at least one year of driving experience."
+      ],
+      "46": [
+        "The cost is $28.00 for a Restricted Minor’s Permit."
+      ],
+      "47": [
+        "operate a motor vehicle during the hours of 6 a.m. to 10 p.m. if the motor vehicle is being operated with the permission of the minor’s parent/legal guardian."
+      ],
+      "48": [
+        "You may drive alone after 10 p.m. if you are taking the most direct route and traveling to or from: • School or school event"
+      ],
+      "49": [
+        "A Restricted Minor’s Permit holder may not use any type of wireless communication device while operating a motor vehicle upon public roadways."
+      ],
+      "50": [
+        "if accompanied by a driver with a valid motorcycle license who is at least eighteen years of age, who has at least one year of driving experience and who is driving another motorcycle"
+      ],
+      "51": [
+        "When a duplicate license is obtained, your license will retain the original license expiration date."
+      ],
+      "52": [
+        "Moped Operators - You must be in possession of a valid Operator’s License."
+      ],
+      "53": [
+        "Any driver license or non-driver ID issued to any individual under 21 years of age with five years or less remaining until the applicant’s 21st birthday will expire 30 days after the individual’s 21st birthday."
+      ],
+      "54": [
+        "Pets or passengers will not be allowed in the vehicle during the on-the-road skill test."
+      ],
+      "55": [
+        "Licenses may be renewed 180 days prior to their expiration date unless the applicant is turning 21 years of age upon renewal."
+      ],
+      "56": [
+        "If you are currently holding a valid out-of-state driver license, no testing will be required for the transfer of that license unless you have a hazardous materials endorsement."
+      ],
+      "57": [
+        "If someone is caught cheating you will not be allowed to re-test the following day, you will be required to wait a minimum of two weeks before being allowed to test again."
+      ],
+      "58": [
+        "For testing purposes, the fee allows you three attempts to pass a test within a 6-month period. After 3 attempts, or 6-months, the fee must be paid again."
+      ],
+      "59": [
+        "F Left outside rearview mirror"
+      ],
+      "60": [
+        "G No night driving"
+      ],
+      "61": [
+        "One organ and tissue donor can save or improve the lives of up to 60 people."
+      ],
+      "62": [
+        "All costs related to donation are covered by the procurement organization, which passes those costs on to the transplanting facility."
+      ],
+      "63": [
+        "Your driver license is valid for 5 years and will expire on your birthday or 30 days after your birthday if you are turning 21."
+      ],
+      "64": [
+        "You may renew the license anytime up to 180 days before it expires (unless you will be turning 21)."
+      ],
+      "65": [
+        "You will be required to take a vision test when renewing."
+      ],
+      "66": [
+        "If the driver license you surrender is expired, a knowledge test will also be required."
+      ],
+      "67": [
+        "First DWI - $75; second DWI - $125; third and subsequent DWI’s - $175"
+      ],
+      "68": [
+        "owing debt to a South Dakota government agency totaling $1,000 or more"
+      ],
+      "69": [
+        "Vision and knowledge tests will be required following a revocation."
+      ],
+      "70": [
+        "An application fee and a $50 reinstatement fee will be required."
+      ],
+      "71": [
+        "Any person who is eligible may apply by mail or online for a replacement and renewal once in any ten-year period."
+      ],
+      "72": [
+        "You have 90 days to register a vehicle brought in from another state."
+      ],
+      "73": [
+        "The Title should be kept in a safe place, not in the vehicle.",
+        "The registration certificate must always be carried in the vehicle."
+      ],
+      "74": [
+        "Any operator who accumulates 15 points in any 12 consecutive months, or 22 points in any 24 consecutive months, is subject to a driver license suspension."
+      ],
+      "75": [
+        "No points will be assessed for speeding, standing, parking, equipment, size or weight violations"
+      ],
+      "76": [
+        "Reckless Driving 8"
+      ],
+      "77": [
+        "First Suspension 60 days"
+      ],
+      "78": [
+        "To qualify for a driver license without restrictions, an applicant must score 20/40 or better with both eyes, but no worse than 20/50 in either eye."
+      ],
+      "79": [
+        "Plan to stop about every 100 miles or 2 hours."
+      ],
+      "80": [
+        "Certificate of Deposit or Securities in the amount of $50,000 deposited with the State Treasurer",
+        "Certificate of Self-Insurance (minimum 26 vehicles)"
+      ],
+      "81": [
+        "the driving privileges shall be suspended for a period of thirty days or as otherwise required by law."
+      ],
+      "82": [
+        "Points are assessed on out-of-state convictions just as if they were committed in South Dakota."
+      ],
+      "83": [
+        "The SR22 forms must be received at the central administrative office",
+        "The forms must come directly from the insurance company."
+      ],
+      "84": [
+        "Registration renewals are determined on a staggered registration renewal system based on the first letter in your last name."
+      ],
+      "85": [
+        "A conviction for failure to maintain proof of financial responsibility is a Class 2 Misdemeanor",
+        "driver license suspension for a period of not less than 30 days or more than one year",
+        "filing proof of insurance (SR22) with the State of South Dakota for 3 years"
+      ],
+      "86": [
+        "Plan to stop about every 100 miles or 2 hours."
+      ],
+      "87": [
+        "stop driving and pull off at the next exit or rest area to take a 15 to 20-minute nap"
+      ],
+      "88": [
+        "Alcohol and other impairing drugs are involved in approximately 40% of all traffic crashes in which someone is killed every year."
+      ],
+      "89": [
+        "In South Dakota, if you are under 21, you can also be arrested for alcohol impairment at 0.02%."
+      ],
+      "90": [
+        "MAINTAIN THIS INSURANCE FOR 3 YEARS FROM THE ELIGIBILITY DATE."
+      ],
+      "91": [
+        "Vision is impacted at 0.02% blood alcohol content (BAC) for all drivers."
+      ],
+      "92": [
+        "You can lose your driver’s license for one year if you refuse to take a BAC test."
+      ],
+      "93": [
+        "the law applies to the state where you were arrested, not the state where you got your license."
+      ],
+      "94": [
+        "First offense is a Class 2 misdemeanor which is punishable by a fine and a 30-day loss of driver license."
+      ],
+      "95": [
+        "First offense is a Class 1 misdemeanor... You will also lose your driver license for a minimum of 30 days."
+      ],
+      "96": [
+        "Third offense is a Class 6 felony which is punishable by a fine, imprisonment up to two years"
+      ],
+      "97": [
+        "Impairment starts with the first drink. Even one drink of alcohol can affect a person’s ability to operate a motor vehicle."
+      ],
+      "98": [
+        "This program is to provide a memorial to the victim and to also remind motorists of dangerous behaviors"
+      ],
+      "99": [
+        "Some behaviors typically associated with aggressive driving include speeding, following too closely, unsafe lane changes"
+      ],
+      "100": [
+        "An immediate family member of the crash victim objects to the sign, at which time the sign will be expeditiously removed."
+      ],
+      "101": [
+        "Pep pills, “uppers,” and diet pills can make you feel nervous, dizzy, unable to concentrate, and they can affect your vision."
+      ],
+      "102": [
+        "Studies have shown that people who use marijuana make more mistakes, have more trouble adjusting to glare, and get arrested for traffic violations more than other drivers."
+      ],
+      "103": [
+        "Never drink alcohol while taking other drugs. These drugs could multiply the effects of alcohol or have additional effects of their own."
+      ],
+      "104": [
+        "If angry or excited, give yourself time to cool off. If necessary, take a short walk, but stay off the road until you have calmed down."
+      ],
+      "105": [
+        "Diabetics who take insulin should not drive when there is any chance of an insulin reaction, blackout, convulsion or shock."
+      ],
+      "106": [
+        "Epilepsy – So long as it is under medical control, epilepsy generally is not dangerous."
+      ],
+      "107": [
+        "check tire pressures using the recommended PSI (pounds per square inch) located in the vehicle owner’s manual or the driver side door jamb of the vehicle."
+      ],
+      "108": [
+        "Can you see all his head? If yes, your tires are too worn—do not drive on them, and make sure to get them replaced."
+      ],
+      "109": [
+        "If they do not seem to be working properly, are making a lot of noise, smell funny, or the brake pedal goes to the floor, have a mechanic check them out."
+      ],
+      "110": [
+        "An out-of-line headlight can shine where it does not help you and may blind other drivers."
+      ],
+      "111": [
+        "Worn or bald tires can increase the stopping distance and make turning more difficult when the road is wet.",
+        "Worn tires can cause “hydroplaning” and increase the chance of having a flat tire."
+      ],
+      "112": [
+        "If you are impatient (road rage), allow extra time for the driving trip. Leave a few minutes early."
+      ],
+      "113": [
+        "A vehicle in good shape can give you an extra safety margin when you need it, and you never know when you will need it."
+      ],
+      "114": [
+        "Stick the penny into the tread \"head\" first. If the tread does not come at least to Abe's head, the tire is unsafe, and you need to replace it."
+      ],
+      "115": [
+        "Gases from a leaky exhaust can cause death inside of a vehicle in a very short time."
+      ],
+      "116": [
+        "side windows forward of, either side of, or adjacent to the operator’s seat, may not be covered with one-way glass, adhesive film, or other application that reduces the light transmittance to a level below 35%."
+      ],
+      "117": [
+        "Keep the headlights, backup, brake and taillights clean. Dirt on the lenses can reduce the light by 50%."
+      ],
+      "118": [
+        "There should be 10 inches between your chest and the steering wheel."
+      ],
+      "119": [
+        "The top of the steering wheel should be no higher than the top of your shoulders and below chin level."
+      ],
+      "120": [
+        "Head restraints should be adjusted so the head restraint contacts the back of your head and not below the level of your ears."
+      ],
+      "121": [
+        "To set the left side mirror, the driver must rest his or her head against the closed window and set the mirror to barely show the edge of the vehicle."
+      ],
+      "122": [
+        "this adjustment adds 12 to 16 degrees of additional viewing area to each side of the vehicle."
+      ],
+      "123": [
+        "The lap belt should be adjusted so that it is snug and lies low across your hips after fastening."
+      ],
+      "124": [
+        "While air bags are good protection against hitting the steering wheel, dashboard, or windshield, they do not protect you if you are hit from the side or rear or if the vehicle rolls over."
+      ],
+      "125": [
+        "The driver of the passenger vehicle shall secure or cause to be secured a properly adjusted and fastened safety seatbelt system on any passenger in the front seat who is at least five years of age but younger than eighteen years of age."
+      ],
+      "126": [
+        "Children age 12 and younger should sit in the rear seat of the vehicle to avoid injury from an air bag in the event of a crash."
+      ],
+      "127": [
+        "check to be sure that all children age 12 or younger are properly restrained in the back seat and that a rear-facing child safety seat is never placed in front of an active passenger air bag."
+      ],
+      "128": [
+        "The child rides facing backwards with its entire head and body cushioned by impact-absorbing materials."
+      ],
+      "129": [
+        "Baby seats may be useful in the house but are not made to protect a baby in the vehicle and should not be used there."
+      ],
+      "130": [
+        "Even if you are wearing a lap and shoulder belt yourself, the child would be torn from your grasp by the violent forces of a collision."
+      ],
+      "131": [
+        "As a rule, the back seat is safer than the front, and the center of the vehicle is safer than the sides."
+      ],
+      "132": [
+        "The requirements of this section are met if the child is under five years of age and is at least forty pounds in weight by securing the child in a seatbelt."
+      ],
+      "133": [
+        "who is at least fourteen years of age and under eighteen years of age, shall wear a properly adjusted and fastened safety seatbelt system",
+        "A violation of this section is a petty offense."
+      ],
+      "134": [
+        "The provisions of 32-37-1, 32-37-1.1, 32-37-1.2, and 32-37-1.3 do not apply in passenger cars manufactured before 1966 that have not been equipped with seatbelts."
+      ],
+      "135": [
+        "•For children up to 20 pounds",
+        "•Always face rearward",
+        "•Recline 30 degrees"
+      ],
+      "136": [
+        "Can be used with just a lap belt if it has a shield"
+      ],
+      "137": [
+        "Over half of all traffic deaths happen within 25 miles of home. Many of them occur on roads posted at less than 45 mph."
+      ],
+      "138": [
+        "Everything in the vehicle that is not fastened down, including the passengers, will slide toward the point of crash, not away from it."
+      ],
+      "139": [
+        "Even at 25 mph, the force of a head-on crash is the same as pedaling a bicycle full-speed into a brick wall or diving off a three-story building onto the sidewalk."
+      ],
+      "140": [
+        "A load must be securely fastened and is only considered secure when nothing can slide, shift, fall, or sift onto the roadway or become airborne."
+      ],
+      "141": [
+        "To start the engine, place your right foot on the brake pedal and check the gear selector lever for park."
+      ],
+      "142": [
+        "Accelerate gradually and smoothly with the top of your foot on the pedal and the heel of your foot on the floor."
+      ],
+      "143": [
+        "When you brake quickly, you could skid and lose control of your vehicle. You also make it harder for drivers behind you to stop without hitting you."
+      ],
+      "144": [
+        "Both hands should be placed on the outside of the steering wheel on opposite sides, at the 3 and 9 o’clock positions, to maintain control of the vehicle."
+      ],
+      "145": [
+        "Placing your hands at the 2 and 10 o’clock positions is no longer recommended because it can be dangerous in a vehicle equipped with air bags."
+      ],
+      "146": [
+        "This will cause the steering to lock if you try to turn the steering wheel and you will lose control of the vehicle."
+      ],
+      "147": [
+        "Grasp the steering wheel at the 12 o’clock position with your left hand."
+      ],
+      "148": [
+        "The driver on your right at an all-way stop intersection if both of you arrive at the intersection at the same time"
+      ],
+      "149": [
+        "no one should assume he or she automatically has the right-of-way."
+      ],
+      "150": [
+        "Only the first vehicle in a funeral procession must obey traffic signs and signals."
+      ],
+      "151": [
+        "The lenses remain \"dark\" until a pedestrian desiring to cross the street pushes the call button to activate the beacon."
+      ],
+      "152": [
+        "traffic lights are horizontal, instead of vertical, and the red light is on the left, the yellow light is in the middle, and the green light is on the right."
+      ],
+      "153": [
+        "A flashing RED traffic light means the same as a stop sign. You must come to a complete stop and then may go when it is safe to do so."
+      ],
+      "154": [
+        "a flashing YELLOW arrow traffic light means you may cautiously enter the intersection to make the turn indicated by the arrow when it is safe to do so after yielding to oncoming traffic and pedestrians."
+      ],
+      "155": [
+        "Red or completely unlighted traffic signal shall stop in the same manner as if the vehicle were at a stop sign."
+      ],
+      "156": [
+        "These signs are usually yellow with black lettering or symbols and are diamond shaped."
+      ],
+      "157": [
+        "The best way not to speed is to know how fast you are going. Check the speedometer often."
+      ],
+      "158": [
+        "If you are in the intersection when the yellow light comes on, do not stop but continue through the intersection."
+      ],
+      "159": [
+        "Some warning signs may be fluorescent yellow, such as school zones, school crossing, and pedestrian crossing."
+      ],
+      "160": [
+        "A round yellow warning sign with an \"X\" symbol and black \"RR\" letters is placed along the road before a highway-railroad grade crossing."
+      ],
+      "161": [
+        "The sign also contains a DOT number that identifies the crossing’s physical location so emergency crews or railroad personnel can respond."
+      ],
+      "162": [
+        "Fines for speeding in a work zone may be doubled."
+      ],
+      "163": [
+        "These are generally diamond or rectangular shaped and orange with black letters or symbols."
+      ],
+      "164": [
+        "The maximum limit should be driven only in ideal driving conditions and you must reduce your speed when conditions require it."
+      ],
+      "165": [
+        "Some regulatory signs have a red circle with a red slash over a symbol, which prohibits certain actions."
+      ],
+      "166": [
+        "A reflective orange triangle on the rear of a vehicle means it is travelling less than 25 mph."
+      ],
+      "167": [
+        "Service signs are square or rectangular shaped and are blue with white letters or symbols. They show the location of various services"
+      ],
+      "168": [
+        "Two-direction roadway – indicated by a double yellow line - passing prohibited in both directions"
+      ],
+      "169": [
+        "If there is a stop line before the crosswalk, the stop line must be obeyed first."
+      ],
+      "170": [
+        "These lanes are marked on each side by solid yellow and dashed yellow lines."
+      ],
+      "171": [
+        "If the minimum posted speed is too fast for you, you should use another road."
+      ],
+      "172": [
+        "A white, X-shaped sign with “Railroad Crossing” printed on it is located at the highway-railroad grade crossing.",
+        "These signs are also called a “cross-buck” sign."
+      ],
+      "173": [
+        "Avoid Swinging wide to the left before making the turn.",
+        "Always turn right from the right-most portion of the lane."
+      ],
+      "174": [
+        "Identify and enter the lane from which you will turn.",
+        "Stay in that lane until the turn is completed."
+      ],
+      "175": [
+        "This type of turn should only be used on a two-lane roadway."
+      ],
+      "176": [
+        "where the vehicle cannot be seen by the driver of any other vehicle with 500 feet approaching from any direction."
+      ],
+      "177": [
+        "Mid-block on any street in a business district or mid-block on a through (main) highway that is in a residential district."
+      ],
+      "178": [
+        "It is recommended that you look left, then right, and then left again before entering the intersection."
+      ],
+      "179": [
+        "The driver with an active turn signal may plan to turn after they go past your vehicle or may have forgotten to turn the signal off from a prior turn."
+      ],
+      "180": [
+        "By keeping traffic moving one-way in a counterclockwise direction, there are fewer conflict points"
+      ],
+      "181": [
+        "Crash statistics show that roundabouts reduce fatal crashes about 90%"
+      ],
+      "182": [
+        "A truck apron is a paved area on the inside of the roundabout for the rear wheels of large trucks to use when turning"
+      ],
+      "183": [
+        "3. Yield to traffic on your left already in the roundabout"
+      ],
+      "184": [
+        "If you have entered the roundabout, continue to your exit, then pull over and allow emergency vehicles to pass"
+      ],
+      "185": [
+        "6. As you approach the exit, turn on your right turn signal"
+      ],
+      "186": [
+        "Here traffic is trying to enter the interstate lanes at the same time that other traffic is trying to exit."
+      ],
+      "187": [
+        "All left turns onto the freeway are free flow, meaning vehicles do not stop to access the ramp."
+      ],
+      "188": [
+        "If you miss your exit, go on to the next exit. Backing up on the interstate is prohibited under any circumstances."
+      ],
+      "189": [
+        "You must always stop for a school bus that has its red lights flashing or its stop arm extended at all times unless the roadway is separated by a physical barrier."
+      ],
+      "190": [
+        "A possible exception to this is during cold weather when it is possible the parking brake could freeze in the “on” position."
+      ],
+      "191": [
+        "If parked on a rural highway, there must be at least 15 feet of road width for other traffic to pass the vehicle."
+      ],
+      "192": [
+        "Turn the wheels sharply to the left if there is a curb and facing uphill."
+      ],
+      "193": [
+        "Turn the wheels sharply to the right if there is no curb or if facing downhill."
+      ],
+      "194": [
+        "When the maneuver is finished, the vehicle should be within 12 inches of the curb or edge of the road"
+      ],
+      "195": [
+        "the vehicle should be within 12 inches of the curb or edge of the road, and at least 2 feet away from the parked vehicles."
+      ],
+      "196": [
+        "Before making lane changes or turns, quickly turn your head to look for any hidden pedestrians or vehicles."
+      ],
+      "197": [
+        "Going much slower than other vehicles can be just as bad as speeding. It is dangerous and you can be ticketed for impeding traffic."
+      ],
+      "198": [
+        "Do not drive to the end of the lane and stop or there will not be enough room to get up to speed of traffic."
+      ],
+      "199": [
+        "If the road on which you are traveling has exit ramps, do not slow down until you move onto the exit ramp."
+      ],
+      "200": [
+        "Avoid unnecessary lane changing. Stay in the right lane unless overtaking and passing another vehicle."
+      ],
+      "201": [
+        "Get out of the vehicle on the curb side if possible. If it is not possible, use the street side."
+      ],
+      "202": [
+        "When you turn from a high speed, two-lane roadway, try not to slow down too early if you have traffic following you. Tap the brakes quickly but safely and reduce speed."
+      ],
+      "203": [
+        "Farm tractors, animal-drawn vehicles, and roadway maintenance vehicles usually go 25 mph or less."
+      ],
+      "204": [
+        "Slow down when approaching a slow-moving vehicle and, if possible, move over to the left to pass it. Never pass on the right."
+      ],
+      "205": [
+        "On multi-lane roads, the left-most lane is intended to be used for passing slower vehicles."
+      ],
+      "206": [
+        "Continue to pass until the complete front of the passed vehicles is visible in the rearview mirror",
+        "When you can see both headlights of the vehicle you have just passed in your rearview mirror, it is safe to return to the driving lane."
+      ],
+      "207": [
+        "When being passed: • Stay in your lane • Maintain a constant speed to allow the driver to pass you"
+      ],
+      "208": [
+        "shall allow a minimum of a three foot separation between the right side of the driver's vehicle... and the left side of the bicycle if the posted limit is thirty-five miles per hour or less"
+      ],
+      "209": [
+        "Acknowledge the officer’s presence by turning on your right turn signal."
+      ],
+      "210": [
+        "On a freeway, move completely onto the right shoulder, even if you’re in the carpool/HOV lane.",
+        "Do not move onto the center median."
+      ],
+      "211": [
+        "Place your hands in clear view, including all passengers’ hands, such as on the steering wheel, on top of your lap, etc."
+      ],
+      "212": [
+        "If your windows are tinted, it is recommended that you roll down your windows after you have stopped your vehicle on the right shoulder"
+      ],
+      "213": [
+        "Ideally, you should try to look at what is occurring 20 to 30 seconds in front of the car."
+      ],
+      "214": [
+        "Drivers who look ahead can slow down gradually or change lanes and avoid unnecessary braking that leads to lower miles-per-gallon."
+      ],
+      "215": [
+        "Do not attempt to pass when an oncoming vehicle is approaching, your view is blocked by a curve or a hill, at intersections, before a highway-railroad crossing, or before a bridge."
+      ],
+      "216": [
+        "If you were stopped and your view of a cross street is blocked, edge forward slowly until you can see."
+      ],
+      "217": [
+        "This is especially important just after the light has turned green. This is when people on the cross street are most likely to hurry through the intersection"
+      ],
+      "218": [
+        "At least 100 feet from an intersection."
+      ],
+      "219": [
+        "These areas are called “blind spots” because you cannot see them through the mirrors. You must physically turn your head and look to see vehicles in your blind spots."
+      ],
+      "220": [
+        "Place your right arm on the back of the passenger seat and turn around so that you can look directly through the rear window. Do not depend on the rearview or side mirrors."
+      ],
+      "221": [
+        "Be especially alert for deer in October and November, the months with the highest number of car/deer crashes."
+      ],
+      "222": [
+        "In fact, deer are the second most commonly struck object in South Dakota, with intersection crashes topping the list"
+      ],
+      "223": [
+        "Always reduce speed before entering the curve to a safe speed",
+        "Hard braking after entry to a curve could cause the vehicle tires to lose traction."
+      ],
+      "224": [
+        "Hydroplaning occurs when the steering tires start to ride up on any pooled water, like the action of water skis."
+      ],
+      "225": [
+        "The average perception time for an alert driver is ¾ second to 1 second."
+      ],
+      "226": [
+        "At 50 mph on dry pavement with good brakes, it can take about 158 feet."
+      ],
+      "227": [
+        "Always try to keep a minimum following distance of 4 seconds between your car and the vehicle in front."
+      ],
+      "228": [
+        "This is very important when you slow down quickly or at points where a following driver would not expect you to slow down, such as private driveways or parking spaces."
+      ],
+      "229": [
+        "The signal must be given with: An electric signal light or The left arm and hand"
+      ],
+      "230": [
+        "If you see such a reflection on the side of the road, slow down. Blow the horn and be ready to stop."
+      ],
+      "231": [
+        "Watch when the rear of the vehicle ahead passes a sign, pole, or any other stationary point.",
+        "Count the seconds it takes to reach the same sign, pole, or any other stationary point"
+      ],
+      "232": [
+        "This “blind spot” to the rear of large trucks can extend for 200 feet!",
+        "large vehicles have huge blind spots directly behind them that extend up to 200 feet."
+      ],
+      "233": [
+        "If the cycle should fall, you need extra distance to avoid hitting the rider.",
+        "The chances of a fall are greatest on wet roads, icy roads, gravel roads, metal surfaces"
+      ],
+      "234": [
+        "“Split the difference.” Split the difference between two hazards.",
+        "if one is more dangerous than the other, leave a little more space on the dangerous side."
+      ],
+      "235": [
+        "If there is no right lane, wait until the road ahead is clear and passing is legal, then slowly reduce speed.",
+        "This will encourage the tailgater to pass. Never slow down quickly to discourage a tailgater."
+      ],
+      "236": [
+        "At a speed of 55 mph, you need about 10 seconds to pass.",
+        "That means you need over 1600 feet or about one-third of a mile to pass safely."
+      ],
+      "237": [
+        "You must be able to see at least one-third of a mile or about 10 seconds ahead.",
+        "you should not start to pass if you are within one-third of a mile of a hill or curve."
+      ],
+      "238": [
+        "A typical car is 15 feet long. A multiple-trailer truck can be 75 feet long or longer.",
+        "It can take much longer to pass a truck than it would have to pass a car."
+      ],
+      "239": [
+        "if overtaking a bicycle and an oncoming vehicle is approaching, slow down and let the vehicle pass first"
+      ],
+      "240": [
+        "If wanting to parallel park and there is traffic coming from behind, put on the turn signal, pull next to the space, and allow vehicles behind to pass before parking."
+      ],
+      "241": [
+        "Pedestrians with umbrellas in front of their faces or with their hats pulled down"
+      ],
+      "242": [
+        "When stopped on a hill or incline. Leave extra space because the vehicle ahead may roll back when it starts moving."
+      ],
+      "243": [
+        "When you cannot separate risks and must deal with two or more at the same time, compromise by giving the most room to the worst danger."
+      ],
+      "244": [
+        "To separate risks, decide to speed up or slowdown in order to pass the joggers before or after the truck."
+      ],
+      "245": [
+        "A good rule to follow is if you turn on the wipers, turn on the headlights."
+      ],
+      "246": [
+        "When driving away from a rising or setting sun, turn on the headlights. Drivers coming toward you may have trouble seeing the vehicle because of the glare."
+      ],
+      "247": [
+        "Dim the high beams whenever you come within 500 feet (about a one block distance) of an oncoming vehicle."
+      ],
+      "248": [
+        "Use the low beams in fog, when it is snowing, or when it is raining hard. Light from high beams will reflect, causing glare"
+      ],
+      "249": [
+        "If a driver approaching fails to dim their headlights, flash the high beams to let them know. If they still don’t dim the lights, look toward the right side of the road."
+      ],
+      "250": [
+        "Give the horn a SHARP BLAST: • When another vehicle is in danger of hitting you • When you have lost control of the vehicle and are moving toward someone"
+      ],
+      "251": [
+        "Do not use the horn in the following circumstances: ... Around blind pedestrians ... Around animal-drawn vehicles"
+      ],
+      "252": [
+        "Raise the hood or tie a white cloth to the antenna, side mirror, or door handle to signal an emergency."
+      ],
+      "253": [
+        "Do not drive in another vehicle’s blind spot. ... Either speed up or drop back so the other driver can see your vehicle more easily."
+      ],
+      "254": [
+        "A car can disappear from their view while it is ... up to 200 feet behind!",
+        "large vehicles have huge blind spots directly behind them that extend up to 200 feet."
+      ],
+      "255": [
+        "A car can disappear from their view while it is up to 20 feet in front of the cab"
+      ],
+      "256": [
+        "People who may be confused include: Persons driving cars with out of state plates (especially at complicated intersection)"
+      ],
+      "257": [
+        "Do not drive at any time with only the parking lights on. Parking lights are for parking only."
+      ],
+      "258": [
+        "large vehicles have huge blind spots directly behind them that extend up to 200 feet."
+      ],
+      "259": [
+        "if you can’t see the truck or bus driver in their side mirror, they can’t see you."
+      ],
+      "260": [
+        "If there are streets, driveways, or entrances between you and where you want to turn, wait until you have passed them to signal."
+      ],
+      "261": [
+        "quickly tap the brake pedal 3 or 4 times to let those behind you know you are about to slow down."
+      ],
+      "262": [
+        "Right turn: Hand pointing up."
+      ],
+      "263": [
+        "Press on the brake pedal as hard as you can and keep applying pressure."
+      ],
+      "264": [
+        "There are three options to avoid a crash or to reduce its impact. These options are braking, steering, or accelerating."
+      ],
+      "265": [
+        "Release pressure from the brake or accelerator.",
+        "Look where you want to go."
+      ],
+      "266": [
+        "slow down gradually, when safe to do so, and turn back onto the pavement."
+      ],
+      "267": [
+        "Use the parking brake. Pull on the parking brake handle in the center console or push the parking brake foot pedal slowly"
+      ],
+      "268": [
+        "If a front tire blows out, the vehicle will pull sharply in the direction of the blowout."
+      ],
+      "269": [
+        "Grip the steering wheel firmly and keep the vehicle going straight.",
+        "Slow down gradually. Take your foot off the accelerator pedal.",
+        "Do not brake. Allow the vehicle to slow by itself or brake gently if necessary."
+      ],
+      "270": [
+        "Turn off the engine.",
+        "Shift to neutral and search for an escape path."
+      ],
+      "271": [
+        "Place emergency flares about 200 to 300 feet behind the vehicle, giving other drivers some time to change lanes if necessary."
+      ],
+      "272": [
+        "Place emergency flares about 200 to 300 feet behind the vehicle, giving other drivers some time to change lanes if necessary."
+      ],
+      "273": [
+        "If the headlights suddenly go out: • Try the headlight switch a few times."
+      ],
+      "274": [
+        "Never drive to the scene of an accident, fire, or other disaster just to look. You may block the way for police, firefighters, ambulances, tow trucks, and other rescue vehicles."
+      ],
+      "275": [
+        "Be ready to apply the brakes so that you will not be pushed into another vehicle."
+      ],
+      "276": [
+        "If the vehicle is hit from the side, your body will be thrown towards the side that is hit. Front air bags will not help in this situation."
+      ],
+      "277": [
+        "Turn off the ignition of wrecked vehicles. Do not smoke around wrecked vehicles. Fuel could have spilled, and fire is a real danger."
+      ],
+      "278": [
+        "First help anyone who is not already walking and talking. Check for breathing then check for bleeding."
+      ],
+      "279": [
+        "Do not give injured persons anything to drink, not even water."
+      ],
+      "280": [
+        "If you damage an unattended vehicle or other property and you cannot locate the owner, contact the nearest law enforcement agency",
+        "You should wait for law enforcement to arrive at the scene. It is against the law to leave the scene of an accident."
+      ],
+      "281": [
+        "Rank Violation 1 Careless Driving",
+        "In the table below are the top 10 violations ranked in order that were the cause of injury accidents and fatality accidents in South Dakota."
+      ],
+      "282": [
+        "When a pedestrian is crossing a street guided by a dog or carrying a white cane, come to a complete stop."
+      ],
+      "283": [
+        "Sounding the horn to alert your presence may startle bicyclists and cause them to steer into your path and crash."
+      ],
+      "284": [
+        "Avoid slowing down or stopping quickly. A motor vehicle’s brakes are more powerful than a bicycle’s and you could cause a crash."
+      ],
+      "285": [
+        "Do not stop, park, or drive on a designated bicycle path or lane unless entering or leaving an alley or driveway"
+      ],
+      "286": [
+        "If the vehicle is about to be hit from the front, it is important to try and have a “glancing blow” rather than being struck head on."
+      ],
+      "287": [
+        "shall allow a minimum of six feet separation if the posted limit is greater than thirty-five miles per hour."
+      ],
+      "288": [
+        "a motor vehicle overtaking a bicycle proceeding in the same direction may partially cross the highway centerline... if it can be performed safely."
+      ],
+      "289": [
+        "Allow a motorcyclist a full lane width. Do not share the lane."
+      ],
+      "290": [
+        "Motorcycle turn signals may not self-cancel, and the motorcyclist may have forgotten to turn them off."
+      ],
+      "291": [
+        "When following a motorcyclist, allow for a minimum 4-second following distance or more in wet conditions"
+      ],
+      "292": [
+        "The No-Zone is the area around large trucks or buses where vehicles disappear from the commercial driver’s view into blind spots. These blind spots are on the sides, rear, and front"
+      ],
+      "293": [
+        "If you cannot see the driver’s face in the side view mirror, they cannot see you."
+      ],
+      "294": [
+        "When passing a large vehicle, look for the whole front of the vehicle in the rear-view mirror before pulling in front and maintaining speed."
+      ],
+      "295": [
+        "the driver will sometimes swing the vehicle wide to the left to safely turn right and clear the corner of a curb or other obstruction."
+      ],
+      "296": [
+        "keep as far as possible to the right side of the roadway to avoid a side-swipe crash and to reduce the wind turbulence between the two vehicles"
+      ],
+      "297": [
+        "These stop lines help to set you farther back at an intersection to give larger vehicles more turning space."
+      ],
+      "298": [
+        "bicyclists may be unable to signal if road or traffic conditions require them to keep both hands on the handlebars."
+      ],
+      "299": [
+        "Automobile drivers can assist the truck and bus drivers who are entering a freeway (interstate) by maintaining the proper speed for the flow of traffic."
+      ],
+      "300": [
+        "One indication of a runaway truck or bus is smoke coming from the brakes."
+      ],
+      "301": [
+        "The swing on articulated buses is approximately 3 feet.",
+        "Allow enough room between the vehicle and the rear of articulated bus to accommodate the tail swing."
+      ],
+      "302": [
+        "As a driver you must yield right-of-way to an emergency vehicle when the flashing lights and sirens are on by pulling over to the edge of the road"
+      ],
+      "303": [
+        "Turn on the hazard flashers and, if at night, the interior lights to help the officer see that everything is in order inside the vehicle."
+      ],
+      "304": [
+        "If the officer asks for these documents, tell the officer where they are located and reach for them slowly with one hand on the wheel."
+      ],
+      "305": [
+        "A fluorescent or reflective orange and red triangle displayed on the rear of vehicles... means the vehicle is traveling less than 25 mph."
+      ],
+      "306": [
+        "Pass with caution and do not use the horn or “rev” the engine because this may scare the horse and cause a crash."
+      ],
+      "307": [
+        "High beams let you see twice as far as low beams."
+      ],
+      "308": [
+        "If a vehicle comes toward you with their high beams on, look toward the right side of the road to keep from being distracted or momentarily blinded"
+      ],
+      "309": [
+        "In fog, rain, or snow, use low beams. Light from high beams may cause glare and make it more difficult to see ahead."
+      ],
+      "310": [
+        "Increase the following distance by adding... at least two additional seconds for driving on unfamiliar roadways at night."
+      ],
+      "311": [
+        "Work zone signs have an orange background and black letters or symbols."
+      ],
+      "312": [
+        "Always reduce your speed in a work zone, even if there are no workers present."
+      ],
+      "313": [
+        "Observe the posted work zone signs until you see “End Road Work.”"
+      ],
+      "314": [
+        "Never use cruise control on slippery roads."
+      ],
+      "315": [
+        "the law requires drivers to stay at least 200 feet behind a snowplow when its red or amber lights are on."
+      ],
+      "316": [
+        "you could also be given a ticket and be held accountable for any costs related to rescuing yourself"
+      ],
+      "317": [
+        "To prevent glare, avoid using high beams during a night storm."
+      ],
+      "318": [
+        "Generally, the first driver to the bridge has the right-of-way."
+      ],
+      "319": [
+        "Reduce speed and increase the following distance. Also, maintain a firm grip on the steering wheel."
+      ],
+      "320": [
+        "When approaching an uncontrolled rural intersection, slow down and be prepared to stop"
+      ],
+      "321": [
+        "Alcohol and other impairing drugs: a. reduce your judgment.",
+        "Alcohol and other impairing drugs reduce: Judgment: Judgment is a brain-centered activity"
+      ],
+      "322": [
+        "A yellow dashed line on your side of the roadway only means: c. passing is permitted on your side.",
+        "Two-direction roadway – passing permitted when dashed yellow line is on your side"
+      ],
+      "323": [
+        "If you arrive at a four-way intersection controlled by stop signs at the same time as another driver, you should: b. yield the right-of-way to the driver on your right.",
+        "The driver on your right at an all-way stop intersection if both of you arrive at the intersection at the same time"
+      ],
+      "324": [
+        "If a pedestrian is crossing in the middle of the street, not at a crosswalk, even if it is illegal, you: a. must stop for them.",
+        "Always be prepared to yield to pedestrians even if they are not in a crosswalk."
+      ],
+      "325": [
+        "Motorcycle operators have the right to: a. use a complete traffic lane.",
+        "Allow a motorcyclist a full lane width. Do not share the lane."
+      ],
+      "326": [
+        "20-year old’s must wait until their 21st birthday and have an additional 30 days to renew",
+        "Licenses expiring 30 days after licensee’s 21st birthday may only be renewed on or within the 30 days immediately following the birthdate."
+      ],
+      "327": [
+        "No drive tests are given from 11:30 a.m. to 1:30 p.m. or within an hour of closing, so please plan accordingly."
+      ],
+      "328": [
+        "Vermillion 11 E Cherry St (Hallmark Square)"
+      ],
+      "329": [
+        "Vermillion 11 E Cherry St (Hallmark Square)"
+      ],
+      "330": [
+        "Watertown 2001 9th Ave SW, Suite 100"
+      ],
+      "331": [
+        "Wagner 60 Main Ave SE (City Hall)"
+      ],
+      "332": [
+        "Wagner 60 Main Ave SE (City Hall)"
+      ],
+      "333": [
+        "Webster 711 W 1st St, Suite 107 (Courthouse)"
+      ],
+      "334": [
+        "Webster 711 W 1st St, Suite 107 (Courthouse)",
+        "Winner 200 E 3rd St (Courthouse)"
+      ],
+      "335": [
+        "Sturgis 1401 Lazelle St (Community Center)"
+      ],
+      "336": [
+        "REVISED 06/2021"
+      ],
+      "337": [
+        "Watertown 2001 9th Ave SW, Suite 100"
+      ],
+      "338": [
+        "Winner 200 E 3rd St (Courthouse)"
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 20,
-    "topics_covered": 20,
+    "topics_total": 25,
+    "topics_covered": 25,
     "coverage_pct": 100.0,
     "uncovered_topics": [],
     "verdict": "PASS",
@@ -63,6 +1128,20 @@
     "sign_ratio_pct": 9.1,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 338,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "pa",
   "name": "Pennsylvania",
-  "verified_at": "2026-05-26T02:34:18Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:19:08Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.dmv.pa.gov/Information-Centers/Publications/Pages/Drivers-Manual.aspx",
     "manual_pdf_sha256": "3a6e48560b81d1e8afb10a0f0cbeb840d7b452c42e736199f0aa1b2a8e02715e",
@@ -24,25 +24,1539 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 489,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "The motorcyclist has the same rights and responsibilities on the roadway as drivers of other vehicles."
+      ],
+      "2": [
+        "almost two-thirds of these crashes are caused not by the motorcyclist but by the driver of the other vehicle."
+      ],
+      "3": [
+        "Allow more following distance Leave three or four seconds when following a motorcycle"
+      ],
+      "4": [
+        "In dry conditions, motorcycles can stop more quickly than a vehicle."
+      ],
+      "5": [
+        "Wait to be sure the motorcycle is going to turn before you proceed."
+      ],
+      "6": [
+        "Allow a motorcyclist a full lane width.",
+        "Do not share the lane."
+      ],
+      "7": [
+        "Nearly 40 percent were caused by the other vehicle turning left in front of the motorcyclist."
+      ],
+      "8": [
+        "Motorcyclists may change speed or adjust their position within a lane suddenly in reaction to road and traffic conditions"
+      ],
+      "9": [
+        "A strong gust of wind can move a motorcycle across an entire lane if the rider is not prepared for it."
+      ],
+      "10": [
+        "rules of the road... apply to the three types of vehicles recognized by Pennsylvania law: bicycles, horse-drawn vehicles and motor vehicles."
+      ],
+      "11": [
+        "all bicyclists, just like motorists, are required to stop at red lights."
+      ],
+      "12": [
+        "Driving is a privilege and not a right."
+      ],
+      "13": [
+        "your parent or guardian must complete the Parent or Guardian Consent Form (DL-180TD)"
+      ],
+      "14": [
+        "One very important responsibility is that you never mix drinking and driving."
+      ],
+      "15": [
+        "Motorcycles have a much smaller profile than other vehicles, which can make it more difficult to judge the speed and distance"
+      ],
+      "16": [
+        "You cannot apply for your permit before your 16th birthday."
+      ],
+      "17": [
+        "The form must be completed no earlier than six (6) months prior to your 16th birthday."
+      ],
+      "18": [
+        "You will need to take and pass the Vision, Knowledge and Road Tests to get your driver’s license."
+      ],
+      "19": [
+        "the DL-180TD must be signed by the parent, guardian, person in loco parentis, or spouse who is 18 years of age or older in the presence of a notary."
+      ],
+      "20": [
+        "If you are over 18 years of age, you must present two (2) proofs of residency"
+      ],
+      "21": [
+        "These documents must be originals (photocopies will not be accepted)."
+      ],
+      "22": [
+        "After passing the Knowledge Test, the examiner will give you a learner’s permit, which is valid for one (1) year."
+      ],
+      "23": [
+        "If you are under the age of 18, you are required to complete at least 65 hours of behind-the-wheel skill-building"
+      ],
+      "24": [
+        "including no less than 10 hours of nighttime driving and five (5) hours of bad weather driving before taking your Road Test."
+      ],
+      "25": [
+        "A licensed driver who is at least 21 years of age or a parent, guardian, person in loco parentis, or spouse who is 18 years of age or older and holds a driver’s license must ride with you"
+      ],
+      "26": [
+        "In addition, drivers under the age of 18 cannot have more passengers in the vehicle than the number of seat belts."
+      ],
+      "27": [
+        "After you have waited the mandatory six (6) months from your permit issue date"
+      ],
+      "28": [
+        "if you do not pass your road test after three (3) tries, you may obtain a Non-Commercial Learner's Permit Application to Add/Extend/Replace/Change/Correct (DL-31)."
+      ],
+      "29": [
+        "You may take the Knowledge Test only one time on any day regardless of test location."
+      ],
+      "30": [
+        "check with your insurance company and the other state’s Department of Transportation to make sure your learner’s permit is considered valid."
+      ],
+      "31": [
+        "You may take the Knowledge Test only one time on any day regardless of test location."
+      ],
+      "32": [
+        "Applicants under 18 years of age... must have written consent from a parent, guardian, person in loco parentis, or spouse who is 18 years of age or older."
+      ],
+      "33": [
+        "Your Social Security number will not be printed on your learner’s permit or driver’s license."
+      ],
+      "34": [
+        "If your vision fails to meet the vision standards, the examiner will give you a Report of Eye Examination Form (DL-102)."
+      ],
+      "35": [
+        "you must get a Pennsylvania driver’s license within 60 days after moving to Pennsylvania"
+      ],
+      "36": [
+        "authorized to drive in Pennsylvania for up to one year from their date of entry into the United States, or upon expiration of their foreign license, whichever comes first."
+      ],
+      "37": [
+        "supervision of a licensed driver who is at least 21 years of age or a parent, guardian, person in loco parentis, or spouse who is 18 years of age or older"
+      ],
+      "38": [
+        "drivers under the age of 18 cannot have more passengers in the vehicle than the number of seat belts."
+      ],
+      "39": [
+        "You may not drive between the hours of 11 p.m. and 5 a.m., unless your parent, guardian, person in loco parentis, or spouse who is 18 years of age or older is with you."
+      ],
+      "40": [
+        "you may drive between 11 p.m. and 5 a.m., if you are involved in public or charitable service, a member of a volunteer fire company or employed during those hours."
+      ],
+      "41": [
+        "You may not carry more than one (1) passenger under the age of 18 who is not an immediate family member"
+      ],
+      "42": [
+        "You will receive a mandatory 90-day suspension if you accumulate six (6) or more points or are convicted of driving 26 miles per hour (mph) or more over the posted speed limit."
+      ],
+      "43": [
+        "Your junior driver’s license will automatically become a regular driver’s license when you turn 18 years of age."
+      ],
+      "44": [
+        "non-commercial Class C driver’s license, which is the class that covers these types of vehicles.",
+        "operators of regular passenger vehicles, pick-up trucks or vans."
+      ],
+      "45": [
+        "CLASS A (minimum age 18): Required to operate any combination of vehicles"
+      ],
+      "46": [
+        "has a certificate of authorization from a fire chief or head of the rescue or emergency squad will be authorized to operate any fire or emergency vehicle"
+      ],
+      "47": [
+        "If you test on a motor-driven cycle, an \"8\" restriction will appear on our driver's license. This restriction prohibits you from operating a motorcycle."
+      ],
+      "48": [
+        "The Knowledge Test consists of 18 multiple choice questions. You must answer 15 questions correctly to pass the test."
+      ],
+      "49": [
+        "If you fail the Knowledge Test, you will be permitted to retake the test the following business day."
+      ],
+      "50": [
+        "person, who is at least 21 years of age or a parent, guardian, person in loco parentis, or spouse who is 18 years of age or older, accompanying you"
+      ],
+      "51": [
+        "If it is determined any part of your vehicle is unsafe or does not meet state inspection requirements, you will not be allowed to take the Road Test."
+      ],
+      "52": [
+        "Park your vehicle midway between two (2) uprights in a space that is 24 feet long and eight (8) feet wide."
+      ],
+      "53": [
+        "You have one (1) attempt to successfully park your vehicle using no more than three (3) adjustments."
+      ],
+      "54": [
+        "the self parking feature must be turned off and is not permitted to be activated during the Road Test."
+      ],
+      "55": [
+        "If you are under the age of 18 and fail the Road Test, Pennsylvania law requires you to wait seven (7) days before you can retake the Road Test."
+      ],
+      "56": [
+        "You have three (3) chances with each learner’s permit to pass the Road Test before the expiration date of the learner’s permit."
+      ],
+      "57": [
+        "If you have not taken or successfully completed the Road Test within three (3) years of your physical examination date, you must start over with another Non-Commercial Learner’s Permit Application"
+      ],
+      "58": [
+        "CLASS B (minimum age 18): Required to operate any single vehicle rated in excess of 26,000 pounds."
+      ],
+      "59": [
+        "Failure to properly operate any of the vehicle controls will result in a failure of the Road Test."
+      ],
+      "60": [
+        "When they are arranged horizontally, red is always on the left and green on the right."
+      ],
+      "61": [
+        "You may also turn left after you stop at a red light, if you are in the left lane and are turning left from a one-way street onto another one-way street"
+      ],
+      "62": [
+        "A flashing red light has the same meaning as a STOP sign. You must come to a complete stop."
+      ],
+      "63": [
+        "A non-functioning traffic signal should be treated as though it were a four-way STOP sign."
+      ],
+      "64": [
+        "A steady yellow “X” over a traffic lane means you must change lanes because the direction of travel for that lane is about to be reversed."
+      ],
+      "65": [
+        "When the flashing DON’T WALK or flashing upraised hand begins: a. Finish crossing, if you are in the street."
+      ],
+      "66": [
+        "When driving near a blind pedestrian who is carrying a white cane or walking with a guide dog, you must slow down, always yield the right-of-way and then proceed with caution."
+      ],
+      "67": [
+        "You must travel no faster than 15 mph when the yellow signals are flashing or during the time periods indicated on the sign."
+      ],
+      "68": [
+        "Exceeding the speed limit in a school zone will result in three (3) points on your driving record, and you will also be fined."
+      ],
+      "69": [
+        "Do not move forward or attempt to go around any gate or ignore any signal of an approaching train.",
+        "Proceed with caution only after all signals are completed"
+      ],
+      "70": [
+        "A STEADY GREEN ARROW means you may turn the way the arrow points.",
+        "your turn is “protected” because oncoming traffic is stopped by a red light."
+      ],
+      "71": [
+        "A FLASHING YELLOW ARROW means you may turn in the direction of the arrow with caution, however, you must first yield to oncoming traffic and pedestrians."
+      ],
+      "72": [
+        "On single-lane ramps, only one (1) car may enter the highway each time the light turns green."
+      ],
+      "73": [
+        "make sure you stop your vehicle in a location where it will be entirely clear of any railroad tracks."
+      ],
+      "74": [
+        "Signs are divided into three (3) basic categories: Regulatory, Warning and Guide signs."
+      ],
+      "75": [
+        "If you do not obey the messages on regulatory signs, you could be fined and receive points on your driving record"
+      ],
+      "76": [
+        "stop before the front of your vehicle reaches the first painted line."
+      ],
+      "77": [
+        "If two vehicles reach the intersection at the same time, the driver on the left yields to the driver on the right."
+      ],
+      "78": [
+        "YIELD signs are triangular (3-sided) in shape."
+      ],
+      "79": [
+        "You should treat the crossbuck sign as a YIELD sign"
+      ],
+      "80": [
+        "At the first roadway, you can only turn right, and at the second roadway, you can only turn left."
+      ],
+      "81": [
+        "This sign indicates where a lane is reserved for the exclusive use of left-turning vehicles in either direction and is not to be used for through traffic or passing."
+      ],
+      "82": [
+        "A SPEED LIMIT sign indicates the maximum legal speed under ideal conditions for the stretch of highway where it is posted."
+      ],
+      "83": [
+        "“Driving too fast for conditions” is the No. 1 reason 16 and 17-year-old drivers are involved in crashes."
+      ],
+      "84": [
+        "when you reach the intersection, you must make the turn. You may travel only in the direction the arrow points, even if you are in the turn-only lane in error."
+      ],
+      "85": [
+        "This sign indicates a left turn is permitted, but you must yield to oncoming traffic."
+      ],
+      "86": [
+        "Unauthorized vehicles parked in these spaces are subject to a fine and towing costs."
+      ],
+      "87": [
+        "This sign is posted where opposing traffic may continue to move after your signal has turned red."
+      ],
+      "88": [
+        "This is the only pennant-shaped warning sign. This sign marks the beginning of a no passing zone"
+      ],
+      "89": [
+        "This sign indicates a left turn is permitted when the yellow arrow is flashing, but you must yield to oncoming traffic."
+      ],
+      "90": [
+        "This sign indicates there are three (3) or more curves in a row on the road ahead."
+      ],
+      "91": [
+        "merging is not necessary because the entering traffic uses a new lane that has been added to the roadway."
+      ],
+      "92": [
+        "This sign is placed at the far side of a T-intersection to tell you that you can only go left or right."
+      ],
+      "93": [
+        "In wet weather, reduce your speed and increase your following distance. Do not accelerate or brake quickly."
+      ],
+      "94": [
+        "do not slam on the brakes or steer sharply to try to get back onto the roadway—you can easily lose control"
+      ],
+      "95": [
+        "Slow down and be ready to shift to a lower gear to control your speed and to save wear and tear on your brakes."
+      ],
+      "96": [
+        "This sign may have either a yellow background (as shown) or a fluorescent yellow-green background."
+      ],
+      "97": [
+        "Slow down and prepare to navigate through the set of curves.",
+        "Slow down substantially and prepare to navigate through the set of turns."
+      ],
+      "98": [
+        "Keep to the right of the centerline and watch for oncoming traffic."
+      ],
+      "99": [
+        "Before you reach such an extreme curve, slow down as much as you would to make a turn at an intersection."
+      ],
+      "100": [
+        "This sign is used to warn that you will be merging with another roadway as some traffic is exiting and crossing your path."
+      ],
+      "101": [
+        "A driver preparing to enter the main road may not be able to see you approaching from around the curve and may pull out in front of you"
+      ],
+      "102": [
+        "This is the only pentagon-shaped sign used on the roadway. It means you are approaching a school zone."
+      ],
+      "103": [
+        "Turn on your headlights when traveling through a work zone, no matter what time of day. This is the law for all posted work zones"
+      ],
+      "104": [
+        "If you are pulled over by police for a traffic violation in a work zone and your vehicle’s headlights are not turned on, you will be fined an additional $25."
+      ],
+      "105": [
+        "Work Zone Signs are normally diamond shaped, like warning signs, but they are orange with black lettering instead of yellow with black lettering."
+      ],
+      "106": [
+        "Used at roadway pinch points (no shoulder, narrow lanes, etc.) to warn you, as a motorist, to provide adequate space for bicyclists to share the roadway."
+      ],
+      "107": [
+        "roadside objects and conditions are indicated by the following markers, where the stripes are angled down in the direction you need to move to avoid the hazard"
+      ],
+      "108": [
+        "An active work zone is the portion of a work zone where construction, maintenance or utility workers are on the roadway, or on the shoulder of the highway next to an open travel lane."
+      ],
+      "109": [
+        "Exit numbers correspond with the mile markers. This change allows motorists to quickly calculate distances between exits"
+      ],
+      "110": [
+        "the lane below the sign will not continue through the interchange; instead, the lane will go off of the road to form a ramp."
+      ],
+      "111": [
+        "One or two-digit, even-numbered interstates are generally east-west routes."
+      ],
+      "112": [
+        "If the first of the three (3) digits is an even number, the highway usually connects to interstate highways at both ends.",
+        "Many times such routes are known as “loops” or “beltways.”"
+      ],
+      "113": [
+        "The small green EXIT number sign on top of the green rectangular sign will be on the left side of the sign, if the exit is on the left side of the highway."
+      ],
+      "114": [
+        "An arrow panel displaying either of the messages shown in the figure to the far right (caution) indicates there is a work area ahead next to the travel lane."
+      ],
+      "115": [
+        "They are green with white letters.",
+        "Most highway and expressway signs are posted the same way."
+      ],
+      "116": [
+        "Barrels, tubes, cones and vertical panels are all devices used in work zones to guide you through changing traffic patterns and keep you away from hazards associated with road work."
+      ],
+      "117": [
+        "The numbers start at zero in the western part of the state for east-west roadways"
+      ],
+      "118": [
+        "Knowing how to read mile markers can help you to know exactly where you are and give an approximate location, if you have to call for roadside assistance."
+      ],
+      "119": [
+        "The signs are square or rectangular, are blue with white letters or symbols, and show the location of various services located at the next exit."
+      ],
+      "120": [
+        "These signs are square or rectangular and may be blue or brown with white lettering.",
+        "The signs direct motorists to tourist attractions such as museums, historical landmarks, or state or national parks."
+      ],
+      "121": [
+        "Yellow lines divide traffic traveling in opposite directions."
+      ],
+      "122": [
+        "Solid white lines divide lanes of traffic traveling in the same direction. Solid white lines are also used to mark the right edge of the road."
+      ],
+      "123": [
+        "A double, solid yellow centerline shows the center of a two-way road. ... passing by traffic traveling in either direction is not allowed on roads marked in this manner."
+      ],
+      "124": [
+        "You may pass if the broken line is on your side of the road and safe conditions exist, but you may not pass when a solid yellow line is on your side of the road."
+      ],
+      "125": [
+        "The inside, broken yellow and solid yellow centerlines show vehicles traveling in either direction may use the center lane only to make left turns."
+      ],
+      "126": [
+        "The right edge of the road is marked with a solid white line. The left edge of each side is marked by a solid yellow line."
+      ],
+      "127": [
+        "If there are no signals at the railroad crossing, you should slow down and prepare to stop, if you see or hear a train approaching."
+      ],
+      "128": [
+        "Do not move forward or attempt to go around any gate or ignore any signal of an approaching train.",
+        "10. YOU MAY DRIVE AROUND THE GATES AT A RAILROAD CROSSING: ... B. Never"
+      ],
+      "129": [
+        "Warning signs tell you about conditions on or near the road ahead. ... Warning signs are usually diamond shaped with black symbols or words on a yellow background."
+      ],
+      "130": [
+        "Warning signs tell you about conditions on or near the road ahead. ... Warning signs are usually diamond shaped with black symbols or words on a yellow background."
+      ],
+      "131": [
+        "When they are arranged vertically, red is always on top and green on the bottom.",
+        "26. FROM TOP TO BOTTOM, THE FOLLOWING IS THE PROPER ORDER FOR TRAFFIC LIGHTS: A. Red, yellow, green"
+      ],
+      "132": [
+        "If the green arrow turns into a green light, you may still turn in that direction, but first yield to pedestrians and oncoming traffic."
+      ],
+      "133": [
+        "A STEADY YELLOW LIGHT tells you a steady red light will soon appear. If you are driving toward an intersection and a yellow light appears, slow down and prepare to stop."
+      ],
+      "134": [
+        "A flashing yellow light means CAUTION. Slow down, look and proceed with care."
+      ],
+      "135": [
+        "A flashing red light has the same meaning as a STOP sign. You must come to a complete stop."
+      ],
+      "136": [
+        "If you are within the intersection or cannot stop safely before entering the intersection, continue through carefully."
+      ],
+      "137": [
+        "A non-functioning traffic signal should be treated as though it were a four-way STOP sign."
+      ],
+      "138": [
+        "You may turn right while the light is red, unless a NO TURN ON RED sign is posted at the intersection. You must first stop, check for and yield to pedestrians and other traffic."
+      ],
+      "139": [
+        "Solid white lines divide lanes of traffic traveling in the same direction."
+      ],
+      "140": [
+        "A double, solid yellow centerline shows the center of a two-way road... passing by traffic traveling in either direction is not allowed."
+      ],
+      "141": [
+        "If you cannot see traffic, yield to any pedestrians and then carefully pull forward past the line until you can see clearly."
+      ],
+      "142": [
+        "A SPEED LIMIT sign indicates the maximum legal speed under ideal conditions for the stretch of highway where it is posted."
+      ],
+      "143": [
+        "CENTER LANE LEFT TURN ONLY This sign indicates where a lane is reserved for the exclusive use of left-turning vehicles"
+      ],
+      "144": [
+        "Check your tires “cold” - before you’ve driven or at least three hours after you’ve driven."
+      ],
+      "145": [
+        "If any part of Lincoln's head is covered by the tread, you're driving with the safe amount of tread."
+      ],
+      "146": [
+        "In a crash, loose items in your vehicle become projectiles that continue to travel the same speed your vehicle was moving before the impact."
+      ],
+      "147": [
+        "The side mirror(s) should be set so when you lean left/right you can just barely see the side of your vehicle."
+      ],
+      "148": [
+        "It is against the law to have any object or material hanging from the rearview mirror while moving."
+      ],
+      "149": [
+        "This helps you stay alert and guards against carbon monoxide (exhaust gas) poisoning when you drive."
+      ],
+      "150": [
+        "Adjust your head restraint so the top of the head restraint is at least as high as the top of your ears."
+      ],
+      "151": [
+        "Being thrown from a vehicle increases your chances of death by 75 percent."
+      ],
+      "152": [
+        "headphones/ear pieces can only be used in one ear for communication purposes."
+      ],
+      "153": [
+        "If you are a teen driver with other teens as passengers, statistics show you are more likely to have a crash"
+      ],
+      "154": [
+        "Driver distraction and inattention to road and traffic conditions are responsible for 25 to 30 percent of police-reported traffic crashes."
+      ],
+      "155": [
+        "A teenager dialing a cell phone misses it 53 percent of the time."
+      ],
+      "156": [
+        "Being awake for 18 hours impairs your driving about as much as a blood alcohol level of .05 percent."
+      ],
+      "157": [
+        "The best thing to do if you begin to feel tired while driving is to stop driving."
+      ],
+      "158": [
+        "Have your vision checked every one (1) or two (2) years."
+      ],
+      "159": [
+        "physicians must report to PennDOT individuals whom they have diagnosed as having a condition that could impair their ability to drive safely."
+      ],
+      "160": [
+        "If you are a driver under age 21 and your blood alcohol concentration (BAC) is .02 percent or more, you are considered to be driving under the influence (DUI)."
+      ],
+      "161": [
+        "You should consider one (1) drink to be 1.5 oz. of 80 proof liquor, 12 oz. of regular beer, or 5 oz. of wine."
+      ],
+      "162": [
+        "Only time will “sober you up.” You cannot reduce your blood alcohol concentration level by drinking coffee or other caffeinated beverages, or by taking a cold shower."
+      ],
+      "163": [
+        "Even drivers whose blood alcohol level is .04... are between two (2) and seven (7) times more likely to be involved in a crash than drivers who have no alcohol in their blood."
+      ],
+      "164": [
+        "marijuana can slow reaction time, impair judgment of time and distance, and decrease coordination."
+      ],
+      "165": [
+        "When the warning label states - Don't operate heavy machinery - Your vehicle is considered heavy machinery!"
+      ],
+      "166": [
+        "Drivers with less than five (5) years of experience are most likely to make errors that lead to crashes."
+      ],
+      "167": [
+        "The major types of crashes in which new drivers (16 and 17-year olds) in Pennsylvania are involved include: 1) Hitting a stationary object"
+      ],
+      "168": [
+        "43% of drivers killed in crashes tested positive for drugs… 37% tested positive for alcohol."
+      ],
+      "169": [
+        "A 4-second following distance... will allow you to steer or brake to avoid a hazard safely on the highway, if the pavement is dry."
+      ],
+      "170": [
+        "If you see someone following you too closely (tailgating), move over to the right lane, if possible."
+      ],
+      "171": [
+        "You should be able to identify problem situations 12 to 15 seconds ahead — about one block in the city, or a quarter of a mile at highway speeds."
+      ],
+      "172": [
+        "Look to the left first, because vehicles coming from the left are closer to you."
+      ],
+      "173": [
+        "These areas are blind spots, always check them by turning your head before changing lanes."
+      ],
+      "174": [
+        "the best thing to do is to slow down and “split the difference” by steering a middle course between the oncoming vehicles and the parked vehicles."
+      ],
+      "175": [
+        "The major types of crashes in which new drivers (16 and 17-year olds) in Pennsylvania are involved include: 1) Hitting a stationary object"
+      ],
+      "176": [
+        "You are driving downhill - it is harder for your brakes to slow your vehicle, especially at high speeds."
+      ],
+      "177": [
+        "If you do not have at least eight (8) feet of space on at least one side of your vehicle to use as an escape path, you will need to allow more space to the front"
+      ],
+      "178": [
+        "You are following a large vehicle blocking your view ahead - you need extra room to see around the vehicle."
+      ],
+      "179": [
+        "If your view of the cross street is blocked by buildings, shrubs or parked vehicles, move forward slowly until you can see clearly"
+      ],
+      "180": [
+        "Either speed up or drop back to move out of the driver’s blind spot."
+      ],
+      "181": [
+        "To determine your following distance, watch the rear bumper of the vehicle ahead of you. When the bumper passes a road marking or a roadside object like a telephone pole, start counting"
+      ],
+      "182": [
+        "You are following school buses, taxis, public and private buses and trucks transporting hazardous substances - these vehicles must stop at railroad crossings and make other, unexpected stops."
+      ],
+      "183": [
+        "When passing another vehicle, get past the other driver’s blind spot as quickly and as safely as you can. The longer you stay in the blind spot, the longer you both are in danger."
+      ],
+      "184": [
+        "Do not depend on mirrors or sensors alone, look over your left and right shoulders to make sure no one is in your vehicle’s blind spots."
+      ],
+      "185": [
+        "When backing up, always check behind your vehicle — do it before you get in your vehicle."
+      ],
+      "186": [
+        "The maximum speed limit in Pennsylvania is 70."
+      ],
+      "187": [
+        "Fuel consumption increases about 5% for every five miles per hour driven above 60 mph."
+      ],
+      "188": [
+        "Stay cool. Use your car's air conditioner when driving more than 40 mph."
+      ],
+      "189": [
+        "Overall, traffic fatality rates are three (3) to four (4) times higher at night than in daylight."
+      ],
+      "190": [
+        "Anytime your vehicle’s wipers are in continuous or intermittent use due to weather conditions."
+      ],
+      "191": [
+        "In bad weather, use only low beams. High beams actually reduce visibility under these conditions."
+      ],
+      "192": [
+        "When they cannot see pedestrians or vehicles on the highway for a distance of 1,000 feet ahead"
+      ],
+      "193": [
+        "Pennsylvania law requires you use low beams whenever you are within 500 feet of an oncoming vehicle and when you are following a vehicle within 300 feet."
+      ],
+      "194": [
+        "If the driver does not dim their lights, look toward the right side of the road."
+      ],
+      "195": [
+        "To avoid overdriving your headlights on a dark road at night, you should not drive faster than 45 mph."
+      ],
+      "196": [
+        "Pavements can become very slippery in the first 10 to 15 minutes of a rain storm."
+      ],
+      "197": [
+        "be extra careful driving on sections of road shaded by trees or buildings; these areas freeze more quickly and dry last."
+      ],
+      "198": [
+        "You can hydroplane at speeds as low as 35 mph, when water is only 1/10 of an inch deep."
+      ],
+      "199": [
+        "Keep both hands on the steering wheel.",
+        "Slowly take your foot off of the gas pedal to let your vehicle slow down."
+      ],
+      "200": [
+        "it is extremely dangerous near 32° (Fahrenheit), when precipitation turns to rain or sleet — a thin layer of water on top of ice is more slippery than ice alone."
+      ],
+      "201": [
+        "When the road looks wet but no spray is coming from the tires of other vehicles, “black ice” may be present."
+      ],
+      "202": [
+        "the operator of the vehicle from which the snow or ice came is subject to a fine of $200 to $1,000 for each offense."
+      ],
+      "203": [
+        "Reduce your speed by 5 to 10 mph on wet roads and increase your following distance to five (5) or six (6) seconds."
+      ],
+      "204": [
+        "an activated cruise control system will continue to apply power, keeping your wheels spinning."
+      ],
+      "205": [
+        "try to time your arrival at an intersection by letting your vehicle coast until the light turns green and vehicles ahead of you have begun to move."
+      ],
+      "206": [
+        "it’s best to pull completely off of the road, preferably into a parking lot, to wait until the fog clears. While parked, turn your hazard lights on"
+      ],
+      "207": [
+        "Do not use your high beams. They direct their light up and into the fog, which bounces the light back into your eyes, creating glare"
+      ],
+      "208": [
+        "A dirty headlight reduces light output by more than 50 percent."
+      ],
+      "209": [
+        "Turn on your low beams, even during the daytime. This increases your visibility to other drivers."
+      ],
+      "210": [
+        "exercise extreme caution by gradually slowing and activating your hazard lights for increased visibility. Do not slam on your brakes."
+      ],
+      "211": [
+        "the penalty would approach $100 for drivers who fail to use their headlights when required!",
+        "motorists who do not comply with the law may face a fine of $25, but with fees and other associated costs, the penalty would approach $100."
+      ],
+      "212": [
+        "requires motorists to turn on their headlights anytime their vehicles wipers are in continuous or intermittent use",
+        "Daytime running lights are not enough. Your tail lights must be illuminated as well."
+      ],
+      "213": [
+        "If you cannot move over, you must reduce your speed to at least 20 miles per hour below the posted speed limit."
+      ],
+      "214": [
+        "Slow down to let the oncoming vehicle pass and then move left to pass the cyclist, leaving a sufficient amount of space for safety."
+      ],
+      "215": [
+        "an orange triangle is displayed on the back of farm tractors and horse-drawn vehicles designed to operate at 25 mph or less"
+      ],
+      "216": [
+        "If you are going to brake where other drivers may not expect it, quickly tap your brake pedal three (3) or four (4) times."
+      ],
+      "217": [
+        "If you must drive below 40 mph on a limited access highway, use your hazard (four-way) flashers to warn the drivers behind you."
+      ],
+      "218": [
+        "If you are driving 35 mph or more, you must signal at least 300 feet before turning."
+      ],
+      "219": [
+        "you must always use your turn signals at least 100 feet before turning, if you are driving less than 35 mph."
+      ],
+      "220": [
+        "Lift your hood to let other drivers know your vehicle is disabled."
+      ],
+      "221": [
+        "Speed is probably the most important factor. When turning, reduce to a speed that allows you to maintain control of your vehicle"
+      ],
+      "222": [
+        "turn into the closest lane going in that direction. Turn into the left lane when making a left turn, and turn into the right lane when making a right turn."
+      ],
+      "223": [
+        "marked on both sides by two (2) lines — one (1) solid outer line and one (1) broken inner line — it means this lane may only be used for left turns"
+      ],
+      "224": [
+        "When you enter the center turn lane, enter it completely. Do not leave the back end of your vehicle sticking into the normal travel lane, blocking traffic."
+      ],
+      "225": [
+        "Snow Squall Warning\" messages for specific roadways where these dangerous squalls are likely to cause a great impact to drivers, typically lasting less 45 minutes"
+      ],
+      "226": [
+        "Signal three (3) to four (4) seconds before your turn."
+      ],
+      "227": [
+        "make sure drivers coming from all directions are at least 500 feet away from you, and they can see you clearly."
+      ],
+      "228": [
+        "Stopping halfway across a street is safe only when there is a turning lane provided in the center median large enough to hold your entire vehicle."
+      ],
+      "229": [
+        "Wait until the other driver actually starts to turn before you go."
+      ],
+      "230": [
+        "It is illegal to pass a vehicle ahead of you in an acceleration lane."
+      ],
+      "231": [
+        "At 45 mph, this translates into 1/4 mile of clear roadway you need to safely pass a slower vehicle."
+      ],
+      "232": [
+        "You need to be going about 10 mph faster than the vehicle(s) you are passing."
+      ],
+      "233": [
+        "When the driver you are passing is making or signaling a left turn, the driver of the passing vehicle must stay on the berm or shoulder."
+      ],
+      "234": [
+        "You are within 100 feet of or are crossing any intersection or railroad grade crossing, unless an official traffic control device says you may."
+      ],
+      "235": [
+        "Before you move back into the lane, make sure you can see both headlights on the front of the vehicle you passed in your rearview mirror."
+      ],
+      "236": [
+        "Drivers entering a circular intersection (or roundabout) must yield the right-of-way to drivers already in the circle."
+      ],
+      "237": [
+        "If you end up in a lane marked for turns only when you want to go straight through the intersection, you must make the turn."
+      ],
+      "238": [
+        "Do not change lanes during the turn, as this will cause you to crash into the driver turning next to you."
+      ],
+      "239": [
+        "In over one-third (1/3) of the crashes involving 16-year-old drivers in Pennsylvania, the teen driver was pulling out from a stop sign or turning left across traffic."
+      ],
+      "240": [
+        "cross the “first” roadway when there is a safe gap in traffic approaching from your left, and then turn left on the other side of the barrier"
+      ],
+      "241": [
+        "You need about a 6-second gap in both directions to cross a 30 mph street or about a block of clear space to the right and left."
+      ],
+      "242": [
+        "Allow a gap of about eight (8) seconds between you and any vehicle approaching from the left."
+      ],
+      "243": [
+        "By turning before you reach the “X,” you avoid a “tangle turn” with the other left-turning driver."
+      ],
+      "244": [
+        "CIRCULATING TRAFFIC HAS THE RIGHT- OF-WAY."
+      ],
+      "245": [
+        "As you approach your exit, use you RIGHT TURN SIGNAL."
+      ],
+      "246": [
+        "If in the roundabout, immediately exit the roundabout and pull to the side. NEVER STOP IN THE ROUNDABOUT."
+      ],
+      "247": [
+        "NEVER OVERTAKE A BICYCLIST ACTING AS A VEHICLE IN A ROUNDABOUT."
+      ],
+      "248": [
+        "Instead of making a left turn directly across oncoming traffic, you will use a right turn lane curving back to intersect the major road at a traffic light then turn left."
+      ],
+      "249": [
+        "TO MAINTAIN CONTROL ON CURVES, YOU MUST SLOW DOWN. DO IT BEFORE YOU ENTER THE CURVE."
+      ],
+      "250": [
+        "Keep slightly to the right of the lane center on right curves and in the middle of your lane on left curves."
+      ],
+      "251": [
+        "The most frequent crash type for 16-year-old drivers in Pennsylvania is a single-vehicle, run-off-the-road crash."
+      ],
+      "252": [
+        "If you are the driver entering the highway, you must yield to the exiting driver."
+      ],
+      "253": [
+        "If you miss your exit, take the next one. Do not stop or back up on the highway."
+      ],
+      "254": [
+        "Do not slow down until after you have moved into the exit lane."
+      ],
+      "255": [
+        "This happens when you stare straight ahead at the roadway for long periods of time, and stop actively scanning"
+      ],
+      "256": [
+        "park as close to it as you can, but no more than 12 inches away."
+      ],
+      "257": [
+        "Make sure your vehicle can be seen at least 500 feet in both directions."
+      ],
+      "258": [
+        "When parking your vehicle on a downhill with or without a curb, you should turn your steering wheel so your wheels are completely to the right."
+      ],
+      "259": [
+        "Within 15 feet of a fire hydrant."
+      ],
+      "260": [
+        "Within 30 feet of any flashing signal, stop sign, yield sign or traffic control device"
+      ],
+      "261": [
+        "Within 50 feet of the nearest rail at a railroad crossing."
+      ],
+      "262": [
+        "By law, you must turn on your vehicle’s headlights, not just the daytime running lights, when driving through these areas."
+      ],
+      "263": [
+        "Also, fines are doubled for certain violations in active work zones, including speeding."
+      ],
+      "264": [
+        "variable message boards may be placed a minimum of 200 feet approaching a work zone."
+      ],
+      "265": [
+        "If you see a white line on your right and a yellow line on the left, you are headed in the right direction."
+      ],
+      "266": [
+        "Double your following distance; the most common crash type in work zones is the rear-end collision."
+      ],
+      "267": [
+        "Obey flaggers – their authority overrides conventional traffic control devices."
+      ],
+      "268": [
+        "Always look left, right and then left again as you approach a railroad crossing."
+      ],
+      "269": [
+        "quickly leave the vehicle and move as far away from the track as you can."
+      ],
+      "270": [
+        "it is never safe to wave a pedestrian into the line of traffic at any time"
+      ],
+      "271": [
+        "When approaching a stopped vehicle from behind, slow down and do not pass until you are sure there are no pedestrians crossing in front of it."
+      ],
+      "272": [
+        "Be sure to move back only when you see the front of the truck in your rearview mirror.",
+        "After passing, change lanes only when you can see the truck’s headlights or front grill in your rearview mirror."
+      ],
+      "273": [
+        "On a downgrade, the truck’s momentum will cause it to go faster, so you may need to increase your speed."
+      ],
+      "274": [
+        "After you have passed a bicyclist, do not slow down or stop quickly. A quick stop could lead to the bicyclist crashing into your vehicle."
+      ],
+      "275": [
+        "According to the law, you must allow the motorcyclist/moped driver to use one (1) complete lane."
+      ],
+      "276": [
+        "Do not assume a motorcycle/moped is turning when you see its turn signal flashing. A motorcycle/moped’s turn signals may not turn off automatically, like a vehicle’s."
+      ],
+      "277": [
+        "You will make it easier for the truck driver if you reduce your speed slightly and then keep your speed steady. In any event, do not increase your speed while the truck is passing you."
+      ],
+      "278": [
+        "Do not use your cruise control in work zones."
+      ],
+      "279": [
+        "You are 40 times more likely to die in a crash involving a train than you are in a crash with another vehicle."
+      ],
+      "280": [
+        "Allow the same 4-second following distance or more you would allow for other vehicles."
+      ],
+      "281": [
+        "Remember, the wind turbulence pushes vehicles apart. It does not pull them together."
+      ],
+      "282": [
+        "When following a truck or bus, if you cannot see the side mirrors of the vehicle in front of you, the driver of the large vehicle cannot see you."
+      ],
+      "283": [
+        "Leave plenty of room between you and the truck when coming to a stop on a hill. Trucks may roll back as a driver takes their foot off of the brake."
+      ],
+      "284": [
+        "At least four (4) seconds are needed to keep you out of the truck’s rear blind spot"
+      ],
+      "285": [
+        "It may look like trucks are going straight or turning left when they are actually making a right turn."
+      ],
+      "286": [
+        "traveling at 65 mph on a clear, dry roadway, requires a minimum of 600 feet to come to a complete stop"
+      ],
+      "287": [
+        "These ramps are to be used only by large vehicles that are out of control or cannot stop because of brake failure."
+      ],
+      "288": [
+        "you must stop at least 10 feet away from the bus whether you are behind it or coming toward it on the same roadway"
+      ],
+      "289": [
+        "If you are approaching a school bus... and you are driving on the opposite side of a divided highway... you do not have to stop."
+      ],
+      "290": [
+        "result in a 60-day suspension of your driver’s license, five (5) points on your driving record and a fine."
+      ],
+      "291": [
+        "If drivers cannot move over because of traffic or other conditions, they must reduce their speed to at least 20 miles per hour below the posted speed limit."
+      ],
+      "292": [
+        "Any person convicted of a violation of this law will have 2 points assessed to their driving record."
+      ],
+      "293": [
+        "In addition, fines will be doubled for traffic violations occurring in work zone areas."
+      ],
+      "294": [
+        "Bright lights from a vehicle behind will blind the truck driver when they reflect off of the truck’s large side mirrors."
+      ],
+      "295": [
+        "Oversized loads are accompanied by pilot vehicles.",
+        "due to their excessive width, obstacles on the berm could cause them to cross the yellow or white line."
+      ],
+      "296": [
+        "After stopping, horse-drawn vehicles often roll backward, and following too close limits the horse-drawn vehicle driver’s ability to see you."
+      ],
+      "297": [
+        "When you pass a horse-drawn vehicle or horseback rider, do not drive too fast or blow your horn, as this may spook the horse."
+      ],
+      "298": [
+        "An open-bed pickup truck or open flatbed truck may not be driven at a speed of more than 35 mph, if any person is occupying the bed of the truck."
+      ],
+      "299": [
+        "A child, who is a participant in an officially sanctioned parade, only during the course of the parade."
+      ],
+      "300": [
+        "Start driving again after the emergency vehicle passes you, keeping at least 500 feet away from it."
+      ],
+      "301": [
+        "these vehicles may have wing plows that stick out several feet on either side.",
+        "To be safe, you should not attempt to pass a plow, either on the left or on the right."
+      ],
+      "302": [
+        "If an aggressive driver pursues you, do not go home. Instead, drive to a police station, convenience store"
+      ],
+      "303": [
+        "Of the approximate 1,500 highway deaths in PA each year, about 60 percent, or around 900, are attributed to aggressive driving."
+      ],
+      "304": [
+        "This is because your reaction time to swerve is faster than your reaction time to brake."
+      ],
+      "305": [
+        "your hands should hold the wheel at either the 9 and 3 o’clock position or the 8 and 4 o’clock position",
+        "A ten (10) and two (2) o’clock hand position is acceptable; however, if your air bag deploys, you are at risk of injury."
+      ],
+      "306": [
+        "Keep your thumbs along the face of the steering wheel instead of gripping the inside of the rim."
+      ],
+      "307": [
+        "being positioned at least ten (10) inches away from your air bag."
+      ],
+      "308": [
+        "Without ABS, press and release the brakes repeatedly. Pumping the brakes will slow your vehicle"
+      ],
+      "309": [
+        "With ABS, maintain firm and continuous pressure on the brake - your vehicle will not skid."
+      ],
+      "310": [
+        "If the rear of your vehicle is skidding to the right, turn the wheel to the right."
+      ],
+      "311": [
+        "If the rear of your vehicle is skidding to the left, turn the wheel to the left.",
+        "steering in the direction the rear of your vehicle is skidding.",
+        "It may take a few of these “corrections” before you have fully regained control"
+      ],
+      "312": [
+        "When skidding, do not use your brakes. If you hit the brakes, the skid will be worse.",
+        "You risk locking your wheels and losing all steering control."
+      ],
+      "313": [
+        "Twelve inches of moving water can float many cars."
+      ],
+      "314": [
+        "Two feet of moving water can move most SUV's and pick-up trucks.",
+        "Two (2) feet of water will carry away most vehicles, including sport utility vehicles (SUVs)."
+      ],
+      "315": [
+        "Shift to neutral immediately and use the brakes, if the pedal remains stuck."
+      ],
+      "316": [
+        "Do not turn it to “LOCK” because you will lose steering ability."
+      ],
+      "317": [
+        "You will feel the brake pedal go down farther than usual before the vehicle begins to slow, and you will need to push harder on the pedal."
+      ],
+      "318": [
+        "While the vehicle is on the ground, loosen the lug nuts by using the end of lug wrench"
+      ],
+      "319": [
+        "When a front tire blows out, your steering wheel will vibrate, and you will feel the vehicle suddenly pull to one side."
+      ],
+      "320": [
+        "Stay off of your brake! Braking after a blowout will cause you to skid and lose control of your vehicle."
+      ],
+      "321": [
+        "Pump the brake pedal quickly several times. This will often build up enough brake pressure to stop the vehicle."
+      ],
+      "322": [
+        "If the other driver does not move over, try to escape to the right, if possible."
+      ],
+      "323": [
+        "Once the lead vehicle has cleared an intersection, the rest of the procession may proceed through the intersection, other traffic must yield."
+      ],
+      "324": [
+        "All vehicles in a funeral procession must have their headlights and emergency flashers turned on and bear a flag or insignia"
+      ],
+      "325": [
+        "If you do get stuck in floodwaters, quickly get out of your vehicle and move to higher ground."
+      ],
+      "326": [
+        "All vehicles in a funeral procession must have their headlights and emergency flashers turned on"
+      ],
+      "327": [
+        "Drivers in funeral processions may proceed through a red light or stop sign, if the lead vehicle starts through the intersection while the light was green."
+      ],
+      "328": [
+        "Ease off of the gas pedal to slow down when your two wheels on the right side both go off of the pavement."
+      ],
+      "329": [
+        "If you turn the wheel sharply to get back onto the road, it can cause the vehicle to whip sideways and cross into oncoming traffic."
+      ],
+      "330": [
+        "Continue to slow gradually until you are traveling very slowly - less than 25 mph and preferably closer to 10 mph"
+      ],
+      "331": [
+        "If you are a teen driver with other teens as passengers, statistics show you are more likely to have a crash"
+      ],
+      "332": [
+        "Allow more following distance Leave three or four seconds when following a motorcycle"
+      ],
+      "333": [
+        "Drivers must yield to pedestrians when they are: a) crossing at any intersection without a traffic light"
+      ],
+      "334": [
+        "trucks and buses may have air brakes and take longer distances to stop."
+      ],
+      "335": [
+        "Truck drivers cannot see vehicles squeezing in between them and the curb. Stay put, and give truck drivers plenty of room to turn."
+      ],
+      "336": [
+        "If you are approaching a school bus... and you are driving on the opposite side of a divided highway... you do not have to stop."
+      ],
+      "337": [
+        "If you are stopped at a railroad crossing with more than one track... Wait until you have a clear view down both tracks before you start across."
+      ],
+      "338": [
+        "Signal three (3) to four (4) seconds before your turn."
+      ],
+      "339": [
+        "A blind spot is any place around a vehicle a driver cannot see without moving their head."
+      ],
+      "340": [
+        "Before backing up, turn your head so you can see through the rear window. Do not depend on your mirrors or sensors alone."
+      ],
+      "341": [
+        "If your vehicle’s turn signals do not work, use these hand signals."
+      ],
+      "342": [
+        "When they cannot see pedestrians or vehicles on the highway for a distance of 1,000 feet ahead of the vehicle they are operating."
+      ],
+      "343": [
+        "If the driver does not dim their lights, look toward the right side of the road."
+      ],
+      "344": [
+        "Driving while fatigued has similar effects as driving under the influence of alcohol."
+      ],
+      "345": [
+        "Teens who sleep less than eight (8) hours a night are at increased risk for vehicle crashes."
+      ],
+      "346": [
+        "It takes a person of average weight at least one (1) hour to process the alcohol in every drink."
+      ],
+      "347": [
+        "Additionally, combining drugs and alcohol further increases the side effects and greatly increases the risk of causing a crash."
+      ],
+      "348": [
+        "Let the vehicle slow to a stop. Make sure it is off of the road before you change the tire."
+      ],
+      "349": [
+        "Pull over to the curb or side of the road and stop."
+      ],
+      "350": [
+        "Start driving again after the emergency vehicle passes you, keeping at least 500 feet away from it."
+      ],
+      "351": [
+        "Carelessness and speeding are the main causes of traffic fatalities in work zones."
+      ],
+      "352": [
+        "Double your following distance; the most common crash type in work zones is the rear-end collision.",
+        "Lengthen your usual following distance — by double"
+      ],
+      "353": [
+        "On two-lane, two-way streets or highways, make left turns from as close to the centerline as possible."
+      ],
+      "354": [
+        "When the driver you are passing is making or signaling a left turn, the driver of the passing vehicle must stay on the berm or shoulder."
+      ],
+      "355": [
+        "TO MAINTAIN CONTROL ON CURVES, YOU MUST SLOW DOWN. DO IT BEFORE YOU ENTER THE CURVE."
+      ],
+      "356": [
+        "Drivers entering a circular intersection (or roundabout) must yield the right-of-way to drivers already in the circle."
+      ],
+      "357": [
+        "The law does not give anyone the right-of-way at intersections; it only says who must yield."
+      ],
+      "358": [
+        "At the stop sign, first look to the left, then look to your right for a safe gap, and then quickly check to your left again before proceeding."
+      ],
+      "359": [
+        "Accelerate up to the speed of traffic.",
+        "When entering a highway from an entrance ramp, you should generally: D. Accelerate to the speed of traffic"
+      ],
+      "360": [
+        "If you miss your exit, take the next one. Do not stop or back up on the highway."
+      ],
+      "361": [
+        "Drivers turning left must yield to oncoming vehicles going straight ahead."
+      ],
+      "362": [
+        "This happens when you stare straight ahead at the roadway for long periods of time, and stop actively scanning ahead, behind and around your vehicle."
+      ],
+      "363": [
+        "It is best to keep a space cushion on all sides of your vehicle."
+      ],
+      "364": [
+        "At highway speeds, on a dry road, a safe following distance is at least: C. 4 seconds of following distance from the car ahead of you"
+      ],
+      "365": [
+        "To avoid the need to make emergency (or “panic”) stops while driving in traffic? B. Look ahead and maintain a safe following distance"
+      ],
+      "366": [
+        "Slow down to let the oncoming vehicle pass and then move left to pass the cyclist, leaving a sufficient amount of space for safety."
+      ],
+      "367": [
+        "If the other driver does not move over, try to escape to the right, if possible. ... If a collision is unavoidable, brake firmly and steadily."
+      ],
+      "368": [
+        "If the rear of your vehicle is skidding to the left, turn the wheel to the left."
+      ],
+      "369": [
+        "Pavements can become very slippery in the first 10 to 15 minutes of a rain storm."
+      ],
+      "370": [
+        "Turn on your low beam headlights (and fog lights, if your vehicle has them) so others can see you."
+      ],
+      "371": [
+        "PennDOT begins to take corrective action when a driving record reaches six (6) or more points."
+      ],
+      "372": [
+        "When a driving record reaches six (6) or more points for the first time, the driver will receive a written notice to take a written special point examination."
+      ],
+      "373": [
+        "the driving privilege of a person under the age of 18 will be suspended if that person accumulates six (6) or more points",
+        "The first suspension will be for a period of 90 days."
+      ],
+      "374": [
+        "Three (3) points are removed from a driving record for every 12 consecutive months in which a person is not under suspension or revocation or has not committed any violation"
+      ],
+      "375": [
+        "check to make sure you have enough room to get all the way across before you drive onto the tracks.",
+        "make sure you stop your vehicle in a location where it will be entirely clear of any railroad tracks."
+      ],
+      "376": [
+        "Failure to comply with a railroad crossing gate or barrier (30-day suspension)."
+      ],
+      "377": [
+        "Failure to comply with a railroad crossing gate or barrier (30-day suspension)."
+      ],
+      "378": [
+        "Turn on your vehicle’s interior light as soon as you stop and before the officer approaches, if it is nighttime."
+      ],
+      "379": [
+        "Wait until the officer asks you to retrieve your driver’s license, registration and insurance cards."
+      ],
+      "380": [
+        "After your driving privilege is restored, your driving record will show five (5) points, regardless of the number of points that appeared on your record before your driving privilege was suspended"
+      ],
+      "381": [
+        "If PennDOT finds your vehicle was not covered by insurance for a period of 31 days or longer, your registration will be suspended for three (3) months."
+      ],
+      "382": [
+        "If the vehicle is flashing only blue lights, then it is not a police officer."
+      ],
+      "383": [
+        "you may drive to the nearest well-lit, populated area, but acknowledge you understand the request to stop by turning on your flashers and driving at a reduced speed."
+      ],
+      "384": [
+        "If the crash involves a parked vehicle or damage to property, stop immediately, and try to find the owner. If you cannot find the owner, leave a note in a place where it can be seen"
+      ],
+      "385": [
+        "If the police do not investigate a crash and someone has died or been injured, or if a vehicle must be towed, send a Driver's Accident Report Form (AA-600) within five (5) days"
+      ],
+      "386": [
+        "If a driver is convicted of fleeing or attempting to elude police, the penalty is a one-year suspension of the driving privilege, a fine of $500"
+      ],
+      "387": [
+        "The law covering chemical testing says you have agreed to take such a test -- just by being licensed to drive in Pennsylvania."
+      ],
+      "388": [
+        "If the police arrest you for driving while under the influence of alcohol or drugs and you refuse to take one (1) or more chemical tests of breath or blood, your driving privilege will be automatically suspended for one (1) year."
+      ],
+      "389": [
+        "Even if you are found not guilty of driving while under the influence, your driving privilege will be suspended for one (1) year for a first-time refusal to take a breath or blood test."
+      ],
+      "390": [
+        "Drivers who refuse to submit to a chemical test will be required to pay a chemical test refusal restoration fee. First offense is $500"
+      ],
+      "391": [
+        "The law reduced the Blood Alcohol Content (BAC) from .08 to .02 for minors (under 21) charged with Driving Under the Influence."
+      ],
+      "392": [
+        "If you are involved in a crash resulting in bodily injury, death or property damage, you are subject to the penalties listed in Table 2, “High Rate,” even if your BAC is lower than the levels listed in Table 2"
+      ],
+      "393": [
+        "Anyone who drives under the influence of controlled substances and drivers who refuse a chemical test are subject to the penalties listed in Table 3, “Highest Rate.”"
+      ],
+      "394": [
+        "Participate in 12 1/2 hours of Alcohol Highway Safety School."
+      ],
+      "395": [
+        "The charge of ungraded misdemeanor means if you contest the case, you are not entitled to a jury trial."
+      ],
+      "396": [
+        "TABLE 1 - GENERAL IMPAIRMENT: .08 TO .099 BLOOD ALCOHOL CONCENTRATION",
+        "License: No action"
+      ],
+      "397": [
+        "parental consent to conduct these tests is not required, but the police will notify your parents of the arrest."
+      ],
+      "398": [
+        "Adults, even parents, who are convicted of knowingly and intentionally supplying minors with alcohol are subject to a fine of at least $1,000 for the first offense"
+      ],
+      "399": [
+        "The \"one driver’s license\" concept, which requires the surrender of an out-of-state driver's license when application for a driver’s license in another state is made."
+      ],
+      "400": [
+        "individuals who receive an operating privilege suspension as a result of a chemical test refusal violation will be required to have an Ignition Interlock system installed"
+      ],
+      "401": [
+        "If you are under 21 and are convicted of DUI for the first time, you will go to jail for a term ranging from two (2) days to six (6) months, your license will be suspended for a full year, and you will pay a fine of $500 to $5,000."
+      ],
+      "402": [
+        "A chemical test refusal restoration fee must be paid by certified check or money order."
+      ],
+      "403": [
+        "commercial vehicle drivers with a BAC of .04 or more;"
+      ],
+      "404": [
+        "Not responding to an out-of-state citation will result in the indefinite suspension of your Pennsylvania driving privilege until a response is made to the location indicated on the citation."
+      ],
+      "405": [
+        "if your name or address is changed, you must notify PennDOT within 15 days of that change even if moving out of state."
+      ],
+      "406": [
+        "All drivers and front seat passengers in vehicles, light trucks and motor homes must wear seat belts."
+      ],
+      "407": [
+        "If you are transporting passengers age eight (8) or older but less than age 18, they must wear seat belts, no matter where they are riding in the vehicle."
+      ],
+      "408": [
+        "If you are a driver under the age of 18, the number of passengers may not exceed the number of seat belts in the vehicle."
+      ],
+      "409": [
+        "At 30 mph, this is like hitting the ground from the top of a three-story building."
+      ],
+      "410": [
+        "Your chances of being killed are almost 25 times greater if you are thrown from your vehicle."
+      ],
+      "411": [
+        "People under 16 years of age who use a false identification card to buy alcohol will: A. Receive a driving suspension that starts on their 16th birthday"
+      ],
+      "412": [
+        "If a person under 21 years old consumes alcohol, but is not driving a motor vehicle, the penalty for a first offense is: A. A 90-day driver license suspension and up to a $500 fine"
+      ],
+      "413": [
+        "parental consent to conduct these tests is not required",
+        "Parental consent to conduct breath, blood, and urine tests is: A. Not required"
+      ],
+      "414": [
+        "your license will be suspended for a full year",
+        "you will receive a 1-year license suspension for a first offense."
+      ],
+      "415": [
+        "Failure to stop and render aid in the event of a vehicle accident resulting in the death or personal injury of another (Section 3742)."
+      ],
+      "416": [
+        "Children younger than age 2 must be secured in a rear-facing car seat until the child outgrows the maximum weight and height limits"
+      ],
+      "417": [
+        "In a crash, the air bag will hit the back of the child seat with tremendous force, which will be transmitted to the infant’s head causing severe injury or death."
+      ],
+      "418": [
+        "the temperature inside a vehicle can reach deadly levels in only 10 minutes."
+      ],
+      "419": [
+        "Place your purse, briefcase, cell phone, or something you will need in the back seat so you will be sure to see a child left in the vehicle."
+      ],
+      "420": [
+        "thicker winter coats can compress enough to create significant slack in the harness."
+      ],
+      "421": [
+        "Children under the age of four (4) must be buckled into a federally-approved child passenger restraint system (child safety seat)"
+      ],
+      "422": [
+        "Children ages four (4) and older, but under the age of eight (8) must be buckled into a federally-approved child booster seat"
+      ],
+      "423": [
+        "Drivers are responsible for securing children into an approved child passenger restraint system and ensuring children under age 18 are buckled up."
+      ],
+      "424": [
+        "To be safe, in case the air bag deploys, you should be at least 10 inches away from the steering wheel."
+      ],
+      "425": [
+        "Hold the steering wheel at the 9 and 3 o'clock or 8 and 4 o'clock positions."
+      ],
+      "426": [
+        "It is recommended that all children ages 12 and under ride in the rear seat."
+      ],
+      "427": [
+        "Make your initial contact with PennDOT at least two (2) weeks prior to the time you want to take the test"
+      ],
+      "428": [
+        "Upon request, voice tests are offered at all Driver License Centers across the commonwealth."
+      ],
+      "429": [
+        "Any vehicle unlawfully parked in a parking area for disabled persons may be removed from that area by towing",
+        "Individuals convicted of this offense will be fined between $50 and $200."
+      ],
+      "430": [
+        "A violation of this law... may result in a fine of up to $300 upon conviction."
+      ],
+      "431": [
+        "A violation of this law, including any violation resulting from the conduct of any other persons present within any vehicle of which you are the driver, may result in a fine of up to $300 upon conviction."
+      ],
+      "432": [
+        "Your vehicle must have a safety inspection at an authorized inspection station every 12 months."
+      ],
+      "433": [
+        "if a police officer notices faulty equipment on your vehicle, you may be required to fix it within five (5) days to avoid a citation."
+      ],
+      "434": [
+        "When passing, you must allow at least four (4) feet between your vehicle and a bicycle in order to pass safely."
+      ],
+      "435": [
+        "if you can do it safely, you are permitted to cross the center double yellow line so you can maintain the four (4) feet of clearance between your vehicle and the bicycle."
+      ],
+      "436": [
+        "they may travel at less than the posted minimum speed and may not be cited for impeding traffic."
+      ],
+      "437": [
+        "violating the law is a primary, summary offense with convictions carrying a $50 fine."
+      ],
+      "438": [
+        "The law does not authorize the seizure of an IWCD.",
+        "The texting ban does not include the use of a GPS device",
+        "this law supersedes and preempts any local ordinances"
+      ],
+      "439": [
+        "if emergency responders are called out because of your actions, the fine is increased to up to $500 and you will be held liable for repaying the emergency response costs."
+      ],
+      "440": [
+        "Open vehicle doors pose a very serious threat to bicyclists.",
+        "It forces your body to turn, which will better allow you to see approaching bicyclists."
+      ],
+      "441": [
+        "Bicyclists should ride at least three feet from parked cars to avoid doors, both on streets with and without bike lanes."
+      ],
+      "442": [
+        "If you are under 18 years of age, you may not take your Road Test for six (6) months after you have received your learner’s permit"
+      ],
+      "443": [
+        "PennDOT encourages motorists to not call 511PA while driving. Callers should safely pull off the road to call the system, or check for travel delays before heading out."
+      ],
+      "444": [
+        "Nausea and/or vomiting",
+        "SYMPTOMS OF CARBON MONOXIDE EXPOSURE"
+      ],
+      "445": [
+        "On snowy days, always inspect your tail pipe and remove any snow or ice that might be obstructing your vehicle’s tail pipe."
+      ],
+      "446": [
+        "If you are stuck in traffic or otherwise sitting in an idling vehicle, make sure to partially open a window."
+      ],
+      "447": [
+        "check or replace batteries when changing the time on clocks in spring and fall each year."
+      ],
+      "448": [
+        "If you suspect carbon monoxide poisoning in your vehicle, exit the vehicle immediately, get fresh air, and seek emergency medical attention right away."
+      ],
+      "449": [
+        "always inspect your tail pipe and remove any snow or ice that might be obstructing your vehicle’s tail pipe."
+      ],
+      "450": [
+        "The law covering chemical testing says you have agreed to take such a test -- just by being licensed to drive in Pennsylvania.",
+        "Implied Consent (Chemical Testing for Alcohol or Drugs)"
+      ],
+      "451": [
+        "Headlight/Windshield Wiper Law . . . . . . . . . . . . 42",
+        "requires motorists to turn on their headlights anytime their vehicles wipers are in continuous or intermittent use"
+      ],
+      "452": [
+        "Lack of Sleep . . . . . . . . . . . . . . . . . . . . . . . . . 32",
+        "Inattention great enough to cause a crash can result from driving distractions or lack of sleep."
+      ],
+      "453": [
+        "Driving Emergencies, Dealing With:",
+        "Accelerator Sticks. . . . . . . . . . . . . . . . . . . . . . . . . . 62"
+      ],
+      "454": [
+        "Passengers in an Open-Bed Truck . . . . . . . . . . . . . . 59",
+        "An open-bed pickup truck or open flatbed truck may not be driven at a speed of more than 35 mph, if any person is occupying the bed"
+      ],
+      "455": [
+        "Interpreters for the Deaf/Hearing Impaired . . . . . 91",
+        "PennDOT's Bureau of Driver Licensing will provide an interpreter upon request for individuals who are hearing impaired"
+      ],
+      "456": [
+        "Zero Tolerance (Under 21 DUI) . . . . . . . . . . . . . 84",
+        "The Zero Tolerance law establishes serious consequences for those under 21, who drive with any measurable amount of alcohol"
+      ],
+      "457": [
+        "Snow/Ice Removal . . . . . . . . . . . . . . . . . . . . . . . . . 41",
+        "motorists will face severe fines if snow or ice that falls from their vehicle causes injury or death"
+      ],
+      "458": [
+        "“Four-Second Rule,” The . . . . . . . . . . . . . . . . . . . 35",
+        "A 4-second following distance... will allow you to steer or brake to avoid a hazard safely"
+      ],
+      "459": [
+        "Required Notification for Change in Name or Address . . 89",
+        "if your name or address is changed, you must notify PennDOT within 15 days"
+      ],
+      "460": [
+        "ZERO TOLERANCE LAW (UNDER 21 DUI)",
+        "The Zero Tolerance law establishes serious consequences for those under 21"
+      ],
+      "461": [
+        "KEEP A SPACE CUSHION AHEAD (4-SECOND RULE)",
+        "A 4-second following distance, as shown above in Area 1 of the space management diagram, will allow you to steer or brake to avoid a hazard safely"
+      ],
+      "462": [
+        "ESCAPE RAMPS On long downgrades, there may be special “escape” or “runaway” ramps for trucks."
+      ],
+      "463": [
+        "POINT REMOVAL FOR SAFE DRIVING Three (3) points are removed from a driving record for every 12 consecutive months in which a person is not under suspension"
+      ],
+      "464": [
+        "TURNING RIGHT AT A RED LIGHT Unless you see this sign, you may turn right at a red light if traffic is clear."
+      ],
+      "465": [
+        "ALTERNATIVE TESTING METHOD Some people who take the Knowledge Test may have trouble reading... Upon request, voice tests are offered"
+      ],
+      "466": [
+        "ELECTRIC ARROW PANELS Large electronic flashing arrow panels (move/merge right or left) placed in the roadway or mounted on vehicles advise approaching motorists of lane closures."
+      ],
+      "467": [
+        "VETERANS DESIGNATION You have the opportunity to add the veterans designation to your driver's license, which clearly indicates you are a veteran of the United States Armed Forces."
+      ],
+      "468": [
+        "RAMP-METERING SIGNALS Some highway entrance ramps have traffic signals at the end of the ramp that alternate between steady green and steady red."
+      ],
+      "469": [
+        "OBEDIENCE TO TRAFFIC-CONTROL DEVICES WARNING OF HAZARDOUS CONDITIONS LAW This law... makes it illegal to drive around or through signs or traffic control devices closing a road or highway due to hazardous conditions"
+      ],
+      "470": [
+        "SNOW SQUALLS Snow squalls are a dangerous winter driving hazard.",
+        "The National Weather Service now issues “Snow Squall Warning” messages for specific roadways"
+      ],
+      "471": [
+        "A non-functioning traffic signal should be treated as though it were a four-way STOP sign."
+      ],
+      "472": [
+        "TOURIST-ORIENTED DIRECTIONAL SIGNS These signs are square or rectangular and may be blue or brown with white lettering. The signs direct motorists to tourist attractions"
+      ],
+      "473": [
+        "ORGAN DONATION AWARENESS TRUST FUND (ODTF) You have the opportunity to donate to the Governor Robert P. Casey Memorial Organ & Tissue Donation Awareness Trust Fund."
+      ],
+      "474": [
+        "SOCIAL SECURITY NUMBER INFORMATION The Department is required by law to obtain your Social Security number"
+      ],
+      "475": [
+        "One organ and tissue donor can save up to 8 lives and help more than 75 people."
+      ],
+      "476": [
+        "One organ and tissue donor can save up to 8 lives and help more than 75 people."
+      ],
+      "477": [
+        "Anyone, regardless of age or medical history, can sign up to be a donor."
+      ],
+      "478": [
+        "There is no cost to donors or their families for organ or tissue donation."
+      ],
+      "479": [
+        "All major religions in the United States support organ and tissue donation and consider donation as a final act of love and generosity toward others."
+      ],
+      "480": [
+        "any adult who gives or sells beer, wine, wine coolers or liquor to a person under 21 faces up to a year in jail"
+      ],
+      "481": [
+        "minimum fine of $1,000 for the first kid served"
+      ],
+      "482": [
+        "$2,500 for each additional minor."
+      ],
+      "483": [
+        "Giving your own son or daughter a drink is illegal, too."
+      ],
+      "484": [
+        "place the donor designation on the license and sign a donor card.",
+        "wish to donate also should be shared with family and friends"
+      ],
+      "485": [
+        "heal from burns more quickly with donated skin"
+      ],
+      "486": [
+        "walk without pain with transplanted bone."
+      ],
+      "487": [
+        "help others regain sight through cornea transplants"
+      ],
+      "488": [
+        "free brochure, “The Responsible Parent,”"
+      ],
+      "489": [
+        "In Western Pennsylvania: Center for Organ Recovery & Education (CORE)"
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 27,
-    "topics_covered": 26,
-    "coverage_pct": 96.3,
-    "uncovered_topics": [
-      "turning restrictions at steady red arrows"
-    ],
+    "topics_total": 25,
+    "topics_covered": 25,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
     "verdict": "PASS",
     "grade": "A"
   },
@@ -66,6 +1580,37 @@
     "sign_ratio_pct": 3.6,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 489,
+      "avg_fidelity": 9.99,
+      "pct_at_10": 99.6,
+      "pct_above_9": 99.8,
+      "pct_above_7": 99.8,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [
+        162
+      ],
+      "verdict": "PASS",
+      "grade": "A"
+    },
+    "ja": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 489,
+      "avg_fidelity": 9.98,
+      "pct_at_10": 99.4,
+      "pct_above_9": 99.6,
+      "pct_above_7": 99.6,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [
+        48,
+        451
+      ],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

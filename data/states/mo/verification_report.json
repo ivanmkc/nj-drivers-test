@@ -1,16 +1,16 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "mo",
   "name": "Missouri",
-  "verified_at": "2026-05-26T02:30:00Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:08:15Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://dor.mo.gov/forms/Driver%20Guide.pdf",
     "manual_pdf_sha256": "861ad174501b46c3ec6f1ed7f9de73b4c60c9649b2b96fcdca815da937b1032c",
     "manual_text_sha256": "ff285c29fb48ebddf3ccefefbbe2c2602aedd9ef81dfc36c88e11804abac22aa",
     "manual_text_chars": 242926,
     "manual_pages": 102,
-    "edition": ""
+    "edition": "Rev August 2025"
   },
   "bank": {
     "total_questions": 394,
@@ -24,24 +24,1186 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 372,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "You must correctly answer 20 questions to pass the test."
+      ],
+      "2": [
+        "You are a full-time student and you have a valid driver license from your home state."
+      ],
+      "3": [
+        "Instruction Permit — Eligible Age: 15"
+      ],
+      "4": [
+        "Take your copy of the driver examination record and other required verification documents to your local license office to apply for the actual permit or license"
+      ],
+      "5": [
+        "The six-month permit period required for intermediate license does not start until the issuance of the temporary instruction permit."
+      ],
+      "6": [
+        "If you are 16 years old or older you may apply for a motorcycle instruction permit, but the motorcycle rider training course is not required."
+      ],
+      "7": [
+        "This permit allows daylight driving only, within a 50-mile radius of home, a motorcycle of no larger than 250 cc, and no passengers."
+      ],
+      "8": [
+        "Full Driver License (Class F) — Eligible Age: 18",
+        "This is the basic driver license, also called an operator license."
+      ],
+      "9": [
+        "If you already have a Class F license, a driving test is not required."
+      ],
+      "10": [
+        "Anyone obtaining a new license or permit is required to show verification of lawful status, identity (full legal name), social security number, and Missouri residency."
+      ],
+      "11": [
+        "you will need to take a written test of 25 multiple-choice questions."
+      ],
+      "12": [
+        "For-Hire License (Class E) — Eligible Age: 18"
+      ],
+      "13": [
+        "If you are under 21 years of age, you will be issued a permit identifying you as a minor.",
+        "If you are under 21 years of age, you will be issued a license identifying you as a minor."
+      ],
+      "14": [
+        "You operate or temporarily operate or move any farm tractor or implement on a highway for agri-related purposes."
+      ],
+      "15": [
+        "For-Hire License (Class E) — Eligible Age: 18"
+      ],
+      "16": [
+        "Individuals providing prepared food delivery services for entities such as a fast food restaurant"
+      ],
+      "17": [
+        "You will need to pass the Class F and Class M written, vision, road sign, and motorcycle skills tests."
+      ],
+      "18": [
+        "however he or she must hold, a valid operator’s (or higher classification) license."
+      ],
+      "19": [
+        "at least 21 years old to obtain a CDL with a Hazardous Materials or School Bus endorsement."
+      ],
+      "20": [
+        "Your nondriver ID expires on your date of birth in the sixth year after you apply."
+      ],
+      "21": [
+        "If you are age 70 or older, your nondriver ID will be issued as non-expiring."
+      ],
+      "22": [
+        "If you are new to Missouri and are transferring your out-of-state driver license... you must... take the vision and road sign tests."
+      ],
+      "23": [
+        "Your Missouri driver license has been expired for more than six months (184 days)."
+      ],
+      "24": [
+        "Hospital birth certificates and birth registration cards are not acceptable."
+      ],
+      "25": [
+        "If you are... age 65 or older you may be exempt from presenting documents for place of birth."
+      ],
+      "26": [
+        "Documents used for verify identity must contain your full legal name and date of birth."
+      ],
+      "27": [
+        "To obtain a REAL ID-compliant document, you must provide two documents verifying Missouri residency."
+      ],
+      "28": [
+        "A Post Office Box is not acceptable as a residential address."
+      ],
+      "29": [
+        "If you are under the age of 21... a parent or legal guardian may provide such a document on your behalf."
+      ],
+      "30": [
+        "Social Security Card, (must be original, signed and not laminated)"
+      ],
+      "31": [
+        "First Name Change - Certified court order.",
+        "Middle Name Change - Certified court order."
+      ],
+      "32": [
+        "Instruction Permit 15 $10.00 0–12 months"
+      ],
+      "33": [
+        "If you disobey the restriction(s), you can be charged with driving without a license, and if convicted, points will be placed on your driving record."
+      ],
+      "34": [
+        "C Daylight Driving Only"
+      ],
+      "35": [
+        "You have had epileptic seizures, convulsions, or blackouts within the six months prior to your application for a license."
+      ],
+      "36": [
+        "This person must complete a Driver Condition Report (Form 4319) and submit it to the Department."
+      ],
+      "37": [
+        "A school bus endorsement may be issued to drivers age 21 or older who hold a Class E (For-Hire) license"
+      ],
+      "38": [
+        "A school bus endorsement can be suspended for one year if a person fails to pass any drug, alcohol, or chemical test"
+      ],
+      "39": [
+        "you will need to pass the motorcycle written test, vision, road sign, and a skills test on a motorcycle or motortricycle."
+      ],
+      "40": [
+        "You can renew your license up to six months before it expires."
+      ],
+      "41": [
+        "Each time you renew, you will be required to take the vision and road sign test."
+      ],
+      "42": [
+        "If you will be leaving the state or country for an extended time you may request an early renewal of your driver license at your local license office."
+      ],
+      "43": [
+        "Nondriver ID Card (Voting Purposes Only) 17½ $0.00 0–6 years*"
+      ],
+      "44": [
+        "If you do not renew your license within six months (or 184 days) after its expiration date, you will have to take the written and driving tests"
+      ],
+      "45": [
+        "Missouri allows a renewal without re-examination for members of the armed forces whose license has expired while out of state, for up to six months from honorable discharge"
+      ],
+      "46": [
+        "If your current license expires within the next six months, you may renew your license early rather than obtain a duplicate license."
+      ],
+      "47": [
+        "If you held a non-commercial driver license, you may take the vision and road sign tests and renew your license even while your driving privilege is suspended."
+      ],
+      "48": [
+        "If you say “yes” to add the organ donor symbol, a red heart with a green banner will appear on the front of your instruction permit, driver license, or nondriver ID."
+      ],
+      "49": [
+        "There is no fee to place the symbol on your instruction permit, driver license or nondriver ID, or place your name in the registry."
+      ],
+      "50": [
+        "the clerk must ask you if you would like to make a monetary donation to the organ donor fund or the blindness awareness fund."
+      ],
+      "51": [
+        "“DHH” notation will allow law enforcement or emergency and medical personnel to readily determine if you are deaf or hard of hearing."
+      ],
+      "52": [
+        "There will be an additional cost of $1 added to standard processing fees when the boater identification indicator is initially added"
+      ],
+      "53": [
+        "submit a Physicians Statement (Form 5294) - Permanent Disability Indicator completed and signed by your physician"
+      ],
+      "54": [
+        "It is your responsibility to renew your driver license, even if you do not receive your reminder.",
+        "You can be ticketed for driving without a valid license."
+      ],
+      "55": [
+        "There is no additional cost to add the medical alert notation."
+      ],
+      "56": [
+        "your parent or guardian may request that the Director of Revenue deny you a license.",
+        "Form 4811 may be found on the Department’s website or at any license office."
+      ],
+      "57": [
+        "Failing to pay child support."
+      ],
+      "58": [
+        "Changing the information on your license or using someone else’s license when you attempt to buy alcohol."
+      ],
+      "59": [
+        "person who is at least 25 years of age who has been licensed for a minimum of three years and has received written permission from the parent or legal guardian."
+      ],
+      "60": [
+        "At age 16 or older, you may drive when accompanied in the front seat by a person who is at least 21 years old and has a valid driver license."
+      ],
+      "61": [
+        "The required 40 hours must include at least ten hours of nighttime driving."
+      ],
+      "62": [
+        "You must have an instruction permit for a minimum of six months (182 days) beginning the day after issuance."
+      ],
+      "63": [
+        "This includes having no alcohol-related convictions in the last 12 months and no traffic convictions in the last six months."
+      ],
+      "64": [
+        "During the first six months, you may not operate a motor vehicle with more than one passenger who is under the age of 19"
+      ],
+      "65": [
+        "After the first six months, you may not operate a motor vehicle with more than three passengers who are under 19 years of age"
+      ],
+      "66": [
+        "You may not drive alone between 1:00 a.m. and 5:00 a.m. except to and from a school activity, job, or an emergency"
+      ],
+      "67": [
+        "Male applicants, age 18 to 26, may register with the Selective Service at the time of their license or permit application."
+      ],
+      "68": [
+        "When you become 21 years old, you may apply and pay for another driver license (without the minor indication) or wait until your under-21 driver license expires."
+      ],
+      "69": [
+        "Out-of-State driver license (valid or expired no more than 184 days)"
+      ],
+      "70": [
+        "Almost 50 percent of all test-takers fail the first time."
+      ],
+      "71": [
+        "You may not have any alcohol-related offenses or traffic convictions within the last 12 months."
+      ],
+      "72": [
+        "The driver examination consists of a four-part test:",
+        "A written test on traffic laws and rules for safe driving",
+        "A vision test",
+        "A road sign test",
+        "A driving test (skills)"
+      ],
+      "73": [
+        "If you have a driver license from another state that is valid or has been expired for less than 184 days, and you are applying for the same type of license in Missouri, you only have to take the vision and road sign tests."
+      ],
+      "74": [
+        "If you are applying for a Class F (operator) license, you must take a 25 question multiple-choice written test."
+      ],
+      "75": [
+        "The questions will be on the laws and methods of driving covered in this Guide but will also include the information on commercial vehicles found in Chapter 15."
+      ],
+      "76": [
+        "The standard minimum acuity is at least 20/40 with either or both eyes."
+      ],
+      "77": [
+        "If both your natural and corrected acuity vision are worse than 20/160, or your peripheral combined is worse than 70 degrees, you cannot take the driving test and cannot have a driver license."
+      ],
+      "78": [
+        "Two sets of brakes (parking and a foot brake) in good working order."
+      ],
+      "79": [
+        "You will drive, and the examiner will sit beside you. No one else may ride in the vehicle during the test."
+      ],
+      "80": [
+        "Park parallel to the curb, in a space 25 feet long and seven feet wide."
+      ],
+      "81": [
+        "Parking no more than 18” from the curb."
+      ],
+      "82": [
+        "Looking over your right shoulder to see through the rear glass."
+      ],
+      "83": [
+        "Parking no more than 18” from the curb."
+      ],
+      "84": [
+        "Refuse to drive as the examiner asks.",
+        "If you lose more than 30 points, you will fail the test.",
+        "Violate a traffic law;"
+      ],
+      "85": [
+        "You must send proof of the additional behind-the-wheel driver training administered by an eligible driver and obtain an approval to test from the Department of Revenue"
+      ],
+      "86": [
+        "Fraud is a Class “A” misdemeanor that may result in the loss of your driving privilege for up to one year."
+      ],
+      "87": [
+        "The law says who must yield the right-of-way; it does not give any driver the right-of-way."
+      ],
+      "88": [
+        "you could be fined a minimum of $250 for the first offense"
+      ],
+      "89": [
+        "When the vehicle overtaken is making or about to make a left turn;"
+      ],
+      "90": [
+        "The view is obstructed upon approaching within 100 feet of any bridge, viaduct, or tunnel;"
+      ],
+      "91": [
+        "Drivers turning left must yield to oncoming vehicles going straight;"
+      ],
+      "92": [
+        "drivers must yield to vehicles coming from the right;"
+      ],
+      "93": [
+        "If you are in an intersection, drive through the intersection before you pull over.",
+        "Remain stopped until the emergency vehicle passes."
+      ],
+      "94": [
+        "make a lane change into a lane not adjacent to the stationary vehicle (if on a roadway having at least four lanes"
+      ],
+      "95": [
+        "Amber warning lights will flash 500 feet before the bus comes to a designated stop."
+      ],
+      "96": [
+        "Looking over your right shoulder to see through the rear glass."
+      ],
+      "97": [
+        "When approaching a roundabout intersection, always yield to traffic in the circle and pedestrians in the crosswalks."
+      ],
+      "98": [
+        "When you are traveling the opposite direction of a school bus on a highway containing four or more lanes of traffic;"
+      ],
+      "99": [
+        "You should signal at least 100 feet before you turn so the other drivers can be ready."
+      ],
+      "100": [
+        "Never make a U-turn at a location that is marked with a “No U-Turn” sign or at an intersection controlled by a traffic signal or police officer."
+      ],
+      "101": [
+        "If you swing wide, the driver behind you may think you are changing lanes or going to turn left, and may try to pass you on the right."
+      ],
+      "102": [
+        "a vehicle may not travel in this lane for more than 500 feet"
+      ],
+      "103": [
+        "NEVER make a left turn to enter a roundabout."
+      ],
+      "104": [
+        "Vehicles within the roundabout have the right of way."
+      ],
+      "105": [
+        "If you miss your exit, continue through the roundabout until you reach your appropriate exit."
+      ],
+      "106": [
+        "NEVER stop while inside a roundabout. If an emergency vehicle approaches while you are in the roundabout, exit immediately and pull to the right."
+      ],
+      "107": [
+        "A truck apron, also known as off-tracking, is the paved area on the inside of the roundabout for the rear wheels of large trucks to use when turning."
+      ],
+      "108": [
+        "drivers at a J-turn intersection turn right in the same direction of traffic, merge into the far left lane, and then make a left turn in the direction they intend to travel."
+      ],
+      "109": [
+        "Cities and towns may have regulations to do the following:",
+        "Prohibit the use of sound-producing warning devices."
+      ],
+      "110": [
+        "turn from the lane that is closest to the direction you want to go, and turn into the lane closest to the one you came from."
+      ],
+      "111": [
+        "do not use this lane when entering the roadway from a side street."
+      ],
+      "112": [
+        "You should not share a lane with a motorcycle. The motorcyclist needs the entire lane for safety reasons."
+      ],
+      "113": [
+        "To drive any motorcycle on the public streets, you must have a valid driver license with a motorcycle endorsement or a motorcycle license."
+      ],
+      "114": [
+        "A truck or bus has blind spots on each side, in the rear and in the front where an automobile cannot be seen. These blind spots are referred to as the \"No-Zone.\""
+      ],
+      "115": [
+        "A fully loaded tractor-trailer may take almost 400 feet to come to a complete stop."
+      ],
+      "116": [
+        "If the flashing “Don’t Walk” sign appears when you are crossing the street, you may finish crossing the street."
+      ],
+      "117": [
+        "After you pass, make sure you can see the cab of the truck in your rearview mirror before reentering the lane."
+      ],
+      "118": [
+        "You should leave three to four feet of clearance to avoid suddenly opened car doors or to allow for a vehicle to swerve."
+      ],
+      "119": [
+        "You must yield the right-of-way to all traffic when crossing in the middle of a block."
+      ],
+      "120": [
+        "Because of their size, large trucks may swing out to the left as the first step in making a right turn."
+      ],
+      "121": [
+        "Do not pass a vehicle that has stopped or slowed down for a pedestrian."
+      ],
+      "122": [
+        "Because of its large size, a tractor-trailer often appears to be traveling more slowly than its actual speed."
+      ],
+      "123": [
+        "Motorcyclists change speed and lane position when encountering bad road conditions, such as manhole covers, diagonal railroad tracks, road debris"
+      ],
+      "124": [
+        "Cities and towns may have regulations to do the following:",
+        "Prohibit commercial vehicles from using certain streets;"
+      ],
+      "125": [
+        "If you are driving behind a truck or a bus and cannot see the driver in his or her rearview mirrors, the driver of that vehicle cannot see you."
+      ],
+      "126": [
+        "Walk facing traffic when no sidewalk is available."
+      ],
+      "127": [
+        "carrying a white cane (or a white cane with a red tip), vehicles must come to a complete stop."
+      ],
+      "128": [
+        "You must obey a slower speed limit in a school zone when lights are flashing or children are present."
+      ],
+      "129": [
+        "When you are passing, give bicycles and mopeds a full lane width. Do not squeeze past these road users."
+      ],
+      "130": [
+        "You may cross a bicycle lane when turning or when entering or leaving the roadway."
+      ],
+      "131": [
+        "Always ride with traffic, never against it."
+      ],
+      "132": [
+        "The law does not allow you to ride a moped on any part of the federal interstate highway system."
+      ],
+      "133": [
+        "Your brakes must be able to stop you within 25 feet when traveling ten mph."
+      ],
+      "134": [
+        "A White Light on the front of your bicycle or carried by you that other drivers can see from 500 feet."
+      ],
+      "135": [
+        "Rear Red Light that drivers can see when reflected by their vehicles’ low beam headlights at 600 feet."
+      ],
+      "136": [
+        "Operation of an electric bicycle as defined by 301.010 RSMo does not require the rider to hold an operator license or motorcycle license."
+      ],
+      "137": [
+        "An organized funeral procession has the right-of-way at all intersections regardless of any traffic control device, except for emergency vehicles"
+      ],
+      "138": [
+        "Every vehicle in the procession must use its flashing emergency lights."
+      ],
+      "139": [
+        "The lane is too narrow to share with another vehicle;"
+      ],
+      "140": [
+        "An organized funeral procession has the right-of-way at all intersections regardless of any traffic control device, except for emergency vehicles"
+      ],
+      "141": [
+        "Do not attempt to pass any vehicle in the procession except where a passing lane has been specifically provided."
+      ],
+      "142": [
+        "If you have a cellular phone, exit the roadway to a safe area and dial *55 (or 911 if you are in a metropolitan area)."
+      ],
+      "143": [
+        "If a judge finds you guilty of littering, you may have to pay up to a $1,000 fine and/or spend up to one year in jail."
+      ],
+      "144": [
+        "On one-way streets, you may normally park on either the right or left side of the street."
+      ],
+      "145": [
+        "Always have passengers, especially children, exit the vehicle on the curb side."
+      ],
+      "146": [
+        "When you park on a hill, turn your wheels sharply towards the side of the road."
+      ],
+      "147": [
+        "Alongside a curb that is painted yellow."
+      ],
+      "148": [
+        "shall be punished by a fine of no less than fifty dollars ($50) and no more than three hundred dollars ($300)."
+      ],
+      "149": [
+        "It is illegal to use a handicapped person’s placard or license plates to park in designated handicapped parking spaces if the handicapped person is not being transported at the time."
+      ],
+      "150": [
+        "Stop even with the vehicle ahead of the parking space about 1½ feet to the left of that vehicle."
+      ],
+      "151": [
+        "always keep to the right unless you are passing slower traffic, letting another driver have room to enter safely, or getting ready to make a legal left turn."
+      ],
+      "152": [
+        "You can use the right lane when passing a vehicle that is making a left turn. Never use the shoulder or unpaved part of the highway to pass."
+      ],
+      "153": [
+        "check the left lane for traffic by using your left and inside rearview mirrors and briefly looking over your left shoulder.",
+        "Looking over your left shoulder is important because it allows you to check for “blind spots.”"
+      ],
+      "154": [
+        "Always set your parking brake when you park. Leave the vehicle in gear if it has a manual transmission"
+      ],
+      "155": [
+        "If another vehicle begins to pass you, stay in your lane and do not increase your speed."
+      ],
+      "156": [
+        "If vehicles are piled up behind you, pull over and let them pass when it is safe to do so."
+      ],
+      "157": [
+        "alert other drivers by turning on your emergency flashers. It is also helpful to raise the hood, or tie a white cloth to the antenna."
+      ],
+      "158": [
+        "Use the ramp and acceleration lane to increase your speed to match the speed of the vehicles on the highway."
+      ],
+      "159": [
+        "If you miss your exit, DO NOT stop, back up, or try to turn around on the highway. You will have to get off the highway at the next exit"
+      ],
+      "160": [
+        "When driving through a DDI, you will travel on the left side of the roadway for a short distance."
+      ],
+      "161": [
+        "You can avoid highway hypnosis by constantly moving your eyes and watching the traffic and highway signs around you."
+      ],
+      "162": [
+        "The cellular number to call in an emergency is *55."
+      ],
+      "163": [
+        "Yellow separates traffic traveling in opposite directions."
+      ],
+      "164": [
+        "The yellow lines tell you the traffic on the other side of the lines is moving in the opposite direction. You should never cross the two solid yellow lines to pass."
+      ],
+      "165": [
+        "When required to stop because of a sign or signal, you must stop before your vehicle reaches the stop line or, if there is one, the crosswalk."
+      ],
+      "166": [
+        "Never stand in the roadway. Do not try to change a tire if it means you have to be in a traffic lane."
+      ],
+      "167": [
+        "You must yield to pedestrians in or about to enter a crosswalk. Not all crosswalks are marked. Be alert for pedestrians when crossing intersections that do not have defined crosswalks."
+      ],
+      "168": [
+        "But if you want to turn, and only the straight arrow is showing, you must wait for the turn arrow."
+      ],
+      "169": [
+        "Never pass on the shoulder. Other drivers will not expect you to be there and may pull off the road without looking."
+      ],
+      "170": [
+        "You must obey traffic officers at all times. If you see a traffic officer giving directions, do what he or she says and ignore any traffic signs or signals."
+      ],
+      "171": [
+        "A flashing red light means the same thing as a stop sign."
+      ],
+      "172": [
+        "Dark signals, or traffic signals that aren’t working operate as a four-way stop."
+      ],
+      "173": [
+        "A flashing yellow arrow tells you that you are allowed to drive in the direction the arrow is pointing but are required to wait for an adequate gap in the opposing traffic"
+      ],
+      "174": [
+        "Brown = Public Recreation & Cultural Interests"
+      ],
+      "175": [
+        "Diamond = Warning"
+      ],
+      "176": [
+        "Pentagon = School"
+      ],
+      "177": [
+        "Traffic from another road will be entering the road. No merging is necessary because a lane has been added."
+      ],
+      "178": [
+        "A turn sign is used to warn of a sharp turn or turn where the recommended maximum speed is 30 mph or less.",
+        "A curve sign is used to warn of a curve where the recommended speed is less than the posted speed limit"
+      ],
+      "179": [
+        "A reflective orange triangle on the rear of a vehicle means it is traveling less than 25 mph."
+      ],
+      "180": [
+        "These lanes are marked on each side by a solid yellow and dashed yellow lines."
+      ],
+      "181": [
+        "Many regulatory signs are square- or rectangular-shaped and are white, with black or red letters or symbols."
+      ],
+      "182": [
+        "If there is no stop line, pull up and stop near the edge of the intersection, look both ways, and then proceed when it is safe.",
+        "stop before entering the intersection."
+      ],
+      "183": [
+        "You may not drive slower than 40 mph on interstate highways under normal roadway conditions."
+      ],
+      "184": [
+        "The speed limit in any city, town, or village is 25 mph, unless posted otherwise."
+      ],
+      "185": [
+        "Lettered roads 55"
+      ],
+      "186": [
+        "You must stop within 15 to 50 feet before the railroad tracks."
+      ],
+      "187": [
+        "It is not wise to shift gears when crossing railroad tracks, just in case your vehicle might stall."
+      ],
+      "188": [
+        "This sign has the same meaning as a “yield” sign; therefore, you must yield to trains at crossings."
+      ],
+      "189": [
+        "Work zone signs are fluorescent orange and indicate some type of work is being performed on or alongside the roadway."
+      ],
+      "190": [
+        "This is work that takes place on a two-lane, two-way roadway with one lane closed. A flagger(s) will be present at the beginning and end points"
+      ],
+      "191": [
+        "a driver should expect to see a protective vehicle in the lane with a flashing arrow panel designating the correct lane to merge to."
+      ],
+      "192": [
+        "Some regulatory signs have a red circle with a red slash over a symbol. These indicate you cannot do something, for example, no left turn, or no U-turn."
+      ],
+      "193": [
+        "As quickly and safely as possible, pull off the road, turn around and go back."
+      ],
+      "194": [
+        "These signs are square or rectangular, and are green or brown with white lettering. They show direction and distance to various locations"
+      ],
+      "195": [
+        "Service signs are square or rectangular, and are blue with white letters or symbols. They show the location of various services"
+      ],
+      "196": [
+        "North-south routes are identified by odd numbers. East-west roads are identified by even numbers."
+      ],
+      "197": [
+        "interstates traveling west/east are numbered starting from the west and going east. This means exit numbers start at zero and increase as you drive east."
+      ],
+      "198": [
+        "The reference markers are located every two-tenths of a mile, so motorists will always be in sight of a sign."
+      ],
+      "199": [
+        "Seat belts should always be worn with the lap belt low and snug across the hips and the shoulder belt across the chest."
+      ],
+      "200": [
+        "recommends drivers sit with at least ten inches between the center of their breastbone and the center of the steering wheel."
+      ],
+      "201": [
+        "ALL passengers accompanying an intermediate driver license holder must be properly restrained."
+      ],
+      "202": [
+        "Children less than four years old, regardless of weight, shall be secured in a child passenger restraint system appropriate for that child."
+      ],
+      "203": [
+        "Children at least four years of age but less than eight years of age, who also weigh at least 40 pounds but less than 80 pounds, and are also less than 4’9’’ tall shall be secured in a child passenger restraint system or booster seat"
+      ],
+      "204": [
+        "At an intersection, look to the left and right, even if other traffic has a red light or a stop sign.",
+        "Do not rely on traffic signals or signs to keep others from crossing in front of you."
+      ],
+      "205": [
+        "Place your left hand between the seven & nine o’clock positions and your right hand between the three & five o’clock positions on the steering wheel."
+      ],
+      "206": [
+        "This will cause the steering wheel to lock if you try to turn the steering wheel, and you will lose control of your vehicle.",
+        "Never turn your vehicle’s ignition key to the ’lock’ position while your vehicle is still in motion."
+      ],
+      "207": [
+        "A good way to measure your safe following distance is to use the “three second rule.”"
+      ],
+      "208": [
+        "If you are followed too closely or “tailgated” by another driver, and there is a right lane, move over to the right."
+      ],
+      "209": [
+        "if you are overtaking a bicycle and an oncoming vehicle is approaching, slow down and let the vehicle pass first so you can give extra room to the bicycle."
+      ],
+      "210": [
+        "Your stopping distance equals your reaction distance plus your braking distance."
+      ],
+      "211": [
+        "You should signal at least 100 feet before you turn so the other drivers can be ready.",
+        "Try to signal at least 100 feet before you make your move."
+      ],
+      "212": [
+        "If there are other streets, driveways, or entrances between you and where you want to turn, wait until you have passed them to signal."
+      ],
+      "213": [
+        "There is only one reason to use your horn: to warn other drivers. Your horn should not be used as a display of anger or frustration."
+      ],
+      "214": [
+        "It is against the law for you to drive slower than the posted minimum speed under normal driving conditions."
+      ],
+      "215": [
+        "Do not drive with a defective muffler or exhaust system."
+      ],
+      "216": [
+        "Most deer-related crashes occur in January, May, and October through December."
+      ],
+      "217": [
+        "Too much brake pressure can cause the front end of the vehicle to drop down, striking the deer in the legs and allowing the body to come into the passenger compartment."
+      ],
+      "218": [
+        "check the tire pressure using the recommended PSI (pounds per square inch) located in the vehicle owner’s manual or the driver’s side door jam of the vehicle."
+      ],
+      "219": [
+        "If your tread gets below that, (approximately 2/32 of an inch) your car’s ability to grip the road in adverse conditions is greatly reduced."
+      ],
+      "220": [
+        "Keep your hands on the steering wheel so they are easily observable."
+      ],
+      "221": [
+        "If you have a weapon(s) in the vehicle, inform the officer upon first contact."
+      ],
+      "222": [
+        "If you see that a crash is unavoidable, do not swerve."
+      ],
+      "223": [
+        "Your acceptance and signature on a traffic ticket is not an admission of guilt"
+      ],
+      "224": [
+        "Turn your headlights on from ½ hour after sunset until ½ hour before sunrise."
+      ],
+      "225": [
+        "Use your low beams when you come within 500 feet (about one block) of an oncoming vehicle."
+      ],
+      "226": [
+        "Your headlights only let you see about 350 feet ahead."
+      ],
+      "227": [
+        "You must use your headlights any time weather conditions require the use of your windshield wipers."
+      ],
+      "228": [
+        "leave a safe distance, about eight to ten seconds, between your vehicle and any vehicle ahead of you."
+      ],
+      "229": [
+        "bridges and overpasses will freeze and become slippery before other parts of the road"
+      ],
+      "230": [
+        "Hydroplaning can happen at any speed over 35 mph."
+      ],
+      "231": [
+        "If you think your tires are hydroplaning, take your foot off the accelerator and slow down. Do not hit the brakes as this may cause you to skid."
+      ],
+      "232": [
+        "Maintain a firm and continuous pressure on the brake while steering to enable the four-wheel ABS to work properly.",
+        "Remember, if your vehicle is equipped with anti-lock brakes don’t: Pump your brakes"
+      ],
+      "233": [
+        "Gently turn your steering wheel in the direction that your rear wheels are sliding.",
+        "Take your foot off the accelerator, but DO NOT hit the brakes."
+      ],
+      "234": [
+        "Keep your headlights on low beam. In fog, you will see less if your lights are on high beam."
+      ],
+      "235": [
+        "Pump the brake pedal fast and hard several times. If that does not work... Use your emergency or parking brake, but use it gradually."
+      ],
+      "236": [
+        "To assist with visibility, turn on your interior lights as soon as you stop to help the officer see inside your vehicle."
+      ],
+      "237": [
+        "Take your foot off the accelerator, but do not hit the brakes.",
+        "Apply the brakes when the vehicle is almost stopped."
+      ],
+      "238": [
+        "Hold the steering wheel tightly. Take your foot off the accelerator, but do not hit the brakes."
+      ],
+      "239": [
+        "If your accelerator becomes stuck, you should: Shift to neutral; Apply the brakes"
+      ],
+      "240": [
+        "DO NOT swing over into the left lane. The other driver may pull back over into that lane, too."
+      ],
+      "241": [
+        "Run in the direction the train is coming from. (If you run in the direction the train is heading, you may be hit with debris when the train hits your vehicle.)"
+      ],
+      "242": [
+        "12- and 15-passenger vans are inherently unstable when loaded to the level for which they are designed, carrying more than ten passengers."
+      ],
+      "243": [
+        "If you injure or kill someone because you were drinking or using drugs while driving, you may: Spend two to seven years in jail"
+      ],
+      "244": [
+        "This notice tells you that your license will be suspended or revoked (and you will not be able to legally drive) after 15 days."
+      ],
+      "245": [
+        "1st Offense - Spend up to six months in jail. Pay up to a $500 fine."
+      ],
+      "246": [
+        "If you are younger than 21 years of age, your driver license may be taken away for 90 days for any of the following: ... If you possess or use alcohol or drugs while driving a vehicle"
+      ],
+      "247": [
+        "MIP Minor in Possession 1st Offense — 30-day suspension"
+      ],
+      "248": [
+        "Roll down the window so you can look around whatever is blocking your view. Turn on your emergency flashers. Pull your vehicle off the road."
+      ],
+      "249": [
+        "Try the dimmer switch or headlight switch, that might turn them on again."
+      ],
+      "250": [
+        "Provide proof of insurance for two years (SR-22 filing)"
+      ],
+      "251": [
+        "MIP Minor in Possession 1st Offense — 30-day suspension",
+        "Having a Blood Alcohol Content (BAC) level of more than .02%."
+      ],
+      "252": [
+        "MIP Minor in Possession 3rd Offense — One-year revocation"
+      ],
+      "253": [
+        "Minors with a BAC of .02% or more do not have to file proof of insurance on a first-offense."
+      ],
+      "254": [
+        "If a police officer stops you and you refuse to take a chemical test to determine your BAC, your driver license will be taken away for one year."
+      ],
+      "255": [
+        "An ignition interlock device (IID) is a mechanical unit that is connected to the vehicle’s ignition, horn, and headlights"
+      ],
+      "256": [
+        "The IID must be maintained for a minimum of six months from your reinstatement date without any violations in the last three months."
+      ],
+      "257": [
+        "If you receive a ticket for failing to have an IID installed as required by law and you are convicted in court, your driving privilege will be revoked for one year."
+      ],
+      "258": [
+        "The penalties for DWI in Missouri are exactly the same regardless of whether the impairment is from drugs or alcohol."
+      ],
+      "259": [
+        "The punishment for those convicted of DWI is up to six months in prison and a fine of up to $500 and the loss of driving privileges."
+      ],
+      "260": [
+        "It is illegal to drive with a blood alcohol content (BAC) of 0.08% or more (0.04% for commercial vehicle drivers and 0.02% if under 21)."
+      ],
+      "261": [
+        "Pep pills, “uppers,” and diet pills can make a driver more alert for a short time. Later, however, they can cause a person to be nervous, dizzy, and not able to concentrate."
+      ],
+      "262": [
+        "Even though medical marijuana was approved by Missouri voters effective in 2020, it is never legal or safe to drive while under the influence of marijuana."
+      ],
+      "263": [
+        "Research studies have shown negative effects of marijuana on drivers, including an increase in lane weaving, poor reaction time, and altered attention to the road."
+      ],
+      "264": [
+        "One of the greatest predictors of someone developing an addiction is early use.",
+        "A young person’s under-developed brain can become damaged quicker and more severely than an adult brain using the same substances."
+      ],
+      "265": [
+        "Proof of insurance must be kept on file with the Driver License Bureau for two years."
+      ],
+      "266": [
+        "Speeding . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+      ],
+      "271": [
+        "For a non-alcohol related point suspension or revocation, you will need to: • Submit proof of insurance (SR-22); and • Pay a $20 reinstatement fee."
+      ],
+      "272": [
+        "After one year - Remaining points will be reduced by one-third",
+        "Every year you drive without getting new points on your record, the points will be reduced."
+      ],
+      "273": [
+        "If you drive while your license is suspended, your driving privilege may be revoked for one year after you are convicted."
+      ],
+      "274": [
+        "The court will give you 30 days to pay the fines before the court notifies the Driver License Bureau (DLB)."
+      ],
+      "275": [
+        "When you buy a vehicle, you must apply for a title within 30 days. If you do not apply within 30 days, you will have to pay a penalty fee."
+      ],
+      "276": [
+        "Do NOT keep your title in your vehicle."
+      ],
+      "277": [
+        "The MSO indicates the vehicle is new and has never been registered.",
+        "The dealer will give you a title application and an assigned Manufacturer’s Statement of Origin (MSO)."
+      ],
+      "278": [
+        "the seller must write the mileage reading on the title assignment if the model year is 2011 or newer and the vehicle is less than 20 years old."
+      ],
+      "279": [
+        "If the title assigned to you is an out-of-state title, you must get an identification number and odometer (ID/OD) verification form completed by a licensed inspection station."
+      ],
+      "280": [
+        "Obtaining a Driver License by Misrepresentation . . . . . . . . . . . . 12 points"
+      ],
+      "281": [
+        "If you are registering a passenger vehicle, your registration fee will be based on your vehicle’s taxable horsepower."
+      ],
+      "282": [
+        "During an even-numbered year (like 2018) you may register for two years if your vehicle has an even-numbered model year."
+      ],
+      "283": [
+        "Current certificate of safety and/or emissions inspection done within the last 60 days, if applicable"
+      ],
+      "284": [
+        "completing a Notice of Sale (Form 5049) and submitting it to any license office or to the address on the form within 30 days."
+      ],
+      "285": [
+        "State law allows you to replace stolen license plates and tabs up to two times per year at NO COST"
+      ],
+      "286": [
+        "$25,000 per crash for property damage."
+      ],
+      "287": [
+        "$25,000 per person for bodily injury;"
+      ],
+      "288": [
+        "Hand held electronic device."
+      ],
+      "289": [
+        "To be self-insured, you must have more than 25 vehicles"
+      ],
+      "290": [
+        "The most common way to file proof of insurance is through an SR-22 insurance filing."
+      ],
+      "291": [
+        "two suspensions (within two years of each other) Your driver license and/or license plates will be suspended for 90 days. You must also: – Pay a $200 fee."
+      ],
+      "292": [
+        "three (or more) suspensions Your driver license and/or license plates will be suspended for one year. You must also: – Pay a $400 fee."
+      ],
+      "293": [
+        "If you are at fault in an accident and do not pay for the damages you caused, your driver license and/or vehicle license plates will be suspended for one year."
+      ],
+      "294": [
+        "The law also requires you to have uninsured motorist coverage of $25,000 for bodily injury per person and $50,000 for bodily injury per crash."
+      ],
+      "295": [
+        "If you do not receive the notice, you are still required by law to renew your license plates before they expire."
+      ],
+      "296": [
+        "two suspensions (within two years of each other) Your driver license and/or license plates will be suspended for 90 days. You must also: – Pay a $200 fee."
+      ],
+      "297": [
+        "three (or more) suspensions Your driver license and/or license plates will be suspended for one year. You must also: – Pay a $400 fee."
+      ],
+      "298": [
+        "Even if you have a crash with a parked vehicle, do not leave. Leaving the scene of a traffic crash is a crime."
+      ],
+      "299": [
+        "A state law that took effect ten years ago requires vehicles involved in minor, non-injury crashes to move off the road."
+      ],
+      "300": [
+        "secondary crashes, which cause 18 percent of fatalities in Missouri."
+      ],
+      "301": [
+        "State law requires the accident report to be filed within 30 days."
+      ],
+      "302": [
+        "There is damage to or more person’s property in excess of $500, or there was personal injury or death."
+      ],
+      "303": [
+        "your driving privilege may be revoked according to Sections 304. 585. 6 and 304. 894. 6 RSMo."
+      ],
+      "304": [
+        "The certificate is good for 60 days."
+      ],
+      "305": [
+        "having less than 150,000 miles on the odometer are exempt from the safety inspection requirement."
+      ],
+      "306": [
+        "All trailers."
+      ],
+      "307": [
+        "at least two functioning red taillights and reflectors that other drivers can see from 500 feet."
+      ],
+      "308": [
+        "If your passenger car was made after June 30, 1964, it must have two sets of seat belts in the front seat."
+      ],
+      "309": [
+        "If your vehicle was made after 1967, it must have an inside and an outside rearview mirror."
+      ],
+      "310": [
+        "Bumpers on passenger vehicles may not exceed 22 inches above the ground when measured at the highest point."
+      ],
+      "311": [
+        "If you have a truck licensed in excess of 12,000 pounds, you will only receive one plate, which must be placed on the front of the truck."
+      ],
+      "312": [
+        "Your vehicle must have a white light shining on the rear license plate so the plate can be seen from 50 feet."
+      ],
+      "313": [
+        "You need special equipment if something in your vehicle overhangs the rear by more than five feet."
+      ],
+      "314": [
+        "When you are towing another vehicle, your towline must keep the vehicles within 15 feet of each other."
+      ],
+      "315": [
+        "From sunset to ½ hour before sunrise, any vehicle moving 25 mph or slower must have a “slow moving vehicle” sign."
+      ],
+      "316": [
+        "Your vehicle may have studded snow tires only from November 1 to April 1."
+      ],
+      "317": [
+        "Tinting or sun-screening material is permitted on the side and rear windows (front door windows at no more than 65% light blockage)."
+      ],
+      "318": [
+        "Maximum width of any vehicle.............................................................8½’"
+      ],
+      "319": [
+        "Maximum height on all other highways..............................................13½’"
+      ],
+      "320": [
+        "The commercial zone for St. Louis City extends 18 miles beyond the city limits."
+      ],
+      "321": [
+        "Loads must not extend more than three feet beyond the front or four feet beyond the rear of the vehicle."
+      ],
+      "322": [
+        "The maximum gross weight allowed on all highways in Missouri is 80,000 pounds, except where bridge structures are posted with lesser weight limits."
+      ],
+      "323": [
+        "The load on your vehicle must be non-reducible;",
+        "You must have property damage and bodily injury liability insurance;",
+        "You must pay a permit fee."
+      ],
+      "324": [
+        "This combination must not be carried by vehicles transporting explosive or flammable material or using flammable compressed gas as a motor fuel."
+      ],
+      "325": [
+        "If you are driving a bus or truck, you must not follow another bus or truck any closer than 300 feet.",
+        "However, you may follow closer than 300 feet when you are in a business or residential district, or when passing."
+      ],
+      "326": [
+        "For each ten feet of length in your vehicle, keep at least one second between you and the vehicle in front of you."
+      ],
+      "327": [
+        "You must stop within 15 to 50 feet before the railroad tracks if you are driving a:",
+        "School bus;"
+      ],
+      "328": [
+        "To compensate for the off-tracking, begin a left-turn as far to the right as possible. Begin a right-turn as far to the left as possible."
+      ],
+      "329": [
+        "All commercial motor vehicles must stop at weigh stations except those licensed for 18,000 pounds or less or otherwise exempted by law"
+      ],
+      "330": [
+        "Slow down. It is better to be tailgated at a low speed than a high speed.",
+        "Increase the distance between you and the vehicle in front of you. This will help you to avoid any sudden stops.",
+        "Do not flash your taillights or brake lights at the tailgater."
+      ],
+      "331": [
+        "Because text messaging requires visual, manual, and cognitive attention from the driver, it is by far the most high risk distraction."
+      ],
+      "332": [
+        "Properly secure your pet in a pet carrier, portable kennel, or specially designed pet harness when you are driving.",
+        "Never allow your pet to sit on your lap while you are driving your vehicle."
+      ],
+      "333": [
+        "The following information must be clearly visible on commercial motor vehicles:",
+        "The name of the owner;",
+        "The address the vehicle is operated from and the number issued to a motor carrier by the Motor Carrier Services."
+      ],
+      "334": [
+        "Make sure you have enough space over your vehicle at all times.",
+        "Do not assume that posted heights at bridges or underpasses are correct."
+      ],
+      "335": [
+        "One fire extinguisher. The extinguisher must be rated at 5 B:C or more by Underwriter’s Laboratories Incorporated."
+      ],
+      "336": [
+        "Your acceleration rate varies with the weight of your vehicle.",
+        "In a long or heavily weighted vehicle, you will need a larger gap to cross the road than you would in a car."
+      ],
+      "337": [
+        "Adjust vehicle’s controls (climate controls, mirrors, radio, seat, etc.) before you begin to drive."
+      ],
+      "338": [
+        "Ask your passengers to adjust the radio, climate control, navigation system, etc., for you."
+      ],
+      "339": [
+        "Looking out your window at what you are passing while you are driving can be a distraction if you are concentrating on getting a good look at:",
+        "A crash scene"
+      ],
+      "340": [
+        "While the vehicle is in motion, drivers are prohibited from:",
+        "Physically holding or supporting a cellphone with any part of their body."
+      ],
+      "341": [
+        "Manually typing, writing, sending, or reading text-based messages.",
+        "It is against the law for any person to read, write, or send a text message or electronic message while operating a vehicle."
+      ],
+      "342": [
+        "Place or receive voice calls utilizing voice-operated or hands-free functions that can be engaged/disengaged with a single touch or swipe"
+      ],
+      "343": [
+        "Send or receive text-based communication through voice-to-text features"
+      ],
+      "344": [
+        "Driver using a device to relay information through a transportation network company’s digital network... provided the device is affixed or mounted to the vehicle."
+      ],
+      "345": [
+        "Prior to January 1, 2025, drivers violating these provisions of use of an electronic communication device may be subject to a warning."
+      ],
+      "346": [
+        "Commercial drivers violating this section may be subject to disqualification."
+      ],
+      "347": [
+        "Blood Alcohol Content (BAC) . . . . . . . . . . . . . . . . . . 68-72"
+      ],
+      "348": [
+        "For-Hire License (Class E) . . . . . . . . . . . . . . . . . . 4-5, 18"
+      ],
+      "349": [
+        "Graduated Driver License Law (GDL) . . . . . . . . . . . . . 15-17"
+      ],
+      "350": [
+        "“DHH” Notation For Deaf or Hard of Hearing Applicants . . . . . . . . . . . . . . . . . . . . . 12"
+      ],
+      "351": [
+        "Highway Patrol Statewide Toll Free Emergency Assistance Number . . . . . . . . . . . . . . . . . 1-800-525-5555"
+      ],
+      "352": [
+        "or cellular *55"
+      ],
+      "353": [
+        "General Information . . . . . . . . . . . . . . . . . (573) 751-1887"
+      ],
+      "354": [
+        "Automated Information 24 / 7 . . . . . . . . . . . . (573) 526-2407"
+      ],
+      "355": [
+        "Motor Vehicle Questions General Information . . . . . . . . . . . . . . . . . (573) 526-3669"
+      ],
+      "356": [
+        "Troop A, Lee’s Summit . . . . . . . . . . . . . . . . . (816) 622-0800"
+      ],
+      "357": [
+        "Troop F, Jefferson City . . . . . . . . . . . . . . . . (573) 751-1000"
+      ],
+      "358": [
+        "Motorcycle License (Class M) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5"
+      ],
+      "359": [
+        "Nondriver Identification Card (ND) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5"
+      ],
+      "360": [
+        "Traffic Signs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45-51",
+        "Colors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45",
+        "Shapes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45"
+      ],
+      "361": [
+        "Required Documentation Exemption for Senior Citizens . . . . . . . . . . . . . . . . . . . . . . . . . . . 6-7"
+      ],
+      "362": [
+        "Troop I, Rolla . . . . . . . . . . . . . . . . . . . . . . . . . . . (573) 368-2345"
+      ],
+      "363": [
+        "Traffic Crashes What To Do . . . . . . . . . . . . . . . . . . . . . 82-83 Reporting A Crash . . . . . . . . . . . . . . . . . . . . . 82-83"
+      ],
+      "364": [
+        "Vision Test . . . . . . . . . . . . . . . . . . . . . . . . . . . 18-19 Failing The Vision Test . . . . . . . . . . . . . . . . . . . 19"
+      ],
+      "365": [
+        "The number-one contributing circumstance to traffic crashes in Missouri is driver inattention."
+      ],
+      "366": [
+        "yield the right-of-way and immediately drive to a position parallel to, and as far as possible to the right of, the traveled portion of the highway and thereupon stop"
+      ],
+      "367": [
+        "remain in such position until such emergency vehicle has passed, except when otherwise directed by a police or traffic officer."
+      ],
+      "368": [
+        "Proceed with due caution and reduce the speed of the vehicle, maintaining a safe speed for road conditions, if changing lanes would be unsafe or impossible."
+      ],
+      "369": [
+        "Violation of this section is a Class A misdemeanor."
+      ],
+      "370": [
+        "remain in such position until such emergency vehicle has passed, except when otherwise directed by a police or traffic officer."
+      ],
+      "371": [
+        "approaching a stationary emergency vehicle displaying lighted red or red and blue lights, or vehicles displaying amber or amber and white lights"
+      ],
+      "372": [
+        "Eight of those officers were killed after being struck by a vehicle, whose driver was either impaired or not paying attention."
+      ],
+      "373": [
+        "immediately drive to a position parallel to, and as far as possible to the right of, the traveled portion of the highway"
+      ],
+      "374": [
+        "on a roadway having at least four lanes with not less than two lanes proceeding in the same direction"
+      ],
+      "375": [
+        "approaching a stationary emergency vehicle displaying lighted red or red and blue lights, or vehicles displaying amber or amber and white lights",
+        "making a lane change into a lane not adjacent to that of the stationary vehicle"
+      ],
+      "376": [
+        "Please slow down and move over away from stationary vehicles along the side of the road with their emergency equipment activated. IT’S THE LAW."
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 30,
-    "topics_covered": 29,
-    "coverage_pct": 96.7,
+    "topics_total": 27,
+    "topics_covered": 26,
+    "coverage_pct": 96.3,
     "uncovered_topics": [
-      "Adding a veteran designation to a missouri license"
+      "Carrying driver license or permit"
     ],
     "verdict": "PASS",
     "grade": "A"
@@ -66,6 +1228,32 @@
     "sign_ratio_pct": 4.6,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 376,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 99.7,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    },
+    "ja": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 376,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

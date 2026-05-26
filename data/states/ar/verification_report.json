@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "ar",
   "name": "Arkansas",
-  "verified_at": "2026-05-26T02:25:49Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T22:56:27Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://dps.arkansas.gov/wp-content/uploads/Arkansas-DL-Manual-English.pdf",
     "manual_pdf_sha256": "8fa9d5d45daf072ca263c04508dfd5a48b3c429cf63366912e94f5a9fa51d8a0",
@@ -23,24 +23,849 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 262,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "fined in an amount of not less than one hundred dollars ($100) and not more than one thousand dollars ($1,000)."
+      ],
+      "2": [
+        "it shall be prima facie evidence that the throwing, dumping, or depositing was done by the driver of the motor vehicle."
+      ],
+      "3": [
+        "who fails to pay any fines assessed in accordance with the findings and orders of the court shall have his or her driver's license suspended for six (6) months"
+      ],
+      "4": [
+        "An unclassified misdemeanor for a first offense and shall be fined one thousand dollars ($1,000) and sentenced to one hundred (100) hours of community service"
+      ],
+      "5": [
+        "activate your turn signal, pull to the nearest well-lit location, dial 9-1-1, and request a police officer confirmation."
+      ],
+      "6": [
+        "Pull to the closest safest spot out of the traffic lane (Do not stop on bridges or overpasses)."
+      ],
+      "7": [
+        "If you are stopped at night, turn on the interior lights, so that the officer can see you more clearly."
+      ],
+      "8": [
+        "you are required to provide your driver’s license, proof of insurance, and vehicle registration when requested by the officer."
+      ],
+      "9": [
+        "Inform the officer where the documents are located and ask before reaching to retrieve them.",
+        "Be sure to inform the officer if there is a weapon in the vehicle, the type of weapon, and the location. You should not reach for the weapon."
+      ],
+      "10": [
+        "Signing a citation is not an admission of guilt. It is a promise to appear in court at the designated time or to pay the fine before the court date."
+      ],
+      "11": [
+        "Arkansas Law (A.C.A. § 27-51-310) requires that you move to the farthest lane or position away from the authorized vehicle as you pass.",
+        "If it is unsafe or not possible to change lanes, then the law requires you to reduce your speed as you pass."
+      ],
+      "12": [
+        "If you are a non-U.S. Citizen and have immigration documents, please select this appointment type. This will allow you more time with the examiner."
+      ],
+      "13": [
+        "Driver’s License Test for Learning Differences- This appointment type will allow you to schedule an oral test with an examiner."
+      ],
+      "14": [
+        "Motorcycles- You must have a completed Knowledge Exam and your motorcycle must be transported to the testing center or driven by a person with an “M” endorsement."
+      ],
+      "15": [
+        "no vehicle hauling predominately metallic material shall be required to be covered if it is loaded in a manner which will prevent the material from falling or dropping from the vehicle."
+      ],
+      "16": [
+        "the Arkansas State Police does offer a testing APP (AR Driver Testing) found in the Google Play Store or Apple APP Store."
+      ],
+      "17": [
+        "The Arkansas State Police is not associated with third-party websites offering practice tests."
+      ],
+      "18": [
+        "Intermediate License",
+        "Types of Graduated Licenses"
+      ],
+      "19": [
+        "Class M (Motorcycle) License"
+      ],
+      "20": [
+        "ASP-33 Parent Affidavit and Financial Responsibility and Acceptance"
+      ],
+      "21": [
+        "Protection from Secondhand Smoke ..................................................................................................... 9"
+      ],
+      "22": [
+        "Chapter 6: Tractor Trailer Rigs ................................................................................................. 64",
+        "Avoiding the Tractor Trailer “No-Zone” ................................................................................ 65"
+      ],
+      "23": [
+        "Chapter 9: Emergencies ........................................................................................................... 77",
+        "Faulty Accelerator ............................................................................................................... 77"
+      ],
+      "24": [
+        "Chapter 10: Skills Test Guidelines ........................................................................................... 82",
+        "Exhaust System ................................................................................................................... 84"
+      ],
+      "25": [
+        "Class MD (Motor driven Cycle) License ................................................................................ 4"
+      ],
+      "26": [
+        "Health ................................................................................................................................... 72",
+        "Epilepsy ............................................................................................................................... 72"
+      ],
+      "27": [
+        "help you prepare and pass the knowledge and skill (driving portion) part of the exams."
+      ],
+      "28": [
+        "Right of Way ........................................................................................................................... 35",
+        "Roundabouts ........................................................................................................................ 36"
+      ],
+      "29": [
+        "Traffic Control Signs ................................................................................................................ 25",
+        "Do Not Enter Sign ............................................................................................................... 26"
+      ],
+      "30": [
+        "Performance Guidelines ........................................................................................................ 85",
+        "1-2-3 Skills Checklist ............................................................................................................ 86"
+      ],
+      "31": [
+        "THIS ACT REQUIRES A $5.00 FEE FOR EACH WRITTEN EXAMINATION."
+      ],
+      "32": [
+        "Within thirty (30) calendar days of becoming a resident, any person who is a resident of this state shall obtain an Arkansas driver’s license"
+      ],
+      "33": [
+        "Student – Students attending classes who are considered non-residents under rules regulating the payment of tuition. Examples: College or Exchange Students"
+      ],
+      "34": [
+        "The permit will be issued for 2 (two) years from the date of the passed knowledge exam."
+      ],
+      "35": [
+        "The applicant with an instruction permit may drive with a licensed driver twenty-one (21) years of age or older, who is occupying a seat beside the driver."
+      ],
+      "36": [
+        "Class D Licenses may operate an automobile or other four-wheel vehicle with a gross weight rating (GVWR) under 26,001 pounds."
+      ],
+      "37": [
+        "The applicant cannot be involved in any traffic crash or be convicted of a serious traffic violation within the preceding six (6) months prior to application."
+      ],
+      "38": [
+        "A driver with an intermediate license shall not operate a motor vehicle with more than one (1) unrelated minor passenger unless accompanied by a licensed driver twenty-one (21) years or older"
+      ],
+      "39": [
+        "A driver with an intermediate driver’s license cannot operate a motor vehicle between the hours of 11:00 pm and 4:00 am"
+      ],
+      "40": [
+        "A Class D driver who is at least eighteen (18) but less than twenty-one (21) years of age may use a hands-free wireless telephone or device for interactive communication while driving."
+      ],
+      "41": [
+        "The motorcycle skill exam can be waived with the successful completion of a Motorcycle Safety Foundation Riders Course."
+      ],
+      "42": [
+        "Class M (Motorcycle) License- This license is a non-restricted motorcycle license issued to persons sixteen (16) years of age or older"
+      ],
+      "43": [
+        "Class MD (Motor Driven Cycles) - This license is a restricted license issued to persons between fourteen (14) and sixteen (16) years of age."
+      ],
+      "44": [
+        "You have no judgments pending for a moving traffic violation."
+      ],
+      "45": [
+        "Text messages are not allowed regardless of age."
+      ],
+      "46": [
+        "The MD License is restricted to operating motorcycles displacing 250 cubic centimeters or less."
+      ],
+      "47": [
+        "The knowledge exam will be valid for (one) year."
+      ],
+      "48": [
+        "The motor-driven skill exam can be waived with the successful completion of a Motorcycle Safety Foundation Riders Course."
+      ],
+      "49": [
+        "A Motorized Bicycle Certificate restricts the operation of a motorized bicycle or motorcycle displacing fifty (50) centimeters or less."
+      ],
+      "50": [
+        "Also, your field of vision must be 140º for a person with two (2) functional eyes"
+      ],
+      "51": [
+        "A minimum uncorrected visual acuity of 20/40 is required for an unrestricted license"
+      ],
+      "52": [
+        "EXEMPT COUNTRIES: Manitoba, Canada Germany France Taiwan South Korea"
+      ],
+      "53": [
+        "Two Primary Documents; OR One Primary and One Secondary"
+      ],
+      "54": [
+        "IRS Tax Return (W-2 Form is not acceptable) within the last 2 years",
+        "Photo INS Document (No Border Crossing Cards)",
+        "Bureau of Indian Affairs/Indian Treaty Card (No Tribal Cards)"
+      ],
+      "55": [
+        "U.S. citizens (minors) cannot use a U.S. passport as a primary document."
+      ],
+      "56": [
+        "No hospital birth certificates or birth registration cards will be accepted."
+      ],
+      "57": [
+        "Any person who violates this law shall be subject to a fine not to exceed twenty-five dollars ($25.00)"
+      ],
+      "58": [
+        "A child who is less than six (6) years of age and who weighs less than sixty (60) pounds shall be restrained"
+      ],
+      "59": [
+        "All children under the age of fifteen (15) must wear appropriate safety restraints while the vehicle is in motion."
+      ],
+      "60": [
+        "A person shall not knowingly smoke tobacco in any motor vehicle in which a child who is less than fourteen (14) years of age is a passenger."
+      ],
+      "61": [
+        "Any person who violates this law shall be subject to a fine not to exceed twenty-five dollars ($25.00), and any court costs or fees."
+      ],
+      "62": [
+        "Upon conviction, first offenders are subject to a fine of up to $1,000 and not more than eight hours of community service."
+      ],
+      "63": [
+        "for every nine (9) minutes the interior temperature increases fifteen (15) degrees."
+      ],
+      "64": [
+        "If you are in an intersection, go ahead and drive through the intersection before pulling over."
+      ],
+      "65": [
+        "Arkansas law requires any motor vehicle on a multilane highway to move over, whenever possible, to the farthest lane away from any stopped law enforcement vehicle"
+      ],
+      "66": [
+        "Drivers are not required to stop if the school bus is approaching along an opposite lane of travel separated by a median twenty (20) feet or more in width."
+      ],
+      "67": [
+        "School buses are required to stop at all railroad crossings."
+      ],
+      "68": [
+        "A person who violates this law is subject to Class C Felony, for negligent homicide if he or she negligently causes the death of another person."
+      ],
+      "69": [
+        "The special certificate is to be displayed hanging from the rearview mirror or the dashboard."
+      ],
+      "70": [
+        "When a disabled person obtains a special certificate or special license plate, a photo identification card must be purchased for $5.00."
+      ],
+      "71": [
+        "The penalty for first (1st) offense is a minimum of $100.00 not to exceed $500."
+      ],
+      "72": [
+        "Special Certificates must be returned to the Department of Motor Vehicles, Special Division within thirty (30) days of moving or in case of death."
+      ],
+      "73": [
+        "If the median is less than 20 feet, all lanes of traffic must stop."
+      ],
+      "74": [
+        "within five minutes on a 90-degree day, the temperature within a vehicle reaches that of the outdoors"
+      ],
+      "75": [
+        "From 2018 to 2021, Work Zone crashes rose by more than 70% in Arkansas"
+      ],
+      "76": [
+        "distracted teens who are texting while driving are 23 times more likely to be involved in a crash."
+      ],
+      "77": [
+        "For instance, a highway maintenance crew may be painting stripes on the roadway, removing debris, or patching potholes. That would be considered a Mobile Work Zone."
+      ],
+      "78": [
+        "The Arkansas Legislature recently authorized the use of flashing green lights on roadway construction and maintenance vehicles."
+      ],
+      "79": [
+        "They may be diamond or rectangular shaped, and the background may be orange, white or black with white or black letters or symbols."
+      ],
+      "80": [
+        "If a driver receives a citation for any moving traffic violation in a Work Zone, they will pay double the fine."
+      ],
+      "81": [
+        "Depending on the traffic violation, doubled fines can be as high as $5,000."
+      ],
+      "82": [
+        "If you can’t use a hands-free connection while driving, then don’t use your phone.",
+        "Does holding your phone to take a phone call, send a text message, look up directions, or scroll social media count as a moving traffic violation? Yes."
+      ],
+      "83": [
+        "The speed enforcement cameras allow an officer to be positioned at the end of a Work Zone, use the camera to observe violations within the Work Zone, and safely pull over the violator as they exit"
+      ],
+      "84": [
+        "If you see lane closures ahead, change to the correct lane as soon as it's safe to do so, ideally a mile or more before the closure."
+      ],
+      "85": [
+        "Slow Down- If moving over is unsafe or impossible, reduce your speed to a safe level for conditions or a legally mandated speed."
+      ],
+      "86": [
+        "Arkansas has expanded the law to include other vehicles with flashing lights such as: Arkansas Department of Transportation (ARDOT) vehicles, Utility vehicles, Construction vehicles, Tow trucks"
+      ],
+      "87": [
+        "Always obey the flagger's signals or signs, such as a STOP/SLOW paddle. Their instructions overrule any other traffic signals or devices."
+      ],
+      "88": [
+        "Stop at the designated location, or at least a car length away from the flagger, and wait for directions to proceed."
+      ],
+      "89": [
+        "If there are no reduced speed limits posted, drivers should obey the normally posted speed limit."
+      ],
+      "90": [
+        "Work vehicles in a Mobile Work Zone will have signs on the back indicating “Work Zone – Fines Double.”"
+      ],
+      "91": [
+        "If a driver is stopped at a controlled intersection on a green light, the driver must allow opposing traffic already in the intersection to clear before proceeding."
+      ],
+      "92": [
+        "A flashing yellow arrow means left turns are permitted. Drivers may turn left but must yield to oncoming traffic and pedestrians, then proceed with caution."
+      ],
+      "93": [
+        "A flashing red light is the same as a stop sign. A driver must come to a complete stop, and then proceed only when it is safe."
+      ],
+      "94": [
+        "When approaching an intersection with a red light and the driver intends to turn right, a complete stop and a check for opposing traffic must be made before turning right."
+      ],
+      "95": [
+        "If you are approaching a stop sign and obstacles are blocking your view, you should make a complete stop and pull forward to see."
+      ],
+      "96": [
+        "If a county judge has not established a speed limit on a county road... the speed limit shall be forty miles per hour (40 m.p.h.) on the county road."
+      ],
+      "97": [
+        "A person who... is found guilty of speeding in excess of fifteen miles per hour (15 m.p.h.) over the posted speed limit on a county road... is guilty of a Class C misdemeanor."
+      ],
+      "98": [
+        "A driver who fails to yield could receive a fine of up to $1000 and suspension of their driver’s license for 180 days."
+      ],
+      "99": [
+        "A reflective orange triangle bordered with red warns other road users that the vehicle is traveling slower than the normal speed of traffic."
+      ],
+      "100": [
+        "These signs are yellow with black lettering or symbols, and most are diamond-shaped."
+      ],
+      "101": [
+        "This regulation sign indicates a driver is prohibited (not allowed) from executing a particular maneuver"
+      ],
+      "102": [
+        "it is wise not to shift gears when crossing the tracks to avoid the possibility of an engine stall."
+      ],
+      "103": [
+        "School buses are required to stop at all railroad crossings."
+      ],
+      "104": [
+        "If the gates begin to come down as you begin to cross, keep going even if it means you will break the gate."
+      ],
+      "105": [
+        "This sign marks the grade crossing and requires you to yield the right-of-way to the train."
+      ],
+      "106": [
+        "An EXEMPT sign means that the crossing has been abandoned or its use discontinued."
+      ],
+      "107": [
+        "The double yellow line in the center of the roadway means passing is prohibited for vehicles traveling in either direction."
+      ],
+      "108": [
+        "A driver may cross a solid yellow line to turn into a driveway if there is no opposing traffic"
+      ],
+      "109": [
+        "it is not permissible to use the center left turn lane as an acceleration lane."
+      ],
+      "110": [
+        "If you miss your turn or exit, do not back up; proceed to a safe turnaround area."
+      ],
+      "111": [
+        "On a road with three or more lanes traveling in the same direction remain in the right lane except to pass."
+      ],
+      "112": [
+        "When there are no signs or lane markings to control turning, a driver should turn into the lane closest to the direction of travel."
+      ],
+      "113": [
+        "If you are being followed to close on a multi-lane roadway, you should move into the lane to your right when clear."
+      ],
+      "114": [
+        "Pedestrians carrying a white cane or using a guide dog must be given absolute right of way."
+      ],
+      "115": [
+        "Drivers turning left must yield to oncoming cars traveling straight ahead."
+      ],
+      "116": [
+        "At an intersection where there is no stop sign or traffic signal, drivers must yield to vehicles approaching from the right."
+      ],
+      "117": [
+        "At “3 WAY,” “4 WAY,” and “ALL WAY” stop signs, the driver reaching the intersection first goes first, after making a complete stop."
+      ],
+      "118": [
+        "Drivers may not enter an intersection unless they can get through it without having to stop."
+      ],
+      "119": [
+        "Drivers passing a vehicle traveling in the same direction must yield to the vehicle being passed"
+      ],
+      "120": [
+        "Drivers passing a vehicle traveling in the same direction must yield to the vehicle being passed"
+      ],
+      "121": [
+        "When parallel parking, your vehicle should be 18 inches or less from the curb."
+      ],
+      "122": [
+        "When parking on a hill, turn the wheels sharply away from traffic to prevent the car from rolling into traffic."
+      ],
+      "123": [
+        "Within fifteen (15) feet of a fire hydrant"
+      ],
+      "124": [
+        "Within thirty (30) feet of a traffic signal, stop sign, or yield sign."
+      ],
+      "125": [
+        "Within fifty (50) feet of a railroad crossing"
+      ],
+      "126": [
+        "Red curb means fire zone."
+      ],
+      "127": [
+        "Adjust the lower strap, so it fits across the upper thighs and not the abdominal region."
+      ],
+      "128": [
+        "If the belts become twisted, the pressure that would occur in a collision has less surface area on which to be distributed."
+      ],
+      "129": [
+        "use the “hand-over-hand” technique to control the steering wheel."
+      ],
+      "130": [
+        "Depressing the gas pedal too fast can cause the drive wheels to spin or cause your vehicle to slide, especially if the pavement is wet."
+      ],
+      "131": [
+        "At 55 mph, that's like driving the length of an entire football field with your eyes closed."
+      ],
+      "132": [
+        "Always exit the vehicle on the curbside, if possible."
+      ],
+      "133": [
+        "Braking quickly can cause your vehicle to skid and cause you to lose control."
+      ],
+      "134": [
+        "Under eighteen (18) years of age cell phone use is not allowed. The use of hands-free devices is not allowed."
+      ],
+      "135": [
+        "Cognitive Taking your mind off driving"
+      ],
+      "136": [
+        "you should look down the road at least one (1) city block, when driving in the city"
+      ],
+      "137": [
+        "You should be looking at least fifteen (15) seconds ahead."
+      ],
+      "138": [
+        "You may turn right on a red light, after making a complete stop, unless there is a sign prohibiting “right on red”."
+      ],
+      "139": [
+        "If stopped at an intersection and your view of a cross street is blocked, ease forward until you can see."
+      ],
+      "140": [
+        "Look over your shoulder in the direction you plan to move. Your rearview and side mirrors will not allow you to see vehicles in your blind spots."
+      ],
+      "141": [
+        "Place your right arm over the back of the seat and turn your body, so you can look directly through the rear and side windows.",
+        "Do not depend on your rearview or side mirrors as you cannot see directly behind your vehicle."
+      ],
+      "142": [
+        "Never stay alongside a large vehicle such as a tractor-trailer or bus."
+      ],
+      "143": [
+        "Arkansas law requires drivers to turn on their headlights when windshield wipers are needed."
+      ],
+      "144": [
+        "Turn on your headlights a ½ hour (30 minutes) after sunset, a ½ hour (30 minutes) before sunrise, or anytime you cannot see a person or object clearly within 500 feet."
+      ],
+      "145": [
+        "Parking lights are for parked cars. It is illegal in Arkansas to drive using only parking lights."
+      ],
+      "146": [
+        "Dim your high beams whenever you come within 500 feet of an oncoming vehicle."
+      ],
+      "147": [
+        "When driving in fog, snow, or heavy rain you should use your low headlight beams. The light from high beams will reflect, causing glare, making it more difficult to see the road."
+      ],
+      "148": [
+        "Don’t use your horn: ... To greet a friend on the road"
+      ],
+      "149": [
+        "If possible, you should signal your intentions to turn at least 100 feet before the turn."
+      ],
+      "150": [
+        "If you plan to turn beyond an intersection, the signal is just after you pass through the intersection."
+      ],
+      "151": [
+        "The average passenger car traveling at 55 miles per hour can stop within a total of 225 feet."
+      ],
+      "152": [
+        "Braking in a curve can cause the vehicle to skid."
+      ],
+      "153": [
+        "On packed, snow you should cut your speed in half."
+      ],
+      "154": [
+        "When ice is near the freezing point it can be more slippery than at temperatures well below freezing."
+      ],
+      "155": [
+        "Heat causes the oil in the asphalt to surface on the roadway. The oil makes conditions more slippery until the rain washes it from the roadway."
+      ],
+      "156": [
+        "In heavy rain, your tires can lose all traction with the road at 50 mph. The faster you move, your tires will start to ride up on the water... called “hydroplaning”."
+      ],
+      "157": [
+        "Slowly take your foot off the gas pedal.",
+        "Keep the steering wheel straight."
+      ],
+      "158": [
+        "Use the ramp to reach the speed of other vehicles before you pull onto the road. Do not drive to the end of the ramp and stop."
+      ],
+      "159": [
+        "If the road you are traveling has exit ramps, do not slow down until you have moved onto the exit ramp."
+      ],
+      "160": [
+        "Farm tractors, animal-drawn vehicles, and roadway maintenance vehicles usually travel 25 mph or less. These vehicles should have a slow-moving vehicle sign visible from the rear."
+      ],
+      "161": [
+        "Your headlights let you see about 400 feet ahead. You should drive at a speed that allows you to stop within this distance, which is around 50 mph."
+      ],
+      "162": [
+        "If you cannot see more than 200 feet ahead because of rain or fog, you should not drive faster than 30 mph."
+      ],
+      "163": [
+        "Overpasses and bridges can become some of the first sections of roadways to develop icy conditions."
+      ],
+      "164": [
+        "If you cannot see more than 200 feet ahead because of rain or fog, you should not drive faster than 30 mph."
+      ],
+      "165": [
+        "To determine if you are driving too fast for the conditions, use the “Four Second Sight Distance Rule.”"
+      ],
+      "166": [
+        "Even if you are driving the speed limit, you can get a ticket for traveling too fast for the conditions."
+      ],
+      "167": [
+        "Use the “two (2) second rule” to determine if you are following too close."
+      ],
+      "168": [
+        "Slippery roads require more stopping distance; you need to allow space in front of you.",
+        "Allow an extra cushion of space when following a motorcycle.",
+        "Drivers of trucks, buses, vans, or vehicles pulling campers or trailers may not be able to see you behind them"
+      ],
+      "169": [
+        "If there is no right lane, wait until the path ahead is clear and reduce speed. This will allow the tailgater to drive around you."
+      ],
+      "170": [
+        "This is when you split the difference between two (2) hazards. For example: steer the middle course between oncoming and parked vehicles."
+      ],
+      "171": [
+        "Do not share a lane with a pedestrian or bicyclist; wait until it is safe to pass in the adjoining lane."
+      ],
+      "172": [
+        "When changing lanes, entering a roadway, or merging with another travel lane, you should keep a four (4) second gap."
+      ],
+      "173": [
+        "Stopping halfway across the road is safe when there is a median divider large enough for your vehicle to enter."
+      ],
+      "174": [
+        "Even with a green light, do not start across the intersection until traffic is clear.",
+        "Drivers can be ticketed for blocking an intersection."
+      ],
+      "175": [
+        "The driver may intend on turning beyond the street where you are sitting, or the driver may have forgotten to turn the signal off from a prior turn."
+      ],
+      "176": [
+        "At a speed of 55 mph, you need about ten (10) seconds to pass."
+      ],
+      "177": [
+        "This means a driver will need over 1600 feet or 1/3 of a mile to safely pass."
+      ],
+      "178": [
+        "If you are overtaking a bicycle and an oncoming car is approaching, you should slow down and let the vehicle pass before you pass the bicycle."
+      ],
+      "179": [
+        "Drivers should not pass if you are within, 1/3 of a mile of a hill or curve."
+      ],
+      "180": [
+        "At night, when you can see both headlights of the vehicle you passed in your rear-view mirror, it is safe to return to the driving lane."
+      ],
+      "181": [
+        "Arkansas Code Annotated 27-51-301 states that a vehicle shall not be driven upon the left lane of a multilane highway, EXCEPT as follows:",
+        "(4) When a vehicle is preparing to exit the multilane highway on the left"
+      ],
+      "182": [
+        "A fully loaded tractor-trailer traveling at 55 miles per hour may take more than 335 feet to come to a complete stop."
+      ],
+      "183": [
+        "Any turning vehicle’s rear wheels follow a shorter path than the front wheels.",
+        "That’s why the drivers of tractor-trailers must often swing out to the left as the first step in making a right turn."
+      ],
+      "184": [
+        "A car can disappear; up to 20 feet in front of the cab, on either side of the tractor-trailer"
+      ],
+      "185": [
+        "A car can disappear; ... up to 200 feet in the rear of the truck."
+      ],
+      "186": [
+        "An excellent rule for motorists sharing the road with a tractor-trailer is, “if you can’t see the truck driver in the tractor side mirror, the driver can’t see you.”"
+      ],
+      "187": [
+        "The size of a tractor-trailer can appear to be traveling at a slower speed than reality.",
+        "A large number of car-truck collisions take place at intersections because the driver of the car does not realize how close the truck is or how quickly it is approaching."
+      ],
+      "188": [
+        "Bicycles are required to travel on the right-hand side of the road with other traffic.",
+        "Bicyclists are not allowed to travel facing oncoming traffic."
+      ],
+      "189": [
+        "When cyclists are passing parked cars, they tend to move away from the cars toward the center of the lane to avoid injuring – or being injured by – people getting out of cars."
+      ],
+      "190": [
+        "The most common cause of a collision is a driver turning left in front of an oncoming bicycle or turning right, across the path of the bicycle."
+      ],
+      "191": [
+        "tap your horn gently and briefly as a signal that you’re going to pass. Don’t blast your horn or otherwise startle or try to intimidate the rider."
+      ],
+      "192": [
+        "If you see a bicyclist with a red or orange pennant flag attached to the bike, slow down; this is a symbol to indicate the rider has impaired hearing."
+      ],
+      "193": [
+        "The lane is too narrow for both a car and a bicycle to safely share the lane. In this case, it is safest to let the bicycle take the full lane."
+      ],
+      "194": [
+        "The most common crash between cars and motorcycles is at an intersection when the driver of a car is making a left turn in front of a motorcycle"
+      ],
+      "195": [
+        "Motorcycle signals don’t automatically cancel, and riders forget to turn them off. Wait and see if the motorcycle is going to turn before you proceed."
+      ],
+      "196": [
+        "Allow the motorcyclist a full lane width.",
+        "Do not attempt to share the lane with a motorcycle."
+      ],
+      "197": [
+        "Allow more following distance, at least four (4) to six (6) seconds, when following a motorcycle"
+      ],
+      "198": [
+        "You must have at least twenty-seventy (20/70) vision in at least one eye, with or without corrective lenses."
+      ],
+      "199": [
+        "If you have a restriction “B” restriction on your driver’s license, you must drive with your eyewear."
+      ],
+      "200": [
+        "Avoid dark or tinted glasses/contact lenses at night... the problem is these types of lenses cut down too much light and light is needed to see the road ahead."
+      ],
+      "201": [
+        "road and traffic conditions such as potholes, gravel, railroad crossings, and wet or slippery surfaces which impair the motorcyclist’s braking and handling abilities."
+      ],
+      "202": [
+        "Bicyclists are required to have proper illumination, front light, and rear reflector."
+      ],
+      "203": [
+        "drivers should have their eyes checked every year by an eye specialist."
+      ],
+      "204": [
+        "A strong gust of wind can move a motorcycle across an entire lane if the rider isn’t prepared for it."
+      ],
+      "205": [
+        "If the lane is marked and signed for bicycle use only, drivers must NEVER use that lane as a turning lane, passing lane or for parking."
+      ],
+      "206": [
+        "Eat light meals prior to departure. Large, full meals tend to cause drowsiness."
+      ],
+      "207": [
+        "In Arkansas, you may drive with epilepsy, if you are under the care of a doctor and seizure free for one year."
+      ],
+      "208": [
+        "If you are angry or excited, give yourself time to calm down or cool off. Take a short walk but stay off the road until you have calmed down."
+      ],
+      "209": [
+        "Alcohol is involved in approximately thirty-eight (38) percent of traffic crashes in which someone is killed."
+      ],
+      "210": [
+        "Alcohol in the bloodstream reaches the brain in fifteen (15) to forty (40) minutes."
+      ],
+      "211": [
+        "The first driving ability to be affected by alcohol is judgment."
+      ],
+      "212": [
+        "The body rids itself of alcohol at a rate of one (1) drink per hour."
+      ],
+      "213": [
+        "There is no way to sober up quickly. Coffee, fresh air, exercise or a cold shower will not help.",
+        "The only thing that will sober you up is time."
+      ],
+      "214": [
+        "You can lose your driver’s license if you refuse to take an alcohol test."
+      ],
+      "215": [
+        "You will be arrested for driving while intoxicated with an alcohol concentration of 0.08% or more"
+      ],
+      "216": [
+        "if it is your first conviction, you will be fined from $150 to $1000, in addition to court costs."
+      ],
+      "217": [
+        "arrested for Underage Driving Under the Influence if your alcohol concentration is 0.02%breath or blood alcohol concentration."
+      ],
+      "218": [
+        "any person under twenty-one (21) years of age convicted of purchasing or being in possession of alcohol will have their driving privileges suspended, revoked, or disqualified."
+      ],
+      "219": [
+        "drugs for headaches, colds, hay fever, or other allergies or drugs to calm the nerves can make a person drowsy and affect their driving skills."
+      ],
+      "220": [
+        "Check the label for warnings or ask your doctor or pharmacists for possible side effects before driving."
+      ],
+      "221": [
+        "studies have shown that people who use marijuana make more mistakes, have more trouble adjusting to glare, and get arrested for traffic violations more than other drivers."
+      ],
+      "222": [
+        "The decision to become an organ or tissue donor will not influence the quality of emergency care or medical treatment an organ donor might receive."
+      ],
+      "223": [
+        "The words “Organ Donor” will be printed on the front of the Arkansas driver’s license for those individuals who choose to participate as registered organ donors."
+      ],
+      "224": [
+        "Pump the brake pedal several times. This will often build up enough brake pressure to allow you to stop."
+      ],
+      "225": [
+        "Hold the steering wheel tightly and keep the vehicle going straight.",
+        "Slow gradually. Take your foot off the gas pedal and use the brakes lightly."
+      ],
+      "226": [
+        "Be aware that the steering may be difficult to turn, but you can turn it.",
+        "The brakes will still work but you may have to push very hard on the brake pedal."
+      ],
+      "227": [
+        "Quickly shift to neutral.",
+        "Pull off the road when safe to do so.",
+        "Turn off the engine."
+      ],
+      "228": [
+        "In avoiding a collision, drivers have three options: (1) Stop, (2) Turn, and (3) Speed Up."
+      ],
+      "229": [
+        "Press on the brake pedal as hard as you can and keep pressing on it.",
+        "The ABS system will only work with the brake pedal pushed down."
+      ],
+      "230": [
+        "The best way to grip the steering wheel is to place your hands at 10 o’clock and 2 o’clock positions."
+      ],
+      "231": [
+        "Sometimes it is best or in some cases necessary to speed up to avoid a collision.",
+        "You may want to accelerate when another vehicle is about to hit you from the side or from behind."
+      ],
+      "232": [
+        "The vast majority of skids are caused by drivers traveling too fast for the conditions."
+      ],
+      "233": [
+        "Do not stop at a crash unless you are involved, or emergency help has not arrived.",
+        "Focus on your driving and keep moving, watch for people in or near the road."
+      ],
+      "234": [
+        "In case you are involved in a crash with a parked vehicle, you must try to locate the owner."
+      ],
+      "235": [
+        "Any person injured, killed, or has property damage exceeding $1000; a driver must notify the police immediately."
+      ],
+      "236": [
+        "Turn off the ignition of wrecked vehicles.",
+        "Fuel could have spilled, and you could cause a fire."
+      ],
+      "237": [
+        "To prevent an injured person from going into shock, cover the individual with a blanket or warm clothing such as a coat or jacket."
+      ],
+      "238": [
+        "If there is bleeding, supply direct pressure to the wound.",
+        "Even severe bleeding can almost always be stopped or slowed by using direct pressure on a wound."
+      ],
+      "239": [
+        "report the accident... if there is an injury, a death, or property damage of more than $3000 to one person’s property."
+      ],
+      "240": [
+        "You must file the report within thirty (30) days of the accident."
+      ],
+      "241": [
+        "placing yourself 10 inches from your driver airbag provides you with a clear margin of safety.",
+        "This distance is measured from the center of the steering wheel to your breastbone."
+      ],
+      "242": [
+        "To properly check your blind spots, one should glance over the shoulder in the direction in which the vehicle is moving."
+      ],
+      "243": [
+        "A noise from underneath the vehicle when the brake pedal is depressed.",
+        "Foul smell during heavy braking.",
+        "Depressing the brake pedal with little or any breaking action."
+      ],
+      "244": [
+        "Wiper blades should be replaced every six (6) months to a year or as soon as you notice a difference in driving visibility."
+      ],
+      "245": [
+        "a cold tire is one that has not been driven on for at least three hours."
+      ],
+      "246": [
+        "tires are not safe and should be replaced when the tread is worn down to 1/16 of an inch."
+      ],
+      "247": [
+        "Do not give the injured anything to drink, even water, until medical personnel is on the scene."
+      ],
+      "248": [
+        "To adjust the driver's side-view mirror, place your head against the left side window and set the mirror so you can just barely see the side of the car"
+      ],
+      "249": [
+        "place a penny in the tread with Lincoln's head upside down and facing you. If you can see the top of Lincoln's head, you are ready for new tires."
+      ],
+      "250": [
+        "occasionally open a window and allow fresh air to fill the cabin of the vehicle, which will reduce any risk of toxic exhaust fumes filtering into the moving vehicle."
+      ],
+      "251": [
+        "Always make sure your parking brake is set before starting the engine."
+      ],
+      "252": [
+        "please bring your instruction permit, a valid licensed driver (not suspended or revoked) twenty-one (21) or older, current insurance (paper or electronic), and vehicle registration."
+      ],
+      "253": [
+        "No donut spares are allowed on the vehicle."
+      ],
+      "254": [
+        "You are allowed three (3) missed controls before the test is failed."
+      ],
+      "255": [
+        "A total of two missed attempts in the same category will constitute a failed exam."
+      ],
+      "256": [
+        "Automatic failures are imposed a thirty-day penalty."
+      ],
+      "257": [
+        "The permit is valid for two (2) years and cannot be renewed."
+      ],
+      "258": [
+        "Permits cannot be extended for any reason, due to inclement weather. No Exceptions!"
+      ],
+      "259": [
+        "Window tint darker than 25% on the front and darker than 10% in the back will be denied."
+      ],
+      "260": [
+        "A road test is not canceled due to rain. However, we do not administer the test in severe thunderstorms, fog, sleet, or snow."
+      ],
+      "261": [
+        "An unrestricted driver with a valid Class D, (16) years and older, may drive the applicant to the test center."
+      ],
+      "262": [
+        "Any brow measuring more than 5 inches from the center of the windshield will be denied."
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 30,
-    "topics_covered": 29,
-    "coverage_pct": 96.7,
+    "topics_total": 25,
+    "topics_covered": 23,
+    "coverage_pct": 92.0,
     "uncovered_topics": [
-      "Rules for navigating traffic in a roundabout"
+      "Presenting a concealed carry permit during stops",
+      "Driver license testing exemptions for military spouses"
     ],
     "verdict": "PASS",
     "grade": "A"
@@ -65,6 +890,20 @@
     "sign_ratio_pct": 11.5,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 262,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

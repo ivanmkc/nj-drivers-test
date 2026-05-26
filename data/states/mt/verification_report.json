@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "mt",
   "name": "Montana",
-  "verified_at": "2026-05-26T02:31:20Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:09:17Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://opi.mt.gov/Portals/182/Page%20Files/Driver%20Education/Curriculum/Resources%20and%20Extras/Montana-Driver-Manual.pdf",
     "manual_pdf_sha256": "d2c2c441ddf8fe97463dfdf1844bc2fc4c49f7e90f9abb5cc10c9b82c51cfd26",
@@ -23,24 +23,1385 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 426,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "Courts go by the actual language of the Montana Code Annotated, not this text."
+      ],
+      "2": [
+        "Class D Standard Driver License (non-commercial license)"
+      ],
+      "3": [
+        "Schedule your test online: www.dojmt.gov/driving"
+      ],
+      "4": [
+        "Graduated Driver Licensing (GDL) Program"
+      ],
+      "5": [
+        "An adapted illustrated driver manual is available from the Office of Public Instruction"
+      ],
+      "6": [
+        "Commercial Driver License (CDL)"
+      ],
+      "7": [
+        "follow the way of the road – leave sooner, drive slower, stay alert, and live longer."
+      ],
+      "8": [
+        "Braking System",
+        "Exhaust System",
+        "Suspension System"
+      ],
+      "9": [
+        "Red Reflectors (rear)"
+      ],
+      "10": [
+        "CHAPTER 2 – MOTOR VEHICLE EQUIPMENT"
+      ],
+      "11": [
+        "Further information may be obtained from: a public library, law enforcement agency, or driver examiner"
+      ],
+      "12": [
+        "Motor Vehicle Division at P.O. Box 201430, Helena, MT 59620-1430 or 1-406-444-3933."
+      ],
+      "13": [
+        "License Plate Lamp ..................................................................................................... 15"
+      ],
+      "14": [
+        "Unless you know the information that it contains, you cannot pass the written and road tests."
+      ],
+      "15": [
+        "Fines Doubled in School Zones .................................................................................................. 29",
+        "Fines are doubled in all school zones throughout Montana."
+      ],
+      "16": [
+        "Red Reflectors (rear) ..................................................................................................... 15"
+      ],
+      "17": [
+        "Spot Lamps & Auxiliary Lamps (Fog Lamps) ................................................................................. 16"
+      ],
+      "18": [
+        "Projecting Load Lamp or Flag .................................................................................................... 16"
+      ],
+      "19": [
+        "Know Signs by Their Shape and Color ...................................................................................... 22"
+      ],
+      "20": [
+        "Display of Warning Devices When Vehicles Disabled ................................................................. 18"
+      ],
+      "21": [
+        "Mud Flaps Required",
+        "Trucks, buses, truck trailers, trailers/semi-trailers, or pole trailers, or vehicles of 8000 pounds or less GVW shall have fenders, splash aprons, or flaps"
+      ],
+      "22": [
+        "Child Restraints Required",
+        "Babies and children up to age 6 and 60 pounds must be buckled in a child safety seat."
+      ],
+      "23": [
+        "Clean All Windows and Glass Surfaces",
+        "It is important that you are able to see clearly through the windows, windshield, and mirrors."
+      ],
+      "24": [
+        "Special Lighting for Farm Tractors & Implements of Husbandry",
+        "any farm tractor or implement of husbandry, moved on the highway, must display a white light to the front"
+      ],
+      "25": [
+        "Adjust Seat and Mirrors",
+        "You should always check your seat and mirrors before you start to drive."
+      ],
+      "26": [
+        "Railroad Cross Buck Signs",
+        "Railroad cross buck signs will be found at all public crossings."
+      ],
+      "27": [
+        "Certain Vehicles to Carry Flares or Other Warning Devices",
+        "Every truck of one-ton capacity or larger, passenger bus and truck tractor must be equipped with at least three flares"
+      ],
+      "28": [
+        "CHAPTER 3 – SIGNS, SIGNALS, & MARKINGS"
+      ],
+      "29": [
+        "Safety Chains",
+        "Every trailer, semi-trailer or pole trailer of 3000 pounds GVW or less must have on the front a steel chain or cable"
+      ],
+      "30": [
+        "Same Road – Same Rules – Same Rights",
+        "Under Montana law, bicycles are considered vehicles and are governed by the same traffic laws that reasonably apply to their operation."
+      ],
+      "31": [
+        "Self-Insurers",
+        "Requirements",
+        "Consequences"
+      ],
+      "32": [
+        "Adjusting to Road Conditions",
+        "Adjusting to Traffic",
+        "Adjusting to How Well You Can See"
+      ],
+      "33": [
+        "Space Ahead",
+        "Space Behind",
+        "Space to the Side"
+      ],
+      "34": [
+        "Funeral Procession",
+        "The state of Montana has some unique right-of-way provisions when driving in or encountering a funeral procession"
+      ],
+      "35": [
+        "Letting Others Know You Are There",
+        "Letting Others Know What You Are Doing"
+      ],
+      "36": [
+        "Starting",
+        "Accelerating",
+        "Steering"
+      ],
+      "37": [
+        "Parallel Parking",
+        "Parking on a Hill",
+        "No Parking Zones"
+      ],
+      "38": [
+        "Equipment and Lighting Required for Bicycles"
+      ],
+      "39": [
+        "Scanning",
+        "Night Driving"
+      ],
+      "40": [
+        "Edge and Lane Lines",
+        "Other Lane Controls",
+        "No Lane Markings"
+      ],
+      "41": [
+        "Emergency Vehicles",
+        "School Buses"
+      ],
+      "42": [
+        "Driver Test for iPad and iPhone"
+      ],
+      "43": [
+        "Space to Cross or Enter"
+      ],
+      "44": [
+        "Customer is a U.S. Citizen, between the ages of 21-67"
+      ],
+      "45": [
+        "Customer is a U.S. Citizen, between the ages of 21-67"
+      ],
+      "46": [
+        "Eligible for renewal (6 months prior or within 3 months after expiration date)"
+      ],
+      "47": [
+        "Eligible for renewal (6 months prior or within 3 months after expiration date)"
+      ],
+      "48": [
+        "Customer is a U.S. Citizen"
+      ],
+      "49": [
+        "In avoiding a collision, drivers have three options: (1) stop, (2) turn, and (3) speed up.",
+        "Speeding Up"
+      ],
+      "50": [
+        "Gas Pedal Sticks"
+      ],
+      "51": [
+        "Chapter 9 (Other Services) includes information on Voter Registration, Selective Service, Organ & Tissue Donation, and Living Wills."
+      ],
+      "52": [
+        "Scheduling online also helps you avoid waiting on the phone when Customer Care Center lines are busy."
+      ],
+      "53": [
+        "Hit from the rear",
+        "Hit from the side",
+        "Hit from the front"
+      ],
+      "54": [
+        "The Motor Vehicle Division offers several online services for your convenience: dojmt.gov/driving"
+      ],
+      "55": [
+        "If someone is injured",
+        "At the accident scene",
+        "Report the accident"
+      ],
+      "56": [
+        "Vision, Hearing, & Fatigue"
+      ],
+      "57": [
+        "Giving Up Driving",
+        "Considerations for Senior Citizens"
+      ],
+      "58": [
+        "Customer is a U.S. Citizen, between the ages of 21-67"
+      ],
+      "59": [
+        "The records do not display the driver’s Social Security number, address, or any previous driver license numbers."
+      ],
+      "60": [
+        "New residents must apply to convert their valid license within 60 consecutive days (30 consecutive days for commercial)."
+      ],
+      "61": [
+        "A basic driver license (Class D) is valid for a maximum of four to eight years, typically expiring on the holder’s birthday."
+      ],
+      "62": [
+        "For residents under 21 years old, minimum age for a license is 16 years (15 years with driver education) and is valid until 21st birthday."
+      ],
+      "63": [
+        "At participating stations, appointments are required for all services except Montana license renewal and Montana license replacement."
+      ],
+      "64": [
+        "A Class D basic driver license allows you to drive any non-commercial vehicle under 26,000 pounds gross vehicle weight."
+      ],
+      "65": [
+        "Any person who is a Montana resident and has a valid driver license from a jurisdiction other than Montana is not eligible for a Montana identification card."
+      ],
+      "66": [
+        "A TEP allows a student who is enrolled in a state-approved traffic education course* to operate a motor vehicle during the traffic education training, while under the direct supervision of a traffic education instructor."
+      ],
+      "67": [
+        "A learner license may be issued to any person who is at least 14 ½ years of age and who is participating in or successfully completed a traffic education course*"
+      ],
+      "68": [
+        "Signing obligates the parent/guardian to accept financial responsibility for any damage resulting from the minor’s operation of a motor vehicle."
+      ],
+      "69": [
+        "The learner license must be used for six consecutive months by any new driver under 18 years old."
+      ],
+      "70": [
+        "Traffic education courses must be approved by the Office of Public Instruction and the Department of Justice. Online or 3rd party traffic education courses are not approved."
+      ],
+      "71": [
+        "To be eligible for a motorcycle endorsement you must hold or be eligible for a basic driver license."
+      ],
+      "72": [
+        "will be checked with the Social Security Administration.",
+        "matches what is on file with the Social Security Administration."
+      ],
+      "73": [
+        "The road test may be waived if you have successfully completed and passed a Montana Motorcycle Safety Foundation (MSF) course in the past year, and provide a Montana MSF certificate"
+      ],
+      "74": [
+        "The motorcycle learner license is valid for one year."
+      ],
+      "75": [
+        "be under the immediate and proximate supervision of a licensed driver who has a motorcycle endorsement."
+      ],
+      "76": [
+        "If minor is 16 years old -OR- is 15 years old and successfully completes a state-approved traffic education program"
+      ],
+      "77": [
+        "online or 3rd party traffic education courses are not approved.",
+        "online courses are not approved"
+      ],
+      "78": [
+        "If you have a valid driver license issued by the jurisdiction you moved from, you can use it for up to 60 consecutive days"
+      ],
+      "79": [
+        "Active duty military personnel and their dependents may retain their valid out-of-state license and drive in Montana unless they become gainfully employed."
+      ],
+      "80": [
+        "Valid for 90 days after honorable discharge.",
+        "Those who have the military exemption may drive on that license for up to 90 days after honorable separation"
+      ],
+      "81": [
+        "A driver license issued to a person who is a foreign national and whose presence in the U.S. is temporarily authorized must expire no later than the expiration date of the official document"
+      ],
+      "82": [
+        "You may have only one valid driver license, issued by any licensing jurisdiction, at any time."
+      ],
+      "83": [
+        "Out-of-state drivers who hold a valid out-of-state license... may exchange their basic driver license for a Montana driver license without a written or road test."
+      ],
+      "84": [
+        "a valid, unexpired passport issued by the U.S. Department of State"
+      ],
+      "85": [
+        "their authorized presence in the U.S. will be verified using the federal Systematic Alien Verification for Entitlements (SAVE) system"
+      ],
+      "86": [
+        "a digital identification card issued to the applicant by a federally recognized Native American Tribe, whose reservation is located in Montana"
+      ],
+      "87": [
+        "You must provide two documents—either two primary documents, or one primary and one secondary document"
+      ],
+      "88": [
+        "a color photo driver license or identification card, not expired for more than four years, issued by a U.S. or Canadian jurisdiction"
+      ],
+      "89": [
+        "a certified birth certificate typically has the registrar’s unique seal (e.g., raised, embossed, impressed or multi- colored), the registrar’s signature and the date the certificate was filed"
+      ],
+      "90": [
+        "an emergency identification photo issued and certified by the driver licensing authority... not acceptable for mail renewals or mail duplicate"
+      ],
+      "91": [
+        "any of the following, dated or issued not more than four months prior to application: o a payroll check or payroll check stub o a bank statement o a utility bill or utility hook-up order"
+      ],
+      "92": [
+        "The applicant must also provide a separate mailing address and present a written statement from a social service agency on the agency’s letterhead verifying the applicant’s homeless status"
+      ],
+      "93": [
+        "an unexpired, color photo firearm or concealed weapon permit issued by a chief of police in an organized, full-time police department or the county Sheriff in a local jurisdiction within the U.S."
+      ],
+      "94": [
+        "STEP 1: NAME, DATE OF BIRTH AND AUTHORIZED PRESENCE Applicants for a Montana REAL ID driver license or ID card must provide proof that their presence in the United States is authorized"
+      ],
+      "95": [
+        "STEP 2: SOCIAL SECURITY NUMBER Applicants must prove they have been issued a social security number (SSN)."
+      ],
+      "96": [
+        "a written statement from the applicant’s parent, guardian or adult child that the applicant resides at the same address as the parent, guardian or adult child, along with a copy of a document"
+      ],
+      "97": [
+        "a certified copy of school records or a transcript containing the applicant’s full name and, preferably, date of birth and issued by an elementary, secondary or postsecondary school"
+      ],
+      "98": [
+        "a digital identification card issued to the applicant by a federally recognized Indian tribe whose reservation is located in Montana, that contains the applicant’s digitized image, date of birth"
+      ],
+      "99": [
+        "a receipt for personal or real property taxes paid within the last year to the state of Montana or a Montana county"
+      ],
+      "100": [
+        "a certified copy, fax or photocopy of a certified copy of the birth certificate of the applicant’s child, if the certificate lists the applicant’s name and date of birth as parent"
+      ],
+      "101": [
+        "Residency requires two acceptable documents, and all documents must have the applicant’s name, current physical address"
+      ],
+      "102": [
+        "Teen drivers must acquire at least 50 hours of supervised driving experience, including 10 hours at night during a minimum of six months."
+      ],
+      "103": [
+        "A teenager may obtain a learner license as early as 14 ½ years old only if he/she is participating in or has successfully completed a state-approved traffic education program"
+      ],
+      "104": [
+        "Teenage drivers with a restricted driver license may not drive between 11:00 p.m. and 5:00 a.m."
+      ],
+      "105": [
+        "One passenger: For the first six months, unless supervised by a licensed adult driver, a teenage driver may have only one unrelated passenger under the age of 18 in the vehicle."
+      ],
+      "106": [
+        "First Offense: Between 20 to 60 hours of community service."
+      ],
+      "107": [
+        "If you are under the age of 21, your license expires on your 21st birthday"
+      ],
+      "108": [
+        "If you are 75 years of age or older, your license expires on your birthday four years or less after the date of issuance"
+      ],
+      "109": [
+        "Any Class D basic license or a learner license listed.............................................................. $5.00 per year"
+      ],
+      "110": [
+        "Driver license receipts are valid for one year."
+      ],
+      "111": [
+        "the receipt allows the applicant three attempts within that year to successfully pass all required examinations."
+      ],
+      "112": [
+        "A teenager under 18 must hold a learner license for a minimum of six consecutive months before applying for a first-year restricted license."
+      ],
+      "113": [
+        "online or 3rd party traffic education courses are not approved.",
+        "state-approved traffic education program (online courses are not approved)."
+      ],
+      "114": [
+        "Customers renewing or replacing their current Montana REAL ID will pay a REAL ID fee of $25.75 in addition to regular license fees"
+      ],
+      "115": [
+        "You may renew your license up to six months before the expiration date of your license."
+      ],
+      "116": [
+        "If your license is more than three months expired, you must reapply as a new driver.",
+        "you will also be required to pass all applicable licensing tests."
+      ],
+      "117": [
+        "If your license is lost or destroyed, you may apply for a replacement at your local licensing station. You will be required to pay a $10 fee"
+      ],
+      "118": [
+        "you must notify the Driver Services Bureau of the Department of Justice within 10 days of any change of address."
+      ],
+      "119": [
+        "a certified copy of a divorce decree or dissolution of marriage granted the applicant that specifies the change of name required"
+      ],
+      "120": [
+        "All driver license stations require scheduled appointments."
+      ],
+      "121": [
+        "Signing obligates the parent/guardian to accept financial responsibility for any damage resulting from the minor’s operation of a motor vehicle."
+      ],
+      "122": [
+        "Use car pools or share rides whenever possible.",
+        "Take public transportation when it is available.",
+        "Plan and then combine your errands; this will cut down on the number of trips you need to take."
+      ],
+      "123": [
+        "Driving with headlights on all the time helps other drivers see your vehicle during the day and at night."
+      ],
+      "124": [
+        "Remove snow and ice from all windows before you drive to clear your view of the road."
+      ],
+      "125": [
+        "Check the tire air pressure with an air pressure gauge when the tires are cold."
+      ],
+      "126": [
+        "If the tread does not come at least to Abraham Lincoln’s head, the tire is unsafe and you need to replace it."
+      ],
+      "127": [
+        "Your suspension keeps your vehicle balanced, helps you control your vehicle, and provides a comfortable ride over varying road surfaces."
+      ],
+      "128": [
+        "Fumes from a leaky exhaust can cause death in a very short time. It can also make you drowsy while driving."
+      ],
+      "129": [
+        "Make sure there are no objects on the floor that could roll under the brake pedal so that you could not slow or stop the vehicle."
+      ],
+      "130": [
+        "High beam must be dimmed when meeting other vehicles at 1000 feet",
+        "Dim high beam headlights when meeting other cars 1000 feet"
+      ],
+      "131": [
+        "Head lamps are required to be in use at all times from a half hour after sunset to a half hour before sunrise and any other times when, due to weather or blowing dust, visibility is less than 500 feet."
+      ],
+      "132": [
+        "Headlights should be capable of illuminating persons or vehicles for a distance of 350 feet on high beam and 100 feet on low beam."
+      ],
+      "133": [
+        "Vehicles manufactured after January 1, 1956, must emit a white or amber light to the front and red or amber light to the rear, visible for 300 feet in the sunlight."
+      ],
+      "134": [
+        "Vehicles manufactured after January 1, 1956, must emit white light to illuminate the license plate for 50 feet to the rear."
+      ],
+      "135": [
+        "Horn Must provide warning audible for 200 feet."
+      ],
+      "136": [
+        "No person may drive a motor vehicle in Montana unless each occupant is wearing a properly adjusted and fastened safety belt."
+      ],
+      "137": [
+        "Whenever any load extends four feet or more beyond the body of the vehicle... At all other times there shall be a red flag, not less than 12 inches square."
+      ],
+      "138": [
+        "Flashing, blinking, sequential, rotating, or pulsating lights (other than turn signals) are prohibited except for emergency or authorized vehicles."
+      ],
+      "139": [
+        "If the vehicle bounces a lot, keeps bouncing after a bump or after you stop, you may need new shocks or other suspension parts."
+      ],
+      "140": [
+        "any farm tractor or implement of husbandry, moved on the highway, must display a white light to the front, visible for at least 500 feet"
+      ],
+      "141": [
+        "Spot lamps must be turned off when approaching another moving vehicle from either direction"
+      ],
+      "142": [
+        "Every trailer, semi-trailer and pole trailer equipped with air or vacuum brakes, or which has a gross weight in excess of 3000 pounds, must have “break-away” brakes"
+      ],
+      "143": [
+        "No vehicle shall be equipped with, nor shall any person use upon a vehicle, any siren, whistle, or bell, except as permitted for authorized emergency vehicles."
+      ],
+      "144": [
+        "extend down to a point not more than 20 inches above the surface of the highway, when the vehicle is empty."
+      ],
+      "145": [
+        "Every trailer, semi-trailer or pole trailer of 3000 pounds GVW or less must have on the front a steel chain or cable",
+        "Such chain or cable shall be no less than 1/4 inch in diameter."
+      ],
+      "146": [
+        "Flares, fuses or signals produced by flame shall NOT be used as warning devices for vehicles transporting explosives, flammable liquids or compressed gases"
+      ],
+      "147": [
+        "Whenever any of the above vehicles is disabled within 500 feet of a curve, hill or other obstruction to view, the warning signal in that direction shall be placed no less than 500 feet"
+      ],
+      "148": [
+        "The emblem is a triangle of fluorescent yellow-orange color with a base of 14” and 14” in height. The triangle must have a border with reflective red stripes"
+      ],
+      "149": [
+        "the slow-moving vehicle must, at the first safe opportunity, with sufficient room for turnout, pull over to allow other vehicles to pass."
+      ],
+      "150": [
+        "Keep the headlights, backup, brake and taillights clean. Dirt on the lenses can cut the lights’ effectiveness by 50%."
+      ],
+      "151": [
+        "A good adjustment for the side mirrors is to set them so that when you lean forward slightly, you can see the side of your vehicle."
+      ],
+      "152": [
+        "A driver who violates the law will be fined $20."
+      ],
+      "153": [
+        "At just 30 mph, a person not wearing a seat belt in a crash has the same experience as falling from a 3-story building"
+      ],
+      "154": [
+        "There are actually three collisions in every crash: the vehicle collision; the human collision; and the internal collision (inside your body)."
+      ],
+      "155": [
+        "Montana law places responsibility on the driver to ensure each occupant is properly buckled or in a child safety seat."
+      ],
+      "156": [
+        "If the vehicle was manufactured prior to January 1, 1968."
+      ],
+      "157": [
+        "If you have an automatic shoulder belt, buckle your lap belt as well."
+      ],
+      "158": [
+        "Babies and children up to age 6 and 60 pounds must be buckled in a child safety seat."
+      ],
+      "159": [
+        "Never place a rear-facing car seat in the front passenger seat with an active air bag."
+      ],
+      "160": [
+        "In a 30 mph crash, a 100 pound adult becomes a 3,000 pound force against the child."
+      ],
+      "161": [
+        "Whenever possible, children under age 13 should be secured in the backseat."
+      ],
+      "162": [
+        "Remember: red always means stop, yield, do not enter, or wrong way."
+      ],
+      "163": [
+        "The STOP sign is the only eight-sided traffic sign."
+      ],
+      "164": [
+        "the “railroad crossing ahead” sign is round. It is the only round warning traffic sign."
+      ],
+      "165": [
+        "Regulatory signs are rectangular with black words or symbols on a white background."
+      ],
+      "166": [
+        "Warning signs are black and yellow. These signs are used to warn you of dangerous conditions ahead",
+        "Warning signs are usually diamond shaped."
+      ],
+      "167": [
+        "When you see a sign with a red circle and a red slash mark across a black arrow or symbol, it means don’t do whatever is shown."
+      ],
+      "168": [
+        "Narrow Bridge The bridge ahead is narrower than the road you are on. However, there is room to meet and pass.",
+        "One Lane Bridge There is not room on the bridge to meet or pass another car or truck."
+      ],
+      "169": [
+        "Head lamps are required to be in use at all times from a half hour after sunset to a half hour before sunrise and any other times when, due to weather or blowing dust, visibility is less than 500 feet."
+      ],
+      "170": [
+        "Vehicles manufactured after January 1, 1956, must emit a white or amber light to the front and red or amber light to the rear, visible for 300 feet in the sunlight."
+      ],
+      "171": [
+        "Reduce your speed; do not brake hard or change directions suddenly. Increase the distance between your vehicle and the vehicle in front of you."
+      ],
+      "172": [
+        "The fines for violation of a work zone are double the amount."
+      ],
+      "173": [
+        "Stripes sloping downward to the right mean the driver should bear to the right."
+      ],
+      "174": [
+        "You may be charged with Reckless Endangerment of a Highway Worker if you knowingly or negligently drive a motor vehicle in a highway construction zone in a way that endangers persons or property, or remove, ignore, or intentionally strike a traffic control device."
+      ],
+      "175": [
+        "School zone speed limits may be as low as 15 mph (MCA 61-8-310)"
+      ],
+      "176": [
+        "Fines are doubled in all school zones throughout Montana."
+      ],
+      "177": [
+        "Drivers can’t drive through a column of school children crossing a roadway, or past a school crossing guard while the crossing guard is directing the movement of children across a roadway and while the crossing guard is holding an official sign in the stop position."
+      ],
+      "178": [
+        "Generally, if a signal is not working, stop as you would if there were stop signs in all directions."
+      ],
+      "179": [
+        "Pedestrians who are in the crosswalk when the DON’T WALK signal begins flashing should continue crossing the street."
+      ],
+      "180": [
+        "The overpass has a low clearance. Do not proceed if your vehicle is too tall to pass under."
+      ],
+      "181": [
+        "Divided Highway Begins A median or divider ahead splits the highway into two separate roadways, and each roadway is one-way. Keep to the right."
+      ],
+      "182": [
+        "Hill A steep grade is ahead. Check your brakes. You may need to shift into a lower gear."
+      ],
+      "183": [
+        "Mixing speeding or distracted driving with child pedestrians and bicyclists is dangerous because children are difficult to see due to their size and tendency toward unpredictable behavior."
+      ],
+      "184": [
+        "An upheld orange hand means DON’T WALK."
+      ],
+      "185": [
+        "A flashing red signal means the same as a stop sign. Come to a complete stop."
+      ],
+      "186": [
+        "A steady yellow signal means “CAUTION.” Cautiously enter the intersection. The signal is about to turn red. Do not enter an intersection against a steady yellow light unless you are too close to stop safely."
+      ],
+      "187": [
+        "When entering a one-way street from a one-way street, you may also turn left after stopping for the red light."
+      ],
+      "188": [
+        "A flashing yellow arrow means left turns are allowed, but you must first yield to oncoming traffic and pedestrians."
+      ],
+      "189": [
+        "Slow Down – Driving speeds in roundabouts are 15 mph or less"
+      ],
+      "190": [
+        "Look to the Left –Yield to vehicles that are already in the roundabout; they have the right-of-way."
+      ],
+      "191": [
+        "Do not pull over or stop in the roundabout when approached by an emergency vehicle. Continue on and exit as normal, then pull to the right where there is room for the emergency vehicle to pass."
+      ],
+      "192": [
+        "The driver of the smaller vehicle should drop back behind the larger truck as it completes its travel through the roundabout."
+      ],
+      "193": [
+        "You are required to STOP at railroad crossings as close as practicable but not less than 15 feet from the nearest rail"
+      ],
+      "194": [
+        "It is wise to not shift gears when crossing railroad tracks, just in case you might stall."
+      ],
+      "195": [
+        "A solid yellow line on your side means that you cannot pass over the centerline."
+      ],
+      "196": [
+        "Crossing a solid centerline is permitted only as part of a left turn maneuver."
+      ],
+      "197": [
+        "Lines separating lanes of traffic moving in the same direction are white. Lines separating traffic moving in opposite directions are yellow."
+      ],
+      "198": [
+        "A steady green arrow means that you have a “protected” turning movement."
+      ],
+      "199": [
+        "A dashed yellow line between opposing lanes of traffic means that you may cross it to pass if it is safe to do so."
+      ],
+      "200": [
+        "You may cross a solid yellow line to turn into a public or private parking lot, private driveway, or a roadway if it is safe to do so."
+      ],
+      "201": [
+        "“HOV” stands for High Occupancy Vehicles and indicates lanes reserved for vehicles with more than one person in them.",
+        "For example, “HOV 3” means that there must be at least three people in the vehicle."
+      ],
+      "202": [
+        "These lanes are marked on each side by a solid yellow and dashed yellow line."
+      ],
+      "203": [
+        "Use a proper turn signal 100 feet before turning in town, 300 feet before turning on rural roads."
+      ],
+      "204": [
+        "If you approached a turn in the wrong lane or forgot to signal, you should proceed, get into the proper lane, go to the next intersection, signal, and then turn."
+      ],
+      "205": [
+        "Vehicles traveling on a two-lane road may exceed the speed limit by 10 miles an hour in order to overtake and pass another vehicle"
+      ],
+      "206": [
+        "Two-Lane Highways 70 (Day) 65 (Night)"
+      ],
+      "207": [
+        "Passing on the right is legal only when the vehicle you’re passing is making or about to make a left turn"
+      ],
+      "208": [
+        "On multi-lane roads, the left-most lane is intended to be used to pass slower vehicles."
+      ],
+      "209": [
+        "If you swing wide, the driver behind you may think you are changing lanes or going to turn left and may try to pass you on the right."
+      ],
+      "210": [
+        "You may turn around on a roadway where the driver has 500 feet in both directions (almost two average city blocks) of unobstructed view"
+      ],
+      "211": [
+        "Walk around your parked car before backing up."
+      ],
+      "212": [
+        "A steady yellow “X” means that the use of the lane is changing and you should move out of it as soon as it is safe to do so."
+      ],
+      "213": [
+        "Pedestrians using a guide dog or carrying a white cane have absolute right-of-way. Do not use your horn because it could confuse or frighten the blind pedestrian."
+      ],
+      "214": [
+        "When people are walking on the roadway, they must walk on the left (facing oncoming traffic)."
+      ],
+      "215": [
+        "At an intersection where there is no stop sign or traffic signal, drivers should yield to vehicles coming from the right."
+      ],
+      "216": [
+        "Drivers turning left must yield to oncoming cars going straight ahead."
+      ],
+      "217": [
+        "Montana law also permits turning left from a one-way street to a one-way street under the condition stated above for turning right on red."
+      ],
+      "218": [
+        "When a vehicle is stopped at a marked crosswalk or at an unmarked crosswalk at an intersection to let a pedestrian cross the street, other drivers approaching from the rear may not pass the stopped vehicle."
+      ],
+      "219": [
+        "If you are in an intersection, drive through the intersection before you pull over and stop."
+      ],
+      "220": [
+        "the driver of a vehicle must stop at least 30 feet from the bus and cannot proceed until the red lights are turned off"
+      ],
+      "221": [
+        "If you approach a bus from either direction that is slowing down in preparation to stop to load passengers, or a bus displaying a yellow flashing light, you must slow down and proceed carefully."
+      ],
+      "222": [
+        "When driving in a funeral procession, a driver must follow the preceding vehicle as closely as possible.",
+        "An ordinance, law, or regulation requiring that motor vehicles be operated to allow sufficient space between them... does not apply to vehicles in a funeral procession."
+      ],
+      "223": [
+        "A driver in a funeral procession may not drive faster than 55 miles per hour on a highway where the speed limit is 55 miles per hour or more"
+      ],
+      "224": [
+        "The law says who must yield the right-of-way; it does not give anyone the right-of-way."
+      ],
+      "225": [
+        "Drivers entering a traffic circle or rotary must yield to drivers already in the circle."
+      ],
+      "226": [
+        "Drivers may not enter an intersection unless they can get through it without having to stop. You should wait until traffic ahead clears so that you are not blocking the intersection."
+      ],
+      "227": [
+        "A driver may not... pass a procession on a multiple-lane highway on the procession’s right side unless the procession is in the farthest left lane."
+      ],
+      "228": [
+        "turn signals must be flashing simultaneously as warning lights on a vehicle that is the first vehicle in a funeral procession or believed to be the last vehicle"
+      ],
+      "229": [
+        "A driver in a funeral procession must yield the right-of-way to an approaching authorized emergency vehicle giving an audible or visual signal."
+      ],
+      "230": [
+        "carefully cross the centerline to give the cyclist a recommended five-feet distance between them and your motor vehicle."
+      ],
+      "231": [
+        "When you see a shared lane marking, you must look out for bicyclists and make sure that you leave them enough space when passing."
+      ],
+      "232": [
+        "Motorists must yield the right-of-way to a person riding a bicycle within a designated bicycle lane."
+      ],
+      "233": [
+        "Riding on a paved shoulder or on a parking lane, in which case the persons may ride two abreast"
+      ],
+      "234": [
+        "Many bicyclists will often ride further into the lane (approximately 18-24 inches) to discourage motorists from trying to attempt a dangerous in-lane pass."
+      ],
+      "235": [
+        "This term describes a situation when an individual within a parked vehicle suddenly opens their car door without checking for any bicyclists approaching from behind."
+      ],
+      "236": [
+        "When a bicycle is traveling in your lane and you need to make a right turn, always check to make sure the bicyclist has either stopped to let you turn, or allow the bicyclist to pass you before making the turn."
+      ],
+      "237": [
+        "When used at nighttime, a light on the front, which must emit white light visible for at least 500 feet to the front."
+      ],
+      "238": [
+        "A brake that will enable the operator to make the wheels skid on dry, level, clean pavement."
+      ],
+      "239": [
+        "Every bicyclist is encouraged to equip his/her bicycle with a fluorescent orange flag, clearly visible from the rear and suspended at least 6 feet above the roadway"
+      ],
+      "240": [
+        "Your vehicle must be within 18 inches (1.5 feet) of the curb or shoulder."
+      ],
+      "241": [
+        "Leave the vehicle in gear if it has a manual transmission, or in park if it has an automatic transmission."
+      ],
+      "242": [
+        "Vehicles parked on a roadway or shoulder during hours of darkness must have front and rear lights visible for 500 feet."
+      ],
+      "243": [
+        "Your vehicle must be within 18 inches (1.5 feet) of the curb or shoulder."
+      ],
+      "244": [
+        "Vehicles parked on a roadway or shoulder during hours of darkness must have front and rear lights visible for 500 feet."
+      ],
+      "245": [
+        "When you park facing downhill, turn your wheels toward the curb (Figure A)."
+      ],
+      "246": [
+        "If there is no curb, turn your wheels away from the street (Figure C)."
+      ],
+      "247": [
+        "Yellow = stopping only long enough to load or unload and you must stay with the car"
+      ],
+      "248": [
+        "Within 15 feet of a fire hydrant"
+      ],
+      "249": [
+        "Within 30 feet of a traffic signal, stop sign, or yield sign"
+      ],
+      "250": [
+        "Within 50 feet of a railroad crossing"
+      ],
+      "251": [
+        "$10,000 - Injury to or destruction of property of others in any one accident"
+      ],
+      "252": [
+        "punishable by a fine of at least $250, not to exceed $500, or by imprisonment in the county jail for up to 10 days, or both; and, 5 points against your driving record."
+      ],
+      "253": [
+        "A 2nd or subsequent offense is punishable by a fine... and, suspension of your license plates and registration for 90 days"
+      ],
+      "254": [
+        "The law also says that owners of more than 25 motor vehicles registered in Montana may qualify as self-insurers."
+      ],
+      "255": [
+        "establish a motor vehicle insurance verification system capable of confirming that vehicle owners and operators on Montana roadways are in compliance with vehicle liability policy requirements."
+      ],
+      "256": [
+        "90% of driving decisions are based on what we see."
+      ],
+      "257": [
+        "At 55 mph, that’s like driving the length of an entire football field while blindfolded."
+      ],
+      "258": [
+        "Texting is the most alarming distraction because it involves simultaneous manual, visual, and cognitive distraction."
+      ],
+      "259": [
+        "For a vehicle that has an automatic transmission, you must put the shift selector in “park.” The vehicle will not start otherwise."
+      ],
+      "260": [
+        "Trying to start too fast can cause the drive wheels to spin, particularly on slippery surfaces, and cause the vehicle to slide."
+      ],
+      "261": [
+        "Both hands should be placed on opposite sides of the steering wheel (e.g., at the 9 and 3 o’clock positions or the 8 and 4 o’clock positions of newer vehicles equipped with airbags"
+      ],
+      "262": [
+        "When turning corners, turn the steering wheel using the “hand-over-hand” technique; do not turn the wheel with just the palm of one hand or you could lose control."
+      ],
+      "263": [
+        "The best way to control your speed is to know how fast you are going. Check the speedometer often."
+      ],
+      "264": [
+        "The single biggest contributor to crashes is failing to see what is happening."
+      ],
+      "265": [
+        "Do not drive with headphones or earbuds. They make it too hard to hear emergency horns and sirens."
+      ],
+      "266": [
+        "do not take your eyes off the road and do not slow down to stare (often called “rubbernecking”)."
+      ],
+      "267": [
+        "you should look down the road at least 10 seconds ahead of your vehicle."
+      ],
+      "268": [
+        "On the highway, 10 seconds is about four city blocks or a quarter of a mile."
+      ],
+      "269": [
+        "Drivers who look well ahead and can slow down gradually or change lanes can avoid unnecessary braking that leads to lower miles-per-gallon."
+      ],
+      "270": [
+        "What is commonly referred to as “multi-tasking” really isn’t. Your brain is actually dealing with one task at a time, but shifting between tasks very quickly."
+      ],
+      "271": [
+        "Anytime from a half hour after sunset and a half hour before sunrise... you shall turn on your headlights.",
+        "Head lamps are required to be in use at all times from a half hour after sunset to a half hour before sunrise"
+      ],
+      "272": [
+        "If you were stopped and your view of a cross street is blocked, edge forward slowly until you can see."
+      ],
+      "273": [
+        "At crossings with more than one track, wait until the passing train is well down the track before starting to cross."
+      ],
+      "274": [
+        "Look over your shoulder in the direction you plan to move. Be sure no one is near the rear corners of your vehicle. These areas are called “blind spots” because you cannot see them through your mirrors."
+      ],
+      "275": [
+        "Place your right arm on the back of the seat and turn around so that you can look directly through the rear window. Do not depend on your rearview or side mirrors"
+      ],
+      "276": [
+        "NEVER drive with your parking lights, as oncoming traffic may think that you are stopped."
+      ],
+      "277": [
+        "Headlights on upper beam (bright) shall reveal persons and vehicles for 350 feet"
+      ],
+      "278": [
+        "When meeting traffic at night, avoid looking directly at oncoming headlights. Instead, watch the right edge of the roadway"
+      ],
+      "279": [
+        "Unless prohibited, you may turn left from a one-way street onto another one-way street."
+      ],
+      "280": [
+        "It is very important to look behind for vehicles when you change lanes, slow down, back up, or are driving down a long or steep hill."
+      ],
+      "281": [
+        "Even tinted and some “photo gray” lenses can detract up to 30% of your night vision."
+      ],
+      "282": [
+        "Be sure to check the far lane, if there is one, as someone in that lane may be planning to move into the same lane you want to enter."
+      ],
+      "283": [
+        "anytime when, due to insufficient light conditions, persons or vehicles are not visible for 500 feet, you shall turn on your headlights."
+      ],
+      "284": [
+        "Check behind your vehicle before you get in. Children or small objects cannot be seen from the driver’s seat."
+      ],
+      "285": [
+        "When you are fatigued, stop at least every two hours for a short break",
+        "Stop every two hours or so, or when you need to."
+      ],
+      "286": [
+        "Remember, if you turn on your wipers, turn on your headlights."
+      ],
+      "287": [
+        "Whenever driving and lights are necessary, use your headlights. Parking lights are for parked cars only."
+      ],
+      "288": [
+        "Give your horn a light tap: ... When coming to a place where you cannot see what is ahead like a steep hill, a sharp curve, or exiting a narrow alley."
+      ],
+      "289": [
+        "Give your horn a SHARP BLAST on your horn. Do this when: A child or older person is about to walk, run or ride into the street"
+      ],
+      "290": [
+        "If you cannot get your vehicle off the roadway, try to stop where other drivers have a clear view of your vehicle. Do not stop just over a hill or just around a curve."
+      ],
+      "291": [
+        "Lift the hood or tie a white cloth to the antenna, side mirror, or door handle to signal an emergency."
+      ],
+      "292": [
+        "Never stay alongside a large vehicle such as a truck or bus. These vehicles have large blind spots and it is hard for their drivers to see you."
+      ],
+      "293": [
+        "While waiting to complete the turn, keep your wheels pointed straight ahead - if you are struck from behind, you will not be forced into oncoming traffic"
+      ],
+      "294": [
+        "If there are streets, driveways, or entrances between you and where you want to turn, wait until you have passed them to signal."
+      ],
+      "295": [
+        "tap your brake pedal three or four times quickly to let those behind you know you are about to slow down."
+      ],
+      "296": [
+        "stopping at 60 mph does not take twice the distance as it takes at 30 mph, but over three times the distance."
+      ],
+      "297": [
+        "You do not have as much traction on gravel and dirt roads as you do on concrete and asphalt roads.",
+        "it will take you much longer to stop and it is much easier to skid when turning."
+      ],
+      "298": [
+        "Keep as close to the right side as possible when completing a right turn",
+        "Do not make a wide-sweeping turn or cross into the left lane"
+      ],
+      "299": [
+        "It is recommended that drivers use low beam headlights to make the vehicle more visible to others."
+      ],
+      "300": [
+        "Always slow down before you enter the curve so you do not have to brake in the curve. Braking in a curve can cause the vehicle to skid."
+      ],
+      "301": [
+        "On a wet road, reduce your speed about 10 mph.",
+        "On packed snow, cut your speed in half.",
+        "On ice, you must slow to a crawl."
+      ],
+      "302": [
+        "Studded tires are not allowed June 1 through September 30."
+      ],
+      "303": [
+        "This is because bridges do not have earth underneath them to help insulate them against the cold."
+      ],
+      "304": [
+        "Heat causes oil in the asphalt to come to the surface. It makes the road more slippery until the oil is washed off."
+      ],
+      "305": [
+        "In a heavy rain, your tires can lose all traction with the road at about 50 mph."
+      ],
+      "306": [
+        "Ease your foot off the gas pedal",
+        "Keep the steering wheel straight; only try to turn if it’s an emergency",
+        "Do not try to stop or turn until your tires are gripping the road again"
+      ],
+      "307": [
+        "Stay off the brake - Until the vehicle slows, your brakes will not work and could cause you to skid more.",
+        "Take your foot off the accelerator to slow and look where you want to go."
+      ],
+      "308": [
+        "If there isn’t time to stop or avoid the animal, do not swerve sharply.",
+        "The driver’s chance of getting seriously hurt are decreased if he/she hits the animal and avoids swerving into oncoming traffic or rolling the vehicle over in the ditch."
+      ],
+      "309": [
+        "Use the ramp to reach the speed of other vehicles before you pull onto the road.",
+        "Do not drive to the end of the ramp and stop."
+      ],
+      "310": [
+        "When traveling on a controlled-access highway and you observe another driver entering, you should, whenever possible, move to your left so that they may enter safely."
+      ],
+      "311": [
+        "signal your intent to exit and do not slow down until you move onto the exit ramp."
+      ],
+      "312": [
+        "When four or more vehicles are slowed up, slow-moving vehicles must turn off the roadway whenever there is sufficient room for a safe turnout."
+      ],
+      "313": [
+        "If you become stranded in a snow storm, the best thing to do is stay in the car because you are more likely to be found."
+      ],
+      "314": [
+        "Slow-moving vehicles must drive in the extreme right lane of roadway."
+      ],
+      "315": [
+        "At 50 mph, it can take about 400 feet to react to something you see and bring your vehicle to a stop."
+      ],
+      "316": [
+        "At 30 mph, it can take about 200 feet to stop. That is almost half of a city block."
+      ],
+      "317": [
+        "Nine out of ten crashes are caused by errors in human judgment."
+      ],
+      "318": [
+        "You must be able to stop within the distance you can see ahead with your headlights, which is about 400 feet."
+      ],
+      "319": [
+        "When you cannot see any farther than that, you cannot safely drive faster than 30 mph."
+      ],
+      "320": [
+        "Most crashes between cars that are parallel parked and cars being driven on the street are caused by carelessness of the driver pulling away from the curb."
+      ],
+      "321": [
+        "To tell if you are driving too fast for conditions, use the ‘Four Second Sight Distance Rule.’",
+        "If you reach the object before you finish saying ‘four-one-thousand,’ you need to slow down."
+      ],
+      "322": [
+        "Even if you are driving under the posted speed limit, you can get a ticket for traveling too fast under these conditions."
+      ],
+      "323": [
+        "It is called the ‘Three-Second Rule,’ and it works at any speed."
+      ],
+      "324": [
+        "When following motorcycles - If the motorcycle should fall, you need extra distance to avoid the rider."
+      ],
+      "325": [
+        "If there is no right lane, wait until the way is clear then reduce speed slowly. This will encourage the tailgater to drive around you."
+      ],
+      "326": [
+        "When stopped on a hill - Leave extra space when stopped on a hill. The vehicle ahead may roll back when it starts up."
+      ],
+      "327": [
+        "Avoid driving next to other vehicles on multi-lane roads. Someone may crowd your lane or try to change lanes and pull into you."
+      ],
+      "328": [
+        "Toll plazas. Vehicles are changing lanes and preparing to stop and then speeding up again as they leave the plaza."
+      ],
+      "329": [
+        "Avoid driving next to other vehicles on multi-lane roads. Someone may crowd your lane or try to change lanes and pull into you. Move ahead or drop to the back of the other vehicle."
+      ],
+      "330": [
+        "‘Split the Difference Rule.’ Split the difference between two hazards - for example, steer a middle course between oncoming and parked vehicles."
+      ],
+      "331": [
+        "You need a gap of about four seconds anytime you want to merge with other traffic.",
+        "You need a four-second gap whenever you change lanes, enter a roadway, or your lane merges with another travel lane."
+      ],
+      "332": [
+        "If you want to cross several lanes, take them one at a time.",
+        "it is safest and easiest to merge one lane at a time."
+      ],
+      "333": [
+        "Even if you have a green light, do not start across the intersection if there are cars blocking your way.",
+        "If you are caught in the intersection when the light changes to red, you will block other traffic. You can get a ticket for blocking an intersection."
+      ],
+      "334": [
+        "Do not turn just because an approaching vehicle has a turn signal on.",
+        "This is particularly true of motorcycles; their signals often do not cancel by themselves."
+      ],
+      "335": [
+        "At a speed of 55 mph, you need about 10 seconds to pass.",
+        "That means you need a 10 second gap in oncoming traffic and sight distance to pass."
+      ],
+      "336": [
+        "At 55 mph you will travel over 800 feet in 10 seconds. So will an oncoming vehicle.",
+        "That means you need over 1600 feet or about one-third of a mile to pass safely."
+      ],
+      "337": [
+        "You have to be able to see at least one-third of a mile or about 10 seconds ahead.",
+        "This means you should not start to pass if you are within one-third of a mile of a hill or a curve."
+      ],
+      "338": [
+        "When you can see both headlights of the vehicle you just passed in your rearview mirror, it is safe to return to the driving lane."
+      ],
+      "339": [
+        "It is illegal to sound your horn when approaching or passing a horse."
+      ],
+      "340": [
+        "If another driver makes a mistake, do not make it worse; for example, drivers who pass you when they do not have enough room. Slow down and let them return to the drive lane safely."
+      ],
+      "341": [
+        "Do not share a lane with a pedestrian or bicyclist. Wait until it is safe to pass in the adjoining lane."
+      ],
+      "342": [
+        "Stopping halfway across is only safe when there is a median divider large enough to hold your car."
+      ],
+      "343": [
+        "If another driver makes a mistake, do not make it worse; for example, drivers who pass you when they do not have enough room. Slow down and let them return to the drive lane safely."
+      ],
+      "344": [
+        "At dusk or on overcast days, you should: ... Turn on your vehicle lights."
+      ],
+      "345": [
+        "You should be cautious when passing a bicycle because the cyclist may have to swerve into traffic to avoid an object on the road."
+      ],
+      "346": [
+        "In order to avoid last-minute braking or the need to turn, you should look down the road at least 10 seconds ahead of your vehicle."
+      ],
+      "347": [
+        "However, as you go faster your tires will actually start to float on a film of water. This is called hydroplaning."
+      ],
+      "348": [
+        "This test measures that you have at least 20/40 vision in at least one eye, with or without corrective lenses."
+      ],
+      "349": [
+        "If your driver license says you must wear corrective lenses and you are not and you happen to be stopped, you could get a ticket."
+      ],
+      "350": [
+        "Avoid using dark glasses or tinted contact lenses at night, even if it helps with glare. The problem is that they cut too much light - light that you need in order to see clearly."
+      ],
+      "351": [
+        "Studies have shown that the driving records of hearing-impaired drivers are just as good as those drivers with good hearing."
+      ],
+      "352": [
+        "Take breaks. Stop every two hours or so, or when you need to."
+      ],
+      "353": [
+        "Alcohol is involved in approximately 40% of fatal crashes."
+      ],
+      "354": [
+        "Alcohol can be absorbed through the walls of the stomach, and can affect your brain within one minute."
+      ],
+      "355": [
+        "New drivers are more affected by alcohol than experienced drivers because new drivers are still learning to drive."
+      ],
+      "356": [
+        "It is especially important in knowing how far you are from other vehicles and judging safe gaps when merging, and when passing on two lane roads."
+      ],
+      "357": [
+        "The average person’s body will process one alcoholic drink in one hour."
+      ],
+      "358": [
+        "One alcoholic drink is: 1-1/2 ounces of 80-proof liquor (one shot glass), straight or with a mixer"
+      ],
+      "359": [
+        "The BAC for a driver under 21 years of age is 0.02."
+      ],
+      "360": [
+        "You can be arrested for driving with a blood alcohol concentration (BAC) of 0.08% or more, or while driving under the influence."
+      ],
+      "361": [
+        "You can lose your driver license if you refuse to take a BAC test."
+      ],
+      "362": [
+        "you could be sentenced to 1 to 60 days in jail; and your license will be suspended for six months."
+      ],
+      "363": [
+        "In a locked glove compartment or storage compartment;"
+      ],
+      "364": [
+        "give a description of the vehicle and the direction in which the suspected vehicle is traveling."
+      ],
+      "365": [
+        "Drug warnings about operating heavy machinery mean DO NOT DRIVE YOUR CAR OR TRUCK."
+      ],
+      "366": [
+        "people who use marijuana – even with a prescription - make more mistakes, have slower reflexes, have more trouble adjusting to glare"
+      ],
+      "367": [
+        "needs a physician to attest in writing that the person’s condition has stabilized and would not likely interfere with a person’s ability to safely operate a motor vehicle."
+      ],
+      "368": [
+        "Diabetics who take insulin should not drive when there is any chance of going into shock. Such a situation could result from skipping a meal or snack, or from taking the wrong amount of insulin."
+      ],
+      "369": [
+        "If you are angry or excited, give yourself time to cool off. If necessary, take a short walk, but stay off the road until you have calmed down."
+      ],
+      "370": [
+        "Deterioration of vision, hearing, and reaction time develops almost unnoticed until we find ourselves faced with an emergency that we are no longer equipped to handle."
+      ],
+      "371": [
+        "the accident rate of drivers 65 and over, in terms of miles traveled, is exceeded only by the rate of drivers under 24 years old."
+      ],
+      "372": [
+        "Frequently reported errors made by older drivers include inattention, failure to drive in the proper lane, failure to signal or to observe stop signs and signals, and unreasonably slow driving on busy highways."
+      ],
+      "373": [
+        "If you turn in your license before it’s eligible for renewal (more than six months before it expires), you can receive an identification card at no charge."
+      ],
+      "374": [
+        "Take breaks. Stop every two hours or so, or when you need to.",
+        "To help relieve fatigue on a trip, it is a good idea to: A. Stop for a rest every two hours"
+      ],
+      "375": [
+        "The main reason why drinking alcohol and then driving is so dangerous is that it affects your: C. Judgment and skill"
+      ],
+      "376": [
+        "Stress can lessen your concentration on the driving task",
+        "Stress can affect your driving by: A. Lessening your concentration on the driving task"
+      ],
+      "377": [
+        "the “Report A Drunk Driver” program is designated to help rid the road and highways of your NUMBER ONE killer.",
+        "What is the number one killer on Montana’s roads? C. Drunk drivers"
+      ],
+      "378": [
+        "Pump the brake pedal several times. This often builds up enough brake pressure to let you stop."
+      ],
+      "379": [
+        "Pull on the parking brake handle slowly so you will not lock the rear wheels and cause a skid."
+      ],
+      "380": [
+        "Hold the steering wheel tightly and keep the vehicle going straight. Slow down gradually."
+      ],
+      "381": [
+        "The steering may be difficult to turn, but you can do it.",
+        "The brakes will still work, but you may have to push very hard on the brake pedal."
+      ],
+      "382": [
+        "If that does not work, turn on the emergency flashers, turn signals, or fog lights if you have them.",
+        "Pull off the road as soon as is safely possible."
+      ],
+      "383": [
+        "Quickly shift to neutral.",
+        "Apply steady pressure on the brake."
+      ],
+      "384": [
+        "Take your foot off the accelerator and steer parallel to the road.",
+        "When slowed down, ease back on the road when it’s safe."
+      ],
+      "385": [
+        "Take your foot off the accelerator and steer parallel to the road.",
+        "Brake when you are back on pavement."
+      ],
+      "386": [
+        "In avoiding a collision, drivers have three options: (1) stop, (2) turn, and (3) speed up."
+      ],
+      "387": [
+        "Press on the brake pedal as hard as you can and keep pressing on it.",
+        "Do not let up on the brake pedal."
+      ],
+      "388": [
+        "If the brakes lock up, you will feel the vehicle start to skid. Quickly let up on the brake pedal."
+      ],
+      "389": [
+        "Braking will slow the vehicle some, and it puts more weight on the front tires and this allows for a quicker turn."
+      ],
+      "390": [
+        "Press yourself against the back of your seat and put your head against the head restraint.",
+        "Be ready to apply your brakes so that you will not be pushed into another vehicle."
+      ],
+      "391": [
+        "If your vehicle can move, get it off the road so that it does not block traffic."
+      ],
+      "392": [
+        "Do not move the injured, unless they are in a burning car or in other immediate danger. Moving a person can make their injuries worse."
+      ],
+      "393": [
+        "Do not give injured persons anything to drink, not even water."
+      ],
+      "394": [
+        "Should the accident involve a parked car, try to find the owner. If you cannot, leave a note in a place where it can be seen with information on how the owner can reach you"
+      ],
+      "395": [
+        "You must report an accident immediately to law enforcement if anyone is injured or killed, or property damage is $500 or more."
+      ],
+      "396": [
+        "You must file the report within 10 days of the accident."
+      ],
+      "397": [
+        "yield the right-of-way and shall immediately drive to a position parallel and as close as possible to the right-hand edge or curb of the road."
+      ],
+      "398": [
+        "If there is bleeding, apply direct pressure directly on the wound with your hand or with a cloth."
+      ],
+      "399": [
+        "must slow down to a speed of at least 20 miles below the posted speed limit."
+      ],
+      "400": [
+        "Acknowledge the officer’s presence by turning on your right turn signal."
+      ],
+      "401": [
+        "Move your vehicle onto the right shoulder of the road.",
+        "Do not move onto the center median. Do not stop in the center median of the interstate or on the opposite side of a two-lane road."
+      ],
+      "402": [
+        "An officer’s inability to see the hands of the driver and all occupants in the vehicle increases the officer’s level of feeling threatened."
+      ],
+      "403": [
+        "If your windows are tinted, it is recommended that you roll them down after you have stopped your vehicle on the right shoulder of the road and before the officer makes contact with you."
+      ],
+      "404": [
+        "Quickly shift to neutral. Apply steady pressure on the brake.",
+        "2. What should you do if your accelerator sticks while driving? ... C. Shift to neutral and apply steady pressure on the brake"
+      ],
+      "405": [
+        "Impaired driving, distracted driving, driving with a suspended or revoked license, and being a minor in possession are examples of choices that can cause you to lose your license."
+      ],
+      "406": [
+        "A record features information in five major categories: personal history information, licensing information, conviction/accident history, driver license sanctions, motor vehicle accident history"
+      ],
+      "407": [
+        "Young men who are at least 15 years old and not older than 26 are required to register with the Selective Service"
+      ],
+      "408": [
+        "A minor who is at least 15 years old can request an organ donor designation on his/her driver license. Parental authorization is not required."
+      ],
+      "409": [
+        "If you are 18 or older, you can choose to have your driver license indicate that you have a living will."
+      ],
+      "410": [
+        "After being awake for 18 hours straight, driving skills are the same as someone under the influence of drugs or alcohol."
+      ],
+      "411": [
+        "Exiting your vehicle without first being directed by an officer can increase the risk of being struck by a passing vehicle and increase the officer’s level of feeling threatened."
+      ],
+      "412": [
+        "Stop your vehicle at or near the accident site.",
+        "Do not stand or walk in traffic lanes.",
+        "Turn off the ignition of wrecked vehicles."
+      ],
+      "413": [
+        "21% of crashes in which a person was killed involved a drowsy driver."
+      ],
+      "414": [
+        "After being awake for 18 hours straight, driving skills are the same as someone under the influence of drugs or alcohol."
+      ],
+      "415": [
+        "This is a sign, posted at or near a crossing, which lists a telephone number along with a US DOT number."
+      ],
+      "416": [
+        "Heatstroke begins when the core body temperature reaches about 104 degrees and the thermoregulatory system is overwhelmed."
+      ],
+      "417": [
+        "A core body temperature of about 107 degrees is lethal."
+      ],
+      "418": [
+        "Truckers Against Trafficking recognizes that members of the trucking industry and individual truckers are invaluable in the fight against the heinous crime of human trafficking."
+      ],
+      "419": [
+        "Montana began issuing license plates in 1914."
+      ],
+      "420": [
+        "During 1944, license plates were manufactured from pressed soybean fiberboard due to a shortage of steel caused by the war."
+      ],
+      "421": [
+        "The “Treasure State” slogan was first used in 1950 and changed to the popular “Big Sky Country” slogan in 1967."
+      ],
+      "422": [
+        "In 1933, the prefix number was revised to designate the county in which that vehicle was registered."
+      ],
+      "423": [
+        "the bison skull was first added for a single year in 1938."
+      ],
+      "424": [
+        "Taxation on motor vehicles was put into effect in 1913 for the purpose of raising revenue for the construction, maintenance, and improvement of public highways."
+      ],
+      "425": [
+        "Montana currently offers five standard-issue plate designs and over 190 specialty and collegiate plates."
+      ],
+      "426": [
+        "You may become careless when making driving decisions, have trouble paying attention, or actually fall asleep while driving."
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 25,
-    "topics_covered": 24,
-    "coverage_pct": 96.0,
+    "topics_total": 30,
+    "topics_covered": 28,
+    "coverage_pct": 93.3,
     "uncovered_topics": [
-      "Real id compliance for domestic commercial flights"
+      "real id requirements for domestic commercial flights",
+      "window tinting and sun screening legal limits"
     ],
     "verdict": "PASS",
     "grade": "A"
@@ -65,6 +1426,20 @@
     "sign_ratio_pct": 7.4,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 426,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 99.5,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

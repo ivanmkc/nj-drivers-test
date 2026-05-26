@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "nd",
   "name": "North Dakota",
-  "verified_at": "2026-05-26T02:31:42Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:09:07Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.dot.nd.gov/sites/www/files/documents/Drivers%20-%20documents/noncommercial-manual.pdf",
     "manual_pdf_sha256": "ab64830e432066dded224f4c790c4df7aace57c4b79dc06d7e94bd6d28d65250",
@@ -23,23 +23,724 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 24,
+    "sample_size": 0,
+    "judged_count": 221,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "You will receive a failed test score if you leave the testing area while your test is in progress."
+      ],
+      "2": [
+        "All sites closed from 12:00-1:00 p.m. except Bismarck, Minot, Grand Forks, and Fargo."
+      ],
+      "3": [
+        "If these holidays fall on a Saturday, the preceding Friday is the holiday."
+      ],
+      "4": [
+        "All applicants less than 18 years of age must have a parent, legal guardian, or designated person sign approval and sponsorship on the application."
+      ],
+      "5": [
+        "Arrive no later than one hour prior to noon, if testing at an office that closes for lunch, and no later than one hour prior to closing."
+      ],
+      "6": [
+        "You will receive a failed test score if you bring any of these items into the testing area."
+      ],
+      "7": [
+        "Applicants less than 16 years of age are required to present a driver’s education Certificate of Training."
+      ],
+      "8": [
+        "Applicants under 16 must be accompanied by a parent or legal guardian."
+      ],
+      "9": [
+        "Self-parking vehicles are not allowed. The applicant must test in a different vehicle or deactivate the self-parking feature."
+      ],
+      "10": [
+        "A horn clearly audible for 200 feet."
+      ],
+      "11": [
+        "Mirrors—one or more so that you can see the road 200 feet behind you."
+      ],
+      "12": [
+        "who has lived in this state for 90 consecutive days, shall be deemed a resident of North Dakota for the purpose of driver licensing."
+      ],
+      "13": [
+        "You may operate a Class D or M vehicle with an operator’s license from another state for a period of 60 days after you become a resident of North Dakota."
+      ],
+      "14": [
+        "Pets (except medical alert/service animals), passengers, and electronic devices such as cell phones, ipods, etc., will not be allowed in the vehicle during the road test."
+      ],
+      "15": [
+        "Applicant must provide current proof of insurance for vehicle used during road test."
+      ],
+      "16": [
+        "Class A, B, or C vehicle operators have 30 days in which to acquire a North Dakota Commercial Driver License."
+      ],
+      "17": [
+        "A non-resident must be at least 16 years of age to drive in North Dakota."
+      ],
+      "18": [
+        "The person in question has had no seizures for at least six consecutive months, and is willing to submit to the required medical examination."
+      ],
+      "19": [
+        "who is at least 18 years of age and has had at least three years of driving experience, must ride in the seat beside you."
+      ],
+      "20": [
+        "An individual other than the supervising driver and the permit holder may not be in the front seat unless the vehicle has only a front seat"
+      ],
+      "21": [
+        "Individuals who are 14 or 15 years old must hold the instruction permit for 12 months or to the age of 16, whichever comes first, but no less than six months"
+      ],
+      "22": [
+        "Individuals under 16 must complete a minimum of 50 hours of supervised practice driving in variable conditions."
+      ],
+      "23": [
+        "minimum of 30 hours of classroom driver training and a minimum of six hours of actual behind the wheel driver training that has been approved for waiver purposes"
+      ],
+      "24": [
+        "It is a two-point penalty on your driving record for driving in violation of the conditions of an instruction permit."
+      ],
+      "25": [
+        "you may receive a license to operate a motorcycle by successfully completing an approved motorcycle safety course and passing the motorcycle knowledge test."
+      ],
+      "26": [
+        "To operate a motorized bicycle, you must be at least 14 years of age or older"
+      ],
+      "27": [
+        "Acceptable documents for proof of name change are a certified marriage certificate, a certified adoption document, or a certified court order"
+      ],
+      "28": [
+        "Proof of North Dakota residence address (place of domicile) is required by presenting two documents from the list below."
+      ],
+      "29": [
+        "it will remain valid until 30 days after discharge or separation from the service."
+      ],
+      "30": [
+        "Post Office boxes are NOT acceptable for residence address."
+      ],
+      "31": [
+        "License applicants must furnish their own vehicle for the road test."
+      ],
+      "32": [
+        "If you fail any of the tests, you will not be allowed to retake the examination the same day."
+      ],
+      "33": [
+        "Organs are allocated to recipients based upon medical urgency, length of time waiting, genetic matching, and geography."
+      ],
+      "34": [
+        "the driver is restricted to operating his or her parent’s, guardian’s, grandparent’s, sibling’s, aunt’s or uncle’s vehicles."
+      ],
+      "35": [
+        "between the later of sunset or 9:00 p.m. and 5:00 a.m."
+      ],
+      "36": [
+        "The only exception to this is driving directly to or from work, an official school activity or a religious activity."
+      ],
+      "37": [
+        "The only exception is to obtain emergency assistance, to prevent a crime that appears about to be committed"
+      ],
+      "38": [
+        "The points total does not automatically go back to zero when the cancellation requirements are fulfilled."
+      ],
+      "39": [
+        "1 Corrective Lenses"
+      ],
+      "40": [
+        "You may renew your license 10 months prior to expiration without losing any time remaining on the old license."
+      ],
+      "41": [
+        "The certificate must not be more than six months old."
+      ],
+      "42": [
+        "At age 16 the restricted Class D Operator’s License transitions to an unrestricted license."
+      ],
+      "43": [
+        "If you permanently lose the use of a hand, arm, foot, leg, or eye, you must report it to: Driver License Division"
+      ],
+      "44": [
+        "If you change your name or address, you must notify the Driver License Division within 10 days."
+      ],
+      "45": [
+        "North Dakota law requires that a motor vehicle be registered immediately in North Dakota, when the owner or operator becomes a resident"
+      ],
+      "46": [
+        "The permits are available for six months or 12 months"
+      ],
+      "47": [
+        "Class D: Any single vehicle less than 26,001 pounds GVWR may tow trailers not over 10,000 pounds GVWR."
+      ],
+      "48": [
+        "Class C: Any single vehicle with a GVWR of 26,000 pounds or less that is designed to transport 16 or more passengers"
+      ],
+      "49": [
+        "Age 15 may drive a farm vehicle within 150 miles of driver’s farm"
+      ],
+      "50": [
+        "Regulatory signs control and regulate traffic. They give mandatory instructions to the driver."
+      ],
+      "51": [
+        "If there is no stop line or crosswalk, stop as near as possible before the intersection where you can safely see traffic approaching from all directions."
+      ],
+      "52": [
+        "The Speed Limit sign is an example of a regulatory sign showing the maximum speed permitted under ideal conditions."
+      ],
+      "53": [
+        "A red circle with a red slash indicates the action that is forbidden."
+      ],
+      "54": [
+        "Two-way Left Turn Only signs are used when a lane in the center of the roadway is to be used only by left turning vehicles in either direction."
+      ],
+      "55": [
+        "Warning signs are used to warn you of potentially hazardous conditions ahead so that you will proceed with extra caution. These signs are yellow with a black legend."
+      ],
+      "56": [
+        "The Railroad Advance Warning sign is round with black lettering on a yellow background."
+      ],
+      "57": [
+        "This sign is mounted on the rear of vehicles or equipment being towed at a speed of 25 miles per hour or less."
+      ],
+      "58": [
+        "Pedestrian Signs May be fluorescent yellow-green or standard yellow in color.",
+        "School Signs May be fluorescent yellow-green or standard yellow in color."
+      ],
+      "59": [
+        "Stripes sloping downward to the right mean the driver should- keep to the right."
+      ],
+      "60": [
+        "Failure to comply with work zone speed limits carries an $80 minimum fee when work is in progress and workers are present."
+      ],
+      "61": [
+        "98 percent of Work Zone fatalities are travelers.",
+        "Motorists and passengers suffer most of the traffic casualties in work zones."
+      ],
+      "62": [
+        "Service signs are rectangular. The symbols are white on a blue background."
+      ],
+      "63": [
+        "The numbers on these signs tell you how many miles you are from the south or west border of the state or origin of the route within the state."
+      ],
+      "64": [
+        "If the traffic signals are dark, for example in the event of a power outage, the driver of a vehicle shall stop and yield the right of way to any vehicle in the intersection."
+      ],
+      "65": [
+        "You may turn left on a red light from a one-way street onto a one-way street, unless there is a sign prohibiting this."
+      ],
+      "66": [
+        "Flashing yellow at an intersection means proceed with CAUTION."
+      ],
+      "67": [
+        "CAUTION. You may cautiously turn left after yielding to oncoming traffic and to pedestrians."
+      ],
+      "68": [
+        "One solid line with one broken line means no passing when you are in the lane with the solid line."
+      ],
+      "69": [
+        "The center lane is reserved only for left-turning vehicles in either direction. Passing or overtaking is not permitted in the center lane."
+      ],
+      "70": [
+        "Where there are no lines at an intersection, you must stop your vehicle before entering the crosswalk (sidewalk area) or, if there is no crosswalk, you must stop before your vehicle enters the intersection."
+      ],
+      "71": [
+        "School buses, vehicles carrying explosives or flammable liquids... must stop within 50 feet and not less than 15 feet from the tracks."
+      ],
+      "72": [
+        "Passive Crossings. This type of crossing does not have any type of traffic control device.",
+        "The decision to stop or proceed rests entirely in your hands."
+      ],
+      "73": [
+        "Call this number if you see an obstruction on the railroad tracks or any other problems at a railroad crossing such as the lights or gates are not working properly."
+      ],
+      "74": [
+        "evacuate your vehicle and walk in the direction of the oncoming train and away from the tracks at a 45 dregree angle.",
+        "If your vehicle is struck by a moving train, the debris will spread out from the tracks in the same direction the train is moving."
+      ],
+      "75": [
+        "When a train is crossing, stop at least 15 feet before the crossing."
+      ],
+      "76": [
+        "All turn signals of intention to turn must be given continuously during the last 100 feet before the turn."
+      ],
+      "77": [
+        "When two vehicles approach an unsigned intersection at approximately the same time, the vehicle on the left side must yield to the vehicle on the right."
+      ],
+      "78": [
+        "At an uncontrolled T-intersection, the vehicle on the terminating street must yield to vehicles on the continuing street."
+      ],
+      "79": [
+        "You may not make a U-turn near the crest of a hill or any curve where the driver cannot see 500 feet or more."
+      ],
+      "80": [
+        "you must immediately come to a stop along the right-hand curb or edge of the road. You must remain stopped until the emergency or law enforcement vehicle has passed."
+      ],
+      "81": [
+        "If an emergency vehicle, law enforcement vehicle, or North Dakota Department of Transportation maintenance vehicle is parked on the Interstate system or a multi-lane highway with its emergency or work lights flashing, move over to the opposite lane and proceed with due caution."
+      ],
+      "82": [
+        "When a school bus is stopped and flashing its red lights, drivers approaching from both directions must stop."
+      ],
+      "83": [
+        "25 miles per hour in a business or residential district, unless otherwise posted."
+      ],
+      "84": [
+        "55 miles per hour on gravel, dirt, or loose surface roads unless otherwise posted"
+      ],
+      "85": [
+        "return to your proper lane at least 200 feet before meeting an approaching vehicle."
+      ],
+      "86": [
+        "Do not return to your lane until you can see the image of the entire front of the vehicle you passed within the inside rear-view mirror."
+      ],
+      "87": [
+        "Never Pass: Within 100 feet of an intersection, a railroad crossing, or a tunnel."
+      ],
+      "88": [
+        "The driver of the vehicle making the lane change is responsible for safely changing lanes."
+      ],
+      "89": [
+        "At 55 miles per hour, it takes approximately 300 feet or one city block on dry pavement to stop."
+      ],
+      "90": [
+        "Sometimes you need even more following distance, as much as four or more seconds. This is especially true when: Following motorcycles."
+      ],
+      "91": [
+        "Make the turn so that you enter the passing lane of the four-lane highway. When traffic permits, move to the right, out of the passing lane."
+      ],
+      "92": [
+        "Always assume trucks need all available space—do not pass them!"
+      ],
+      "93": [
+        "Yield to circulating traffic when entering the roundabout."
+      ],
+      "94": [
+        "In an emergency, stop on the shoulder, and raise your hood to show difficulty."
+      ],
+      "95": [
+        "Use your headlights during inclement weather when visibility is less than 1,000 feet due to rain, snow, sleet, hail, smoke, or fog."
+      ],
+      "96": [
+        "Dim your headlights at least 500 feet before meeting traffic and within 300 feet when following another vehicle."
+      ],
+      "97": [
+        "If you meet a vehicle that does not dim its lights, look to the right edge of the road to avoid being blinded."
+      ],
+      "98": [
+        "When parallel parking your vehicle, your wheels should be parallel to the right-hand curb and within one foot of the right-hand curb."
+      ],
+      "99": [
+        "UPHILL TURN WHEELS AWAY FROM CURB"
+      ],
+      "100": [
+        "Do not swerve to avoid an animal because this could result in a more serious crash like hitting a tree or another vehicle, or possibly rolling over."
+      ],
+      "101": [
+        "If you meet a vehicle that does not dim its lights, look to the right edge of the road to avoid being blinded."
+      ],
+      "102": [
+        "Within 10 feet of a fire hydrant."
+      ],
+      "103": [
+        "your vehicle must display at least one white or amber lamp in front and a red light on the rear, both visible for a distance of 1,000 feet when parked on a public highway."
+      ],
+      "104": [
+        "When traveling faster than 25 miles per hour, you need safety chains or brakes capable of holding the trailer if the coupling breaks."
+      ],
+      "105": [
+        "The driver of any motor vehicle, when traveling upon a downgrade, may not coast with the gears or transmission of such vehicle in neutral."
+      ],
+      "106": [
+        "If you throw or deposit any litter on any public highway, you are subject to a $500 fine."
+      ],
+      "107": [
+        "If you are involved in a crash that results in the combined damage of $4,000 or more, or results in personal injury or death, you must: Immediately report it"
+      ],
+      "108": [
+        "If the owner cannot be found, the driver must leave a note at a conspicuous place on the unattended vehicle. The note must list the driver’s name, address, and motor vehicle insurance company."
+      ],
+      "109": [
+        "The fine for operating an uninsured motor vehicle is $150 for a first violation and $300 for a second or subsequent violation in three years"
+      ],
+      "110": [
+        "It is not legal to enter a road that is officially closed due to hazardous conditions. The penalty for doing this is a $250 fine."
+      ],
+      "111": [
+        "Studded snow tires may be used from October 15 to April 15."
+      ],
+      "112": [
+        "Keep firm and continuous pressure on anti-lock brakes (ABS).",
+        "Manually pumping anti-lock brakes, or letting up on them, decreases their effectiveness because it turns the system off and on."
+      ],
+      "113": [
+        "If your vehicle becomes stuck in a snowstorm, stay with the vehicle!",
+        "Open your windows slightly and run the vehicle and heater for only short periods of time to avoid carbon monoxide poisoning."
+      ],
+      "114": [
+        "Be extremely cautious when passing a snowplow. They can be moved sideways by drifts and hard snow-pack."
+      ],
+      "115": [
+        "Most winter crashes are caused by driving too fast for the conditions."
+      ],
+      "116": [
+        "Turn your wheels in the direction the rear end of your vehicle is skidding. If the rear end of the vehicle skids right, steer right."
+      ],
+      "117": [
+        "Water combines with the road dirt and oil to form a slick film between your tires and the roadway surface."
+      ],
+      "118": [
+        "Two feet of moving water can carry away most vehicles including sport utility vehicles and pick-up trucks."
+      ],
+      "119": [
+        "To regain control, grasp the steering wheel tightly and steer straight ahead.",
+        "Ease up on the accelerator, but do not brake until you have regained full control."
+      ],
+      "120": [
+        "If your tire drops off the edge of the pavement onto the shoulder, do not try to swerve back onto the pavement because you may lose control of your vehicle."
+      ],
+      "121": [
+        "Never turn your vehicle’s ignition to the “lock” position while it is still in motion. This will cause the steering to lock if you try to turn the steering wheel."
+      ],
+      "122": [
+        "Should an oncoming vehicle cross into your lane, slow down and try to warn the oncoming driver by flashing your headlights. If the vehicle keeps coming, pull as far to the right as possible."
+      ],
+      "123": [
+        "It is not legal for anyone to text (composing, reading, or sending an electronic message) while driving",
+        "The penalty is a $100 fine."
+      ],
+      "124": [
+        "Use one foot to operate both the gas pedal and brake pedal to avoid riding the brakes which can cause them to overheat."
+      ],
+      "125": [
+        "Danger signs of fatigue are: difficulty in focusing or keeping eyes open, inability to recall the last few miles driven"
+      ],
+      "126": [
+        "A fully-loaded tractor-trailer may take more than 400 feet on dry pavement to come to a complete stop, or more than the length of a football field."
+      ],
+      "127": [
+        "With any turning vehicle, the rear wheels follow a shorter path than the front wheels.",
+        "drivers of tractor-trailers must often swing out to the left as the first step in making a right turn."
+      ],
+      "128": [
+        "they still have serious blind spots or no-zones into which a car can disappear from view",
+        "up to 200 feet in the rear."
+      ],
+      "129": [
+        "they still have serious blind spots or no-zones into which a car can disappear from view",
+        "up to 200 feet in the rear."
+      ],
+      "130": [
+        "An excellent rule of thumb for drivers sharing the road with a tractor-trailer is, “If you can’t see the truck driver in his or her side mirror, he or she can’t see you.”"
+      ],
+      "131": [
+        "Always pass a tractor-trailer completely and always on the left side."
+      ],
+      "132": [
+        "A substantial number of car-truck collisions take place at intersections because the driver of the car does not realize how close the truck is or how quickly it is approaching."
+      ],
+      "133": [
+        "a driver approaching or passing this vehicle should yield the right of way and move safely to the lane not adjacent to the stranded vehicle."
+      ],
+      "134": [
+        "Allow the motorcyclist a full lane width.",
+        "Do not share the lane."
+      ],
+      "135": [
+        "Nearly 40 percent were caused by the other vehicle turning left in front of the motorcyclist."
+      ],
+      "136": [
+        "motorcycle signals usually are not self cancelling and riders sometimes forget to turn them off."
+      ],
+      "137": [
+        "Allow more following distance, three or four seconds, following a motorcycle"
+      ],
+      "138": [
+        "The individual operating the motor vehicle is required to leave a minimum of three feet of passing space between the vehicle and bicycle."
+      ],
+      "139": [
+        "Most crashes involving a motor vehicle and a bicyclist occur at intersections."
+      ],
+      "140": [
+        "Avoid driving in designated bicycle lanes other than to make a right turn."
+      ],
+      "141": [
+        "At 30 miles per hour, the force is like hitting the ground from the top of a three-story building."
+      ],
+      "142": [
+        "Lap belts should lie snug and low across the hips, not across the abdomen."
+      ],
+      "143": [
+        "A seat belt may be substituted for children who are at least 57 inches tall."
+      ],
+      "144": [
+        "Children under eight years of age must be properly secured in a child restraint (car seat or booster seat)."
+      ],
+      "145": [
+        "The penalty for violation is $25 and one point against the license of the driver."
+      ],
+      "146": [
+        "Heatstroke begins when the core body temperature reaches about 104 degrees"
+      ],
+      "147": [
+        "The inside temperature of a vehicle can rise almost 20 degrees Fahrenheit within the first 10 minutes."
+      ],
+      "148": [
+        "if you drink—even just a little—your chances of a crash are seven times greater than if you were completely sober."
+      ],
+      "149": [
+        "Time is the only way to eliminate alcohol from the blood stream."
+      ],
+      "150": [
+        "If you refuse to take the test, your license will be revoked for 180 days to three years."
+      ],
+      "151": [
+        "If a chemical test reveals that you have eight one-hundredths of one percent (.08%) or greater of alcohol in your blood, or .02% if under the age of 21, you are considered legally to be under the influence"
+      ],
+      "152": [
+        "If you have an alcohol concentration (AC) of .08 percent or more... your license will be suspended for: » 91 days, first offense in seven years"
+      ],
+      "153": [
+        "First conviction—$500 fine."
+      ],
+      "154": [
+        "if you are involved in a crash and cause a serious injury to another, you will spend an additional 90 days in jail."
+      ],
+      "155": [
+        "If you refuse to take an AC test, or if convicted of a DUI, the law requires you to show proof of financial responsibility (SR 22 insurance coverage)."
+      ],
+      "156": [
+        "Children should be at least 40 pounds and at least 4 years of age to move from a car seat to a booster seat."
+      ],
+      "157": [
+        "It is illegal for anyone, driver or passenger, to drink alcoholic beverages in or on a motor vehicle."
+      ],
+      "158": [
+        "Any open containers must be placed in the trunk of the vehicle."
+      ],
+      "159": [
+        "Even certain cold tablets and capsules can affect your driving ability by making you drowsy at the wheel."
+      ],
+      "160": [
+        "Remember: Joggers are considered pedestrians and must also obey these rules."
+      ],
+      "161": [
+        "When you walk at night, walk facing traffic and wear light or white clothing. Make sure drivers can see you."
+      ],
+      "162": [
+        "Maximum piston or rotor displacement of 49.98 cc. (3.05 cubic inches) enabling a speed not to exceed 30 miles per hour on a level surface."
+      ],
+      "163": [
+        "At night, all bicycles must be equipped with a headlight visible from a distance of 500 feet."
+      ],
+      "164": [
+        "Cross streets or highways at an angle of approximately 90 degrees to the direction of the highway"
+      ],
+      "165": [
+        "A licensed driver over 16 years of age may operate a registered class III off-highway vehicle on a paved highway designated and posted at a speed not exceeding 65 mph."
+      ],
+      "166": [
+        "Never operate on any right of way from April 1 to November 1 of any year."
+      ],
+      "167": [
+        "If you operate in any ditch alongside the roadway, move in the same direction as roadway traffic."
+      ],
+      "168": [
+        "Never operate on the right of way of any Interstate highway. The right of way includes the driving portion of the road, the median, the shoulders, and the ditches on either side."
+      ],
+      "169": [
+        "When the record reveals a total of 12 or more points, the driver will be informed that the authorities intend to suspend his or her license."
+      ],
+      "170": [
+        "THREE POINTS—if the driver completes an approved driver improvement course such as a defensive driving course."
+      ],
+      "171": [
+        "ONE POINT—for every three-month period during which the driver has not had any points recorded against his/her record."
+      ],
+      "172": [
+        "ONE POINT—for every three-month period during which the driver has not had any points recorded against his/her record."
+      ],
+      "173": [
+        "THREE POINTS—if the driver completes an approved driver improvement course such as a defensive driving course."
+      ],
+      "174": [
+        "12 7 days",
+        "When the record reveals a total of 12 or more points, the driver will be informed that the authorities intend to suspend his or her license."
+      ],
+      "175": [
+        "The person who consented can withdraw the consent at any time and the permit or license will be cancelled."
+      ],
+      "176": [
+        "A National Institutes of Health study suggests that the region of the brain that inhibits risky behavior is not fully formed until age 25."
+      ],
+      "177": [
+        "Teens show the greatest improvement within the first year and 1,000 miles of driving."
+      ],
+      "178": [
+        "Doubling your speed will quadruple your braking distance."
+      ],
+      "179": [
+        "Avoid the “No-Zone” with trucks or buses. This is about 15 feet on all sides of the truck."
+      ],
+      "180": [
+        "Use your mirrors to check around and behind the vehicle every 6-8 seconds."
+      ],
+      "181": [
+        "When proceeding from a stop look left, then front (straight ahead), then right before proceeding."
+      ],
+      "182": [
+        "Keep at least a 3-4 second space between your vehicle and others in traffic flow."
+      ],
+      "183": [
+        "Mid- to full-size sedans and station wagons with smaller engines and airbags are safest for teen drivers."
+      ],
+      "184": [
+        "Make consequences relate to losing driving privileges: for a day, weekend, week, month, etc., depending on the violation."
+      ],
+      "185": [
+        "A person may elect to attend a driver improvement course in lieu of points on the driving record for violations assigned five or less points."
+      ],
+      "186": [
+        "In North Dakota, teen drivers account for about 20 percent of fatal crashes."
+      ],
+      "187": [
+        "Driving five or more miles per hour too fast for conditions."
+      ],
+      "188": [
+        "Denying entry into your lane or preventing passing."
+      ],
+      "189": [
+        "First and foremost, make every attempt to get out of their way."
+      ],
+      "190": [
+        "It will hold you in your seat and behind the wheel in case you need to make an abrupt driving maneuver"
+      ],
+      "191": [
+        "Report aggressive drivers to the appropriate authorities by providing a vehicle description, license number, location, and if possible, direction of travel."
+      ],
+      "192": [
+        "Begin taking steps backward and have your teen tap the horn when he or she can see your feet."
+      ],
+      "193": [
+        "Instruction permit holders under the age of 16 must complete a minimum of 50 hours of supervised, behind-the-wheel driving experience"
+      ],
+      "194": [
+        "Driving on gravel, dirt, or aggregate surface roads."
+      ],
+      "195": [
+        "Please note that the 50 hours of supervised driving is in addition to the formal drivers education requirements."
+      ],
+      "196": [
+        "Alive at 25 is a highly interactive 4.5-hour program targeted toward drivers under the age of 25 that helps young drivers take greater responsibility for their driving."
+      ],
+      "197": [
+        "Alive at 25 focuses on behavior, judgment, decision making and consequences, and provides tools for making positive choices."
+      ],
+      "198": [
+        "Plus, courses are approved in ND for insurance discount and point reduction!"
+      ],
+      "199": [
+        "10. Willfully taking right-of-way."
+      ],
+      "200": [
+        "Flat Tire or Blowouts. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+      ],
+      "201": [
+        "PASSING On two-way roads you must drive on the right-hand side of the roadway",
+        "LANE CHANGES If you must change lanes, make sure the lane is clear",
+        "FOLLOWING AND STOPPING DISTANCES If you drive too fast or follow too close"
+      ],
+      "202": [
+        "IMPLIED CONSENT... If you refuse to take the test, your license will be revoked for 180 days"
+      ],
+      "203": [
+        "RECREATIONAL VEHICLES Bicycles and Motorized Bicycles",
+        "OFF-HIGHWAY VEHICLES",
+        "SNOWMOBILES"
+      ],
+      "204": [
+        "SIGNALS Traffic Signals",
+        "Flashing Indications",
+        "Turn Indications"
+      ],
+      "205": [
+        "Parallel Parking When parallel parking your vehicle, your wheels should be parallel",
+        "Parking on a Hill"
+      ],
+      "206": [
+        "REPORTING IMPAIRED DRIVING... anyone can report this to law enforcement by dialing 911.",
+        "OPEN CONTAINER LAW It is illegal for anyone, driver or passenger, to drink alcoholic beverages",
+        "MINOR IN POSSESSION/CONSUMPTION LAW Persons under 21 years of age are prohibited"
+      ],
+      "207": [
+        "USE A PARENT-TEEN DRIVING AGREEMENT... A sample agreement can be found on the internet"
+      ],
+      "208": [
+        "REGULATORY SIGNS Regulatory signs control and regulate traffic."
+      ],
+      "209": [
+        "POINT SYSTEM... When the record reveals a total of 12 or more points",
+        "HIGH-RISK DRIVING CONDITIONS"
+      ],
+      "210": [
+        "PEOPLE WHO CANNOT GET a LICENSE 1. Those under 16 years of age unless eligible"
+      ],
+      "211": [
+        "SHARING THE ROAD WITH MOTORCYCLES",
+        "32",
+        "Motorcycles - Sharing the Road . . . . . . . . . . . . . . . . . . . . . . . . . . 32"
+      ],
+      "212": [
+        "Top 11 Driving Errors",
+        "43",
+        "Top 11 Driving Errors. . . . . . . . . . . . . . . . . . . . . . . . . . . 43"
+      ],
+      "213": [
+        "ORGAN, TISSUE, AND EYE DONATION",
+        "6",
+        "Organ, Tissue, and Eye Donation. . . . . . . . . . . . . . . . . . . . . . . . . . 6"
+      ],
+      "214": [
+        "SKIDS",
+        "29",
+        "Skids. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 29"
+      ],
+      "215": [
+        "It is NDDOT’s policy that all employees have the right to work in an environment free of harassment."
+      ],
+      "216": [
+        "An employee may discontinue service to a customer if the customer subjects the employee to conduct... create a hostile, intimidating, or offensive work environment."
+      ],
+      "217": [
+        "no person or groups of persons shall, on the grounds of race, color, national origin, sex, age, disability, or income status, be excluded from participation"
+      ],
+      "218": [
+        "www.dot.nd.gov"
+      ],
+      "219": [
+        "A Trucker’s Blind Spots (the “No-Zone”)",
+        "Blind Spots (the “No-Zone”). . . . . . . . . . . . . . . . . . . . . . . . . . . 31"
+      ],
+      "220": [
+        "WINTER DRIVING",
+        "Meeting Snow Removal Equipment",
+        "Meeting Snow Removal Equipment. . . . . . . . . . . . . . . . . . . . . . . . . . 28"
+      ],
+      "221": [
+        "Flashing Arrow Panels. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 25,
+    "topics_total": 26,
     "topics_covered": 25,
-    "coverage_pct": 100.0,
-    "uncovered_topics": [],
+    "coverage_pct": 96.2,
+    "uncovered_topics": [
+      "rules for making right turns on red"
+    ],
     "verdict": "PASS",
     "grade": "A"
   },
@@ -63,6 +764,20 @@
     "sign_ratio_pct": 12.9,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 229,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

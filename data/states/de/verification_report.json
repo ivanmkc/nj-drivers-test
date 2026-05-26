@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "de",
   "name": "Delaware",
-  "verified_at": "2026-05-26T02:28:11Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T22:58:55Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://dmv.de.gov/forms/driver_serv_forms/pdfs/dr_frm_manual.pdf",
     "manual_pdf_sha256": "9b00f46e543a155c728f89469ffbd75244c50521b5239ed95aa886c95174e380",
@@ -23,25 +23,1998 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 31,
-    "avg_fidelity": 10.0,
-    "pct_at_10": 100.0,
-    "pct_above_9": 100.0,
-    "pct_above_7": 100.0,
+    "sample_size": 0,
+    "judged_count": 611,
+    "avg_fidelity": 9.99,
+    "pct_at_10": 99.5,
+    "pct_above_9": 99.7,
+    "pct_above_7": 99.7,
     "pct_zero": 0.0,
-    "flagged_question_ids": [],
+    "flagged_question_ids": [
+      46,
+      576
+    ],
+    "evidence_by_question_id": {
+      "1": [
+        "remember—driving is a privilege, not a right ."
+      ],
+      "2": [
+        "safe driving isn’t just about passing a test—it’s about staying focused, avoiding distractions, following speed limits"
+      ],
+      "3": [
+        "Consider carpooling, conserving trips, or using public transit to help protect our environment"
+      ],
+      "4": [
+        "We encourage all motorists to share the roadways in a careful, courteous, sober, and defensive manner"
+      ],
+      "5": [
+        "Corrections, suggestions, or recommendations to this manual may be addressed to: Chief of Driver Services"
+      ],
+      "6": [
+        "Class D Operator’s License.  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .    36"
+      ],
+      "7": [
+        "Next Of Kin Registry .  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .  34"
+      ],
+      "8": [
+        "Veteran indicator on Driver License/Identification Card .  .   .   .   .   .   .   .   .   .   .   .   .   .  32"
+      ],
+      "9": [
+        "Megan’s Law/Sex Offenders.  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .    34"
+      ],
+      "10": [
+        "Mandatory Disclosure Of Social Security Numbers .  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .    34"
+      ],
+      "11": [
+        "“Commercial Learner’s Permit (CLP)” means a permit which authorizes the holder to operate a specific class"
+      ],
+      "12": [
+        "Organ And Tissue Donor Program. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34"
+      ],
+      "13": [
+        "Selective Service System Registration. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34"
+      ],
+      "14": [
+        "Driving Privilege Card Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23"
+      ],
+      "15": [
+        "TAT- Human Trafficking. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35"
+      ],
+      "16": [
+        "School Bus Endorsement. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39"
+      ],
+      "17": [
+        "Vision Screening. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39"
+      ],
+      "18": [
+        "Child Support Delinquency. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45"
+      ],
+      "19": [
+        "DRIVER IMPROVEMENT PROBLEM DRIVER PROGRAM . . . . . . . . . . . . . . . . . . . . 45",
+        "Delaware Point System. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46"
+      ],
+      "20": [
+        "Distracted Driving. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 51",
+        "Drowsy Driving . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52"
+      ],
+      "21": [
+        "DUI Penalties For Seventh Offense",
+        "Loss of license by DMV • 60 months for all seventh or greater offense convictions."
+      ],
+      "22": [
+        "Ignition Interlock Device (IID) Program for First Offense Election (FOE)",
+        "A person who, in lieu of standing trial, enters a First Offender Election (FOE) may seek an IID license"
+      ],
+      "23": [
+        "DELAWARE DRINKING AND DRIVING LAWS",
+        "Implied Consent Law",
+        "Zero Tolerance Law"
+      ],
+      "24": [
+        "MOTOR VEHICLE EQUIPMENT",
+        "Required Equipment",
+        "Additional Equipment",
+        "Prohibited Equipment"
+      ],
+      "25": [
+        "Self-Reporting Of Medical Conditions",
+        "customers should self-report any changes in their health that might affect their ability to drive."
+      ],
+      "26": [
+        "DRIVER IMPROVEMENT PROBLEM DRIVER PROGRAM",
+        "Aggressive Driving",
+        "The intent of Delaware’s aggressive driving law is to identify aggressive drivers"
+      ],
+      "27": [
+        "Motor Vehicle To Be Driven During Road Test",
+        "It is your responsibility to provide the motor vehicle to be driven during the road exam."
+      ],
+      "28": [
+        "Habitual Offender Revocation",
+        "After an accumulation of certain types of traffic violation convictions, the driver may be declared a habitual offender"
+      ],
+      "29": [
+        "Occupational License",
+        "The Division may issue an occupational license during the period of suspension under the Driver Improvement Problem Driver Program"
+      ],
+      "30": [
+        "Using Safety Belts And Child Restraints",
+        "Delaware law requires all occupants of a vehicle to be properly restrained in a seatbelt or child safety seat."
+      ],
+      "31": [
+        "yield the right-of-way by making appropriate lane changes when possible; or proceed with caution and reduce to a safe speed if changing lanes would be impossible or unsafe."
+      ],
+      "32": [
+        "Delaware’s law prohibits the use of hand-held cell phones and texting while driving.",
+        "Those who wish to talk on their cell phone while driving must use a hands-free device."
+      ],
+      "33": [
+        "stop before reaching any school bus from either direction when it is stopped to load or unload school children except when you are on the opposite side of a highway having four or more lanes"
+      ],
+      "34": [
+        "Residential districts 25 miles per hour"
+      ],
+      "35": [
+        "Yield to traffic already in the roundabout.",
+        "Once you’re in the roundabout, do not stop except to avoid a collision; you have the right-of-way over entering traffic."
+      ],
+      "36": [
+        "These center lanes are reserved for making left turns (or U-turns when they are permitted) but can be used by vehicles traveling in both directions."
+      ],
+      "37": [
+        "the law requires motorists to leave a minimum of three feet of clearance at all times"
+      ],
+      "38": [
+        "the signal will go through a series of stages that will stop traffic long enough for pedestrians to safely cross the roadway."
+      ],
+      "39": [
+        "You must not drive on a Delaware highway at a speed greater than is reasonable under existing conditions.",
+        "The driver must never exceed the posted limit."
+      ],
+      "40": [
+        "It is legal in Delaware to pass left-turning vehicles on the right",
+        "You may use the shoulder to pass left-turning vehicles on the right in Delaware"
+      ],
+      "41": [
+        "Motorcycles can stop quicker, so you need to follow at a safe distance.",
+        "Gravel, debris, pavement seams, small animals, and even manhole covers may cause the motorcyclist to change speed or direction."
+      ],
+      "42": [
+        "Within 15 feet of a fire hydrant."
+      ],
+      "43": [
+        "Large flashing or sequencing arrow panels may be used in work zones both day and night to guide drivers into certain traffic lanes and to inform them that part of the road or street ahead of them is closed."
+      ],
+      "44": [
+        "You must yield the right-of-way to any pedestrian within a crosswalk, stopping if necessary.",
+        "When crossing within a marked or unmarked crosswalk."
+      ],
+      "45": [
+        "Delaware law requires all occupants of a vehicle to be properly restrained in a seatbelt or child safety seat.",
+        "Delaware law requires all occupants of a motor vehicle to wear seatbelts."
+      ],
+      "46": [
+        "Sharing The Road With Motorcycles.",
+        "Bicycles.",
+        "Pedestrians."
+      ],
+      "47": [
+        "Clean Glass Surfaces.",
+        "BEFORE YOU DRIVE .  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . 103 "
+      ],
+      "48": [
+        "An individual’s constitutional and other legal rights during a traffic stop.",
+        "The role and procedures of a law-enforcement officer in general and during a traffic stop ."
+      ],
+      "49": [
+        "BASIC DRIVING .  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .  111",
+        "Steering.  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .  111"
+      ],
+      "50": [
+        "Let Others Know You Are There.",
+        "Let Others Know What You Are Doing."
+      ],
+      "51": [
+        "Driving safely means adjusting your speed for road and traffic conditions, how well you can see, and obeying speed limits.",
+        "Adjusting To Road Conditions",
+        "Adjusting To Traffic"
+      ],
+      "52": [
+        "Sight Distance Rule",
+        "Drive at a speed where you can always safely stop. To tell if you are driving too fast for conditions, use the “Four-Second Sight Distance Rule.”"
+      ],
+      "53": [
+        "HOW WELL CAN YOU SEE?",
+        "Darkness",
+        "Rain, Fog, Or Snow",
+        "Hills And Curves"
+      ],
+      "54": [
+        "SHARING SPACE",
+        "Space To Merge",
+        "Anytime you want to merge with other traffic, you need a gap of about four seconds."
+      ],
+      "55": [
+        "BE IN SHAPE TO DRIVE",
+        "Vision",
+        "Hearing",
+        "Fatigue"
+      ],
+      "56": [
+        "Sharing The Road With A Truck",
+        "Backing Crashes",
+        "Reporting a Commercial Safety Violation"
+      ],
+      "57": [
+        "Secure Your Load",
+        "Driving with an unsecured load is extremely dangerous."
+      ],
+      "58": [
+        "How and where to file a compliment on behalf of or a complaint against a law-enforcement officer."
+      ],
+      "59": [
+        "Farm Tractors And Equipment, Road Machinery, and Construction Equipment"
+      ],
+      "60": [
+        "BASIC DRIVING",
+        "Starting",
+        "Accelerating",
+        "Steering",
+        "Stopping"
+      ],
+      "61": [
+        "If a conflict exists, then the actual code or legislation will always take precedence."
+      ],
+      "62": [
+        "If you want an endorsement to drive a motorcycle, you should read the Motorcycle Operator Manual."
+      ],
+      "63": [
+        "If you have a disability and need a special accommodation in order to take an exam, please call and make an appointment prior to coming to a DMV site",
+        "Audio tests (with headphones) are available upon request."
+      ],
+      "64": [
+        "maximum speed on a paved level surface, when powered solely by such motor while ridden by an operator who weighs 170 pounds, is less than 20 mph."
+      ],
+      "65": [
+        "“Bike Box” means a designated area at the head of a traffic lane at intersections that provides bicyclists with a safe way to turn and a visible way to get ahead of traffic."
+      ],
+      "66": [
+        "“Convicted” means having been found guilty in a court of law of a violation of the motor vehicle laws, forfeiture of bail bond, or a plea of guilty."
+      ],
+      "67": [
+        "a vehicle designed to carry 16 or more occupants (including the driver)"
+      ],
+      "68": [
+        "\"Commercial Vehicle\" means a vehicle classified as a pickup truck/cargo van/passenger van/bus (over 5,000 pounds)."
+      ],
+      "69": [
+        "“Divided Highway” means any highway divided into two or more roadways by an intervening space, physical barrier, or clearly indicated dividing section"
+      ],
+      "70": [
+        "“DPC” means Driving Privilege Card which is a valid driver license that is issued for driving purposes only and is not to be used as a valid form of identification."
+      ],
+      "71": [
+        "“Driver” includes anyone who is in actual physical control of a motor vehicle."
+      ],
+      "72": [
+        "Commonly referred to as the “Blue Certificate or “White Certificate”."
+      ],
+      "73": [
+        "“Express Highway” means a State or Interstate highway especially designed for through traffic."
+      ],
+      "74": [
+        "“GDL” means Graduated Driver License which is a restricted permit issued to any person who is at least age 16 or under age 18"
+      ],
+      "75": [
+        "“Highway” means the entire width between boundary lines of every road open to public vehicular traffic, but does not include roads owned by private individuals or by institutions."
+      ],
+      "76": [
+        "“Minibike” means any motor-driven cycle which has a wheel rim size less than 10 inches",
+        "or has a seat less than 25 inches above the ground."
+      ],
+      "77": [
+        "“Must” means an action or practice required by law.",
+        "“Should” means a recommended action or practice not required by law."
+      ],
+      "78": [
+        "“NDR” means National Driver Register (NDR), which is a computerized database of information about drivers who have had their licenses suspended or revoked"
+      ],
+      "79": [
+        "“Roadway” means that portion of the highway improved, designed, or ordinarily used for vehicular traffic, excluding the shoulder."
+      ],
+      "80": [
+        "“Two-Way Cycle Track” means physically separated cycle tracks that allow bicycle movement in both directions on one side of the road.",
+        "Also known as protected bike lanes, separated bikeways and on-street bike paths."
+      ],
+      "81": [
+        "Uninsured Motorist Fees Penalty **100. 00",
+        "** Plus $5.00 Per Day After 31st Day From Mailing Date of Notice"
+      ],
+      "82": [
+        "DL Revocation Reinstatement 200. 00"
+      ],
+      "83": [
+        "Class D 8yr 40. 00"
+      ],
+      "84": [
+        "Handicap Placard No Charge"
+      ],
+      "85": [
+        "If you present an uncollectible check, a penalty fee of $25.00 is charged.",
+        "If the original amount plus the penalty fee is not paid within 10 days, your driver’s license and/or registration will be suspended."
+      ],
+      "86": [
+        "The DMV will not charge late fees for active duty military members... when renewing or processing beyond an expiration date if they can provide proof that they were deployed or stationed outside of the State of Delaware"
+      ],
+      "87": [
+        "Delaware law allows a vehicle owner a credit on a sales tax... paid to another state on the purchase of a vehicle within 90 days prior to registering the vehicle in Delaware."
+      ],
+      "88": [
+        "“Moped” shall mean a pedal or nonpedal bicycle... having an electric motor rated between 751 watts and 2,000 watts."
+      ],
+      "89": [
+        "Delaware law allows the Division to charge a reasonable fee not to exceed $25. 00 to any person presenting a payment that is returned as uncollectible"
+      ],
+      "90": [
+        "The Division will send notification by certified mail... and allow 10 days to furnish payment.",
+        "If payment is not received within 10 days... the Division shall forthwith suspend the individual’s driver license or vehicle registration"
+      ],
+      "91": [
+        "Title (with Lien) 55.00"
+      ],
+      "92": [
+        "Calculated as 4.25% of the purchase price or NADA book value, whichever is greater.",
+        "Mobile homes document fee will be 3.75% of the purchase price or NADA book value, whichever is greater."
+      ],
+      "93": [
+        "A compliant DL/ID is distinguishable by the gold star in the upper right-hand corner of the DL/ID"
+      ],
+      "94": [
+        "a non-compliant card is distinguishable by the phrase “Not for Federal ID” printed in the upper margin of the DL/ID."
+      ],
+      "95": [
+        "There will be a $20. 00 replacement license fee assessed."
+      ],
+      "96": [
+        "You are required to obtain a Delaware driver license within 60 days after becoming a bona fide Delaware resident."
+      ],
+      "97": [
+        "Individuals while driving or operating a road roller, road machinery, or farm tractor or implement of husbandry temporarily on a highway."
+      ],
+      "98": [
+        "You are under the age of 18 and have not completed a Delaware Department of Education approved course in driver education."
+      ],
+      "99": [
+        "6. You do not understand road signs in English."
+      ],
+      "100": [
+        "you must furnish the division with a written certification by your licensed practitioner that such person’s physical disability is under sufficient control"
+      ],
+      "101": [
+        "You must apply in person at the Division of Motor Vehicles (Division) in Delaware City, Dover, Georgetown or Wilmington."
+      ],
+      "102": [
+        "Immigration status A-1. Ambassador, public minister, career diplomatic or consular officer and dependents are ineligible, because an “A” status may only be issued a driver’s license from the United States State Department."
+      ],
+      "103": [
+        "Immigration status B-2. Visitor for pleasure (tourist).",
+        "Those applicants who are legally in the United States under the following immigration status... are not eligible for a Delaware-issued driver license or identification card"
+      ],
+      "104": [
+        "U.S. Citizenship – Expiration date – 8-year Driver License and ID card.",
+        "Permanent Resident Immigrant – Expiration date – 8-year license ID card."
+      ],
+      "105": [
+        "A one year expiration date will be used when immigration records show “indefinite” or “duration of status” for period of authorized stay."
+      ],
+      "106": [
+        "Each driver must pass an eye-screening examination."
+      ],
+      "107": [
+        "Applicants who are licensed or have an identification (ID) card in another state must surrender their license and/or ID card from the other state(s)."
+      ],
+      "108": [
+        "False statements, attempted fraud by displaying invalid licenses, ID cards or documents, or misrepresentation is perjury and may result in fines and denial of licenses and services."
+      ],
+      "109": [
+        "Any valid document from Social Security Administration (SSA) containing full SSA (Medicare/Medicaid cards not acceptable)"
+      ],
+      "110": [
+        "Each applicant must provide their social security number, if eligible, two proofs of the applicant’s Delaware residency"
+      ],
+      "111": [
+        "display a person’s physical address, not a “service to” address (i.e.; Post Office box) and be postmarked within the last 60 days. Non-business letters/cards will NOT be accepted."
+      ],
+      "112": [
+        "(If under 18, birth certificate must include birth parent(s) names.)",
+        "If applicant is under 18 or is eligible for the IEP GDL program, a document containing parent(s) or legal guardian(s) name(s) must be presented (such as a birth certificate or court document)."
+      ],
+      "113": [
+        "Must be original or certified copy, have a raised seal and be issued by the Bureau of Vital Statistics or State Board of Health. Please note that wallet cards, birth registration or hospital announcements/records are not accepted."
+      ],
+      "114": [
+        "verified electronically through the Department of Homeland Security’s Systematic Alien Verification for Entitlements System (SAVE)."
+      ],
+      "115": [
+        "The expiration date on DL/ID must not exceed the period of time non-citizens are authorized in the United States.",
+        "Non-immigrant/Temporary – Expiration date limited by authorized stay in U.S. which is verified electronically through SAVE."
+      ],
+      "116": [
+        "A primary document must contain the full name and date of birth and must be verifiable (i.e., we must be able to contact the issuing agency to determine the authenticity of the document)."
+      ],
+      "117": [
+        "Every driver license applicant is subject to a written and road skills exam ."
+      ],
+      "118": [
+        "• W-2 tax form",
+        "(Medicare/Medicaid cards not acceptable)"
+      ],
+      "119": [
+        "Mail must have been delivered by the USPS and be postmarked or received within the last 60 days. (UPS/FedEx/DHL not accepted)."
+      ],
+      "120": [
+        "You must change your name with the Social Security Administration and wait 48 hours before appearing at DMV."
+      ],
+      "121": [
+        "Marriage certificates signed by a clergy are not accepted."
+      ],
+      "122": [
+        "If the adoptive parents are NOT listed on the birth certificate, the adoption paperwork will be required in both scenarios mentioned above."
+      ],
+      "123": [
+        "The DPC is only available to foreign Delaware residents who are unable to produce legal presence within the United States and meet certain eligibility requirements."
+      ],
+      "124": [
+        "The Delaware DPC is a valid driver license that is issued for driving purposes only within the state of Delaware and is not to be used as a valid form of identification."
+      ],
+      "125": [
+        "The fee for the DPC is $20.00 and it is valid for a period of 4 years."
+      ],
+      "126": [
+        "SBI will collect fingerprints, validate identification and collect a $72 fee."
+      ],
+      "127": [
+        "confirming they have filed Delaware taxes for the previous two years."
+      ],
+      "128": [
+        "If under 18, must also have original and translated copy of birth certificate."
+      ],
+      "129": [
+        "Mexican Federal Electoral Card (Instituto Federal Electoral (IFE) Credencial para Votar)"
+      ],
+      "130": [
+        "Brazil (Carteira de Matricula Consular)",
+        "Colombia (Consular Registration)",
+        "Ecuador (Tarjeta De Identification Consular)"
+      ],
+      "131": [
+        "Documents in foreign languages must be translated into English by a professional translator and accompany the original foreign language document."
+      ],
+      "132": [
+        "Mail must have been delivered by the USPS and be postmarked or received within the last 60 days."
+      ],
+      "133": [
+        "Must present a Delaware Driver Education Certificate (Blue/White Certificate) as proof that you passed a certified Delaware Driver Education Course."
+      ],
+      "134": [
+        "The sponsor is held jointly liable with the GDL applicant for any damages resulting from the GDL applicant's negligence."
+      ],
+      "135": [
+        "The applicant must pay a $40. 00 Class D license fee",
+        "All new licenses will be 8 year licenses."
+      ],
+      "136": [
+        "The permit holder shall not operate a motor vehicle while using a cellular telephone, text messaging device, or similar electronic device."
+      ],
+      "137": [
+        "supervisor must be a properly licensed parent, guardian or licensed driver (approved by the sponsor) who is at least 25 years of age and has held a Class D license for at least 5 years."
+      ],
+      "138": [
+        "The supervising driver must be seated beside the permit holder in the front seat of the vehicle when it is in motion. No person other than the supervising driver can be in the front seat."
+      ],
+      "139": [
+        "For the first six months after issuance of a Level One Learner's Permit: a. The permit holder must be supervised at all times."
+      ],
+      "140": [
+        "The sponsor shall certify that the permit holder has driven for 50 hours; 10 of which includes night-time driving."
+      ],
+      "141": [
+        "The permit holder may drive unsupervised between the hours of 6:00 a. m. and 10:00 p. m."
+      ],
+      "142": [
+        "The permit holder may travel without supervision during those hours when going directly to and from church activities, work activities, and the permit holder's school activities on school property."
+      ],
+      "143": [
+        "result in a two-month suspension for the first offense and a four-month suspension for subsequent offenses."
+      ],
+      "144": [
+        "The GDL Level One Learner's Permit will automatically convert to a Class D license once the permit holder has completed a full 12 months of valid driving authority."
+      ],
+      "145": [
+        "During the second six month period of unsupervised driving, when a supervisor is not present, only one other passenger in addition to the driver can be in the vehicle."
+      ],
+      "146": [
+        "The GDL Level One Learner's Permit will automatically convert to a Class D license once the permit holder has completed a full 12 months of valid driving authority."
+      ],
+      "147": [
+        "you must be accompanied by a licensed driver who is qualified to drive the class of vehicle in which you are training, and they must be at least 21 years of age."
+      ],
+      "148": [
+        "To obtain your license, you must take a road exam, but not until at least 10 days after the permit was issued."
+      ],
+      "149": [
+        "You are required to obtain a Delaware driver license within 60 days after becoming a bona fide Delaware resident."
+      ],
+      "150": [
+        "Taxi/Limousine (Z) endorsement is non-transferrable."
+      ],
+      "151": [
+        "Delaware has a reciprocity agreement with Germany, Taiwan (Republic of China) and France thereby exempting these drivers from the knowledge and road exams for a Class D license only"
+      ],
+      "152": [
+        "If the minor applicant was issued an out-of-state license for less than 12 months, they may be eligible for a Level One Learner’s Permit."
+      ],
+      "153": [
+        "Driver licenses will be issued for eight years, with the exception of Immigration length of stay, hazmat holders and Driving Privilege Card holders."
+      ],
+      "154": [
+        "A $10.00 late fee is charged if the renewal takes place after the expiration date."
+      ],
+      "155": [
+        "You may renew at any time during the 180-day (six months) period prior to the expiration of your license."
+      ],
+      "156": [
+        "Whenever a permanent license is suspended or revoked, it is changed to a Class D license upon reinstatement."
+      ],
+      "157": [
+        "If you drive without the required equipment, you are subject to arrest and your driver license may be suspended."
+      ],
+      "158": [
+        "go to the Division for a replacement license which will be issued for a fee of $20. 00."
+      ],
+      "159": [
+        "Within 30 days after legally changing your name, you must appear in person at the DMV to change the name on your driver license or identification card."
+      ],
+      "160": [
+        "After changing your Delaware address, you have 30 days to notify both the Vehicle Registration and Driver License Sections of the Division of Motor Vehicles."
+      ],
+      "161": [
+        "The fee for an identification card is $40.00 and it expires eight years from the applicant’s next birthday."
+      ],
+      "162": [
+        "A sponsor who is the mother or father or a court appointed guardian as listed on the minor’s birth certificate must accompany any applicant under the age of 18"
+      ],
+      "163": [
+        "Military ID",
+        "DD-214",
+        "Honorable Discharge Certificate"
+      ],
+      "164": [
+        "The veteran indicator may be added to your driver license or identification card free of charge during renewal or duplicate transactions. Otherwise, there is a $10.00 fee."
+      ],
+      "165": [
+        "You may register to vote if you are a U.S. citizen; a bona fide resident of Delaware, are at least 16 years of age and are mentally competent."
+      ],
+      "166": [
+        "is automatically registered to vote by the Department of Elections as Unaffiliated."
+      ],
+      "167": [
+        "A blue medical indicator may appear on the document as a means for the holder to share a medical condition"
+      ],
+      "168": [
+        "Visor Communication card application for deaf or hard of hearing individuals is available upon request"
+      ],
+      "169": [
+        "such registration must occur within seven days of coming into any county, city, or town"
+      ],
+      "170": [
+        "Social security numbers will not be released to businesses or private individuals, but may be released to State agencies to carry out their governmental functions."
+      ],
+      "171": [
+        "Male applicants are to understand that their signature on license or identification card applications constitutes consent to be registered with the Selective Service System, if so required."
+      ],
+      "172": [
+        "designate up to two different emergency contacts, a primary and a secondary, so that in the event of an emergency, emergency personnel are able to contact your loved ones."
+      ],
+      "173": [
+        "If you say yes, a “RED HEART”, will be displayed on your license."
+      ],
+      "174": [
+        "It also protects the witness and person they’re assisting from being prosecuted for possession of an illegal substance."
+      ],
+      "175": [
+        "Good Samaritan laws also protect individuals from civil damages for administering naloxone, a life-saving medication that can reverse an opioid overdose"
+      ],
+      "176": [
+        "Restricted or controlled communication; not allowed to speak for self; being watched or followed"
+      ],
+      "177": [
+        "This type and class of license is valid for any single motor vehicle, and a trailer, with gross vehicle weight ratings (GVWR) not greater than 26,000 pounds"
+      ],
+      "178": [
+        "The requirement for a CDL is waived when the driver is operating farm equipment, firefighting equipment, recreational vehicles, or military members operating military vehicles"
+      ],
+      "179": [
+        "Used within 150 miles of the person’s farm, and"
+      ],
+      "180": [
+        "allow you to drive a Commercial Motor Vehicle (CMV), but only with another licensed CDL driver.",
+        "you may drive only with a CDL driver qualified in the same type CMV."
+      ],
+      "181": [
+        "CDL Class A License This license is required for any combination of vehicles with a Gross Combined Weight Rating (GVWR) of 26,001 pounds or more, provided the GVWR of the towed unit(s) is in excess of 10,000 pounds."
+      ],
+      "182": [
+        "CDL Class C License This license is required for any single vehicle or combination of vehicles with a Gross Vehicle Weight Rating (GVWR) of less than 26,001 pounds... designed to transport 16 or more passengers"
+      ],
+      "183": [
+        "The permit authorizes its holders to operate a Class D vehicle under the condition that the permit holder is accompanied by a properly licensed driver over the age of 21."
+      ],
+      "184": [
+        "This one-time temporary license is issued for a period not to exceed six months."
+      ],
+      "185": [
+        "Persons under the age of 18... must complete the Motorcycle Rider Education Program as approved by the Division."
+      ],
+      "186": [
+        "required by law to wear a helmet and eye protection for the first 2 years after the newly endorsed person receives the endorsement."
+      ],
+      "187": [
+        "Once you have passed the knowledge exam, you will be issued a motorcycle permit which is valid for six months. You can extend the permit only once for an additional six months."
+      ],
+      "188": [
+        "4. Operation is not permitted on the federal interstate highway system."
+      ],
+      "189": [
+        "2. Operating a motorcycle between sunset and sunrise is prohibited."
+      ],
+      "190": [
+        "You must apply for an extension at DMV before the expiration date and pay a $5. 00 fee."
+      ],
+      "191": [
+        "not have more than five points (full point value) on their record for the past three years."
+      ],
+      "192": [
+        "NOTE: Out of State Taxi/Limo endorsements are not transferrable."
+      ],
+      "193": [
+        "expired, revoked, and/or suspended over one year, you are required to take the vision and Class D knowledge exam."
+      ],
+      "194": [
+        "if it has been over 5 years, you must reapply for your Class D license and take the vision, knowledge, and road exams."
+      ],
+      "195": [
+        "Minimum acceptable vision for a Delaware driver license is 20/40, with or without glasses or contact lenses."
+      ],
+      "196": [
+        "Permission for daylight only driving may be granted if your vision is between 20/40 and 20/50."
+      ],
+      "197": [
+        "You are eligible to take a Class D or motorcycle road exam 10 days after you pass the knowledge exam."
+      ],
+      "198": [
+        "Road exams are given on every weekday, except Wednesday."
+      ],
+      "199": [
+        "Valid driver license of the accompanying driver who is at least 21 years of age"
+      ],
+      "200": [
+        "Parallel parking",
+        "Three point turn",
+        "Back 50 feet"
+      ],
+      "201": [
+        "No cell phone use or playing of music is permitted during the road test."
+      ],
+      "202": [
+        "You must wait at least ten days before taking the exam or exams again."
+      ],
+      "203": [
+        "The driver must complete a defensive driving course within 30 days from an approved provider"
+      ],
+      "204": [
+        "furnish the division with a new medical report every year no later than the last day of the person’s birthday month."
+      ],
+      "205": [
+        "A fee of $50.00 must be paid to reinstate a suspended license"
+      ],
+      "206": [
+        "requests may be submitted by members of a driver’s immediate family, law enforcement, or licensed practitioner."
+      ],
+      "207": [
+        "there is no fee for reinstatement if the license is voluntarily surrendered before the suspension date."
+      ],
+      "208": [
+        "Attempting to flee from a police officer after having received a visual or audible signal to stop your vehicle."
+      ],
+      "209": [
+        "Three convictions for reckless driving in a period of 12 consecutive months."
+      ],
+      "210": [
+        "Any combination of three of the following offenses in a five year period may convict you as a habitual offender"
+      ],
+      "211": [
+        "Any combination of the above offenses and lesser offenses, such as speeding, that result in 10 convictions in three years may convict you as a habitual offender."
+      ],
+      "212": [
+        "Suspension of a license is a temporary removal of your driving privilege. Revocation of a license is a cancellation of your driving privilege."
+      ],
+      "213": [
+        "The Division will suspend or revoke the license of any Delaware resident who has been convicted of a violation in another state which, if committed in Delaware, would be grounds for suspension or revocation of a license."
+      ],
+      "214": [
+        "Any person who owes $1,000.00 or more in arrears or retroactive support and is 30 or more days delinquent in payment of a child support order ... may have their license suspended"
+      ],
+      "215": [
+        "As of August 2024, DMV no longer requires mandatory reporting of medical conditions. Licensed practitioners are encouraged to report patients who may pose a danger driving."
+      ],
+      "216": [
+        "If you post a bond after being arrested for any of the causes listed above, and you do not appear in court, your license shall be revoked just as if you had been convicted."
+      ],
+      "217": [
+        "A reinstatement fee of $50.00 must be paid to the Division of Motor Vehicles in order to reinstate the license."
+      ],
+      "218": [
+        "Passing a Stopped School Bus \t6*"
+      ],
+      "219": [
+        "full point value for the first 12 months from the date of violation and half point value for the second 12 months from date of violation."
+      ],
+      "220": [
+        "8\tThe Division of Motor Vehicles sends the driver an advisory letter."
+      ],
+      "221": [
+        "14 Mandatory 4-month license suspension."
+      ],
+      "222": [
+        "A speeding violation of 1 to 14 mph over the posted speed limit will not be assessed points, IF:",
+        "It is the first violation within any 3-year period; and",
+        "The ticket is paid through the Voluntary Assessment Center or Alderman’s Court recorded as a “guilty mail in” or through an online payment."
+      ],
+      "223": [
+        "The driver will be suspended for one month when convicted of driving 25 mph over the posted speed limit."
+      ],
+      "224": [
+        "One-year suspension when convicted of driving 50 mph or more over the posted speed limit or driving 100 mph on a highway."
+      ],
+      "225": [
+        "Occupational licenses are not issued during the first month of the suspension."
+      ],
+      "226": [
+        "If the calculated point level reaches 15 or more points in a 24-month period, an occupational license will not be issued until the calculated points are less than 15 points."
+      ],
+      "227": [
+        "A conviction for driving during suspension or revocation shall extend the period of suspension or revocation for a like period, up to one year."
+      ],
+      "228": [
+        "Individuals convicted of three or more of these offenses as a result of continuous conduct are guilty of aggressive driving and are subject to increased penalties."
+      ],
+      "229": [
+        "Offenders will be fined between $100.00 and $300.00 for the first offense."
+      ],
+      "230": [
+        "The course is a minimum of eight hours long and is offered in all three counties. The fee for the course is $100. 00 and is payable to the course provider."
+      ],
+      "231": [
+        "The division may consider the satisfactory completion of an approved defensive driving course as a three-point credit that is used to calculate driver penalties within the DMV.",
+        "The three-point credit is only applied to future violations, for Administrative action, and does not remove or reduce existing DMV points."
+      ],
+      "232": [
+        "In Delaware a BAC of .08 or greater or the presence of any illicit or recreational drug is conclusive evidence that a driver is under the influence."
+      ],
+      "233": [
+        "A 12-ounce can of beer, a 5-ounce glass of wine, and a cocktail with 1. 5-ounces of 80 proof distilled spirits all contain the same amount of alcohol."
+      ],
+      "234": [
+        "If a driver refuses chemical testing, their license may be revoked."
+      ],
+      "235": [
+        "Delaware’s zero tolerance statute mandates a license revocation for underage drivers with a .02 BAC."
+      ],
+      "236": [
+        "Any driver operating a commercial motor vehicle who refuses to submit to a breath or blood test to determine their BAC, or whose BAC is .04 or more, will be disqualified from driving a commercial vehicle for one year;"
+      ],
+      "237": [
+        "It reaches your brain in 20 to 40 minutes."
+      ],
+      "238": [
+        "There is no way to sober up quickly. Coffee, fresh air, exercise, or cold showers will not help. Time is the only thing that will sober you up."
+      ],
+      "239": [
+        "The lower the weight of the drinker, the lower the amount of alcoholic beverage it takes to bring the blood alcohol concentration to a specified level."
+      ],
+      "240": [
+        "If you take your eyes off the road while traveling 55 mph for 3-4 seconds, your vehicle travels the length of an entire football field."
+      ],
+      "241": [
+        "Pep pills, “uppers,” and diet pills can make a driver feel more alert for a short time. Later however, they can cause a person to be nervous, dizzy, unable to concentrate"
+      ],
+      "242": [
+        "The rate of this movement and how much alcohol gets into the blood depends primarily on how much alcohol is in the drinks taken."
+      ],
+      "243": [
+        "If convicted of driving under the influence of alcohol, the minor’s license may be revoked until they reach the age of 21 years."
+      ],
+      "244": [
+        "Engaging in intense, complicated emotional conversations on cell phone or with passengers."
+      ],
+      "245": [
+        "Driving instructors estimate that a driver makes 200 decisions for every mile of driving."
+      ],
+      "246": [
+        "Food slows down how fast alcohol gets into your blood. Remember, food only slows when the alcohol gets into your blood, it will not keep you from getting drunk."
+      ],
+      "247": [
+        "“Highway Hypnosis” commonly refers to the state of being unaware of surroundings. It is caused by monotony—the sound of the wind, the tires, and the steady hum of the engine."
+      ],
+      "248": [
+        "You have wandering, disconnected thoughts."
+      ],
+      "249": [
+        "The fact that a person charged with violating the DUI law is, or has been, legally entitled to use alcohol or a drug shall not be considered a defense."
+      ],
+      "250": [
+        "shall be deemed to have given consent to submit to a chemical test or tests or their breath, blood, and/or urine for the purpose of determining the alcohol content in their blood."
+      ],
+      "251": [
+        "revoke the license and/or driving privilege of any juvenile until such time as they are legally permitted to drink alcoholic beverages (21 years old)."
+      ],
+      "252": [
+        "shall have their driver license revoked for a period of two months for the first offense"
+      ],
+      "253": [
+        "This section shall not apply to the possession or consumption of alcoholic liquor in connection with any religious service"
+      ],
+      "254": [
+        "The driver will have 15 days to request an administrative hearing.",
+        "The license will be revoked at the end of the 15-day period if no hearing is requested."
+      ],
+      "255": [
+        "A chemical test of .08 BAC or greater, or the presence of any drug is conclusive evidence that the driver was under the influence."
+      ],
+      "256": [
+        "Refused chemical test",
+        "12 months for 1st offense"
+      ],
+      "257": [
+        "Payment of the $200. 00 reinstatement fee."
+      ],
+      "258": [
+        "24 months for BAC .20 or greater or refusal to submit to a chemical test."
+      ],
+      "259": [
+        "Any person who elects the FOE program with the IID license, must remain on the IID for four months from the date the IID license was issued."
+      ],
+      "260": [
+        "Fine: $750.00 to $2,500.00"
+      ],
+      "261": [
+        "30 months for BAC .20 or greater, or refusal to submit to a chemical test."
+      ],
+      "262": [
+        "Third DUI Offense: Class G Felony– occurring any time after two prior offenses."
+      ],
+      "263": [
+        "Seventh or greater DUI Offense: Class C Felony.",
+        "Fine: Up to $15,000.00."
+      ],
+      "264": [
+        "The IID license is not available for CDL class vehicles or valid for any peripheral endorsements."
+      ],
+      "265": [
+        "Third Offense Conviction – 90 days;"
+      ],
+      "266": [
+        "Fourth and Subsequent Conviction – at least 54 months."
+      ],
+      "267": [
+        "New residents must title/register their vehicles within 60 days after moving to Delaware."
+      ],
+      "268": [
+        "High beams must be aimed and strong enough to reveal persons and vehicles at least 350 feet ahead."
+      ],
+      "269": [
+        "Headlights must be on when windshield wipers are in use due to inclement weather."
+      ],
+      "270": [
+        "Taillights - At least two, original design, red lights are required on the rear. They must be visible from a distance of 500 feet."
+      ],
+      "271": [
+        "Must be white and strong enough for the number on the registration plate to be seen from a distance of 50 feet."
+      ],
+      "272": [
+        "It must light when the brake pedal is pushed and be visible from a distance of at least 100 feet in normal sunlight."
+      ],
+      "273": [
+        "those in rear may be any shade between amber and red."
+      ],
+      "274": [
+        "Must stop vehicle within a distance of 54 feet from a speed of 20 mph."
+      ],
+      "275": [
+        "Windshield and all side and rear windows must be made of automotive safety glass."
+      ],
+      "276": [
+        "Must be able to make sound that can be heard under normal conditions at least 200 feet away."
+      ],
+      "277": [
+        "On any time you use your windshield wipers."
+      ],
+      "278": [
+        "Switched to low beams 500 feet before meeting another vehicle"
+      ],
+      "279": [
+        "Studded Tires - Are legal from October 15 to April 15 inclusive; illegal from April 16 to October 14 inclusive."
+      ],
+      "280": [
+        "The draw bar or other connection between any two vehicles, one of which is towing the other, must be no more than 15 feet long."
+      ],
+      "281": [
+        "If a chain, rope or cable is used, a red flag at least 12 inches square must be attached to it."
+      ],
+      "282": [
+        "The driver of the vehicle receives a ticket for any unrestrained or improperly restrained vehicle occupants."
+      ],
+      "283": [
+        "New residents must title/register their vehicles within 60 days after moving to Delaware."
+      ],
+      "284": [
+        "OWNERS CANCELLING INSURANCE FOR ANY REASON MUST FIRST SURRENDER THEIR VALID LICENSE PLATE TO THE DIVISION."
+      ],
+      "285": [
+        "The penalty for operating an uninsured vehicle is a fine not less than $1,500.00 nor more than $2,000.00 and mandatory suspension of driver license and/or driving privileges for six months."
+      ],
+      "286": [
+        "Any vehicle as a means of indicating a traffic hazard (four-way flashers)."
+      ],
+      "287": [
+        "Vehicles with tint installed must have outside mirrors on both the right and left sides of the vehicle."
+      ],
+      "288": [
+        "Switched to low beams 500 feet before meeting another vehicle or when within 200 feet of the vehicle you are following."
+      ],
+      "289": [
+        "State law requires changes of address to be reported to the Division of Motor Vehicles within 30 days."
+      ],
+      "290": [
+        "Tread depth must be at least 2/32 inch measured in two adjacent treads."
+      ],
+      "291": [
+        "Cracks over five inches or star chips over one inch are mandatory failure items."
+      ],
+      "292": [
+        "There is no charge for an inspection for Delaware residents."
+      ],
+      "293": [
+        "No tinting or sun-screening device may be applied to the front windshield or to the front side windows."
+      ],
+      "294": [
+        "A late fee of $20.00 is assessed for renewal after vehicle registration expiration."
+      ],
+      "295": [
+        "the owner must pay a vehicle document fee of 4. 25 percent of the value of the vehicle but not less than $8. 00"
+      ],
+      "296": [
+        "The title fee is $35. 00 if there is no lien or $55. 00 if there is a lien against the vehicle."
+      ],
+      "297": [
+        "your application for a certificate of title must be signed by your father, mother, guardian, or court-appointed custodian"
+      ],
+      "298": [
+        "You may have your vehicle inspected any time 90 days prior to the expiration date of the registration."
+      ],
+      "299": [
+        "Trailers weighing 4,000 pounds or less do not require re-inspection prior to renewal of the registration."
+      ],
+      "300": [
+        "If you change your address within Delaware, you have thirty (30) days in which to notify both the Vehicle Services and Driver License Sections"
+      ],
+      "301": [
+        "This name change must be completed on your driver license prior to making the change on the title and registration."
+      ],
+      "302": [
+        "Delaware residents who are temporarily residing more than 200 miles out of state may renew their registration by mail."
+      ],
+      "303": [
+        "1996 gas-powered and 1997 disel-powered, and newer vehicles will be tested using the Onboard Diagnostic Test (OBD-II)."
+      ],
+      "304": [
+        "Bumper height on passenger cars must not exceed 22 inches from the ground to the bottom of the bumper."
+      ],
+      "305": [
+        "Delaware residents who are temporarily residing more than 200 miles out of state may renew their registration by mail."
+      ],
+      "306": [
+        "The registration certificate and proof of liability insurance must accompany the motor vehicle whenever it is operated."
+      ],
+      "307": [
+        "must bear the sticker showing year and month of expiration on the lower right corner of the plate."
+      ],
+      "308": [
+        "Your registration expires at midnight on the day of the month indicated on the sticker. There is no grace period."
+      ],
+      "309": [
+        "Motor vehicle laws of Delaware and other states do not give anyone the right-of-way. The law describes who is to yield the right-of-way."
+      ],
+      "310": [
+        "Left turns on red are permissible after full stop from a one-way street to another one-way street unless prohibited by a posted sign"
+      ],
+      "311": [
+        "Flashing red light means the same as a stop sign. You must come to a complete stop. Proceed only when safe."
+      ],
+      "312": [
+        "the approaching driver shall reduce speed and prepare to yield to other vehicles that are in or approaching the intersection."
+      ],
+      "313": [
+        "Turns are permitted in the direction of a flashing red arrow after coming to a full stop."
+      ],
+      "314": [
+        "The movement in the indicated direction is permitted after yielding to opposing traffic and pedestrians."
+      ],
+      "315": [
+        "flashing DON’T WALK signal means that if the pedestrian has started to cross the street, they should finish crossing as rapidly as possible."
+      ],
+      "316": [
+        "communicate pedestrian signal information in non-visual formats such as audible tones, verbal messages, and/or vibrating surfaces."
+      ],
+      "317": [
+        "The HAWK signal is activated when a pedestrian presses the crosswalk button"
+      ],
+      "318": [
+        "They flash more rapidly and in a “stutter” pattern, as opposed to the regular flash rate of most beacons."
+      ],
+      "319": [
+        "The stop sign is the only 8-sided sign you will see on the highway. It’s red with white letters."
+      ],
+      "320": [
+        "you must make a complete stop at the stop line; or, if none, at the crosswalk; or if none, before entering the intersection."
+      ],
+      "321": [
+        "Bicyclists traveling in general travel lanes are to obey the regular circular and arrow traffic signals described in previous sections."
+      ],
+      "322": [
+        "These signs are square, rectangular, or have a special shape and are usually white, red or black with black, red, white or green letters or symbols."
+      ],
+      "323": [
+        "Five-sided sign black on yellow is used only to warn of schools and school crossings.",
+        "New fluorescent yellow-green signs may also be used."
+      ],
+      "324": [
+        "Round sign black on yellow is used as an advance warning that you are approaching a highway–rail intersection."
+      ],
+      "325": [
+        "Roadway slippery when wet. First half hour of rain most hazardous."
+      ],
+      "326": [
+        "Steep hill ahead. Slow down and be ready to shift to lower gear to control speed and save brakes."
+      ],
+      "327": [
+        "Drivers in merging lanes are expected to use both lanes to advance to the lane reduction point and merge at the location, alternating turns."
+      ],
+      "328": [
+        "top quarter carries the legend interstate in white letters on a red background while the bottom three-quarters is blue with the route number in large white letters."
+      ],
+      "329": [
+        "Motorist service signs usually have white letters on a rectangular blue background. (For example: gas, food, lodging.)"
+      ],
+      "330": [
+        "Those supplementing Stop and Do Not Enter signs are red."
+      ],
+      "331": [
+        "Watch for slower speeds limits. Fines for exceeding the speed limit in a work zone are doubled."
+      ],
+      "332": [
+        "Do not weave from lane to lane. Brake gradually to give drivers behind you ample time to slow down."
+      ],
+      "333": [
+        "Added lane, merging not required, watch for other vehicles changing lanes."
+      ],
+      "334": [
+        "When the word “ONLY” is used, you must go in the direction the arrow points; there is no option."
+      ],
+      "335": [
+        "Most signs used in highway and street work areas are orange and diamond shaped."
+      ],
+      "336": [
+        "Drivers are permitted to dial a phone number or to activate/deactivate their wireless equipment, and then they must put the device down."
+      ],
+      "337": [
+        "All cell phone or electronic device use, including hands-free, is prohibited by drivers with a Graduated Driver License (GDL)."
+      ],
+      "338": [
+        "You must signal 300 feet prior to your intended action."
+      ],
+      "339": [
+        "You must always stop before reaching any school bus from either direction when it is stopped to load or unload school children except when you are on the opposite side of a highway having four or more lanes"
+      ],
+      "340": [
+        "every other vehicle shall yield the right-of-way and shall immediately drive to the right-hand edge or curb of the roadway clear of any intersections"
+      ],
+      "341": [
+        "Two-lane Roadway Slow down below the posted speed Limit until you have completely Passed the stopped vehicle(s)."
+      ],
+      "342": [
+        "You must obey the instructions of a police officer even though they may be contrary to laws, signs, signals, and markings"
+      ],
+      "343": [
+        "You must not try to evade a traffic signal or road sign by leaving the road and traveling across private property."
+      ],
+      "344": [
+        "Every grade crossing has an emergency dispatch number for contacting the railroad",
+        "The sign also contains a DOT number that identifies the grade crossing’s physical location"
+      ],
+      "345": [
+        "It is wise not to shift gears when crossing railroad tracks, just in case you might stall."
+      ],
+      "346": [
+        "A round yellow warning sign with an “X” symbol and black “RR” letters is placed along the road before you get to a railroad crossing."
+      ],
+      "347": [
+        "Vehicles being overtaken shall give way to the right and not increase their speed until fully overtaken."
+      ],
+      "348": [
+        "A round yellow warning sign with an “X” symbol and black “RR” letters is placed along the road before you get to a railroad crossing. This is the Advance Warning Sign."
+      ],
+      "349": [
+        "A white, X-shaped sign or “crossbuck” with Railroad Crossing on it is located at the railroad crossing. This sign has the same meaning as a Yield sign."
+      ],
+      "350": [
+        "Double solid white lines prohibit lane-changing."
+      ],
+      "351": [
+        "You may cross a solid yellow line to turn into a driveway, if it is safe to do so."
+      ],
+      "352": [
+        "A steady yellow \"X\" means that the use of the lane is changing and you should move out of it as soon as it is safe to do so."
+      ],
+      "353": [
+        "\"HOV\" stands for \"High Occupancy Vehicles\"",
+        "\"HOV 3\" means there must be at least three people in the vehicle."
+      ],
+      "354": [
+        "Upon approaching the roundabout, stay to the right of the splitter island and slow down to 10-15 mph."
+      ],
+      "355": [
+        "Yield to traffic already in the roundabout.",
+        "Once you’re in the roundabout, do not stop except to avoid a collision; you have the right-of-way over entering traffic."
+      ],
+      "356": [
+        "Within the interchange, traffic briefly drives on the left side of the road to allow left turn movements to occur without crossing oncoming traffic or stopping."
+      ],
+      "357": [
+        "These lanes are marked on each side by a solid yellow and broken yellow lines."
+      ],
+      "358": [
+        "Never back a vehicle in any travel lane except to parallel park, or if necessary to exit a driveway."
+      ],
+      "359": [
+        "On a road with three or more lanes traveling in the same direction, if there is a lot of entering or exiting traffic, use the center travel lane."
+      ],
+      "360": [
+        "You may use the shoulder to pass left-turning vehicles on the right in Delaware; however, other drivers will not expect you to be there so extreme care is required."
+      ],
+      "361": [
+        "If you swing wide, the driver behind you may think you are changing lanes or going to turn left and may try to pass you on the right."
+      ],
+      "362": [
+        "be in the right approach lane if you intend to turn right, be in the left approach lane if you intend on making a left or U-turn, and any approach lane is okay if you are proceeding straight."
+      ],
+      "363": [
+        "the rule “keep to the right” applies in median crossings. Drivers should treat the median the same as a roadway and stay to the right of the opening at all times."
+      ],
+      "364": [
+        "Pedestrians using a guide dog or carrying a white cane have absolute right-of-way. Do not use your horn as it could confuse or frighten the blind pedestrian."
+      ],
+      "365": [
+        "At a 4-way stop, the driver reaching the intersection first, goes first (after coming to a complete stop). If more than one vehicle arrives at the same time, the vehicle on the right goes first."
+      ],
+      "366": [
+        "If you are in an intersection, drive through the intersection before you pull over."
+      ],
+      "367": [
+        "They will be activated approximately 10 seconds prior to the overhead flashing red lights to warn drivers of approaching vehicles that a stop to load or unload school children is about to be made."
+      ],
+      "368": [
+        "be fined not less than $115.00 nor more than $230. 00",
+        "suspend the driver license and/or driving privilege for a period of one month for a first offense"
+      ],
+      "369": [
+        "When parking on a two-way highway you must park parallel to and within 12 inches of the curb or edge of the highway."
+      ],
+      "370": [
+        "Leave it in reverse when parked and headed downhill. This will help prevent a crash if your emergency or parking brake should fail."
+      ],
+      "371": [
+        "At an intersection where there is no stop sign, yield sign, or traffic signal, drivers should yield to vehicles coming from the right."
+      ],
+      "372": [
+        "Drivers may not enter an intersection unless they can get through it without having to stop. You should wait until traffic ahead clears so that you are not blocking the intersection."
+      ],
+      "373": [
+        "It is illegal to drive on a sidewalk except to cross it."
+      ],
+      "374": [
+        "shall be subject to a civil or administrative assessment of $100 for a first offense"
+      ],
+      "375": [
+        "Drivers entering a traffic circle or rotary must yield to drivers already in the circle."
+      ],
+      "376": [
+        "When parking and leaving your vehicle on a highway or street, you must stop the engine, lock the ignition, remove the key, and set the brakes."
+      ],
+      "377": [
+        "When headed uphill, and there is a curb, you must turn your front wheels away from curb and bring near-side front wheel into contact with curb."
+      ],
+      "378": [
+        "School zones* 20 miles per hour"
+      ],
+      "379": [
+        "Route 1 and interstate 495 65 miles per hour"
+      ],
+      "380": [
+        "Advisory speed signs have black letters on a yellow background and often are shown under a warning sign.",
+        "It is the recommended speed for its stretch of highway."
+      ],
+      "381": [
+        "It is illegal to walk along any roadway at night without carrying a light or reflector."
+      ],
+      "382": [
+        "When there is no sidewalk, walk on the shoulder facing oncoming traffic as far away from the road as possible."
+      ],
+      "383": [
+        "Within 30 feet of any flashing beacon, stop sign, or traffic signal."
+      ],
+      "384": [
+        "You must not drive on a Delaware highway at a speed greater than is reasonable under existing conditions."
+      ],
+      "385": [
+        "you must turn on your parking lights (or 4-way flashers when vehicle is so equipped). Turn signal lights shall not be flashed on one side only of a parked vehicle."
+      ],
+      "386": [
+        "You must not pass a vehicle stopped to allow a pedestrian to cross the highway."
+      ],
+      "387": [
+        "Be especially aware of oncoming bicyclists; they may be severely injured by a collision with a car door."
+      ],
+      "388": [
+        "When crossing the roadway where a pedestrian tunnel or overhead crossing is provided."
+      ],
+      "389": [
+        "In fact, cyclists have the right to use all Delaware roads except limited access highways."
+      ],
+      "390": [
+        "This law requires drivers to change lanes (including when there is a double yellow line) when passing bicycles if the travel lanes are too narrow for sharing."
+      ],
+      "391": [
+        "Motorists are forbidden from honking their horn at bicyclists unless there is an imminent danger."
+      ],
+      "392": [
+        "leave a minimum of three feet of clearance at all times between your vehicle and the bicycle."
+      ],
+      "393": [
+        "You are also responsible if your child (under the age of 18) is not wearing a helmet."
+      ],
+      "394": [
+        "white headlight visible for 500 feet, a red rear reflector visible for 600 feet"
+      ],
+      "395": [
+        "You must not wear a headset covering both ears."
+      ],
+      "396": [
+        "You must stop at all stop signs located at intersections with major (3 travel lanes or more) roads"
+      ],
+      "397": [
+        "you may treat the stop sign as a yield sign: After slowing-and yielding the right-of-way... you may cautiously make a turn or proceed through the intersection without stopping."
+      ],
+      "398": [
+        "Motorcycles are only about two feet wide compared with the five- to six-foot width of an automobile."
+      ],
+      "399": [
+        "Most serious and fatal bicycle crashes occur at intersections."
+      ],
+      "400": [
+        "You must yield to pedestrians on a sidewalk and in a crosswalk and give an audible signal before overtaking."
+      ],
+      "401": [
+        "This means riding with motor vehicle traffic, not against it; signaling your intentions clearly"
+      ],
+      "402": [
+        "Following distance behind the motorcyclist should be at a two second count when traveling at speeds under 40 mph"
+      ],
+      "403": [
+        "a four second count for speeds above 40 mph."
+      ],
+      "404": [
+        "Left turns in front of an oncoming motorcyclist account for a large percentage of car/cycle injury-producing crashes."
+      ],
+      "405": [
+        "Turn signals are not automatically self-canceling on most motorcycles."
+      ],
+      "406": [
+        "Never move into the same lane alongside a motorcycle even if the lane is wide and the cyclist is riding far to one side. It is not only illegal, it is extremely hazardous."
+      ],
+      "407": [
+        "Registration and re-registration shall be for three years and cost $5. 00."
+      ],
+      "408": [
+        "have a bell or device capable of giving a signal audible for a distance of at least 100 feet."
+      ],
+      "409": [
+        "Mopeds and tripeds shall not be operated upon interstate and limited access highways"
+      ],
+      "410": [
+        "The applicant must have a description of the OHV (make, year, serial number), and be at least 18 years of age."
+      ],
+      "411": [
+        "All OHVs must have a muffler that reduces the noise level by 60%."
+      ],
+      "412": [
+        "You must not drive a minibike, a go-cart, golf cart, dirtbike, motorized scooter, snowmobile, or other all-terrain vehicles which are not permitted to be registered by the Division upon the highway."
+      ],
+      "413": [
+        "A “Slow-Moving Vehicle” emblem—a triangular, fluorescent and reflective orange sign—is sometimes attached to farm tractors and other slow-moving vehicles to warn approaching drivers."
+      ],
+      "414": [
+        "On a level highway, it takes only three to five seconds longer to pass a truck than a car."
+      ],
+      "415": [
+        "As the rider of any animal or the driver of any animal-drawn vehicle on the highway, you have all the rights and all the duties of the driver of a motor vehicle except where, by their very nature, the laws can have no application."
+      ],
+      "416": [
+        "Be sure to move back only when you can see the front of the truck in your rear-view mirror."
+      ],
+      "417": [
+        "When a truck passes you, you can help the truck driver by keeping to the far side of your lane. You’ll make it easier for the truck driver if you reduce speed slightly."
+      ],
+      "418": [
+        "keep as far as possible to the side to avoid a sideswipe crash and to reduce the wind turbulence between the two vehicles. Remember that the turbulence pushes the vehicles apart."
+      ],
+      "419": [
+        "Allow at least four seconds between your vehicle and the truck, and remember that you too cannot see, and plan ahead if you follow too closely."
+      ],
+      "420": [
+        "Truck drivers sometimes need to swing wide to the left in order to safely negotiate a right turn.",
+        "Cutting in between the commercial vehicle and the curb or shoulder to the right increases the possibility of a crash."
+      ],
+      "421": [
+        "Sixty-six percent of all commercial vehicle crashes are while backing"
+      ],
+      "422": [
+        "Check tire air pressure with an air pressure gauge when the tires are cold."
+      ],
+      "423": [
+        "Stick the penny into the tread “head” first. If the tread does not come at least to Abe’s head, the tire is unsafe"
+      ],
+      "424": [
+        "If the vehicle bounces a lot after a bump or a stop or is hard to control, you may need new shocks or other suspension parts."
+      ],
+      "425": [
+        "The best way to prolong the life of your car and save on fuel is to use it as little as possible."
+      ],
+      "426": [
+        "On a downgrade, the truck’s momentum will cause it to go faster, so you may need to increase your speed."
+      ],
+      "427": [
+        "The No-Zone represents danger areas around trucks where crashes are more likely to occur."
+      ],
+      "428": [
+        "Worn tires can cause “hydroplaning,” and increase the chance of having a flat tire."
+      ],
+      "429": [
+        "helps cool the hot gases coming from running the engine, and moves these gases to the rear of the vehicle."
+      ],
+      "430": [
+        "Gases from a leaky exhaust can cause death inside a vehicle in a very short time."
+      ],
+      "431": [
+        "Only use your horn as a warning to others."
+      ],
+      "432": [
+        "A 20 lb. object at 55 mph has a force of 1,000 lbs. at impact!"
+      ],
+      "433": [
+        "Keep the headlights, backup, brake, and taillights clean. Dirt on the lenses can reduce the light by 50%."
+      ],
+      "434": [
+        "Seating should be positioned approximately 12 inches from the steering wheel."
+      ],
+      "435": [
+        "A good adjustment for the side mirrors is to set them so that when you lean forward slightly, you can see just the side of your vehicle."
+      ],
+      "436": [
+        "Putting the shoulder belt under your arm or behind you can result in serious injury; and, because it is not considered proper safety belt use, could result in a ticket being issued."
+      ],
+      "437": [
+        "While air bags are good protection against hitting the steering wheel, dashboard, or windshield, they do not protect you if you are hit from the side or rear, or if the vehicle rolls over."
+      ],
+      "438": [
+        "Children under age 2 AND 30 pounds to ride in a rear-facing car seat."
+      ],
+      "439": [
+        "The chest clip should be even with the child’s arm pits."
+      ],
+      "440": [
+        "A child under the age of 12 or under 5’5” should not occupy the front passenger seat of a vehicle."
+      ],
+      "441": [
+        "If the vehicle bounces a lot after a bump or a stop or is hard to control, you may need new shocks or other suspension parts."
+      ],
+      "442": [
+        "Once installed, car seats should not move more than one inch side-to-side and front-to-back when checked at the belt path with moderate force."
+      ],
+      "443": [
+        "Never install a rear-facing car seat in front of an active frontal air bag."
+      ],
+      "444": [
+        "Studies have shown that you can cut your chance of dying or being seriously injured in a crash nearly in half by simply wearing your seatbelt."
+      ],
+      "445": [
+        "You should not be able to pinch excess webbing of the harness between your fingers when you try to pinch the harness straps at the child’s collarbone."
+      ],
+      "446": [
+        "The chest clip should be even with the child’s arm pits."
+      ],
+      "447": [
+        "with the windows up and the temperature outside at 94 degrees, the inside of a car could be 122 degrees in just half an hour"
+      ],
+      "448": [
+        "Over half of all traffic deaths happen within 25 miles of home."
+      ],
+      "449": [
+        "Everything in the vehicle that is not fastened down, including the passengers, will effectively slide toward the point of crash, not away from it."
+      ],
+      "450": [
+        "Even at 25 mph, the force of a head-on crash is the same as pedaling a bicycle full-speed into a brick wall or diving off a three-story building onto the sidewalk."
+      ],
+      "451": [
+        "an individual must provide their name, address and an explanation as to why they are driving on the roadway and where they are going."
+      ],
+      "452": [
+        "An individual’s vehicle may be searched on-scene if consent is provided to the officer to do so, if the officer believes they have probable cause to do so, or as part of an inventory assessment of a vehicle that is being towed."
+      ],
+      "453": [
+        "At the end of the detention period, which may not exceed two hours, the person will either be released, or arrested and charged with a crime."
+      ],
+      "454": [
+        "When pulling over for an emergency vehicle, movements should be made to the right side of the roadway, whenever possible."
+      ],
+      "455": [
+        "If you have a weapon(s) in the vehicle, inform the officer upon first contact."
+      ],
+      "456": [
+        "For a vehicle that has an automatic transmission, you must put the shift selector in “park.”"
+      ],
+      "457": [
+        "Both hands should be placed on opposite sides of the steering wheel (e.g., left hand between 8 and 10 o’clock and right hand between 2 and 4 o’clock)."
+      ],
+      "458": [
+        "When turning sharp corners, turn the steering wheel using the “hand-over-hand” technique."
+      ],
+      "459": [
+        "When you complete a turn, straighten out the steering wheel by hand. Letting it slip through your fingers could be dangerous."
+      ],
+      "460": [
+        "When turning sharp corners, turn the steering wheel using the “hand-over-hand” technique."
+      ],
+      "461": [
+        "When you complete a turn, straighten out the steering wheel by hand. Letting it slip through your fingers could be dangerous."
+      ],
+      "462": [
+        "This is especially true when you leave high speed roads and are driving on much slower local roads."
+      ],
+      "463": [
+        "With ABS you should brake as hard as possible and, if necessary, steer to avoid crashing."
+      ],
+      "464": [
+        "Do not drive with head or earphones that cover or go in both ears. This is illegal in Delaware... because it makes it hard to hear emergency horns or sirens."
+      ],
+      "465": [
+        "If you take your eyes off the road to look at something, you could run into a vehicle ahead that has slowed or stopped."
+      ],
+      "466": [
+        "Remaining Calm",
+        "Avoiding Eye Contact with Aggressive Drivers",
+        "report it. CALL 911"
+      ],
+      "467": [
+        "Safer drivers tend to look at least 10 seconds ahead of their vehicle."
+      ],
+      "468": [
+        "On the highway, 10 seconds is about four city blocks or a quarter of a mile."
+      ],
+      "469": [
+        "Drivers who look ahead, can slow down gradually or change lanes and avoid unnecessary braking that leads to lower miles per gallon."
+      ],
+      "470": [
+        "Look across the intersection before you start to move to make sure the path is clear all the way through the intersection, and you will not block it if you have to stop."
+      ],
+      "471": [
+        "Left turns on red are permissible after full stop from a one-way street to another one-way street unless prohibited by a posted sign"
+      ],
+      "472": [
+        "If you were stopped and your view of a cross street is blocked, edge forward slowly until you can see."
+      ],
+      "473": [
+        "Assuming that a train is not coming is one of the leading causes of fatalities at railroad crossings."
+      ],
+      "474": [
+        "At crossings with more than one track, wait until the passing train is well down the track before starting to cross. Another train may be hidden by the one that just passed."
+      ],
+      "475": [
+        "At crossings with more than one track, wait until the passing train is well down the track before starting to cross. Another train may be hidden by the one that just passed."
+      ],
+      "476": [
+        "These areas are called “blind spots” because you cannot see them through your mirrors. You must turn your head and look to see vehicles in your blind spot."
+      ],
+      "477": [
+        "Be sure to check the far lane, if there is one, as someone in that lane may be planning to move into the same lane you want to enter."
+      ],
+      "478": [
+        "Place your right arm on the back of the seat and turn around so that you can look directly through the rear window."
+      ],
+      "479": [
+        "Dim your high beams whenever you come within about a one-block distance of an oncoming vehicle (within 500 feet by Delaware law)."
+      ],
+      "480": [
+        "You must turn on your lights in rain, mist, and snow, and at any time you have your wipers on. It’s the law in Delaware."
+      ],
+      "481": [
+        "If the driver fails to dim the lights, look toward the right side of the road.",
+        "This will keep you from being blinded by the other vehicle’s headlights and allow you to see enough of the edge of the road to stay on course."
+      ],
+      "482": [
+        "Use the low beams in fog or when it is snowing or raining hard.",
+        "Light from high beams will reflect back, causing glare and making it more difficult to see ahead."
+      ],
+      "483": [
+        "Give your horn a light tap: When a person on foot or on a bike appears to be moving into your lane of travel."
+      ],
+      "484": [
+        "When not to use your horn – There are several occasions when you should not use your horn. They include: ... Apprising other drivers of an error."
+      ],
+      "485": [
+        "If you do not have emergency flares or other warning devices, stand by the side of the road where you are safe from traffic and wave traffic around your vehicle.",
+        "Never stand in the roadway."
+      ],
+      "486": [
+        "Lift the hood or tie a white cloth to the antenna, side mirror or door handle to signal an emergency."
+      ],
+      "487": [
+        "Try to avoid driving on either side and slightly to the rear of another vehicle. You will be in their blind spot. Either speed up or drop back so the other driver can see your vehicle more easily."
+      ],
+      "488": [
+        "You must check behind your vehicle whenever you slow down. This is very important when you slow down quickly or at points where a following driver would not expect you to slow down"
+      ],
+      "489": [
+        "When driving away from a rising or setting sun, turn on your headlights. Drivers coming towards you may have trouble seeing your vehicle."
+      ],
+      "490": [
+        "Never stay alongside a large vehicle such as a truck or bus. These vehicles have large blind spots, and it’s hard for drivers of large vehicles to see you."
+      ],
+      "491": [
+        "Delaware law states you must signal for at least 300 feet before turning."
+      ],
+      "492": [
+        "If there are streets, driveways, or entrances between you and where you want to turn, wait until you have passed them to signal."
+      ],
+      "493": [
+        "tap your brake pedal three or four times quickly to let those behind you know you are about to slow down."
+      ],
+      "494": [
+        "stopping at 60 mph does not take twice the distance it takes at 30 mph, but over three times the distance."
+      ],
+      "495": [
+        "Always slow down before you enter the curve so you do not have to brake in the curve."
+      ],
+      "496": [
+        "On a wet road you should reduce your speed about 10 mph."
+      ],
+      "497": [
+        "On packed snow you should cut your speed in half."
+      ],
+      "498": [
+        "The pavement on bridges can be icy even when other pavement is not. This is because bridges can be colder than other roadways."
+      ],
+      "499": [
+        "When the temperature is around the freezing point, ice can become wet. This makes conditions more slippery than at temperatures well below freezing."
+      ],
+      "500": [
+        "In a heavy rain, your tires can lose all traction with the road at about 50 mph."
+      ],
+      "501": [
+        "Ease your foot off the gas pedal.",
+        "Keep the steering wheel straight."
+      ],
+      "502": [
+        "Use the ramp to reach the speed of other vehicles before you pull onto the road.",
+        "Do not drive to the end of the ramp and stop or you will not have enough room to get up to the speed of traffic."
+      ],
+      "503": [
+        "If the road you are traveling has exit ramps, do not slow down until you move onto the exit ramp."
+      ],
+      "504": [
+        "Farm tractors, animal-drawn vehicles, and roadway maintenance vehicles usually go 25 mph or less.",
+        "should have a slow-moving vehicle decal (an orange triangle) on the back."
+      ],
+      "505": [
+        "Farm tractors, animal-drawn vehicles, and roadway maintenance vehicles usually go 25 mph or less",
+        "should have a slow-moving vehicle decal (an orange triangle) on the back."
+      ],
+      "506": [
+        "Per mile driven, the fatal crash rate at night throughout the nation is two-and-one-half times as high as during the day."
+      ],
+      "507": [
+        "When passing vehicles, do not stare at their headlights.",
+        "Use quick glances to: Learn lane position of oncoming vehicles. Learn your own position. Be certain of the right edge of road."
+      ],
+      "508": [
+        "When their turn signal is flashing, don’t assume that they will make a turn.",
+        "Plan ahead and decide what to do if they don’t turn as well as if they do turn."
+      ],
+      "509": [
+        "At 50 mph, it can take about 400 feet to react to something you see and bring your vehicle to a stop."
+      ],
+      "510": [
+        "At 30 mph, it can take about 200 feet to stop. That is almost half a city block in length."
+      ],
+      "511": [
+        "Your headlights will let you see about 350 feet ahead."
+      ],
+      "512": [
+        "In a very heavy rain, snowstorm, or thick fog, you may not be able to see much more than 200 feet ahead.",
+        "When you cannot see any farther than that, you cannot safely drive faster than 30 mph."
+      ],
+      "513": [
+        "To tell if you are driving too fast for conditions, use the “Four-Second Sight Distance Rule.”",
+        "If you reach the object before you finish saying “four-one-thousand,” you need to slow down."
+      ],
+      "514": [
+        "Remember, speed limits are posted for ideal conditions.",
+        "If the road is wet or icy, if you cannot see well, or if traffic is heavy, then you must slow down.",
+        "you can get a ticket for traveling too fast during unsafe conditions."
+      ],
+      "515": [
+        "It is called the “three-second rule,” and it works at any speed."
+      ],
+      "516": [
+        "When following motorcycles – If the motorcycle should fall over, you need extra distance to avoid hitting the rider."
+      ],
+      "517": [
+        "The drivers of trucks, buses, vans or vehicles pulling campers or trailers may not be able to see you when you are directly behind them.",
+        "Large vehicles also block your view of the road ahead."
+      ],
+      "518": [
+        "You should constantly be thinking of an “escape route” as you drive.",
+        "Then, if a sudden emergency arises, you will have a plan of action ready."
+      ],
+      "519": [
+        "Toll plazas – Vehicles are changing lanes and preparing to stop and then speeding up again when leaving the plaza."
+      ],
+      "520": [
+        "If there is no right lane, wait until the road ahead is clear then reduce speed slowly.",
+        "This will encourage the tailgater to drive around you."
+      ],
+      "521": [
+        "Leave extra space when stopped on a hill or incline. The vehicle ahead may roll back when it starts up or takes off."
+      ],
+      "522": [
+        "the law requires motorists to leave a minimum of three feet of clearance at all times",
+        "Motorists must give bicyclists at least three (3) feet of room when passing."
+      ],
+      "523": [
+        "Anytime you want to merge with other traffic, you need a gap of about four seconds.",
+        "You need a four-second gap whenever you change lanes, enter a roadway"
+      ],
+      "524": [
+        "If you want to cross several lanes, take them one at a time.",
+        "Like going up or down stairs one step at a time, it is safest and easiest to merge one lane at a time."
+      ],
+      "525": [
+        "Even if you have the green light, do not start across the intersection if there are vehicles blocking your way.",
+        "You can get a ticket for blocking an intersection."
+      ],
+      "526": [
+        "At a speed of 55 mph, you need about 10 seconds to pass.",
+        "That means you need a 10-second gap in oncoming traffic and sight distance to pass."
+      ],
+      "527": [
+        "When you can see both headlights of the vehicle you just passed in your rearview mirror, it is safe to return to the driving lane."
+      ],
+      "528": [
+        "This is particularly true of motorcycles as their signals often do not cancel by themselves.",
+        "Turn signals are not automatically self-canceling on most motorcycles."
+      ],
+      "529": [
+        "if you are overtaking a bicycle and an oncoming vehicle is approaching, slow down and let the vehicle pass first so that you can give extra room to the bicycle."
+      ],
+      "530": [
+        "Leave extra room for vehicles required to come to a stop at railroad crossings, including transit buses, school buses, or vehicles carrying hazardous materials."
+      ],
+      "531": [
+        "Stopping halfway across is only safe when there is a median divider large enough for your vehicle."
+      ],
+      "532": [
+        "if one hazard is more dangerous than the other, leave a little more space on the dangerous side."
+      ],
+      "533": [
+        "you should not start to pass if you are within one-third of a mile of a hill or curve."
+      ],
+      "534": [
+        "you must have at least 20/40 vision in at least one eye, with or without corrective lenses."
+      ],
+      "535": [
+        "Those with 20/50 vision are restricted to daylight driving only."
+      ],
+      "536": [
+        "Avoid using dark glasses or tinted contact lenses at night",
+        "They can cut down the light that you need to see clearly."
+      ],
+      "537": [
+        "driving records of hearing-impaired drivers are just as good as those drivers with good hearing."
+      ],
+      "538": [
+        "Eat lightly. Do not eat a large meal before you leave. Some people get sleepy after they eat a big meal."
+      ],
+      "539": [
+        "Take breaks. Stop every hour or so or when you need to."
+      ],
+      "540": [
+        "Nationally, alcohol is involved in about 28% of the traffic crashes in which someone is killed."
+      ],
+      "541": [
+        "New drivers are more affected by alcohol than experienced drivers because they are still learning to drive."
+      ],
+      "542": [
+        "you must furnish the division with a written certification by your licensed practitioner that such person’s physical disability is under sufficient control to permit you to drive a motor vehicle safely."
+      ],
+      "543": [
+        "Diabetics who take insulin should not drive when there is any chance of an insulin reaction, blackout, convulsion, or shock."
+      ],
+      "544": [
+        "If you are angry or excited, give yourself time to cool off. If necessary take a short walk, but stay off the road until you have calmed down."
+      ],
+      "545": [
+        "If another driver makes a mistake, do not make it worse. For example, drivers who pass you when they do not have enough room. Slow down and let them return to the drive lane safely."
+      ],
+      "546": [
+        "Drivers looking for street signs or house numbers."
+      ],
+      "547": [
+        "If your driver license says you must wear corrective lenses and you do not and you happen to be stopped, you could get a ticket."
+      ],
+      "548": [
+        "If you are worried, feeling down, or are upset about something, try to keep your mind on your driving. Some have found listening to the radio helps."
+      ],
+      "549": [
+        "Never turn your vehicle’s ignition to the “lock” position while it is still in motion. This will cause the steering to lock if you try to turn the steering wheel, and you will lose control of your vehicle."
+      ],
+      "550": [
+        "Pump the brake pedal several times. This will often build up enough brake pressure to allow you to stop."
+      ],
+      "551": [
+        "To dry brakes, put your car in low gear, drive slowly, and tap/apply brakes lightly."
+      ],
+      "552": [
+        "Don’t try to get back onto the pavement until you have your vehicle under control, your speed is reduced to 15 mph or less"
+      ],
+      "553": [
+        "Quickly shift to neutral.",
+        "Pull off the road when safe to do so.",
+        "Turn off the engine."
+      ],
+      "554": [
+        "Do not use water – burning gas will float on it and spread the fire."
+      ],
+      "555": [
+        "run in the general direction the train is coming from, so that debris from the collision will not hit you."
+      ],
+      "556": [
+        "In avoiding a collision, drivers have three options: stop, turn, or speed up."
+      ],
+      "557": [
+        "You should step on the brake pedal, then let up and turn the steering wheel."
+      ],
+      "558": [
+        "Skids are caused by drivers traveling too fast for conditions."
+      ],
+      "559": [
+        "Stay off the brake. Until the vehicle slows, your brakes will not work and could cause you to skid more."
+      ],
+      "560": [
+        "it is important to try to have a “glancing blow” rather than being struck head on. This means that if a collision is going to happen, you should try to turn the vehicle."
+      ],
+      "561": [
+        "If you are involved in a crash with a parked vehicle, you must try to locate the owner."
+      ],
+      "562": [
+        "If a fire gets out of control, move at least 100 feet away from the vehicle as the gas tank may explode."
+      ],
+      "563": [
+        "It is a crime for you to leave a crash site where your vehicle was involved if there is an injury or death before police have talked to you and gotten all the information they need"
+      ],
+      "564": [
+        "Do not move the injured unless they are in a burning vehicle or in other immediate danger of being hit by another vehicle."
+      ],
+      "565": [
+        "If there is bleeding, apply pressure directly on the wound with your hand or with a cloth."
+      ],
+      "566": [
+        "To help prevent an injured person from going into shock, cover them with a blanket or coat to keep them warm."
+      ],
+      "567": [
+        "Turn off the ignition of wrecked vehicles. Do not smoke around wrecked vehicles. Fuel could have spilled and fire is a real danger."
+      ],
+      "568": [
+        "The driver of any vehicle involved in a crash shall immediately report such crash to the police agency... When the crash results in injury or death to any person."
+      ],
+      "569": [
+        "When the crash occurs on a public highway, and it results in property damage to an apparent extent of $500. 00 or more."
+      ],
+      "570": [
+        "When it appears that a crash involves a driver whose physical ability has been impaired as a result of alcohol or drug use, and it results in property damage to an apparent extent of $1,000. 00 or more."
+      ],
+      "571": [
+        "the driver of the vehicle must make every reasonable effort to move the vehicle or have it moved so as not to obstruct the regular flow of traffic more than necessary."
+      ],
+      "572": [
+        "the driver shall provide their name, address, vehicle registration number, driver license number, and insurance company and the policy number."
+      ],
+      "573": [
+        "Never drive to the scene of a crash, fire, or other disaster just to look. You may block the way for police, firefighters, ambulances, tow trucks, and other rescue vehicles."
+      ],
+      "574": [
+        "If there are power lines down with wires in the road, do not go near them."
+      ],
+      "575": [
+        "please directly contact the DelDOT Transportation Management Center (operating 24/7/365) at 302-659-4600"
+      ],
+      "576": [
+        "It is called the “three-second rule,” and it works at any speed.",
+        "use the “Four-Second Sight Distance Rule.”"
+      ],
+      "577": [
+        "“HOV” stands for “High Occupancy Vehicles” and indicates lanes reserved for vehicles with more than one person in them."
+      ],
+      "578": [
+        "Emergency Notification System (ENS). Every grade crossing has an emergency dispatch number for contacting the railroad"
+      ],
+      "579": [
+        "Ignition Interlock Device (IID) Endorsement/License",
+        "Ignition Interlock Device Program (IID)"
+      ],
+      "580": [
+        "Ignition Interlock Device (IID) Program for First Offense Election (FOE)."
+      ],
+      "581": [
+        "Required Equipment",
+        "Additional Equipment",
+        "Prohibited Equipment"
+      ],
+      "582": [
+        "Rain, Fog, Or Snow",
+        "Driving in Fog, Rain, or Snow"
+      ],
+      "583": [
+        "Requirements For First Time Applicants Over Age 18",
+        "Temporary Instruction Permit (Learner’s Permit)"
+      ],
+      "584": [
+        "Conditional, Occupational, And Hardship Licenses"
+      ],
+      "585": [
+        "THE DRIVER EXAMINATION",
+        "Vision Screening",
+        "Each driver must pass an eye-screening examination."
+      ],
+      "586": [
+        "Good Samaritan's Law",
+        "Delaware’s Good Samaritan Laws protect individuals who request medical assistance"
+      ],
+      "587": [
+        "Habitual Offender Revocation",
+        "the driver may be declared a habitual offender"
+      ],
+      "588": [
+        "Implied Consent Law",
+        "deemed to have given consent to submit to a chemical test"
+      ],
+      "589": [
+        "Farm Tractors And Equipment, Road Machinery, and Construction Equipment",
+        "sharing the road with 'Farm Equipment'"
+      ],
+      "590": [
+        "Ignition Interlock Device (IID) Program",
+        "Ignition Interlock Device (IID) Endorsement/License"
+      ],
+      "591": [
+        "Taxi/Limo Endorsement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39"
+      ],
+      "592": [
+        "TAT- Human Trafficking. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35"
+      ],
+      "593": [
+        "Change Of Address. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 66"
+      ],
+      "594": [
+        "Rectangular Rapid Flashing Beacon. . . . . . . . . . . . . . . . . . . . . . . . . . . . 71"
+      ],
+      "595": [
+        "Overtaking (Passing) Other Vehicles . . . . . . . . . . . . . . . . . . . . . . . . . . 79"
+      ],
+      "596": [
+        "Next Of Kin Registry . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34"
+      ],
+      "597": [
+        "Red Light Reinforcement Program. . . . . . . . . . . . . . . . . . . . . . . . . . . . 67"
+      ],
+      "598": [
+        "Studded Tires. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61"
+      ],
+      "599": [
+        "Steering Wheel Locking Device . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 134"
+      ],
+      "600": [
+        "Selective Service System Registration. . . . . . . . . . . . . . . . . . . . . . . . . . 34"
+      ],
+      "601": [
+        "TEEN DRIVER WEB PAGE . . . . . . . . . . WWW.TEENDRIVING.DMV.DE.GOV",
+        "We have a teen driver website, www.teendriving.dmv. de.gov"
+      ],
+      "602": [
+        "Zero Tolerance Law. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 53",
+        "Zero Tolerance Law\nThe law states that anyone under the age of 21 years... shall have their driver license revoked"
+      ],
+      "603": [
+        "Work Zones. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76-77",
+        "WORK ZONES . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76"
+      ],
+      "604": [
+        "SENIOR DRIVER WEB PAGE. . . . . . . . . WWW.SENIORDRIVER.DMV.DE.GOV",
+        "senior driver website, www.seniordriver.dmv.de.gov"
+      ],
+      "605": [
+        "Wet Pavement. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 121-122",
+        "Adjusting To Road Conditions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 121"
+      ],
+      "606": [
+        "Vehicle Registration. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 62-63",
+        "Step 1 – Liability Insurance, Financial Responsibility And Penalty . . . . . . . . . . . . . . 62"
+      ],
+      "607": [
+        "Vision Screening. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39",
+        "Vision Screening. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39"
+      ],
+      "608": [
+        "DMV WEB PAGE . . . . . . . . . . . . . . . . . . . . . . . . . . . WWW.DMV.DE.GOV",
+        "The DMV provides a variety of information and on-line services on our website at dmv.de.gov"
+      ],
+      "609": [
+        "Traffic Control Laws. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 81-88",
+        "TRAFFIC CONTROL LAWS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 81"
+      ],
+      "610": [
+        "Tripeds (and Mopeds). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 99",
+        "Mopeds And Tripeds. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 99"
+      ],
+      "611": [
+        "Two-Way Cycle Track. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 28,
-    "topics_covered": 28,
-    "coverage_pct": 100.0,
-    "uncovered_topics": [],
+    "topics_total": 25,
+    "topics_covered": 22,
+    "coverage_pct": 88.0,
+    "uncovered_topics": [
+      "Definition of an individualized education program",
+      "Definition of an intersection",
+      "Definition of a motor vehicle"
+    ],
     "verdict": "PASS",
-    "grade": "A"
+    "grade": "B"
   },
   "coverage": {
     "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
@@ -63,6 +2036,20 @@
     "sign_ratio_pct": 5.2,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 615,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 99.7,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "ut",
   "name": "Utah",
-  "verified_at": "2026-05-26T02:33:59Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:20:43Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://dld.utah.gov/wp-content/uploads/Driver-Handbook-REV-3.2026.pdf",
     "manual_pdf_sha256": "a0ee4daccde8eb7ba959960a34e25bc9ff4630390805d10993c1ca3011389c46",
@@ -23,26 +23,1285 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 393,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "A bicycle operator must obey the rules of the road and have the same rights and duties as the operator of a motor vehicle or other vehicle."
+      ],
+      "2": [
+        "Our friends at the DMV (Department of Motor Vehicles, under the Utah State Tax Commission) can assist you at 801.297.7780 or dmv.utah.gov with all of your vehicle (e.g., plate and title) needs."
+      ],
+      "3": [
+        "The court will waive the fine if the person obtains a motorcycle endorsement within in 30 days."
+      ],
+      "4": [
+        "Allows an individual with a learner permit younger than 18 years old to drive with an adult other than a parent; if the parent or legal guardian is not a licensed driver."
+      ],
+      "5": [
+        "A person convicted of DUI, the court may designate as an interdicted person who will be prohibited from purchasing alcohol for a certain time period."
+      ],
+      "6": [
+        "An interdicted DL/IDC will have a red banner at the top of the card stating “NO ALCOHOL SALE.”"
+      ],
+      "7": [
+        "Requires DLD to suspend an individual’s motorcycle endorsement or driver license based on conviction of certain violations.",
+        "Performing a wheelie; or",
+        "Lane splitting."
+      ],
+      "8": [
+        "December 2018, Utah is the first state in the country to have a blood alcohol concentrate of .05."
+      ],
+      "9": [
+        "January 2020, driver license renewals extend from a 5-year renewal to an 8-year renewal."
+      ],
+      "10": [
+        "In 2016, the Driver License Division stopped conducting driving skills test on an enclosed range. All driving skills tests are performed on public roads."
+      ],
+      "11": [
+        "THE TOP FIVE LEADING CAUSES OF ALL CRASHES ON UTAH HIGHWAYS",
+        "1. Failed to Keep in Proper Lane 28%"
+      ],
+      "12": [
+        "THE TOP FIVE LEADING CAUSE OF CRASHES ON UTAH HIGHWAYS (TEENAGERS 15-19)",
+        "2. Disregard Traffic Signal 14%"
+      ],
+      "13": [
+        "THE TOP FIVE LEADING CAUSE OF CRASHES ON UTAH HIGHWAYS (Age 65+)",
+        "1. Failed to Yield Right-of-Way 21%"
+      ],
+      "14": [
+        "The first license in Utah was issued on December 5, 1933. It cost 25¢ and was good until revoked."
+      ],
+      "15": [
+        "Appointments should be scheduled for all services to reduce your wait time.",
+        "Visit our website at dld.utah.gov to schedule your appointment today!"
+      ],
+      "16": [
+        "Section 7. Preparing Your Vehicle",
+        "A. Adjusting Your Seat",
+        "B. Adjusting Your Mirrors"
+      ],
+      "17": [
+        "Section 8. Basic Driving",
+        "B. Backing (Reverse)"
+      ],
+      "18": [
+        "Section 9. Rules of the Road",
+        "H. Traffic Signals",
+        "I. Traffic Signs"
+      ],
+      "19": [
+        "Section 10. Alcohol/Drugs and Driving",
+        "E. Boating While Under the Influence"
+      ],
+      "20": [
+        "Section 11. Distractions and Driving Challenges",
+        "F. Handheld Wireless Communication"
+      ],
+      "21": [
+        "Section 11. Distractions and Driving Challenges",
+        "N. Vehicle Submerged Underwater................................................61"
+      ],
+      "22": [
+        "Section 12. Crashes and Insurance",
+        "C. Financial Responsibility Act.......................................................67",
+        "D. Insurance Coverage..................................................................68"
+      ],
+      "23": [
+        "Section 13. Suspensions and Your Record",
+        "F. Point System..............................................................................72"
+      ],
+      "24": [
+        "Section 14. Sharing the Road",
+        "C. Large Trucks..............................................................................78"
+      ],
+      "25": [
+        "Section 6. Examinations",
+        "B. Traffic Safety and Trends Exam.................................................................22"
+      ],
+      "26": [
+        "Section 4. Driver License Types, ID Card, Required Documentation",
+        "F. Out-of-State Driver License........................................................17"
+      ],
+      "27": [
+        "Section 9. Rules of the Road",
+        "B. Freeway Driving.........................................................................39",
+        "F. Roundabouts..............................................................................45"
+      ],
+      "28": [
+        "Section 13. Suspensions and Your Record",
+        "A. Altered or Fictitious License.......................................................70"
+      ],
+      "29": [
+        "Section 14. Sharing the Road",
+        "Section 11. Distractions and Driving Challenges",
+        "A. Aggressive Driving.....................................................................55"
+      ],
+      "30": [
+        "Section 10. Alcohol/Drugs and Driving",
+        "F. Ignition Interlock Restricted Driver.............................................53"
+      ],
+      "31": [
+        "commits a moving traffic violation while being distracted by one or more activities taking place within the vehicle that are not related to the operation of a motor vehicle, including searching for an item"
+      ],
+      "32": [
+        "Wheels are not less than 14 inches in diameter."
+      ],
+      "33": [
+        "allows the holder to drive a vehicle with a GVWR of 26,001 lbs. or more"
+      ],
+      "34": [
+        "the evidence of the privilege to drive a motor vehicle in Utah obtained without providing proof of lawful presence in the United States."
+      ],
+      "35": [
+        "designed to be operated at speeds of not more than 25 miles per hour"
+      ],
+      "36": [
+        "Provisional License—a Utah license issued to any person under 21 years of age."
+      ],
+      "37": [
+        "Roundabout—a traffic roundabout is a circular intersection that flows counterclockwise."
+      ],
+      "38": [
+        "Suspension—temporary withdrawal of the privilege to drive."
+      ],
+      "39": [
+        "Dependent—a spouse and any unmarried children under the age of 21."
+      ],
+      "40": [
+        "be capable of exceeding 30 m.p.h."
+      ],
+      "41": [
+        "Head Checks—checking your blind spot by turning your head and looking over your shoulder in the direction you plan on moving."
+      ],
+      "42": [
+        "Limited-Term Driver License—the evidence of the privilege to drive a motor vehicle which was obtained by providing proof of lawful presence in the United States by an individual who is not a U.S. Citizen"
+      ],
+      "43": [
+        "Motor Vehicle—every self-propelled vehicle, except motorized wheelchairs, electric personal assistive mobility devices and vehicles moved solely by human power."
+      ],
+      "44": [
+        "Private Passenger Carrier—any motor vehicle for hire designed to transport 15 or fewer passengers, including the driver"
+      ],
+      "45": [
+        "Temporary Driver License—a temporary license allowing driving privileges up to six months, not available for driving privilege card (DPC) holders."
+      ],
+      "46": [
+        "Traffic Check—a defensive driving scan for other traffic, pedestrians, or any other obstacles you may encounter while driving."
+      ],
+      "47": [
+        "Visitors with a valid out-of-state or out-of-country driver license may drive in Utah for up to six months."
+      ],
+      "48": [
+        "Obtain privileges not extended to non-residents, including school tuition."
+      ],
+      "49": [
+        "6 hours behind the wheel instruction; and"
+      ],
+      "50": [
+        "applicants may complete an approved driver education course and waive the 90-day learner permit requirement."
+      ],
+      "51": [
+        "The written knowledge test scores for an entry-level learner permit are valid for 18 months."
+      ],
+      "52": [
+        "If you have a driver license (not permit) 12 am - 5 am"
+      ],
+      "53": [
+        "immediate family members only in vehicle until six months from issue date"
+      ],
+      "54": [
+        "Persons are not required to obtain a driver license to drive road rollers, road machinery, or farm tractors on Utah highways if the person is driving the vehicle in conjunction with a construction or agricultural activity."
+      ],
+      "55": [
+        "Administrative fee for alcohol/drug reinstatement $255.00"
+      ],
+      "56": [
+        "Member jurisdictions exchange driver records and forward convictions for traffic offenses to the driver’s home state."
+      ],
+      "57": [
+        "Out-of-state online or home study course certificates will not be accepted."
+      ],
+      "58": [
+        "A student must also complete 40 hours of driving (10 hours after sunset) with a parent or legal guardian."
+      ],
+      "59": [
+        "You have reached a minimum age of 15."
+      ],
+      "60": [
+        "By law, you may not possess more than one REAL ID-compliant certificate at a time (e.g., a Utah driver license and a Colorado ID.)"
+      ],
+      "61": [
+        "Regular Class D License (21 & over) $52.00",
+        "Renewal $52.00",
+        "Renewal (65+) $27.00"
+      ],
+      "62": [
+        "This driver license allows you to drive all personal vehicles (up to 26,000 pounds.)"
+      ],
+      "63": [
+        "Applicants younger than the age of 21 are issued a provisional Class D regular driver license for the purpose of using a separate point system."
+      ],
+      "64": [
+        "The DPC expires each year on the applicant’s birthday."
+      ],
+      "65": [
+        "Class C... Placarded amounts of hazardous materials... Minimuim age requirement: 21 years of age"
+      ],
+      "66": [
+        "Z - Taxicab"
+      ],
+      "67": [
+        "B - Driver must wear corrective lenses"
+      ],
+      "68": [
+        "G - Restricted to driving during daylight hours only"
+      ],
+      "69": [
+        "hospital-issued, miniature, laminated, or photocopied certificates are not acceptable."
+      ],
+      "70": [
+        "If the bank returns your check, you must pay a $20 service charge to keep your driving privilege."
+      ],
+      "71": [
+        "Driving skills tests will not be provided when conditions exist that could create unsafe driving.",
+        "Those conditions include inclement weather and vehicles that are not registered or are unsafe (i.e., broken windshield or no safety belts.)"
+      ],
+      "72": [
+        "Two acceptable documents as evidence of your Utah residence address."
+      ],
+      "73": [
+        "Any name variation from your identity document must be accompanied by legal authorizing documentation.",
+        "These include state-certified marriage certificate, divorce decree, updated passport, amended birth certificate, adoption paperwork, citizenship/naturalization certificate, or court documents indicating the name change sealed by the court."
+      ],
+      "74": [
+        "The DPC may be used for driving purposes only; it is not valid identification or age verification."
+      ],
+      "75": [
+        "If you have a change of address, you are required by law to notify the division of the new address within 10 DAYS of moving."
+      ],
+      "76": [
+        "Drivers with an out-of-state learner permit may NOT drive in Utah."
+      ],
+      "77": [
+        "The driver license will expire on the applicant’s birthday eight years after issue when over 21."
+      ],
+      "78": [
+        "Provisional licenses (licenses issued to an applicant under 21 years of age) will expire on the applicant’s birthday five years after issue."
+      ],
+      "79": [
+        "Utah residency and mailing address verification (must provide two), and it must display your name; address, and be dated within 90 days:"
+      ],
+      "80": [
+        "Utah residency and mailing address verification (must provide two), and it must display your name; address, and be dated within 90 days:"
+      ],
+      "81": [
+        "Fingerprint card and photo (additional fee required.) It must be obtained and placed in a sealed envelope at the Bureau of Criminal Identification (BCI)",
+        "It is only required for an original application."
+      ],
+      "82": [
+        "If you have NOT received more than six reportable violations in the past eight years, and your driver license status is currently valid, you are eligible for Utah’s good driver program."
+      ],
+      "83": [
+        "Utah law does NOT allow an individual to have a driver license certificate and an identification card at the same time."
+      ],
+      "84": [
+        "Evidence of completion of a course in driver education if under the age of 19"
+      ],
+      "85": [
+        "Military personnel and dependents who reside with them who had a valid Utah driver license at the time of entry into the service may continue to use that driver license up to 90 days after discharge"
+      ],
+      "86": [
+        "The expiration date of a replacement driver license will be the same date as the license it replaces."
+      ],
+      "87": [
+        "small laminated birth certificates or hospital certificates are not accepted."
+      ],
+      "88": [
+        "You may renew your driver license up to six months before the expiration of the license."
+      ],
+      "89": [
+        "The division requires 20/40 vision and peripheral fields (side vision) of 90° in at least one eye to pass the vision test."
+      ],
+      "90": [
+        "Everyone age 65 and older is required to pass a vision test with every license application."
+      ],
+      "91": [
+        "If a person has a health condition that may affect their ability to drive a vehicle safely, they are responsible for reporting it to the Driver License Division"
+      ],
+      "92": [
+        "A physician does not have the authority to restrict anyone’s driving but is responsible for reporting accurately about a patient’s health status."
+      ],
+      "93": [
+        "Tending to be excessively confused or frustrated when traffic becomes heavy."
+      ],
+      "94": [
+        "Only when the division determines that a driver cannot operate a vehicle safely under any conditions is the driver license withdrawn."
+      ],
+      "95": [
+        "you must pass with a score of 80% or better."
+      ],
+      "96": [
+        "The fee allows for not more than three attempts to pass the written knowledge test within 12 months."
+      ],
+      "97": [
+        "All first-time driver license applicants will be required to pass an additional test and receive 100%"
+      ],
+      "98": [
+        "50% of the questions will relate to significant causes of traffic-related deaths as identified in statistics published by the Utah Highway Safety Office."
+      ],
+      "99": [
+        "Be at least 16 years of age to take a driving skills test at the DLD."
+      ],
+      "100": [
+        "Be at least 15 years of age to take a driving skills test with a Third-Party Tester or high school."
+      ],
+      "101": [
+        "The applicant and the examiner are the only occupants allowed in the vehicle during the driving skills test."
+      ],
+      "102": [
+        "The vehicle may be rejected if its condition could cause harm to the examiner’s person or clothes."
+      ],
+      "103": [
+        "The failure to pass the driving skills test in three attempts will result in paying another fee."
+      ],
+      "104": [
+        "All tests must be completed within six months from the day you pay your fee."
+      ],
+      "105": [
+        "Valid driver license of the person who is at least 21 years of age or a parent, guardian or spouse who is at least 18 years of age, accompanying you"
+      ],
+      "106": [
+        "A driver’s side window that rolls down."
+      ],
+      "107": [
+        "If you put the vehicle over sidewalks or curbs unnecessarily."
+      ],
+      "108": [
+        "Follow at a safe distance. Use the two-second rule."
+      ],
+      "109": [
+        "You should leave 10 inches between your chest and the steering wheel."
+      ],
+      "110": [
+        "The top of the steering wheel should be no higher than your shoulders. It should be below chin level."
+      ],
+      "111": [
+        "To set the left side mirror, rest your head against the closed left window."
+      ],
+      "112": [
+        "the lap belt should fit across the hips, not your stomach."
+      ],
+      "113": [
+        "children ages eight and younger must be properly restrained in a car or booster seat."
+      ],
+      "114": [
+        "Your chances of being killed are 23 times greater if you are thrown from a car."
+      ],
+      "115": [
+        "If your view is blocked at a crosswalk, move forward carefully and look both ways before entering the intersection."
+      ],
+      "116": [
+        "Third-party testers are certified and licensed as commercial driver education instructors by the division and can administer the driving skills test."
+      ],
+      "117": [
+        "if you weigh 150 pounds and crash while traveling 30 mph, there would be 4,500 pounds of force on your body."
+      ],
+      "118": [
+        "The fine may be waived upon completing an online, 30-minute safety belt safety course."
+      ],
+      "119": [
+        "Children must be rear-facing in the back seat until at least two years of age and 30 pounds or longer if the car seat allows."
+      ],
+      "120": [
+        "All children aged eight and under must be properly secured in an approved child safety seat unless they are 57 inches tall."
+      ],
+      "121": [
+        "It is an infraction to be stopped for smoking in a vehicle while transporting children 15 years of age or younger."
+      ],
+      "122": [
+        "To do its important job, an air bag comes out of the dashboard at up to 200 mph—faster than the blink of an eye."
+      ],
+      "123": [
+        "It is a Class B misdemeanor if you remove, fail to have repaired, or modify your vehicle’s air bag passive restraint system to render the air bag inoperable."
+      ],
+      "124": [
+        "Put your right arm on the back of the seat and look through the rear window."
+      ],
+      "125": [
+        "Signal for at least two seconds in the direction you intend to move."
+      ],
+      "126": [
+        "vehicle should finish a left turn in the left-most lane, the one directly to the right of the centerline"
+      ],
+      "127": [
+        "The gore area is between the solid white lines of a lane of traffic and a lane used to either enter or exit from that traffic lane."
+      ],
+      "128": [
+        "Use both lanes of traffic until the vehicles reach the merge point, and once the vehicles reach the merge point, alternate, yielding the right-of-way into the single-traffic lane."
+      ],
+      "129": [
+        "When stopping behind another vehicle, ensure you can see the rear wheels of the vehicle in front of you."
+      ],
+      "130": [
+        "Infants should never ride in the front seat of a vehicle with a passenger-side air bag.",
+        "Children twelve and under should ride buckled up in a rear seat"
+      ],
+      "131": [
+        "If parking next to a curb, the back wheel of your car must be no further than 12 inches away from the curb."
+      ],
+      "132": [
+        "Within 15 feet of a fire hydrant."
+      ],
+      "133": [
+        "Turn your wheel away from the curb while ensuring vehicle’s front tire touches the curb to secure the vehicle’s position."
+      ],
+      "134": [
+        "without a curb turn the wheel to the right."
+      ],
+      "135": [
+        "Wait until you can see the passed vehicles in your rearview mirror."
+      ],
+      "136": [
+        "Return to the right-hand lane no less than 200 feet from oncoming vehicles."
+      ],
+      "137": [
+        "If three or more snowplows operate in echelon formation, an individual operating a vehicle may not pass or overtake the snowplows on either side."
+      ],
+      "138": [
+        "For two seconds before turning.",
+        "For two seconds before beginning any lane change."
+      ],
+      "139": [
+        "Use hand-over-hand steering when steering is critical, such as when parking, performing sharp right turns, or correcting a skid."
+      ],
+      "140": [
+        "Keep your thumbs up along the face of the steering wheel. Never hold the inside of the wheel."
+      ],
+      "141": [
+        "Stop more than 15 feet (but not more than 50 feet) away from the nearest rail until it is safe to continue."
+      ],
+      "142": [
+        "Within 30 feet of any flashing beacon, stop sign, yield sign, or traffic control signal."
+      ],
+      "143": [
+        "If you are being passed, stay in your lane and keep your speed steady to allow the driver to pass."
+      ],
+      "144": [
+        "On the shoulder of any interstate highway—these areas may be used only if your vehicle breaks down or you are in physical distress."
+      ],
+      "145": [
+        "Come to a complete stop at traffic signs and signals.",
+        "The following situations are times when you must make a complete stop: • Steady (non-flashing) red light or at a flashing red light. • All stop signs."
+      ],
+      "146": [
+        "Stop more than 15 feet (but not more than 50 feet) away from the nearest rail until it is safe to continue."
+      ],
+      "147": [
+        "Traveling on a two-lane roadway, traffic in both directions must stop."
+      ],
+      "148": [
+        "Traveling on a highway with five or more lanes and a shared center turn lane is only required for the vehicle’s in both lanes behind the school bus to come to a complete stop."
+      ],
+      "149": [
+        "Fines can run up to $3000; remember, a conviction for passing a school bus illegally usually means an increase in insurance rates."
+      ],
+      "150": [
+        "A safe gap when stopping behind another vehicle is to stop where you can see the vehicle’s rear tires ahead of you."
+      ],
+      "151": [
+        "Signals are required: • For two seconds before turning.",
+        "Signal right for two seconds.",
+        "Signal left for two seconds."
+      ],
+      "152": [
+        "Never make a U-turn on any curve near the top of a hill where you cannot see or be seen from both directions for 500 feet"
+      ],
+      "153": [
+        "A green arrow means you can use the lane. A red X means you cannot use the lane."
+      ],
+      "154": [
+        "Do not drive in the emergency lane—the area of the freeway on the outside of the solid white line is for emergency use only.",
+        "Passing another vehicle or stopping to pick up passengers in this lane is illegal."
+      ],
+      "155": [
+        "A vehicle traveling in the left lane must move safely to the right when approached from behind to prevent impeding traffic."
+      ],
+      "156": [
+        "Moving in and out of the carpool lane is not allowed except in specific locations (called access points) with white dotted striping rather than solid lines."
+      ],
+      "157": [
+        "When being followed by an emergency or police vehicle with flashing lights, it is permissible, when safe to do so, to make a right-hand lane change out of the express lane."
+      ],
+      "158": [
+        "Use this only if the road is too narrow for a U-turn. It’s best to go around the block if you can. This should only be used on a two-lane road."
+      ],
+      "159": [
+        "Drive one car length past the driveway or alley.",
+        "Back into the driveway."
+      ],
+      "160": [
+        "C decals allow limited single-occupant clean fuel vehicles to use the express lanes without paying a toll"
+      ],
+      "161": [
+        "The decals are small stickers placed inside the windshield to the right of the rearview mirror."
+      ],
+      "162": [
+        "you should use the acceleration lane to match your speed with other vehicles before pulling onto the roadway."
+      ],
+      "163": [
+        "allow only one (unless posted differently) vehicle to pass each time the green light comes on."
+      ],
+      "164": [
+        "You may NOT use a runaway vehicle ramp unless you are in an emergency requiring the use of the ramp to stop your vehicle.",
+        "You are prohibited from stopping, standing, or parking on a runaway vehicle ramp"
+      ],
+      "165": [
+        "It is legal to make a U-turn from the off-ramp at a single-point urban interchange and re-enter the freeway as long as you face a green arrow when you begin the maneuver."
+      ],
+      "166": [
+        "If a power outage occurs, the single-point urban interchange is not handled like a four-way stop. It is important to proceed with extreme caution and courtesy."
+      ],
+      "167": [
+        "Look left, right, and then left again before entering the intersection."
+      ],
+      "168": [
+        "Do not change lanes while proceeding through the intersection."
+      ],
+      "169": [
+        "Free-right turns during a red light are restricted in this continuous flow intersection, along with a traditional right-on-red."
+      ],
+      "170": [
+        "It requires traffic on the freeway overpass (or underpass) to briefly drive on the opposite side of the road from what they are accustomed to."
+      ],
+      "171": [
+        "Instead, motorists travel through the intersection, make a signalized U-turn at a location removed from the intersection, and return to the intersection, where they will make a right turn."
+      ],
+      "172": [
+        "Two direction roadway, passing permitted when dashed line is on your side"
+      ],
+      "173": [
+        "One direction roadway, separating express lane or carpool lane from general lanes - crossing prohibited"
+      ],
+      "174": [
+        "Do not turn into a lane just because an oncoming vehicle has a turn signal on. The driver may plan to turn after they pass you, or they may have forgotten to turn their signal off."
+      ],
+      "175": [
+        "In Utah, the basic speed law states that you may never drive faster than is reasonably safe."
+      ],
+      "176": [
+        "20 miles per hour: When passing a school building or grounds during school recess."
+      ],
+      "177": [
+        "25 miles per hour: In any business or residential area."
+      ],
+      "178": [
+        "When making a left turn from a shared turn lane, you may not enter the lane more than 500 feet before making the turn"
+      ],
+      "179": [
+        "FLASHING YELLOW ARROW LIGHT—turns are permitted, but first you must yield to oncoming traffic and pedestrians."
+      ],
+      "180": [
+        "If you approach an intersection where the traffic lights are not working, you must first come to a complete stop before entering the intersection and yield the right-of-way to any vehicle on the right"
+      ],
+      "181": [
+        "Regardless of what the traffic lights may indicate, always obey the instructions of a police officer at an intersection.",
+        "If the light is green and an officer tells you to stop, YOU MUST STOP."
+      ],
+      "182": [
+        "Guide signs are square or rectangular and are green, brown, or blue.",
+        "They advise you about intersecting roads and direct you to cities and towns.",
+        "They mark points of interest and help you find hospitals, service stations, restaurants, and hotels."
+      ],
+      "183": [
+        "Warning signs warn of possible danger ahead. They are usually diamond shaped and yellow with black lettering or symbols."
+      ],
+      "184": [
+        "Slow down as you approach the roundabout.",
+        "Yield to oncoming traffic, and pedestrians enter when it is clear.",
+        "Proceed through the roundabout and signal your intention to exit at the desired street."
+      ],
+      "185": [
+        "If, for some reason, the light does not change and you have been stranded by the red arrow light (left turn), and it is safe to do so, you may make a left turn from a one-way street onto a one-way street."
+      ],
+      "186": [
+        "You must yield to pedestrians entering or in a crosswalk, even if it is not marked."
+      ],
+      "187": [
+        "If traffic lights are horizontal, the red light is on the left, the yellow light is in the middle, and the green light is on the right."
+      ],
+      "188": [
+        "Do not stop on the railroad tracks.",
+        "If you must stop for traffic or a signal, wait at the stop line before the tracks."
+      ],
+      "189": [
+        "Peace officers are allowed to issue you a citation if you are impeding the normal flow of traffic."
+      ],
+      "190": [
+        "Work zone signs are diamond or rectangular and orange with black letters or symbols.",
+        "These signs warn you of work zones and people working on or near the road."
+      ],
+      "191": [
+        "Fines for speeding in a work zone are doubled."
+      ],
+      "192": [
+        "Yield the right-of-way to:",
+        "The driver on your right at a four-way stop if both of you arrive at the same time."
+      ],
+      "193": [
+        "Yield the right-of-way to:",
+        "Drivers on a public road if you are coming from a driveway or a private road."
+      ],
+      "194": [
+        "Vision is impacted at 0.02 blood alcohol content (BAC) for all drivers."
+      ],
+      "195": [
+        "Drugs can impact your driving and affect your reflexes, judgment, vision, and alertness, like alcohol.",
+        "These can include: Illegal, Over the counter, Prescribed drugs"
+      ],
+      "196": [
+        "Not-a-Drop Act provides that a person under 21 years of age driving with any measurable amount of alcohol in their body will have all driving privileges denied for six months for a first offense."
+      ],
+      "197": [
+        "If the court orders suspension for a driver under the age of 16, the suspension time will begin on the date of conviction and extend for one to two years from the 16th birthday."
+      ],
+      "198": [
+        "If you are over 0.05 BAC (0.04 for CDL), you violate the law."
+      ],
+      "199": [
+        "On the first conviction of a DUI for a driver 21 and older, the driver license will be suspended for 120 days"
+      ],
+      "200": [
+        "Utah’s law allows a peace officer to confiscate your Utah driver license upon arrest, and the division will suspend the license beginning on the 45th day after the date of arrest."
+      ],
+      "201": [
+        "When you drive a vehicle or a motorboat in Utah, it is implied that you will submit to a chemical test of your breath, blood, urine, or oral fluids",
+        "This is called the implied consent law."
+      ],
+      "202": [
+        "If you refuse to do so, your driver license would be revoked for 18 months for the first offense"
+      ],
+      "203": [
+        "A lifetime alcohol-restricted status will result when a driver is convicted of automobile homicide or a felony DUI."
+      ],
+      "204": [
+        "If you are angry or worried, give yourself time to cool off. Take a short walk or nap, but stay off the road until the symptoms have passed."
+      ],
+      "205": [
+        "if convicted of driving with any measurable amount of alcohol during the alcohol-restricted period, the driver license will be revoked for one year."
+      ],
+      "206": [
+        "If you operate a motorboat while under the influence of alcohol/drugs, the same laws apply as if you were operating a motor vehicle"
+      ],
+      "207": [
+        "restricted to driving a vehicle that has an IID installed for 18 months from the date of conviction",
+        "or three years if they are under the age of 21 when they are arrested."
+      ],
+      "208": [
+        "the ignition interlock requirement will be extended by 60 days for each occurrence."
+      ],
+      "209": [
+        "Ignition interlock-restricted drivers are required to have the device monitored at least every 60 days."
+      ],
+      "210": [
+        "The impounded vehicle will be released to the owner once all requirements have been met and all fees paid.",
+        "Fees the owner must pay include towing, storage charges, and administrative costs."
+      ],
+      "211": [
+        "If you have a problem or there is a distraction, immediately pull over to the side of the roadway and take care of the problem."
+      ],
+      "212": [
+        "The court may order that your license be suspended for one year on the first conviction for a citation with a road rage enhancement."
+      ],
+      "213": [
+        "Do not swerve to avoid the animal; your risk of personal injury may be greater if you do.",
+        "Keep your vehicle under control and in the travel lane."
+      ],
+      "214": [
+        "turn on your emergency flashers, raise your hood, and tie something white or orange on the antenna or left door handle."
+      ],
+      "215": [
+        "If your vehicle breaks down in the desert, stay with it. Do not wander away from the vehicle unless it is to get help from a visible call box"
+      ],
+      "216": [
+        "Plan to stop every two hours during long trips to take a break from driving."
+      ],
+      "217": [
+        "Avoid distractions before driving by turning off mobile devices, setting navigation systems, eating and grooming before you leave"
+      ],
+      "218": [
+        "If an individual drives a vehicle without an IID installed when restricted, the vehicle may be impounded.",
+        "A conviction for violating the IRD law will result in the driver license revocation for one year and an additional two-year IID restriction"
+      ],
+      "219": [
+        "Two feet of moving water can carry away most vehicles, including sport utility vehicles and pick-up trucks."
+      ],
+      "220": [
+        "Drivers under the age of 18 may only use an HWC device while operating a motor vehicle during a medical emergency... or communicating with a parent or legal guardian."
+      ],
+      "221": [
+        "A person convicted of a texting violation is guilty of a Class C misdemeanor with a maximum fine of $100 or a Class B misdemeanor if they inflict bodily injury or have a previous violation"
+      ],
+      "222": [
+        "The courts are required to fine a driver who speeds in a highway construction zone at least twice the amount of the regular fine for speeding."
+      ],
+      "223": [
+        "Only a hard-topped vehicle will protect you in a lightning storm. Make sure all doors are closed and windows are up. Do not touch any metal surfaces."
+      ],
+      "224": [
+        "You must yield to vehicles going uphill if traveling downhill on a narrow road."
+      ],
+      "225": [
+        "Do not coast downhill by shifting into neutral or disengaging the clutch."
+      ],
+      "226": [
+        "sunset to sunrise, or when persons and vehicles on the highway are not clearly discernible at a distance of 1,000 feet ahead"
+      ],
+      "227": [
+        "dim your lights before you get within 500 feet of the oncoming car."
+      ],
+      "228": [
+        "dim your lights when you are within 300 feet of the vehicle ahead of you."
+      ],
+      "229": [
+        "If an oncoming vehicle does not dim, look at the right side of the road. This helps avoid being blinded by the headlights."
+      ],
+      "230": [
+        "NARROW BRIDGES AND SINGLE-LANE BRIDGES—the first driver to the bridge has the right-of-way."
+      ],
+      "231": [
+        "Hit a rumble strip or drift from your lane.",
+        "Can’t remember the last few miles driven.",
+        "Yawn repeatedly."
+      ],
+      "232": [
+        "Your car may start to hydroplane at speeds over 35 mph."
+      ],
+      "233": [
+        "If your rear wheels skid to the right, turn your front wheels to the right."
+      ],
+      "234": [
+        "it will only float on the surface for 30 to 60 seconds so immediately attempt to get out of the vehicle."
+      ],
+      "235": [
+        "Take off heavy clothing that will cause you to sink, but keep your shoes on in case you have to kick the window to escape."
+      ],
+      "236": [
+        "Do not let the air out; the pressure will be too low when the tires cool off."
+      ],
+      "237": [
+        "Spots where tar bleeds to the surface can be slippery, so use caution when you see them."
+      ],
+      "238": [
+        "Snow tires with metal studs may be used from October 15 through March 31 of each year."
+      ],
+      "239": [
+        "remember that bridges, ramps, and overpasses are likely to freeze first."
+      ],
+      "240": [
+        "Running the engine for approximately 10 minutes each hour to charge the battery and warm the interior is recommended."
+      ],
+      "241": [
+        "Keep the exhaust pipe clear of snow and debris. Fumes from the exhaust can leak into the vehicle and can cause you to black out or even cause death."
+      ],
+      "242": [
+        "To help prevent problems from occurring, lightly touch your brakes occasionally."
+      ],
+      "243": [
+        "In addition, you may receive a jail sentence of up to one year, a fine of up to $2500, or both."
+      ],
+      "244": [
+        "Note: It is a third-degree felony for a person to fail to stop at the scene of an injury crash."
+      ],
+      "245": [
+        "may move the vehicle as soon as possible out of the travel lanes on any roadway to an adjacent shoulder, the nearest suitable cross street, or other suitable location that does not obstruct traffic"
+      ],
+      "246": [
+        "If the crash results in injuries, death, or at least $2500 in total property damage, you must notify law enforcement (911) immediately."
+      ],
+      "247": [
+        "Name and address of the driver of your vehicle.",
+        "Vehicle plate number of the vehicle that caused the crash."
+      ],
+      "248": [
+        "A national study revealed that driver error is a factor in 75% of all car crashes."
+      ],
+      "249": [
+        "The time of day when most crashes happen is between 2 pm and 6 pm."
+      ],
+      "250": [
+        "If you do not have access to a mobile device, leave the hood of your car up and your hazard lights on."
+      ],
+      "251": [
+        "If your brakes stop working while driving, use the parking brake.",
+        "Apply the parking brake slowly to avoid locking the rear wheels."
+      ],
+      "252": [
+        "To use ABS, press the brake pedal as hard as possible and apply pressure.",
+        "ABS only works if you stay on the brake pedal."
+      ],
+      "253": [
+        "Put emergency flares or triangles 200 to 300 feet behind your vehicle, giving other drivers time to change lanes or slow down."
+      ],
+      "254": [
+        "Keep a firm grip on the steering wheel if the engine shuts off while driving.",
+        "The steering wheel may be hard to turn, but you can turn it."
+      ],
+      "255": [
+        "If your vehicle is speeding out of control, shift to neutral and look for a safe place to pull off, steer smoothly, brake gently, and pull off the road."
+      ],
+      "256": [
+        "If a rear tire blows out, the vehicle will wobble, shake, and pull toward the blown tire."
+      ],
+      "257": [
+        "If a tire goes flat, grip the steering wheel firmly, steer straight, slow gradually, and take your foot off the gas pedal; do not brake."
+      ],
+      "258": [
+        "Anyone who knowingly operates a motor vehicle or permits one to be operated without owner's security is guilty of a class B misdemeanor"
+      ],
+      "259": [
+        "If this judgment is not satisfied within 60 days after the court decision, your driving privilege will be suspended."
+      ],
+      "260": [
+        "Don't panic if your wheels drop off the paved road surface. Slow down gradually and then turn back onto the roadway."
+      ],
+      "261": [
+        "This proof must be maintained for three years following the date of the suspension or revocation"
+      ],
+      "262": [
+        "You can provide proof of insurance to a peace officer electronically using a mobile electronic device."
+      ],
+      "263": [
+        "provides some basic benefits and coverage for bodily injury to you and others without having to determine “fault” in a crash."
+      ],
+      "264": [
+        "covers repairs to your vehicle for damage caused by reasons other than collisions, such as fire, theft, vandalism, or glass breakage."
+      ],
+      "265": [
+        "you will be required to carry an SR22 for three years and pay a $40 reinstatement fee."
+      ],
+      "266": [
+        "A report may be released to persons involved in the crash, excluding witnesses"
+      ],
+      "267": [
+        "All alcohol/drug-related violations, suspensions, and revocations remain on the record for 10 years."
+      ],
+      "268": [
+        "the length of time your driver license was originally denied, suspended, or revoked will be increased by the amount of the original time period."
+      ],
+      "269": [
+        "the fine may be up to $1000, and you may be imprisoned for up to six months."
+      ],
+      "270": [
+        "The court may order that your license be suspended for one year on the first conviction for a citation with a road rage enhancement."
+      ],
+      "271": [
+        "Failure to stop and give aid if you are involved in a motor vehicle crash resulting in the death of or personal injury to another."
+      ],
+      "272": [
+        "Attempting to flee or refusing to stop after receiving a visual or audible signal from a police officer."
+      ],
+      "273": [
+        "Property damage losses are generally not paid under this coverage."
+      ],
+      "274": [
+        "failed to complete a four-hour live classroom course on driving safety offered by an approved entity."
+      ],
+      "275": [
+        "Texting while driving 50"
+      ],
+      "276": [
+        "OVER 21 YEARS OF AGE—if you acquire 200 or more points within a three year period, you will be asked to appear for a hearing."
+      ],
+      "277": [
+        "Points for individual convictions are automatically removed from your record three years after the date of the violation."
+      ],
+      "278": [
+        "half of the total points on your record will be removed when you drive one full year without being convicted of a moving traffic violation."
+      ],
+      "279": [
+        "50 points may be removed from your record upon completing a defensive driving course recommended by the division."
+      ],
+      "280": [
+        "Utah law requires a minimum of three feet of distance from any bicyclist or vulnerable user of the highway you are passing."
+      ],
+      "281": [
+        "Do not stop, park, or drive on a designated bicycle path or lane unless you are entering or leaving an alley or driveway"
+      ],
+      "282": [
+        "Sounding your horn to alert your presence may startle bicyclists and cause them to steer into your path and crash."
+      ],
+      "283": [
+        "Dim your headlights within 500 feet when approaching or overtaking bicyclists at night."
+      ],
+      "284": [
+        "When approaching within 100 feet of, or traversing, any intersection or railroad grade crossing unless otherwise indicated by an official traffic control device."
+      ],
+      "285": [
+        "Reckless Driving 80",
+        "Failure to yield right-of-way 60",
+        "Red light 50",
+        "Texting while driving 50"
+      ],
+      "286": [
+        "You have two citations that have been enhanced as a road rage violation in one year."
+      ],
+      "287": [
+        "Keep at least one hand on the handlebars at all times."
+      ],
+      "288": [
+        "Every bicycle must have a brake or brake system that enables the rider to stop the bicycle within 25 feet from a speed of 10 mph."
+      ],
+      "289": [
+        "white headlight, red taillight or reflector, and side reflectors, all visible for at least 500 feet"
+      ],
+      "290": [
+        "Bicyclists approaching a stop sign may proceed through the intersection without stopping at the stop sign if the bicyclist slows to a reasonable speed and yields the right-of-way"
+      ],
+      "291": [
+        "When riding a bicycle on a sidewalk or crosswalk, bicyclists must ride slowly, yield the right-of-way to any pedestrian, and give an audible signal before overtaking and passing any pedestrian."
+      ],
+      "292": [
+        "CLASS 3—equipped with a motor or electronics that provides assistance only when the rider is pedaling and ceases to assist when the bicycle reaches the speed of 28 miles per hour. This class is equipped with a speedometer."
+      ],
+      "293": [
+        "Unless you are on official business, do not follow within 500 feet of any fire vehicle responding to an alarm."
+      ],
+      "294": [
+        "If you are convicted for NOT following the move over law, you must attend a four hour live classroom defensive driving course within 90 days of conviction."
+      ],
+      "295": [
+        "Upon approaching a stationary vehicle displaying amber lights, the driver of a vehicle traveling in the HOV lane shall, if practical, with due regard to safety and traffic conditions, make a lane change out of the HOV lane into a lane not adjacent to the stationary vehicle."
+      ],
+      "296": [
+        "No vehicle shall have a total outside width, including load, of more than 8 1/2 feet. One exception to this rule is farm tractors. Their width may not exceed 9 feet."
+      ],
+      "297": [
+        "No vehicle shall exceed a height of 14 feet, including any load that may be carried."
+      ],
+      "298": [
+        "No single vehicle, except for fire-fighting equipment, shall exceed an overall length of 45 feet, including the front and rear bumpers."
+      ],
+      "299": [
+        "No train of vehicles or single vehicle shall carry a load extending more than three feet to the front nor more than six feet to the rear of the vehicle’s body."
+      ],
+      "300": [
+        "No vehicle, including a passenger vehicle, may carry any load extending beyond the line of the fenders on the left side of the vehicle nor extending more than six inches beyond the line of the fenders on the right side."
+      ],
+      "301": [
+        "every vehicle registered for 16,001 pounds or more have the weight for which it is registered displayed on both the left and right sides of the vehicle."
+      ],
+      "302": [
+        "On multi-lane highways, tractor-trailers stay in the center lane to help with local traffic flow on and off the highway.",
+        "Staying in the middle lane also increases a truck driver’s options if they switch lanes to avoid a dangerous situation or a crash."
+      ],
+      "303": [
+        "Always pass a tractor-trailer completely and always on the left side."
+      ],
+      "304": [
+        "When following behind a truck, if you can’t see the truck driver’s rear view mirrors, there is no way the truck driver can see you."
+      ],
+      "305": [
+        "With any turning vehicle, the rear wheels follow a shorter path than the front wheels.",
+        "the drivers of tractor-trailers must often swing out to the left as the first step in making a right turn."
+      ],
+      "306": [
+        "Large vehicles have huge blind spots up to 200 feet behind them."
+      ],
+      "307": [
+        "A truck’s largest blind spot is on the right side."
+      ],
+      "308": [
+        "Pedestrian and mobility vehicles may be used on the highways and are exempt from registration, inspection, and the usual operator license requirements."
+      ],
+      "309": [
+        "A person may not operate a motor-assisted scooter:",
+        "On a highway with a posted speed limit greater than 25 mph."
+      ],
+      "310": [
+        "A person under the age of 15 may not operate a motor-assisted scooter unless the person is under the direct supervision of the person’s parent or guardian."
+      ],
+      "311": [
+        "Any motorcycle operator or passenger who is under 21 years of age must wear an approved DOT helmet."
+      ],
+      "312": [
+        "Give motorcycles an entire lane. Do not share the lane. Motorcycles need space to react to other traffic."
+      ],
+      "313": [
+        "Do not believe a motorcycle is turning when it has a turn signal flashing. Many motorcycle turn signals do not self-cancel."
+      ],
+      "314": [
+        "When following a motorcycle, stay at least two seconds back. When it is wet on the roadway increase this distance."
+      ],
+      "315": [
+        "The individual is on a roadway with a speed limit of 45 miles per hour or less or an off-ramp."
+      ],
+      "316": [
+        "The motorcycle is traveling at a speed of 15 miles per hour or less."
+      ],
+      "317": [
+        "waiting a reasonable period of time and not less than 90 seconds at the intersection or stop line may proceed across the roadway"
+      ],
+      "318": [
+        "When a pedestrian is crossing a street with a guide dog or carrying a white cane, you must come to a complete stop."
+      ],
+      "319": [
+        "walk or jog on the left shoulder as far away as possible from the edge of the roadway.",
+        "Always walk or jog facing traffic on the left side of the shoulder or roadway."
+      ],
+      "320": [
+        "Never pass vehicles stopped at a crosswalk; there may be people crossing that you can't see."
+      ],
+      "321": [
+        "The leading driver contributing factors in pedestrian deaths in 2024 were:",
+        "Failing to yield right-of-way",
+        "Improper turning"
+      ],
+      "322": [
+        "not be capable of exceeding 30 mph."
+      ],
+      "323": [
+        "move to the right side of the road (even when traveling in the HOV lane) and make sure you are in a safe spot to stop"
+      ],
+      "324": [
+        "Keep your hands on the steering wheel."
+      ],
+      "325": [
+        "A fluorescent or reflective orange and red triangle displayed on the rear means the vehicle is moving less than 25 mph."
+      ],
+      "326": [
+        "Golf cart operators are responsible for safely operating a golf cart and shall comply with the same rules as a bicycle."
+      ],
+      "327": [
+        "Do not use your horn or “rev” the engine. This may scare the horse and cause a crash."
+      ],
+      "328": [
+        "having a seat designed to be straddled by the operator"
+      ],
+      "329": [
+        "If you have a Class D or CDL, you are licensed to drive a street-legal ATV/UTV or FSV."
+      ],
+      "330": [
+        "The street-legal ATV/UTV or FSV operating on a highway may not exceed the lesser of the posted speed limit or 50 miles per hour."
+      ],
+      "331": [
+        "the operator shall operate the street-legal ATV/UTV or an FSV on the extreme right-hand side of the roadway"
+      ],
+      "332": [
+        "Over 10 years (2014-2024), the hours with the most pedestrian deaths were: • 9 p.m. (52)"
+      ],
+      "333": [
+        "have at least 2/32 inches or greater tire tread."
+      ],
+      "334": [
+        "Anyone younger than 21 years of age is required to wear a DOT-approved helmet."
+      ],
+      "335": [
+        "Do not park closer than 50 feet from a railroad crossing unless signs indicate that you may or it is allowed by local law."
+      ],
+      "336": [
+        "you may drive through the railroad crossing only if you have a clear line of sight of at least one mile down the tracks in both directions"
+      ],
+      "337": [
+        "If there is more than one set of tracks, a sign below the crossbuck indicates the number of tracks."
+      ],
+      "338": [
+        "never shift gears on the crossing."
+      ],
+      "339": [
+        "Trains have the right-of-way 100% of the time—over ambulances, fire engines, cars, the police, and pedestrians."
+      ],
+      "340": [
+        "a 100-car freight train traveling at 55 mph will need more than a mile to stop—that’s approximately 18 football fields."
+      ],
+      "341": [
+        "If a train is coming, stay clear of the tracks and run toward the approaching train at an angle away from the train.",
+        "Moving toward the approaching train, will make you less likely to be hit by flying debris."
+      ],
+      "342": [
+        "Light rail vehicles accelerate quickly and reach speeds up to 65 mph within 21 seconds.",
+        "Never try to beat a light rail train through a railroad crossing."
+      ],
+      "343": [
+        "The flashing train logo is not an indication to stop but merely an additional warning device.",
+        "This means a train is approaching the area; you should pay extra attention to obey traffic signals at these intersections."
+      ],
+      "344": [
+        "When taking your driving skills test, you cannot use certain safety features, such as parking assist and cruise control."
+      ],
+      "345": [
+        "Never pass a car that is going your direction at a railroad crossing."
+      ],
+      "346": [
+        "A train may extend three feet or more outside the steel rail, making the safety zone for pedestrians well beyond the rails."
+      ],
+      "347": [
+        "When taking your driving skills test, you cannot use certain safety features, such as parking assist and cruise control."
+      ],
+      "348": [
+        "If your vehicle is equipped with ABS brakes, it is unnecessary to pump them when braking in a slippery situation; apply constant and firm pressure"
+      ],
+      "349": [
+        "The flags may be used only during the daytime and must be at least 12 inches square.",
+        "Each vehicle that carries a load extending four feet or more beyond the bed or body of the vehicle must display two flags or lights"
+      ],
+      "350": [
+        "can shine 350 feet on high and 100 feet on low beams."
+      ],
+      "351": [
+        "All motor vehicles must have one functioning horn which must be heard under normal conditions from a distance of no less than 200 feet."
+      ],
+      "352": [
+        "All vehicles will have one white light mounted on the rear of the vehicle so that the license number may be read at a distance of at least 50 feet."
+      ],
+      "353": [
+        "Red or blue lights visible from the front of a vehicle may not be used except by emergency, school, snow removal, or other authorized vehicles."
+      ],
+      "354": [
+        "The drawbar or other connections between any tow vehicles may not exceed 15 feet in length from one vehicle to the other."
+      ],
+      "355": [
+        "The flag shall be no smaller than 12 inches square (one-foot square).",
+        "When a connection consists of a chain, rope, or cable, a red flag or other signal shall be attached to the connecting device."
+      ],
+      "356": [
+        "Vehicles transporting explosive or flammable materials may not use flares or fuses.",
+        "REMEMBER, FLARES AND FUSES MAY NOT BE CARRIED IN VEHICLES TRANSPORTING EXPLOSIVES, FLAMMABLE LIQUIDS OR COMPRESSED GAS."
+      ],
+      "357": [
+        "Your windshield must be clean of dirt, frost, or anything else that might obstruct your vision while driving (such as something hanging from the rearview mirror.)"
+      ],
+      "358": [
+        "On a one-way street, the rear flag should be placed 200 feet to the rear."
+      ],
+      "359": [
+        "These lights must be visible from 100 feet in normal sunlight."
+      ],
+      "360": [
+        "The reflectors must be visible from 500 feet at night and placed not less than 15 inches or more than 60 inches above the ground."
+      ],
+      "361": [
+        "Safety features may not work correctly in rain, snow, ice, fog, hills, and curves."
+      ],
+      "362": [
+        "place a warning device on the traffic side of, and not less than 10 feet from, the rear of your vehicle."
+      ],
+      "363": [
+        "FLARES AND FUSES MAY NOT BE CARRIED IN VEHICLES TRANSPORTING EXPLOSIVES, FLAMMABLE LIQUIDS OR COMPRESSED GAS."
+      ],
+      "364": [
+        "Warning devices need not be displayed if sufficient light reveals persons or vehicles from 1,000 feet."
+      ],
+      "365": [
+        "The warning device; however, may not be placed more than 500 feet away from the vehicle no closer than 100 feet to the vehicle."
+      ],
+      "366": [
+        "Do not attach any flare or fuse to your vehicle. Not only is this a hazardous action, but it is also illegal."
+      ],
+      "367": [
+        "Never drive for an extended period of time on a soft or flat tire or with a brake that is dragging. These situations can result in heat buildup and cause a tire fire."
+      ],
+      "368": [
+        "If you cannot get the tire off, try driving until the tire burns off the rim or until you reach a good water source. This alternative is certainly better than just waiting."
+      ],
+      "369": [
+        "Fight fires with the wind at your back. If you are using an extinguisher, your efforts will be more effective"
+      ],
+      "370": [
+        "fighting a gasoline or oil fire with water will only spread the fire."
+      ],
+      "371": [
+        "One organ donor can potentially save the lives of eight people."
+      ],
+      "372": [
+        "The funds will be administered by the Department of Human Services, Division of Aging and Adult Services, and will be used for public transportation assistance for seniors or people with disabilities."
+      ],
+      "373": [
+        "A Utah license certificate holder or identification card holder may provide the division with information for two individuals who may be contacted by law enforcement"
+      ],
+      "374": [
+        "Identity fraud is a felony."
+      ],
+      "375": [
+        "If your vehicle is entirely off the road, place the devices on the shoulder of the road as close as possible to the road surface."
+      ],
+      "376": [
+        "while driver license and identification cards are handled through the Driver License Division (DLD)."
+      ],
+      "377": [
+        "Trailers weighing less than 750 pounds when empty and not used for commercial purposes are not required to be registered."
+      ],
+      "378": [
+        "Non-residents using their watercraft in Utah for more than 60 days per year must register in Utah."
+      ],
+      "379": [
+        "you will save gas by turning the engine off and restarting it again if you expect to idle for more than 30 seconds."
+      ],
+      "380": [
+        "Modern vehicles need little warm-up; they’re most efficient when being driven."
+      ],
+      "381": [
+        "Spilled gasoline pollutes the air when it evaporates.",
+        "It’s best to avoid “topping off,” especially in hot weather."
+      ],
+      "382": [
+        "Octane is a measure of how much a fuel can be compressed in an engine before it spontaneously combusts. It is not a measure of fuel power or quality."
+      ],
+      "383": [
+        "Not-a-Drop Act provides that a person under 21 years of age driving with any measurable amount of alcohol in their body will have all driving privileges denied for six months for a first offense."
+      ],
+      "384": [
+        "When an individual has been convicted of a first DUI, they are automatically restricted to driving a vehicle that has an IID installed for... three years if they are under the age of 21"
+      ],
+      "385": [
+        "This driver license allows you to drive all personal vehicles (up to 26,000 pounds.)",
+        "REGULAR CLASS D DRIVER LICENSE To obtain an original regular Class D license, you must be at least 16 years of age."
+      ],
+      "386": [
+        "The ZIPPER METHOD is the idea of alternating when merging at a congested merge point (i.e., construction zone.)"
+      ],
+      "387": [
+        "WHITE LANE MARKINGS One direction roadway passing permitted"
+      ],
+      "388": [
+        "Third-party testers are certified and licensed as commercial driver education instructors by the division and can administer the driving skills test."
+      ],
+      "389": [
+        "Age 16 and 17—6 months",
+        "If you are 17 years of age or younger you need to hold a learner permit for 6 months. True or False"
+      ],
+      "390": [
+        "VISIT OUR WEBSITE FOR OFFICE HOURS AND TO SCHEDULE AN APPOINTMENT",
+        "Visit our website at dld.utah.gov to schedule your appointment today!"
+      ],
+      "391": [
+        "FAIRPARK 1095 Motor Ave. Salt Lake (full time office)"
+      ],
+      "392": [
+        "BEAVER 105 E Center St. (part time office)",
+        "FARMINGTON 631 N Lagoon Dr. (full time office)",
+        "OREM 759 North 1370 West (full time office)"
+      ],
+      "393": [
+        "SOUTH VALLEY 14555 S Minuteman Dr. Draper (full time office)"
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 25,
-    "topics_covered": 23,
-    "coverage_pct": 92.0,
-    "uncovered_topics": [
-      "financial responsibility assumption for minor license applicants",
-      "social security verification documents for driver licenses"
-    ],
+    "topics_total": 28,
+    "topics_covered": 28,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
     "verdict": "PASS",
     "grade": "A"
   },
@@ -66,6 +1325,20 @@
     "sign_ratio_pct": 8.0,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 393,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

@@ -1,16 +1,16 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "md",
   "name": "Maryland",
-  "verified_at": "2026-05-26T02:29:30Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:03:21Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://mva.maryland.gov/Documents/DL-002.pdf",
     "manual_pdf_sha256": "093eedc5bd04bc270cbaaf260119da3791baf4069a86dea67b6dbd7f315bdfa9",
     "manual_text_sha256": "cdeaa3450dc7281182abdace113e34b1bef78960cdb2f9d5ccc19493d2b2735c",
     "manual_text_chars": 119815,
     "manual_pages": 56,
-    "edition": ""
+    "edition": "December 2025"
   },
   "bank": {
     "total_questions": 202,
@@ -24,23 +24,614 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 181,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "Our goal is to reach zero fatalities (no deaths) on Maryland’s roads, because even one life lost is one too many."
+      ],
+      "2": [
+        "Each of us is responsible every time we get behind the wheel to: • Drive sober. • Pay attention. • Wear a seat belt."
+      ],
+      "3": [
+        "It is important to remember that driving is a privilege, and you play a part in making sure that everyone stays safe on our roads."
+      ],
+      "4": [
+        "Look twice for motorcycles."
+      ],
+      "5": [
+        "It is located on the MVA website, mva.maryland.gov/drivers."
+      ],
+      "6": [
+        "Section 2: Licensing Requirements and Process. . . . . . . . . . . . . . . . . . . . . . . . . . . 9 A. Rookie Driver/Graduated Licensing System . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .9"
+      ],
+      "7": [
+        "Section 6: Dangerous Driving Behaviors. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33 C. Distracted Driving. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+      ],
+      "11": [
+        "TTY for the Hearing Impaired: 1-800-492-4575"
+      ],
+      "12": [
+        "you will get better at driving with more experience on different roads, under different conditions, and in different environments."
+      ],
+      "13": [
+        "Section 8: Crashes and Traffic Stops. . . . 43",
+        "D. Move Over Law.............................................................45"
+      ],
+      "14": [
+        "Section 1: Driving Tests Requirements. . . 7",
+        "A. Vision Screening.............................................................7"
+      ],
+      "15": [
+        "Any unauthorized reprint, use, distribution, or sale of this material is prohibited."
+      ],
+      "16": [
+        "Visual acuity of at least 20/40 in each eye."
+      ],
+      "17": [
+        "There are 25 questions on the test. You will have 20 minutes to take the test."
+      ],
+      "18": [
+        "Have at least a half tank of gas."
+      ],
+      "19": [
+        "Only you and the person giving you the test are allowed in the vehicle during the test. An interpreter that the MVA approves can also be in the car"
+      ],
+      "20": [
+        "Fines for littering can cost up to $1500 or 30 days in prison."
+      ],
+      "21": [
+        "Two documents that prove that you live in Maryland."
+      ],
+      "22": [
+        "You must bring original documents or copies certified by the agency that provided them to you.",
+        "The MVA will not accept photocopies, notarized copies, or documents with changed or erased information."
+      ],
+      "23": [
+        "A noncommercial driver’s license allows you to drive regular vehicles like cars, pickup trucks, and vans. It is also called a Class C driver’s license."
+      ],
+      "24": [
+        "If you have never had a noncommercial, driver’s license you must get a Type 1 Learner’s Instructional Permit. The Permit lasts up to 2 years."
+      ],
+      "25": [
+        "If you already have a driver’s license and want a different class of driver’s license, you must apply for a Type 2 Learner’s Instructional Permit."
+      ],
+      "26": [
+        "Applicants younger than 25: • Must be at least 15 years and 9 months old."
+      ],
+      "27": [
+        "Practice driving at least 60 hours with a supervising driver."
+      ],
+      "28": [
+        "Applicants 25 years old and older: While you have your Learner’s Instructional Permit, you must: • Complete at least 14 practice hours with a supervising driver."
+      ],
+      "29": [
+        "You must have your permit for at least 45 days before the you are eligible for a Provisional License."
+      ],
+      "30": [
+        "you must hold the Learner’s Instructional Permit at least 9 months following the most recent date you were convicted of or granted a PBJ for a moving violation."
+      ],
+      "31": [
+        "If you are under age 18, you must hold the Permit for at least 9 months without a violation before being eligible for a Provisional License."
+      ],
+      "32": [
+        "Submit a completed and signed Practice and Skills Log. This must show that you completed at least 60 practice hours driving with a supervising driver (14 if you are 25 or older)."
+      ],
+      "33": [
+        "When you have met all these requirements, the MVA will automatically switch your Provisional License to a Driver’s License. A card showing the switch will be mailed to you."
+      ],
+      "34": [
+        "If you are married and your husband or wife is 18 or older, they can co-sign. You must provide proof that you are married."
+      ],
+      "35": [
+        "The co-signer may cancel a minor’s license by submitting a written request to the MVA’s Administrative Adjudication Division."
+      ],
+      "36": [
+        "A three-hour roadway safety driving education program approved by the MVA."
+      ],
+      "37": [
+        "If we offer the knowledge test in the language that you speak, you must take it at least 5 times before using an interpreter."
+      ],
+      "38": [
+        "Interpreters providing services for knowledge/skills testing may not provide other services to the customer being tested."
+      ],
+      "39": [
+        "MVA will NOT ask you to provide information or documentation about your disability to get this card."
+      ],
+      "40": [
+        "You must have a valid Learner’s Permit or driver’s license, and vehicle registration card with you."
+      ],
+      "41": [
+        "By searching ahead and being ready to change speed or change lanes, you can drive more safely and have time to identify risks. This is called defensive driving."
+      ],
+      "42": [
+        "The driver on your right, if both of you arrive at an intersection at the same time."
+      ],
+      "43": [
+        "Maintain a safe distance between your vehicle and other people using the road.",
+        "Do not assume that other drivers will do what they are supposed to do."
+      ],
+      "44": [
+        "Restrictions are things like no passengers and no driving at night."
+      ],
+      "45": [
+        "Drivers in the opposing traffic lane, when you are making a left turn."
+      ],
+      "46": [
+        "The posted speed limit is the maximum legal speed you can travel on a road under ideal (perfect) conditions."
+      ],
+      "47": [
+        "Driving at a speed lower than other traffic encourages other vehicles to constantly pass you. This increases the chances of a crash."
+      ],
+      "48": [
+        "The MVA recommends a minimum following distance of 3 to 4 seconds under ideal driving conditions."
+      ],
+      "49": [
+        "you should increase the distance between your vehicle and the one ahead of you to four or five seconds"
+      ],
+      "50": [
+        "Generally, you should keep your vehicle to the right of the center of the road, unless: • You are passing another vehicle going in the same direction"
+      ],
+      "51": [
+        "When the way is clear, turn into the outside or right-hand lane traveling in the opposite direction."
+      ],
+      "52": [
+        "See both headlights of the passed vehicle in your rear-view mirror before returning to the lane you came from."
+      ],
+      "53": [
+        "When crossing or within 100 feet of an intersection or railroad grade crossing."
+      ],
+      "54": [
+        "When being passed by another vehicle, you must yield to the other vehicle and not increase your speed."
+      ],
+      "55": [
+        "Place the vehicle in gear if it has a manual transmission or in ‘park’ if it has an automatic transmission."
+      ],
+      "56": [
+        "The only time you do not have to obey all traffic control devices is when one of the following tells you to do something different: • A police officer or other emergency personnel."
+      ],
+      "57": [
+        "Unless a sign prohibits turning on red, after coming to a complete stop, you may: • Turn right",
+        "When turning on a red signal, you must yield the right-of-way to pedestrians and all other traffic."
+      ],
+      "58": [
+        "When a traffic signal is not working: • You must stop at a clearly marked stop line.",
+        "If there is no clearly marked stop line, you must stop before entering a crosswalk."
+      ],
+      "59": [
+        "Fluorescent Pink - Emergency traffic incidents."
+      ],
+      "60": [
+        "A steady yellow “X” signal means you should move out of the lane as soon as you safely can."
+      ],
+      "61": [
+        "Pentagon: School Zone and School Crossing",
+        "The pentagon (five-sided) shape warns you of school zones and marks school crossings."
+      ],
+      "62": [
+        "7. Flashing Red Signal",
+        "Come to a complete stop at the stop line. ... Yield to all other traffic and pedestrians. Proceed when the way is clear."
+      ],
+      "63": [
+        "Brown - Recreation and cultural interest areas."
+      ],
+      "64": [
+        "A flashing yellow “X” signal or two-way left-turn arrows mean you can use the lane for a left turn. You will likely be sharing the lane with left-turning vehicles coming from the opposite direction."
+      ],
+      "65": [
+        "2. Steady Yellow Signal",
+        "If you are too close to the intersection to stop safely, carefully continue through the intersection."
+      ],
+      "66": [
+        "Fluorescent Yellow-Green - School, pedestrian and bicycle signs."
+      ],
+      "67": [
+        "Mile Marker Signs",
+        "They provide location information you can use if you need someone to find you. For example, a tow truck or emergency personnel."
+      ],
+      "68": [
+        "Solid red. Stop!",
+        "Stop. Traffic has started moving."
+      ],
+      "69": [
+        "Crossbuck: Highway—Rail Grade Crossing",
+        "Identifies the location of a railroad crossing."
+      ],
+      "70": [
+        "8. Flashing Yellow Signal",
+        "You must slow down and proceed with caution."
+      ],
+      "71": [
+        "Rectangular (4-Sided) Signs, Black on White",
+        "These signs regulate traffic.",
+        "These signs are about traffic laws. You must obey them."
+      ],
+      "72": [
+        "Service Information and Guide Signs",
+        "These signs identify the businesses and services you can find if you take certain exits."
+      ],
+      "73": [
+        "Single Broken - Yellow",
+        "Separates lanes where vehicles are traveling in opposite directions, and passing with care is permitted in either direction."
+      ],
+      "74": [
+        "Single Solid - Yellow",
+        "Marks left edge lines on divided highways, one-way roads, and ramps."
+      ],
+      "75": [
+        "Double (side-by-side) Broken - Yellow",
+        "Marks the edges of reversible lanes – lanes where traffic flows in one direction some times and the other direction other times."
+      ],
+      "76": [
+        "Double (side-by-side) Solid - Yellow",
+        "You may make a left turn across a double solid yellow line. For example, when turning into a driveway."
+      ],
+      "77": [
+        "Yield Lines",
+        "Rows of small triangles across the lane that show where a vehicle must yield to other vehicles or pedestrians."
+      ],
+      "78": [
+        "These markings: • Alert drivers that bicyclists may be on the road, • Tell bicyclists where to ride, and • Discourage biking in the wrong direction."
+      ],
+      "79": [
+        "a crash on a road with a speed limit of 65 miles per hour (mph) or higher is:",
+        "More than twice as likely to result in death than a crash on a road with a speed limit of 45 or 50 mph."
+      ],
+      "80": [
+        "Use the lines on the edge of the road or the right side of the road as a guide."
+      ],
+      "81": [
+        "you must turn on your headlights anytime there is not enough light to clearly see at least 1,000 feet in front of your vehicle."
+      ],
+      "82": [
+        "Maryland law requires that you turn on your headlights when using your windshield wipers in inclement weather."
+      ],
+      "83": [
+        "Change to low beams when following a vehicle that is 300 feet or less in front of you."
+      ],
+      "84": [
+        "Instead, look at the road in front of you, or slightly to the right of the lane you are traveling in"
+      ],
+      "85": [
+        "Use low beam headlights only. Also use fog lights if you have them."
+      ],
+      "86": [
+        "pull completely off the road to a safe location and turn on your emergency flashers."
+      ],
+      "87": [
+        "If your vehicle does not have an anti-lock braking system, pump the brakes to prevent skidding."
+      ],
+      "88": [
+        "Ramps and bridges freeze before roads."
+      ],
+      "89": [
+        "It can be very hard or impossible to see a thin layer of ice on blacktop (asphalt) roads. This is sometimes called black ice."
+      ],
+      "90": [
+        "Kitty litter or sand (for traction on snow and ice)"
+      ],
+      "91": [
+        "Steer in the direction you are skidding.",
+        "Release the accelerator (gas pedal) or brake pedal, whichever one you are using, to regain control of your vehicle."
+      ],
+      "92": [
+        "Take your foot off the gas.",
+        "Do not apply your brakes.",
+        "Keep your vehicle going straight."
+      ],
+      "93": [
+        "Buses, school buses, and trucks carrying hazardous materials must stop before every railroad crossing."
+      ],
+      "94": [
+        "If you have an emergency on or near a railroad crossing, get out of the vehicle and move away from the tracks."
+      ],
+      "95": [
+        "Orange is the color for work zones."
+      ],
+      "96": [
+        "Flashing blue lights Active speed cameras"
+      ],
+      "97": [
+        "Flashing amber/yellow lights Active work zone/workers present"
+      ],
+      "98": [
+        "When you come to a traffic circle, you must always yield to traffic already in the circle."
+      ],
+      "99": [
+        "When preparing to exit, turn on your right turn signal and move to the outside lane after you pass the exit before the one you plan to take."
+      ],
+      "100": [
+        "You use the acceleration lane to adjust your speed to the flow of traffic already on the interstate."
+      ],
+      "101": [
+        "If you exit at the wrong place, continue until you are off the exit ramp. Then look for a way to re-enter the road. Never stop and back up on any part of the highway."
+      ],
+      "102": [
+        "You may stop on the shoulder, but only when your vehicle is disabled (stops running) or you have another emergency."
+      ],
+      "103": [
+        "Even if they have a green signal, other vehicles must yield the right-of-way to vehicles in a funeral procession."
+      ],
+      "104": [
+        "Some of them may have the slow-moving sign (shown) on the back of their vehicle to warn you they are only going 25 miles per hour or less."
+      ],
+      "105": [
+        "Maryland considers drivers to be driving under the influence of alcohol when their blood alcohol concentration is .08 or higher."
+      ],
+      "106": [
+        "If law enforcement stops you and you have been drinking, your license will be suspended or revoked."
+      ],
+      "107": [
+        "The passenger area of a vehicle includes: The driver and passenger seats. Any place the driver or passengers can easily reach from where they are sitting."
+      ],
+      "108": [
+        "If you are convicted of a drunk or drugged driving offense with a child in your vehicle, the judge can double your fine and jail time."
+      ],
+      "109": [
+        "Examples of aggressive driving include: speeding, tailgating, ignoring traffic signals and devices, making unsafe lane changes, not yielding the right-of-way, and unsafe or illegal passing."
+      ],
+      "110": [
+        "If you are under 18 years old, you may not use a cell phone while driving, even hands-free. The only exception is that you may use it to make a 911 emergency call."
+      ],
+      "111": [
+        "It is illegal to use a hand-held cell phone, including texting, while driving.",
+        "You can use your phone for calls while driving if you are not holding it (hands-free)."
+      ],
+      "112": [
+        "Sleepiness slows reaction time, decreases awareness, and impairs judgment, just like drugs or alcohol."
+      ],
+      "113": [
+        "You have wandering, disconnected thoughts.",
+        "You don’t remember driving the last few miles.",
+        "You keep changing your speed."
+      ],
+      "114": [
+        "Being arrested for impaired driving has serious consequences including big ﬁnes, possible jail time, and thousands of dollars in court costs."
+      ],
+      "115": [
+        "One-third of fatal crashes are caused by distracted driving."
+      ],
+      "116": [
+        "You may not pass any vehicle that is stopped at a crosswalk."
+      ],
+      "117": [
+        "Move as close as possible to the edge of the road.",
+        "Stay out of intersections, and",
+        "Remain stopped until the emergency vehicle has passed."
+      ],
+      "118": [
+        "If it is not possible to move over, you must slow down to a safe speed and prepare to stop if necessary."
+      ],
+      "119": [
+        "When making a right turn, large trucks will often move left before making the turn.",
+        "Passing any truck on the right can be risky.",
+        "You could find yourself caught between the turning truck and the curb."
+      ],
+      "120": [
+        "Fully loaded trucks can weigh more than 80,000 pounds and take the length of a football field to stop."
+      ],
+      "121": [
+        "move back into the lane with the truck only when you can see both of its headlights in your rear-view mirror."
+      ],
+      "122": [
+        "Stop at least 20 feet from the back of the school bus, if you are behind it.",
+        "Stop at least 20 feet from the front of the school bus, if you are in front of it."
+      ],
+      "123": [
+        "If you are on a multiple lane road divided by a physical barrier, do not stop if the bus is on the other side of the barrier."
+      ],
+      "124": [
+        "Drivers are at fault in over half of car crashes with motorcycles.",
+        "When there is a crash involving a car and a motorcycle, the car driver is at fault more than half of the time."
+      ],
+      "125": [
+        "Leave at least a 3 to 4-second following distance between your vehicle and the motorcycle in front of you."
+      ],
+      "126": [
+        "Do not share a lane with a motorcycle.",
+        "Motorcyclists are allowed to use the whole lane."
+      ],
+      "127": [
+        "Bicycles are vehicles, according to Maryland law. Bicyclists are allowed to use the road and must obey all traffic signals."
+      ],
+      "128": [
+        "Expect to find bicyclists: On all types of roads (except interstate highways, and bridges and tunnels with tolls)."
+      ],
+      "129": [
+        "leave at least 3 feet between your vehicle and the bicycle when passing."
+      ],
+      "130": [
+        "Bicycles have the same right of way as pedestrians in a crosswalk."
+      ],
+      "131": [
+        "They may do this because the road is narrow, or to avoid obstacles or pavement hazards.",
+        "On roads without shoulders, or when cars are parked along the right side, a bicyclist is often safest riding in the center of the travel lane."
+      ],
+      "132": [
+        "As you approach a bicyclist, slow down. Do not honk your horn.",
+        "Bicyclists can usually hear an approaching vehicle and loud noises can startle them, causing a crash."
+      ],
+      "133": [
+        "Mopeds and scooters may be ridden on any road with a posted maximum speed limit of 50 miles per hour or less."
+      ],
+      "134": [
+        "The technology has limitations and may not work properly in rain, snow, fog, on hills, and around curves."
+      ],
+      "135": [
+        "If you are involved in a crash where someone has been injured... Do not move the vehicles."
+      ],
+      "136": [
+        "Leaving the scene of a crash where someone dies is a felony. You could go to prison for up to 10 years and a be fined up to $10,000."
+      ],
+      "137": [
+        "If there are no injuries and your vehicle can move: Move your vehicle off the road as close as possible to where the crash occurred."
+      ],
+      "138": [
+        "Remember, you must always call the police when: ... A driver appears to be under the influence of alcohol or drugs."
+      ],
+      "139": [
+        "Before starting a right turn, move as far to the right as possible within the bike lane, shoulder, or right turn lane."
+      ],
+      "140": [
+        "If you see a dim reflective object at night do not assume it is off the road. It could be a bicycle in a travel lane.",
+        "When approaching a bicycle, use your low beam headlights."
+      ],
+      "141": [
+        "when riding your bicycle on a sidewalk, remember to give pedestrians and those in assisted mobility devices the right-of-way."
+      ],
+      "142": [
+        "When used properly, they prevent 40% of crashes."
+      ],
+      "143": [
+        "If you cannot find the owner of the vehicle or property, leave them a note about what happened with your contact information."
+      ],
+      "144": [
+        "If you hit and injure a domestic animal with your vehicle, you must immediately call the police."
+      ],
+      "145": [
+        "Never stop or park in the triangular shaped painted zones where a ramp exits the road."
+      ],
+      "146": [
+        "Get behind an embankment, traffic barrier, or guard-rail. If possible, move to higher ground. Face oncoming traffic"
+      ],
+      "147": [
+        "Keep your hands in plain view – on the steering wheel is best."
+      ],
+      "148": [
+        "If it is not safe or possible to move over, you must slow down to a safe speed."
+      ],
+      "149": [
+        "A $150 fine and three points if the violation causes a crash."
+      ],
+      "150": [
+        "When there is a crash involving a car and a motorcycle, the car driver is at fault more than half of the time."
+      ],
+      "151": [
+        "you may not drive unsupervised with passengers under the age of 18 for the first 151 days unless they are immediate family members."
+      ],
+      "152": [
+        "you are allowed to drive unsupervised between 12:00 midnight and 5:00 a.m., ONLY if you are: ... Driving to or from an official school activity."
+      ],
+      "153": [
+        "you may not use any wireless communication device (including a hands-free phone) while driving. The only exception is a 911 emergency call."
+      ],
+      "154": [
+        "you consent (agree) to take a drug or alcohol test if a law enforcement officer asks you to."
+      ],
+      "155": [
+        "Your license will be suspended if your blood alcohol concentration is .08 percent or higher."
+      ],
+      "156": [
+        "Suspension or revocation periods begin when the MVA receives your license."
+      ],
+      "157": [
+        "The FIRST offense requires you to complete a driver improvement program."
+      ],
+      "158": [
+        "A FOURTH or MORE offenses will result in your license being revoked. You must pass all licensing tests to get your license back."
+      ],
+      "159": [
+        "The MVA may cancel your driver’s license if they determine that: ... You committed fraud when you applied for or obtained your license."
+      ],
+      "160": [
+        "A SECOND offense will result in a 30-day suspension of your license."
+      ],
+      "161": [
+        "Parking on any part of an access aisle next to a disability parking space (even if you have a disability license plate or placard)."
+      ],
+      "162": [
+        "If you are caught drinking and driving, you will have to install a breathalyzer car lock that will prevent you from starting the vehicle if alcohol is detected."
+      ],
+      "163": [
+        "A heart condition that has caused a loss of consciousness in the past 6 months."
+      ],
+      "164": [
+        "At least 21 years old.",
+        "Currently licensed for at least three years in Maryland or another state to drive the same class of vehicles that you are driving.",
+        "Seated beside you, unless the vehicle is a motorcycle."
+      ],
+      "165": [
+        "Minors at least 16 years old may be organ donors if a parent or guardian consents (agrees) in writing."
+      ],
+      "166": [
+        "You must always have a valid insurance identification card with you when driving a motor vehicle. This card may be in electronic format."
+      ],
+      "167": [
+        "By law, the driver and all passengers of a motor vehicle must wear a safety belt or be buckled in a child safety seat."
+      ],
+      "168": [
+        "All children under age 8 must ride in a child safety seat, unless the child is 4’9” or taller."
+      ],
+      "169": [
+        "Children younger than 2 must ride in a rear-facing child safety seat that meets federal guidelines until they reach the height or weight specified by the manufacturer."
+      ],
+      "170": [
+        "Try to keep 10-12 inches between the steering wheel and your chest."
+      ],
+      "171": [
+        "The revocation of a Maryland driver’s license is more severe than a suspension.",
+        "If your driver’s license is revoked, there is a minimum waiting period before you can request that the MVA reinstate it"
+      ],
+      "172": [
+        "Children under age 13 should ride buckled up in a rear seat in a child safety seat or with a seat belt."
+      ],
+      "173": [
+        "When the ABS engages, you may hear a rumble from the brakes and the brake pedal will vibrate under your foot."
+      ],
+      "174": [
+        "You may not drive with earplugs, headsets, or earphones in both ears. Hearing aid devices are allowed."
+      ],
+      "175": [
+        "Parallel parking is no longer required when you take your driving test."
+      ],
+      "176": [
+        "The parking is done in a 10’ by 20’ space during the test, and the turn in a 16’ by 20’ space."
+      ],
+      "177": [
+        "Ride with Traffic: Always ride on the right side."
+      ],
+      "178": [
+        "If you do not keep insurance on all vehicles, you will be fined up to $2,500 per vehicle each year."
+      ],
+      "179": [
+        "Helmets are required for anyone under age 16 riding on a bike."
+      ],
+      "180": [
+        "Brakes that can stop the bicycle within 15 feet when it is going 10 miles per hour on dry, level, clean pavement."
+      ],
+      "181": [
+        "Maryland State Law requires a white headlight on the front of your bicycle, and a red reflector on the back. They must be visible from at least 600 feet away."
+      ],
+      "182": [
+        "Class 1: Have a motor that provides assistance only when the rider is pedaling, and stops providing assistance when the bicycle reaches a speed of 20 miles per hour."
+      ],
+      "183": [
+        "Have handlebars and a platform the rider stands on.",
+        "Are designed to transport only the operator.",
+        "Weigh less than100 pounds."
+      ],
+      "184": [
+        "Pregnant women should place the lap part of the seat belt under the abdomen as low as possible on the hips and across the upper thighs."
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 30,
-    "topics_covered": 30,
-    "coverage_pct": 100.0,
-    "uncovered_topics": [],
+    "topics_total": 28,
+    "topics_covered": 26,
+    "coverage_pct": 92.9,
+    "uncovered_topics": [
+      "conditions where passing on the right is allowed",
+      "double solid white lines for lane changing restrictions"
+    ],
     "verdict": "PASS",
     "grade": "A"
   },
@@ -64,6 +655,32 @@
     "sign_ratio_pct": 8.9,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 184,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    },
+    "ja": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 184,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

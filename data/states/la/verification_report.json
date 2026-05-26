@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "la",
   "name": "Louisiana",
-  "verified_at": "2026-05-26T02:29:33Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:06:12Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://dpsweb.dps.louisiana.gov/DPSForms.nsf/8bad5589175b8981862575f20048ee65/5402fbe0178e092686257c1a005ff1cb?OpenDocument",
     "manual_pdf_sha256": "d629829cace0def41b18b82fdc27b6e86ea6e9002cecc2774929424ef9e2d3fa",
@@ -23,21 +23,1734 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 554,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "The driving experience, however, is a privilege and comes with great responsibilities."
+      ],
+      "2": [
+        "This guide is not intended to be an official legal reference to the Louisiana traffic laws. It only highlights those laws, driving practices and procedures that you will use most often."
+      ],
+      "3": [
+        "Remember to buckle up. Safety belts save lives."
+      ],
+      "4": [
+        "the material in this guide is subject to change to comply with amended State and Federal legislations."
+      ],
+      "5": [
+        "CHAPTER 1 ....................................................................................................................................................................................... 1",
+        "GRADUATED LICENSING PROGRAM .......................................................................................... 6"
+      ],
+      "6": [
+        "CHAPTER 2 .................................................................................................................................................................................... 17",
+        "THREE MAIN COMPONENTS ......................................................................................................... 17"
+      ],
+      "7": [
+        "CHAPTER 6 .................................................................................................................................................................................... 85",
+        "AUTOMOBILE INSURANCE FRAUD ........................................................................................ 100"
+      ],
+      "8": [
+        "TIPS TO PREVENT AUTOMOBILE THEFT – “PARK SMART” ................................................... 101"
+      ],
+      "9": [
+        "SHARING THE ROAD WITH BICYCLES .................................................................................... 78",
+        "SHARING THE ROAD WITH MOTORCYCLES ...................................................................... 80",
+        "SHARING THE ROAD WITH BIG TRUCKS .............................................................................. 81"
+      ],
+      "10": [
+        "CHAPTER 7 ................................................................................................................................................................................. 102",
+        "SLOW MOVING VEHICLES ........................................................................................................... 107"
+      ],
+      "11": [
+        "SEASONAL CHANGES AND HOW THEY AFFECT DRIVING"
+      ],
+      "12": [
+        "AGGRESSIVE DRIVING/ROAD RAGE"
+      ],
+      "13": [
+        "REVOCATION OF YOUR LICENSE ............................................................................................. 12"
+      ],
+      "14": [
+        "This guide is designed to provide you with the rules of the road, knowledge to assist you in making better driving decisions"
+      ],
+      "15": [
+        "TIPS TO AVOID BECOMING A VICTIM OF A STAGED AUTOMOBILE ACCIDENT"
+      ],
+      "16": [
+        "Always carry your license with you when driving."
+      ],
+      "17": [
+        "New residents have 30 days from the time residency is established to obtain a Louisiana license."
+      ],
+      "18": [
+        "Non-residents who possess a valid license issued by another state. You are permitted to drive in this state for a period of 90 days."
+      ],
+      "19": [
+        "Non- resident students who possess both a valid driver’s license issued by their home state and a current student ID card."
+      ],
+      "20": [
+        "Anyone operating a farm tractor, farm implements, or road machinery temporarily on the highway."
+      ],
+      "21": [
+        "CLASS “E” - Permits the operation of any single motor vehicle under 10,001 pounds"
+      ],
+      "22": [
+        "CLASS “D” - Permits the operation of any single vehicle used in commerce having a gross vehicle weight rating of 10,001 pounds or more but less than 26,001 pounds"
+      ],
+      "23": [
+        "any such vehicle towing a vehicle not in excess of 10,000 pounds gross vehicle weight rating"
+      ],
+      "24": [
+        "If you are driving interstate commerce, you must also meet Department of Transportation (DOT) physical standards."
+      ],
+      "25": [
+        "Class E $20.25 $12.00 $0 – 6 $32.25 6 Years"
+      ],
+      "26": [
+        "ID Card (60+) $0.00 $0.00 $0 - 6 $0.00 Lifetime"
+      ],
+      "27": [
+        "You are required to show your license to any law enforcement officer or any officer who may ask to see it."
+      ],
+      "28": [
+        "A class “D” license may be used for transportation of passengers for hire or fee provided the usage thereof does not fall within the definition of vehicles in classes “A”, “B”, or “C”."
+      ],
+      "29": [
+        "There is a $12.00 handling fee, (except for identification cards and duplicate identification cards for applicants 60 and older)."
+      ],
+      "30": [
+        "Photocopies are not acceptable whether notarized or not."
+      ],
+      "31": [
+        "One primary and two secondary documents OR",
+        "Two primary documents OR",
+        "If an applicant has a Louisiana identification card with a photo... additional identification is not required."
+      ],
+      "32": [
+        "Only the domiciliary parent may sign if joint custody has been awarded."
+      ],
+      "33": [
+        "New residents have 30 days from the time residency is established to obtain a Louisiana license."
+      ],
+      "34": [
+        "All applicants for a Louisiana driver’s license are required to pass a vision exam administered by the Office of Motor Vehicles personnel at the time of application."
+      ],
+      "35": [
+        "the Social Security Number is required from all male US citizens or immigrants age 15 to 26 who apply for a driver's license or ID card."
+      ],
+      "36": [
+        "The enrollment form is obtained from the school the applicant is currently enrolled in and cannot be more than 90 days old."
+      ],
+      "37": [
+        "there must be AT LEAST 180 DAYS remaining on your VISA/I-94 to be considered for issuance."
+      ],
+      "38": [
+        "Class E - Minimum fifteen (15) years of age for a learner’s permit; must complete all stages of the Graduated Licensing Program."
+      ],
+      "39": [
+        "minimum age twenty-one (21) to travel interstate or obtain a hazardous material endorsement."
+      ],
+      "40": [
+        "Original certificate of birth",
+        "Birth registration card or certificate issued by a state or county Bureau of Vital Statistics"
+      ],
+      "41": [
+        "you must submit either a letter of clearance or an official driving record from your last state of license."
+      ],
+      "42": [
+        "An original “Refugee Resettlement Program” letter with a color photo is valid for a period of 15 days from the date of issue."
+      ],
+      "43": [
+        "It is known as the R.Y.A.N ACT (Reduce Youth Accidents Now) and was named for a fifteen year old, Ryan Lee, who lost his life in a traffic accident"
+      ],
+      "44": [
+        "Per mile driven, teenage drivers ages 16-19 are four times more likely to crash than older drivers."
+      ],
+      "45": [
+        "Is authorized to drive only with a licensed adult at least twenty-one (21) years of age or sibling at least eighteen (18) years of age."
+      ],
+      "46": [
+        "attesting that the applicant has a minimum of fifty (50) hours of behind-the-wheel driving experience with a licensed parent, guardian, or adult at least twenty-one (21) years of age."
+      ],
+      "47": [
+        "Is prohibited from driving between the hours of 11:00 p.m. and 5:00 a.m., unless accompanied by a licensed adult at least twenty-one (21) years of age or sibling at least eighteen (18) years of age."
+      ],
+      "48": [
+        "between the hours of 6:00 p.m. and 5:00 a.m., an intermediate licensee may not transport more than one passenger under the age of twenty-one (21) years of age that is not a member of the immediate family."
+      ],
+      "49": [
+        "it must contain the name of the company, the policy number, the effective dates, the vehicle description, the name of the insured party, and the NAIC number."
+      ],
+      "50": [
+        "The screening will determine if your vision meets minimum standards (20/40) for safe driving."
+      ],
+      "51": [
+        "Your license will display an “01” for this restriction."
+      ],
+      "52": [
+        "you must correctly answer 80 percent of these questions to receive a passing score."
+      ],
+      "53": [
+        "NOTE: SPEEDOMETER MUST BE OPERATIONAL."
+      ],
+      "54": [
+        "Only the applicant, the OMV staffer, and the interpreter (if applicable) are permitted in the vehicle during the road skills test."
+      ],
+      "55": [
+        "All vehicles manufactured after 1964 must be equipped with functional seat belts."
+      ],
+      "56": [
+        "completion of a thirty-eight (38) hour driver’s education course or a six (6) hour pre-licensing course and an eight hour behind-the-wheel course."
+      ],
+      "57": [
+        "You will fail the skills test for any of the following: • A violation of any traffic law"
+      ],
+      "58": [
+        "road skills (driving) tests administered at the Office of Motor Vehicles are suspended during inclement weather."
+      ],
+      "59": [
+        "Your driver’s license will expire six years from your nearest birthday."
+      ],
+      "60": [
+        "Louisiana law requires you to correct the address on your license within 10 days after a move."
+      ],
+      "61": [
+        "The license will be considered expired/delinquent on the 61st day after discharge."
+      ],
+      "62": [
+        "Every physically impaired person and persons over the age of 60 applying for a license for the first time must submit a detailed report from a physician and/or vision specialist."
+      ],
+      "63": [
+        "Convictions for DWI are maintained for 10 years."
+      ],
+      "64": [
+        "Failure to pay child support",
+        "Failure to pay state income taxes"
+      ],
+      "65": [
+        "results show a BAC level of 0.08% or more for those 21 years of age or older"
+      ],
+      "66": [
+        "Three convictions of reckless driving committed within a 12 month period."
+      ],
+      "67": [
+        "If you are a Louisiana resident under the age of seventy (70) with a class “D” or “E” license, you may be selected to renew your license by mail or internet."
+      ],
+      "68": [
+        "In the case of joint custody, only the domiciliary parent may sign for the minor child."
+      ],
+      "69": [
+        "Failure to stop for a school bus loading or unloading children."
+      ],
+      "70": [
+        "Withdrawing from school prior to graduation if you are 15 but less than 18 years of age"
+      ],
+      "71": [
+        "Withdrawing from school prior to graduation if you are 15 but less than 18 years of age or have been determined to be habitually absent or tardy."
+      ],
+      "72": [
+        "Failure to pay child support",
+        "Failure to pay state income taxes"
+      ],
+      "73": [
+        "The driver is responsible for all litter coming from the vehicle’s interior or truck bed, and the driver can be cited for littering committed by the passengers"
+      ],
+      "74": [
+        "penalties for conviction range from a $50 fine... to a $5,000 fine, one year driver’s license suspension, 30 days in jail AND 100 hours of community service."
+      ],
+      "75": [
+        "Tobacco products, mostly cigarette butts, are the most littered item along Louisiana roadways."
+      ],
+      "76": [
+        "Studies also show that age, and not gender, is a significant factor in littering. Those under 30 are more likely to litter than those who are older."
+      ],
+      "77": [
+        "Businesses pay about 80% of the cost to clean up litter with the government funding the remainder."
+      ],
+      "78": [
+        "Your designation will be marked on the front of your license or ID card with a red heart."
+      ],
+      "79": [
+        "Louisiana’s registry allows citizens to make legally binding decisions to be donors. Family consent is required only for minors."
+      ],
+      "80": [
+        "The level of medical care you receive in any hospital is not affected by your choice to register as an organ, eye and tissue donor."
+      ],
+      "81": [
+        "Organs are placed based on blood type, size, weight, severity of illness, time on the waiting list, and geography.",
+        "It is illegal to allocate organs based on fame, wealth, citizenship or political power."
+      ],
+      "82": [
+        "You have the ability to save 9 lives and heal the lives of up to 50 additional people through tissue donation."
+      ],
+      "83": [
+        "This legislation requires state governments to allow for registration by qualifying voters whenever they apply for or renew their driver’s license"
+      ],
+      "84": [
+        "If you do not receive confirmation within two (2) weeks, please contact your local Voter Registrar’s Office."
+      ],
+      "85": [
+        "other parts never do because the filter is made of a type of acetate that never fully breaks down."
+      ],
+      "86": [
+        "If you do not receive confirmation within two (2) weeks, please contact your local Voter Registrar’s Office."
+      ],
+      "87": [
+        "The goal of the HTS is to provide safe, rapid and efficient transportation of persons and goods to a desired destination"
+      ],
+      "88": [
+        "The Highway Transportation System consists of three major components: People, Vehicles, and Roads."
+      ],
+      "89": [
+        "Motor vehicle crashes are the leading cause of death among people ages 1-34"
+      ],
+      "90": [
+        "Local governments own 75 percent of the nearly four million-mile roadway network"
+      ],
+      "91": [
+        "The Department of Motor Vehicles regulates drivers licenses, truck weights and operators, license plates, fees registration, taxes, and titles"
+      ],
+      "92": [
+        "Highway engineering works to make our HTS the safest system in the world and vehicle engineering works to make vehicles safer and easier to operate."
+      ],
+      "93": [
+        "Traffic collisions have become the number one cause of teenage deaths."
+      ],
+      "94": [
+        "Most of this decrease is due to seat belts, airbags, and improved safety features in vehicles."
+      ],
+      "95": [
+        "five leading causes of motor vehicles crashes in Louisiana (2010) as: 1. Careless, and/or Reckless Operation"
+      ],
+      "96": [
+        "motor vehicle crashes cost on average each licensed driver in Louisiana $1855.00."
+      ],
+      "97": [
+        "Sixty percent of freight is transported on the roads."
+      ],
+      "98": [
+        "Seventy-five percent of highway miles are in rural areas."
+      ],
+      "99": [
+        "goal of educating the public is to impart knowledge of the rules of the road; the basic skills involved in vehicle operation, and instill and reinforce attitudes"
+      ],
+      "100": [
+        "Another factor in how the vehicle performs is the condition of the vehicle. The equipment it has, the age of the vehicle and whether or not regular maintenance"
+      ],
+      "101": [
+        "They may be driving under the posted speed limit, yet still too fast for existing weather, traffic conditions, or even their own physical health."
+      ],
+      "102": [
+        "EVEN numbered highways go East and West. ODD numbered highways go North and South."
+      ],
+      "103": [
+        "The main difference is that these roads collect tolls using a ticket system. You get a ticket when you get on the highway and you pay the ticket when you get off."
+      ],
+      "104": [
+        "Too much water on the road can cause a vehicle’s tires to start skimming on the surface of the water instead of gripping the road. This condition is called hydroplaning."
+      ],
+      "105": [
+        "The octagon shape sign is used exclusively for stop signs. Slow down and come to a complete stop."
+      ],
+      "106": [
+        "The triangle shaped sign with the point down is used exclusively for yield signs."
+      ],
+      "107": [
+        "The triangle shaped sign with the point sideways is used to indicate no passing zones."
+      ],
+      "108": [
+        "Intersections are a hazard to drivers. About 40 percent of all crashes occur at intersections."
+      ],
+      "109": [
+        "Rumble strips alert the driver that he is veering off the road or heading into a different lane."
+      ],
+      "110": [
+        "Traffic control also can be provided by law enforcement, highway personnel or school crossing guards. You must obey directions from these persons."
+      ],
+      "111": [
+        "the \"golden rule\" of driving to treat others the way you would want to be treated."
+      ],
+      "112": [
+        "Partial Access Highways: A highway that allows access at other streets, probably at a stop light, though driveways and other forms of access are not allowed."
+      ],
+      "113": [
+        "The rectangle shape is used for regulatory signs, which include speed limit, school zones, parking and loading zones."
+      ],
+      "114": [
+        "The Federal Highway Administration (FHWA) is a federal agency that has the chief responsibility of improving roadway safety."
+      ],
+      "115": [
+        "Florescent Pink – Used as background color for incident management signs such as hurricane or a road closure due to a crash."
+      ],
+      "116": [
+        "Yellow - Used as background color for warning signs and school signs Means: Caution, be alert, prepare to slow down"
+      ],
+      "117": [
+        "Shared Center Lane Left Turn Only – This sign tells you where a lane is reserved for the use of left turning vehicles from either direction"
+      ],
+      "118": [
+        "The maximum limit should be driven only in ideal driving conditions and you must reduce your speed when weather or traffic conditions require it."
+      ],
+      "119": [
+        "Do Not Enter – A square sign with a white horizontal line inside a red circle means you cannot enter."
+      ],
+      "120": [
+        "after stopping at the stop line and checking for traffic and pedestrians, you may turn right on red."
+      ],
+      "121": [
+        "Florescent Yellow-Green – used as background color for pedestrian, bicycle and school warning signs."
+      ],
+      "122": [
+        "If the word “Exit” is written on the left side of an exit sign, the exit lane or ramp is to the left"
+      ],
+      "123": [
+        "You must not enter an intersection if traffic conditions do not permit you to clear the intersection completely."
+      ],
+      "124": [
+        "These signs are usually yellow with black lettering or symbols and are diamond shaped."
+      ],
+      "125": [
+        "Pass With Care – This sign tells you that you are at the end of a no passing zone. You may pass only when it is safe to do so."
+      ],
+      "126": [
+        "The speed limit is required only when flashing; otherwise obey the roadways speed limit."
+      ],
+      "127": [
+        "Blue – Used as background color for traveler services, information signs, emergency evacuation route signs"
+      ],
+      "128": [
+        "you are legally required to travel at least this fast so as not to be a hazard to other drivers."
+      ],
+      "129": [
+        "Destination Signs - These green or brown signs... show direction and distance to various locations"
+      ],
+      "130": [
+        "These signs are fluorescent pink with black lettering.",
+        "roadways are closed or detoured due to a road user incident, natural disaster, hazardous material spill"
+      ],
+      "131": [
+        "In Louisiana, traffic fines are double for construction zones."
+      ],
+      "132": [
+        "Stripes sloping downward to the right mean the driver should bear to the right."
+      ],
+      "133": [
+        "traffic lights are horizontal, instead of vertical, where the red light is on the left, the yellow light is in the middle and the green light is on the right."
+      ],
+      "134": [
+        "Flashing YELLOW Traffic Light – This means slow down, look for any traffic entering the intersection and proceed with caution."
+      ],
+      "135": [
+        "Some left turns may be permitted on red when moving from a one-way street onto another one-way street."
+      ],
+      "136": [
+        "Double Solid Yellow lines are used to mark the center of the roadway when there are four or more lanes of traffic. You may not cross these lines to pass. You may cross these lines to make a turn."
+      ],
+      "137": [
+        "Any vehicle traveling at a speed less than the normal speed of traffic shall travel in the right lane only."
+      ],
+      "138": [
+        "Single Solid White lines indicate movement from lane to lane is hazardous. The wider the line, the greater the hazard. You may cross a solid white line only with great care."
+      ],
+      "139": [
+        "Service Signs – These blue signs are square or rectangular shaped with white lettering or symbols. They show the location of various services such as rest areas, gas stations, hotels or hospitals."
+      ],
+      "140": [
+        "Low Shoulder Indicates sharp drop from the pavement edge to the shoulder."
+      ],
+      "141": [
+        "Flashing RED Traffic Light – This means you must stop behind a stop line, crosswalk, or intersection before entering and use the same procedure as you would at a stop sign"
+      ],
+      "142": [
+        "Red Pavement Marking or reflectors indicate a roadway that must not be entered."
+      ],
+      "143": [
+        "The pavement is marked with a large “X” and two “R's”. A solid yellow center line extends the entire distance to prevent passing"
+      ],
+      "144": [
+        "Louisiana law states that all vehicles should travel in the right hand lane unless, preparing for a left turn, passing another vehicle or when right hand lanes are congested."
+      ],
+      "145": [
+        "The designated center lane may be used by vehicles traveling in either direction. For left turn maneuvers ONLY. The lane must NEVER be used for passing."
+      ],
+      "146": [
+        "When pedestrians are in these crosswalks, they have the right of way over motor vehicles. You must stop for pedestrians in crosswalks."
+      ],
+      "147": [
+        "If you stop and wait for a chance to change lanes you are blocking traffic. You must go ahead and make the turn. Drive around the block and return to the street you want."
+      ],
+      "148": [
+        "In a roundabout, traffic yields to the circulation traffic."
+      ],
+      "149": [
+        "Once your body has come to a stop against some part of the car, the force of the crash goes on inside you. Your kidneys and other organs may also smash into your bones."
+      ],
+      "150": [
+        "The most common traffic violation is speeding."
+      ],
+      "151": [
+        "Newton’s 3rd law of motion tells us that for every action, there is an equal and opposite reaction.",
+        "Each car experiences the same force during the collision, but the change in velocity will be much greater on the lighter of two vehicles."
+      ],
+      "152": [
+        "People who wear safety belts reduce their risk of serious injury by 50 percent and also reduce the risk of fatalities by 50 percent."
+      ],
+      "153": [
+        "Your safety belt should fit snugly across your hips.",
+        "Your hip bones are strong and can absorb more of the impact than your abdominal region."
+      ],
+      "154": [
+        "80% of deaths occur in cars traveling less than 40 miles an hour."
+      ],
+      "155": [
+        "There’s less than one-half of one percent chance of being trapped in a burning or submerged car."
+      ],
+      "156": [
+        "If you are pregnant, you and your unborn child are much safer if you wear a lap and shoulder belt."
+      ],
+      "157": [
+        "Non-belted fatalities have been recorded at speeds as low as 12 mph."
+      ],
+      "158": [
+        "Where arrows indicate more than one direction, you may choose any direction"
+      ],
+      "159": [
+        "If everyone that was in a crash was wearing their seatbelt at the time of the crash, 60% more lives could have been saved."
+      ],
+      "160": [
+        "Lap belts should be buckled snugly across your hips and lower part of your abdomen."
+      ],
+      "161": [
+        "A child 6 years or younger or under 60 lbs. may not be transported in the front seat of a vehicle with an active airbag."
+      ],
+      "162": [
+        "Birth or less than 20 lbs. at any age - rear facing, federally approved car seat"
+      ],
+      "163": [
+        "A child that falls into more than one category for age or weight must choose the more protective category."
+      ],
+      "164": [
+        "The middle of the back seat in a passenger car is safer than the front seat."
+      ],
+      "165": [
+        "The recommended positions are 9 and 3 or 8 and 4."
+      ],
+      "166": [
+        "Sit at least 10 inches away from the steering wheel equipped with an air bag"
+      ],
+      "167": [
+        "Air bags do not deploy when you are rear-ended by another car."
+      ],
+      "168": [
+        "\"Active safety\" refers to technology assisting in the prevention of a crash"
+      ],
+      "169": [
+        "\"passive safety\" refers to components of the vehicle (primarily airbags, seatbelts and the physical structure of the vehicle)"
+      ],
+      "170": [
+        "Tempered glass side and rear windows break into granules with minimally sharp edges, rather than splintering into jagged fragments"
+      ],
+      "171": [
+        "Crumple zones absorb and dissipate the force of a collision, displacing and diverting it away from the passenger compartment"
+      ],
+      "172": [
+        "School buses and semi-trailer trucks in North America are required to bear retro reflective strips outlining their side and rear perimeters for greater visibility at night."
+      ],
+      "173": [
+        "Some studies indicate that color may be a factor in determining safety. Lighter color cars seem to be involved in fewer accidents than darker colors."
+      ],
+      "174": [
+        "Lighter color cars seem to be involved in fewer accidents than darker colors."
+      ],
+      "175": [
+        "Ensure tires have adequate tread – at least 1/16 of an inch depth between all treads."
+      ],
+      "176": [
+        "Check the spare tire, jack and emergency equipment for serviceability."
+      ],
+      "177": [
+        "Make sure you vehicle’s engine has cooled down before checking under the hood and ensure the parking brake is applied"
+      ],
+      "178": [
+        "Look in the front, under and behind, scanning for any objects in your travel path. Walk around your vehicle."
+      ],
+      "179": [
+        "your knees should always be slightly bent",
+        "Your right heel should also be firmly planted on the floor so that you can shift your foot between the gas and brake pedal"
+      ],
+      "180": [
+        "Always stop far enough away from the vehicle in front of you so that you can see the bottom of the tires."
+      ],
+      "181": [
+        "When you back up, turn your head and look back. Don’t just look into the rear view mirror."
+      ],
+      "182": [
+        "Never turn your vehicle’s ignition to the “lock” position while it is still in motion. This will cause the steering to lock if you try to turn the steering wheel and you will lose control of your vehicle."
+      ],
+      "183": [
+        "There are three basic skills of the driving task. 1. Physical skill. 2. Social skill. 3. Mental skill."
+      ],
+      "184": [
+        "tactical decisions, which include route selection, traffic congestion and load weight"
+      ],
+      "185": [
+        "Make sure your car is in park or neutral gear."
+      ],
+      "186": [
+        "There are many facilities located throughout the state that will take used batteries or motor oil."
+      ],
+      "187": [
+        "Of these factors, route selection, speed, and engine tuning are indicators they have the highest potential to sap fuel economy."
+      ],
+      "188": [
+        "Keeping your tires properly inflated can improve your gas mileage by as much as 3.3 percent."
+      ],
+      "189": [
+        "The correct tire pressure for your vehicle is usually found on a sticker located on the driver side door jam."
+      ],
+      "190": [
+        "The second type of tire is the performance tire which is used for faster cars. This type of tire is durable in dry weather but not suitable for wet weather."
+      ],
+      "191": [
+        "This tire is not to be used in dry conditions as it will get damaged on the road."
+      ],
+      "192": [
+        "The angle between the tires' actual path and its natural path is called its slip angle."
+      ],
+      "193": [
+        "Over steer is when the car turns more than expected."
+      ],
+      "194": [
+        "The correct reaction is to reduce the steering angle gently and ease off the accelerator."
+      ],
+      "195": [
+        "Front wheel drive vehicles are more prone to under steer."
+      ],
+      "196": [
+        "your left hand grasps the wheel between 7 and 8 o’clock and your right hand grasps the wheel between 4 and 5 o’clock."
+      ],
+      "197": [
+        "the 2 and 10 o’clock position is not recommended because it can be dangerous in vehicles equipped with air bags."
+      ],
+      "198": [
+        "Use hand-over-hand steering when turning the wheel at low speeds, such as at an intersection or when parking the vehicle."
+      ],
+      "199": [
+        "It is critical to limit the steering to not more than 180 degrees of steering when trying to evade a problem on the roadway."
+      ],
+      "200": [
+        "Use one hand steering only when backing or operating vehicle controls (wipers, flashers, lights, etc.)"
+      ],
+      "201": [
+        "The only time that 12 o’clock is recommended is when backing a vehicle to the left or right and the driver has to turn in the seat in order to see the path of travel."
+      ],
+      "202": [
+        "Every corner is made of three parts; the entry, the apex, and the exit."
+      ],
+      "203": [
+        "That means doubling the speed generates four times the cornering force."
+      ],
+      "204": [
+        "Both hands on the wheel, at nine and three o’clock."
+      ],
+      "205": [
+        "Ease off the gas as you turn in. This causes a little weight to transfer forwards, adding weight to the front wheels and helping the steering grip the road."
+      ],
+      "206": [
+        "Avoid driving through large puddles, which can impair your brakes, dirty your windshield, or cause you to hydroplane."
+      ],
+      "207": [
+        "keep in mind that new spring growth often causes seasonal allergies, and over-the-counter allergy drugs can have side effects or interact with other medications to diminish your driving ability."
+      ],
+      "208": [
+        "This is the maximum weight of all cargo and passengers that the vehicle can safely carry."
+      ],
+      "209": [
+        "In hot summer months, for every 10-degree Fahrenheit increase in air temperature, tire pressure increases approximately one pound."
+      ],
+      "210": [
+        "Avoid parking your vehicle near leaf piles to prevent fires that could start from your vehicle's catalytic converter."
+      ],
+      "211": [
+        "Eyes are the main thing that steers a car, not hands."
+      ],
+      "212": [
+        "The end of daylight saving time means reduced visibility on the roads, which can create unfamiliar driving conditions."
+      ],
+      "213": [
+        "If possible, go around potholes. They can throw your car's front end out of alignment."
+      ],
+      "214": [
+        "Mid-corner. Add a little acceleration, not very much – just enough to balance the car up"
+      ],
+      "215": [
+        "it is important to keep the other hand in the normal vehicle operating position of 8-9 o’clock or 3-4 o’clock"
+      ],
+      "216": [
+        "If you feel like you are floating, steer straight and gently release the gas pedal until you feel the tires make contact"
+      ],
+      "217": [
+        "Take extra precautions on bridges, overpasses and shaded areas, which can freeze first, and remain icy longer than roadways."
+      ],
+      "218": [
+        "Stop gently to avoid skidding. If your wheels start to lock up, ease off the brake."
+      ],
+      "219": [
+        "Should you become stranded due to weather conditions, do not leave your vehicle."
+      ],
+      "220": [
+        "The most important safety feature of the automobile is the driver."
+      ],
+      "221": [
+        "If it appears that an oncoming car is crossing into your lane, pull over to the roadside, sound the horn and flash your lights."
+      ],
+      "222": [
+        "Remember that driving too fast or too slow can increase the likelihood of collisions."
+      ],
+      "223": [
+        "P - Predict which hazards could potentially come into conflict with you"
+      ],
+      "224": [
+        "Defensive driving not only ensures road safety. It also safes fuel, lowers the cost of insurance premiums, and increase the overall life of the vehicle."
+      ],
+      "225": [
+        "Defensive drivers maintain a safe following distance.",
+        "Tailgating and following too closely does not allow for the needed seconds to avoid a possible crash."
+      ],
+      "226": [
+        "Alcohol is a factor in almost half of all fatal motor vehicle crashes."
+      ],
+      "227": [
+        "Even mild emotional feelings can affect your driving ability. Emotions are hard to control and they can make you temporarily accident prone."
+      ],
+      "228": [
+        "In wet driving conditions, do not drive faster than the windshield wipers can clear water from the windshield."
+      ],
+      "229": [
+        "Avoid an impaired driver by turning right at the nearest corner or exiting at the nearest exit."
+      ],
+      "230": [
+        "No snow tires allow you to drive on snow or ice at normal speeds."
+      ],
+      "231": [
+        "Driving has two structural components that conflict with each other--predictability and unpredictability."
+      ],
+      "232": [
+        "If you are worried, nervous, angry, frustrated or depressed, let someone else drive."
+      ],
+      "233": [
+        "A driver should rest every two hours and not drive longer than six or eight hours a day."
+      ],
+      "234": [
+        "A driver should rest every two hours and not drive longer than six or eight hours a day."
+      ],
+      "235": [
+        "your senses become dulled, your eyes become fixed on the road and you are not alert to traffic situations around you."
+      ],
+      "236": [
+        "The crash involves a single vehicle which leaves the roadway"
+      ],
+      "237": [
+        "Sugar and caffeine promote short-term alertness but may increase drowsiness over longer periods of time."
+      ],
+      "238": [
+        "Listen to radio talk shows rather than music. The discussion format will help keep you alert."
+      ],
+      "239": [
+        "Inability to recall the last few miles traveled"
+      ],
+      "240": [
+        "Young males between the ages of 16 and 29 seem to be more at risk."
+      ],
+      "241": [
+        "Pep pills, “uppers” and diet pills can make you feel nervous, dizzy, unable to concentrate, and they can affect your vision."
+      ],
+      "242": [
+        "Some prescription drugs can impact driving and can affect your reflexes, judgment, vision, and alertness in ways similar to alcohol."
+      ],
+      "243": [
+        "If for some reason you must give up your driving privileges, a Louisiana identification card is available at your local Motor Vehicle office."
+      ],
+      "244": [
+        "Alter schedule to avoid driving during peak roadway congestion periods.",
+        "Sit back in your seat and don’t clench your teeth."
+      ],
+      "245": [
+        "Avoid eye contact and steer clear, giving drivers plenty of room.",
+        "Don’t tailgate and don’t use the horn to “punish” the other driver."
+      ],
+      "246": [
+        "Drive to a police station or a public place where witnesses are readily available.",
+        "Above all, don’t drive home if someone is following you."
+      ],
+      "247": [
+        "Road rage is a criminal offense. This occurs when a traffic incident escalates into a far more serious situation."
+      ],
+      "248": [
+        "Looking 10 to 15 seconds ahead will allow time to prepare for traffic conditions. It also makes it easier to keep your car on a steady path."
+      ],
+      "249": [
+        "In the city, you should look at least two blocks or two traffic signals ahead."
+      ],
+      "250": [
+        "On the highway, you should look at least a quarter of a mile ahead."
+      ],
+      "251": [
+        "A visual lead is an area 20 to 30 seconds ahead from the front of the vehicle."
+      ],
+      "252": [
+        "At 60 mph, it can take about 4 to 5 seconds or 359 feet to react to a problem and bring the vehicle to a stop."
+      ],
+      "253": [
+        "At 30 mph, it can take about 2 to 3 seconds or 123 feet to react to a problem and bring the vehicle to a stop."
+      ],
+      "254": [
+        "At 60 mph, if you cannot see at least 400 feet ahead, you are driving too fast for your visibility."
+      ],
+      "255": [
+        "If stopped, look left, right and left again before entering the intersection."
+      ],
+      "256": [
+        "If you are stopped and your view of traffic or a cross street is blocked, edge forward slowly until you can see."
+      ],
+      "257": [
+        "You must yield to oncoming vehicles going straight ahead or turning right."
+      ],
+      "258": [
+        "Tailgating is a very common cause of crashes and can be avoided by simply moving to the right lane and letting the faster driver pass."
+      ],
+      "259": [
+        "In an urban area, you should look at least three blocks or three traffic signals ahead."
+      ],
+      "260": [
+        "Approach any highway-railroad grade crossing by slowing down at the round warning sign and looking in each direction prior to the tracks"
+      ],
+      "261": [
+        "Approach any highway-railroad grade crossing by slowing down at the round warning sign and looking in each direction prior to the tracks"
+      ],
+      "262": [
+        "Identify a 4 to 5 second gap in traffic, signal and look again in the direction of the lane change."
+      ],
+      "263": [
+        "Check your “blind spots” by turning your head and looking over your shoulder in the direction you plan to move."
+      ],
+      "264": [
+        "Always remember that the center inside rearview mirror is the primary mirror."
+      ],
+      "265": [
+        "Place your head against the driver’s side window and adjust the driver’s side mirror so you can barely see the driver’s side of your car."
+      ],
+      "266": [
+        "Perception distance is how far your vehicle travels in ideal conditions; from the time your eyes see a hazard until your brain recognizes it."
+      ],
+      "267": [
+        "The average driver has a reaction time of ¾ second to 1 second."
+      ],
+      "268": [
+        "When you double your speed from 20 to 40 mph the impact is 4 times greater."
+      ],
+      "269": [
+        "At 60 mph, your stopping distance is greater than that of a football field."
+      ],
+      "270": [
+        "Since most people have trouble judging distances, the “3-second rule” makes it easier for you."
+      ],
+      "271": [
+        "When to use the “four-second” rule: • Slippery roads",
+        "Following motorcycles – If the motorcycle and its’ rider should fall; you need extra distance to avoid the obstacle."
+      ],
+      "272": [
+        "The drivers of trucks, buses, vans or vehicles pulling campers or trailers may not be able to see you when you are directly behind them.",
+        "Large vehicles also block your view of the road ahead. Falling back allows you more room to see ahead."
+      ],
+      "273": [
+        "If you are being followed closely, pull to the right and allow the vehicle behind you to pass."
+      ],
+      "274": [
+        "Stop close to the right edge of the pavement."
+      ],
+      "275": [
+        "Check your mirrors for vehicles approaching quickly when you are going down hills or mountains.",
+        "Be alert for large trucks and buses that may be going too fast."
+      ],
+      "276": [
+        "Use it only when the road or street is too narrow to make a U-turn and you cannot go around the block."
+      ],
+      "277": [
+        "Whether your car is a manual or automatic, the terrain is hilly or flat, you should use your parking brake every time you park."
+      ],
+      "278": [
+        "You should set the parking brake while your foot is still on the brake pedal and before shifting into “park”."
+      ],
+      "279": [
+        "Facing downhill, turn your wheels toward the curb and shift into reverse or park."
+      ],
+      "280": [
+        "If there are no curbs, turn your wheels toward the edge of the road, whether facing uphill or downhill."
+      ],
+      "281": [
+        "Remember that the front of your car will swing opposite to the direction of your turn."
+      ],
+      "282": [
+        "When parallel parked, the vehicle’s right wheels must be within 18 inches of the right-hand curb of the street."
+      ],
+      "283": [
+        "Look for clues such as: • Smoke coming from tail pipe • Red brake lights on, turning signal flashing, or white backing lights on"
+      ],
+      "284": [
+        "Within 15 feet of a fire hydrant or within 50 feet of a railroad crossing"
+      ],
+      "285": [
+        "Within 20 feet of a crosswalk at an intersection"
+      ],
+      "286": [
+        "Red – indicates fire zone restrictions"
+      ],
+      "287": [
+        "You might complete a passing maneuver before coming within 100 feet of any vehicle approaching from the opposite direction."
+      ],
+      "288": [
+        "you are within one hundred feet of an intersection or a railroad crossing."
+      ],
+      "289": [
+        "You may never pass to the right of another vehicle by driving off the roadway onto the shoulder of the road."
+      ],
+      "290": [
+        "Continue to pass until the complete front of the passed vehicle is visible in your rearview mirror."
+      ],
+      "291": [
+        "When you are about to be overtaken and passed, make it as safe and easy as possible for the other driver. Slow your speed a little and, if on a two-lane highway, mover over to the right as far as you can safely."
+      ],
+      "292": [
+        "The best way to increase visibility when backing up is to: • Turn your head and look out the rear window. • Do not depend on your mirrors."
+      ],
+      "293": [
+        "Road surfaces are most slippery immediately after the rain begins to fall. This is because the oil and grease on the pavement have not yet been washed away."
+      ],
+      "294": [
+        "If you find yourself in a skid, remain calm, ease your foot off the gas and carefully steer in the direction you want the front of the car to go. For cars without anti-lock brakes, avoid using your brakes."
+      ],
+      "295": [
+        "Partial hydroplaning starts at about 35 miles per hour, and increases with speed until (at 55 M.P.H.) the tires may lose all contact with the pavement."
+      ],
+      "296": [
+        "To recover, keep your wheels straight and reduce your speed. This will allow the tires and the road to regain contact."
+      ],
+      "297": [
+        "Your lower beam headlights will let you see clearly about 150 to 200 feet ahead."
+      ],
+      "298": [
+        "You are required by law to use lower headlight beams, not your “bright lights”, when approaching within 500 feet of or following within 200 feet of another vehicle."
+      ],
+      "299": [
+        "Louisiana law requires that your headlights (not just parking lights) be on between sunset and sunrise.",
+        "headlights are required when moisture in the air or precipitation necessitates the use of windshield wipers"
+      ],
+      "300": [
+        "Do not pull up closely behind the vehicle you intend to pass (especially a large truck or bus). Your vision may be obstructed."
+      ],
+      "301": [
+        "You need to increase your following distance by adding at least one additional second for night driving conditions and at least two additional seconds for driving on unfamiliar roadways at night."
+      ],
+      "302": [
+        "The law further requires that your headlights be on when driving in weather conditions that make it difficult for other people to see your vehicle clearly from a distance of 500 feet."
+      ],
+      "303": [
+        "If a stubborn driver refuses to dim the lights, look to the right edge of the road as a guide and slow down."
+      ],
+      "304": [
+        "Flashing \"DON'T WALK\" signals means that pedestrians may not start to cross the roadway but those already crossing may continue to the nearest sidewalk, traffic island or safety zone."
+      ],
+      "305": [
+        "You must yield to pedestrians at all times. Even if they are not in a crosswalk and crossing the street where they should not be (also known as jaywalking), which is illegal, you must stop for them."
+      ],
+      "306": [
+        "If you come too close to a pedestrian, you may block the vision of the next driver from seeing the pedestrian as he is crossing the roadway. You should not pass a vehicle stopped at a crosswalk."
+      ],
+      "307": [
+        "Pedestrians should always walk facing traffic when possible and should never enter a roadway without checking for oncoming traffic."
+      ],
+      "308": [
+        "Don't stop your car more than five feet from the crosswalk. The pedestrian uses the sound of your engine as a guide, so drive up to the crosswalk to allow the person to hear you."
+      ],
+      "309": [
+        "Don't give the pedestrian verbal directions. He listens to all traffic sounds before deciding to cross the street."
+      ],
+      "310": [
+        "Using a cell phone while driving involves all three types of distraction: visual, taking your eyes off the road, manual, taking your hands off the wheel, and cognitive by taking your mind and focus off your driving."
+      ],
+      "311": [
+        "At a speed of 55 mph, the vehicle travels the length of a football field in that time frame.",
+        "Texting causes a driver to look away from the road for 4.6 seconds."
+      ],
+      "312": [
+        "According to DISTRACTION.GOV, if you text while driving you are 8 to 23 times more likely to be involved in a car crash."
+      ],
+      "313": [
+        "Louisiana law prohibits anyone 17 years of age and under from using any type of wireless communication device while operating a motor vehicle"
+      ],
+      "314": [
+        "the biggest single cause of a teen death as a result of an auto accident is another teen, usually a friend."
+      ],
+      "315": [
+        "If the person takes a step back and pulls in his cane, that's a definite sign that you should go."
+      ],
+      "316": [
+        "the risk for a fatal crash starts increasing at age 75."
+      ],
+      "317": [
+        "Have eyes checked at least once a year."
+      ],
+      "318": [
+        "all children under the age of 12, when operating a bicycle or is a passenger on a bicycle, must wear an approved helmet"
+      ],
+      "319": [
+        "Bicycles have the same rights to use public roads as automobiles and must follow the same traffic laws as other vehicles."
+      ],
+      "320": [
+        "A three foot distance must be present between the passing automobile and slower traveling bicyclists."
+      ],
+      "321": [
+        "Be aware that bicyclists not traveling in the extreme right of the lane may be trying to avoid gravel, debris, bad pavement, sewer grates and other obstacles."
+      ],
+      "322": [
+        "Increase following distances behind bicyclists because bicycle-stopping distances are shorter than automobiles."
+      ],
+      "323": [
+        "Do not swing in front of a bicyclist to make a right turn. Making a right turn after overtaking a bicyclist is also a cause of accidents."
+      ],
+      "324": [
+        "Speeds of bicycles are hard to judge. They can vary from under 10 mph to over 35 mph."
+      ],
+      "325": [
+        "When opening your car door into traffic, look first for bicyclists. This collision is the driver’s fault."
+      ],
+      "326": [
+        "Railroad crossings can cause bicyclists to slow down and possible zigzag in order to cross the tracks."
+      ],
+      "327": [
+        "When riding at night, bicycles must have a white front light and a red rear light or reflector visible from the rear."
+      ],
+      "328": [
+        "Research shows that over two-thirds of the car/motorcycle collisions are the results of the other driver turning in front of a motorcyclist."
+      ],
+      "329": [
+        "Motorcycles present a narrow silhouette and are usually much shorter in length than an automobile. The small profile of the motorcycle may make it appear farther away"
+      ],
+      "330": [
+        "Do not blow your horn when near bicyclists."
+      ],
+      "331": [
+        "Motorcycles are allowed the full width of a lane in which to maneuver.",
+        "Refrain from sharing a lane with a motorcycle."
+      ],
+      "332": [
+        "Intersections are the most likely place for car/motorcycle collisions to occur.",
+        "This usually is the result of a car driver NOT SEEING the motorcycle and turning into the motorcycle’s path."
+      ],
+      "333": [
+        "When driving behind a motorcycle, allow at least a four (4)-second following distance."
+      ],
+      "334": [
+        "turn signals may not automatically shut off on a motorcycle and cyclists occasionally forget to cancel them after a turn is completed."
+      ],
+      "335": [
+        "Always dim your headlights for a motorcycle just as required for other vehicles."
+      ],
+      "336": [
+        "traveling at 55 miles per hour on a clear, dry roadway requires a minimum of 290 feet to come to a complete stop."
+      ],
+      "337": [
+        "If you cannot see a truck driver’s face in one of his mirrors, the driver cannot see you and probably does not know you are there."
+      ],
+      "338": [
+        "Do not cut in front of a truck just because you see open space there. That space is the truck’s cushion of safety because of its longer stopping distance."
+      ],
+      "339": [
+        "If a truck is stopped on a hill, it will roll backwards when it begins to accelerate."
+      ],
+      "340": [
+        "To minimize this, stay to the outer edge of the lane away from the truck and hold the wheel tightly with both hands."
+      ],
+      "341": [
+        "In good road and weather conditions you should leave a gap of at least four to five (4-5) seconds between your vehicle and the truck in front of you"
+      ],
+      "342": [
+        "When following at night, keep your headlights on low beam. The truck’s many side mirrors will reflect high beam lights right into the driver’s eyes."
+      ],
+      "343": [
+        "If you are approaching an oncoming truck, turn on your wipers before it passes you. This will ensure your windshield is cleaned as soon as any spray is thrown onto it."
+      ],
+      "344": [
+        "Large trucks have blind spots, or No-Zones, around the front, back and sides of the truck."
+      ],
+      "345": [
+        "Don’t pass too fast or too close. The wind blast of large, fast moving vehicles can blow a motorcycle out of control."
+      ],
+      "346": [
+        "Remember, if you can’t see the truck driver in the truck’s mirror, the truck driver can’t see you."
+      ],
+      "347": [
+        "Look for the whole front of the vehicle in your rear-view mirror before pulling in front and maintaining speed."
+      ],
+      "348": [
+        "If you try to get in between the truck (or bus) and the curb, you will be squeezed in between them and could suffer a serious crash."
+      ],
+      "349": [
+        "Keep your hands visible."
+      ],
+      "350": [
+        "If you are uncomfortable stopping in an area that is deserted or not well-lit, explain this to the officer and ask if you can proceed to a more populated or better illuminated area."
+      ],
+      "351": [
+        "When a traffic-control signal is not functioning at an intersection, the intersection shall revert to an all-way or four-way stop."
+      ],
+      "352": [
+        "A frontal impact at 35 mph, for example, is one-third more violent than one at 30 mph."
+      ],
+      "353": [
+        "You may be cited for traveling too fast for conditions when above the legal limitations.",
+        "driving 55 mph in a snow storm is not recognized as an acceptable speed for a snowy roadway"
+      ],
+      "354": [
+        "The General Speed Law is that you must not drive at a speed greater than is reasonable."
+      ],
+      "355": [
+        "Drag racing is defined as the operation of two or more vehicles from a point side by side at accelerating speeds in a competitive attempt to outdo each other."
+      ],
+      "356": [
+        "You cannot cross the painted continuous centerline of any multiple lane highways except for the purpose of making a turn."
+      ],
+      "357": [
+        "if you can’t see at least a quarter mile ahead, don’t attempt to pass."
+      ],
+      "358": [
+        "Do not change lanes while you are driving through an intersection or approaching an intersection as this is dangerous and illegal."
+      ],
+      "359": [
+        "You must stop at least thirty feet from a stopped school bus that is loading or unloading children."
+      ],
+      "360": [
+        "Bus drivers will activate the flashing yellow lights of the bus at least 100 feet but no more than 500 feet before the school bus stop."
+      ],
+      "361": [
+        "Drivers are also not required to stop for a stopped school bus when traveling on four lane or five lane roadways which are separated by a dedicated two-way left turn lane."
+      ],
+      "362": [
+        "The law requires that you signal and get into the proper lane at least 100 feet before making a turn."
+      ],
+      "363": [
+        "Keep your wheels straight while waiting to turn. This will prevent you from being pushed into traffic, if you are hit from behind."
+      ],
+      "364": [
+        "Do not attempt to turn around while on a hill or in a curve where your vehicle cannot be seen by other drivers approaching from either direction within 500 feet."
+      ],
+      "365": [
+        "Louisiana law prohibits traveling in this lane for more than 200 feet."
+      ],
+      "366": [
+        "Slow your speed to about 15 to 20 mph."
+      ],
+      "367": [
+        "Vehicles travel counterclockwise around a raised center island"
+      ],
+      "368": [
+        "If you intend to turn left, signal “left” on the approach to the traffic circle or roundabout. Once you have traveled three quarters of the way around the traffic circle or roundabout, signal “right” to take the exit."
+      ],
+      "369": [
+        "Both hands on the wheel, at nine and three o’clock."
+      ],
+      "370": [
+        "The apex is the point where the car reaches the furthest point on the inside of the turn."
+      ],
+      "371": [
+        "This is because cornering load (or force) depends on speed squared. That means doubling the speed generates four times the cornering force."
+      ],
+      "372": [
+        "When safe, each driver should turn to the left of the center of the intersection."
+      ],
+      "373": [
+        "The most efficient, smoothest way around a bend is to enter it a little on the slow side."
+      ],
+      "374": [
+        "A right or left turn signal must be given continuously for not less than 100 feet before making the turn."
+      ],
+      "375": [
+        "Arm bent up is for a right turn"
+      ],
+      "376": [
+        "It is illegal to flash your turn signals on just one side of a parked or disabled vehicle OR as a signal to another vehicle to pass you."
+      ],
+      "377": [
+        "The law says who must yield the right-of-way to another roadway user; it does not give anyone the right-of-way."
+      ],
+      "378": [
+        "if a traffic light has malfunctioned, the intersection becomes a 4-way stop intersection."
+      ],
+      "379": [
+        "When two vehicles approach an intersection at the same time, the driver on the left must yield the right-of-way to the vehicle on the right."
+      ],
+      "380": [
+        "When driving on an unpaved road that intersects with a paved road;"
+      ],
+      "381": [
+        "Louisiana law requires that the driver of any motor vehicle must stop within 50 feet but no less than 15 feet from the nearest rail of a railroad crossing"
+      ],
+      "382": [
+        "get out and move in the direction toward the approaching train away from the tracks."
+      ],
+      "383": [
+        "shift before reaching the tracks and do not change gears while crossing the tracks."
+      ],
+      "384": [
+        "Drivers of vehicles carrying passengers for hire, school buses or trucks, or any vehicle carrying explosives or flammable liquids must stop at railroad crossings."
+      ],
+      "385": [
+        "A 100 car freight train traveling at 55 miles per hour requires more than a mile to stop."
+      ],
+      "386": [
+        "Pull over to the right edge of the roadway clear of intersections and stop until the emergency vehicle has passed."
+      ],
+      "387": [
+        "Backing up is not permitted on the shoulder or roadway of any controlled-access highway."
+      ],
+      "388": [
+        "It is against the law for more than three persons to occupy the front seat of a moving vehicle."
+      ],
+      "389": [
+        "No person(s) under the age of twelve years shall be permitted to be a passenger in the open bed of a truck."
+      ],
+      "390": [
+        "While participating in a funeral procession each driver shall have the headlights of the vehicle lighted and the emergency lights flashing."
+      ],
+      "391": [
+        "Following emergency vehicles responding to call closer than 500 feet is unlawful."
+      ],
+      "392": [
+        "Louisiana law requires you have your headlights on (low beam) when your windshield wipers are required."
+      ],
+      "393": [
+        "Operators below age 17 are prohibited from driving between the hours of 11:00 p.m. and 5:00 a.m."
+      ],
+      "394": [
+        "Bicyclists must not ride more than two abreast except on roadways set aside for exclusive bicycle use."
+      ],
+      "395": [
+        "Children who weigh less than forty pounds or are less than forty inches in height must be properly seated and secured in an approved restraining seat"
+      ],
+      "396": [
+        "no person driving or in charge of any motor vehicle shall permit it to stand unattended without first stopping the motor, locking the ignition, removing the key, and effectively setting the brake."
+      ],
+      "397": [
+        "Theft of motor vehicle fuel is a crime punishable by fine, loss of license, and possible jail time."
+      ],
+      "398": [
+        "Avoid tailgating. Always give yourself plenty of space between you and the vehicle in front of you."
+      ],
+      "399": [
+        "Don't hide a firearm in your vehicle."
+      ],
+      "400": [
+        "Interstate traffic has the right of way."
+      ],
+      "401": [
+        "Enter the interstate at or near the speed of traffic."
+      ],
+      "402": [
+        "When you merge into traffic, you need a gap of four seconds."
+      ],
+      "403": [
+        "When the weather is bad or the pavement is slick, you should double that time."
+      ],
+      "404": [
+        "The middle is often used as the 'travel' lane and the far left lane is for passing."
+      ],
+      "405": [
+        "If this fails, pull over, stop and let the tailgater pass."
+      ],
+      "406": [
+        "There are three basic elements to space management: 1. Speed control 2. Lane position 3. Communication"
+      ],
+      "407": [
+        "Approximately a mile before your exit, check to make sure you are in the correct lane to make the exit."
+      ],
+      "408": [
+        "If you miss your exit, do not stop; do not back up!",
+        "Go on to the next exit, get back on the interstate and return to the exit you want."
+      ],
+      "409": [
+        "Never slow down on the interstate itself. Wait until you are fully in the deceleration lane"
+      ],
+      "410": [
+        "It is recommended that you use low beam headlights to make your vehicle more visible to others"
+      ],
+      "411": [
+        "you must reduce your speed and increase your following distance, since it will take much longer to stop due to loss of traction."
+      ],
+      "412": [
+        "Rear-end collisions are the most frequent type of crashes on the interstates."
+      ],
+      "413": [
+        "To enter traffic from a full stop, you will need about a full block to get up to the speed of the other vehicles on the interstate highway."
+      ],
+      "414": [
+        "Signal your intention for approximately five seconds and make sure you are at the proper speed for leaving the traffic lane"
+      ],
+      "415": [
+        "It is recommended that you use low beam headlights to make your vehicle more visible to others, slow down and increase your following distance."
+      ],
+      "416": [
+        "Due to the reduced traction, keep a firm grip on the steering wheel and increase your following distance."
+      ],
+      "417": [
+        "Before reaching the crest of a hill or before entering a curve, slow down, move to the right side of the road and watch for oncoming vehicles."
+      ],
+      "418": [
+        "Many highway-railroad grade crossings on rural roads are marked only with a warning sign and a white X-shaped railroad crossing sign"
+      ],
+      "419": [
+        "Wildlife is more active at dusk and dawn. This is also it is hardest for our eyes to adjust"
+      ],
+      "420": [
+        "Sound your horn and brake in a controlled manner. Don’t scare the animal so that it runs into the path of another vehicle or swerve around the animal"
+      ],
+      "421": [
+        "If Wild Animals are on the road: • Slow down or stop • Do not use the horn or rev the engine • Pass as far away from the animals as possible"
+      ],
+      "422": [
+        "Do not swerve into oncoming traffic or off the roadway to avoid hitting the animal. This may result in a more serious crash than if the vehicle collided with an animal."
+      ],
+      "423": [
+        "Use caution when driving at dawn and dusk and between the months of October through December, when animals are most active."
+      ],
+      "424": [
+        "Brake firmly, angle the vehicle and take your foot off the brake as you impact. The release of the brake will cause slight lift of the vehicle"
+      ],
+      "425": [
+        "A fluorescent or reflective orange and red triangle displayed on the rear of vehicles... means the vehicle is traveling less than 25 mph."
+      ],
+      "426": [
+        "to make a right turn, operators of farm machinery may pull wide to the left and then turn to the right."
+      ],
+      "427": [
+        "Normal speeds for animal drawn vehicles range between 5 and 8 miles per hour."
+      ],
+      "428": [
+        "Do not sound your horn or “rev” your engine loudly when approaching or passing a horse. It could scare the horse and cause a crash."
+      ],
+      "429": [
+        "If you are driving a slow moving vehicle... pull to the side of the roadway when safe to do so and let the other vehicles pass."
+      ],
+      "430": [
+        "If the vehicle is overloaded it can cause harm to your brakes making it hard for you to stop or slow down and can damage your suspension."
+      ],
+      "431": [
+        "When driving in a heavy downpour or in fog, slow down and turn on your low beam headlights."
+      ],
+      "432": [
+        "If the fog is so dense that it impairs your vision, you should not drive at all.",
+        "slow down and drive to the nearest place where it is possible for you to get off the highway and stop.",
+        "You are risking your life by creeping along at 10 to 20 miles per hour on the highway."
+      ],
+      "433": [
+        "Dim your high beams whenever you come within about a one-block distance of an oncoming vehicle."
+      ],
+      "434": [
+        "If the driver fails to dim their lights, look toward the right side of the road to keep from being blinded by their headlights.",
+        "Do not try to “get back” at the other driver by keeping your bright lights on."
+      ],
+      "435": [
+        "In the country or in more rural areas, it's easy to out-drive your headlights.",
+        "Increase your following distance to at least four seconds."
+      ],
+      "436": [
+        "A closed zone means that it is not available for your car's path of travel, that there is a restriction to the driver’s view or that space is unavailable in a particular zone."
+      ],
+      "437": [
+        "The urban driving environment is typically more challenging to the novice driver because there are more stimuli to be sorted and react to."
+      ],
+      "438": [
+        "If one person will be doing all of the driving, 6 to 8 hours of driving in any one day should be considered the limit."
+      ],
+      "439": [
+        "When two or more persons can share the driving, total driving time should not exceed 10 to 11 hours."
+      ],
+      "440": [
+        "The average number of miles driven on major highways is 100 to 110 miles every two hours with 10 to 15 minute breaks every 2 to 3 hours"
+      ],
+      "441": [
+        "Colored lenses cause your eyes to adjust even more slowly and can reduce your vision."
+      ],
+      "442": [
+        "When approaching your parked vehicle, look in front, under and behind, scanning for any objects in your travel path."
+      ],
+      "443": [
+        "Light from high beams will reflect back, causing glare and making it more difficult to see ahead."
+      ],
+      "444": [
+        "Three main types of distraction: Visual — taking your eyes off the road",
+        "Manual — taking your hands off the wheel",
+        "Cognitive — taking your mind off what you’re doing"
+      ],
+      "445": [
+        "texting is the most alarming because it involves all three types of distraction."
+      ],
+      "446": [
+        "The cognitive distraction still exists with hands-free phone."
+      ],
+      "447": [
+        "Adjust your seat cushions and mirrors."
+      ],
+      "448": [
+        "the top factors for fatal crashes involving teens are unsafe speeds and non-use of seat belts."
+      ],
+      "449": [
+        "Most teenage deaths (due to a motor vehicle accident) occur on weekends as 53% of all teen accidents occur on the weekend."
+      ],
+      "450": [
+        "The risk of a teen driver being killed or injured in accidents becomes greater if there is a teenage passenger involved. The risk increases exponentially with each additional passenger."
+      ],
+      "451": [
+        "Today, drivers ages 16 to 19 have a fatality rate four times as high as that of drivers 25 to 29."
+      ],
+      "452": [
+        "Equipment Failure - brakes, unsafe tires, steering, and suspension.",
+        "Roadway Design – traffic control devices, roadway surfaces, weather, road hazards, and traffic flow.",
+        "Driver Behavior – speeding, tailgating, aggressive driving, unsafe lane changing, failure to signal, and failure to give the right of way."
+      ],
+      "453": [
+        "In 95% of motor vehicle accidents there was some factor of driver behavior combined with one of the other three factors that caused the accident to happen."
+      ],
+      "454": [
+        "If you have a manual (disc) brake system, do not brake hard and hold.",
+        "Pump the brake.",
+        "Push the brake pedal hard. As the car begins to skid, quickly let up on the brake. Then quickly push down again."
+      ],
+      "455": [
+        "ABS does not stop the car faster. It enables you to stop it where you want to by allowing you to concentrate on steering the car to safety."
+      ],
+      "456": [
+        "If a situation should arise with a child, pull over to a safe location before you handle it.",
+        "If you are driving with pets, secure them properly before you begin."
+      ],
+      "457": [
+        "Teens are 50% more likely to have an accident in the first month of driving alone without parental supervision."
+      ],
+      "458": [
+        "When you start your vehicle the ABS light will illuminate and then dim. If you see an ABS indicator light then you have ABS."
+      ],
+      "459": [
+        "ABS does not stop the car faster. It enables you to stop it where you want to by allowing you to concentrate on steering the car to safety."
+      ],
+      "460": [
+        "If the light stays lit the ABS is not working correctly."
+      ],
+      "461": [
+        "Choose to hit something that will give way (such as brush or shrubs) rather than something hard."
+      ],
+      "462": [
+        "If the other driver keeps coming and a crash is probable, steer off the road to the right shoulder or ditch. Do not drive into the left lane."
+      ],
+      "463": [
+        "If the passing vehicle continues to attempt to pass, you can help by slowing your vehicle and moving as far to the right as you can safely."
+      ],
+      "464": [
+        "Press the back of your head firmly against the head rest.",
+        "Brace yourself between the steering wheel and the seat back."
+      ],
+      "465": [
+        "If you are not using your shoulder strap, throw yourself across the seat to keep from hitting the steering wheel or windshield."
+      ],
+      "466": [
+        "one of every three passenger vehicle occupant deaths occur in rollovers."
+      ],
+      "467": [
+        "Rollover crashes are more common for sport utility vehicles (SUVs), vans, pickups and small trucks than for passenger vehicles due to their higher centers of gravity"
+      ],
+      "468": [
+        "If your vehicle leaves the paved road surface, slow down gradually, but do not jerk the steering wheel to get the vehicle back on the pavement."
+      ],
+      "469": [
+        "To steer out of a skid: 1. Take your foot off the gas pedal."
+      ],
+      "470": [
+        "If the rear of your car is skidding to the right, turn the front wheels to the right. Turn left for a skid to the left."
+      ],
+      "471": [
+        "If you find yourself hydroplaning, do not brake or turn suddenly. Ease your foot off the gas until the car slows and you can feel the road again."
+      ],
+      "472": [
+        "ESP electronically compares where a driver is steering the vehicle and where the vehicle is actually going.",
+        "it selectively applies any one of the vehicle brakes to reduce the possibility of a skid"
+      ],
+      "473": [
+        "Sometimes you may need to speed up quickly to avoid a crash. This may be the case when another car is about to hit you from the side or from behind."
+      ],
+      "474": [
+        "If the shoulder is much lower than the pavement: a. Slow to a very slow speed (10 mph)",
+        "c. Turn your wheels sharply back onto the pavement"
+      ],
+      "475": [
+        "walk quickly alongside the tracks in the direction toward the approaching train so that you will not be struck by debris when your vehicle is hit."
+      ],
+      "476": [
+        "The most important rule is - don’t panic and don’t slam on the brakes."
+      ],
+      "477": [
+        "If your gas pedal sticks, keep your eyes on the road: 1. Put the gear shift in neutral."
+      ],
+      "478": [
+        "Shift into neutral and gradually apply the hand brake until the vehicle stops.",
+        "Do not put your parking brake on suddenly. This could cause you to lose control of your vehicle!"
+      ],
+      "479": [
+        "The warning signs are a thumping noise and/or pulling to one side."
+      ],
+      "480": [
+        "If steam begins to come from under the hood, your cooling system is boiling.",
+        "Do not open the radiator cap. Wait for the engine to cool."
+      ],
+      "481": [
+        "Do not use water on gasoline, oil or an electrical fire."
+      ],
+      "482": [
+        "Then connect the negative post of the live battery to the negative post of the dead battery or to the engine block or frame."
+      ],
+      "483": [
+        "Raise your hood and tie a white cloth to the radio antenna or hang it out a window so enforcement officers or tow truck operators will know you need help."
+      ],
+      "484": [
+        "Early symptoms include: yawning, dizziness and upset stomach."
+      ],
+      "485": [
+        "2 feet of rushing water can carry away most vehicles."
+      ],
+      "486": [
+        "If your vehicle enters water, it will only float on the surface for 30 to 60 seconds"
+      ],
+      "487": [
+        "Immediately unbuckle your seat belt and roll the window down."
+      ],
+      "488": [
+        "In traction loss, with ESP you should steer the vehicle toward the direction you are looking and avoid abrupt steering."
+      ],
+      "489": [
+        "If your vehicle enters water, it will only float on the surface for 30 to 60 seconds so make every attempt to get out of the vehicle immediately."
+      ],
+      "490": [
+        "If there are children in the car, unbuckle the oldest child first and then the smaller younger ones."
+      ],
+      "491": [
+        "P – Pop the seat belt open.",
+        "O – Open windows by breaking or rolling them down.",
+        "G- Get O –Out."
+      ],
+      "492": [
+        "Do not try to break or kick out the windshield. Windshields are now designed with glass that does not shatter."
+      ],
+      "493": [
+        "If you damage an unattended vehicle or property, you must notify the police and attempt to locate the owner.",
+        "Leave your name, address and telephone number on a note where the owner will be sure to see it."
+      ],
+      "494": [
+        "If the person is bleeding from the lower part of the face or jaw, turn him on his side."
+      ],
+      "495": [
+        "Do not move the injured person unless there is immediate life threatening danger. Movement could cause more injury."
+      ],
+      "496": [
+        "you will always yield the right-of-way and immediately drive to a position parallel to the right-hand edge or curb and remain stopped until that vehicle has passed."
+      ],
+      "497": [
+        "It reaches your brain in about 20 minutes."
+      ],
+      "498": [
+        "Alcohol is metabolized by your liver and eliminated from your body through your kidneys and lungs."
+      ],
+      "499": [
+        "Blood is being transferred from the vital organs to the extremities, which makes alcohol dangerous for a snake bite, shock or overexposure to cold."
+      ],
+      "500": [
+        "Drunk driving is the leading single cause of death among young people in the age range from 16 to 24."
+      ],
+      "501": [
+        "One in every eight drivers will be involved in a motor vehicle crash this year, according to the National Safety Council."
+      ],
+      "502": [
+        "In Louisiana the legal limit of blood alcohol concentration is: .02 if you are 20 years of age and younger"
+      ],
+      "503": [
+        "It takes about an hour for the body to get rid of one normal drink from the circulatory system."
+      ],
+      "504": [
+        "1st DWI conviction - MAXIMUM Penalties Loss of driver’s license for 365 days"
+      ],
+      "505": [
+        "Pull over and call 911. Give a complete description of the vehicle and its’ exact location.",
+        "Do not signal the driver to pull over. This may result in a collision."
+      ],
+      "506": [
+        "Quick stop - A drinking driver may make sudden stops at a traffic sign or light rather than easing up to it."
+      ],
+      "507": [
+        "If you refuse to submit to the test, your driving privileges will be suspended for 365 days on your first offense."
+      ],
+      "508": [
+        "it takes five to six hours for the effects of smoking one marijuana cigarette to wear off"
+      ],
+      "509": [
+        "This law prohibits both the possession of any open alcoholic beverage container and consumption of any alcohol beverage in a vehicle."
+      ],
+      "510": [
+        "3rd DWI conviction - MAXIMUM Penalties 1-5 years in prison with 30 days mandatory jail time"
+      ],
+      "511": [
+        "If you are involved in or cause an accident, you are required by law to stop, identify yourself and render reasonable aid. Failure to do so may result in a fine and time in jail."
+      ],
+      "512": [
+        "The body can process 0.015% of alcohol per hour."
+      ],
+      "513": [
+        "first degree vehicle negligent injury is inflicting of serious bodily injury by an operator of any motor vehicle... when the offender is under the influence of alcohol or drugs"
+      ],
+      "514": [
+        "You will be required by law to maintain an SR-22, which is high risk insurance, or $30,000.00 in cash or security... for three (3) years from the date of conviction."
+      ],
+      "515": [
+        "Louisiana law provides the same penalty for driving under the influence of drugs as it does for alcohol. This includes over-the-counter (OTC) and prescribed medication."
+      ],
+      "516": [
+        "If you refuse to submit to the test, your driving privileges will be suspended for 365 days on your first offense."
+      ],
+      "517": [
+        "If you submit to the test and you are under 21 years of age, and the test results show a BAC level of 0.02% or more, your driving privileges will be suspended for 180 days."
+      ],
+      "518": [
+        "EACH conviction of driving under suspension will cause your suspension period to be extended for one year."
+      ],
+      "519": [
+        "Maximum height: 13 feet 6 inches for all vehicles."
+      ],
+      "520": [
+        "If a load extends four or more feet past the bed or body of any vehicle, a red flag 12 inches square must be attached to the extreme rear of the load during daylight hours."
+      ],
+      "521": [
+        "When pulling or towing another motor vehicle the speed limit is 45 mph."
+      ],
+      "522": [
+        "On rural highways, outside residential areas or business districts, drivers of motor trucks must not follow within 400 feet of one another except to pass."
+      ],
+      "523": [
+        "You must stop within 50 feet but not closer than 15 feet from the nearest rail."
+      ],
+      "524": [
+        "Tow trucks must be equipped with at least one 4-BC fire extinguisher"
+      ],
+      "525": [
+        "Trucks carrying explosives, flammable liquids, compressed gases, or using compressed gas as a fuel must use red electric lanterns or red emergency reflectors only. Flares or fuses are not allowed."
+      ],
+      "526": [
+        "When towing another vehicle, the draw bar or other connection must of sufficient strength to pull all towed weight and must not exceed 15 feet."
+      ],
+      "527": [
+        "A rear view mirror must reflect a view of the highway for a distance of 200 feet to the rear, regardless of the load of the vehicle."
+      ],
+      "528": [
+        "All trailers or semi-trailers with a gross vehicle weight rating of 3,000 pounds or more must be equipped with brakes adequate to stop and hold it."
+      ],
+      "529": [
+        "Drivers should use engine compression as the principal means of controlling speed on long grades."
+      ],
+      "530": [
+        "The valve is usually set to open at 150 psi. If the safety valve releases air, something is wrong."
+      ],
+      "531": [
+        "A warning signal you can see must come on before the air pressure in the tanks falls below 60 psi."
+      ],
+      "532": [
+        "NEVER PUSH THE BRAKE PEDAL DOWN WHEN THE SPRING BRAKES ARE ON. If you do, the brakes could be damaged."
+      ],
+      "533": [
+        "Check the air gauge to see if the air pressure drops more than three (3) pounds in one minute (single vehicle)."
+      ],
+      "534": [
+        "At approximately 20-40 psi, the parking brake valve should close (pop out)."
+      ],
+      "535": [
+        "Stab braking - a) Press the brake pedal as hard as you can. b) Release the brakes when the wheels lock up. c) As soon as the wheels start rolling, put on the brakes fully again."
+      ],
+      "536": [
+        "The air brake lag distance at 55 mph on dry pavement adds about 32 feet."
+      ],
+      "537": [
+        "Any time you park, use the parking brakes unless: 1. The brakes are very hot (from having come down a steep grade). 2. The brakes are very wet in freezing temperatures."
+      ],
+      "538": [
+        "safety chains should have some slack to permit sharp turns but should not drag on the road. In addition, they should cross under the trailer tongue"
+      ],
+      "539": [
+        "Manual - operated by turning a quarter turn or by pulling a cable. You must drain the tanks yourself at the end of each day of driving."
+      ],
+      "540": [
+        "Air brake systems are three braking systems combined: the service brake system, the parking brake system, and the emergency brake system."
+      ],
+      "541": [
+        "said brakes shall be so designed and connected that in case of an accidental breakaway of the towed vehicle the brakes shall be automatically applied."
+      ],
+      "542": [
+        "All your trailer tires should be the same type, size, and construction; do not mix bias-belted and radial tires."
+      ],
+      "543": [
+        "The dealer will issue a 60-day temporary cardboard plate which must be clearly visible from the rear of your car."
+      ],
+      "544": [
+        "You have five days from the date of sale to apply for a title in your name."
+      ],
+      "545": [
+        "This registration is proof of ownership of the vehicle. It must be kept in the vehicle at all times"
+      ],
+      "546": [
+        "If you are stopped by a law enforcement officer and you are unable to provide the proof of insurance, the vehicle’s license plate will be seized"
+      ],
+      "547": [
+        "You will have three (3) calendar days, excluding Saturdays, Sundays and legal holidays, to provide the proof at a Motor Vehicle office."
+      ],
+      "548": [
+        "you should remove the license plate and surrender it to the Office of Motor Vehicles before the insurance is canceled."
+      ],
+      "549": [
+        "Your vehicle license plate expires on the last day of the month in the year indicated on your registration certificate."
+      ],
+      "550": [
+        "The City of New Orleans, the City of Kenner and the City of Westwego operate their own inspection program."
+      ],
+      "551": [
+        "Automobile plates are issued for a 2-year period."
+      ],
+      "552": [
+        "The license plate fee for private minimum-use pickup trucks (6000 lbs. or less) is $10.00 per year. Truck plates are issued for a 4-year period."
+      ],
+      "553": [
+        "If you provide false information about your insurance coverage, your vehicle registration may be suspended. You may also be fined by the court and jailed."
+      ],
+      "554": [
+        "Federal Odometer statement, if vehicle is less than 10 years old (required by Federal Government)."
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 30,
-    "topics_covered": 30,
+    "topics_total": 27,
+    "topics_covered": 27,
     "coverage_pct": 100.0,
     "uncovered_topics": [],
     "verdict": "PASS",
@@ -63,6 +1776,20 @@
     "sign_ratio_pct": 5.8,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 554,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 99.8,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",
