@@ -2,7 +2,7 @@
   "schema_version": 2,
   "code": "in",
   "name": "Indiana",
-  "verified_at": "2026-05-26T23:02:01Z",
+  "verified_at": "2026-05-27T01:17:12Z",
   "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.in.gov/bmv/licenses-permits-ids/files/drivers-manual.pdf",
@@ -27,7 +27,7 @@
     "sample_size": 0,
     "judged_count": 328,
     "avg_fidelity": 9.97,
-    "pct_at_10": 99.7,
+    "pct_at_10": 99.4,
     "pct_above_9": 99.7,
     "pct_above_7": 99.7,
     "pct_zero": 0.3,
@@ -249,7 +249,7 @@
         "A school-sanctioned activity"
       ],
       "70": [
-        "with gross vehicle weight ratings in excess of 26,000 pounds"
+        "gross vehicle weight ratings in excess of 26,000 pounds"
       ],
       "71": [
         "credentials will only be mailed to the mailing address on file with the BMV and will not be forwarded.",
@@ -1055,8 +1055,8 @@
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 26,
-    "topics_covered": 26,
+    "topics_total": 30,
+    "topics_covered": 30,
     "coverage_pct": 100.0,
     "uncovered_topics": [],
     "verdict": "PASS",

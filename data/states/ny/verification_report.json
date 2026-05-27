@@ -2,7 +2,7 @@
   "schema_version": 2,
   "code": "ny",
   "name": "New York",
-  "verified_at": "2026-05-26T23:15:26Z",
+  "verified_at": "2026-05-27T01:30:13Z",
   "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://dmv.ny.gov/driver-license/drivers-manual",
@@ -85,7 +85,7 @@
         "Every air traveler flying within the United States must present a REAL ID or an Enhanced Driver License, or bring another acceptable form of identification"
       ],
       "17": [
-        "when the vehicle is over 26,000 pounds (11,794 kg.) GVWR and/or forty (40) feet in length."
+        "required for operation of recreational and/or rental vehicles... when the vehicle is over 26,000 pounds (11,794 kg.) GVWR and/or forty (40) feet in length."
       ],
       "18": [
         "pass a road test in the size and type of vehicle you will drive. No written test is required."
@@ -130,13 +130,13 @@
         "To pass the written test, you must correctly answer at least 14 of the 20 questions asked"
       ],
       "31": [
-        "you must correctly answer two of the four questions about road signs."
+        "you must correctly answer at least 14 of the 20 questions asked, but you must correctly answer two of the four questions about road signs."
       ],
       "32": [
         "students who are at least age 15 and 11 months can take the written test through the DMV Online Knowledge Test Application (OKTA) program."
       ],
       "33": [
-        "you must be supervised by a licensed driver who is at least 21 years old, has a license valid for the type of vehicle you are driving, and is seated in the front seat"
+        "you must be supervised by a licensed driver who is at least 21 years old, has a license valid for the type of vehicle you are driving, and is seated in the front seat with you"
       ],
       "34": [
         "Vehicle must have dual controls (dual brakes)"
@@ -145,19 +145,20 @@
         "You must drive only under the immediate supervision of your: 1. Parent 2. Guardian 3. Person “in loco parentis” 4. Driver Education Teacher 5. Driving School Instructor"
       ],
       "36": [
+        "In a DMV road test area.",
         "On any street within a park in New York City or any bridge or tunnel under the jurisdiction of the Triborough Bridge and Tunnel Authority."
       ],
       "37": [
         "On the Cross County, Hutchinson River, Saw Mill River, or Taconic State parkways in Westchester County."
       ],
       "38": [
-        "You cannot drive with more than one passenger under the age of 21 unless they are members of your immediate family or if your supervising driver is your parent"
+        "You cannot drive with more than one passenger under the age of 21 unless they are members of your immediate family or if your supervising driver is your parent, guardian"
       ],
       "39": [
         "If you hold a junior permit, the only passenger allowed in the front seat is your supervising driver."
       ],
       "40": [
-        "Before you take the test, it is important that you have had at least 50 hours of practice"
+        "Before you take the test, it is important that you have had at least 50 hours of practice, with at least 15 hours after sunset."
       ],
       "41": [
         "Before you take the test, it is important that you have had at least 50 hours of practice, with at least 15 hours after sunset."
@@ -496,7 +497,7 @@
         "Drivers must reduce speed on all roads when encountering such vehicles, but on parkways, interstates and other controlled access roads with multiple lanes, drivers are further required to move from the lane adjacent to the emergency or hazard vehicle"
       ],
       "151": [
-        "those driven by volunteer ambulance or rescue squad members can display green lights."
+        "personal vehicles driven by volunteer ambulance or rescue squad members can display green lights."
       ],
       "152": [
         "The vehicles that display blue, green or amber lights are not authorized emergency vehicles.",
@@ -1152,8 +1153,7 @@
         "Outside New York State: 1-(518) 473-9002"
       ],
       "362": [
-        "For the most recent updates of state and county motor vehicle office locations, useful DMV addresses and telephone numbers, and other important information, please visit our website.",
-        "The DMV website: dmv.ny.gov"
+        "For the most recent updates of state and county motor vehicle office locations, useful DMV addresses and telephone numbers, and other important information, please visit our website. The DMV website: dmv.ny.gov"
       ],
       "363": [
         "New York State laws and regulations use U.S. measurements only."
@@ -1168,17 +1168,16 @@
         "write to: Office of Communications, Department of Motor Vehicles, 6 Empire State Plaza, Albany, NY 12228"
       ],
       "367": [
-        "Title Services Bureau\n6 Empire State Plaza\nAlbany, NY 12228\n1-(518)-486-4714"
+        "Title Services Bureau 6 Empire State Plaza Albany, NY 12228 1-(518)-486-4714"
       ],
       "368": [
-        "Custom Plates Unit\n6 Empire State Plaza\nP.O. Box 2775\nAlbany, NY 12220\n1-(518)-402-4838"
+        "Custom Plates Unit 6 Empire State Plaza P.O. Box 2775 Albany, NY 12220 1-(518)-402-4838"
       ],
       "369": [
         "Complaints about a repair shop/dealership/ inspection station: 1-(518) 474-8943"
       ],
       "370": [
-        "Bureau of Consumer & Facility Services",
-        "Complaints about a repair shop/dealership/ inspection station: 1-(518) 474-8943"
+        "Bureau of Consumer & Facility Services... Complaints about a repair shop/dealership/ inspection station"
       ],
       "371": [
         "Office of Communications, Department of Motor Vehicles, 6 Empire State Plaza, Albany, NY 12228"
@@ -1195,10 +1194,12 @@
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 26,
-    "topics_covered": 26,
-    "coverage_pct": 100.0,
-    "uncovered_topics": [],
+    "topics_total": 30,
+    "topics_covered": 29,
+    "coverage_pct": 96.7,
+    "uncovered_topics": [
+      "Penalties for ignoring out of state traffic tickets"
+    ],
     "verdict": "PASS",
     "grade": "A"
   },
@@ -1227,11 +1228,11 @@
     "es": {
       "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
       "judged_count": 373,
-      "avg_fidelity": 9.2,
-      "pct_at_10": 92.0,
-      "pct_above_9": 92.0,
-      "pct_above_7": 92.0,
-      "pct_zero": 8.0,
+      "avg_fidelity": 9.46,
+      "pct_at_10": 94.6,
+      "pct_above_9": 94.6,
+      "pct_above_7": 94.6,
+      "pct_zero": 5.4,
       "drift_flagged_ids": [
         71,
         72,
@@ -1252,17 +1253,7 @@
         87,
         88,
         89,
-        90,
-        311,
-        312,
-        313,
-        314,
-        315,
-        316,
-        317,
-        318,
-        319,
-        320
+        90
       ],
       "verdict": "HARD_FAIL",
       "grade": "F"

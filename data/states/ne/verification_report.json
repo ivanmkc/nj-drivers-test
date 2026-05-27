@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "ne",
   "name": "Nebraska",
-  "verified_at": "2026-05-26T02:31:31Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-27T00:50:02Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://dmv.nebraska.gov/sites/dmv.nebraska.gov/files/doc/manuals/engdrivermanual.pdf",
     "manual_pdf_sha256": "0bf9091d9f1c7f901e9569f5e7336344b246db8f2bbf9df0d677d871e55d57bf",
@@ -23,23 +23,947 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
-    "avg_fidelity": 10.0,
-    "pct_at_10": 100.0,
-    "pct_above_9": 100.0,
-    "pct_above_7": 100.0,
-    "pct_zero": 0.0,
-    "flagged_question_ids": [],
+    "sample_size": 0,
+    "judged_count": 298,
+    "avg_fidelity": 9.92,
+    "pct_at_10": 99.0,
+    "pct_above_9": 99.0,
+    "pct_above_7": 99.0,
+    "pct_zero": 0.3,
+    "flagged_question_ids": [
+      269,
+      285,
+      290
+    ],
+    "evidence_by_question_id": {
+      "1": [
+        "you may renew your Class O or Class M license two consecutive times online."
+      ],
+      "2": [
+        "State ID Card holders may renew three consecutive times online."
+      ],
+      "3": [
+        "If you are visiting an of4ce located in Bellevue, Lincoln, or Omaha, drive testing is by appointment only."
+      ],
+      "4": [
+        "The Parent’s Supervised Driving Program which is given to all teens under age 16 applying for a Learner’s Permit."
+      ],
+      "5": [
+        "Proof of social security number or a valid U.S. Citizenship and Immigration Services I-94 or I-94A document... is required for all 4rst time and renewal applicants"
+      ],
+      "6": [
+        "Over 32% of 4rst-time applicants fail the written test."
+      ],
+      "7": [
+        "Individuals 21 years of age and older may renew 90 days prior to their birthday."
+      ],
+      "8": [
+        "Individuals under 21 may apply for renewal 60 days prior to their 21st birthday."
+      ],
+      "9": [
+        "it can take up to 20 days to receive them."
+      ],
+      "10": [
+        "These documents are not forwarded."
+      ],
+      "11": [
+        "Avoid peak busy times at the driver licensing of4ces: 1) after 3:00 p.m. each workday, 2) when schools are not in session, and 3) the day before and after a holiday."
+      ],
+      "12": [
+        "Be aware that the state driver licensing of4ces in Douglas, Lancaster, and Sarpy Counties do not accept checks."
+      ],
+      "13": [
+        "Extraordinary security measures for a business or home (e.g., barred or covered windows, barbed wire, excessive exterior cameras, locked front doors with entrances in the alley, etc.)"
+      ],
+      "14": [
+        "Workers who appear to live at the place of business or are always working"
+      ],
+      "15": [
+        "In Nebraska, weather conditions change unexpectedly, paved roads give way to gravel, and speeds drop sharply when approaching town."
+      ],
+      "16": [
+        "Any new resident with a valid license from another state must obtain a Nebraska license within 30 days."
+      ],
+      "17": [
+        "Cell Phones – No use of any type of interactive wireless communication device while operating a motor vehicle while in motion. Violation carries a $200 4ne for 4rst offense"
+      ],
+      "18": [
+        "Seat Belts – All occupants riding with a permit holder, including the driver, must wear a seat belt. Violation carries a $25 4ne."
+      ],
+      "19": [
+        "Passengers – Holder of a School Permit (SCP) may only transport family members who reside with them to the school attended by the holder."
+      ],
+      "20": [
+        "A holder of a Provisional Operator’s Permit (POP) is limited to one passenger younger than 19 who is not an immediate family member, for the 4rst 6 months."
+      ],
+      "21": [
+        "Holder of a POP shall not drive from midnight to 6 AM unless to or from school activities or work."
+      ],
+      "22": [
+        "“Zero tolerance” (alcohol and other drugs) laws for drivers under the age of 21. First offense results in court impounding permit or license for 30 days."
+      ],
+      "23": [
+        "Individuals under 21 accumulating six or more points within one year are required to take a driver improvement course within three months."
+      ],
+      "24": [
+        "A Farm Husbandry Permit authorizes the operation of minitrucks and farm husbandry equipment."
+      ],
+      "25": [
+        "has an engine of one thousand five hundred cc’s or less"
+      ],
+      "26": [
+        "is 4,200 pounds or less"
+      ],
+      "27": [
+        "All occupants riding with a permit holder, including the driver, must wear a seat belt."
+      ],
+      "28": [
+        "Violation carries a one-point assessment on driving record."
+      ],
+      "29": [
+        "An under age 21 driver is subject to the same DWI laws as a person age 21 or over if the blood alcohol content is .08 (BAC) or greater."
+      ],
+      "30": [
+        "has a top speed of approximately 55 miles per hour"
+      ],
+      "31": [
+        "Minimum Age: 13 if you live on a farm or 14 if employed on a farm for compensation."
+      ],
+      "32": [
+        "Expiration: 16th birthday."
+      ],
+      "33": [
+        "Expiration: Six months following the date of issuance."
+      ],
+      "34": [
+        "Must be accompanied by a licensed motor vehicle driver who occupies the seat beside the driver.",
+        "Such licensed motor vehicle or motorcycle operator shall be at least 21 years of age"
+      ],
+      "35": [
+        "A School Permit can be issued if such person lives outside a city of 5,000 or more or attends a school outside a city of 5,000 or more."
+      ],
+      "36": [
+        "Minimum Age: 14 years and two months. May not apply until individual has held an LPE or LPD for at least two months."
+      ],
+      "37": [
+        "complete a 50 hour certi4cation form signed by a parent, guardian or licensed driver who is at least 21.",
+        "The certi4cation form must indicate that at least 10 hours of motor vehicle operation was between sunset and sunrise."
+      ],
+      "38": [
+        "Expiration: 16 years and three months."
+      ],
+      "39": [
+        "Minimum Age: 15. May apply 60 days before 15th birthday, issuance must be on or after 15th birthday."
+      ],
+      "40": [
+        "Expiration: One year following the date of issuance."
+      ],
+      "41": [
+        "The Provisional Operator’s Permit allows an individual to operate a motor vehicle unsupervised in Nebraska from 6 a.m. to 12 midnight."
+      ],
+      "42": [
+        "Individual may only drive unsupervised between 12 midnight and 6 a.m. if they are driving to or from home to work or a school activity."
+      ],
+      "43": [
+        "During the 4rst six months of the POP, the holder can only operate a motor vehicle with no more than one passenger who is not an immediate family member and who is under nineteen years of age."
+      ],
+      "44": [
+        "not accumulated three or more points on their driving record during the six month period immediately preceeding the POP application date"
+      ],
+      "45": [
+        "has an engine of one thousand 4ve hundred cc’s or less"
+      ],
+      "46": [
+        "Operator’s License (Class O) ... Minimum Age: 17."
+      ],
+      "47": [
+        "fail three successive drive tests will not be eligible to reapply until they: 1) show proof of successful completion of a DMV approved driver training course, or 2) have held a LPD for at least 90 days."
+      ],
+      "48": [
+        "A Class O License authorizes a license holder to operate any motor vehicle, including a Moped, Autocycle, All-Terrain Vehicle (ATV) and Utility-Terrain Vehicle (UTV). Does not include a motorcycle"
+      ],
+      "49": [
+        "Any authorized ATV/UTV operation on public roadways must: • Occur only between sunrise and sunset at speeds lower than 30 mph."
+      ],
+      "50": [
+        "An ATV (All-Terrain Vehicle) means any motorized off-highway device which: ... 2) has a dry weight of twelve hundred pounds or less"
+      ],
+      "51": [
+        "The crossing is made at an angle of approximately 90 degrees"
+      ],
+      "52": [
+        "The headlight and taillight must be on and equipped with a bicycle safety flag."
+      ],
+      "53": [
+        "Occur only between sunrise and sunset at speeds lower than 30 mph."
+      ],
+      "54": [
+        "who have held a POP for at least 12 months"
+      ],
+      "55": [
+        "who have not accumulated three or more points on their driving records during the previous 12 month period"
+      ],
+      "56": [
+        "A drive test cannot be administered in an autocycle for a Class O license."
+      ],
+      "57": [
+        "All persons being transported in a motor vehicle operated by a holder of a POP are required to ride secured in an occupant protection system."
+      ],
+      "58": [
+        "Expiration: 18th birthday."
+      ],
+      "59": [
+        "A “Z” restriction will be placed on the license when a motor scooter, 3 wheeled scooter or 3 wheeled motorcycle is used during the drive test."
+      ],
+      "60": [
+        "Gross Vehicle Weight Rating (GVWR) of more than 26,000 pounds"
+      ],
+      "61": [
+        "carries 16 or more persons (including the driver)"
+      ],
+      "62": [
+        "No holder of a CDL can enter a traffic diversion program to avoid a conviction for a traffic citation (except a parking violation)."
+      ],
+      "63": [
+        "Proof of lawful status is required for each visit to the driver licensing office."
+      ],
+      "64": [
+        "Faxed or photocopied documents will NOT be accepted."
+      ],
+      "65": [
+        "you must present document(s) (certified marriage license(s), certified divorce decree(s) or a court order) that links your new name"
+      ],
+      "66": [
+        "Hospital issued birth certificates cannot be accepted"
+      ],
+      "67": [
+        "Principal Address in Nebraska (at least two documents are required).",
+        "Proof of principal address must be from two different issuing sources.",
+        "A P.O. Box will not be accepted as proof of principal address."
+      ],
+      "68": [
+        "If you are under 21 and cannot provide proof of principal address, parents or guardians’ principal address documents will be accepted."
+      ],
+      "69": [
+        "marked NOT FOR FEDERAL IDENTIFICATION.",
+        "The cards carry a distinguishing mark that indicates they are NOT FOR FEDERAL IDENTIFICATION."
+      ],
+      "70": [
+        "The DMV vision test measures visual acuity and peripheral vision."
+      ],
+      "71": [
+        "Model year vehicles 1973 or after must have passenger and driver seat belts that are clean and in working order for driver licensing staff and driver's use."
+      ],
+      "72": [
+        "Vehicle must be in good mechanical condition and have working brake lights.",
+        "Vehicle speedometer must work properly."
+      ],
+      "73": [
+        "Any test failed may not be retaken the same day."
+      ],
+      "74": [
+        "Present the Issuance Certi4cate to any county treasurer... within 90 days."
+      ],
+      "75": [
+        "The Transportation Security Administration does not accept the 30-day receipt as acceptable proof of identication to board planes or enter certain federal faclities."
+      ],
+      "76": [
+        "Please ensure the address you provided DMV is current as these documents will not be forwarded to another address by the U.S. Postal Service."
+      ],
+      "77": [
+        "the driver licensing staff’s decision can be appealed to the Director of the Department of Motor Vehicles as provided in Nebraska Revised Statute §60-4,114."
+      ],
+      "78": [
+        "the license is valid while serving on active duty and for 60 days following a discharge or return to Nebraska – whichever is later."
+      ],
+      "79": [
+        "Within 30 days of completion of an application where the applicant has indicated a desire to register to vote, a Voter Registration card is mailed to the applicant"
+      ],
+      "80": [
+        "(Non-U.S. citizens are not eligible for online services):"
+      ],
+      "81": [
+        "Has held a School Learner’s Permit, Learner’s Permit, School Permit or combination for at least six months"
+      ],
+      "82": [
+        "Has not accumulated three or more points on your driving record during the previous 12 month period."
+      ],
+      "83": [
+        "Class O and Class M license holders may renew two consecutive times online."
+      ],
+      "84": [
+        "If a person says yes to organ and/or tissue donation, a heart donor symbol will be placed on the front"
+      ],
+      "85": [
+        "A minor (between 16 and 18 years old) may elect to be a donor, however their parents or legal adult guardians, if available, may amend their donation decision."
+      ],
+      "86": [
+        "a donation made by permit, license or State ID Card, donor card or donor registry cannot be rescinded by anyone after a person’s death."
+      ],
+      "87": [
+        "Failure to report for an examination or to submit the required medical or vision statement or to pass required written and drive tests, will result in the license being cancelled."
+      ],
+      "88": [
+        "Licenses issued to individuals 21 or older expire on the license holder’s birthday in the 5th year after issuance."
+      ],
+      "89": [
+        "Individuals 21 and over may renew 90 days prior to their birthday."
+      ],
+      "90": [
+        "State statute requires that name and address changes be made within 60 days of the change."
+      ],
+      "91": [
+        "G – Limited to Daylight Only"
+      ],
+      "92": [
+        "Q – No Interstate Driving"
+      ],
+      "93": [
+        "No person shall hold a permit or license with a State ID Card at the same time."
+      ],
+      "94": [
+        "Impoundment is the seizure and holding of the license by the court."
+      ],
+      "95": [
+        "The driver is issued a temporary license that is valid for 15 days."
+      ],
+      "96": [
+        "Failure to have required minimum insurance liability coverage ($25,000 property, $50,000 personal injury) and involvement in an at fault crash."
+      ],
+      "97": [
+        "Failure by individuals under 21 to complete a driver improvement course after accumulating 6 points in one year."
+      ],
+      "98": [
+        "Accumulating 12 points in a two-year period causes automatic revocation of the operator's license for six months."
+      ],
+      "99": [
+        "Veterans must certify their eligibility through the Nebraska Department of Veterans’ Affairs (NDVA) prior to any designation being added"
+      ],
+      "100": [
+        "If driving privileges are revoked or suspended in Nebraska or any other state or jurisdiction, a Nebraska license will not be issued."
+      ],
+      "101": [
+        "Accumulating 12 points in a two-year period causes automatic revocation of the operator's license for six months."
+      ],
+      "102": [
+        "Third offense drunk driving .........................................................12 points"
+      ],
+      "103": [
+        "Persons who fail to surrender the license will be 4ned $500 or less, and/or imprisoned in county jail for 30 days or less."
+      ],
+      "104": [
+        "Convictions remain on the record for 4ve years; however, the points no longer count two years after the date of violation."
+      ],
+      "105": [
+        "Drivers receive a temporary license which expires 15 days after it is issued."
+      ],
+      "106": [
+        "First time offenders who fail an alcohol test serve a 180 day administrative license revocation (ALR)."
+      ],
+      "107": [
+        "Using a handheld wireless communication device to read, type or send written communication while operating a motor vehicle..............................................................3 points"
+      ],
+      "108": [
+        "1 thru 5 MPH………………..0 Point (Citation date on or after 11/14/20)"
+      ],
+      "109": [
+        "Leave the scene of a crash..............................................................6 points"
+      ],
+      "110": [
+        "For a conviction of .02% the license will be impounded by the court for 30 days and will become part of the driving record for 90 days."
+      ],
+      "111": [
+        "Proof of financial responsibility must be maintained for three years following the ending date of the original revocation.",
+        "usually provided with a written certification of insurance from an insurance company, identified as Form SR-22."
+      ],
+      "112": [
+        "A credit of 2 points may be granted to a driver successfully completing a DMV approved driver improvement course prior to twelve points being accumulated."
+      ],
+      "113": [
+        "No points are assessed for parking, muffler, no valid operator's license on person, or for violations involving occupant protection system"
+      ],
+      "114": [
+        "Persons who refuse to submit to a chemical test for alcohol or drugs must serve a one year ALR."
+      ],
+      "115": [
+        "Any underage driver that is convicted of driving during the impoundment will have their license revoked for six months by the court."
+      ],
+      "116": [
+        "For a refusal to submit to a test, the offender must wait 90 days after the temporary license expires to apply for the SPP."
+      ],
+      "117": [
+        "Employment Drive Permits only allow the holder to drive to and from the work location and home via the most direct route"
+      ],
+      "118": [
+        "First time offenders subject to an ALR may install an ignition interlock system and apply for an Ignition Interlock Permit (IIP) after the 15 day temporary license expires."
+      ],
+      "119": [
+        "If the driver has an alcohol content of at least .02 with the above indicated violations, it is a Class IV Felony."
+      ],
+      "120": [
+        "Permit holders can only drive from home or work to a specified hospital, clinic, doctor's office, or similar location and return for the purpose of medical treatment."
+      ],
+      "121": [
+        "Any driver who ees in order to avoid arrest for the violation of any Nebraska law which constitutes a felony commits a Class IV felony."
+      ],
+      "122": [
+        "Persons who leave the scene of a motor vehicle crash may have their driver license revoked for up to one year upon conviction."
+      ],
+      "123": [
+        "For a second offense the permit or license will be impounded by the court for 90 days."
+      ],
+      "124": [
+        "It is unlawful to consume or be in possession of an open container of an alcoholic beverage inside any vehicle on any public roadway",
+        "This includes both drivers and passengers."
+      ],
+      "125": [
+        ".02% or higher and the driver is under 21."
+      ],
+      "126": [
+        ".04% or higher when operating a commercial motor vehicle."
+      ],
+      "127": [
+        "Any driver that operates a vehicle on Nebraska roadways has already agreed to submit to a chemical test or tests when requested by a law enforcement of4cer."
+      ],
+      "128": [
+        "The administrative sanction for refusal is one year of license revocation."
+      ],
+      "129": [
+        "Many factors affect an individual’s absorption of alcohol. These include: 1) weight, 2) sex... 3) amount of food in the digestive tract"
+      ],
+      "130": [
+        "When the driver must choose from a number of responses (choice reaction), impairment begins at .03% BAC."
+      ],
+      "131": [
+        "By the time a driver reaches .08% BAC, he or she is three times more likely to be involved in a fatal crash than a non-drinking driver."
+      ],
+      "132": [
+        "The driver’s recommended hand position for vehicles equipped with airbags located in the steering wheel is the 9 o’clock and 3 o’clock position."
+      ],
+      "133": [
+        "Drivers of air bag-equipped vehicles should allow at least 10 inches of space between themselves and the steering wheel."
+      ],
+      "134": [
+        "For maximum safety, children age 12 and younger should ride in the rear seat."
+      ],
+      "135": [
+        "Children up to age eight must ride correctly secured in a federally approved child safety seat. (Primary Law)"
+      ],
+      "136": [
+        "Children ride rear-facing up to age two or until they reach upper height or weight limit allowed by the car seat’s manufacturer."
+      ],
+      "137": [
+        "Children up to age eighteen are prohibited from riding in cargo areas. (Primary Law)"
+      ],
+      "138": [
+        "Violation carries a $25 4ne plus court costs and 1 point is assessed against the operator’s driving record."
+      ],
+      "139": [
+        "If you are about to hit a deer, your safest action is to BRAKE (firmly), STEER (to maintain control) and STOP (as safely as possible)."
+      ],
+      "140": [
+        "loss of consciousness within a three month period prior to obtaining or renewing an operator’s license will be required to have a physician certify"
+      ],
+      "141": [
+        "It is unlawful to use nitrous oxide in any motor vehicle operated on any public roadway in this state."
+      ],
+      "142": [
+        "Activate your turn signal and pull off or to the side of the roadway as soon as it is safe to do so."
+      ],
+      "143": [
+        "a higher proportion of a woman’s body weight is in fat and fat absorbs less alcohol than muscle tissue"
+      ],
+      "144": [
+        "Drivers and front seat passengers are required to ride buckled up in a seat belt or child safety seat, this includes autocycles. (Secondary Law)"
+      ],
+      "145": [
+        "Turn on your interior lights if you are pulled over at night to assist with visibility."
+      ],
+      "146": [
+        "the refusal to sign a traf4c ticket may result in your arrest."
+      ],
+      "147": [
+        "in the amount of twenty-4ve thousand dollars because of injury to or destruction of property of others in any one crash."
+      ],
+      "148": [
+        "Pneumatic tires with at least 2/32” tread"
+      ],
+      "149": [
+        "vehicle identi4cation number (VIN) usually located on the lower corner below the windshield."
+      ],
+      "150": [
+        "Never turn your vehicle’s ignition to the “lock” position when the vehicle is in motion. You will be unable to control the vehicle."
+      ],
+      "151": [
+        "Any person owning or operating a motor vehicle in violation of these restrictions shall be guilty of a Class III misdemeanor."
+      ],
+      "152": [
+        "Compare the measured psi to the psi found on the sticker inside the driver’s door of your vehicle or in owner’s manual."
+      ],
+      "153": [
+        "Check your tires “cold” – before you’ve driven or at least three hours after you’ve driven."
+      ],
+      "154": [
+        "If any part of Lincoln’s head is covered by the tread, you’re driving with the safe amount of tread."
+      ],
+      "155": [
+        "the intersection shall be treated as an all-way stop."
+      ],
+      "156": [
+        "A ashing red light at a railroad crossing requires a complete stop even if a train is not visible."
+      ],
+      "157": [
+        "If the vehicle has not entered the intersection, it should be brought to a safe stop.",
+        "Speeding up to \"beat the light\" is unlawful."
+      ],
+      "158": [
+        "Wait for the officer’s instructions before reaching for your driver’s license or vehicle documents."
+      ],
+      "159": [
+        "Two systems of brakes (service brake and parking brake)"
+      ],
+      "160": [
+        "A complete stop is required, yielding to oncoming traf4c or pedestrians, before proceeding when the way is clear."
+      ],
+      "161": [
+        "Left turn on red. Turning left at a circular red light after stopping is allowed only if traveling on a one-way street and turning onto another one-way street."
+      ],
+      "162": [
+        "Turning on a red arrow is prohibited."
+      ],
+      "163": [
+        "A steady yellow \"X\" signal means the driver should move out of the lane as soon as safely possible as a red \"X\" will soon appear."
+      ],
+      "164": [
+        "Drivers approaching the red flashing beacons must stop and verify that no pedestrian is in their lane nor in any adjacent lane before proceeding."
+      ],
+      "165": [
+        "Pink – Incident management signs."
+      ],
+      "166": [
+        "Pentagon: SCHOOL AND SCHOOL CROSSING",
+        "The pentagon (4ve-sided) shape marks school zones and warns of school children crosswalks."
+      ],
+      "167": [
+        "Pennant: NO PASSING ZONE",
+        "Signs indicate a no passing zone."
+      ],
+      "168": [
+        "NEVER DRIVE AROUND THE GATES. It is dangerous and against the law."
+      ],
+      "169": [
+        "Added Lane – Traf4c from another road will be entering the road. No merging is necessary because a lane has been added."
+      ],
+      "170": [
+        "Divided Highway Ends – The oncoming traf4c lane ahead is no longer divided by median or divider. Keep to the right."
+      ],
+      "171": [
+        "stop at the safest point nearest the intersecting roadway to obtain a clear view of approaching traffic."
+      ],
+      "172": [
+        "Speeding up to “beat the arrow” is unlawful."
+      ],
+      "173": [
+        "The state statute requiring vehicles approaching a dark traffic signal to stop does not apply to these midblock beacons."
+      ],
+      "174": [
+        "Green – Guide information, such as distance or direction."
+      ],
+      "175": [
+        "Installed under the Railroad Crossing signs in locations where a quiet zone has been established.Trains do not blow the horn at this location."
+      ],
+      "176": [
+        "A yellow \"No Passing Zone\" pennant shape sign may be found on the left side of the road at the beginning of a no passing zone."
+      ],
+      "177": [
+        "Service Signs – Blue and white signs direct motorists to services, such as hospitals, gas, food, lodging, etc."
+      ],
+      "178": [
+        "Slow Moving Vehicles Warning – Vehicles which travel 25 MPH or less – such as farm equipment – must display these emblems"
+      ],
+      "179": [
+        "The orange signs with messages in black letters are reserved strictly to identify work zones."
+      ],
+      "180": [
+        "When you see the “Flagger” sign, STAY ALERT and be prepared to stop."
+      ],
+      "181": [
+        "Channelizing Devices – Barricades, vertical panels, drums and cones are the most commonly used devices to guide drivers safely through the work zone."
+      ],
+      "182": [
+        "A broken yellow line indicates that passing on the left is permitted when the way ahead is clear."
+      ],
+      "183": [
+        "Making a left turn or avoiding an obstruction are the only lawful crossings allowed over double yellow lines, when turning into or from an alley, private road, or driveway"
+      ],
+      "184": [
+        "A center lane separated with solid and broken yellow lines reserves a lane for left turns shared with traffic from the opposite direction."
+      ],
+      "185": [
+        "White lines separate lanes of traffic going in the same direction."
+      ],
+      "186": [
+        "Drivers must stop at the line (when present), not at the stop sign or traffic control signal."
+      ],
+      "187": [
+        "Rumble strips are intended to alert drowsy or inattentive drivers through vibration and sound that their vehicles have left the travel lane"
+      ],
+      "188": [
+        "motorists may cross over the bike lane to move into another appropriate travel lane, to enter or exit on-street parking spaces or to enter or exit private property."
+      ],
+      "189": [
+        "Motorists should avoid passing bicyclists until a safe distance of no less than three feet clearance exists."
+      ],
+      "190": [
+        "Any vehicle proceeding at less than the normal speed of traffic at the time and place... must be driven in the right lane when available for traffic"
+      ],
+      "191": [
+        "watch for vehicles coming from the right and yield the right-of-way.",
+        "Car \"A\" yields to car \"B\" if car \"A\" is going straight ahead."
+      ],
+      "192": [
+        "Common courtesy is that the driver who stops 4rst should be permitted to go 4rst.",
+        "If in doubt, yield to the driver on your right."
+      ],
+      "193": [
+        "raised paved areas next to the circular roadway for the rear wheels of large trucks to use",
+        "Truck aprons are not to be used by cars, SUVs, pickup trucks, bicyclists or pedestrians."
+      ],
+      "194": [
+        "Yield to traf4c approaching on your left already in the roundabout."
+      ],
+      "195": [
+        "If you have entered the roundabout, continue to your exit, then once beyond the splitter island, pull over",
+        "Avoid stopping within the roundabout"
+      ],
+      "196": [
+        "must move into a lane at least one travel lane away from the stopped vehicles.",
+        "If moving into another lane is not possible... the driver must then reduce their speed"
+      ],
+      "197": [
+        "1st offense up to $100."
+      ],
+      "198": [
+        "should drive the vehicles to the nearest shoulder out of the travel lanes."
+      ],
+      "199": [
+        "STOP before driving onto a sidewalk or onto the sidewalk area and proceed slowly.",
+        "Yield the right of way to any pedestrian and approaching vehicles."
+      ],
+      "200": [
+        "No vehicle may follow any 4re apparatus traveling in an emergency status closer than 500 feet"
+      ],
+      "201": [
+        "Note: Funeral procession escort vehicles are classiﬁed as emergency vehicles.",
+        "Drivers are required to yield to funeral escort vehicles displaying proper audio or visual signals."
+      ],
+      "202": [
+        "25 MPH in residential districts."
+      ],
+      "203": [
+        "75 MPH on rural interstate highways"
+      ],
+      "204": [
+        "Fines are doubled in school zones and when workers are present in work zones."
+      ],
+      "205": [
+        "Pass within 100 feet of any intersection.",
+        "Pass within 100 feet of any railroad crossing."
+      ],
+      "206": [
+        "Signal and move back into the right lane when the front of the vehicle being passed or the vehicles’s headlights are seen in the rear view mirror."
+      ],
+      "207": [
+        "When another vehicle is passing, stay in the lane and maintain speed unless there is an emergency."
+      ],
+      "208": [
+        "Signal at least 100 feet before turning, or moving right or left."
+      ],
+      "209": [
+        "Reversible Lanes are double-dashed broken yellow lines indicating the lane changes direction of trafﬁc ﬂow"
+      ],
+      "210": [
+        "DO NOT change lanes in an intersection."
+      ],
+      "211": [
+        "Park vehicle within 12 inches of and parallel to the curb, or road's edge."
+      ],
+      "212": [
+        "Within 15 feet of a fire hydrant."
+      ],
+      "213": [
+        "If you park facing uphill where there is a curb, set the parking brake and turn the wheels away from the curb."
+      ],
+      "214": [
+        "The fines for violating handicapped parking laws are: • 1st offense up to $150"
+      ],
+      "215": [
+        "If none, stop not less than 15 feet nor more than 50 feet from the nearest rail."
+      ],
+      "216": [
+        "Do not change gears when crossing the tracks."
+      ],
+      "217": [
+        "If the vehicle stalls on a crossing, get everyone out and off the tracks immediately."
+      ],
+      "218": [
+        "The typically blue colored ENS sign is at every highway-rail grade crossing"
+      ],
+      "219": [
+        "The same train traveling 60 MPH requires 8500 feet or one and three-fifths (1-3/5) miles to stop."
+      ],
+      "220": [
+        "When the broken white line begins, adjust your speed, use your turn signal, and merge into a traffic gap when safe to do so."
+      ],
+      "221": [
+        "Minimum speed on the interstate is 40 MPH."
+      ],
+      "222": [
+        "If you miss your exit, go on to the next exit. Backing up or using emergency crossover points on the interstate is prohibited."
+      ],
+      "223": [
+        "Headlights must be used from sunset to sunrise."
+      ],
+      "224": [
+        "If the oncoming lights are blinding do not look directly at the vehicle but look toward the right edge of the road."
+      ],
+      "225": [
+        "Two feet of moving water can carry away most vehicles including sport utility vehicles and pick-up trucks."
+      ],
+      "226": [
+        "Vehicles equipped with antilock (ABS) brakes: press brake pedal firmly; do not pump brakes."
+      ],
+      "227": [
+        "Studded tires are only lawful from November 1 to April 1."
+      ],
+      "228": [
+        "Open a window slightly for fresh air.",
+        "Conserve fuel, run the engine and heater sparingly, and only with a slightly open window for ventilation. Keep snow from blocking exhaust (tail) pipe."
+      ],
+      "229": [
+        "Hold steering wheel firmly and steer so wheels straddle the edge of the roadway.",
+        "Don't attempt to turn back onto the roadway immediately."
+      ],
+      "230": [
+        "Studies reveal that text messaging increases a driver’s crash risk by 23 times."
+      ],
+      "231": [
+        "The fine for texting and driving is $200 to $500."
+      ],
+      "232": [
+        "There are three main types of distraction: Visual – taking your eyes off the road; Manual – taking your hands off the wheel; and Cognitive – taking your mind/focus off the driving task."
+      ],
+      "233": [
+        "The area of the brain responsible for processing moving visual information – a vital part of driving – has 37% less capacity to gather and process critical driving data"
+      ],
+      "234": [
+        "To operate upon any public roadway a vehicle which is equipped with a television set with the viewing screen that is visible to the driver while operating such vehicle."
+      ],
+      "235": [
+        "Examples of aggressive driving include, but are not limited to: tailgating, cutting off other drivers, running red lights and failing to yield to other vehicles."
+      ],
+      "236": [
+        "As little as 10-20 minutes of sleep can make a big difference.",
+        "What does not work in preventing drowsiness: rolling down a window, chewing gum or turning up the radio."
+      ],
+      "237": [
+        "Take in the situation on the road at least 10-15 seconds ahead."
+      ],
+      "238": [
+        "Check the traffic behind at least every 10 seconds, when changing lanes, backing up, slowing or driving down steep hills."
+      ],
+      "239": [
+        "Signal intentions at least 100 feet before planning to change direction."
+      ],
+      "240": [
+        "The three-second rule is a minimum requirement and should be increased by one-second for each adversity factor encountered (rain, heavy traffic, etc.)."
+      ],
+      "241": [
+        "Allow the motorcyclist a full lane width.",
+        "Do not share the lane."
+      ],
+      "242": [
+        "Nearly 40 percent were caused by the other vehicle turning left in front of the motorcyclist."
+      ],
+      "243": [
+        "Allow more following distance, three or four seconds, following a motorcycle"
+      ],
+      "244": [
+        "a person riding a bicycle has the same duties and rights as a driver of a motor vehicle"
+      ],
+      "245": [
+        "Bicyclists may ride in the lane of travel where the lane is too narrow for a bicycle and vehicle to travel safely side by side"
+      ],
+      "246": [
+        "Quickly tap brakes several times when slowing down to warn drivers behind you."
+      ],
+      "247": [
+        "On one-way streets in urban areas, bicyclists may ride in the far left lane."
+      ],
+      "248": [
+        "Do not pass a vehicle which has stopped for a pedestrian."
+      ],
+      "249": [
+        "Always give the right-of-way to a blind or visually impaired person... by stopping and remaining stopped until the person is clear"
+      ],
+      "250": [
+        "Maintain a following distance of 100 feet from snow removal equipment or other maintenance vehicles while working on roadways"
+      ],
+      "251": [
+        "When meeting or overtaking a bus, slow to 25 MPH and prepare to stop."
+      ],
+      "252": [
+        "The only exception occurs when approaching a school bus in the opposite direction on a roadway divided by a median."
+      ],
+      "253": [
+        "traveling at 55 MPH on a clear, dry roadway, requires a minimum of 340 feet to come to a complete stop."
+      ],
+      "254": [
+        "Don’t pull in front of the truck or bus unless the entire front of the truck or bus can be seen in the rear view mirror."
+      ],
+      "255": [
+        "By avoiding the right lane in these areas, you will reduce the possibility of rear-ending or being rear-ended by a large vehicle."
+      ],
+      "256": [
+        "If you hit an unattended vehicle, contact the proper authorities and provide written information as outlined above where the owner can find it."
+      ],
+      "257": [
+        "send it to the Department of Transportation within ten (10) days if any person is injured or killed"
+      ],
+      "258": [
+        "damage to the property of any one person to an apparent extent that equals or exceeds $1,500"
+      ],
+      "259": [
+        "persons in violation shall be guilty of a Class II or III misdemeanor and may have their license or privilege to drive revoked."
+      ],
+      "260": [
+        "Motorists should merge with bicycle traffic when preparing for a right turn. Avoid turning directly across a path of bicycles"
+      ],
+      "261": [
+        "The report must be submitted on NDOT Form 41, October 2020"
+      ],
+      "262": [
+        "North Express Driver Licensing Office, 4606 North 56th Street, Suite 100, Omaha, NE 68104",
+        "No drive tests given"
+      ],
+      "263": [
+        "The risk of being in a crash begins to rise noticeably between .04% and .05% BAC"
+      ],
+      "264": [
+        "Drivers and front seat passengers are required to ride buckled up in a seat belt or child safety seat"
+      ],
+      "265": [
+        "Children up to age eight must ride correctly secured in a federally approved child safety seat."
+      ],
+      "266": [
+        "it can pose some risk of injury to children, elderly drivers and passengers, and short statured adults.",
+        "For maximum safety, children age 12 and younger should ride in the rear seat."
+      ],
+      "267": [
+        "Never use a rear facing infant safety seat in the front passenger seat of an air bag equipped vehicle."
+      ],
+      "268": [
+        "Motorists should merge with bicycle traf4c when preparing for a right turn."
+      ],
+      "270": [
+        "Turning right at a circular red light after stopping is allowed, unless signs prohibiting it are posted"
+      ],
+      "271": [
+        "Left Turn",
+        "Left arm out and fully extended."
+      ],
+      "272": [
+        "Headlights must be used from sunset to sunrise."
+      ],
+      "273": [
+        "Making a left turn or avoiding an obstruction are the only lawful crossings allowed over double yellow lines"
+      ],
+      "274": [
+        "Pedestrians have the right of way when in crosswalks even if the driver has the green light."
+      ],
+      "275": [
+        "White lines separate lanes of traffic going in the same direction."
+      ],
+      "276": [
+        "It is unlawful to: ... Exceed the posted speed limit when passing."
+      ],
+      "277": [
+        "Use the three-second rule to determine safe following distance."
+      ],
+      "278": [
+        "Orange – Alert to road workers, construction area."
+      ],
+      "279": [
+        "Triangle: YIELD",
+        "The triangle (three-sided) shape always means yield."
+      ],
+      "280": [
+        "Immediately drive to a position parallel to and as close as possible to the right edge or curb of the roadway and stop"
+      ],
+      "281": [
+        "25 MPH in residential districts."
+      ],
+      "282": [
+        "Within 15 feet of a 4re hydrant."
+      ],
+      "283": [
+        "Slower traf4c keep to the right."
+      ],
+      "284": [
+        "Use low beam headlights.",
+        "When driving in fog, one should use: (p. 62) ... b. low beams"
+      ],
+      "286": [
+        "Subsequent offenses can result in fines of up to $500"
+      ],
+      "287": [
+        "up to seven days in jail."
+      ],
+      "288": [
+        "Subsequent offenses can result in fines of up to $500 and/or up to seven days in jail."
+      ],
+      "289": [
+        "For a first offense, drivers can be fined up to $100."
+      ],
+      "291": [
+        "1st offense up to $100.",
+        "2nd and subsequent offenses up to $500"
+      ],
+      "292": [
+        "2nd and subsequent offenses up to $500 and/or up to 7 days in jail."
+      ],
+      "293": [
+        "1st offense up to $100.",
+        "2nd and subsequent offenses up to $500 and/or up to 7 days in jail."
+      ],
+      "294": [
+        "2nd and subsequent offenses up to $500 and/or up to 7 days in jail."
+      ],
+      "295": [
+        "the driver must then reduce their speed and maintain a safe speed past the stopped vehicles."
+      ],
+      "296": [
+        "2nd and subsequent offenses up to $500"
+      ],
+      "297": [
+        "2nd and subsequent offenses up to $500 and/or up to 7 days in jail."
+      ],
+      "298": [
+        "1st offense up to $100."
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
     "topics_total": 26,
-    "topics_covered": 26,
-    "coverage_pct": 100.0,
-    "uncovered_topics": [],
+    "topics_covered": 24,
+    "coverage_pct": 92.3,
+    "uncovered_topics": [
+      "Definition and specifications of a moped",
+      "Safety equipment requirements for autocycle operators"
+    ],
     "verdict": "PASS",
     "grade": "A"
   },
@@ -63,6 +987,22 @@
     "sign_ratio_pct": 10.2,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 298,
+      "avg_fidelity": 9.98,
+      "pct_at_10": 99.3,
+      "pct_above_9": 99.7,
+      "pct_above_7": 99.7,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [
+        140
+      ],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

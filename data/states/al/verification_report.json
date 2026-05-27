@@ -2,7 +2,7 @@
   "schema_version": 2,
   "code": "al",
   "name": "Alabama",
-  "verified_at": "2026-05-26T22:54:54Z",
+  "verified_at": "2026-05-27T01:15:46Z",
   "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.alea.gov/sites/default/files/inline-files/driverlicensemanual.pdf",
@@ -159,7 +159,7 @@
         "Operation of a motor vehicle in violation of restrictions may result in the loss of your license."
       ],
       "42": [
-        "The equipment required for the examination includes... two separate methods of applying brakes"
+        "The equipment required for the examination includes rear view mirror, horn, windshield wipers, two separate methods of applying brakes"
       ],
       "43": [
         "A motorcycle is defined as a motor vehicle having a seat or saddle for the use of the rider and designed to travel on not more than three wheels in contact with the ground but excluding a tractor."
@@ -184,7 +184,7 @@
       ],
       "50": [
         "Generally, all passenger vehicles, except vehicle in Classes A, B, C, or M",
-        "Class D"
+        "D"
       ],
       "51": [
         "Any person making a false affidavit in obtaining a duplicate driver license may be charged with Forgery (Title 13A-9-3), Perjury (Title 13A-10-102) or both"
@@ -304,7 +304,7 @@
         "People on bicycles who are under the age of 16 years are required to wear a securely fastened protective helmet when riding on public roadways"
       ],
       "88": [
-        "When turning across a bicycle lane, the driver shall drive the motor vehicle into the bicycle lane prior to making the turn and shall make the turn so long as such preparation for a turn shall not encroach upon the safety of the person on the bicycle in the lane."
+        "When turning across a bicycle lane, the driver shall drive the motor vehicle into the bicycle lane prior to making the turn"
       ],
       "89": [
         "24 and above points in a 2-year period 365 days"
@@ -361,12 +361,11 @@
         "When the right turn signal is blinking, do not attempt to pass on the right. The driver will not be able to see you and you will become trapped."
       ],
       "105": [
-        "Facing uphill turn your wheels away from the curb and shift into low gear or PARK.",
-        "B. Uphill with curb, turn wheels away from curb."
+        "Facing uphill turn your wheels away from the curb and shift into low gear or PARK."
       ],
       "106": [
         "Facing downhill, turn your wheels toward the curb and shift into reverse gear or PARK.",
-        "A. Downhill with or without a curb, turn wheels toward curb."
+        "Downhill with or without a curb, turn wheels toward curb."
       ],
       "107": [
         "Within 15 feet of a fire hydrant."
@@ -433,7 +432,6 @@
         "This process takes time."
       ],
       "127": [
-        "The use of these two drugs together produces serious effects on the mind and body and often death.",
         "It doesn’t just double the effect; it multiplies and, when overdone, has caused death."
       ],
       "128": [
@@ -899,15 +897,20 @@
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 29,
-    "topics_covered": 27,
-    "coverage_pct": 93.1,
+    "topics_total": 30,
+    "topics_covered": 23,
+    "coverage_pct": 76.7,
     "uncovered_topics": [
-      "driver license suspension for non payment of child support",
-      "proper posture and steering techniques for vehicle control"
+      "Point assessment for ignoring construction zone markers",
+      "Point assessment for failure to yield right of way",
+      "Administrative hearing requests for driver license suspension actions",
+      "Point assessment for improper operation of a motorcycle",
+      "Point assessment for drinking alcohol while operating a vehicle",
+      "Point assessment for wrong side of road or illegal passing",
+      "Point assessment for following another vehicle too closely"
     ],
     "verdict": "PASS",
-    "grade": "A"
+    "grade": "C"
   },
   "coverage": {
     "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
@@ -945,6 +948,6 @@
     }
   },
   "overall_verdict": "PASS",
-  "overall_grade": "A",
+  "overall_grade": "B",
   "notes": ""
 }

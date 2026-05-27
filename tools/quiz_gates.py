@@ -35,6 +35,7 @@ import argparse
 import json
 import os
 import random
+import re
 import sys
 from typing import Any
 
@@ -345,7 +346,16 @@ QUESTIONS TO JUDGE:
     )
     if response.text is None:
         raise RuntimeError(f"Empty judge response for batch starting Q{batch[0]['id']}")
-    return FaithfulnessReport.model_validate_json(response.text)
+    return FaithfulnessReport.model_validate_json(_sanitize_json(response.text))
+
+
+def _sanitize_json(text: str) -> str:
+    """Strip ASCII control chars (0x00-0x1F except \\t\\n\\r) that Gemini
+    occasionally echoes back from source-manual quotes into string values.
+    Pydantic's strict JSON parser rejects raw control chars inside strings
+    (RFC 8259 §7); the fix is to escape them at the boundary.
+    """
+    return re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", text)
 
 
 def run_faithfulness_gate(
@@ -669,7 +679,7 @@ PAIRS TO JUDGE:
         raise RuntimeError(
             f"Empty translation-judge response for batch starting Q{en_batch[0]['id']}"
         )
-    return TranslationFaithfulnessReport.model_validate_json(response.text)
+    return TranslationFaithfulnessReport.model_validate_json(_sanitize_json(response.text))
 
 
 def run_translation_faithfulness_gate(

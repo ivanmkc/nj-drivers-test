@@ -2,7 +2,7 @@
   "schema_version": 2,
   "code": "ia",
   "name": "Iowa",
-  "verified_at": "2026-05-26T22:59:09Z",
+  "verified_at": "2026-05-27T01:15:55Z",
   "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://iowadot.gov/mvd/driverslicense/dlmanual/dlmanual.pdf",
@@ -321,7 +321,7 @@
         "The warning alone will not automatically brake for the driver."
       ],
       "94": [
-        "The forward collision warning system scans the traffic ahead 20 times per second up to 500 feet in front of your vehicle"
+        "scans the traffic ahead 20 times per second up to 500 feet in front of your vehicle"
       ],
       "95": [
         "you should carefully slow the car to the appropriate posted speed limit by releasing the accelerator or lightly braking. Don’t slam the brakes"
@@ -339,8 +339,7 @@
         "the vehicle will slow down rapidly or stop on its own to avoid a crash."
       ],
       "100": [
-        "the driver should not become complacent and dependent on blind spot monitors alone",
-        "continue to check: side mirrors rear-view mirror over the shoulders (head checks)"
+        "continue to check: side mirrors, rear-view mirror, over the shoulders (head checks)"
       ],
       "101": [
         "Sensors need to be kept clean in order for them to function properly."
@@ -529,12 +528,13 @@
         "If you are stalled in a traveled lane, you and your passengers should exit the vehicle quickly and stand in a safe area"
       ],
       "161": [
-        "Look left, right, and left again for approaching vehicles and pedestrians."
+        "Step 3: Look left, right, and left again for approaching vehicles and pedestrians."
       ],
       "162": [
-        "Beware of the “false” turn signal. Do not turn just because an approaching vehicle has a turn signal on. The driver may plan to turn beyond you or has forgotten to turn the signal off"
+        "Beware of the “false” turn signal. Do not turn just because an approaching vehicle has a turn signal on. The driver may plan to turn beyond you or has forgotten to turn the signal off from a prior turn."
       ],
       "163": [
+        "Do not try to cross both directions of traffic at one time to avoid stopping in the median.",
         "Stop at the stop sign, look left and proceed into the median when safe to do so.",
         "Remain stopped in the median. Look right. Cross or turn left when it is safe to do so."
       ],
@@ -557,7 +557,7 @@
         "Exit: Signal, then exit the roundabout to your right. Yield to anyone in the crosswalk."
       ],
       "170": [
-        "Ride in the middle of the lane to prevent vehicles from passing. Yield to anyone in the crosswalks."
+        "Bicyclists using the roundabout should follow the same rules as motorists. Ride in the middle of the lane to prevent vehicles from passing."
       ],
       "171": [
         "Do not change lanes in the roundabout."
@@ -722,8 +722,8 @@
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 30,
-    "topics_covered": 30,
+    "topics_total": 26,
+    "topics_covered": 26,
     "coverage_pct": 100.0,
     "uncovered_topics": [],
     "verdict": "PASS",
@@ -766,12 +766,14 @@
     "ja": {
       "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
       "judged_count": 219,
-      "avg_fidelity": 10.0,
+      "avg_fidelity": 9.98,
       "pct_at_10": 99.5,
-      "pct_above_9": 100.0,
-      "pct_above_7": 100.0,
+      "pct_above_9": 99.5,
+      "pct_above_7": 99.5,
       "pct_zero": 0.0,
-      "drift_flagged_ids": [],
+      "drift_flagged_ids": [
+        206
+      ],
       "verdict": "PASS",
       "grade": "A"
     }

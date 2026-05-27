@@ -2,7 +2,7 @@
   "schema_version": 2,
   "code": "wi",
   "name": "Wisconsin",
-  "verified_at": "2026-05-26T23:23:37Z",
+  "verified_at": "2026-05-27T01:44:05Z",
   "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://wisconsindot.gov/Documents/dmv/shared/bds126-motorists-handbook.pdf",
@@ -34,7 +34,7 @@
     "flagged_question_ids": [],
     "evidence_by_question_id": {
       "1": [
-        "It’s also \ncrucial to remember that driving is a privilege and a very important responsibility."
+        "It’s also crucial to remember that driving is a privilege and a very important responsibility."
       ],
       "2": [
         "Share the road with pedestrians and bicyclists."
@@ -43,7 +43,7 @@
         "Wisconsin State Patrol educates the public about rules of the road and enforces Wisconsin traffic laws."
       ],
       "4": [
-        "DMV ensures drivers are trained and qualified to operate a vehicle, including through helpful resources \nlike this Motorists’ Handbook."
+        "DMV ensures drivers are trained and qualified to operate a vehicle, including through helpful resources like this Motorists’ Handbook."
       ],
       "5": [
         "aims to design and operate Wisconsin’s transportation system so driver mistakes do not become deadly."
@@ -55,13 +55,13 @@
         "Cases of human trafficking have been reported in all 72 counties in Wisconsin."
       ],
       "8": [
-        "Anyone under age 18 that exchanges sex acts for money or other things of value is \nconsidered a victim of human trafficking."
+        "Anyone under age 18 that exchanges sex acts for money or other things of value is considered a victim of human trafficking."
       ],
       "9": [
-        "contact the National\nHuman Trafficking Hotline:\n1-888-3737-888\nor text HELP to BeFree\n(233733)"
+        "or text HELP to BeFree (233733)"
       ],
       "10": [
-        "Traffickers often\nmeet their victims online while\nthey are pretending to be\nsomeone else."
+        "Traffickers often meet their victims online while they are pretending to be someone else."
       ],
       "11": [
         "Section 1: Driving Test Requirements",
@@ -419,8 +419,7 @@
         "When a school bus is stopped with its red lights flashing you need to stop at least 20 feet from it."
       ],
       "124": [
-        "If you are on a divided highway/roadway and not on the side of the school bus, you do not need to stop.",
-        "A divided highway has a barrier between lanes going opposite directions."
+        "If you are on a divided highway/roadway and not on the side of the school bus, you do not need to stop."
       ],
       "125": [
         "Give bicyclists at least three feet of room when you pass."
@@ -432,14 +431,13 @@
         "You will not be able to drive if you get 12 or more demerit points within any 12-month period."
       ],
       "128": [
-        "If you hold a probationary license, ID card or no type of license, you will have your points doubled.",
-        "These points are doubled on the second conviction and any thereafter."
+        "If you hold a probationary license, ID card or no type of license, you will have your points doubled. These points are doubled on the second conviction and any thereafter."
       ],
       "129": [
         "A habitual offender is someone who is convicted of four or more major traffic violations or 12 or more minor violations within five years."
       ],
       "130": [
-        "An occupational license allows you to drive up to 12 hours a day and up to 60 hours a week"
+        "An occupational license allows you to drive up to 12 hours a day and up to 60 hours a week to and from work, school, and places that you need to visit to maintain your household"
       ],
       "131": [
         "Wisconsin law requires that you and your passengers wear seat belts (safety belts) at any age."
@@ -1006,8 +1004,8 @@
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 30,
-    "topics_covered": 30,
+    "topics_total": 25,
+    "topics_covered": 25,
     "coverage_pct": 100.0,
     "uncovered_topics": [],
     "verdict": "PASS",
@@ -1049,7 +1047,7 @@
     },
     "ja": {
       "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
-      "judged_count": 159,
+      "judged_count": 310,
       "avg_fidelity": 10.0,
       "pct_at_10": 100.0,
       "pct_above_9": 100.0,

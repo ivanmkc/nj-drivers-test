@@ -2,7 +2,7 @@
   "schema_version": 2,
   "code": "fl",
   "name": "Florida",
-  "verified_at": "2026-05-26T22:57:23Z",
+  "verified_at": "2026-05-27T01:17:15Z",
   "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.flhsmv.gov/pdf/handbooks/englishdriverhandbook.pdf",
@@ -67,10 +67,10 @@
         "a person operating a golf cart on public roads or streets who is under 18 years of age must possess a valid learner’s driver license or valid driver license"
       ],
       "12": [
-        "a person commits a third-degree felony when they knowingly and willfully transport into this state an individual who the person knows... has entered the United States in violation of law"
+        "a person commits a third-degree felony when they knowingly and willfully transport into this state an individual who the person knows, or reasonably should know, has entered the United States"
       ],
       "13": [
-        "It also enhances the offense to a second-degree felony if a person: Transports a minor into the state in violation of this section"
+        "It also enhances the offense to a second-degree felony if a person: Transports a minor into the state in violation of this section;"
       ],
       "14": [
         "The handbook is not a legal authority and is not intended for use in court."
@@ -90,7 +90,6 @@
         "Advanced Driver Improvement (ADI) Courses"
       ],
       "19": [
-        "Insurance Laws",
         "These laws include the No-Fault Law and Financial Responsibility Law."
       ],
       "20": [
@@ -135,10 +134,10 @@
         "Must have at least 50 hours of driving experience prior to getting driver license, and 10 hours should be at night."
       ],
       "32": [
-        "May drive from 6 am to 11 pm unless driving to or from work OR accompanied by a licensed driver who is 21+."
+        "AGE 16 WITH DRIVER LICENSE May drive from 6 am to 11 pm unless driving to or from work OR accompanied by a licensed driver who is 21+."
       ],
       "33": [
-        "May drive from 5 am to 1 am unless driving to or from work OR accompanied by a licensed driver who is 21+."
+        "AGE 17 WITH DRIVER LICENSE May drive from 5 am to 1 am unless driving to or from work OR accompanied by a licensed driver who is 21+."
       ],
       "34": [
         "Drivers under the age of 18 who accumulate six or more points within a 12-month period are automatically restricted to driving for “Business Purposes ONLY” for one year."
@@ -147,10 +146,10 @@
         "Always carry your driver license with you when driving, and always have proof of vehicle registration and insurance with you in the vehicle you are driving."
       ],
       "36": [
-        "A non-resident... who accepts employment... must get a Florida driver license within 30 days in order to operate a motor vehicle."
+        "A non-resident... who accepts employment or engages in a trade, profession or occupation in this state... must get a Florida driver license within 30 days"
       ],
       "37": [
-        "A non-resident... enrolls their child in a Florida public school must get a Florida driver license within 30 days",
+        "A non-resident... who... enrolls their child in a Florida public school must get a Florida driver license within 30 days",
         "Any non-resident attending college in Florida.",
         "Members of the Armed Forces stationed in Florida, their spouses and dependents."
       ],
@@ -447,10 +446,10 @@
         "Fines are doubled when speeding infractions occur within a school zone or construction zone, with possible civil penalties up to $1,000"
       ],
       "133": [
-        "If you are found at fault in a crash where anyone was injured and transported to a medical treatment facility, or it is your second collision in a two-year period, you will be required by law to attend a Traffic Collision Avoidance Course."
+        "If you are found at fault in a crash where anyone was injured and transported to a medical treatment facility... you will be required by law to attend a Traffic Collision Avoidance Course."
       ],
       "134": [
-        "receive 4 hours of behind-the- wheel training from a Florida licensed commercial driving school (CDS)"
+        "receive 4 hours of behind-the- wheel training from a Florida licensed commercial driving school (CDS);"
       ],
       "135": [
         "18 points within a 18-month period—3 month suspension"
@@ -459,8 +458,7 @@
         "Passing a stopped school bus 4"
       ],
       "137": [
-        "Texting resulted in a crash +6*",
-        "*Points added to primary offense."
+        "Texting resulted in a crash +6*"
       ],
       "138": [
         "Fail to pay child support.",
@@ -629,7 +627,7 @@
         "Begin Right Turn Lane. When entering a right turn lane you may encounter bicyclists traveling straight; you must yield to the bicyclists."
       ],
       "192": [
-        "Slower traffic must stay in the right lane unless passing. Slower traffic must move out of the left lane when being overtaken by a faster vehicle."
+        "Slower Traffic Keep Right. Slower traffic must stay in the right lane unless passing. Slower traffic must move out of the left lane when being overtaken by a faster vehicle."
       ],
       "193": [
         "Warning signs are normally yellow and diamond-shaped. They alert drivers to conditions ahead and what to look out for."
@@ -647,7 +645,7 @@
         "You may turn left from a one-way street onto a one-way street that has traffic moving to the left."
       ],
       "198": [
-        "YELLOW LIGHT. Warning—the light is changing to red. Stop if you can safely do so."
+        "YELLOW LIGHT Warning—the light is changing to red. Stop if you can safely do so."
       ],
       "199": [
         "Slippery Surface. In wet weather, drive slowly. Don't speed up or brake quickly. Make turns at slow speeds."
@@ -798,15 +796,13 @@
         "The center lane of a three-lane or five-lane highway is used only for turning left."
       ],
       "248": [
-        "Red reflectors on lane lines always mean you are facing traffic the wrong way",
         "If you see red reflectors facing you on the lane lines, you are on the wrong side of the road."
       ],
       "249": [
         "You must give a turn signal at least 100 feet BEFORE making your turn."
       ],
       "250": [
-        "Turn right into the right lane of the roadway entered.",
-        "A left turn may be completed in any lane lawfully available— or safe—for the desired direction of travel."
+        "Turn right into the right lane of the roadway entered. A left turn may be completed in any lane lawfully available"
       ],
       "251": [
         "Use a three-point turn only if the road is too narrow for a U-turn and you can’t go around the block.",
@@ -1062,8 +1058,8 @@
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 26,
-    "topics_covered": 26,
+    "topics_total": 30,
+    "topics_covered": 30,
     "coverage_pct": 100.0,
     "uncovered_topics": [],
     "verdict": "PASS",

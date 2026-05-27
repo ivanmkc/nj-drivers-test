@@ -2,7 +2,7 @@
   "schema_version": 2,
   "code": "mo",
   "name": "Missouri",
-  "verified_at": "2026-05-26T23:08:15Z",
+  "verified_at": "2026-05-27T01:26:48Z",
   "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://dor.mo.gov/forms/Driver%20Guide.pdf",
@@ -651,13 +651,13 @@
         "recommends drivers sit with at least ten inches between the center of their breastbone and the center of the steering wheel."
       ],
       "201": [
-        "ALL passengers accompanying an intermediate driver license holder must be properly restrained."
+        "ALL passengers accompanying an intermediate driver license holder must be properly restrained."
       ],
       "202": [
         "Children less than four years old, regardless of weight, shall be secured in a child passenger restraint system appropriate for that child."
       ],
       "203": [
-        "Children at least four years of age but less than eight years of age, who also weigh at least 40 pounds but less than 80 pounds, and are also less than 4’9’’ tall shall be secured in a child passenger restraint system or booster seat"
+        "Children at least four years of age but less than eight years of age, who also weigh at least 40 pounds but less than 80 pounds, and are also less than 4’9” tall shall be secured in a child passenger restraint system or booster seat"
       ],
       "204": [
         "At an intersection, look to the left and right, even if other traffic has a red light or a stop sign.",
@@ -667,8 +667,7 @@
         "Place your left hand between the seven & nine o’clock positions and your right hand between the three & five o’clock positions on the steering wheel."
       ],
       "206": [
-        "This will cause the steering wheel to lock if you try to turn the steering wheel, and you will lose control of your vehicle.",
-        "Never turn your vehicle’s ignition key to the ’lock’ position while your vehicle is still in motion."
+        "Never turn your vehicle’s ignition key to the “lock” position while your vehicle is still in motion. This will cause the steering wheel to lock"
       ],
       "207": [
         "A good way to measure your safe following distance is to use the “three second rule.”"
@@ -1016,15 +1015,14 @@
       ],
       "323": [
         "The load on your vehicle must be non-reducible;",
-        "You must have property damage and bodily injury liability insurance;",
+        "You must have property damage and bodily injury liability insurance; and",
         "You must pay a permit fee."
       ],
       "324": [
         "This combination must not be carried by vehicles transporting explosive or flammable material or using flammable compressed gas as a motor fuel."
       ],
       "325": [
-        "If you are driving a bus or truck, you must not follow another bus or truck any closer than 300 feet.",
-        "However, you may follow closer than 300 feet when you are in a business or residential district, or when passing."
+        "If you are driving a bus or truck, you must not follow another bus or truck any closer than 300 feet."
       ],
       "326": [
         "For each ten feet of length in your vehicle, keep at least one second between you and the vehicle in front of you."
@@ -1041,8 +1039,7 @@
       ],
       "330": [
         "Slow down. It is better to be tailgated at a low speed than a high speed.",
-        "Increase the distance between you and the vehicle in front of you. This will help you to avoid any sudden stops.",
-        "Do not flash your taillights or brake lights at the tailgater."
+        "Increase the distance between you and the vehicle in front of you. This will help you to avoid any sudden stops."
       ],
       "331": [
         "Because text messaging requires visual, manual, and cognitive attention from the driver, it is by far the most high risk distraction."
@@ -1199,12 +1196,10 @@
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 27,
-    "topics_covered": 26,
-    "coverage_pct": 96.3,
-    "uncovered_topics": [
-      "Carrying driver license or permit"
-    ],
+    "topics_total": 25,
+    "topics_covered": 25,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
     "verdict": "PASS",
     "grade": "A"
   },

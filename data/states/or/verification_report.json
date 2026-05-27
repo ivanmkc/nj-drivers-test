@@ -2,7 +2,7 @@
   "schema_version": 2,
   "code": "or",
   "name": "Oregon",
-  "verified_at": "2026-05-26T23:14:19Z",
+  "verified_at": "2026-05-27T01:42:08Z",
   "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.oregon.gov/odot/forms/dmv/37.pdf",
@@ -669,13 +669,13 @@
         "For red flag indicators of human trafficking and more information, download the TAT app today."
       ],
       "203": [
-        "Vital Records\u0017— Oregon (Birth Certificate Information)....................971-673-1190"
+        "Vital Records—\nOregon (Birth Certificate Information)....................971-673-1190"
       ],
       "215": [
         "Additional acceptable IDs include, but are not limited to: ... Foreign government-issued passport."
       ],
       "216": [
-        "Published by: Oregon Department of Transportation Driver and Motor Vehicle Services"
+        "Published by:\nOregon Department of Transportation\nDriver and Motor Vehicle Services"
       ],
       "217": [
         "Lane Travel.......................................................................18",
@@ -692,9 +692,10 @@
       ],
       "220": [
         "Safe & Responsible Driving..........................................................73",
-        "Safety Belts...............................................................73"
+        "Safety Belts....................................................................73"
       ],
       "221": [
+        "Safe & Responsible Driving..........................................................73",
         "Fuel Saving Techniques..........................................................86"
       ],
       "222": [
@@ -875,7 +876,7 @@
         "Make room for vehicles entering freeways. If there is no one next to you, move over a lane."
       ],
       "279": [
-        "signaling in advance by gently pressing the brake when you have to slow down or stop. Your brake lights will alert drivers behind you"
+        "signaling in advance by gently pressing the brake when you have to slow down or stop. Your brake lights will alert drivers behind you that you are slowing down."
       ],
       "280": [
         "Crossing a wide solid white line is permitted but discouraged."
@@ -898,10 +899,13 @@
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 30,
-    "topics_covered": 30,
-    "coverage_pct": 100.0,
-    "uncovered_topics": [],
+    "topics_total": 26,
+    "topics_covered": 24,
+    "coverage_pct": 92.3,
+    "uncovered_topics": [
+      "Adjusting following distance for heavy loads or trailers",
+      "Rules for carrying passengers in a towed trailer"
+    ],
     "verdict": "PASS",
     "grade": "A"
   },
@@ -941,7 +945,7 @@
     },
     "ja": {
       "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
-      "judged_count": 203,
+      "judged_count": 267,
       "avg_fidelity": 10.0,
       "pct_at_10": 100.0,
       "pct_above_9": 100.0,

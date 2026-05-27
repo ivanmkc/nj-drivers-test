@@ -2,7 +2,7 @@
   "schema_version": 2,
   "code": "md",
   "name": "Maryland",
-  "verified_at": "2026-05-26T23:03:21Z",
+  "verified_at": "2026-05-27T01:19:55Z",
   "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://mva.maryland.gov/Documents/DL-002.pdf",
@@ -26,8 +26,8 @@
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
     "sample_size": 0,
     "judged_count": 181,
-    "avg_fidelity": 10.0,
-    "pct_at_10": 100.0,
+    "avg_fidelity": 9.99,
+    "pct_at_10": 99.4,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
@@ -173,10 +173,10 @@
         "The MVA recommends a minimum following distance of 3 to 4 seconds under ideal driving conditions."
       ],
       "49": [
-        "you should increase the distance between your vehicle and the one ahead of you to four or five seconds"
+        "When following vehicles that stop often (buses, delivery vans), you should increase the distance between your vehicle and the one ahead of you to four or five seconds"
       ],
       "50": [
-        "Generally, you should keep your vehicle to the right of the center of the road, unless: • You are passing another vehicle going in the same direction"
+        "You are passing another vehicle going in the same direction"
       ],
       "51": [
         "When the way is clear, turn into the outside or right-hand lane traveling in the opposite direction."
@@ -335,6 +335,7 @@
         "Orange is the color for work zones."
       ],
       "96": [
+        "Flashing blue lights mean the speed cameras are active.",
         "Flashing blue lights Active speed cameras"
       ],
       "97": [
@@ -409,8 +410,8 @@
         "If it is not possible to move over, you must slow down to a safe speed and prepare to stop if necessary."
       ],
       "119": [
+        "Trucks make wide turns at intersections and need more space than cars.",
         "When making a right turn, large trucks will often move left before making the turn.",
-        "Passing any truck on the right can be risky.",
         "You could find yourself caught between the turning truck and the curb."
       ],
       "120": [
@@ -625,12 +626,13 @@
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 28,
-    "topics_covered": 26,
-    "coverage_pct": 92.9,
+    "topics_total": 30,
+    "topics_covered": 27,
+    "coverage_pct": 90.0,
     "uncovered_topics": [
-      "conditions where passing on the right is allowed",
-      "double solid white lines for lane changing restrictions"
+      "diamond shaped warning signs for special road conditions",
+      "single broken white lines for same direction traffic",
+      "pavement markings for shared two way left turn lanes"
     ],
     "verdict": "PASS",
     "grade": "A"

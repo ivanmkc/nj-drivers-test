@@ -2,7 +2,7 @@
   "schema_version": 2,
   "code": "wa",
   "name": "Washington",
-  "verified_at": "2026-05-26T23:23:16Z",
+  "verified_at": "2026-05-27T01:39:47Z",
   "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.dol.wa.gov/driverslicense/docs/driverguide-en.pdf",
@@ -26,11 +26,11 @@
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
     "sample_size": 0,
     "judged_count": 358,
-    "avg_fidelity": 6.34,
-    "pct_at_10": 50.8,
-    "pct_above_9": 55.0,
-    "pct_above_7": 58.1,
-    "pct_zero": 29.1,
+    "avg_fidelity": 6.27,
+    "pct_at_10": 50.3,
+    "pct_above_9": 54.7,
+    "pct_above_7": 57.8,
+    "pct_zero": 30.2,
     "flagged_question_ids": [
       1,
       2,
@@ -69,12 +69,10 @@
       84,
       85,
       86,
-      87,
       88,
       89,
       90,
       91,
-      93,
       101,
       102,
       103,
@@ -154,6 +152,8 @@
       282,
       283,
       284,
+      286,
+      288,
       291,
       292,
       293,
@@ -172,6 +172,7 @@
       319,
       322,
       328,
+      331,
       332,
       333,
       334,
@@ -184,18 +185,11 @@
       351
     ],
     "evidence_by_question_id": {
-      "1": [
-        "Washington State requires you to have and carry proof of liability insurance."
-      ],
-      "2": [
-        "Standard driver licenses will no longer be an acceptable form of identification for airport security checkpoints"
-      ],
       "3": [
         "Children up to age 2 must ride in a rear-facing car seat."
       ],
       "4": [
-        "Ages 4 and older must ride in a car or booster seat until the vehicle lap and shoulder seat belts fit properly— typically, between the ages of 8 and 12 years of age.",
-        "Age and size: 4 years to 4’9”"
+        "Ages 4 and older must ride in a car or booster seat until the vehicle lap and shoulder seat belts fit properly— typically, between the ages of 8 and 12 years of age. Age and size: 4 years to 4’9”"
       ],
       "6": [
         "Fines double for offenses committed while driving in construction areas when workers are present."
@@ -401,21 +395,29 @@
         "When you leave your car running while parked, especially in a garage, it can release harmful gases like carbon monoxide, which can be lethal."
       ],
       "83": [
-        "Secure your load so loose items don’t release into the air or slide, shift, or fall onto the road and cause a crash."
+        "Secure your load so loose items don’t release into the air or slide, shift, fall onto the road and cause a crash."
       ],
       "87": [
         "Low tire pressure can affect your car handling and speed.",
         "Keep your tires properly inflated for better gas mileage."
       ],
+      "91": [
+        "Place your hands outside the wheel, on the top half of the steering wheel. This will give you the best control.",
+        "In the image above, the driver’s hands are at 9:00 and 3:00."
+      ],
       "92": [
         "Your chest should be at least 10 inches from the steering wheel to leave space for the airbag."
       ],
+      "93": [
+        "Adjust your rearview mirror so you can see out the back window without having to stretch.",
+        "There are a couple methods to adjust your side mirrors to minimize your blind zones: traditional or enhanced."
+      ],
       "94": [
-        "It is illegal to drive or ride in a vehicle without wearing a seat belt",
-        "Every person in a moving vehicle must wear a seat belt"
+        "It is illegal to drive or ride in a vehicle without wearing a seat belt or using child safety restraints RCW 46.61.687 and RCW 46.61.688."
       ],
       "95": [
-        "The driver will be fined for any passengers under age 16 who are not properly wearing a seat belt or secured in a child safety restraint."
+        "Parents and guardians of intermediate driver license holders receive similar letters after violations or crashes.",
+        "It is illegal to drive or ride in a vehicle without wearing a seat belt or using child safety restraints"
       ],
       "96": [
         "The lap belt should securely and snugly restrain the hips, below the stomach."
@@ -432,8 +434,7 @@
         "A child should remain in each stage of restraint as long as the seat allows for the best protection."
       ],
       "100": [
-        "Intermediate license laws also restrict the use of cell phones and wireless communication devices while you’re driving, even with hands-free technology.",
-        "You can only use your phone to report an emergency."
+        "Intermediate license laws also restrict the use of cell phones and wireless communication devices while you’re driving, even with hands-free technology. You can only use your phone to report an emergency."
       ],
       "101": [
         "Using hands-free devices is permitted, but anything that takes your eyes and mind off the road can still be dangerous."
@@ -701,8 +702,7 @@
         "Higher speeds create more energy, requiring more time and space to stop or change direction."
       ],
       "211": [
-        "Reduce your speed before entering the curve. This helps maintain traction and prevents your vehicle from skidding or veering off the road.",
-        "Avoid braking or accelerating suddenly while in the curve. This can disrupt your vehicle’s balance and lead to a loss of control."
+        "Reduce your speed before entering the curve. This helps maintain traction and prevents your vehicle from skidding or veering off the road."
       ],
       "212": [
         "Snowy roads will require a larger following distance and dramatically reduced speed."
@@ -711,26 +711,23 @@
         "During winter months, you can improve traction by adding chains to your tires or changing to studded tires."
       ],
       "214": [
-        "Overpasses and other types of bridges can have icy spots even when the rest of the road doesn’t."
+        "Overpasses and other types of bridges can have icy spots even when the rest of the road doesn’t.",
+        "bridges can be icy even when other pavement is not because bridges do not have earth underneath them to help insulate against the cold."
       ],
       "215": [
         "If it starts to rain on a hot day, the pavement can be very slippery for the first few minutes. Heat causes the oil in the asphalt to come to the surface."
       ],
       "216": [
-        "Overpasses and other types of bridges can have icy spots even when the rest of the road doesn’t."
+        "bridges can be icy even when other pavement is not because bridges do not have earth underneath them to help insulate against the cold."
       ],
       "218": [
         "Take your foot off the accelerator.",
         "Keep the steering wheel steady. Avoid overcorrecting or jerking the steering wheel.",
-        "Maintain your focus on the road while you calmly wait for your tires to regain traction."
-      ],
-      "219": [
-        "Be prepared to encounter slow vehicles in the right lane.",
-        "Be patient and slow down."
+        "calmly wait for your tires to regain traction."
       ],
       "220": [
         "Use the entire on-ramp, your turn signal, and your mirrors to merge into a safe space on the interstate.",
-        "creating space to merge might require you to adjust your speed, faster or slower."
+        "You need enough time to make the turn and reach the speed of oncoming traffic."
       ],
       "223": [
         "Fines double for offenses committed while driving in construction areas when workers are present."
@@ -821,8 +818,8 @@
         "Leave a lot of room to stop in front of you when you’re following a motorcycle."
       ],
       "272": [
-        "Never move into the same lane alongside a motorcyclist, even if the lane is wide",
-        "You cannot share a lane with a bicyclist."
+        "You cannot share a lane with a bicyclist.",
+        "Leave at least 3 feet between the bicyclist and the widest part of your vehicle."
       ],
       "273": [
         "Snowplows can force snow up and off the road, causing blizzard-like conditions. This can reduce visibility for drivers following too closely."
@@ -831,11 +828,12 @@
         "It takes a loaded truck with properly adjusted brakes, traveling at 55 mph, 450 feet to come to a complete stop."
       ],
       "275": [
+        "Remember: if you can’t see their mirrors, the driver can’t see you.",
         "If you are near a large vehicle and can’t see the driver’s mirrors, the driver can’t see you."
       ],
       "276": [
-        "large vehicles might require more than one lane to complete a turn.",
-        "Don’t pass a large vehicle when the driver is turning."
+        "Don’t pass a large vehicle when the driver is turning.",
+        "To avoid hitting something, large vehicles might require more than one lane to complete a turn."
       ],
       "279": [
         "Look for people who: Can’t see you, such as... pedestrians with their back to you"
@@ -843,21 +841,13 @@
       "285": [
         "Move your head, neck, and body so that both eyes can see if your blind zones are clear."
       ],
-      "286": [
-        "If you use corrective glasses or contact lenses, this will be recorded on your license.",
-        "Remember to always wear your glasses or contacts while driving."
-      ],
       "287": [
         "Move your head, neck, and body so that both eyes can see if your blind zones are clear.",
-        "Constantly check your mirrors for any changes to your driving situation."
-      ],
-      "288": [
-        "Watch for movement to identify potential hazards and people who could be planning to cross the road.",
-        "Remember that they may be able to see something you can’t see from your lane position."
+        "Scanning involves also moving your head, neck, and body so that you can see as much as possible"
       ],
       "289": [
         "Avoid using dark or tinted corrective lenses at night.",
-        "Tinted or colored lenses reduce your vision."
+        "Do not wear sunglasses or colored lenses when driving at night or on overcast days. Tinted or colored lenses reduce your vision."
       ],
       "290": [
         "Drivers who are deaf or hard of hearing can often adjust by learning to rely more on vision and staying more alert."
@@ -949,7 +939,8 @@
         "Protect yourself from whiplash by making sure the headrest is even with your ears."
       ],
       "332": [
-        "Airbags and seat belts work together to keep you safe in the event of a crash."
+        "Airbags and seat belts work together to keep you safe in the event of a crash.",
+        "If you are not wearing your seatbelt when an airbag deploys, you risk serious injury or death."
       ],
       "335": [
         "Move the vehicle to the side of the road, but near the collision site, as soon as possible."
@@ -1017,16 +1008,17 @@
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 30,
-    "topics_covered": 27,
-    "coverage_pct": 90.0,
+    "topics_total": 26,
+    "topics_covered": 22,
+    "coverage_pct": 84.6,
     "uncovered_topics": [
-      "Washington driver license number and account",
-      "Hand signals for turning and stopping",
-      "Limitations of advanced driver assistance systems"
+      "Blood alcohol concentration limits for minor drivers",
+      "Manual hand signals for turning and stopping",
+      "Hand-to-hand and hand-over-hand steering techniques",
+      "Vehicle weight balance and motion forces like pitch and roll"
     ],
     "verdict": "PASS",
-    "grade": "A"
+    "grade": "B"
   },
   "coverage": {
     "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",

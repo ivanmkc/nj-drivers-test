@@ -2,7 +2,7 @@
   "schema_version": 2,
   "code": "tx",
   "name": "Texas",
-  "verified_at": "2026-05-26T23:22:18Z",
+  "verified_at": "2026-05-27T01:39:22Z",
   "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf",
@@ -289,22 +289,16 @@
         "Quick stop – You may be asked to stop your car as quickly as possible at about 20 mph without skidding your tires"
       ],
       "83": [
-        "1st conviction",
-        "A fine of up to $200."
+        "1st conviction: A fine of up to $200."
       ],
       "84": [
         "Class A misdemeanor punishable by a fine up to $4,000 and/or confinement in jail for not more than 365 days."
       ],
       "85": [
-        "All drivers are graded on four basic skills, regardless of the type of driving exam.",
-        "1. Control",
-        "2. Observation",
-        "3. Positioning",
-        "4. Signaling"
+        "All drivers are graded on four basic skills, regardless of the type of driving exam. 1. Control 2. Observation 3. Positioning 4. Signaling"
       ],
       "86": [
-        "Any peace officer, sheriff, constable, judge, justice of the peace, or state trooper",
-        "Anyone with whom you are involved in a crash"
+        "show it to: 1. Any peace officer, sheriff, constable, judge, justice of the peace, or state trooper 2. Anyone with whom you are involved in a crash."
       ],
       "87": [
         "After 90 days or three failed exams, a new application and fee will be required."
@@ -440,7 +434,7 @@
         "A rearview mirror must be able to reflect a view of the highway for a distance of at least 200 feet to the rear of the vehicle."
       ],
       "128": [
-        "must be placed at a height of 15 to 60 inches and be visible up to 600 feet"
+        "Two red reflectors... must be placed at a height of 15 to 60 inches and be visible up to 600 feet"
       ],
       "129": [
         "A radar interference device designed, manufactured, used, or intended to be used to interfere with, scramble, disrupt, or cause to malfunction a radar or laser device"
@@ -808,11 +802,11 @@
         "Allow more following distance, at least four to six seconds, when following a motorcycle so the motorcyclist has enough time to maneuver or stop in an emergency."
       ],
       "248": [
-        "Don’t be fooled by a flashing turn signal. Motorcycle signals usually are not self-canceling and riders sometimes forget to turn them off."
+        "Motorcycle signals usually are not self-canceling and riders sometimes forget to turn them off. Wait to be sure the motorcycle is going to turn before you proceed."
       ],
       "249": [
         "Allow the motorcyclist a full lane width.",
-        "the motorcycle is entitled to a full lane and may need the room to maneuver safely. Do not attempt to share the lane with a motorcycle."
+        "Do not attempt to share the lane with a motorcycle."
       ],
       "250": [
         "Stop a safe distance behind the motorcyclist at intersections, signals, or crossings. A full vehicle length is recommended"
@@ -1116,7 +1110,7 @@
         "hydroplaning – occurs when a tire patch loses contact with the road by rising up on top of water"
       ],
       "349": [
-        "implied-consent law – anyone who receives a driver license automatically consents to be tested for blood-alcohol content and other drugs if stopped for suspicion of alcohol or drug usage while driving"
+        "implied-consent law – anyone who receives a driver license automatically consents to be tested for blood-alcohol content and other drugs if stopped for suspicion of alcohol or drug usage"
       ],
       "350": [
         "liability insurance – provides compensation for damages which the insured is legally obligated to pay; covers others when you are at fault"
@@ -1276,10 +1270,12 @@
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 30,
-    "topics_covered": 30,
-    "coverage_pct": 100.0,
-    "uncovered_topics": [],
+    "topics_total": 29,
+    "topics_covered": 28,
+    "coverage_pct": 96.6,
+    "uncovered_topics": [
+      "Impact Texas Drivers course requirement for license applicants"
+    ],
     "verdict": "PASS",
     "grade": "A"
   },
