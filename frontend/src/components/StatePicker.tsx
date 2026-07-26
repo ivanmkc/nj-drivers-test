@@ -96,10 +96,11 @@ export default function StatePicker({
                 {countryStates.map((s) => {
                   const hasQ = s.total_questions > 0;
                   return (
-                    <div
+                    <button
                       key={s.code}
                       onClick={() => hasQ && onSelectState(s.code)}
-                      className={`flex justify-between items-center p-4 bg-white border-2 rounded-xl transition-all
+                      disabled={!hasQ}
+                      className={`flex justify-between items-center p-4 bg-white border-2 rounded-xl transition-all text-left w-full
                         ${hasQ ? 'border-gray-200 cursor-pointer hover:border-blue-300 active:scale-[0.98]' : 'border-gray-100 opacity-50 cursor-default'}`}
                     >
                       <div>
@@ -126,7 +127,7 @@ export default function StatePicker({
                           </span>
                         )}
                       </div>
-                    </div>
+                    </button>
                   );
                 })}
               </div>

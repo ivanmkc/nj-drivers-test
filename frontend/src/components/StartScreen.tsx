@@ -33,7 +33,10 @@ export default function StartScreen({
   onShowStats,
   onSwitchLang,
 }: StartScreenProps) {
-  const [storeData] = useState(() => store.load());
+  const [storeData, setStoreData] = useState(() => store.load());
+  useEffect(() => {
+    setStoreData(store.load());
+  }, [store]);
   const history = storeData.history;
 
   const weakCount = useMemo(() => {

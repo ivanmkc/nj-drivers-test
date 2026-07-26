@@ -52,9 +52,10 @@
   #state-screen .sub { color: var(--gray); font-size: 15px; margin-bottom: 24px; }
   .state-list { display: flex; flex-direction: column; gap: 10px; text-align: left; }
   .state-card {
-    display: flex; justify-content: space-between; align-items: center;
+    display: flex; justify-content: space-between; align-items: center; width: 100%; text-align: left;
     padding: 16px; background: var(--card); border: 2px solid var(--border);
     border-radius: var(--radius); cursor: pointer; transition: all 0.15s;
+    font-family: inherit; font-size: inherit; color: inherit;
   }
   .state-card:active { transform: scale(0.98); }
   .state-card.disabled { opacity: 0.5; cursor: default; }
@@ -314,6 +315,7 @@ const LANG_LABELS = { en: 'EN', ja: '日本語', es: 'ES' };
 
 async function loadI18n() {
   const res = await fetch('/static/i18n.json');
+  if (!res.ok) throw new Error('Failed to load translations: ' + res.status);
   I18N = await res.json();
 }
 
@@ -372,10 +374,21 @@ function apiParams() {
 }
 
 // ---- Init ----
+function showError(msg) {
+  const c = document.querySelector('.container');
+  c.innerHTML = '<div style="text-align:center;padding-top:20vh;"><p style="color:var(--red);font-weight:600;margin-bottom:8px;">Failed to load</p><p style="color:var(--gray);font-size:14px;margin-bottom:16px;">' + esc(msg) + '</p><button onclick="location.reload()" class="start-btn" style="max-width:200px;margin:0 auto;">Retry</button></div>';
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
-  await loadI18n();
-  const res = await fetch('/api/states');
-  allStates = (await res.json()).states;
+  try {
+    await loadI18n();
+    const res = await fetch('/api/states');
+    if (!res.ok) throw new Error('Failed to load states: ' + res.status);
+    allStates = (await res.json()).states;
+  } catch (e) {
+    showError(e.message || 'Failed to load application data');
+    return;
+  }
 
   const savedState = localStorage.getItem('quiz_state');
   if (savedState) {
@@ -393,18 +406,21 @@ function renderStatePicker() {
   const list = document.getElementById('state-list');
   list.innerHTML = allStates.map(s => {
     const hasQ = s.has_questions;
-    return `<div class="state-card ${hasQ ? '' : 'disabled'}" onclick="${hasQ ? `selectState('${s.code}')` : ''}">
+    return `<button class="state-card ${hasQ ? '' : 'disabled'}" ${hasQ ? `data-state-code="${esc(s.code)}"` : 'disabled'}>
       <div>
-        <div class="sc-name">${s.name}</div>
-        <div class="sc-detail">${s.agency} &middot; ${t('passingScore', {pass_pct: s.passing_score_pct, pass_count: Math.ceil(s.test_question_count * s.passing_score_pct / 100), test_count: s.test_question_count})}</div>
+        <div class="sc-name">${esc(s.name)}</div>
+        <div class="sc-detail">${esc(s.agency)} &middot; ${esc(t('passingScore', {pass_pct: s.passing_score_pct, pass_count: Math.ceil(s.test_question_count * s.passing_score_pct / 100), test_count: s.test_question_count}))}</div>
       </div>
       <div class="sc-right">
         ${hasQ
-          ? `<div class="sc-count">${t('questionsAvailable', {count: s.total_questions})}</div>`
-          : `<span class="sc-badge">${t('comingSoon')}</span>`}
+          ? `<div class="sc-count">${esc(t('questionsAvailable', {count: s.total_questions}))}</div>`
+          : `<span class="sc-badge">${esc(t('comingSoon'))}</span>`}
       </div>
-    </div>`;
+    </button>`;
   }).join('');
+  list.querySelectorAll('[data-state-code]').forEach(card => {
+    card.addEventListener('click', () => selectState(card.dataset.stateCode));
+  });
 }
 
 function selectState(code) {
@@ -513,10 +529,13 @@ function setMode(mode) {
 // ---- Quiz ----
 async function startQuiz() {
   if (quizMode === 'weak') { await startWeakQuiz(); return; }
-  const res = await fetch(`/api/quiz/${selectedCount}?${apiParams()}`);
-  const data = await res.json();
-  questions = data.questions;
-  beginQuiz();
+  try {
+    const res = await fetch(`/api/quiz/${selectedCount}?${apiParams()}`);
+    if (!res.ok) throw new Error('Failed to load quiz: ' + res.status);
+    const data = await res.json();
+    questions = data.questions;
+    beginQuiz();
+  } catch (e) { showError(e.message || 'Failed to start quiz'); }
 }
 
 async function startWeakQuiz() {
@@ -525,13 +544,16 @@ async function startWeakQuiz() {
   if (weakIds.length === 0) return;
   const count = Math.min(selectedCount, weakIds.length);
   const ids = weakIds.slice(0, count).map(w => w.id);
-  const res = await fetch(`/api/quiz/${currentState.total_questions}?${apiParams()}`);
-  const data = await res.json();
-  const idSet = new Set(ids);
-  questions = data.questions.filter(q => idSet.has(q.id));
-  for (let i = questions.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [questions[i], questions[j]] = [questions[j], questions[i]]; }
-  questions = questions.slice(0, count);
-  beginQuiz();
+  try {
+    const res = await fetch(`/api/quiz/${currentState.total_questions}?${apiParams()}`);
+    if (!res.ok) throw new Error('Failed to load quiz: ' + res.status);
+    const data = await res.json();
+    const idSet = new Set(ids);
+    questions = data.questions.filter(q => idSet.has(q.id));
+    for (let i = questions.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [questions[i], questions[j]] = [questions[j], questions[i]]; }
+    questions = questions.slice(0, count);
+    beginQuiz();
+  } catch (e) { showError(e.message || 'Failed to start quiz'); }
 }
 
 function beginQuiz() {
@@ -565,7 +587,7 @@ function showQuestion() {
     if (!q.choices[letter]) return;
     const btn = document.createElement('button');
     btn.className = 'choice-btn';
-    btn.innerHTML = `<span class="letter">${letter}</span><span>${q.choices[letter]}</span>`;
+    btn.innerHTML = `<span class="letter">${esc(letter)}</span><span>${esc(q.choices[letter])}</span>`;
     btn.addEventListener('click', () => selectAnswer(letter, btn));
     choicesDiv.appendChild(btn);
   });
@@ -575,6 +597,7 @@ async function selectAnswer(letter, btn) {
   if (answered) return;
   answered = true;
   const res = await fetch(`/api/answer/${questions[currentIdx].id}?${apiParams()}`);
+  if (!res.ok) { showError('Failed to check answer: ' + res.status); return; }
   const data = await res.json();
   const correct = data.answer;
   const isCorrect = letter === correct;

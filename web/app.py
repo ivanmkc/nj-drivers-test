@@ -2,6 +2,7 @@ import gzip
 import json
 import os
 import random
+import sys
 
 from flask import Flask, jsonify, request, send_from_directory
 
@@ -16,8 +17,11 @@ STATES_DIR = os.path.join(ROOT_DIR, "data", "states")
 STATES = {}
 CONFIG = {}
 
-with gzip.open(BUNDLE_PATH, "rt", encoding="utf-8") as f:
-    bundle = json.load(f)
+try:
+    with gzip.open(BUNDLE_PATH, "rt", encoding="utf-8") as f:
+        bundle = json.load(f)
+except FileNotFoundError:
+    sys.exit("questions bundle not found — run: python3 tools/bundle.py")
 
 for state_data in bundle["states"]:
     code = state_data["code"]

@@ -129,10 +129,15 @@ export default function QuizScreen({
             btnClass += ' cursor-default';
           }
 
+          const ariaLabel = `${letter}: ${question.choices[letter]}`;
           return (
             <button
               key={letter}
               onClick={() => handleSelect(letter)}
+              disabled={answered}
+              aria-label={ariaLabel}
+              aria-pressed={answered && letter === selected ? true : undefined}
+              aria-disabled={answered}
               className={`flex items-start gap-3 p-3.5 border-2 rounded-xl text-base leading-relaxed text-left w-full text-gray-900 transition-all ${btnClass}`}
             >
               <span
@@ -141,6 +146,12 @@ export default function QuizScreen({
                 {letter}
               </span>
               <span>{question.choices[letter]}</span>
+              {answered && letter === question.answer && (
+                <span className="sr-only">(correct answer)</span>
+              )}
+              {answered && letter === selected && letter !== question.answer && (
+                <span className="sr-only">(your incorrect answer)</span>
+              )}
             </button>
           );
         })}

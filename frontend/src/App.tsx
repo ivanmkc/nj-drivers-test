@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import type {
   Bundle,
   StateConfig,
@@ -34,8 +34,14 @@ export default function App() {
   const [sessionResults, setSessionResults] = useState<SessionResult[]>([]);
   const [error, setError] = useState<string | null>(null);
 
-  const correctCount = sessionResults.filter((r) => r.correct).length;
-  const wrongCount = sessionResults.filter((r) => !r.correct).length;
+  const correctCount = useMemo(
+    () => sessionResults.filter((r) => r.correct).length,
+    [sessionResults],
+  );
+  const wrongCount = useMemo(
+    () => sessionResults.filter((r) => !r.correct).length,
+    [sessionResults],
+  );
 
   const store = useStore(currentState?.code ?? null);
 

@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useCallback } from 'react';
 import type { QuizResult } from '../types';
 import { CHART_HEIGHT, MAX_CHART_ENTRIES } from '../constants';
 
@@ -10,7 +10,7 @@ interface ScoreChartProps {
 export default function ScoreChart({ history, passingPct }: ScoreChartProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  useEffect(() => {
+  const draw = useCallback(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -110,6 +110,15 @@ export default function ScoreChart({ history, passingPct }: ScoreChartProps) {
       }
     });
   }, [history, passingPct]);
+
+  useEffect(() => {
+    draw();
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const observer = new ResizeObserver(draw);
+    observer.observe(canvas);
+    return () => observer.disconnect();
+  }, [draw]);
 
   return (
     <canvas

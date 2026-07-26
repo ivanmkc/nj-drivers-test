@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { getAllLangs, getLangLabel } from '../i18n';
 
 interface LangBarProps {
@@ -7,8 +8,8 @@ interface LangBarProps {
 }
 
 export default function LangBar({ currentLang, availableLangs, onSwitch }: LangBarProps) {
-  const allLangs = getAllLangs();
-  const available = new Set(availableLangs || allLangs);
+  const allLangs = useMemo(() => getAllLangs(), []);
+  const available = useMemo(() => new Set(availableLangs || allLangs), [availableLangs, allLangs]);
 
   return (
     <div className="flex justify-end gap-1 mb-3">
