@@ -7,14 +7,13 @@ Multi-platform practice quiz app for US state driver's license exams. Supports i
 ```
 drivers/
 ├── data/                    # Question data (source of truth)
-│   ├── states/
+│   ├── states/              # 51 US jurisdictions (50 states + DC)
 │   │   ├── nj/
 │   │   │   ├── config.json          # State metadata (name, agency, passing score)
 │   │   │   ├── questions_en.yaml    # English questions
-│   │   │   ├── questions_es.yaml    # Spanish questions
-│   │   │   └── questions_ja.yaml    # Japanese questions
+│   │   │   └── questions_es.yaml    # Spanish questions
 │   │   ├── ny/ ...
-│   │   └── ca/ ...
+│   │   └── wy/ ...
 │   └── signs/               # MUTCD road sign images (PNG)
 │
 ├── tools/                   # Build and content scripts
@@ -46,8 +45,14 @@ drivers/
 │       └── index.html
 │
 └── .github/workflows/       # CI
-    ├── ios.yml
-    └── android.yml
+    ├── android.yml              # Android build
+    ├── android-lint.yml         # ktlint for Kotlin
+    ├── data-validation.yml      # Question audit + bundle build
+    ├── deploy-pages.yml         # GitHub Pages deployment
+    ├── frontend-lint.yml        # ESLint + Prettier for React frontend
+    ├── ios.yml                  # iOS build
+    ├── python-lint.yml          # Ruff + Pyright for Python tooling
+    └── verify-manuals.yml       # Monthly manual URL health check
 ```
 
 ## Data Flow
@@ -132,10 +137,9 @@ Every question set **must** be grounded in a real official driver's manual. Neve
    ```bash
    python3 tools/add_sign_questions.py <code>
    ```
-5. **Translate**:
+5. **Translate** (English is always required; Spanish is high-value):
    ```bash
    python3 tools/translate.py <code> es
-   python3 tools/translate.py <code> ja
    ```
 6. **Bundle** — builds the gzipped JSON and copies to iOS/Android:
    ```bash
