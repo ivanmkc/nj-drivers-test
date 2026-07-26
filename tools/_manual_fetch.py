@@ -229,8 +229,8 @@ def fetch_pdf_text(url: str, *, cache_path: str | None = None) -> str:
     return extract_pdf_text(cache_path)
 
 
-def fetch_html_text(url: str) -> str:
-    """Fetch ``url`` as HTML, strip nav/footer, return main-content text."""
+def fetch_html_text(url: str, body: bytes | None = None) -> str:
+    """Fetch ``url`` as HTML (or parse pre-fetched ``body``), return main-content text."""
     try:
         from bs4 import BeautifulSoup  # type: ignore[import-not-found]
     except ImportError:
@@ -238,7 +238,8 @@ def fetch_html_text(url: str) -> str:
             "beautifulsoup4 not installed. Run: pip install beautifulsoup4"
         ) from None
 
-    body = _http_get(url)
+    if body is None:
+        body = _http_get(url)
     soup = BeautifulSoup(body, "html.parser")
     # Strip the obvious chrome.
     for selector in ("nav", "header", "footer", "script", "style", "aside", "form"):
@@ -288,9 +289,23 @@ def assemble_manual_text(entry: dict[str, Any], out_path: str, *, force: bool = 
         cache = _util_cache_path(f"{code}_manual.pdf")
         parts.append(fetch_pdf_text(effective_url, cache_path=cache))
     elif effective_url:
-        # HTML index: scrape main-content text.
-        print(f"  scraping HTML at {effective_url}")
-        parts.append(fetch_html_text(effective_url))
+        # Extension-less URL: sniff the content. Several agencies serve PDFs
+        # from download endpoints without a .pdf path (e.g. mass.gov
+        # /doc/<name>/download); routing those to the HTML scraper would
+        # "extract" raw PDF bytes as text.
+        pdf_cache = _util_cache_path(f"{code}_manual.pdf")
+        if os.path.exists(pdf_cache):
+            print(f"  cached {pdf_cache}")
+            parts.append(extract_pdf_text(pdf_cache))
+        else:
+            body = _http_get(effective_url)
+            if body[:5] == b"%PDF-":
+                with open(pdf_cache, "wb") as f:
+                    f.write(body)
+                parts.append(extract_pdf_text(pdf_cache))
+            else:
+                print(f"  scraping HTML at {effective_url}")
+                parts.append(fetch_html_text(effective_url, body=body))
     else:
         raise ValueError(f"Catalog entry for {code!r} has neither manual_url nor urls.")
 
