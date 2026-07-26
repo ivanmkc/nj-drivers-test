@@ -53,7 +53,7 @@ def reconcile_one(code: str, *, apply: bool) -> dict[str, dict[str, list[int] | 
             if "metadata" in tgt_data and "total_questions" in tgt_data["metadata"]:
                 tgt_data["metadata"]["total_questions"] = len(kept)
             with open(lang_path, "w") as f:
-                yaml.safe_dump(
+                yaml.dump(
                     tgt_data, f, allow_unicode=True, default_flow_style=False, sort_keys=False
                 )
             applied = True

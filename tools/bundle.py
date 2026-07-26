@@ -8,10 +8,8 @@ import re
 import shutil
 
 import yaml
+from _util import ROOT_DIR, STATES_DIR
 
-TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
-ROOT_DIR = os.path.dirname(TOOLS_DIR)
-STATES_DIR = os.path.join(ROOT_DIR, "data", "states")
 SIGNS_DIR = os.path.join(ROOT_DIR, "data", "signs")
 SHARED_DIR = os.path.join(ROOT_DIR, "shared")
 IOS_RESOURCES = os.path.join(ROOT_DIR, "ios", "DriversTest", "DriversTest", "Resources")
@@ -40,6 +38,11 @@ def build_bundle():
             lang = match.group(1)
             with open(os.path.join(state_dir, fname)) as f:
                 data = yaml.safe_load(f)
+            if not isinstance(data, dict) or "questions" not in data:
+                raise ValueError(
+                    f"{state_code}/{fname}: expected a mapping with a 'questions' key, "
+                    f"got {type(data).__name__}"
+                )
             langs[lang] = data["questions"]
 
         states.append(

@@ -40,7 +40,7 @@ import sys
 from typing import Any
 
 import yaml
-from _util import STATES_DIR
+from _util import STATES_DIR, retry_with_backoff
 from google import genai
 from google.genai import types
 from pydantic import BaseModel, Field
@@ -333,16 +333,18 @@ MANUAL TEXT:
 QUESTIONS TO JUDGE:
 {questions_block}
 """
-    response = CLIENT.models.generate_content(
-        model=MODEL_JUDGE,
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            temperature=0.0,
-            response_mime_type="application/json",
-            response_schema=FaithfulnessReport,
-            thinking_config=types.ThinkingConfig(thinking_budget=0),
-            max_output_tokens=32768,
-        ),
+    response = retry_with_backoff(
+        lambda: CLIENT.models.generate_content(
+            model=MODEL_JUDGE,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                temperature=0.0,
+                response_mime_type="application/json",
+                response_schema=FaithfulnessReport,
+                thinking_config=types.ThinkingConfig(thinking_budget=0),
+                max_output_tokens=32768,
+            ),
+        )
     )
     if response.text is None:
         raise RuntimeError(f"Empty judge response for batch starting Q{batch[0]['id']}")
@@ -432,16 +434,18 @@ Cover a balanced spread: rules of the road, signs/signals, right-of-way, parking
 MANUAL TEXT:
 {truncated}
 """
-    response = CLIENT.models.generate_content(
-        model=MODEL_TOPICS,
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            temperature=0.1,
-            response_mime_type="application/json",
-            response_schema=TopicExtractionReport,
-            thinking_config=types.ThinkingConfig(thinking_budget=0),
-            max_output_tokens=8192,
-        ),
+    response = retry_with_backoff(
+        lambda: CLIENT.models.generate_content(
+            model=MODEL_TOPICS,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                temperature=0.1,
+                response_mime_type="application/json",
+                response_schema=TopicExtractionReport,
+                thinking_config=types.ThinkingConfig(thinking_budget=0),
+                max_output_tokens=8192,
+            ),
+        )
     )
     if response.text is None:
         raise RuntimeError("Empty topic-extraction response")
@@ -493,16 +497,18 @@ For each topic, return:
 - note: one sentence (especially useful when is_covered=false)
 
 The order of judgments MUST match the order of topics above."""
-    response = CLIENT.models.generate_content(
-        model=MODEL_JUDGE,
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            temperature=0.0,
-            response_mime_type="application/json",
-            response_schema=TopicCoverageReport,
-            thinking_config=types.ThinkingConfig(thinking_budget=0),
-            max_output_tokens=32768,
-        ),
+    response = retry_with_backoff(
+        lambda: CLIENT.models.generate_content(
+            model=MODEL_JUDGE,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                temperature=0.0,
+                response_mime_type="application/json",
+                response_schema=TopicCoverageReport,
+                thinking_config=types.ThinkingConfig(thinking_budget=0),
+                max_output_tokens=32768,
+            ),
+        )
     )
     if response.text is None:
         raise RuntimeError("Empty topic-coverage judge response")
@@ -664,16 +670,18 @@ If fidelity < 7, give a one-sentence drift description.
 PAIRS TO JUDGE:
 {pairs_block}
 """
-    response = CLIENT.models.generate_content(
-        model=MODEL_JUDGE,
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            temperature=0.0,
-            response_mime_type="application/json",
-            response_schema=TranslationFaithfulnessReport,
-            thinking_config=types.ThinkingConfig(thinking_budget=0),
-            max_output_tokens=32768,
-        ),
+    response = retry_with_backoff(
+        lambda: CLIENT.models.generate_content(
+            model=MODEL_JUDGE,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                temperature=0.0,
+                response_mime_type="application/json",
+                response_schema=TranslationFaithfulnessReport,
+                thinking_config=types.ThinkingConfig(thinking_budget=0),
+                max_output_tokens=32768,
+            ),
+        )
     )
     if response.text is None:
         raise RuntimeError(
@@ -825,8 +833,14 @@ def build_verification_report(
     es_path = os.path.join(state_dir, "questions_es.yaml")
     ja_path = os.path.join(state_dir, "questions_ja.yaml")
 
-    config = json.load(open(config_path)) if os.path.exists(config_path) else {}
-    provenance = json.load(open(prov_path)) if os.path.exists(prov_path) else {}
+    config = {}
+    if os.path.exists(config_path):
+        with open(config_path) as f:
+            config = json.load(f)
+    provenance = {}
+    if os.path.exists(prov_path):
+        with open(prov_path) as f:
+            provenance = json.load(f)
 
     languages = ["EN"]
     if os.path.exists(es_path):

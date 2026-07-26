@@ -8,7 +8,12 @@ Usage:
 import os
 import sys
 
-import fitz  # PyMuPDF
+try:
+    import fitz  # PyMuPDF
+except ImportError as exc:
+    raise RuntimeError(
+        "PyMuPDF is required for sign extraction. Run: pip install pymupdf"
+    ) from exc
 
 
 def extract_images(pdf_path: str, output_dir: str, min_size: int = 50):

@@ -1,6 +1,7 @@
 """Shared utilities for driver's test tools."""
 
 import os
+import tempfile
 import time
 from collections.abc import Callable
 from typing import TypedDict, TypeVar
@@ -10,6 +11,17 @@ T = TypeVar("T")
 TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(TOOLS_DIR)
 STATES_DIR = os.path.join(ROOT_DIR, "data", "states")
+
+
+def cache_path(filename: str) -> str:
+    """Return a path inside a per-user scratch dir for downloaded/extracted artifacts.
+
+    Namespaced by uid so parallel runs by different users don't clobber each
+    other's cached manuals (plain /tmp paths collided).
+    """
+    cache_dir = os.path.join(tempfile.gettempdir(), f"drivers_cache_{os.getuid()}")
+    os.makedirs(cache_dir, exist_ok=True)
+    return os.path.join(cache_dir, filename)
 
 
 class StatePaths(TypedDict):
@@ -31,6 +43,8 @@ def strip_code_fences(text: str) -> str:
 
 def chunk_text(text: str, chunk_size: int = 10000, overlap: int = 500) -> list[str]:
     """Split text into overlapping chunks, breaking at paragraph boundaries."""
+    if overlap >= chunk_size:
+        raise ValueError(f"overlap ({overlap}) must be smaller than chunk_size ({chunk_size})")
     chunks: list[str] = []
     start = 0
     while start < len(text):
@@ -96,7 +110,8 @@ def retry_with_backoff(fn: Callable[[], T], max_attempts: int = 3, base_delay: i
                 time.sleep(wait)
             else:
                 print(f"FAILED: {exc}")
-    assert last_exc is not None
+    if last_exc is None:
+        raise RuntimeError("retry_with_backoff exhausted attempts without capturing an exception")
     raise last_exc
 
 

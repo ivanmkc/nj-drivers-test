@@ -24,6 +24,7 @@ from typing import Any
 from urllib.parse import urlparse
 
 import requests
+from _util import cache_path as _util_cache_path
 
 # Full Chrome desktop UA. Bare "Mozilla/5.0" or Linux-suffixed UAs get 403/404
 # from several state CDNs (confirmed 2026-04-29 on michigan.gov, mass.gov,
@@ -219,7 +220,7 @@ def _extract_edition_from_text(text: str) -> str:
 def fetch_pdf_text(url: str, *, cache_path: str | None = None) -> str:
     """Download a PDF (caching to ``cache_path`` if given) and return extracted text."""
     if cache_path is None:
-        cache_path = os.path.join("/tmp", os.path.basename(urlparse(url).path) or "manual.pdf")
+        cache_path = _util_cache_path(os.path.basename(urlparse(url).path) or "manual.pdf")
     if not os.path.exists(cache_path):
         print(f"  downloading {url} -> {cache_path}", flush=True)
         _http_get(url, dest=cache_path)
@@ -251,7 +252,7 @@ def fetch_html_text(url: str) -> str:
 def assemble_manual_text(entry: dict[str, Any], out_path: str, *, force: bool = False) -> str:
     """Resolve ``entry`` -> single text file at ``out_path``. Returns the text.
 
-    Side effects: writes ``out_path``, downloads PDFs to ``/tmp`` for caching.
+    Side effects: writes ``out_path``, downloads PDFs to a per-user scratch dir for caching.
     Skipped (no-op) if ``out_path`` already exists and ``force`` is False.
     """
     if os.path.exists(out_path) and not force:
@@ -278,13 +279,13 @@ def assemble_manual_text(entry: dict[str, Any], out_path: str, *, force: bool = 
         if not all(_is_pdf_url(u) for u in urls):
             print("  WARNING: non-PDF URL in `urls` list; treating each as a PDF anyway.")
         for i, url in enumerate(urls, start=1):
-            cache = os.path.join("/tmp", f"{code}_chapter{i:02d}.pdf")
+            cache = _util_cache_path(f"{code}_chapter{i:02d}.pdf")
             text = fetch_pdf_text(url, cache_path=cache)
             parts.append(f"\n\n=== chapter {i} ===\n\n")
             parts.append(text)
     elif effective_url and _is_pdf_url(effective_url):
         # Single-PDF: existing happy path (recovery_url-aware).
-        cache = os.path.join("/tmp", f"{code}_manual.pdf")
+        cache = _util_cache_path(f"{code}_manual.pdf")
         parts.append(fetch_pdf_text(effective_url, cache_path=cache))
     elif effective_url:
         # HTML index: scrape main-content text.

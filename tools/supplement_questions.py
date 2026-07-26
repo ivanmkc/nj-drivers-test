@@ -23,7 +23,7 @@ from _util import (
 )
 from google import genai
 
-MODEL = "gemini-2.5-pro"
+MODEL = "gemini-3.1-pro-preview"
 CLIENT = genai.Client(vertexai=True, project="adk-coding-agents", location="global")
 
 SYSTEM_PROMPT = """\
@@ -145,6 +145,7 @@ def main() -> None:
     chunks = chunk_text(manual_text)
     total_chunks = len(chunks)
     new_questions = []
+    skipped_chunks: list[int] = []
     next_id = len(existing) + 1
     needed = target_count - len(existing)
 
@@ -170,10 +171,16 @@ def main() -> None:
             new_questions.extend(questions)
             print(f"OK ({len(questions)} new, total new: {len(new_questions)})")
         except Exception:
-            pass  # retry_with_backoff already printed the failure
+            skipped_chunks.append(i + 1)  # retry_with_backoff already printed the failure
 
         if i + 1 < total_chunks:
             time.sleep(1)
+
+    if skipped_chunks:
+        print(
+            f"WARNING: {len(skipped_chunks)}/{total_chunks} chunks failed and were skipped: "
+            f"{skipped_chunks}. Coverage of those manual sections may be missing."
+        )
 
     # Deduplicate new questions against existing ones, then merge
     unique_new = deduplicate(new_questions, existing_questions=existing)
