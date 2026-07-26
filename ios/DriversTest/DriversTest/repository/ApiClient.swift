@@ -20,21 +20,57 @@ class ApiClient {
     static let shared = ApiClient()
 
     private var bundle: QuestionBundle?
+    private var answerIndex: [String: [String: [Int: BundledQuestion]]] = [:]
+    private var loaded = false
 
-    private init() {
-        loadBundle()
-    }
+    enum LoadError: Error, LocalizedError {
+        case fileNotFound
+        case decompressFailed
+        case decodeFailed(Error)
 
-    private func loadBundle() {
-        guard let url = Bundle.main.url(forResource: "questions_bundle.json", withExtension: "gz") else {
-            return
+        var errorDescription: String? {
+            switch self {
+            case .fileNotFound: return "Question bundle not found."
+            case .decompressFailed: return "Failed to decompress question bundle."
+            case .decodeFailed(let error): return "Failed to decode questions: \(error.localizedDescription)"
+            }
         }
-        guard let compressed = try? Data(contentsOf: url) else { return }
-        guard let decompressed = decompress(compressed) else { return }
-        bundle = try? JSONDecoder().decode(QuestionBundle.self, from: decompressed)
     }
 
-    private func decompress(_ data: Data) -> Data? {
+    private init() {}
+
+    func loadBundle() throws {
+        guard !loaded else { return }
+        guard let url = Bundle.main.url(forResource: "questions_bundle.json", withExtension: "gz") else {
+            throw LoadError.fileNotFound
+        }
+        let compressed = try Data(contentsOf: url)
+        guard let decompressed = Self.decompress(compressed) else {
+            throw LoadError.decompressFailed
+        }
+        do {
+            bundle = try JSONDecoder().decode(QuestionBundle.self, from: decompressed)
+        } catch {
+            throw LoadError.decodeFailed(error)
+        }
+        buildAnswerIndex()
+        loaded = true
+    }
+
+    private func buildAnswerIndex() {
+        guard let bundle = bundle else { return }
+        var index: [String: [String: [Int: BundledQuestion]]] = [:]
+        for (state, langs) in bundle.questions {
+            for (lang, questions) in langs {
+                var byId: [Int: BundledQuestion] = [:]
+                for q in questions { byId[q.id] = q }
+                index[state, default: [:]][lang] = byId
+            }
+        }
+        answerIndex = index
+    }
+
+    private static func decompress(_ data: Data) -> Data? {
         // gzip starts with 1f 8b; strip the 10-byte gzip header for raw DEFLATE
         guard data.count > 10, data[0] == 0x1f, data[1] == 0x8b else { return data }
         // Find start of DEFLATE stream: skip 10-byte header + optional extras
@@ -103,9 +139,8 @@ class ApiClient {
     }
 
     func fetchAnswer(questionId: Int, state: String, lang: String) -> AnswerResponse? {
-        guard let stateQuestions = bundle?.questions[state],
-              let langQuestions = stateQuestions[lang] ?? stateQuestions["en"],
-              let q = langQuestions.first(where: { $0.id == questionId }) else {
+        guard let langIndex = answerIndex[state]?[lang] ?? answerIndex[state]?["en"],
+              let q = langIndex[questionId] else {
             return nil
         }
         return AnswerResponse(id: q.id, answer: q.answer, explanation: q.explanation)

@@ -26,7 +26,7 @@ struct LanguageBarView: View {
     var availableLangs: [String]?
 
     private var langs: [String] {
-        availableLangs ?? ["en", "ja", "es"]
+        availableLangs ?? ["en", "es"]
     }
 
     var body: some View {
@@ -192,7 +192,7 @@ struct ChoiceButton: View {
         switch state {
         case .correct: return AppTheme.greenLight
         case .wrong: return AppTheme.redLight
-        default: return .white
+        default: return AppTheme.card
         }
     }
 
