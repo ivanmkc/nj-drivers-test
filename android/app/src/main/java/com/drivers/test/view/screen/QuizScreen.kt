@@ -1,6 +1,7 @@
 package com.drivers.test.view.screen
 
 import android.graphics.BitmapFactory
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -34,6 +35,8 @@ import kotlin.math.roundToInt
 
 @Composable
 fun QuizScreen(vm: QuizViewModel) {
+    BackHandler { vm.goHome() }
+
     val c = AppTheme.colors
     val scrollState = rememberScrollState()
     val scope = rememberCoroutineScope()

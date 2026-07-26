@@ -1,5 +1,6 @@
 package com.drivers.test.view.screen
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
@@ -26,6 +27,8 @@ import com.drivers.test.viewmodel.QuizViewModel
 
 @Composable
 fun ResultsScreen(vm: QuizViewModel) {
+    BackHandler { vm.goHome() }
+
     val c = AppTheme.colors
     val state = vm.currentState ?: return
 

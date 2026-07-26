@@ -7,6 +7,7 @@ import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.viewModelScope
 import com.drivers.test.model.AppScreen
 import com.drivers.test.model.QuestionRecord
 import com.drivers.test.model.QuizHistoryEntry
@@ -19,6 +20,9 @@ import com.drivers.test.model.WeakQuestion
 import com.drivers.test.repository.ApiClient
 import com.drivers.test.repository.LocalStore
 import com.drivers.test.repository.Localizer
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlin.math.roundToInt
 
 class QuizViewModel(application: Application) : AndroidViewModel(application) {
@@ -27,9 +31,14 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         private val QUESTION_COUNT_OPTIONS = listOf(10, 25, 50, 100)
     }
 
-    private val api = ApiClient(application)
+    private val api = ApiClient()
     private val storage = LocalStore(application)
     val localizer = Localizer()
+
+    var bundleLoading by mutableStateOf(true)
+        private set
+    var bundleError by mutableStateOf<String?>(null)
+        private set
 
     var screen by mutableStateOf(AppScreen.STATE_PICKER)
     var allStates = mutableStateListOf<StateInfo>()
@@ -51,6 +60,21 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     var quizMode by mutableStateOf(QuizMode.RANDOM)
     var selectedCount by mutableIntStateOf(DEFAULT_QUESTION_COUNT)
 
+    init {
+        viewModelScope.launch {
+            try {
+                withContext(Dispatchers.IO) {
+                    api.loadBundle(application)
+                }
+                bundleLoading = false
+                loadStates()
+            } catch (e: Exception) {
+                bundleLoading = false
+                bundleError = e.message ?: "Failed to load question data"
+            }
+        }
+    }
+
     // Derived state helpers
     private var cachedStore: QuizStore? = null
     private var cachedStoreCode: String? = null
@@ -69,11 +93,22 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     private fun invalidateStoreCache() {
         cachedStore = null
         cachedStoreCode = null
+        cachedWeakQuestions = null
     }
 
+    private fun updateStoreCache(store: QuizStore) {
+        cachedStore = store
+        cachedWeakQuestions = null
+    }
+
+    private var cachedWeakQuestions: List<WeakQuestion>? = null
+
     fun weakQuestions(): List<WeakQuestion> {
+        cachedWeakQuestions?.let { return it }
         val state = currentState ?: return emptyList()
-        return storage.getWeakQuestions(state.code)
+        val result = storage.getWeakQuestions(state.code)
+        cachedWeakQuestions = result
+        return result
     }
 
     fun quizHistory(): List<QuizHistoryEntry> = store().history
@@ -226,7 +261,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         val isCorrect = letter == response.answer
         if (isCorrect) correctCount++ else wrongCount++
 
-        val s = storage.loadStore(state.code)
+        val s = store()
         val idStr = q.id.toString()
         val record = s.questions[idStr] ?: QuestionRecord(category = q.category)
         val updatedRecord = record.copy(
@@ -235,7 +270,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         )
         val updatedStore = s.copy(questions = s.questions + (idStr to updatedRecord))
         storage.saveStore(updatedStore, state.code)
-        invalidateStoreCache()
+        updateStoreCache(updatedStore)
 
         sessionResults.add(
             SessionResult(
@@ -265,7 +300,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
     private fun finishQuiz() {
         val state = currentState ?: return
-        val s = storage.loadStore(state.code)
+        val s = store()
         val updatedStore = s.copy(
             history = s.history + QuizHistoryEntry(
                 correct = correctCount,
@@ -275,13 +310,14 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
             ),
         )
         storage.saveStore(updatedStore, state.code)
-        invalidateStoreCache()
+        updateStoreCache(updatedStore)
         screen = AppScreen.RESULTS
     }
 
     fun clearData() {
         val state = currentState ?: return
         storage.clearStore(state.code)
+        invalidateStoreCache()
         screen = AppScreen.HOME
     }
 }

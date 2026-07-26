@@ -21,7 +21,7 @@ import com.drivers.test.theme.AppTheme
 @Composable
 fun LanguageBar(
     currentLang: String,
-    langs: List<String> = listOf("en", "ja", "es"),
+    langs: List<String> = listOf("en", "es"),
     langLabels: Map<String, String>,
     onSwitch: (String) -> Unit,
 ) {

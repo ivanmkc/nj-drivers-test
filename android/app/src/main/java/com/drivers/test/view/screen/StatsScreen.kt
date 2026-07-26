@@ -1,5 +1,6 @@
 package com.drivers.test.view.screen
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -32,6 +33,8 @@ private const val DEFAULT_PASSING_PCT = 70
 
 @Composable
 fun StatsScreen(vm: QuizViewModel) {
+    BackHandler { vm.goHome() }
+
     val c = AppTheme.colors
     var showResetDialog by remember { mutableStateOf(false) }
 

@@ -23,23 +23,22 @@ private data class BundledQuestion(
     val image: String? = null,
 )
 
-class ApiClient(context: Context) {
+class ApiClient {
     private var bundle: QuestionBundle? = null
+    private var questionIndex: Map<String, Map<String, Map<Int, BundledQuestion>>> = emptyMap()
 
-    init {
-        loadBundle(context)
-    }
-
-    private fun loadBundle(context: Context) {
-        try {
-            val input = context.assets.open("questions_bundle.json.gz")
-            val gzip = GZIPInputStream(input)
-            val out = ByteArrayOutputStream()
-            gzip.copyTo(out)
-            gzip.close()
-            bundle = Gson().fromJson(out.toString(Charsets.UTF_8.name()), QuestionBundle::class.java)
-        } catch (e: Exception) {
-            android.util.Log.e("ApiClient", "Failed to load bundle", e)
+    fun loadBundle(context: Context) {
+        val input = context.assets.open("questions_bundle.json.gz")
+        val gzip = GZIPInputStream(input)
+        val out = ByteArrayOutputStream()
+        gzip.copyTo(out)
+        gzip.close()
+        val loaded = Gson().fromJson(out.toString(Charsets.UTF_8.name()), QuestionBundle::class.java)
+        bundle = loaded
+        questionIndex = loaded.questions.mapValues { (_, langMap) ->
+            langMap.mapValues { (_, questions) ->
+                questions.associateBy { it.id }
+            }
         }
     }
 
@@ -68,9 +67,8 @@ class ApiClient(context: Context) {
         state: String,
         lang: String,
     ): AnswerResponse? {
-        val stateQuestions = bundle?.questions?.get(state) ?: return null
-        val langQuestions = stateQuestions[lang] ?: stateQuestions["en"] ?: return null
-        val q = langQuestions.find { it.id == questionId } ?: return null
+        val langIndex = questionIndex[state] ?: return null
+        val q = (langIndex[lang] ?: langIndex["en"])?.get(questionId) ?: return null
         return AnswerResponse(id = q.id, answer = q.answer, explanation = q.explanation)
     }
 }
