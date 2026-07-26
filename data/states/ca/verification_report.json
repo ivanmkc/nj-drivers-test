@@ -2,10 +2,10 @@
   "schema_version": 2,
   "code": "ca",
   "name": "California",
-  "verified_at": "2026-05-26T22:54:14Z",
+  "verified_at": "2026-07-26T17:55:12Z",
   "quiz_gates_version": "v2",
   "source": {
-    "manual_url": "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/",
+    "manual_url": "https://www.dmv.ca.gov/portal/file/california-driver-handbook-pdf/",
     "manual_pdf_sha256": "63c96b38efd7cf7d139e98f12dad5f4a412d336451740cd1506208ee13cf3b82",
     "manual_text_sha256": "6b80c7ff83cdaad741d4e36a8f645b0d081a97978cbc4d01e8bbc77e36c3f8db",
     "manual_text_chars": 137033,
@@ -13,9 +13,9 @@
     "edition": "2025"
   },
   "bank": {
-    "total_questions": 284,
-    "non_sign_questions": 273,
-    "sign_questions": 11,
+    "total_questions": 252,
+    "non_sign_questions": 218,
+    "sign_questions": 34,
     "languages": [
       "EN",
       "ES",
@@ -25,686 +25,762 @@
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
     "sample_size": 0,
-    "judged_count": 273,
-    "avg_fidelity": 5.11,
-    "pct_at_10": 48.7,
-    "pct_above_9": 49.5,
-    "pct_above_7": 49.8,
-    "pct_zero": 46.9,
+    "judged_count": 218,
+    "avg_fidelity": 9.95,
+    "pct_at_10": 99.5,
+    "pct_above_9": 99.5,
+    "pct_above_7": 99.5,
+    "pct_zero": 0.5,
     "flagged_question_ids": [
-      13,
-      28,
-      29,
-      31,
-      32,
-      36,
-      37,
-      38,
-      41,
-      42,
-      49,
-      50,
-      52,
-      53,
-      55,
-      86,
-      98,
-      121,
-      122,
-      123,
-      124,
-      125,
-      126,
-      127,
-      128,
-      129,
-      130,
-      131,
-      132,
-      133,
-      134,
-      135,
-      136,
-      137,
-      138,
-      139,
-      140,
-      141,
-      142,
-      143,
-      145,
-      146,
-      147,
-      148,
-      149,
-      152,
-      156,
-      157,
-      158,
-      159,
-      163,
-      164,
-      169,
-      170,
-      171,
-      172,
-      173,
-      174,
-      177,
-      178,
-      179,
-      181,
-      183,
-      184,
-      185,
-      196,
-      198,
-      204,
-      205,
-      206,
-      207,
-      208,
-      209,
-      210,
-      211,
-      212,
-      213,
-      214,
-      215,
-      216,
-      217,
-      218,
-      219,
-      220,
-      221,
-      222,
-      223,
-      224,
-      225,
-      226,
-      227,
-      228,
-      229,
-      230,
-      231,
-      232,
-      233,
-      234,
-      235,
-      236,
-      237,
-      238,
-      239,
-      240,
-      241,
-      242,
-      243,
-      244,
-      245,
-      246,
-      247,
-      248,
-      249,
-      250,
-      251,
-      252,
-      253,
-      254,
-      255,
-      256,
-      258,
-      259,
-      260,
-      264,
-      265,
-      266,
-      267,
-      269,
-      270,
-      272,
-      276,
-      277,
-      278,
-      279,
-      281,
-      282,
-      283
+      159
     ],
     "evidence_by_question_id": {
       "1": [
-        "The speed limit is 25 mph within 500 feet of a school while children are outside or crossing the street."
+        "Beginning May 2025, your driver’s license, or identification (ID) card must be REAL ID compliant if you use it to: • Board an airplane for domestic flights."
       ],
       "2": [
-        "In California, you may never drive faster than is safe for the current road conditions. This is known as the Basic Speed Law."
+        "Most people need a noncommercial Class C driver’s license."
       ],
       "3": [
-        "It is illegal for you to drive if you have a BAC of: • 0.08% or higher if you are over 21 years old."
+        "ID cards are issued for identification purposes to eligible persons of any age. They do not permit you to drive."
       ],
       "4": [
-        "When the bus flashes red lights... you must stop from either direction until the children are safely across the street and the lights stop flashing. Remain stopped while the red lights are flashing."
+        "If you are under 18 years old, you will also need to: • Be at least 15½ years old."
       ],
       "5": [
-        "Drive to the right edge of the road and stop until the emergency vehicle(s) have passed."
+        "Wait to use your instruction permit until you start behind-the-wheel driver training with an instructor who will validate the permit."
       ],
       "6": [
-        "Driving while using a handheld cell phone is unsafe and illegal.",
-        "EXCEPTION: Minors may use a cell phone to make a call for emergency assistance."
+        "Practice driving with a California-licensed driver who is at least 18 years old (25 for minors)."
       ],
       "7": [
-        "Headed either uphill or downhill when there is no curb: Turn the wheels to the right so the vehicle will roll away from the center of the road if the brakes fail."
+        "Practice driving for at least 50 hours with a California-licensed driver who is at least 25 years old."
       ],
       "8": [
-        "A flashing red signal light means STOP. After stopping, you may go when it is safe."
+        "Ten hours must be at night."
       ],
       "9": [
-        "Double Solid Yellow Lines Do not pass over double solid yellow lines."
+        "If you are under 18 years old, you will also need to: • Be at least 16 years old."
       ],
       "10": [
-        "Use the three-second rule to ensure a safe following distance and avoid a collision."
+        "Have an instruction permit from California or another state for at least 6 months (or turn 18 years old) before scheduling your behind-the-wheel drive test."
       ],
       "11": [
-        "If you are in a collision, you must report it to DMV within 10 days if: • The collision caused more than $1,000 in damage to property. • Anyone was injured or killed."
+        "If your parents or guardians share joint custody of you, both must sign."
       ],
       "12": [
-        "Pedestrians have the right-of-way in marked or unmarked crosswalks.",
-        "When there is a pedestrian crossing a roadway with or without a crosswalk, you must use caution, reduce your speed, or stop"
+        "Instructors must carry an instructor’s ID card. Ask to see it."
       ],
       "13": [
-        "Most people need a noncommercial Class C driver’s license.",
-        "For information on vehicles covered by a Class C, visit dmv.ca.gov/dl."
+        "Pay a non-refundable application fee."
       ],
       "14": [
-        "To check your blind spots, look over your right and left shoulders out of your side windows.",
-        "Check your blind spots before you: • Change lanes."
+        "This person must sit close enough to take control of the vehicle if needed."
       ],
       "15": [
-        "In California, you may never drive faster than is safe for the current road conditions. This is known as the Basic Speed Law."
+        "Pass your knowledge test(s).",
+        "Pass a vision test."
       ],
       "16": [
-        "It is illegal for you to drive if you have a BAC of: • 0.08% or higher if you are over 21 years old."
+        "Between 11 p.m. and 5 a.m. during the first 12 months you have your license."
       ],
       "17": [
-        "The speed limit for a blind intersection is 15 mph. An intersection is considered blind if it has no stop signs at any corner."
+        "unless your parent or guardian or other California-licensed driver (at least 25 years old) rides with you."
       ],
       "18": [
-        "Business or Residential Districts The speed limit is 25 mph, unless otherwise posted."
+        "Minors must wait seven days to retake a failed knowledge test, not including the day of the failure."
       ],
       "19": [
-        "Headed uphill: Turn your front wheels away from the curb (left- towards the center of the road) and let your vehicle roll back a few inches."
+        "Minors must wait 14 days to retake a failed behind-the-wheel drive test, not including the day of the failure."
       ],
       "20": [
-        "Flashing Red Light A flashing red signal light means STOP. After stopping, you may go when it is safe."
+        "The tires must have at least 1/32-inch of uniformed tread depth."
       ],
       "21": [
-        "Two sets of solid double yellow lines spaced two or more feet apart are considered a barrier.",
-        "Do not drive on or over this barrier, make a left turn, or make a U-turn across it, except at designated openings."
+        "Horn – Designed for the vehicle, in proper working condition, and loud enough to be heard from a distance of at least 200 feet."
       ],
       "22": [
-        "Pedestrians always have the right-of-way.",
-        "Pedestrians have the right-of-way in marked or unmarked crosswalks."
+        "Vehicle safety technology, such as backup cameras and blind spot monitors, may be used on the drive test",
+        "advanced driver assistance systems technologies, such as automated parallel parking, lane departure, and adaptive cruise control, are not permitted"
       ],
       "23": [
-        "Use the three-second rule to ensure a safe following distance and avoid a collision."
+        "If you move, you must notify DMV of your new address within ten days."
       ],
       "24": [
-        "If you are in a collision, you must report it to DMV within 10 days if:",
-        "The collision caused more than $1,000 in damage to property.",
-        "Anyone was injured or killed. This applies even if the injuries were minor."
+        "If you are out-of-state and cannot renew, you may request a one-year extension of your driver’s license."
       ],
       "25": [
-        "Beginning 30 minutes after sunset.",
-        "Until 30 minutes before sunrise.",
-        "When it is too dark to see from 1,000 feet away."
+        "It is illegal to wear a headset or earplugs in both ears while driving."
       ],
       "26": [
-        "Give the right-of-way to any law enforcement vehicle, fire engine, ambulance, or other emergency vehicle using a siren and red lights.",
-        "Drive to the right edge of the road and stop until the emergency vehicle(s) have passed."
+        "Physicians are required to report patients, who are at least 14 years old, to DMV for medical conditions that may affect your ability to drive safely"
       ],
       "27": [
-        "A yellow traffic signal light means CAUTION. The light is about to turn red.",
-        "When you see a yellow traffic signal light, stop, if you can do so safely. If you cannot stop safely, cautiously cross the intersection."
+        "Start with your hands at 9 and 3 o’clock or 8 and 4 o’clock."
+      ],
+      "28": [
+        "You must carry a note signed by your physician. The note must have your medical condition and date you are expected to recover."
+      ],
+      "29": [
+        "The use of a recording device, including a video recorder, is prohibited during a behind-the-wheel drive test."
       ],
       "30": [
-        "Submit proof of insurance",
-        "DMV KIOSKS Offer Convenient Transactions",
-        "Complete your vehicle registration renewal"
+        "Rearview mirrors – At least two rearview mirrors. One of them must be on the left side of your vehicle."
+      ],
+      "31": [
+        "Use this steering wheel method when you turn at low speeds, park, or need to recover from a skid."
+      ],
+      "32": [
+        "When you are turning while backing up to see where you are going behind you. Place your hand at the 12 o’clock position on the steering wheel."
       ],
       "33": [
-        "SECTION 3.  The Testing Process ............................................................................ 5"
+        "At least five seconds before you change lanes on a freeway."
       ],
       "34": [
-        "SECTION 7.  Laws and Rules of the Road ...................................................... 33"
+        "Even when you do not see other vehicles around you."
       ],
       "35": [
-        "SECTION 8.  Safe Driving ...............................................................................................57"
+        "Alert oncoming traffic on narrow mountain roads where you cannot see at least 200 feet ahead."
       ],
-      "39": [
-        "SECTION 4.  Changing, Replacing, and Renewing Your Driver’s License ...................................................................... 8"
+      "36": [
+        "Dim your high-beam headlights to low beams within 500 feet of a vehicle coming toward you or within 300 feet of a vehicle you are following."
       ],
-      "40": [
-        "• Request vehicle record",
-        "SECTION 11.  Vehicle Registration Requirements................................... 79"
+      "37": [
+        "If you need to use your windshield wipers due to fog, rain, or snow, you must turn on your low-beam headlights."
       ],
-      "43": [
-        "Remember that driving or riding is a privilege, and above all, safety must be the priority."
-      ],
-      "44": [
-        "put down that cell phone when behind the wheel or handlebars. Do not operate a vehicle, motorcycle or bicycle while distracted or impaired"
-      ],
-      "45": [
-        "The driver’s license application can be started from the comfort of home by visiting the DMV website at dmv.ca.gov."
-      ],
-      "46": [
-        "The California Driver’s Handbook is available in nine languages"
-      ],
-      "47": [
-        "Do not operate a vehicle, motorcycle or bicycle while distracted or impaired—it could mean the difference between life and death."
-      ],
-      "48": [
-        "Always buckle up, follow traffic laws, pay attention to other drivers, bicyclists and pedestrians"
-      ],
-      "51": [
-        "Some of these transactions include driver’s license renewal, vehicle registration and others."
-      ],
-      "54": [
-        "Always buckle up, follow traffic laws, pay attention to other drivers, bicyclists and pedestrians"
-      ],
-      "56": [
-        "SECTION 10. Financial Responsibility, Insurance Requirements, and Collisions .................................. 76"
-      ],
-      "57": [
-        "Pedestrians always have the right-of-way.",
-        "Pedestrians have the right-of-way in marked or unmarked crosswalks."
-      ],
-      "58": [
-        "Use the three-second rule to ensure a safe following distance and avoid a collision."
-      ],
-      "59": [
+      "38": [
         "Beginning 30 minutes after sunset.",
         "Until 30 minutes before sunrise."
       ],
-      "60": [
-        "To check your blind spots, look over your right and left shoulders out of your side windows.",
-        "Look over your shoulder in the direction you plan to move to make sure the lane is clear."
+      "39": [
+        "Do not stop just over a hill or just around a curve. Other drivers may not see your vehicle in time to avoid a collision."
       ],
-      "61": [
-        "It is a misdemeanor to use a motor vehicle to flee or attempt to evade law enforcement performing their duties. This is punishable by imprisonment in a county jail for one year or less."
+      "40": [
+        "A yield line is a line of solid white triangles that shows approaching vehicles where to yield or stop."
       ],
-      "62": [
-        "Red YIELD Sign Slow down and be ready to stop to let any vehicle, bicyclist, or pedestrian pass before you proceed."
+      "41": [
+        "Two sets of solid double yellow lines spaced two or more feet apart are considered a barrier. Do not drive on or over this barrier"
       ],
-      "63": [
-        "When you cannot change lanes to pass a bicyclist, allow at least three feet between your vehicle and the bicyclist."
+      "42": [
+        "Double solid white lines indicate a lane barrier between a regular use and a preferential use lane, such as a carpool (HOV) lane.",
+        "Never change lanes over double solid white lines."
       ],
-      "64": [
-        "You may make a U-turn: Across a double yellow line.",
-        "Never make a U-turn: At or on a railroad crossing.",
-        "Never make a U-turn: On a one-way street."
+      "43": [
+        "The left (or fast) lane is called the Number 1 Lane."
       ],
-      "65": [
-        "It is illegal for you to drive if you have a BAC of: 0.01% or higher if you are under 21 years old."
-      ],
-      "66": [
-        "If you are in a collision, you must report it to DMV within 10 days if: Anyone was injured or killed."
-      ],
-      "78": [
-        "Your vehicle should now be parallel and within 18 inches of the curb."
-      ],
-      "79": [
-        "An HOV lane is a special lane reserved for carpools, buses, motorcycles, or low-emission vehicles with decals."
-      ],
-      "80": [
-        "Never park or leave your vehicle: Within 15 feet of a fire hydrant or fire station driveway."
-      ],
-      "81": [
+      "44": [
         "You may only drive for 200 feet in the center left turn lane."
       ],
+      "45": [
+        "You must use a turnout area or lane to let other vehicles pass when you are driving slowly on a two-lane road, where passing is unsafe, and there are five or more vehicles following you."
+      ],
+      "46": [
+        "You must use a turnout area or lane to let other vehicles pass when you are driving slowly on a two-lane road, where passing is unsafe, and there are five or more vehicles following you."
+      ],
+      "47": [
+        "It is illegal to drive in a bicycle lane unless you are: ... Turning (within 200 feet of an intersection)."
+      ],
+      "48": [
+        "Buffered bike lane: Uses chevrons or diagonal markings to provide greater separation from traffic and on-street parking."
+      ],
+      "49": [
+        "You may not turn right if you are stopped at a red arrow light. Wait until the light changes to green before making your turn."
+      ],
+      "50": [
+        "It is illegal to drive, stop, park, or leave a vehicle in an area designated for public transit buses.",
+        "However, you may cross a bus lane to make a right turn."
+      ],
+      "51": [
+        "Keep your wheels pointed straight ahead until it is safe to start your turn.",
+        "If your wheels are pointed to the left and a vehicle hits you from behind, you could be pushed into oncoming traffic."
+      ],
+      "52": [
+        "You may turn left against a red light when you are turning from a one-way street onto a one-way street."
+      ],
+      "53": [
+        "Never make a U-turn:",
+        "When you cannot see clearly for 200 feet in each direction."
+      ],
+      "54": [
+        "Never make a U-turn:",
+        "In front of a fire station. Never use a fire station driveway to turn around."
+      ],
+      "55": [
+        "If stopping behind a vehicle, leave enough space to see their rear wheels."
+      ],
+      "56": [
+        "Highway traffic has the right-of-way."
+      ],
+      "57": [
+        "When in the proper lane, signal five seconds (approximately 400 feet) before you exit."
+      ],
+      "58": [
+        "If there is no limit line, stop before you enter the crosswalk."
+      ],
+      "59": [
+        "Never make a U-turn:",
+        "In business districts",
+        "Except at an intersection, or on a divided highway where an opening has been provided."
+      ],
+      "60": [
+        "Start signaling about 100 feet before the turn.",
+        "Start signaling 100 feet before the turn."
+      ],
+      "61": [
+        "When in the proper lane, signal five seconds (approximately 400 feet) before you exit."
+      ],
+      "62": [
+        "Half a block on city streets, which is about 150 feet."
+      ],
+      "63": [
+        "Wait for the vehicle to start its turn before beginning the left turn."
+      ],
+      "64": [
+        "To safely pass, the hill or curve should be at least one-third of a mile ahead."
+      ],
+      "65": [
+        "Within 100 feet of an intersection, bridge, tunnel, railroad crossing, or other hazardous area."
+      ],
+      "66": [
+        "The driver ahead of you is turning left and you can safely pass on the right."
+      ],
+      "67": [
+        "If a vehicle is passing you or signals that they plan on passing, allow the vehicle to pass. Maintain your lane position and your speed."
+      ],
+      "68": [
+        "Your vehicle should now be parallel and within 18 inches of the curb."
+      ],
+      "69": [
+        "Headed uphill: Turn your front wheels away from the curb (left- towards the center of the road)"
+      ],
+      "70": [
+        "Yellow: Load and unload passengers and freight. Do not stop longer than the time posted."
+      ],
+      "71": [
+        "Within 15 feet of a fire hydrant or fire station driveway."
+      ],
+      "72": [
+        "A vehicle that is stopped, parked, or left standing on a freeway for more than four hours may be removed."
+      ],
+      "73": [
+        "Turn on your right turn signal to acknowledge that you see the officer."
+      ],
+      "74": [
+        "The driver and all passengers should place their hands in clear view before the officer makes contact with them."
+      ],
+      "75": [
+        "Speed up and slow down smoothly. Drive at a steady speed.",
+        "Get rid of extra weight in your vehicle."
+      ],
+      "76": [
+        "Law enforcement officers must state the reason for a traffic or pedestrian stop before they begin any questioning"
+      ],
+      "77": [
+        "The driver of a stopped vehicle must produce a driver’s license, proof of insurance, and vehicle registration when stopped by law enforcement."
+      ],
+      "78": [
+        "In California, only federal law enforcement officers can ask you about your immigration status."
+      ],
+      "79": [
+        "you should not reach into concealed areas to retrieve your recording device without the officer’s permission."
+      ],
+      "80": [
+        "You can turn right at a red light, if: • There is not a NO TURN ON RED sign posted. • You stop at the stop or limit line, yield for pedestrians, and turn when it is safe."
+      ],
+      "81": [
+        "Red Arrow A red arrow means STOP. Do not turn at a red arrow. Remain stopped until a green traffic signal light or green arrow appears."
+      ],
       "82": [
-        "As a provisional driver, you cannot drive:",
-        "With passengers under 20 years old, unless your parent or guardian or other California-licensed driver (at least 25 years old) rides with you."
+        "Solid Yellow Light A yellow traffic signal light means CAUTION. The light is about to turn red. When you see a yellow traffic signal light, stop, if you can do so safely."
       ],
       "83": [
-        "Blue: Parking for a disabled person or someone driving a disabled person with a special placard or special license plate."
+        "Flashing Yellow Light A flashing yellow traffic signal light is a warning to PROCEED WITH CAUTION. Slow down and be alert. You do not need to stop."
       ],
       "84": [
-        "T intersections without STOP or YIELD signs: Vehicles, bicyclists, and pedestrians on the through road (continuing to go straight) have the right-of-way."
+        "Flashing Yellow Arrow You can turn, but your turn is not protected from other traffic. Proceed to turn left after yielding to oncoming traffic and proceed with caution."
       ],
       "85": [
-        "Use your low-beam headlights. High-beam headlights will reflect back and cause glare."
+        "Do not enter the intersection if you cannot get completely across before the traffic signal light turns red."
       ],
       "86": [
-        "Traffic convictions and collisions stay on your record for 36 months or longer, depending on the type of conviction."
+        "Traffic Light Not Working When a traffic light is not working, stop as if the intersection is controlled by STOP signs in all directions."
       ],
       "87": [
-        "the vehicle facing uphill has the right-of-way.",
-        "The vehicle facing downhill should back up until the vehicle going uphill can pass."
+        "Drivers must yield to pedestrians, even if the DON’T WALK light is flashing."
       ],
       "88": [
-        "always keep your eyes moving and scan the road at least 10 seconds ahead of your vehicle."
+        "STOP Sign Make a full stop before entering the crosswalk or at the limit line. If there is no limit line or crosswalk, stop before entering the intersection."
       ],
       "89": [
-        "Safety zones are spaces set aside for pedestrians waiting for buses, streetcars, and trolleys.",
-        "Do not drive through a safety zone under any condition."
+        "Complete your vehicle registration renewal",
+        "Submit proof of insurance",
+        "Receive a replacement registration card or sticker"
       ],
       "90": [
-        "As a provisional driver, you cannot drive:",
-        "Between 11 p.m. and 5 a.m. during the first 12 months you have your license."
+        "An officer may also request the names or identification of passengers. Passengers can decline that request, but under some circumstances the passengers may be required to identify themselves."
       ],
       "91": [
-        "Green: Park for a limited time. The time limit may be posted on signs or painted on the curb."
+        "5-sided Sign You are near a school. Drive slowly and stop for children in the crosswalk."
       ],
       "92": [
-        "If your vehicle starts to hydroplane: • Slow down gradually. • Do not use the brakes."
+        "Yellow and Black Circular Sign or X-shaped Sign You are approaching a railroad crossing."
       ],
       "93": [
-        "Use your horn to: • Avoid collisions. • Alert oncoming traffic on narrow mountain roads where you cannot see at least 200 feet ahead."
+        "T intersections without STOP or YIELD signs: Vehicles, bicyclists, and pedestrians on the through road (continuing to go straight) have the right-of-way."
       ],
       "94": [
-        "When a traffic light is not working, stop as if the intersection is controlled by STOP signs in all directions."
+        "give the right-of-way to the vehicle, pedestrian, or bicyclist on your right."
       ],
       "95": [
-        "Not dump or abandon animals on a highway. This crime is punishable by a fine of up to $1,000, six months in jail, or both."
+        "5. Travel in a counterclockwise direction. Do not stop or pass."
       ],
       "96": [
-        "Left turn from a two-way street onto a one-way street. Start the turn from the lane closest to the middle of the street (far-left lane)."
+        "7. If you miss your exit, continue around until you return to your exit."
       ],
       "97": [
-        "Check for approaching light rail vehicles before you turn across the tracks. ... Be aware they can interrupt traffic lights."
+        "Do not pass a vehicle stopped at a crosswalk. You may not be able to see a pedestrian crossing the street."
+      ],
+      "98": [
+        "When a blind person pulls in their cane and steps away from the intersection, this gesture usually means you may go."
       ],
       "99": [
-        "Never park or leave your vehicle: ... Double parked."
+        "the vehicle facing uphill has the right-of-way. The vehicle facing downhill has more control when backing up the hill."
       ],
       "100": [
-        "Tires – The tires must have at least 1/32-inch of uniformed tread depth."
+        "If you cannot see the truck’s side mirrors, the truck driver cannot see you."
       ],
       "101": [
-        "You may be sentenced to up to six months in jail.",
-        "If you are convicted of a DUI, DMV will suspend or revoke your driving privilege for one year."
+        "A large vehicle traveling at the same speed can take up to 400 feet to stop."
       ],
       "102": [
-        "Yellow and Black Circular Sign or X-shaped Sign You are approaching a railroad crossing.",
-        "Look, listen, slow down, and prepare to stop."
+        "When a vehicle turns, the rear wheels follow a shorter path than the front wheels.",
+        "This is why large vehicles and truck drivers must often swing wide to complete a turn."
       ],
       "103": [
-        "Never turn in front of an approaching light rail vehicle.",
-        "Check for approaching light rail vehicles before you turn across the tracks."
+        "Always pass a large vehicle on the left side."
       ],
       "104": [
-        "With passengers under 20 years old, unless your parent or guardian or other California-licensed driver (at least 25 years old) rides with you.",
-        "Between 11 p.m. and 5 a.m. during the first 12 months you have your license."
+        "Do not drive through a safety zone under any condition."
       ],
       "105": [
-        "Blue: Parking for a disabled person or someone driving a disabled person with a special placard or special license plate."
+        "When a bus, streetcar, or trolley is stopped at a safety zone or traffic light, you may pass at no more than 10 mph."
       ],
       "106": [
-        "Prescription and over-the-counter medications can make you an unsafe driver.",
-        "It is your responsibility to know the effects of the medications you take."
+        "Allow a safe three-second following distance."
       ],
       "107": [
-        "It is illegal to drive in a bicycle lane unless you are:",
-        "Turning (within 200 feet of an intersection)."
+        "If you are in an intersection when you see an emergency vehicle, continue through the intersection. Drive to the right as soon as it is safe and stop."
       ],
       "108": [
+        "It is against the law to follow within 300 feet of any fire engine, law enforcement vehicle, ambulance, or other emergency vehicle when their siren or flashing lights are on."
+      ],
+      "109": [
+        "Some slow-moving vehicles have an orange and red triangle on their back, such as road maintenance vehicles, which usually travel at 25 mph or less."
+      ],
+      "110": [
+        "They are restricted from roads where the speed limit is greater than 35 mph."
+      ],
+      "111": [
+        "Wear a helmet (if under 18 years old)."
+      ],
+      "112": [
+        "A front lamp with a white light visible from 300 feet."
+      ],
+      "113": [
+        "allow at least three feet between your vehicle and the bicyclist."
+      ],
+      "114": [
+        "Enter a bike lane no more than 200 feet before starting a turn."
+      ],
+      "115": [
+        "Anyone convicted of assaulting a highway worker faces fines of up to $2,000 and imprisonment for up to one year."
+      ],
+      "116": [
+        "Bicyclists traveling slower than the flow of traffic must ride as close as possible to the right curb or edge of the road, unless:",
+        "Preparing to make a left turn."
+      ],
+      "117": [
+        "Fines are also doubled in highway construction or maintenance zones when workers are present."
+      ],
+      "118": [
+        "It is legal to share lanes with motorcycles, this is known as lane splitting."
+      ],
+      "119": [
+        "If you fail to stop, you may be fined up to $1,000 and your driving privilege could be suspended for one year."
+      ],
+      "120": [
+        "If no lanes are marked and there are four or more lanes in your direction, you may only drive in the two lanes closest to the right edge of the road."
+      ],
+      "121": [
+        "The speed limit for a blind intersection is 15 mph."
+      ],
+      "122": [
+        "Cargo that extends more than 4 feet from the back-rear bumper of the vehicle must display a 12-inch red or fluorescent orange square flag."
+      ],
+      "123": [
+        "When the crossing devices or a person warns you a train is coming, stop at least 15 feet from the nearest track."
+      ],
+      "124": [
         "4 points in 12 months.",
         "6 points in 24 months.",
         "8 points in 36 months."
       ],
-      "109": [
-        "Use your vehicle’s horn to let other drivers know you are there or warn others of a hazard.",
-        "Avoid collisions."
+      "125": [
+        "A person convicted of manslaughter resulting from evading law enforcement during a pursuit is subject to imprisonment in a state prison for a minimum of 4 to 10 years."
       ],
-      "110": [
-        "It is legal to share lanes with motorcycles, this is known as lane splitting."
+      "126": [
+        "If an unlicensed person is caught driving your vehicle, it may be impounded for 30 days."
       ],
-      "111": [
-        "Yield to all traffic already in the roundabout.",
-        "When approaching a roundabout, you must slow down and yield to all traffic, including pedestrians and bicyclists, that is already circulating within the roundabout."
+      "127": [
+        "You can do this once in any 18-month period."
       ],
-      "112": [
-        "Start with your hands at 9 and 3 o’clock or 8 and 4 o’clock."
+      "128": [
+        "A 5-inch square located in the center uppermost portion of your windshield for an electronic toll payment device."
       ],
-      "113": [
-        "Green: Park for a limited time. The time limit may be posted on signs or painted on the curb."
+      "129": [
+        "Not dump or abandon animals on a highway. This crime is punishable by a fine of up to $1,000, six months in jail, or both."
       ],
-      "114": [
-        "If you move, you must notify DMV of your new address within ten days."
+      "130": [
+        "A diamond-shaped sign on a truck means that the truck’s load may be dangerous (gas, explosives, etc.)."
       ],
-      "115": [
-        "You should signal: • At least 100 feet before you turn."
+      "131": [
+        "Two at fault collisions, two traffic violation convictions, or one of each: You cannot drive for 30 days unless a licensed adult, at least 25 years old, rides with you."
       ],
-      "116": [
-        "Not interfere with a funeral procession. A funeral procession is led by a traffic officer and has the right-of-way."
+      "132": [
+        "A conviction of using alcohol or a controlled substance, or both and are 15-20 years old: The court will order DMV to suspend your driving privilege for one year or delay your eligibility"
       ],
-      "117": [
-        "Flashing Yellow Arrow You can turn, but your turn is not protected from other traffic. Proceed to turn left after yielding to oncoming traffic and proceed with caution."
+      "133": [
+        "you must request a hearing within 10 days of being served or 14 days from the date the notice is mailed."
       ],
-      "118": [
-        "When you drive in California, you consent to a breath, blood, or urine test if a law enforcement officer suspects you of DUI."
+      "134": [
+        "Most information in your driver’s record is available to the public, except physical or mental conditions, address, and social security number."
       ],
-      "119": [
-        "Windshield wipers: control arm or switch – You may be required to show they function.",
-        "Emergency (parking brake) – How to set and release the parking brake."
-      ],
-      "120": [
-        "NEVs and LSVs reach a maximum speed of 25 mph. They are restricted from roads where the speed limit is greater than 35 mph."
-      ],
-      "144": [
-        "The California Driver’s Handbook is available in nine languages and offers valuable information"
-      ],
-      "150": [
-        "Submit proof of insurance",
-        "most DMV transactions can be completed on this site. Some of these transactions include driver’s license renewal, vehicle registration and others."
-      ],
-      "151": [
-        "SECTION 13.  Seniors and Driving ........................................................................ 82"
-      ],
-      "153": [
-        "Request vehicle record"
-      ],
-      "154": [
-        "A driver’s license offers the opportunity to travel to essential services, a favorite vacation spot, education, loved ones and more"
-      ],
-      "155": [
-        "SECTION 12. Driver Safety..........................................................80"
-      ],
-      "160": [
-        "Request driver’s record"
-      ],
-      "161": [
-        "Whether driving a car, motorcycle, commercial vehicle or riding a bicycle, it is critical we adhere to the rules to share the road safely and responsibly."
-      ],
-      "162": [
-        "SECTION 9. Alcohol and Drugs...............................................................................72",
-        "SECTION 10. Financial Responsibility, Insurance Requirements, and Collisions .................. 76"
-      ],
-      "165": [
-        "Toks Omishakin, Secretary California State Transportation Agency"
-      ],
-      "166": [
-        "Do not operate a vehicle, motorcycle or bicycle while distracted or impaired—it could mean the difference between life and death."
-      ],
-      "167": [
-        "Do not operate a vehicle, motorcycle or bicycle while distracted or impaired—it could mean the difference between life and death."
-      ],
-      "168": [
-        "Try online first, as it can be a timesaver."
-      ],
-      "175": [
-        "Remember that driving or riding is a privilege, and above all, safety must be the priority."
-      ],
-      "176": [
-        "put down that cell phone when behind the wheel or handlebars."
-      ],
-      "180": [
-        "making Californians’ digital experience easier, faster and more convenient."
-      ],
-      "182": [
-        "Remember that driving or riding is a privilege, and above all, safety must be the priority."
-      ],
-      "185": [
-        "Connect with us on social media! @CA_DMV #CADMV"
-      ],
-      "186": [
-        "Always buckle up, follow traffic laws, pay attention to other drivers, bicyclists and pedestrians"
-      ],
-      "187": [
-        "making Californians’ digital experience easier, faster and more convenient."
-      ],
-      "188": [
-        "In these areas, your vehicle can disappear from a large vehicle or truck driver’s view.",
-        "The shaded areas in this image are the truck driver’s blind spots."
-      ],
-      "189": [
-        "T intersections without STOP or YIELD signs: Vehicles, bicyclists, and pedestrians on the through road (continuing to go straight) have the right-of-way."
-      ],
-      "190": [
-        "With passengers under 20 years old, unless your parent or guardian or other California-licensed driver (at least 25 years old) rides with you."
-      ],
-      "191": [
-        "Green: Park for a limited time. The time limit may be posted on signs or painted on the curb."
-      ],
-      "192": [
-        "It is legal to share lanes with motorcycles, this is known as lane splitting."
-      ],
-      "193": [
-        "Half a block on city streets, which is about 150 feet.",
-        "A full block on the highway, which is about 300 feet."
-      ],
-      "194": [
-        "An open highway has two or more lanes going in your direction.",
-        "The driver ahead of you is turning left and you can safely pass on the right.",
-        "You are on a one-way street."
-      ],
-      "195": [
-        "White: Stop only long enough to pick up or drop off passengers."
-      ],
-      "197": [
+      "135": [
         "always keep your eyes moving and scan the road at least 10 seconds ahead of your vehicle."
       ],
+      "136": [
+        "If a vehicle merges in front of you too closely, take your foot off the accelerator. This creates space between you and the vehicle ahead."
+      ],
+      "137": [
+        "A tailgater is behind you. Maintain your course and speed. Then, when safe to do so, merge right to change into another lane and allow the tailgater to pass."
+      ],
+      "138": [
+        "To check your blind spots, look over your right and left shoulders out of your side windows. Only turn your head when you look."
+      ],
+      "139": [
+        "Do not look directly into the oncoming headlights. Look toward the right edge of your lane."
+      ],
+      "140": [
+        "When it is raining, use your low-beam headlights. Do not drive using only your parking lights."
+      ],
+      "141": [
+        "If you start to skid, follow these steps: 1. Slowly remove your foot from the accelerator."
+      ],
+      "142": [
+        "3. Turn the steering wheel in the direction of the skid."
+      ],
+      "143": [
+        "NOTE: Turning 18 years old does not erase or end existing restrictions, suspensions, or probation sentences."
+      ],
+      "144": [
+        "When a vehicle with one light drives toward you, drive as far to the right as possible."
+      ],
+      "145": [
+        "A locked wheel skid is usually caused by braking too hard when you are going too fast."
+      ],
+      "146": [
+        "Four-wheel antilock braking system (ABS), apply firm pressure on the brake pedal."
+      ],
+      "147": [
+        "If your brakes get wet, you can dry them by lightly pressing the accelerator and brake pedals at the same time."
+      ],
+      "148": [
+        "Packed snow: Reduce your speed by half."
+      ],
+      "149": [
+        "Bridges and overpasses tend to freeze before the rest of the road."
+      ],
+      "150": [
+        "If you cannot see farther than 100 feet, it is not safe to drive faster than 30 mph."
+      ],
+      "151": [
+        "Slow down gradually.",
+        "Do not use the brakes. Sudden braking may cause you to lose control of your vehicle."
+      ],
+      "152": [
+        "Shift into a low gear and keep the front wheels straight."
+      ],
+      "153": [
+        "Do not use cruise control. Maintain maximum control of the accelerator if a gust occurs."
+      ],
+      "154": [
+        "Use your low-beam headlights. High-beam headlights will reflect back and cause glare.",
+        "Never drive using only your parking or fog lights."
+      ],
+      "155": [
+        "Turn on your emergency flashers to warn other drivers.",
+        "Slowly decrease your speed to the same speed as the officer."
+      ],
+      "156": [
+        "If your passenger is under 16 years old, you can also get a ticket if they are not wearing their seat belt."
+      ],
+      "157": [
+        "If you are pregnant, wear the lap belt as low as possible under your abdomen."
+      ],
+      "158": [
+        "Children who are under 2 years old, under 40 pounds, and under 3 feet 4 inches tall: Secure in a rear-facing child passenger restraint system."
+      ],
+      "159": [
+        "A child in a rear-facing child passenger restraint system may not ride in the front seat of an airbag-equipped vehicle."
+      ],
+      "160": [
+        "Children who are 8 years old or older, or at least 4 feet 9 inches tall: May use a properly secured safety belt that meets federal standards."
+      ],
+      "161": [
+        "Ride at least 10 inches from the airbag cover, as long as you can maintain full control of your vehicle."
+      ],
+      "162": [
+        "It is illegal to leave a child who is six years old or younger unattended in a vehicle. A child may be left under the supervision of a person who is at least 12 years old."
+      ],
+      "163": [
+        "In California, you may never drive faster than is safe for the current road conditions. This is known as the Basic Speed Law."
+      ],
+      "164": [
+        "It is 55 mph on a two-lane undivided highway and for vehicles towing trailers."
+      ],
+      "165": [
+        "Slow down and let the oncoming vehicle pass. When the vehicle has passed, move to the left to allow plenty of space (at least three feet) to pass the bicyclist."
+      ],
+      "166": [
+        "Hold the steering wheel with both hands.",
+        "Gradually release the accelerator."
+      ],
+      "167": [
+        "If your wheels drift off the pavement: 1. Grip the steering wheel firmly."
+      ],
+      "168": [
+        "In extreme heat, you should:",
+        "Turn off the air conditioner."
+      ],
+      "169": [
+        "Exit on the right side so you are away from traffic if you must get out of the vehicle."
+      ],
+      "170": [
+        "Jump start your vehicle if the battery is dead.",
+        "FSP will not: ... Tow motorcycles."
+      ],
+      "171": [
+        "Immediately exit your vehicle. Run away from the tracks diagonally in the direction the train is coming from. Then call 911."
+      ],
+      "172": [
+        "Driving while using a handheld cell phone is unsafe and illegal.",
+        "Adult drivers should only use a cell phone in hands-free mode when necessary."
+      ],
+      "173": [
+        "It is against the law for a minor to use a cell phone or electronic wireless device",
+        "EXCEPTION: Minors may use a cell phone to make a call for emergency assistance."
+      ],
+      "174": [
+        "Symptoms of carbon monoxide poisoning include:",
+        "Ringing in the ears"
+      ],
+      "175": [
+        "If you refuse to take one, DMV will suspend or revoke your driving privilege for one year."
+      ],
+      "176": [
+        "If you are 13 to 20 years old and convicted of operating a bicycle while under the influence of alcohol or drugs, your driving privilege may be suspended or delayed for one year"
+      ],
+      "177": [
+        "If it is open, you must keep the container in the trunk or place where passengers do not sit.",
+        "It is also illegal to keep an open container of alcohol in your glove box."
+      ],
+      "178": [
+        "It is illegal for you to drive if you have a BAC of:",
+        "0.08% or higher if you are over 21 years old."
+      ],
+      "179": [
+        "0.04% or higher if you drive a vehicle that requires a commercial driver’s license."
+      ],
+      "180": [
+        "You may request a DMV administrative hearing within 10 days from the date of your arrest."
+      ],
+      "181": [
+        "All DUI convictions remain on your driver’s record for 10 years."
+      ],
+      "182": [
+        "You may not carry any alcohol beverage inside a vehicle unless an individual who is 21 years old or older is with you."
+      ],
+      "183": [
+        "If you are caught with alcohol in your vehicle, law enforcement can impound your vehicle for up to 30 days."
+      ],
+      "184": [
+        "$15,000 for property damage."
+      ],
+      "185": [
+        "Your driving privilege will be suspended for up to four years if you are in a collision and do not have proper insurance coverage."
+      ],
+      "186": [
+        "The law does not see a difference between illegal drugs and medications you get from a doctor or pharmacy."
+      ],
+      "187": [
+        "This law does not apply if you are a passenger in a bus, taxi, camper, or motorhome."
+      ],
+      "188": [
+        "Depending on how badly you are impaired, you may be arrested and convicted of a DUI even without a BAC measurement."
+      ],
+      "189": [
+        "When you buy a vehicle, you have 10 days to transfer ownership to your name."
+      ],
+      "190": [
+        "When you sell a vehicle, you must notify DMV within five days"
+      ],
+      "191": [
+        "You have 20 days to register your vehicle after you become a resident or get a job in California."
+      ],
+      "192": [
+        "If you are in a collision, you must report it to DMV within 10 days if:",
+        "The collision caused more than $1,000 in damage to property.",
+        "Anyone was injured or killed. This applies even if the injuries were minor."
+      ],
+      "193": [
+        "If you cannot find the owner, leave a note with your name, phone number, and address.",
+        "Securely attach the note to the vehicle or property. Report the collision to law enforcement."
+      ],
+      "194": [
+        "If you kill or injure an animal, call the nearest humane society or law enforcement. Do not try to move an injured animal."
+      ],
+      "195": [
+        "Move your vehicle out of traffic if no one is hurt. Then call 911."
+      ],
+      "196": [
+        "You have five working days to contact DMV to initiate the process or your driving privilege will be automatically suspended."
+      ],
+      "197": [
+        "A physical or mental condition or poor driver’s record can be the basis for a reexamination, not a driver’s age."
+      ],
+      "198": [
+        "NOTE: There are no specific restrictions for seniors. All restrictions are based on conditions, not age.",
+        "Any restriction placed on your driver’s license is based on the examiner’s findings and recommendations."
+      ],
       "199": [
-        "They are restricted from roads where the speed limit is greater than 35 mph."
+        "You must make a report to law enforcement within 24 hours of the collision if anyone is injured or killed."
       ],
       "200": [
-        "Turn on your emergency flashers to warn other drivers.",
-        "Slowly decrease your speed to the same speed as the officer.",
-        "Not drive past the patrol vehicle."
+        "You (or your representative) must file a report whether or not you caused the collision. This applies even if the collision happened on private property."
       ],
       "201": [
-        "You may be sentenced to up to six months in jail.",
-        "You may have to pay a fine."
+        "The most common causes of collisions are:",
+        "A vehicle traveling faster or slower than the flow of traffic."
       ],
       "202": [
-        "If you see animals or livestock near the road, slow down or stop and proceed when it is safe.",
-        "Be sure to follow directions from the person in charge of the animals."
+        "If you see a vehicle’s emergency flashers ahead, slow down. There may be a collision or other road emergency. Pass carefully."
       ],
       "203": [
-        "You must have your proof of financial responsibility (insurance) when you drive",
-        "This law requires that drivers and vehicle owners be able to pay for damages they cause."
+        "Issue you a limited term driver’s license."
       ],
-      "257": [
-        "Submit proof of insurance"
+      "204": [
+        "NOTE: There are no specific restrictions for seniors. All restrictions are based on conditions, not age.",
+        "Any restriction placed on your driver’s license is based on the examiner’s findings and recommendations."
       ],
-      "261": [
-        "SECTION 14.  Glossary .................................................................................... 84"
+      "205": [
+        "Getting lost in familiar places.",
+        "Dents and scrapes on the car, fences, mailbox, garage doors, etc.",
+        "Frequent close calls or collisions."
       ],
-      "262": [
-        "The California Driver’s Handbook is available in nine languages"
+      "206": [
+        "Driving during the time of day when traffic is light."
       ],
-      "263": [
-        "It also enables truck drivers to transport goods and services to support our economy."
+      "207": [
+        "If you are 70 years old or older at the time your driver’s license expires, you are required to renew your driver’s license in person and pass a vision test."
       ],
-      "267": [
-        "SECTION 6. Navigating the Roads ...................................................................... 13",
-        "SECTION 7. Laws and Rules of the Road ...................................................... 33",
-        "SECTION 8. Safe Driving ...............................................................................................57"
+      "208": [
+        "DMV sends a renewal notice to your address of record about 90 days before your driver’s license expires."
       ],
-      "268": [
-        "Whether driving a car, motorcycle, commercial vehicle or riding a bicycle, it is critical we adhere to the rules to share the road safely and responsibly."
+      "209": [
+        "The Community Liaison’s primary function is to represent public safety interests for all Californians, with a focus in addressing the concerns of senior drivers and teens."
       ],
-      "271": [
-        "SECTION 2. Getting an Instruction Permit and Driver’s License ........................................................................... 2"
+      "210": [
+        "It is often up to caregivers, physicians, and law enforcement, to stop these seniors from driving and arrange alternative transportation."
       ],
-      "273": [
-        "Remember that driving or riding is a privilege, and above all, safety must be the priority."
+      "211": [
+        "The Mature Driver Improvement Program is an eight-hour course for drivers 55 years old and older."
       ],
-      "274": [
-        "Remember that driving or riding is a privilege, and above all, safety must be the priority."
+      "212": [
+        "Your certificate is valid for three years. You can renew it by completing another four-hour course."
       ],
-      "275": [
-        "Always buckle up, follow traffic laws, pay attention to other drivers, bicyclists and pedestrians"
+      "213": [
+        "If you are 62 years old or older, you are eligible for a no-fee Senior ID card."
       ],
-      "276": [
-        "The California Driver’s Handbook is available in nine languages"
+      "214": [
+        "if your BAC is 0.10%, that means you have 0.10 grams of alcohol in 100 milliliters of blood."
       ],
-      "280": [
-        "Try online first, as it can be a timesaver."
+      "215": [
+        "VRUs are non-motorized road users, such as cyclists, pedestrians, and persons with disabilities or reduced mobility and orientation using a wheelchair, tricycle, or quadricycle."
       ],
-      "281": [
-        "© Copyright, Department of Motor Vehicles 2025"
+      "216": [
+        "A driving rule that helps you estimate how closely you should follow other vehicles."
       ],
-      "284": [
-        "The DMV has been modernizing interactions with its customers, making Californians’ digital experience easier, faster and more convenient."
+      "217": [
+        "Yield means to wait for, slow down, and be ready to stop (if necessary) to allow other vehicles or pedestrians who have right-of-way to proceed."
+      ],
+      "218": [
+        "Drivers of any age who are unable to continue driving safely due to a physical or mental condition may be eligible to exchange their driver’s license for a no-fee ID card."
       ]
     },
-    "verdict": "HARD_FAIL",
-    "grade": "F"
+    "verdict": "PASS",
+    "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 27,
-    "topics_covered": 18,
-    "coverage_pct": 66.7,
+    "topics_total": 25,
+    "topics_covered": 23,
+    "coverage_pct": 92.0,
     "uncovered_topics": [
-      "real id driver's license requirements and uses",
-      "instruction permit application requirements for minor drivers",
-      "vision test standards and corrective lenses restriction",
-      "use of vehicle safety technology during drive test",
-      "physician reporting requirements for driver medical conditions",
-      "hand-and-arm signals for turning and stopping vehicles",
-      "using emergency flashers when stopping for vehicle trouble",
-      "making a right turn against a red light",
-      "passenger identification and rights during law enforcement stops"
+      "high occupancy vehicle carpool lane requirements",
+      "wheel direction for parking headed downhill with curb"
     ],
-    "verdict": "SOFT_WARN",
-    "grade": "D"
+    "verdict": "PASS",
+    "grade": "A"
   },
   "coverage": {
     "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
     "category_distribution": {
-      "safe_driving_rules": 42,
-      "alcohol_drugs_health": 10,
-      "sharing_the_road": 27,
-      "driver_responsibility": 58,
-      "signs_and_signals": 42,
-      "defensive_driving": 15,
-      "penalties_and_points": 16,
-      "license_system": 33,
-      "vehicle_information": 19,
-      "driver_testing": 22
+      "license_system": 21,
+      "driver_testing": 12,
+      "driver_responsibility": 21,
+      "safe_driving_rules": 68,
+      "vehicle_information": 17,
+      "alcohol_drugs_health": 11,
+      "defensive_driving": 20,
+      "signs_and_signals": 48,
+      "sharing_the_road": 19,
+      "penalties_and_points": 15
     },
     "missing_categories": [],
     "over_concentrated_categories": [],
-    "density_qs_per_1000_chars": 2.07,
-    "sign_ratio_pct": 3.9,
+    "density_qs_per_1000_chars": 1.84,
+    "sign_ratio_pct": 13.5,
     "verdict": "PASS",
     "grade": "A"
   },
   "translation": {
     "es": {
       "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
-      "judged_count": 273,
-      "avg_fidelity": 10.0,
-      "pct_at_10": 100.0,
-      "pct_above_9": 100.0,
-      "pct_above_7": 100.0,
+      "judged_count": 218,
+      "avg_fidelity": 9.98,
+      "pct_at_10": 99.1,
+      "pct_above_9": 99.5,
+      "pct_above_7": 99.5,
       "pct_zero": 0.0,
-      "drift_flagged_ids": [],
+      "drift_flagged_ids": [
+        27
+      ],
       "verdict": "PASS",
       "grade": "A"
     },
     "ja": {
       "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
-      "judged_count": 66,
+      "judged_count": 218,
       "avg_fidelity": 10.0,
       "pct_at_10": 100.0,
       "pct_above_9": 100.0,
@@ -715,7 +791,7 @@
       "grade": "A"
     }
   },
-  "overall_verdict": "HARD_FAIL",
-  "overall_grade": "F",
+  "overall_verdict": "PASS",
+  "overall_grade": "A",
   "notes": ""
 }
