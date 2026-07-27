@@ -2,7 +2,7 @@
   "schema_version": 2,
   "code": "vt",
   "name": "Vermont",
-  "verified_at": "2026-05-26T23:21:15Z",
+  "verified_at": "2026-07-27T00:13:15Z",
   "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://dmv.vermont.gov/sites/dmv/files/documents/VN-007-Drivers_Manual.pdf",
@@ -25,14 +25,12 @@
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
     "sample_size": 0,
     "judged_count": 271,
-    "avg_fidelity": 9.98,
-    "pct_at_10": 99.6,
-    "pct_above_9": 99.6,
-    "pct_above_7": 99.6,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
     "pct_zero": 0.0,
-    "flagged_question_ids": [
-      73
-    ],
+    "flagged_question_ids": [],
     "evidence_by_question_id": {
       "1": [
         "Fact: There is no cost to the donor or their family for donation to take place."
@@ -95,9 +93,7 @@
         "An EDL requires proof of US Citizenship in addition to proof of Identity, SSN and Vermont Residency."
       ],
       "21": [
-        "W-2 form,",
-        "SSA-1099 form,",
-        "pay stub showing name and SSN (minimum of last 4 digits)"
+        "If your Social Security card is not available, one of the following forms may be used in its place: W-2 form,"
       ],
       "22": [
         "If you need to correct or update information at the Social Security Administration, do so before you visit DMV."
@@ -137,19 +133,16 @@
         "You must be at least 15 years old to take the test."
       ],
       "34": [
-        "licensed and unimpaired parent or guardian, or a licensed or certified unimpaired driver education instructor or a licensed and unimpaired individual 25 years of age or older riding in the front seat."
+        "licensed and unimpaired parent or guardian, or a licensed or certified unimpaired driver education instructor or a licensed and unimpaired individual 25 years of age or older"
       ],
       "35": [
         "If the applicant is not a Vermont resident, he/she may only obtain a Vermont Learner’s Permit for the purpose of participating in a driver education and training course."
       ],
       "36": [
-        "A Driver Privilege Card is a Vermont license or permit that is NOT Real ID compliant.",
         "Issuance of the DPC does not require proof of legal presence or US citizenship."
       ],
       "37": [
-        "The following are self-designated descriptors for a Vermont Driver’s License or Non-Driver Identification card.",
-        "Height Weight Eye color Gender",
-        "Applicants are not required under Vermont or federal law to present documentation that confirms the information they submit for these entries."
+        "The following are self-designated descriptors for a Vermont Driver’s License or Non-Driver Identification card. Height Weight Eye color Gender"
       ],
       "38": [
         "To apply for a Learner’s Permit, an individual under the age of 18 must have maintained a ‘clean’ driving record in the previous two (2) years."
@@ -176,14 +169,13 @@
         "unless you have held the Junior Driver’s License in the other state for a period of at least six months."
       ],
       "46": [
-        "unless you have held the Junior Driver’s License in the other state for a period of at least six months."
+        "They will also be subject to the Graduated License Law unless they have held the other state's license for a period of at least six months."
       ],
       "47": [
         "A student who passed the road test which was given by the high school driver education instructor will be issued a Driver Education Examination Certificate."
       ],
       "48": [
-        "cannot operate a vehicle in the course of your employment for one (1) year following the issuance of the Junior Driver’s License.",
-        "until they have had their Junior Driver’s License for one (1) year, or until they reach the age of eighteen (18), whichever comes first."
+        "cannot act as a pizza delivery person (driver) until they have had their Junior Driver’s License for one (1) year, or until they reach the age of eighteen (18), whichever comes first."
       ],
       "49": [
         "Passengers are permitted only if there is a licensed and unimpaired parent or guardian, or a licensed or certified unimpaired driver education instructor or a licensed and unimpaired individual 25 years of age or older riding in the front seat."
@@ -192,12 +184,10 @@
         "During the second three (3) months of operation under a Junior Driver’s License, the individual may begin transporting family members."
       ],
       "51": [
-        "A person shall not use any portable electronic device while operating a motor vehicle.",
-        "This includes reading, and the manual composing or sending of electronic communications"
+        "A person shall not use any portable electronic device while operating a motor vehicle."
       ],
       "52": [
-        "Be sure the emergency/parking brake is working properly.",
-        "Have a vehicle that is clean, in good mechanical condition, legal, and with a valid inspection sticker."
+        "Be sure the emergency/parking brake is working properly."
       ],
       "53": [
         "If your license has been expired for more than three (3) years... you will have to take the vision, written and road tests."
@@ -221,27 +211,25 @@
         "If the results of the screening determine that your vision does not meet the required standards of 20/40, you will be referred to an eye doctor"
       ],
       "60": [
-        "After holding a Junior Driver’s License for six (6) months, there is no restriction on the number of passengers they can transport... not allowed to transport more passengers than there are safety belts."
+        "After holding a Junior Driver’s License for six (6) months, there is no restriction on the number of passengers... the driver is not allowed to transport more passengers than there are safety belts."
       ],
       "61": [
-        "The knowledge test is online and has 20 questions.",
         "You must answer at least 16 questions correctly to pass the test."
       ],
       "62": [
         "If you fail a road test three times, a minimum waiting period of one month is required."
       ],
       "63": [
-        "No road test will be given in a vehicle displaying agriculture, antique or exhibit plates because these plates, by law, are restricted in their use."
+        "No road test will be given in a vehicle displaying agriculture, antique or exhibit plates"
       ],
       "64": [
-        "Safety belts and defrosters are required in 1964 and later models.",
-        "No road test will be given in a vehicle that does not have safety belts."
+        "Safety belts and defrosters are required in 1964 and later models."
       ],
       "65": [
-        "A licensed and unimpaired person at least twenty-five (25) years of age."
+        "a licensed and unimpaired person at least twenty-five (25) years of age."
       ],
       "66": [
-        "Prior to obtaining a Junior Driver’s License, an individual must complete an additional forty (40) hours of practice behind the wheel"
+        "individual must complete an additional forty (40) hours of practice behind the wheel"
       ],
       "67": [
         "‘Nighttime driving’ is defined as driving during the period of thirty (30) minutes after sunset, to thirty (30) minutes before sunrise."
@@ -250,21 +238,24 @@
         "During the first three (3) months of operation under a Junior Driver’s License, the individual is restricted to driving alone."
       ],
       "69": [
-        "Junior Operator texting (JRT) = 30 day recall (includes fines of at least $100 and at least two points on your driving record)"
+        "Junior Operator texting (JRT) = 30 day recall"
       ],
       "70": [
         "Junior Operator Points Accumulation Recall (JRP) = 90 day recall (for a single 3 pt. Speeding violation or a 6 pt. Total)"
       ],
       "71": [
         "If you fail the road test for any reason, you must wait at least one week before taking another test.",
-        "During the road test, you will not be asked to do anything which is against the law.",
-        "No animals are allowed in the vehicle during a road test."
+        "No animals are allowed in the vehicle during a road test.",
+        "During the road test, you will not be asked to do anything which is against the law."
       ],
       "72": [
         "More US teens are killed texting while driving than drinking."
       ],
+      "73": [
+        "More US teens are killed texting while driving than drinking."
+      ],
       "74": [
-        "Replacement of lost or corrected Learner’s Permit or License (name or address change) - $24.00"
+        "Replacement of lost or corrected Learner’s Permit or License (name or address change) $24.00"
       ],
       "75": [
         "A license photo is valid for 8 years."
@@ -306,13 +297,13 @@
         "Signal 3 to 5 seconds before turn and begin slowing down."
       ],
       "88": [
-        "Using the 4-second method, you should have enough space between your vehicle and the vehicle in front of you"
+        "Using the 4-second method, you should have enough space between your vehicle and the vehicle in front of you in case you must stop quickly."
       ],
       "89": [
         "The maximum speed for any vehicle on an Interstate in Vermont is 65 miles per hour or as posted."
       ],
       "90": [
-        "the driver on the left should yield the right-of-way to the driver on the right."
+        "When two vehicles approach a four-way stop intersection at approximately the same time, coming from different directions, the driver on the left should yield the right-of-way to the driver on the right."
       ],
       "91": [
         "If you are turning left, you must yield to all oncoming traffic. Any vehicle coming toward you, whether it is a motor vehicle or a bicyclist, has the right of way."
@@ -385,7 +376,7 @@
         "This series of white triangles, pointing toward approaching cars, shows drivers where they should stop"
       ],
       "114": [
-        "When driving from one road onto a multiple lane road where there is a choice of lanes, right turning drivers must turn into the right lane."
+        "right turning drivers must turn into the right lane."
       ],
       "115": [
         "Lane changes may take place after the turn has been completed. Avoid changing lanes while turning."
@@ -436,28 +427,24 @@
         "If you have already started to cross during the “walk” signal, you will have time to safely complete your crossing during the flashing “Don’t Walk”."
       ],
       "131": [
-        "If there are no sidewalks, you should walk as far as possible to the left side of the road facing traffic.",
-        "Along streets or highways without sidewalks never walk on the right side with back to traffic."
+        "If there are no sidewalks, you should walk as far as possible to the left side of the road facing traffic."
       ],
       "132": [
         "the school bus driver activates the alternately flashing yellow lights and begins slowing down. You should be preparing to stop."
       ],
       "133": [
-        "You do not have to stop on a divided highway if the school bus is traveling in the opposite direction.",
-        "A concrete barrier may be used to separate traffic from the bus, and you are not required to stop."
+        "You do not have to stop on a divided highway if the school bus is traveling in the opposite direction."
       ],
       "134": [
-        "if you are found guilty of passing a stopped school bus with its warning lights on, you will be subject to a substantial fine and five points on your driver’s license."
+        "passing a stopped school bus with its warning lights on, you will be subject to a substantial fine and five points on your driver’s license."
       ],
       "135": [
         "Leave at least four feet of passing space between the right side of your vehicle and a bicyclist."
       ],
       "136": [
-        "In some instances it is safest for a bicyclist to “take the lane” by riding toward the center of the lane.",
-        "reasons for the bicyclist to be riding in the travel lane, such as roadway hazards not visible to motorists"
+        "There may be reasons for the bicyclist to be riding in the travel lane, such as roadway hazards not visible to motorists"
       ],
       "137": [
-        "Be aware that two bicyclists may legally ride side by side.",
         "Bicyclists are allowed to ride two abreast so long as they do not impede the normal and reasonable flow of traffic."
       ],
       "138": [
@@ -474,14 +461,14 @@
       ],
       "142": [
         "When walking at dusk or at night, wear light colored or reflective clothing and carry a light.",
-        "Carry a flashlight and wear reflectorized clothing."
+        "Wear light-colored clothing if walking at dawn, at dusk, or after dark. Carry a flashlight and wear reflectorized clothing."
       ],
       "143": [
         "When you approach a bicyclist, keep on the lookout and slow down. Give them plenty of room when passing and be prepared to stop suddenly."
       ],
       "144": [
-        "the speed limit signs will have the words “when flashing” or “when children are present” to let you know when the speed limit is in effect.",
-        "After school and weekend activities often take place at schools."
+        "speed limit signs will have the words “when flashing” or “when children are present” to let you know when the speed limit is in effect.",
+        "Note that regular school hours are not the only time children are present at schools. After school and weekend activities often take place at schools."
       ],
       "145": [
         "Turn signals on a motorcycle usually are not self-canceling, thus some riders, (especially beginners) sometimes forget to turn them off after a turn or lane change."
@@ -549,8 +536,8 @@
         "Bridges, ramps, and overpasses are likely to freeze first."
       ],
       "166": [
-        "Keep more than four seconds of space between you and the motor vehicle in front of you.",
-        "Increase your following distance to more than 4 seconds."
+        "Increase your following distance to more than 4 seconds.",
+        "Keep more than four seconds of space between you and the motor vehicle in front of you."
       ],
       "167": [
         "Never combine different types of tires on the same vehicle."
@@ -591,7 +578,7 @@
         "The law requires headlights on vehicles to be turned on a half hour after sunset to a half hour before sunrise."
       ],
       "179": [
-        "you should look ahead towards the right edge of the highway until the bright lights have gone by and your vision has returned to normal."
+        "To avoid being temporarily blinded, you should look ahead towards the right edge of the highway until the bright lights have gone by"
       ],
       "180": [
         "The entering driver must yield to drivers already on the interstate."
@@ -622,8 +609,7 @@
         "Never use cruise control in driving conditions such as rain, fog, snow, ice, etc."
       ],
       "189": [
-        "Drugs, even prescription and over the counter drugs, can seriously affect your ability to drive safely.",
-        "Driving while drowsy can also affect your ability to drive and can be very dangerous."
+        "Drugs, even prescription and over the counter drugs, can seriously affect your ability to drive safely. Driving while drowsy can also affect your ability to drive"
       ],
       "190": [
         "Vermont law states that when a person's blood alcohol concentration (BAC) is .08 or above, he/she is “under the influence” or “impaired”."
@@ -640,15 +626,15 @@
         "Feelings (Senses) - Your feelings are suppressed; you don't feel speed so you won't realize that you could be speeding."
       ],
       "194": [
+        "Vermont has an \"Implied Consent\" Law - This means that when a person gets a license, that person is agreeing to say \"yes\" when asked to take a test",
         "If the driver refuses, they will lose their Driver's License for at least six (6) months."
       ],
       "195": [
         "Vermont has an administrative suspension process, which means that you can lose your license through a civil process before a criminal DUI conviction."
       ],
       "196": [
-        "Drifting out of the travel lane",
-        "Not remembering the last few miles you drove",
-        "Yawning repeatedly"
+        "Some signs of drowsy driving are:",
+        "Drifting out of the travel lane"
       ],
       "197": [
         "If you become drowsy while you’re on the road, find a safe place to pull over and stop.",
@@ -660,42 +646,40 @@
       "199": [
         "Pre-program your favorite radio stations for easy access",
         "Do your personal grooming at home, not in the vehicle.",
-        "Pets can be distracting and should be in a carrier, not in your lap or free to move."
+        "Pets can be distracting and should be in a carrier, not in your lap"
       ],
       "200": [
         "A person who violates this law shall be subject to a fine of not less than $100.00 and not more than $200.00 for a first violation"
       ],
       "201": [
-        "A person convicted of violating this section while operating within a properly designated work zone... shall have two points assessed against his or her driving record for a first conviction"
+        "shall have two points assessed against his or her driving record for a first conviction"
       ],
       "202": [
-        "The Vermont Emergency Nurses Association (ENCARE) sponsors the installation of signs at the site of alcohol related fatal crashes.",
         "When you see one of these signs, it means someone died at that location because of a drunk driver."
       ],
       "203": [
-        "Emotions affect safe driving. You may not be able to drive well if you are overly worried, excited, afraid, angry or depressed.",
         "Give yourself time to cool off and calm down. Taking a walk is a good way to do this."
       ],
       "204": [
-        "It is against the law for drivers to use a portable electronic device while operating a motor vehicle on a public highway in Vermont, including while the vehicle is stationary"
+        "against the law for drivers to use a portable electronic device... including while the vehicle is stationary"
       ],
       "205": [
         "Secure your phone in the vehicle so that it does not become a projectile in a crash."
       ],
       "206": [
-        "Before driving up the hill, put the vehicle in gear. Signal left. Check your mirrors and left blind spot to be sure that traffic is clear."
+        "Before driving up the hill, put the vehicle in gear. Signal left."
       ],
       "207": [
         "When driving downhill, you should not coast with the clutch to the floor or the gearshift in neutral."
       ],
       "208": [
-        "Drive just past the street and stop about 18 inches from the curb or edge of the road. Shift into reverse."
+        "Drive just past the street and stop about 18 inches from the curb or edge of the road."
       ],
       "209": [
         "Going around the block or using a parking lot is the safest option."
       ],
       "210": [
-        "Stop alongside the front vehicle, two to three feet away. Shift to reverse."
+        "Stop alongside the front vehicle, two to three feet away."
       ],
       "211": [
         "If possible, move the involved vehicles out of the traveled lanes and onto the shoulder."
@@ -762,7 +746,7 @@
       ],
       "232": [
         "A child in a rear-facing car seat must not ride in front of an active airbag.",
-        "NOTE: Never place a child’s safety seat in front of an air bag!"
+        "Never place a child’s safety seat in front of an air bag!"
       ],
       "233": [
         "When a driver receives a total of 10 points, a letter will be sent notifying the driver that their privilege to drive is to be suspended."
@@ -798,15 +782,14 @@
         "If you have insurance on your vehicle and a police officer stops you, and you cannot show the card to the officer, you have 15 days to do so."
       ],
       "244": [
-        "If you are driving without insurance and any of the following happen, your license will be taken away by the Commissioner of Motor Vehicles until you get insurance.",
-        "You are in a crash, even if it isn’t your fault,",
-        "You will have to prove to the Commissioner that you have insurance for a full 3 years."
+        "If you are driving without insurance and any of the following happen, your license will be taken away by the Commissioner of Motor Vehicles until you get insurance. You will have to prove to the Commissioner that you have insurance for a full 3 years.",
+        "You are in a crash, even if it isn’t your fault"
       ],
       "245": [
         "All motor vehicles have to be inspected within 15 days of registration, unless bearing a valid Vermont inspection sticker."
       ],
       "246": [
-        "Don't drive with the windows open unless your keep your speed under 50 mph. Driving with the windows open at highway speeds increases aerodynamic drag on the vehicle and lowers fuel economy."
+        "Don't drive with the windows open unless your keep your speed under 50 mph."
       ],
       "247": [
         "If you're parked in town, idling for more than 10 seconds uses more fuel than shutting off and restarting."
@@ -830,13 +813,13 @@
         "The Disabled Plates/Placard of a disabled person may be revoked if the disabled person allows individuals not disabled to abuse the privileges"
       ],
       "254": [
-        "Self-service gasoline stations... shall require an attendant to dispense gasoline at the self-service cost."
+        "shall require an attendant to dispense gasoline at the self-service cost."
       ],
       "255": [
-        "The vehicle controls must be altered so that it enables you to operate the vehicle, or must have a mechanical lifting device to allow entry and exit"
+        "The vehicle controls must be altered so that it enables you to operate the vehicle, or must have a mechanical lifting device"
       ],
       "256": [
-        "Allowing a vehicle to idle while unattended in public is in violation of Vermont's unattended motor vehicle law; if you leave your vehicle, you must shut it off."
+        "if you leave your vehicle, you must shut it off."
       ],
       "257": [
         "Decreasing your usage of the air conditioner when temperatures are above 80 degrees can help you save 10-15 percent of fuel."
@@ -872,7 +855,7 @@
         "Multiple teen passengers"
       ],
       "268": [
-        "The vehicle controls must be altered so that it enables you to operate the vehicle, or must have a mechanical lifting device to allow entry and exit from the vehicle."
+        "must have a mechanical lifting device to allow entry and exit from the vehicle."
       ],
       "269": [
         "This will help all teens stay safe and within the GDL law."
@@ -890,16 +873,12 @@
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 25,
-    "topics_covered": 22,
-    "coverage_pct": 88.0,
-    "uncovered_topics": [
-      "organ and tissue donation registration process",
-      "use of rental vehicles for the driving road test",
-      "graduated license recall for carrying passengers for hire"
-    ],
+    "topics_total": 28,
+    "topics_covered": 28,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
     "verdict": "PASS",
-    "grade": "B"
+    "grade": "A"
   },
   "coverage": {
     "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
@@ -926,13 +905,13 @@
     "es": {
       "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
       "judged_count": 271,
-      "avg_fidelity": 9.98,
+      "avg_fidelity": 9.97,
       "pct_at_10": 99.6,
       "pct_above_9": 99.6,
       "pct_above_7": 99.6,
       "pct_zero": 0.0,
       "drift_flagged_ids": [
-        130
+        88
       ],
       "verdict": "PASS",
       "grade": "A"

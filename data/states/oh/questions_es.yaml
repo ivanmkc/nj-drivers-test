@@ -14,6 +14,10 @@ metadata:
   - sharing_the_road
   - signs_and_signals
   - vehicle_information
+  translation:
+    translated_at: '2026-07-26T21:24:19Z'
+    translated_by: gemini-3-flash-preview
+    en_source_sha256: 6d8c2fb4a2ee741e7c6b746a5375afad1f4ce175b19288ef97f81a8552e85b55
 questions:
 - id: 1
   category: driver_testing
@@ -25,9 +29,8 @@ questions:
     C: 16 años
     D: 18 años
   answer: B
-  explanation: Según el manual, a la edad de 15 años y seis meses, usted cumple con
-    el requisito de edad mínima para completar el examen de la vista y el examen de
-    conocimientos.
+  explanation: Según el manual, a los 15 años y seis meses, usted cumple con el requisito
+    de edad mínima para completar el examen de la vista y el examen de conocimientos.
 - id: 2
   category: driver_testing
   question: ¿Cuántas preguntas tiene el examen de conocimientos para conductores de
@@ -42,7 +45,7 @@ questions:
     de opción múltiple.
 - id: 3
   category: driver_testing
-  question: ¿Cuál es el porcentaje mínimo de aprobación necesario para pasar el examen
+  question: ¿Cuál es el porcentaje mínimo de aciertos necesario para aprobar el examen
     de conocimientos?
   choices:
     A: 70%
@@ -50,8 +53,8 @@ questions:
     C: 80%
     D: 85%
   answer: B
-  explanation: El manual especifica que se necesita un porcentaje de aprobación del
-    75% para aprobar el examen de conocimientos de 40 preguntas de opción múltiple.
+  explanation: El manual especifica que se necesita una tasa de aprobación del 75%
+    para aprobar el examen de conocimientos de 40 preguntas de opción múltiple.
 - id: 4
   category: license_system
   question: Después de aprobar el examen de conocimientos, ¿cuánto tiempo tiene para
@@ -63,20 +66,20 @@ questions:
     D: Dentro de 90 días
   answer: C
   explanation: Si aprueba el examen de conocimientos, debe acudir a una Agencia de
-    Licencias del Registrador Adjunto (Deputy Registrar License Agency) para comprar
-    una TIPIC dentro de los 60 días posteriores a la aprobación del examen.
+    Registro de Licencias (Deputy Registrar License Agency) para comprar una TIPIC
+    dentro de los 60 días posteriores a la aprobación del examen.
 - id: 5
   category: driver_testing
   question: ¿Cuál es la política si reprueba el examen de conocimientos?
   choices:
-    A: Debe esperar una semana antes de volver a tomarlo.
-    B: Debe esperar un día antes de volver a tomarlo.
-    C: Debe pagar una multa de inmediato.
+    A: Debe esperar una semana antes de volver a realizar el examen.
+    B: Debe esperar un día antes de volver a realizar el examen.
+    C: Debe pagar una multa inmediatamente.
     D: Está limitado a tres intentos en total.
   answer: B
   explanation: Si reprueba el examen de conocimientos, debe esperar un día antes de
-    volver a tomarlo. No hay límite en la cantidad de veces que puede tomarlo, pero
-    solo puede tomarlo una vez al día.
+    volver a realizarlo. No hay límite en la cantidad de veces que puede tomarlo,
+    pero solo puede tomarlo una vez al día.
 - id: 6
   category: driver_testing
   question: ¿Cuántos intentos se permiten al realizar el examen de conocimientos en
@@ -95,38 +98,37 @@ questions:
     de educación vial?
   choices:
     A: Solo los solicitantes menores de 18 años
-    B: Todos los solicitantes independientemente de la edad
+    B: Todos los solicitantes independientemente de su edad
     C: Solicitantes menores de 21 años y residentes temporales de 21 años o más
-    D: Solo residentes temporales
+    D: Solo los residentes temporales
   answer: C
   explanation: Debe completar un curso de capacitación de educación vial si es menor
     de 21 años o si es un residente temporal de 21 años o más.
 - id: 8
   category: driver_testing
-  question: ¿Qué debe hacer si usa anteojos o lentes de contacto cuando vaya a su
-    examen de la vista?
+  question: ¿Qué debe hacer si usa anteojos o lentes de contacto al acudir a su examen
+    de la vista?
   choices:
     A: Realizar el examen sin ellos para probar su visión natural.
-    B: Traerlos con usted al examen.
+    B: Llevarlos consigo al examen.
     C: Proporcionar una nota del médico en lugar de realizar el examen.
-    D: Solo traerlos si es mayor de 65 años.
+    D: Solo llevarlos si es mayor de 65 años.
   answer: B
-  explanation: El manual indica que si usa anteojos o lentes de contacto, debe traerlos
-    con usted al examen de la vista.
+  explanation: El manual indica que si usa anteojos o lentes de contacto, debe llevarlos
+    consigo al examen de la vista.
 - id: 9
   category: driver_testing
   question: Si necesita realizar el examen de conocimientos en un idioma distinto
     a los 10 proporcionados por el BMV, ¿qué debe hacer?
   choices:
-    A: Debe tomar el examen en inglés.
+    A: Debe realizar el examen en inglés.
     B: Puede usar una herramienta de traducción en línea durante el examen.
     C: Puede utilizar su propio intérprete programando una cita en una Estación de
-      Examen de Conductores.
+      Exámenes de Conducir.
     D: Debe solicitar al BMV que traduzca el examen por usted.
   answer: C
-  explanation: Puede utilizar su propio intérprete para idiomas que no se ofrecen
-    programando una cita únicamente en una Estación de Examen de Conductores (Driver
-    Exam Station).
+  explanation: Puede utilizar su propio intérprete para los idiomas que no se ofrecen
+    programando una cita únicamente en una Estación de Exámenes de Conducir.
 - id: 10
   category: license_system
   question: ¿Cuál es el estatus legal del Manual del Conductor de Ohio?
@@ -136,9 +138,8 @@ questions:
     C: Contiene todas las leyes de vehículos motorizados aplicables en Ohio.
     D: Es una guía de estudio y no sustituye ni reemplaza al Código Revisado de Ohio.
   answer: D
-  explanation: El manual establece que es una guía de estudio y no sustituye ni reemplaza
-    al Código Revisado de Ohio (Ohio Revised Code) ni al Código Administrativo de
-    Ohio (Ohio Administrative Code).
+  explanation: El manual establece que es una guía de estudio y no es un sustituto
+    ni reemplaza al Código Revisado de Ohio ni al Código Administrativo de Ohio.
 - id: 11
   category: driver_testing
   question: ¿Cuál es el límite para realizar el examen de conocimientos en persona
@@ -156,12 +157,12 @@ questions:
   question: ¿Qué adaptación específica está disponible durante el examen de conducción
     exclusivamente para personas sordas o con dificultades auditivas?
   choices:
-    A: Un intérprete de lenguaje de señas en el vehículo
+    A: Un intérprete de lengua de señas en el vehículo
     B: Instrucciones visuales durante el examen de conducción
     C: Un examen escrito en lugar de un examen en carretera
     D: Exención del examen de maniobrabilidad
   answer: B
-  explanation: Las adaptaciones disponibles bajo petición incluyen instrucciones visuales
+  explanation: Las adaptaciones disponibles a pedido incluyen instrucciones visuales
     durante el examen de conducción, lo cual es exclusivo para personas sordas o con
     dificultades auditivas.
 - id: 13
@@ -179,8 +180,8 @@ questions:
     después de aprobar el examen de conocimientos.
 - id: 14
   category: driver_testing
-  question: ¿Cómo puede una persona solicitar adaptaciones por discapacidad para el
-    examen que no figuren ya en la lista del BMV?
+  question: ¿Cómo puede una persona solicitar adaptaciones por discapacidad para los
+    exámenes que no estén ya enumeradas por el BMV?
   choices:
     A: Llamar al departamento de policía local.
     B: Enviar un correo electrónico a los coordinadores de la ADA del Departamento
@@ -188,7 +189,7 @@ questions:
     C: Preguntar al instructor de manejo el día del examen.
     D: Enviar una carta por correo a la oficina del Gobernador.
   answer: B
-  explanation: Para solicitar adaptaciones que no figuren en la lista, debe enviar
+  explanation: Para solicitar adaptaciones que no figuran en la lista, debe enviar
     un correo electrónico a los coordinadores de la ADA del Departamento de Seguridad
     Pública de Ohio a HRRequestADA@dps.ohio.gov.
 - id: 15
@@ -206,17 +207,17 @@ questions:
     del Registrador Adjunto' como uno de los Servicios en Línea del BMV disponibles.
 - id: 16
   category: license_system
-  question: ¿Qué sucede con su tarjeta de identificación (ID) de Ohio si se le expide
+  question: ¿Qué sucede con su tarjeta de identificación (ID) de Ohio si se le emite
     un TIPIC?
   choices:
     A: Se convierte en su forma secundaria de identificación.
     B: Se cancela.
     C: Se fusiona con el TIPIC.
-    D: Permanece válida por 60 días.
+    D: Sigue siendo válida por 60 días.
   answer: B
   explanation: Si el solicitante tiene una tarjeta de identificación (ID) de Ohio,
-    esta se cancelará cuando se expida el TIPIC, ya que un residente de Ohio solo
-    puede tener una licencia de conducir o una tarjeta de identificación a la vez.
+    esta se cancelará cuando se emita el TIPIC, ya que un residente de Ohio solo puede
+    tener una licencia de conducir o una tarjeta de identificación a la vez.
 - id: 17
   category: safe_driving_rules
   question: Para un titular de TIPIC de 16 o 17 años, ¿quién debe estar en el asiento
@@ -257,7 +258,7 @@ questions:
     elegible, con al menos 10 horas de conducción nocturna.
 - id: 20
   category: driver_testing
-  question: ¿Cuánto tiempo debe un conductor menor de 18 años tener el TIPIC antes
+  question: ¿Cuánto tiempo debe tener un TIPIC un conductor menor de 18 años antes
     de poder obtener una licencia de conducir?
   choices:
     A: 14 días
@@ -289,8 +290,8 @@ questions:
     C: 300 pies
     D: 500 pies
   answer: D
-  explanation: La ley de Ohio exige que un vehículo tenga al menos una luz trasera
-    que emita luz roja, visible desde una distancia de 500 pies.
+  explanation: La ley de Ohio exige que un vehículo tenga una luz trasera que emita
+    luz roja, visible desde 500 pies.
 - id: 23
   category: vehicle_information
   question: ¿Cuál es el porcentaje aceptable de transmisión de luz para el parabrisas
@@ -302,7 +303,7 @@ questions:
     D: 100%
   answer: C
   explanation: La transmisión de luz aceptable para un parabrisas es del 70%, lo cual
-    es el estándar para la mayoría de los autos nuevos.
+    es estándar para la mayoría de los autos nuevos.
 - id: 24
   category: vehicle_information
   question: ¿Cuál es el mejor momento para revisar la presión de los neumáticos de
@@ -317,7 +318,8 @@ questions:
     a la misma temperatura que el aire circundante.
 - id: 25
   category: safe_driving_rules
-  question: ¿En qué fechas es legal el uso de neumáticos con clavos en Ohio?
+  question: ¿En qué fechas es legal el uso de neumáticos con clavos (studded tires)
+    en Ohio?
   choices:
     A: Del 1 de octubre al 31 de marzo
     B: Del 1 de noviembre al 15 de abril
@@ -328,9 +330,9 @@ questions:
     hasta el 15 de abril.
 - id: 26
   category: safe_driving_rules
-  question: Además de desde el atardecer hasta el amanecer y durante periodos de poca
-    visibilidad, ¿en qué otro momento exige la ley de Ohio que se enciendan los faros
-    delanteros?
+  question: Además del periodo entre el atardecer y el amanecer y durante condiciones
+    de poca visibilidad, ¿en qué otro momento exige la ley de Ohio que se enciendan
+    los faros delanteros?
   choices:
     A: Al conducir en una zona escolar
     B: Siempre que los limpiaparabrisas estén en uso debido a la precipitación
@@ -342,19 +344,20 @@ questions:
     deficiente y siempre que los limpiaparabrisas estén en uso debido a la precipitación.
 - id: 27
   category: safe_driving_rules
-  question: ¿Con cuánta antelación debe activar la luz de giro antes de cambiar de
-    dirección?
+  question: ¿Con cuánta antelación debe activar su luz direccional antes de cambiar
+    de dirección?
   choices:
     A: Al menos 50 pies
     B: Al menos 100 pies
     C: Al menos 200 pies
     D: Al menos 300 pies
   answer: B
-  explanation: Debe activar la luz de giro al menos 100 pies antes de cambiar de dirección.
+  explanation: Debe activar la luz direccional al menos 100 pies antes de cambiar
+    de dirección.
 - id: 28
   category: defensive_driving
-  question: Para permitir el despliegue adecuado de la bolsa de aire (airbag), ¿cuál
-    es la distancia mínima que debe haber entre su pecho y el volante?
+  question: Para permitir el espacio adecuado para el despliegue de la bolsa de aire
+    (airbag), ¿cuál es la distancia mínima que debe haber entre su pecho y el volante?
   choices:
     A: 5 pulgadas
     B: 8 pulgadas
@@ -362,7 +365,7 @@ questions:
     D: 12 pulgadas
   answer: C
   explanation: Debe haber al menos 10 pulgadas entre su pecho y el volante para permitir
-    el espacio adecuado para el despliegue de la bolsa de aire (airbag).
+    el espacio adecuado para el despliegue de la bolsa de aire.
 - id: 29
   category: vehicle_information
   question: ¿Cómo debe posicionarse al ajustar el espejo lateral derecho para reducir
@@ -371,12 +374,12 @@ questions:
     A: Apoye la cabeza contra la ventana cerrada del lado del conductor
     B: Inclínese hacia la derecha de modo que su cabeza quede directamente sobre la
       consola central
-    C: Look over your right shoulder while sitting upright
+    C: Mire por encima de su hombro derecho mientras está sentado en posición vertical
     D: Inclínese hacia adelante hasta que su pecho toque el volante
   answer: B
   explanation: Para ajustar el espejo lateral derecho, debe inclinarse hacia la derecha
     de modo que su cabeza quede directamente sobre la consola central, luego ajuste
-    el espejo de modo que apenas se vea el borde trasero del vehículo.
+    el espejo de manera que apenas se vea el borde trasero del vehículo.
 - id: 30
   category: safe_driving_rules
   question: ¿Cuál es la regla del cinturón de seguridad para los conductores menores
@@ -393,27 +396,27 @@ questions:
   answer: C
   explanation: Para los conductores menores de 18 años, el número de ocupantes del
     vehículo está limitado al número de cinturones de seguridad instalados originalmente
-    y todos los ocupantes deben usar cinturones de seguridad.
+    y todos los ocupantes deben usar el cinturón de seguridad.
 - id: 31
   category: vehicle_information
-  question: ¿Cómo debe ajustarse correctamente el cinturón de regazo?
+  question: ¿Cómo debe ajustarse correctamente un cinturón de regazo?
   choices:
-    A: Alto a través del estómago
-    B: Flojo a través de los muslos
-    C: Ajustado y bajo a través de las caderas
-    D: Debajo del brazo y a través del pecho
+    A: Alto sobre el estómago
+    B: Flojo sobre los muslos
+    C: Ajustado y bajo sobre las caderas
+    D: Debajo del brazo y sobre el pecho
   answer: C
-  explanation: Debe ajustar el cinturón de regazo de modo que quede ceñido y bajo
+  explanation: Debe ajustar el cinturón de regazo de modo que quede ajustado y bajo
     sobre sus caderas después de abrocharlo para evitar deslizarse fuera del cinturón
     en caso de un choque.
 - id: 32
   category: alcohol_drugs_health
-  question: Si su licencia de conducir indica una restricción de visión, ¿qué debe
+  question: Si su licencia de conducir indica una restricción de la visión, ¿qué debe
     evitar hacer por la noche?
   choices:
     A: Usar lentes correctivos oscuros o teñidos
     B: Conducir en carreteras rurales sin iluminación
-    C: Usar las luces altas de los faros
+    C: Usar las luces altas
     D: Usar cualquier tipo de lentes correctivos
   answer: A
   explanation: El manual aconseja a los conductores evitar el uso de lentes correctivos
@@ -449,16 +452,16 @@ questions:
     A: Pueden sostener el teléfono para enviar mensajes de texto si están detenidos
       en una señal de alto.
     B: Pueden ingresar números manualmente para marcar una llamada mientras conducen.
-    C: Pueden usar tecnología de manos libres siempre que no sostengan ni sujeten
-      el dispositivo.
+    C: Pueden usar tecnología de manos libres siempre que no sostengan ni apoyen el
+      dispositivo.
     D: Tienen estrictamente prohibido usar un teléfono celular de cualquier manera.
   answer: C
-  explanation: Los conductores mayores de 18 años pueden realizar y recibir llamadas
+  explanation: Los conductores mayores de 18 años pueden hacer y recibir llamadas
     telefónicas utilizando tecnología de manos libres, siempre que no sostengan ni
-    sujeten el dispositivo ni ingresen manualmente letras, números o símbolos.
+    apoyen el dispositivo ni ingresen manualmente letras, números o símbolos.
 - id: 36
   category: penalties_and_points
-  question: ¿Cuál es la sanción por una primera infracción por conducción distraída
+  question: ¿Cuál es la sanción por una primera infracción de conducción distraída
     en dos años para un conductor mayor de 18 años?
   choices:
     A: 2 puntos asignados a la licencia de conducir y una multa de hasta $150
@@ -466,9 +469,8 @@ questions:
     C: 4 puntos asignados a la licencia de conducir y una suspensión de 90 días
     D: Una suspensión de la licencia de conducir de 60 días y una multa de $150
   answer: A
-  explanation: Para los conductores de 18 años o más, una primera infracción en dos
-    años resulta en 2 puntos asignados a la licencia de conducir y una multa de hasta
-    $150.
+  explanation: Para conductores de 18 años o más, una primera infracción en dos años
+    resulta en 2 puntos asignados a la licencia de conducir y una multa de hasta $150.
 - id: 37
   category: penalties_and_points
   question: ¿Qué sucede con la multa si ocurre una infracción por conducción distraída
@@ -477,24 +479,24 @@ questions:
     A: La multa se exonera si se completa un curso de seguridad.
     B: La multa sigue siendo la misma pero los puntos se duplican.
     C: La multa se duplica.
-    D: La multa se reemplaza por una suspensión obligatoria de la licencia.
+    D: La multa se sustituye por una suspensión obligatoria de la licencia.
   answer: C
   explanation: Según el manual, las multas por conducción distraída se duplican si
     la infracción ocurre en una zona de obras.
 - id: 38
   category: safe_driving_rules
   question: ¿Puede un conductor menor de 18 años usar un dispositivo electrónico mientras
-    está detenido ante un semáforo en rojo?
+    está detenido en un semáforo en rojo?
   choices:
     A: Sí, siempre que el dispositivo sea de manos libres.
     B: Sí, pero solo para enviar mensajes de texto.
     C: No, es ilegal usar cualquier dispositivo electrónico incluso mientras se está
-      detenido ante un semáforo.
-    D: No, a menos que estén cambiando la lista de reproducción de música.
+      detenido en un semáforo.
+    D: No, a menos que esté cambiando la lista de reproducción de música.
   answer: C
   explanation: Para los conductores menores de 18 años, es ilegal usar cualquier dispositivo
     electrónico mientras conducen, incluso con manos libres, o mientras están detenidos
-    ante un semáforo o en un embotellamiento.
+    en un semáforo o en un embotellamiento.
 - id: 39
   category: alcohol_drugs_health
   question: ¿Cómo afectan el alcohol y las drogas el juicio de un conductor?
@@ -502,7 +504,7 @@ questions:
     A: Mejoran la capacidad de tomar decisiones rápidas.
     B: Reducen la capacidad de percibir el entorno y tomar decisiones rápidas.
     C: Agudizan la visión y la percepción de profundidad.
-    D: Disminuyen el tiempo de reacción, haciendo que el conductor responda más rápido.
+    D: Disminuyen el tiempo de reacción haciendo que el conductor responda más rápido.
   answer: B
   explanation: El alcohol y las drogas afectan el juicio al reducir su capacidad para
     percibir el entorno y tomar decisiones rápidas.
@@ -511,7 +513,7 @@ questions:
   question: Independientemente del límite de velocidad indicado, ¿qué prohíbe la ley
     de Ohio con respecto a la velocidad de su vehículo?
   choices:
-    A: Conducir a una velocidad mayor de la que le permite detenerse en la distancia
+    A: Conducir a una velocidad mayor a la que le permita detenerse en la distancia
       disponible.
     B: Conducir a más de 5 mph por debajo del límite de velocidad indicado en clima
       seco.
@@ -519,13 +521,13 @@ questions:
     D: Conducir más lento que el flujo del tráfico en una autopista rural.
   answer: A
   explanation: La ley de Ohio prohíbe que una persona conduzca a una velocidad mayor
-    de la que le permite al conductor detenerse en la distancia disponible, independientemente
+    a la que le permita al conductor detenerse en la distancia disponible, independientemente
     del límite de velocidad indicado.
 - id: 41
   category: vehicle_information
   question: ¿Cómo deben ajustarse los reposacabezas para evitar el latigazo cervical?
   choices:
-    A: De modo que hagan contacto con la nuca.
+    A: De modo que hagan contacto con la parte posterior de su cuello.
     B: De modo que estén al menos 3 pulgadas por debajo del nivel de sus oídos.
     C: De modo que hagan contacto con la parte posterior de su cabeza y no por debajo
       del nivel de sus oídos.
@@ -539,10 +541,10 @@ questions:
   question: ¿Quién tiene el derecho de paso en una intersección de cuatro vías si
     dos conductores llegan al mismo tiempo?
   choices:
-    A: El conductor de la izquierda
-    B: El conductor de la derecha
+    A: El conductor a la izquierda
+    B: El conductor a la derecha
     C: El conductor que viaja más rápido
-    D: El conductor que gira a la izquierda
+    D: El conductor que está girando a la izquierda
   answer: B
   explanation: Según el manual, debe ceder el derecho de paso al conductor a su derecha
     en una intersección de cuatro vías si ambos llegan a la intersección al mismo
@@ -557,15 +559,15 @@ questions:
     C: Reducir la velocidad y proceder con precaución
     D: Tratar la intersección como una parada de cuatro vías
   answer: C
-  explanation: Una luz de tráfico amarilla intermitente significa que debe reducir
-    la velocidad y proceder con precaución, y estar preparado para detenerse ante
-    cualquier flujo de tráfico que pueda estar entrando en la intersección.
+  explanation: Una luz amarilla intermitente significa que debe reducir la velocidad
+    y proceder con precaución, y estar preparado para detenerse ante cualquier flujo
+    de tráfico que pueda estar entrando en la intersección.
 - id: 44
   category: signs_and_signals
   question: ¿Cómo debe tratar un conductor un semáforo que no funciona?
   choices:
-    A: Igual que una señal de ceda el paso
-    B: Igual que una señal de alto (stop)
+    A: Igual que una señal de ceder el paso
+    B: Igual que una señal de alto
     C: Igual que una luz amarilla intermitente
     D: Proceder sin detenerse si no hay tráfico transversal visible
   answer: B
@@ -581,8 +583,8 @@ questions:
     C: Debe ceder el derecho de paso
     D: Hay una zona de construcción más adelante
   answer: A
-  explanation: Las señales de prohibición indican al espectador que una acción está
-    prohibida. El círculo rojo con una barra diagonal representa la palabra 'NO',
+  explanation: Las señales prohibitivas instruyen al observador que una acción está
+    prohibida. El círculo rojo con una barra diagonal representa la palabra "NO",
     lo que significa que la acción ilustrada está prohibida.
 - id: 46
   category: signs_and_signals
@@ -606,21 +608,21 @@ questions:
     D: Puntos añadidos a su licencia pero sin multa
   answer: C
   explanation: Las consecuencias por viajar más rápido que el límite de velocidad
-    establecido en una zona de obras pueden incluir multas duplicadas y tiempo en
-    la cárcel.
+    indicado en una zona de obras pueden incluir multas duplicadas y tiempo en la
+    cárcel.
 - id: 48
   category: safe_driving_rules
   question: ¿Qué indica una línea doble amarilla continua en la calzada?
   choices:
     A: Puede adelantar si el carril opuesto está despejado
     B: No puede conducir a la izquierda de la línea central a menos que gire a la
-      izquierda o adelante a un vehículo que se mueve lentamente
+      izquierda o adelante a un vehículo que circula despacio
     C: El tráfico en ambos lados viaja en la misma dirección
     D: El carril está terminando y debe incorporarse a la derecha
   answer: B
   explanation: Una línea doble amarilla continua significa que no debe conducir a
     la izquierda de la línea central, a menos que deba cruzar las líneas para girar
-    a la izquierda o adelantar a un vehículo que se mueve lentamente.
+    a la izquierda o adelantar a un vehículo que circula despacio.
 - id: 49
   category: safe_driving_rules
   question: ¿Qué tipo de marca en el pavimento separa el tráfico que viaja en la misma
@@ -632,7 +634,7 @@ questions:
     D: Líneas amarillas dobles
   answer: A
   explanation: Las líneas blancas separan el tráfico que viaja en la misma dirección.
-    Pueden ser líneas continuas o discontinuas (punteadas).
+    Pueden ser líneas continuas o discontinuas.
 - id: 50
   category: safe_driving_rules
   question: ¿Cuál de las siguientes afirmaciones es verdadera con respecto a un carril
@@ -644,19 +646,19 @@ questions:
     D: No es un carril utilizado para circular o adelantar
   answer: D
   explanation: 'El carril central marcado es solo para giros a la izquierda. El manual
-    establece explícitamente: ''Este no es un carril utilizado para circular o adelantar''.'
+    establece explícitamente: "Este no es un carril utilizado para circular o adelantar".'
 - id: 51
   category: defensive_driving
-  question: ¿Cuál es la distancia de seguimiento recomendada con respecto al vehículo
-    que circula delante de usted?
+  question: ¿Cuál es la distancia de seguimiento recomendada detrás del vehículo que
+    va delante de usted?
   choices:
-    A: 1 a 2 segundos
-    B: 3 a 4 segundos
-    C: 5 a 6 segundos
-    D: La longitud de un vehículo por cada 10 mph
+    A: 1-2 segundos
+    B: 3-4 segundos
+    C: 5-6 segundos
+    D: El largo de un vehículo por cada 10 mph
   answer: B
   explanation: El manual aconseja a los conductores permitir una distancia de seguimiento
-    de 3 a 4 segundos con respecto al vehículo que circula delante.
+    de 3 a 4 segundos con respecto al vehículo que va delante.
 - id: 52
   category: vehicle_information
   question: ¿Cuál de los siguientes NO figura como un factor que determina la distancia
@@ -672,31 +674,31 @@ questions:
     no se menciona en esta sección.
 - id: 53
   category: safe_driving_rules
-  question: ¿Dónde debe detenerse un conductor al salir de un callejón, entrada para
-    autos o camino privado en un distrito comercial o residencial?
+  question: ¿Dónde debe detenerse un conductor al salir de un callejón, entrada privada
+    o camino privado en un distrito comercial o residencial?
   choices:
     A: En el borde de la calzada
-    B: En la señal de alto más cercana
-    C: En la acera, o en un punto antes de entrar en la calzada si no hay acera
+    B: En la señal de alto (STOP) más cercana
+    C: En una acera, o en un punto previo a entrar en la calzada si no hay acera
     D: En medio de la intersección para comprobar el tráfico
   answer: C
-  explanation: Un conductor debe detenerse en la acera, o si no hay acera, en un punto
-    antes de entrar en la calzada, al salir de un callejón, entrada para autos o camino
+  explanation: Un conductor debe detenerse en la acera o, si no hay acera, en un punto
+    previo a entrar en la calzada, al salir de un callejón, entrada privada o camino
     privado en un distrito comercial o residencial.
 - id: 54
   category: sharing_the_road
-  question: ¿Cuándo debe ceder el paso a un vehículo de seguridad pública que muestre
-    luces intermitentes y emita una señal de advertencia?
+  question: ¿Cuándo debe ceder el paso a un vehículo de seguridad pública que muestra
+    luces intermitentes y emite una señal de advertencia?
   choices:
     A: Solo cuando el vehículo esté directamente detrás de usted
-    B: Siempre, a menos que el vehículo circule en sentido contrario por una autopista
+    B: Siempre, a menos que el vehículo circule en dirección opuesta en una carretera
       dividida
     C: Solo si se encuentra actualmente dentro de una intersección
-    D: Solo cuando se trate de una patrulla de policía, pero no de un camión de bomberos
+    D: Solo cuando se trate de un coche de policía, pero no de un camión de bomberos
   answer: B
   explanation: Debe detenerse ante la aproximación de un vehículo de seguridad pública
     que muestre luces intermitentes y emita una señal de advertencia, a menos que
-    el vehículo circule en sentido contrario por una autopista dividida.
+    el vehículo circule en dirección opuesta en una carretera dividida.
 - id: 55
   category: signs_and_signals
   question: ¿Qué tipo de señales indican puntos de interés, servicios a lo largo de
@@ -705,7 +707,7 @@ questions:
     A: Señales de advertencia
     B: Señales reglamentarias
     C: Señales de guía
-    D: Señales prohibitivas
+    D: Señales de prohibición
   answer: C
   explanation: Las señales de guía proporcionan puntos de interés y servicios a lo
     largo de la carretera, información sobre carreteras que se cruzan y ayudan a dirigir
@@ -722,7 +724,7 @@ questions:
   answer: C
   explanation: Un conductor debe detenerse antes de entrar en una intersección si
     no hay espacio suficiente al otro lado para alojar el vehículo. Esto se aplica
-    independientemente de si un semáforo da el derecho a avanzar.
+    independientemente de si una señal de tráfico da el derecho a avanzar o no.
 - id: 57
   category: safe_driving_rules
   question: Para mantener el control del vehículo y evitar lesiones por la bolsa de
@@ -735,20 +737,20 @@ questions:
   answer: C
   explanation: El manual indica colocar ambas manos en la parte exterior del volante
     en lados opuestos, en las posiciones de las 4 y las 8 en punto, para mantener
-    el control y evitar las bolsas de aire si se despliegan.
+    el control y evitar las bolsas de aire (airbags) si se despliegan.
 - id: 58
   category: safe_driving_rules
-  question: Al retroceder con su vehículo, ¿dónde debe colocar la mano izquierda en
-    el volante?
+  question: Al dar marcha atrás con su vehículo, ¿dónde debe colocar la mano izquierda
+    en el volante?
   choices:
     A: En la posición de las 12 en punto
     B: En la posición de las 6 en punto
     C: En la posición de las 9 en punto
     D: En la posición de las 4 en punto
   answer: A
-  explanation: Para retroceder de forma segura, el manual indica sujetar el volante
-    en la posición de las 12 en punto con la mano izquierda y colocar el brazo derecho
-    en el respaldo del asiento del pasajero.
+  explanation: Para dar marcha atrás de forma segura, el manual indica sujetar el
+    volante en la posición de las 12 en punto con la mano izquierda y colocar el brazo
+    derecho en el respaldo del asiento del pasajero.
 - id: 59
   category: safe_driving_rules
   question: ¿Con cuánta antelación debe poner la señal de giro antes de realizar un
@@ -769,12 +771,12 @@ questions:
     A: Esperar detrás de la línea de parada hasta que la luz se ponga amarilla
     B: Girar inmediatamente y obligar al tráfico que viene en sentido contrario a
       ceder el paso
-    C: Posicionar la parte delantera del vehículo ligeramente pasada la línea de parada
+    C: Colocar la parte delantera del vehículo ligeramente pasada la línea de parada
       y ceder el paso al tráfico que viene en sentido contrario
     D: Girar a la derecha en su lugar y hacer un giro en U más tarde
   answer: C
   explanation: Si el gran volumen de tráfico no permite la oportunidad de girar a
-    la izquierda con luz verde, posicione la parte delantera del vehículo ligeramente
+    la izquierda con luz verde, coloque la parte delantera del vehículo ligeramente
     pasada la línea de parada, ceda el paso a los peatones y al tráfico que viene
     en sentido contrario, y gire cuando sea seguro.
 - id: 61
@@ -788,7 +790,7 @@ questions:
     C: Desde una calle de doble sentido hacia una calle de sentido único
     D: Nunca se permite girar a la izquierda con el semáforo en rojo
   answer: B
-  explanation: Puede girar a la izquierda con un semáforo en rojo solo desde el carril
+  explanation: Puede girar a la izquierda con el semáforo en rojo solo desde el carril
     del extremo izquierdo de una calle de sentido único hacia otra calle de sentido
     único, a menos que una señal lo prohíba.
 - id: 62
@@ -803,7 +805,7 @@ questions:
   answer: C
   explanation: Cuando el tráfico llena la calzada al otro lado de la intersección,
     deténgase antes de la intersección y espere hasta que el tráfico avance. No entre
-    en la intersección y se detenga.
+    en la intersección para detenerse allí.
 - id: 63
   category: safe_driving_rules
   question: ¿En qué dirección deben circular los vehículos al entrar en una rotonda
@@ -818,7 +820,7 @@ questions:
     alrededor de una isla central elevada en una rotonda o glorieta.
 - id: 64
   category: safe_driving_rules
-  question: Al navegar por una rotonda, ¿qué salida debe usar si tiene la intención
+  question: Al circular por una rotonda, ¿qué salida debe utilizar si tiene la intención
     de girar a la izquierda?
   choices:
     A: La 1.ª salida
@@ -826,29 +828,29 @@ questions:
     C: La 3.ª salida
     D: La 4.ª salida
   answer: C
-  explanation: Al usar una rotonda, debe usar la 3.ª salida para girar a la izquierda.
+  explanation: Al usar una rotonda, debe utilizar la 3.ª salida para girar a la izquierda.
 - id: 65
   category: safe_driving_rules
-  question: Al conducir en una carretera con cuatro o más carriles, ¿en qué carril
-    debería conducir generalmente?
+  question: Al conducir en una carretera de cuatro o más carriles, ¿en qué carril
+    debe conducir generalmente?
   choices:
     A: El carril izquierdo
     B: El carril derecho
     C: El carril justo a la derecha del centro
     D: El carril divisor central
   answer: B
-  explanation: Al conducir en una carretera con cuatro o más carriles, conduzca en
+  explanation: Al conducir en una carretera de cuatro o más carriles, conduzca en
     el carril derecho. Use el carril justo a la derecha del centro para rebasar y
     hacer giros a la izquierda.
 - id: 66
   category: defensive_driving
   question: ¿Cómo debe revisar sus puntos ciegos antes de cambiar de carril?
   choices:
-    A: Mirando exclusivamente por su espejo retrovisor
+    A: Mirando exclusivamente por el espejo retrovisor
     B: Girando la cabeza y mirando por encima del hombro en la dirección en la que
       planea moverse
-    C: Revisando sus espejos laterales dos veces
-    D: Activando su señal de giro y esperando a que alguien toque la bocina
+    C: Revisando los espejos laterales dos veces
+    D: Activando la luz de giro y esperando a que alguien toque la bocina
   answer: B
   explanation: Revise sus puntos ciegos girando la cabeza y mirando por encima del
     hombro en la dirección en la que planea moverse, ya que estas áreas no se pueden
@@ -860,23 +862,23 @@ questions:
   choices:
     A: Para detenerse por completo antes de incorporarse
     B: Para rebasar a los vehículos más lentos que ya están en la autopista
-    C: Para alcanzar la velocidad de los otros vehículos para incorporarse al flujo
-      del tráfico
-    D: Para estacionarse en caso de una emergencia
+    C: Para alcanzar la velocidad de los otros vehículos e incorporarse al flujo del
+      tráfico
+    D: Para estacionarse en caso de emergencia
   answer: C
   explanation: Al entrar en una autopista, use el carril de aceleración para alcanzar
-    la velocidad de los otros vehículos para incorporarse al flujo del tráfico.
+    la velocidad de los otros vehículos e incorporarse al flujo del tráfico.
 - id: 68
   category: safe_driving_rules
-  question: ¿Qué debe hacer si se pasa de la salida prevista en una carretera?
+  question: ¿Qué debe hacer si se pasa de la salida deseada en una carretera?
   choices:
     A: Detenerse y retroceder por el acotamiento
-    B: Usar la abertura a través de la mediana para dar la vuelta
+    B: Usar la abertura en la mediana para dar la vuelta
     C: Tomar la siguiente salida
     D: Hacer un giro en U a través de los carriles principales de circulación
   answer: C
-  explanation: Si se pasa de su salida, tome la siguiente. No use la abertura a través
-    de la mediana, que es para uso exclusivo de vehículos de emergencia y de seguridad
+  explanation: Si se pasa de su salida, tome la siguiente. No use la abertura en la
+    mediana, ya que es solo para el uso de vehículos de emergencia y de seguridad
     pública.
 - id: 69
   category: safe_driving_rules
@@ -898,65 +900,62 @@ questions:
   choices:
     A: Acelerar para evitar que lo rebasen
     B: Moverse al carril izquierdo para bloquearlo
-    C: Mantenerse en su carril y mantener una velocidad constante
-    D: Reducir la velocidad drásticamente y detenerse en el acotamiento
+    C: Permanecer en su carril y mantener una velocidad constante
+    D: Reducir la velocidad drásticamente y orillarse en el acotamiento
   answer: C
   explanation: Cuando lo estén rebasando, debe permanecer en su carril y mantener
     una velocidad constante para permitir que el conductor lo pase.
 - id: 71
   category: safe_driving_rules
-  question: ¿En cuál de las siguientes situaciones está prohibido adelantar a otro
-    vehículo?
+  question: ¿En cuál de las siguientes situaciones está prohibido rebasar a otro vehículo?
   choices:
     A: En una calzada de varios carriles
     B: Antes de un cruce de ferrocarril o un puente
     C: Cuando el vehículo de adelante circula por debajo del límite de velocidad
     D: En una carretera dividida en tres o más carriles marcados
   answer: B
-  explanation: No debe intentar adelantar cuando se aproxima un vehículo en sentido
-    contrario, cuando su visión está bloqueada, en intersecciones o antes de un cruce
-    de ferrocarril o un puente.
+  explanation: No debe intentar rebasar cuando se aproxima un vehículo en sentido
+    contrario, cuando su visibilidad está bloqueada, en intersecciones o antes de
+    un cruce de ferrocarril o un puente.
 - id: 72
   category: safe_driving_rules
   question: ¿Cuándo se permite cruzar una línea amarilla doble continua?
   choices:
-    A: Para adelantar a un vehículo que circula a 10 mph por debajo del límite de
-      velocidad.
-    B: Para incorporarse al tráfico desde el arcén (hombro).
-    C: Para girar a la izquierda hacia una entrada privada o para adelantar a un vehículo
+    A: Para rebasar a un vehículo que circula a 10 mph por debajo del límite de velocidad.
+    B: Para incorporarse al tráfico desde el acotamiento (hombro).
+    C: Para girar a la izquierda hacia una entrada privada o para rebasar a un vehículo
       de movimiento lento.
     D: Cuando circula por una calzada de varios carriles.
   answer: C
   explanation: Cruzar la línea central con una línea amarilla doble continua se permite
-    únicamente para girar a la izquierda hacia entradas privadas o para adelantar
-    a un vehículo de movimiento lento (por ejemplo, una bicicleta o un vehículo que
+    únicamente para girar a la izquierda hacia entradas privadas o para rebasar a
+    un vehículo de movimiento lento (por ejemplo, una bicicleta o un vehículo que
     exhiba una señal de vehículo de movimiento lento) cuando sea seguro hacerlo.
 - id: 73
   category: safe_driving_rules
   question: ¿Cuál es el uso adecuado de un carril central de giro a la izquierda de
     dos sentidos?
   choices:
-    A: Adelantar a vehículos más lentos.
+    A: Rebasar vehículos más lentos.
     B: Incorporarse al tráfico.
     C: Circular durante la hora pico.
     D: Vehículos que giran a la izquierda en cualquiera de las dos direcciones.
   answer: D
   explanation: Un carril de giro a la izquierda de dos sentidos está reservado únicamente
     para vehículos que giran a la izquierda en cualquiera de las dos direcciones y
-    no se utiliza para adelantar, incorporarse al tráfico ni para circular de forma
-    continua.
+    no se utiliza para rebasar, incorporarse al tráfico ni para circular.
 - id: 74
   category: safe_driving_rules
   question: Cuando un tren se aproxima a un cruce de ferrocarril, ¿dónde debe detener
     su vehículo?
   choices:
-    A: A no menos de 10 pies y a no más de 30 pies del cruce.
-    B: A no menos de 15 pies y a no más de 50 pies del cruce.
+    A: A no menos de 10 pies y no más de 30 pies del cruce.
+    B: A no menos de 15 pies y no más de 50 pies del cruce.
     C: Exactamente a 20 pies del cruce.
     D: Al menos a 50 pies de distancia del cruce.
   answer: B
   explanation: El manual exige que los conductores se detengan a no menos de 15 pies
-    y a no más de 50 pies del cruce cuando se aproxima un tren.
+    y no más de 50 pies del cruce cuando se aproxima un tren.
 - id: 75
   category: sharing_the_road
   question: ¿Cuál de los siguientes vehículos está obligado por ley a detenerse en
@@ -965,7 +964,7 @@ questions:
     A: Un vehículo de pasajeros que remolca un bote.
     B: Una motocicleta.
     C: Un vehículo que transporte explosivos o líquidos inflamables.
-    D: Una furgoneta de reparto.
+    D: Una camioneta de reparto.
   answer: C
   explanation: Los operadores de vehículos motorizados que transportan pasajeros por
     contrato, los autobuses escolares o los vehículos que transportan explosivos o
@@ -999,33 +998,33 @@ questions:
     detenerse detrás del mismo.
 - id: 78
   category: safe_driving_rules
-  question: Al estacionar en paralelo en una calle, ¿a qué distancia debe estar su
-    vehículo del bordillo (acera)?
+  question: Al estacionarse en paralelo en una calle, ¿qué tan cerca del bordillo
+    (curb) debe estar su vehículo?
   choices:
-    A: A no más de 6 pulgadas.
-    B: A no más de 12 pulgadas.
-    C: A no más de 18 pulgadas.
-    D: A no más de 24 pulgadas.
+    A: No más de 6 pulgadas.
+    B: No más de 12 pulgadas.
+    C: No más de 18 pulgadas.
+    D: No más de 24 pulgadas.
   answer: B
   explanation: Los vehículos deben estacionarse orientados en la dirección del tráfico
     en ese lado de la calle, en paralelo y a no más de 12 pulgadas del bordillo derecho
     (o del bordillo izquierdo en calles de un solo sentido).
 - id: 79
   category: safe_driving_rules
-  question: ¿A cuántos pies de un hidrante de incendios es ilegal detener, estacionar
-    o dejar un vehículo?
+  question: ¿Es ilegal detener, estacionar o dejar un vehículo a menos de cuántos
+    pies de un hidrante de incendios?
   choices:
     A: 10 pies.
     B: 15 pies.
     C: 20 pies.
     D: 30 pies.
   answer: A
-  explanation: Ninguna persona podrá detener, estacionar o dejar un vehículo a menos
+  explanation: Ninguna persona deberá detener, estacionar o dejar un vehículo a menos
     de 10 pies de un hidrante de incendios.
 - id: 80
   category: safe_driving_rules
-  question: ¿A cuántos pies de una intersección o paso de peatones está prohibido
-    estacionar?
+  question: ¿Se le prohíbe estacionar a menos de cuántos pies de una intersección
+    o paso de peatones?
   choices:
     A: 10 pies.
     B: 15 pies.
@@ -1042,25 +1041,25 @@ questions:
     A: Girarlas en dirección contraria al bordillo (acera).
     B: Mantenerlas perfectamente rectas.
     C: Girarlas hacia el lado del bordillo (acera) de la carretera.
-    D: Girarlas hacia la izquierda sin importar la inclinación.
+    D: Girarlas hacia la izquierda independientemente de la inclinación.
   answer: C
   explanation: En caso de que deba estacionar su vehículo en una colina o superficie
-    inclinada, gire las ruedas delanteras hacia el lado del bordillo (acera) de la
-    carretera para estabilizar el vehículo.
+    inclinada, gire las ruedas delanteras hacia el lado del bordillo de la carretera
+    para estabilizar el vehículo.
 - id: 82
   category: driver_responsibility
-  question: ¿En cuál de las siguientes situaciones se le requiere mostrar un comprobante
+  question: ¿En cuál de las siguientes situaciones se le exige mostrar una prueba
     de responsabilidad financiera (seguro)?
   choices:
     A: Al renovar el registro de su vehículo en línea.
     B: Cuando esté involucrado en un accidente de tráfico que resulte en más de $400
       en daños a la propiedad.
     C: Al comprar un vehículo nuevo en un concesionario.
-    D: Al detenerse en una cabina de peaje.
+    D: Cuando se detenga en una cabina de peaje.
   answer: B
-  explanation: Se debe mostrar el comprobante de responsabilidad financiera cuando
-    el conductor o el propietario del vehículo estén involucrados en un accidente
-    de tráfico que resulte en más de $400 en daños a la propiedad.
+  explanation: Se debe mostrar la prueba de responsabilidad financiera cuando el conductor
+    o el propietario del vehículo estén involucrados en un accidente de tráfico que
+    resulte en más de $400 en daños a la propiedad.
 - id: 83
   category: driver_responsibility
   question: ¿Cuál es el requisito mínimo de seguro de responsabilidad civil por daños
@@ -1088,18 +1087,18 @@ questions:
 - id: 85
   category: penalties_and_points
   question: ¿Qué sucede bajo la ley de Suspensión Administrativa de la Licencia (ALS)
-    si una persona consiente a una prueba química y los resultados muestran un BAC
-    de .08 o superior?
+    si una persona acepta someterse a una prueba química y los resultados muestran
+    un BAC de .08 o superior?
   choices:
     A: El conductor recibe una advertencia y se le permite conducir a casa.
     B: El oficial que realiza el arresto confisca la licencia de conducir y comienza
-      de inmediato una suspensión de hasta cinco años.
+      inmediatamente una suspensión de hasta cinco años.
     C: El vehículo del conductor es confiscado permanentemente.
     D: El conductor debe pagar una multa de $400 en el acto.
   answer: B
   explanation: Si los resultados de la prueba muestran un BAC de .08 o superior, el
-    oficial que realiza el arresto confisca la licencia de conducir y comienza de
-    inmediato una suspensión de hasta cinco años.
+    oficial que realiza el arresto confisca la licencia de conducir y comienza inmediatamente
+    una suspensión de hasta cinco años.
 - id: 86
   category: alcohol_drugs_health
   question: ¿Cuál es la sanción por negarse por primera vez a someterse a una prueba
@@ -1117,17 +1116,17 @@ questions:
   question: ¿Qué sucede si un conductor de Ohio acumula 12 o más puntos de penalización
     en un período de dos años?
   choices:
-    A: Solo recibe una carta de advertencia.
+    A: Reciben únicamente una carta de advertencia.
     B: Su vehículo es confiscado permanentemente.
     C: El BMV impone una suspensión de 12 puntos a su licencia de conducir.
-    D: Debe cumplir una sentencia de cárcel obligatoria de 30 días.
+    D: Deben cumplir una sentencia de cárcel obligatoria de 30 días.
   answer: C
   explanation: Si un conductor acumula 12 o más puntos en un período de dos años,
     el BMV impondrá una suspensión de 12 puntos a la licencia de conducir.
 - id: 88
   category: safe_driving_rules
-  question: Según la ley de Ohio, ¿cuándo se requiere tener los faros encendidos durante
-    el día?
+  question: Según la ley de Ohio, ¿cuándo se requiere tener encendidos los faros delanteros
+    durante el día?
   choices:
     A: Solo cuando se conduce por la interestatal.
     B: En cualquier momento en que los limpiaparabrisas estén en uso debido a la precipitación.
@@ -1145,16 +1144,16 @@ questions:
     A: Una infracción de movimiento estándar.
     B: Desprecio deliberado o injustificado por la seguridad de las personas o la
       propiedad.
-    C: No detenerse y revelar la identidad después de un accidente.
-    D: Una infracción de velocidad menor.
+    C: No detenerse y revelar la identidad después de un choque.
+    D: Una infracción menor por exceso de velocidad.
   answer: C
-  explanation: No detenerse y revelar la identidad después de un accidente se penaliza
+  explanation: No detenerse y revelar la identidad después de un choque se penaliza
     con 6 puntos, mientras que el desprecio deliberado se penaliza con 4 puntos y
-    las infracciones de movimiento/velocidad generalmente se penalizan con 2 puntos.
+    las infracciones de movimiento o velocidad generalmente con 2 puntos.
 - id: 90
   category: safe_driving_rules
   question: ¿Cuál es el requisito de sujeción infantil para un bebé o niño menor de
-    4 años y que pese menos de 40 libras?
+    4 años y que pesa menos de 40 libras?
   choices:
     A: Deben estar asegurados con un cinturón de seguridad estándar en el asiento
       delantero.
@@ -1167,7 +1166,7 @@ questions:
     niños.
 - id: 91
   category: penalties_and_points
-  question: ¿Para un conductor menor de 18 años, cuál es la sanción por una condena
+  question: Para un conductor menor de 18 años, ¿cuál es la sanción por una condena
     de dos infracciones de tránsito en movimiento?
   choices:
     A: Una carta de advertencia del BMV.
@@ -1176,36 +1175,36 @@ questions:
     D: Una suspensión automática de la licencia por un año.
   answer: B
   explanation: El BMV impondrá automáticamente una suspensión de la licencia por tres
-    meses a los conductores menores de 18 años que sean condenados por, o se declaren
-    culpables de, dos infracciones de tránsito en movimiento.
+    meses a los conductores menores de 18 años que sean condenados o se declaren culpables
+    de dos infracciones de tránsito en movimiento.
 - id: 92
   category: driver_responsibility
-  question: Si un agente de la ley lo detiene, ¿qué debe hacer con sus manos?
+  question: Si la policía lo detiene, ¿qué debe hacer con sus manos?
   choices:
     A: Mantenerlas ocultas debajo de su asiento.
     B: Buscar inmediatamente su registro en la guantera.
     C: Mantenerlas en el volante a la vista del oficial.
     D: Agitarlas fuera de la ventana para señalar cumplimiento.
   answer: C
-  explanation: Cuando un agente de la ley lo detenga, debe mantener las manos en el
-    volante a la vista del oficial.
+  explanation: Cuando la policía lo detenga, debe mantener sus manos en el volante
+    a la vista del oficial.
 - id: 93
   category: alcohol_drugs_health
   question: ¿Qué requiere que haga un conductor una condena por Operar un Vehículo
-    después del Consumo de Alcohol por Menores de Edad (OVUAC)?
+    después del Consumo de Alcohol por un Menor de Edad (OVUAC)?
   choices:
     A: Pagar una multa de $5,000 y entregar su vehículo.
     B: Tomar un curso de conducción correctiva y volver a realizar el examen de licencia
       de conducir.
     C: Perder permanentemente su licencia de conducir.
-    D: Instalar un dispositivo de bloqueo de encendido por diez años.
+    D: Instalar un dispositivo de interbloqueo de encendido durante diez años.
   answer: B
   explanation: Una condena por OVUAC puede resultar en la suspensión de la licencia
     y requerir que el conductor tome un curso de conducción correctiva, pague las
     tarifas de reinstalación y vuelva a realizar el examen de licencia de conducir.
 - id: 94
   category: vehicle_information
-  question: ¿Qué es una fianza SR-22?
+  question: ¿Qué es un bono SR-22?
   choices:
     A: Un tipo especial de seguro de auto premium.
     B: Un certificado de responsabilidad financiera presentado ante el estado.
@@ -1222,30 +1221,30 @@ questions:
   choices:
     A: Si están sentados y sujetándose de los lados.
     B: Si están acompañados por un adulto.
-    C: Si el área de carga está equipada con un asiento y un cinturón de seguridad
-      debidamente asegurados.
+    C: Si el área de carga está equipada con un asiento debidamente asegurado y un
+      cinturón de seguridad.
     D: Nunca es legal bajo ninguna circunstancia.
   answer: C
   explanation: Un conductor puede permitir que una persona menor de 16 años viaje
     en un área de carga abierta que viaje a más de 25 mph si el área está equipada
-    con un asiento y un cinturón de seguridad debidamente asegurados que cumplan con
+    con un asiento debidamente asegurado y un cinturón de seguridad que cumpla con
     los estándares federales.
 - id: 96
   category: penalties_and_points
-  question: ¿Cuál es la multa máxima por una condena de conducir bajo suspensión,
-    que es un delito menor de primer grado?
+  question: ¿Cuál es la multa máxima por una condena por conducir con la licencia
+    suspendida, lo cual es un delito menor de primer grado?
   choices:
     A: $250
     B: $500
     C: $1,000
     D: $5,000
   answer: C
-  explanation: Operar un vehículo motorizado mientras su licencia está bajo suspensión
+  explanation: Operar un vehículo motorizado mientras su licencia está suspendida
     es un delito menor de primer grado, sujeto a una multa de hasta $1,000.
 - id: 97
   category: safe_driving_rules
   question: Un niño que tiene al menos 4 años pero menos de 8 años debe estar debidamente
-    sujeto en un asiento elevador (booster seat) a menos que alcance ¿qué altura?
+    sujeto en un asiento elevado (booster seat) a menos que alcance ¿qué altura?
   choices:
     A: 4 pies 5 pulgadas
     B: 4 pies 9 pulgadas
@@ -1253,10 +1252,10 @@ questions:
     D: 5 pies 2 pulgadas
   answer: B
   explanation: Un niño de al menos 4 años pero menos de 8 años debe estar en un asiento
-    elevador a menos que el niño mida 4 pies 9 pulgadas de altura o más.
+    elevado a menos que el niño mida 4 pies 9 pulgadas de altura o más.
 - id: 98
   category: safe_driving_rules
-  question: Los faros delanteros deben encenderse cuando las condiciones de luz natural
+  question: Las luces delanteras deben encenderse cuando las condiciones de luz natural
     no permitan ver claramente objetos a ¿qué distancia?
   choices:
     A: 250 pies
@@ -1268,8 +1267,7 @@ questions:
     de luz natural no permitan ver claramente objetos a 1,000 pies de distancia.
 - id: 99
   category: driver_responsibility
-  question: Si un agente de la ley lo detiene y usted tiene un arma en el vehículo,
-    ¿qué debe hacer?
+  question: Si la policía lo detiene y tiene un arma en el vehículo, ¿qué debe hacer?
   choices:
     A: Esconder el arma debajo del asiento antes de que el oficial se acerque.
     B: Informar al oficial al primer contacto.
@@ -1280,18 +1278,19 @@ questions:
     debe informar al oficial al primer contacto.
 - id: 100
   category: safe_driving_rules
-  question: Según la ley de Ohio, ¿cuándo deben encenderse los faros de su vehículo?
+  question: Según la ley de Ohio, ¿cuándo deben encenderse las luces delanteras de
+    su vehículo?
   choices:
     A: Solo entre las 8 PM y las 6 AM
     B: Entre la puesta del sol y el amanecer
     C: Solo cuando se conduce por carreteras sin iluminación
     D: Entre el amanecer y la puesta del sol
   answer: B
-  explanation: El manual establece que los faros deben estar encendidos entre la puesta
-    del sol y el amanecer.
+  explanation: El manual establece que las luces delanteras deben estar encendidas
+    entre la puesta del sol y el amanecer.
 - id: 101
   category: safe_driving_rules
-  question: Además de la noche, ¿en qué otro momento exige la ley de Ohio que use
+  question: Además de la noche, ¿en qué otro momento exige la ley de Ohio el uso de
     los faros delanteros?
   choices:
     A: Siempre que conduzca por una autopista
@@ -1306,7 +1305,7 @@ questions:
   question: ¿Qué debe hacer para evitar quedar cegado momentáneamente por los faros
     de un vehículo que se aproxima por la noche?
   choices:
-    A: Hacer destellos con las luces altas repetidamente
+    A: Parpadear las luces altas repetidamente
     B: Mirar hacia el lado izquierdo de la carretera
     C: Mirar hacia el lado derecho de la carretera
     D: Cerrar los ojos por un breve segundo
@@ -1315,22 +1314,22 @@ questions:
     que se aproxima, el manual aconseja mirar hacia el lado derecho de la carretera.
 - id: 103
   category: safe_driving_rules
-  question: ¿Qué faros debe utilizar cuando conduce con niebla?
+  question: ¿Qué faros debe utilizar al conducir con niebla?
   choices:
-    A: Luces altas (faros de largo alcance)
-    B: Luces bajas (faros de corto alcance)
+    A: Faros de luz alta
+    B: Faros de luz baja
     C: Solo luces de estacionamiento
-    D: Solo luces de emergencia
+    D: Solo luces de emergencia (hazard lights)
   answer: B
-  explanation: Al conducir con niebla, debe usar las luces bajas (no las luces altas)
-    y seguir escaneando el área en busca de posibles peligros.
+  explanation: Al conducir con niebla, debe utilizar los faros de luz baja (no las
+    luces altas) y seguir vigilando el área en busca de posibles peligros.
 - id: 104
   category: defensive_driving
   question: ¿Qué áreas de una autopista tienen más probabilidades de congelarse primero
     durante el clima invernal?
   choices:
     A: Intersecciones y pasos de peatones
-    B: Tramos rectos y pendientes cuesta arriba
+    B: Rectas y pendientes cuesta arriba
     C: Puentes, pasos elevados y lugares sombreados
     D: Túneles y pasos subterráneos
   answer: C
@@ -1341,14 +1340,13 @@ questions:
   question: ¿Qué debe hacer si su vehículo comienza a derrapar en una carretera con
     hielo?
   choices:
-    A: Pisar el freno a fondo y mantener el volante recto
+    A: Frenar bruscamente y mantener el volante recto
     B: Quitar el pie del acelerador y girar el volante en la dirección del derrape
     C: Acelerar rápidamente para recuperar la tracción
-    D: Aplicar los frenos con firmeza y girar el volante en dirección opuesta al derrape
+    D: Frenar con firmeza y girar el volante en dirección opuesta al derrape
   answer: B
   explanation: Si su vehículo comienza a derrapar, quite el pie del acelerador y gire
-    el volante en la dirección del derrape. Nunca debe aplicar los frenos mientras
-    derrapa.
+    el volante en la dirección del derrape. Nunca debe frenar mientras derrapa.
 - id: 106
   category: signs_and_signals
   question: ¿Qué colores se utilizan para las señales de zona de obras (Work Zone)?
@@ -1370,8 +1368,9 @@ questions:
     C: De 20 a 30 segundos
     D: De 40 a 50 segundos
   answer: C
-  explanation: Idealmente, intente mirar lo que ocurre de 20 a 30 segundos por delante
-    de su automóvil para tener tiempo de ajustar y planificar los movimientos de conducción.
+  explanation: Idealmente, intente observar lo que ocurre de 20 a 30 segundos por
+    delante de su automóvil para tener tiempo de ajustar y planificar los movimientos
+    de conducción.
 - id: 108
   category: safe_driving_rules
   question: ¿Cómo debe ajustar su velocidad al entrar en una curva?
@@ -1421,7 +1420,7 @@ questions:
     C: Cuatro segundos
     D: Seis segundos
   answer: C
-  explanation: Siempre intente mantener una distancia de seguimiento mínima de la
+  explanation: Intente siempre mantener una distancia de seguimiento mínima de la
     longitud de un vehículo por cada 10 millas por hora de velocidad, o cuatro segundos
     entre su vehículo y el vehículo de adelante.
 - id: 112
@@ -1431,8 +1430,8 @@ questions:
     A: Al conducir en un día despejado y soleado
     B: Al seguir a vehículos que deben detenerse en cruces ferroviarios, como los
       autobuses
-    C: Al conducir en una carretera seca y recién pavimentada
-    D: Al rebasar a un vehículo que circula despacio en un tramo recto
+    C: Al conducir en una carretera recién pavimentada y seca
+    D: Al adelantar a un vehículo lento en un tramo recto
   answer: B
   explanation: Debe aumentar su distancia de seguimiento al seguir a vehículos que
     deben detenerse en cruces ferroviarios, como autobuses, o vehículos que transportan
@@ -1455,19 +1454,19 @@ questions:
   question: Según la ley de Ohio, ¿cuándo es obligatorio usar los faros delanteros?
   choices:
     A: Solo desde el atardecer hasta el amanecer
-    B: Desde el atardecer hasta el amanecer, durante periodos de poca visibilidad
+    B: Desde el atardecer hasta el amanecer, durante condiciones de poca visibilidad
       y cuando se utilicen los limpiaparabrisas
-    C: Solo al conducir por carreteras rurales sin iluminación
+    C: Solo al conducir en carreteras rurales sin iluminación
     D: Entre las 8 PM y las 6 AM
   answer: B
   explanation: La ley de Ohio exige el uso de los faros delanteros desde el atardecer
-    hasta el amanecer, en cualquier momento en que la visibilidad sea escasa (lluvia,
-    nieve, niebla, etc.) y siempre que se utilicen los limpiaparabrisas debido a la
-    precipitación.
+    hasta el amanecer, en cualquier momento en que la visibilidad sea deficiente (lluvia,
+    nieve, niebla, etc.) y siempre que los limpiaparabrisas estén en uso debido a
+    la precipitación.
 - id: 115
   category: safe_driving_rules
-  question: ¿Con qué antelación debe señalizar su intención de cambiar de dirección
-    antes de un giro?
+  question: ¿Con cuánta anticipación a un giro debe señalizar su intención de cambiar
+    de dirección?
   choices:
     A: Al menos 50 pies
     B: Al menos 100 pies
@@ -1475,7 +1474,7 @@ questions:
     D: Al menos 500 pies
   answer: B
   explanation: El manual establece que debe señalizar un giro al menos 100 pies antes
-    de realizarlo para dar tiempo a reaccionar a los demás usuarios de la vía.
+    del mismo para dar tiempo a otros usuarios de la vía a reaccionar.
 - id: 116
   category: driver_responsibility
   question: ¿Qué tan rápido puede aumentar la temperatura dentro de un vehículo en
@@ -1516,22 +1515,22 @@ questions:
 - id: 119
   category: sharing_the_road
   question: ¿Por qué no debe asumir automáticamente que una motocicleta va a girar
-    solo porque su luz de giro está parpadeando?
+    solo porque su luz direccional está parpadeando?
   choices:
-    A: Los motociclistas suelen usar las luces de giro para indicar que están disminuyendo
+    A: Los motociclistas suelen usar las direccionales para indicar que están disminuyendo
       la velocidad
-    B: Es posible que las luces de giro de las motocicletas no se cancelen automáticamente
+    B: Es posible que las luces direccionales de las motocicletas no se cancelen automáticamente
       y que el conductor haya olvidado apagarlas
     C: La luz parpadeante indica que la motocicleta tiene problemas mecánicos
-    D: Las luces de giro en las motocicletas solo se usan para cambiar de carril,
+    D: Las luces direccionales en las motocicletas solo se usan para cambiar de carril,
       no para girar
   answer: B
-  explanation: No asuma que una motocicleta va a girar cuando vea su luz de giro parpadeando
-    porque las luces de giro de las motocicletas pueden no cancelarse automáticamente,
-    y el motociclista puede haber olvidado apagarlas.
+  explanation: No asuma que una motocicleta va a girar cuando vea su luz direccional
+    parpadeando porque las luces direccionales de las motocicletas pueden no cancelarse
+    automáticamente y el motociclista puede haber olvidado apagarlas.
 - id: 120
   category: sharing_the_road
-  question: Al rebasar a un ciclista, ¿cuál es la zona de seguridad mínima que debe
+  question: Al adelantar a un ciclista, ¿cuál es la zona de seguridad mínima que debe
     mantener entre su vehículo motorizado y la bicicleta?
   choices:
     A: Un pie
@@ -1540,14 +1539,14 @@ questions:
     D: Cinco pies
   answer: C
   explanation: Los conductores deben mantener una zona de seguridad de al menos tres
-    pies entre un vehículo motorizado y una bicicleta al rebasar.
+    pies entre un vehículo motorizado y una bicicleta al adelantar.
 - id: 121
   category: sharing_the_road
   question: ¿Por qué es peligroso meterse entre un vehículo comercial grande y el
     bordillo (acera) cuando este está girando a la derecha?
   choices:
     A: El vehículo comercial puede acelerar repentinamente
-    B: El vehículo comercial puede hacer un giro amplio a la derecha desde el carril
+    B: El vehículo comercial puede realizar un giro amplio a la derecha desde el carril
       izquierdo para librar la esquina
     C: El bordillo puede dañar gravemente los neumáticos de su vehículo
     D: Los vehículos comerciales siempre tienen el derecho de paso en todas las intersecciones
@@ -1560,14 +1559,14 @@ questions:
   question: ¿Cómo puede saber si está conduciendo en la "Zona No" (punto ciego) lateral
     de un camión grande?
   choices:
-    A: Está conduciendo exactamente a una distancia de tres vehículos detrás del camión
+    A: Está conduciendo exactamente a tres largos de automóvil detrás del camión
     B: No puede ver las luces de freno del camión
     C: No puede ver la cara del conductor del camión en su espejo retrovisor lateral
     D: Está conduciendo en el carril inmediatamente a la derecha del camión
   answer: C
-  explanation: Los camiones grandes y los autobuses tienen grandes "Zonas No" en ambos
-    lados. Si no puede ver la cara del conductor en el espejo retrovisor lateral,
-    el conductor no puede verlo a usted.
+  explanation: Los camiones grandes y los autobuses tienen grandes "Zonas No" (No
+    Zones) en ambos lados. Si no puede ver la cara del conductor en el espejo retrovisor
+    lateral, el conductor no puede verlo a usted.
 - id: 123
   category: sharing_the_road
   question: Bajo condiciones ideales, ¿cuál es la distancia mínima de frenado para
@@ -1586,7 +1585,7 @@ questions:
   question: ¿Qué debe hacer si ve a un niño solo en un vehículo y parece estar en
     peligro o no responde?
   choices:
-    A: Esperar junto al coche hasta que regresen los padres
+    A: Esperar junto al automóvil hasta que regresen los padres
     B: Llamar al 911 de inmediato y tomar medidas para sacar al niño, rompiendo una
       ventana si es necesario
     C: Dejar una nota en el parabrisas advirtiendo a los padres del peligro
@@ -1602,14 +1601,14 @@ questions:
     en la vía pública?
   choices:
     A: Los ciclistas deben circular en sentido contrario al tráfico vehicular para
-      ver los coches que vienen
+      ver los autos que vienen de frente
     B: Las bicicletas se consideran vehículos y deben circular con el tráfico vehicular
     C: Los ciclistas no están obligados a obedecer las señales de tráfico
     D: Los ciclistas siempre deben circular por la acera cuando haya una disponible
   answer: B
   explanation: Las bicicletas se consideran vehículos cuando están en las vías públicas
-    y deben circular con el tráfico vehicular, no en contra. También están obligadas
-    a obedecer todas las señales de tráfico y las marcas en el pavimento.
+    y deben circular con, no en contra, del resto del tráfico vehicular. También están
+    obligadas a obedecer todas las señales de tráfico, semáforos y marcas en el pavimento.
 - id: 126
   category: safe_driving_rules
   question: ¿En cuál de las siguientes situaciones es apropiado usar la bocina de
@@ -1621,21 +1620,21 @@ questions:
     D: Para saludar a un amigo que camina por la acera
   answer: C
   explanation: Debe tocar la bocina ligeramente para comunicarse con los demás cuando
-    los peatones o ciclistas parezcan estar invadiendo su carril de circulación. Usar
+    peatones o ciclistas parezcan estar invadiendo su carril de circulación. Usar
     la bocina de manera inapropiada podría asustar o enojar a otro usuario de la vía.
 - id: 127
   category: defensive_driving
   question: ¿Cómo puede ayudar a mantener una distancia de seguimiento segura para
-    el conductor que va detrás de su vehículo?
+    el conductor que viene detrás de su vehículo?
   choices:
     A: Pisando los frenos con frecuencia para mantenerlo alerta
     B: Manteniendo una velocidad constante y señalizando sus intenciones con anticipación
     C: Acelerando rápidamente para crear más distancia
-    D: Colocándose en el punto ciego del vehículo que está a su lado
+    D: Moviéndose al punto ciego del vehículo que está a su lado
   answer: B
-  explanation: Puede ayudar a que el conductor que va detrás de usted mantenga una
-    distancia segura conservando una velocidad constante, señalizando con anticipación
-    y dejando más espacio delante de su vehículo antes de reducir la velocidad o girar.
+  explanation: Puede ayudar a mantener al conductor detrás de usted a una distancia
+    segura manteniendo una velocidad constante, señalizando con anticipación y dejando
+    más espacio frente a su vehículo antes de reducir la velocidad o girar.
 - id: 128
   category: sharing_the_road
   question: ¿Por qué es importante detenerse siempre detrás de las líneas de parada
@@ -1668,27 +1667,27 @@ questions:
     que muestra luces intermitentes y sirenas audibles?
   choices:
     A: Detenerse inmediatamente en el carril actual
-    B: Dirigirse de manera rápida y segura al lado derecho de la carretera y detenerse
+    B: Orillarse rápida y seguradamente hacia el lado derecho de la carretera y detenerse
     C: Acelerar para despejar la intersección rápidamente
-    D: Dirigirse al lado izquierdo de la carretera y detenerse
+    D: Orillarse hacia el lado izquierdo de la carretera y detenerse
   answer: B
-  explanation: Cuando se aproximan vehículos de emergencia, el conductor debe dirigirse
-    de manera rápida y segura al lado derecho de la carretera y detenerse, evitando
+  explanation: Cuando se aproximan vehículos de emergencia, el conductor debe orillarse
+    rápida y seguradamente hacia el lado derecho de la carretera y detenerse, evitando
     bloquear las intersecciones.
 - id: 131
   category: safe_driving_rules
-  question: Según la Ley de Moverse al Carril Contiguo (Move Over Law) de Ohio, ¿qué
-    debe hacer si no es seguro cambiar de carril al acercarse a un vehículo de emergencia
-    detenido con sus luces de advertencia activadas?
+  question: Según la Ley de Ceder el Paso (Move Over Law) de Ohio, ¿qué debe hacer
+    si no es seguro cambiar de carril al acercarse a un vehículo de emergencia detenido
+    con sus luces de advertencia activadas?
   choices:
     A: Detenerse inmediatamente detrás del vehículo de emergencia
     B: Mantener su velocidad y tocar la bocina
     C: Reducir la velocidad y proceder con precaución
     D: Acelerar para rebasar el vehículo lo más rápido posible
   answer: C
-  explanation: Si un cambio de carril no es seguro, la Ley de Moverse al Carril Contiguo
-    (Move Over Law) exige que los conductores reduzcan la velocidad y procedan con
-    precaución, manteniendo una velocidad segura para las condiciones del tráfico.
+  explanation: Si un cambio de carril no es seguro, la Ley de Ceder el Paso (Move
+    Over Law) exige que los conductores reduzcan la velocidad y procedan con precaución
+    manteniendo una velocidad segura para las condiciones del tráfico.
 - id: 132
   category: signs_and_signals
   question: ¿Qué indica un triángulo naranja y rojo fluorescente o reflectante que
@@ -1705,22 +1704,22 @@ questions:
 - id: 133
   category: safe_driving_rules
   question: ¿Bajo qué condición se le permite cruzar una línea amarilla continua para
-    rebasar a un vehículo de movimiento lento?
+    rebasar a un vehículo que circula despacio?
   choices:
-    A: Si el vehículo viaja a menos de la mitad del límite de velocidad indicado
+    A: Si el vehículo viaja a menos de la mitad del límite de velocidad establecido
     B: Si el vehículo es una pieza de maquinaria agrícola
     C: Si toca la bocina antes de rebasar
     D: Si está conduciendo en una zona rural
   answer: A
   explanation: Se le permite cruzar una línea amarilla continua para rebasar a un
-    vehículo de movimiento lento siempre que el vehículo viaje a menos de la mitad
-    del límite de velocidad indicado, usted no exceda el límite de velocidad y haya
-    suficiente espacio libre.
+    vehículo que circula despacio siempre que el vehículo viaje a menos de la mitad
+    del límite de velocidad establecido, usted no exceda el límite de velocidad y
+    haya suficiente espacio libre.
 - id: 134
   category: defensive_driving
   question: ¿Cuál es el procedimiento adecuado si su vehículo comienza a derrapar?
   choices:
-    A: Pisar los frenos a fondo y girar el volante hacia adelante
+    A: Frenar bruscamente y girar el volante hacia adelante
     B: Acelerar rápidamente para recuperar la tracción
     C: Dejar de presionar el freno o el acelerador y girar el volante hacia el lado
       del derrape
@@ -1731,9 +1730,9 @@ questions:
 - id: 135
   category: safe_driving_rules
   question: ¿Cómo debe tratar un conductor una intersección con un semáforo inoperante
-    debido a un corte de energía, si no hay un oficial de la ley presente?
+    debido a un corte de energía, si no hay ningún oficial de la ley presente?
   choices:
-    A: Como una señal de ceda el paso
+    A: Como una señal de ceder el paso
     B: Como una parada de cuatro vías (four-way stop)
     C: Proceder sin detenerse si la carretera parece despejada
     D: Solo los vehículos en la carretera más grande tienen el derecho de paso
@@ -1744,10 +1743,10 @@ questions:
 - id: 136
   category: defensive_driving
   question: ¿Qué debe hacer si su vehículo se sale de la superficie pavimentada de
-    la carretera y encuentra un desnivel en la superficie?
+    la carretera y se encuentra con un desnivel irregular?
   choices:
     A: Girar el volante bruscamente para regresar al pavimento de inmediato
-    B: Pisar los frenos a fondo para detener el vehículo
+    B: Frenar bruscamente para detener el vehículo
     C: Acelerar para volver a la carretera rápidamente
     D: Soltar el acelerador, reducir la velocidad gradualmente y regresar al pavimento
       cuando sea seguro
@@ -1757,28 +1756,28 @@ questions:
     regrese al pavimento.
 - id: 137
   category: vehicle_information
-  question: Si el acelerador de su vehículo se queda trabado y el vehículo acelera
+  question: Si el acelerador de su vehículo se queda atascado y el vehículo acelera
     sin control, ¿a qué marcha debe cambiar?
   choices:
-    A: PARK (Estacionamiento)
-    B: REVERSE (Reversa)
-    C: NEUTRAL (Punto muerto)
-    D: DRIVE (Conducir)
+    A: ESTACIONAMIENTO (PARK)
+    B: REVERSA (REVERSE)
+    C: NEUTRAL (NEUTRAL)
+    D: CONDUCIR (DRIVE)
   answer: C
   explanation: Si su vehículo acelera sin control, debe encender las luces de emergencia,
-    cambiar a la marcha 'NEUTRAL' y buscar una ruta de escape.
+    cambiar a la marcha "NEUTRAL" y buscar una ruta de escape.
 - id: 138
   category: vehicle_information
-  question: ¿Cuál de las siguientes es la acción correcta a tomar si experimenta un
-    reventón de neumático mientras conduce?
+  question: ¿Cuál de las siguientes es la acción correcta a tomar si experimenta el
+    reventón de un neumático mientras conduce?
   choices:
     A: Frenar fuerte inmediatamente para detener el vehículo
     B: No frenar; reducir la velocidad gradualmente
     C: Acelerar ligeramente para mantener el control de la dirección
     D: Bombear los frenos rápidamente
   answer: B
-  explanation: En caso de un reventón de neumático, debe sujetar el volante con firmeza,
-    mantener el vehículo recto y no frenar; reduzca la velocidad gradualmente.
+  explanation: En el evento de que se reviente un neumático, debe sujetar el volante
+    con firmeza, mantener el vehículo recto y no frenar; reduzca la velocidad gradualmente.
 - id: 139
   category: defensive_driving
   question: Si su vehículo se avería, ¿a qué distancia detrás del vehículo debe colocar
@@ -1790,23 +1789,23 @@ questions:
     D: De 400 a 500 pies
   answer: C
   explanation: Si es posible, coloque bengalas de emergencia a unos 200 o 300 pies
-    detrás del vehículo para alertar a otros conductores y darles tiempo de cambiar
+    detrás del vehículo para alertar a otros conductores y darles tiempo a cambiar
     de carril.
 - id: 140
   category: driver_responsibility
   question: Al intercambiar información después de un choque, ¿qué debe evitar discutir?
   choices:
     A: Los nombres y direcciones de los testigos
-    B: Los números de placa de los vehículos involucrados
-    C: La culpa o la cobertura del seguro
+    B: Los números de matrícula de los vehículos involucrados
+    C: La culpabilidad o la cobertura del seguro
     D: El clima y las condiciones de la carretera
   answer: C
   explanation: Al intercambiar información con otras personas involucradas en el accidente,
-    debe proporcionar detalles de contacto y del vehículo, pero no discuta la culpa
+    debe proporcionar detalles de contacto y del vehículo, pero no discuta la culpabilidad
     ni la cobertura del seguro.
 - id: 141
   category: sharing_the_road
-  question: ¿Además de un emblema de vehículo de movimiento lento, qué debe exhibir
+  question: Además de un emblema de vehículo de movimiento lento, ¿qué debe exhibir
     la maquinaria agrícola cuando circula de noche?
   choices:
     A: Una luz blanca intermitente
@@ -1826,17 +1825,18 @@ questions:
     C: El volante puede ser difícil de girar, pero usted puede girarlo
     D: El volante dirigirá automáticamente el vehículo hacia la derecha
   answer: C
-  explanation: Si el motor se apaga mientras conduce, mantenga el volante con firmeza.
-    Tenga en cuenta que el volante puede ser difícil de girar, pero usted puede girarlo.
+  explanation: Si el motor se apaga mientras conduce, mantenga el volante firmemente
+    sujeto. Tenga en cuenta que el volante puede ser difícil de girar, pero usted
+    puede girarlo.
 - id: 143
   category: driver_responsibility
   question: ¿Bajo qué condiciones puede un conductor presentar un Informe de Choque
-    (formulario BMV 3303) ante la Oficina de Vehículos Motorizados (BMV) de Ohio?
+    (formulario BMV 3303) ante la Oficina de Vehículos Motorizados de Ohio?
   choices:
     A: Dentro de los 30 días si el daño es superior a $1,000
     B: Dentro de los 6 meses si el daño supera los $400 o hay lesiones, y el otro
       conductor no tenía seguro
-    C: Dentro de 1 año por cualquier choque que involucre dos o más vehículos
+    C: Dentro de 1 año para cualquier choque que involucre dos o más vehículos
     D: Dentro de las 24 horas si hay algún daño visible en cualquiera de los vehículos
   answer: B
   explanation: El manual establece que un conductor puede presentar un Informe de
@@ -1848,12 +1848,11 @@ questions:
   choices:
     A: Esperar junto al vehículo hasta que regrese el dueño
     B: Reportar el choque a la policía o dejar la información necesaria en la escena
-    C: Notificar únicamente a su compañía de seguros
-    D: Abandonar la escena de inmediato si no hay daños visibles
+    C: Solo notificar a su compañía de seguros
+    D: Abandonar la escena inmediatamente si no hay daños visibles
   answer: B
   explanation: Si se ve involucrado en un choque con un vehículo desatendido, debe
-    reportar el choque a la policía o dejar la información necesaria en el lugar de
-    los hechos.
+    reportar el choque a la policía o dejar la información necesaria en la escena.
 - id: 145
   category: driver_testing
   question: ¿Cuál de los siguientes componentes del vehículo se revisa durante la
@@ -1862,7 +1861,7 @@ questions:
     A: Aire acondicionado y radio
     B: Luces direccionales, luces de freno y bocina
     C: Nivel de aceite del motor y presión de los neumáticos
-    D: Luz de techo interior y pestillo de la guantera
+    D: Luz de cortesía interior y pestillo de la guantera
   answer: B
   explanation: Una inspección del vehículo realizada antes de que comience el examen
     verificará el funcionamiento de las luces direccionales, las luces de freno, la
@@ -1896,12 +1895,12 @@ questions:
   question: En el Paso Uno del examen de maniobrabilidad, ¿dónde debe detener el vehículo?
   choices:
     A: Cuando el parachoques delantero toque el marcador central
-    B: Cuando el parachoques trasero esté nivelado con el marcador central
+    B: Cuando el parachoques trasero esté a la altura del marcador central
     C: Cuando el vehículo haya pasado por completo los cinco marcadores
-    D: Cuando el parachoques delantero esté nivelado con los dos marcadores traseros
+    D: Cuando el parachoques delantero esté a la altura de los dos marcadores traseros
   answer: B
   explanation: En el Paso Uno, debe conducir recto hacia adelante y detenerse cuando
-    el parachoques trasero del vehículo esté nivelado con el marcador central y generalmente
+    el parachoques trasero del vehículo esté a la altura del marcador central y generalmente
     paralelo al recorrido.
 - id: 149
   category: driver_testing
@@ -1926,8 +1925,8 @@ questions:
     C: Completar 50 horas de conducción supervisada
     D: Pagar una tarifa de $100 por volver a presentar el examen
   answer: B
-  explanation: Un solicitante de 21 años o más que repruebe la parte de maniobrabilidad
-    o de habilidades en carretera del examen de conducción debe tomar un Curso Abreviado
+  explanation: Un solicitante de 21 años o más que reprueba la parte de maniobrabilidad
+    o de habilidades viales del examen de conducción debe tomar un Curso Abreviado
     de Capacitación para Conductores Adultos antes de intentar el examen de conducción
     por segunda vez.
 - id: 151
@@ -1942,7 +1941,7 @@ questions:
     C: Seis horas
     D: Ocho horas
   answer: B
-  explanation: Los solicitantes que elijan la opción de 24 horas de conducción con
+  explanation: Los solicitantes que eligen la opción de 24 horas de conducción con
     un conductor con licencia de 21 años o más no pueden completar más de cuatro horas
     de conducción en un solo día.
 - id: 152
@@ -1966,13 +1965,12 @@ questions:
   choices:
     A: Hasta que el menor cumpla 21 años
     B: Durante los primeros seis meses de conducción
-    C: Hasta el cumpleaños número 18 del menor
+    C: Hasta que el menor cumpla 18 años
     D: Hasta que el menor compre su propio vehículo
   answer: C
   explanation: El padre o tutor legal que firma conjuntamente la solicitud de un menor
     es responsable solidaria e individualmente con el menor por cualquier daño causado
-    por negligencia o mala conducta intencional hasta el cumpleaños número 18 del
-    menor.
+    por negligencia o mala conducta intencional hasta que el menor cumpla 18 años.
 - id: 154
   category: license_system
   question: ¿Cómo puede un cosignatario cancelar su autorización para la licencia
@@ -1989,21 +1987,21 @@ questions:
     (BMV) de Ohio.
 - id: 155
   category: license_system
-  question: ¿Cuántos documentos que acrediten una dirección en Ohio se requieren para
-    obtener una tarjeta de Licencia de Conducir Cumplidora (Compliant Driver License)?
+  question: ¿Cuántos documentos que acrediten una dirección residencial en Ohio se
+    requieren para obtener una tarjeta de Licencia de Conducir Cumplidora (Compliant)?
   choices:
     A: Uno
     B: Dos
     C: Tres
-    D: Four
+    D: Cuatro
   answer: B
   explanation: Obtener una tarjeta Cumplidora (Compliant) requiere más documentos
-    de identidad que la tarjeta Estándar, incluyendo dos documentos para demostrar
-    una dirección en Ohio.
+    de identidad que la tarjeta Estándar, incluyendo dos documentos para probar una
+    dirección residencial en Ohio.
 - id: 156
   category: license_system
   question: ¿Cuál de las siguientes afirmaciones es verdadera con respecto a una tarjeta
-    de Licencia de Conducir Estándar (Standard Driver License)?
+    de Licencia de Conducir Estándar?
   choices:
     A: Cumple con todos los requisitos nacionales de seguridad para viajes
     B: Requiere más documentos de identidad que la tarjeta Cumplidora (Compliant)
@@ -2017,7 +2015,7 @@ questions:
 - id: 157
   category: driver_testing
   question: ¿Qué se debe hacer con las herramientas de asistencia automatizada, como
-    el estacionamiento automatizado, durante el examen de conducción?
+    el estacionamiento automático, durante el examen de conducción?
   choices:
     A: Deben usarse para demostrar competencia
     B: Deben estar desactivadas
@@ -2025,7 +2023,7 @@ questions:
     D: Son obligatorias para todos los solicitantes mayores de 65 años
   answer: B
   explanation: Durante la inspección del vehículo antes de que comience el examen,
-    las herramientas de asistencia automatizada, como el estacionamiento automatizado,
+    las herramientas de asistencia automatizada, como el estacionamiento automático,
     deben estar desactivadas.
 - id: 158
   category: license_system
@@ -2038,13 +2036,14 @@ questions:
     D: Fecha de nacimiento
   answer: C
   explanation: Los solicitantes deben proporcionar documentación aceptable para la
-    prueba de identidad que incluya el Nombre Legal Completo, Fecha de Nacimiento,
-    Número de Seguro Social, Dirección en Ohio y Ciudadanía o Presencia Legal.
+    prueba de identidad que incluya el nombre legal completo, la fecha de nacimiento,
+    el número de Seguro Social, la dirección residencial en Ohio y la ciudadanía o
+    presencia legal.
 - id: 159
   category: safe_driving_rules
-  question: Durante los primeros 12 meses de tener una Licencia de Conducir, ¿entre
-    qué horas no puede operar un vehículo un conductor menor de 18 años a menos que
-    esté acompañado por un padre o tutor?
+  question: Durante los primeros 12 meses de tener una Licencia de Conducir, ¿un conductor
+    menor de 18 años no puede operar un vehículo entre qué horas, a menos que esté
+    acompañado por un padre o tutor?
   choices:
     A: 10 p.m. a 5 a.m.
     B: 11 p.m. a 6 a.m.
@@ -2057,8 +2056,8 @@ questions:
     otras excepciones específicas.
 - id: 160
   category: safe_driving_rules
-  question: Un conductor menor de 18 años en sus primeros 12 meses de tener una licencia
-    no puede operar un vehículo con más de ¿cuántos pasajeros que no sean miembros
+  question: ¿Un conductor menor de 18 años en sus primeros 12 meses de tener una licencia
+    no puede operar un vehículo con más de cuántos pasajeros que no sean miembros
     de la familia sin un padre o tutor?
   choices:
     A: Cero
@@ -2074,19 +2073,18 @@ questions:
     son las horas de conducción restringidas para un conductor menor de 18 años (a
     menos que se aplique una excepción)?
   choices:
-    A: Medianoche a 6 a.m.
-    B: 1 a.m. a 5 a.m.
-    C: 10 p.m. a 6 a.m.
-    D: 11 p.m. a 5 a.m.
+    A: De medianoche a 6 a.m.
+    B: De 1 a.m. a 5 a.m.
+    C: De 10 p.m. a 6 a.m.
+    D: De 11 p.m. a 5 a.m.
   answer: B
   explanation: Después de los primeros 12 meses de tener una licencia de conducir,
-    el conductor menor de 18 años no puede operar un vehículo de 1 a.m. a 5 a.m.,
-    a menos que se aplique una excepción.
+    el conductor menor de 18 años no puede operar un vehículo desde la 1 a.m. hasta
+    las 5 a.m., a menos que se aplique una excepción.
 - id: 162
   category: penalties_and_points
-  question: Para un conductor menor de 18 años, múltiples condenas de tráfico antes
-    de cumplir los 18 años pueden resultar en una suspensión de la licencia de ¿qué
-    duración?
+  question: Para un conductor menor de 18 años, ¿de qué duración puede ser la suspensión
+    de la licencia por múltiples condenas de tráfico antes de cumplir los 18 años?
   choices:
     A: 30 días
     B: 60 días
@@ -2097,16 +2095,15 @@ questions:
     pueden resultar en una suspensión de la licencia de 90 días.
 - id: 163
   category: license_system
-  question: Si usted es menor de 21 años, ¿cuándo vence su licencia de conducir de
-    Ohio?
+  question: Si es menor de 21 años, ¿cuándo vence su licencia de conducir de Ohio?
   choices:
     A: En su cumpleaños número 18
     B: En su cumpleaños número 21
     C: Cuatro años a partir de la fecha de emisión
     D: Ocho años a partir de la fecha de emisión
   answer: B
-  explanation: Si usted es menor de 21 años, su licencia de conducir de Ohio vence
-    en su cumpleaños número 21 y debe renovarse en persona.
+  explanation: Si es menor de 21 años, su licencia de conducir de Ohio vence en su
+    cumpleaños número 21 y debe renovarse en persona.
 - id: 164
   category: license_system
   question: ¿Cuál es el período de gracia para renovar su licencia de conducir de
@@ -2121,7 +2118,7 @@ questions:
     después de que su licencia haya vencido, se arriesga a una citación de tráfico.
 - id: 165
   category: license_system
-  question: ¿Qué clase de Licencia de Conducir Comercial (CDL) se requiere para un
+  question: ¿Qué clase de licencia de conducir comercial (CDL) se requiere para un
     solo vehículo diseñado para transportar a 16 o más pasajeros, incluido el conductor?
   choices:
     A: Clase A
@@ -2129,21 +2126,21 @@ questions:
     C: Clase C
     D: Clase D
   answer: C
-  explanation: Se requiere una CDL Clase C para cualquier vehículo único o combinación
+  explanation: Se requiere una CDL Clase C para cualquier vehículo individual o combinación
     de vehículos que no se consideren Clase A o B y que esté diseñado para transportar
     a 16 o más pasajeros, incluido el conductor.
 - id: 166
   category: safe_driving_rules
-  question: 'Los titulares de una licencia de ciclomotor (moped) a prueba de 14 a
-    15 años están restringidos a conducir:'
+  question: 'Los titulares de una licencia probatoria de ciclomotor (moped) de 14
+    a 15 años están restringidos a conducir:'
   choices:
     A: Solo con un padre o tutor
     B: Solo durante las horas del día
     C: Solo en carreteras con un límite de velocidad inferior a 35 mph
     D: Solo hacia y desde la escuela
   answer: B
-  explanation: Los titulares de una licencia de ciclomotor (moped) a prueba de 14
-    a 15 años están limitados a conducir únicamente durante el día.
+  explanation: Los titulares de una licencia probatoria de ciclomotor (moped) de 14
+    a 15 años están limitados a conducir únicamente durante las horas del día.
 - id: 167
   category: vehicle_information
   question: 'Para ser clasificado como un ciclomotor (moped) o bicicleta motorizada,
@@ -2170,8 +2167,8 @@ questions:
     operar una motocicleta de dos o tres ruedas y una motoneta (scooter).
 - id: 169
   category: vehicle_information
-  question: 'Una motoneta (motor scooter) se caracteriza por tener un motor que es
-    capaz de propulsar el vehículo a una velocidad superior a:'
+  question: 'Una motoneta (motor scooter) se caracteriza por tener un motor capaz
+    de propulsar el vehículo a una velocidad superior a:'
   choices:
     A: 15 mph en una superficie nivelada
     B: 20 mph en una superficie nivelada
@@ -2186,17 +2183,17 @@ questions:
   question: ¿Quién debe completar el programa Motorcycle Ohio antes de solicitar un
     endoso o licencia de operador de motocicleta?
   choices:
-    A: Todos los solicitantes por primera vez, independientemente de la edad
+    A: Todos los solicitantes por primera vez, independientemente de su edad
     B: Personas menores de 18 años
     C: Personas menores de 21 años
-    D: Cualquier persona que repruebe la prueba de habilidades en su primer intento
+    D: Cualquier persona que no apruebe la prueba de habilidades en su primer intento
   answer: B
   explanation: El programa Motorcycle Ohio es obligatorio para las personas menores
     de 18 años antes de que puedan solicitar un endoso y/o licencia de operador de
     motocicleta.
 - id: 171
   category: license_system
-  question: ¿Después de establecer su residencia en Ohio, cuántos días tienen los
+  question: Después de establecer su residencia en Ohio, ¿cuántos días tienen los
     nuevos residentes para obtener una licencia de conducir emitida por Ohio?
   choices:
     A: 10 días
@@ -2219,7 +2216,7 @@ questions:
   answer: B
   explanation: Cuando los residentes de Ohio solicitan o renuevan el registro de su
     vehículo, se les pregunta si desean contribuir con $1 al fondo Save Our Sight
-    (Salva Nuestra Vista), el cual asegura que los niños en Ohio tengan una buena
+    (Salvemos Nuestra Vista), el cual asegura que los niños en Ohio tengan una buena
     visión y ojos sanos.
 - id: 173
   category: license_system
@@ -2237,8 +2234,8 @@ questions:
 - id: 174
   category: license_system
   question: Cuando completa un formulario de registro de votantes en una Agencia de
-    Licencias del Registrador Adjunto (Deputy Registrar), ¿a dónde envía el registrador
-    adjunto el formulario completado?
+    Licencias del Registrador Adjunto (Deputy Registrar License Agency), ¿a dónde
+    envía el registrador adjunto el formulario completado?
   choices:
     A: Al Departamento de Transporte de Ohio
     B: A la Comisión Federal de Elecciones
@@ -2276,19 +2273,20 @@ questions:
 - id: 177
   category: license_system
   question: ¿Qué debe proporcionar al solicitar una tarjeta de identificación de Ohio
-    para su hijo en una Agencia de Licencias del Registrador Adjunto (Deputy Registrar)?
+    para su hijo en una Agencia de Licencias del Registrador Adjunto (Deputy Registrar
+    License Agency)?
   choices:
     A: Documentos de identidad de la Lista de Documentos Aceptables
-    B: Un formulario de Parientes Cercanos (Next of Kin) completado
+    B: Un formulario de Pariente Cercano (Next of Kin) completado
     C: La identificación escolar y la boleta de calificaciones del niño
     D: Un formulario de registro de votantes
   answer: A
   explanation: Para solicitar una tarjeta de identificación de Ohio para un niño,
     debe visitar una Agencia de Licencias del Registrador Adjunto y proporcionar documentos
-    de identidad de la Lista de Documentos Aceptables.
+    de identidad de la Lista de Documentos Aceptables (Acceptable Documents List).
 - id: 178
   category: driver_responsibility
-  question: Bajo el programa de Información de Contacto de Emergencia de Parientes
+  question: Bajo el programa de Información de Contacto de Emergencia para Parientes
     Cercanos (Next of Kin), ¿cuál es el número máximo de contactos de emergencia que
     un residente de Ohio puede identificar?
   choices:
@@ -2297,23 +2295,23 @@ questions:
     C: Tres
     D: Cuatro
   answer: B
-  explanation: A través del programa de Información de Contacto de Emergencia de Parientes
-    Cercanos (Next of Kin), los residentes de Ohio pueden identificar hasta dos contactos
+  explanation: A través del programa de Información de Contacto de Emergencia para
+    Parientes Cercanos, los residentes de Ohio pueden identificar hasta dos contactos
     de emergencia.
 - id: 179
   category: driver_responsibility
   question: ¿Cuál es el propósito del programa de Información de Contacto de Emergencia
-    de Parientes Cercanos (Next of Kin)?
+    para Parientes Cercanos (Next of Kin)?
   choices:
-    A: Notificar a los familiares cuando caduca la licencia de conducir
+    A: Notificar a los familiares cuando vence la licencia de conducir
     B: Permitir que las fuerzas del orden notifiquen a los contactos si una emergencia
       deja a una persona incapaz de comunicarse
     C: Proporcionar una dirección de respaldo para los envíos por correo del BMV
     D: Registrar a los miembros de la familia para votar
   answer: B
   explanation: El programa permite que las fuerzas del orden notifiquen a los contactos
-    de emergencia cuando un accidente o una emergencia deja a la persona incapaz de
-    comunicarse con la policía o los servicios médicos de emergencia.
+    de emergencia cuando un accidente o emergencia deja a la persona incapaz de comunicarse
+    con la policía o los socorristas médicos de emergencia.
 - id: 180
   category: license_system
   question: ¿Cuál de los siguientes NO es un método válido para agregar información
@@ -2365,8 +2363,8 @@ questions:
     D: Cualquier familiar directo de un veterano
   answer: C
   explanation: Cualquier veterano, personal en servicio activo o reservista de las
-    Fuerzas Armadas de los Estados Unidos puede solicitar que se muestre la designación
-    'ARMED FORCES' en su licencia de conducir o tarjeta de identificación de Ohio.
+    Fuerzas Armadas de los Estados Unidos puede solicitar que la designación 'ARMED
+    FORCES' aparezca en su licencia de conducir o tarjeta de identificación de Ohio.
 - id: 184
   category: license_system
   question: ¿Cuál de los siguientes documentos es aceptable presentar al solicitar
@@ -2398,15 +2396,14 @@ questions:
   question: ¿A dónde puede acudir un solicitante para cambiar su estado de votante
     o registrarse para votar en persona al realizar trámites de licencia?
   choices:
-    A: A cualquier Agencia de Licencias del Registrador Adjunto (Deputy Registrar
-      License Agency)
-    B: A cualquier estación de policía local
-    C: A cualquier puesto de la Patrulla de Caminos del Estado de Ohio (Ohio State
-      Highway Patrol)
-    D: A cualquier biblioteca pública
+    A: Cualquier Agencia de Licencias de Registrador Adjunto (Deputy Registrar License
+      Agency)
+    B: Cualquier estación de policía local
+    C: Cualquier puesto de la Patrulla de Caminos del Estado de Ohio
+    D: Cualquier biblioteca pública
   answer: A
   explanation: El estado de votante se puede cambiar en cualquier Agencia de Licencias
-    del Registrador Adjunto completando un Formulario de Registro de Votante/Cambio
+    de Registrador Adjunto completando un Formulario de Registro de Votante/Cambio
     de Dirección.
 - image: stop.png
   category: signs_and_signals
@@ -2414,12 +2411,12 @@ questions:
   choices:
     A: Reduzca la velocidad y proceda con precaución
     B: Deténgase por completo
-    C: Ceda el paso al tráfico que viene en sentido contrario
+    C: Ceda el paso al tráfico que se aproxima
     D: Deténgase solo si hay otros vehículos presentes
   answer: B
   explanation: Una señal de PARE (STOP) roja y octagonal significa que debe detenerse
-    por completo en la línea de parada, en el cruce de peatones o antes de entrar
-    en la intersección. Verifique el tráfico y los peatones antes de continuar.
+    por completo en la línea de parada, el paso de peatones o antes de entrar en la
+    intersección. Verifique el tráfico y los peatones antes de continuar.
   id: 187
 - image: yield.png
   category: signs_and_signals
@@ -2431,8 +2428,8 @@ questions:
     D: Continuar sin detenerse
   answer: C
   explanation: Una señal triangular roja y blanca de CEDA EL PASO (YIELD) significa
-    que debe reducir la velocidad y ceder el paso al tráfico y a los peatones. Debe
-    detenerse si es necesario para permitir que otros pasen de manera segura.
+    que debe reducir la velocidad y ceder el derecho de paso al tráfico y a los peatones.
+    Debe detenerse si es necesario para permitir que otros pasen con seguridad.
   id: 188
 - image: wrong_way.png
   category: signs_and_signals
@@ -2444,7 +2441,7 @@ questions:
     D: Aumentar la velocidad para salir del área rápidamente
   answer: C
   explanation: Una señal roja y blanca de SENTIDO CONTRARIO (WRONG WAY) significa
-    que está viajando contra el tráfico en una carretera de un solo sentido o en una
+    que está viajando en contra del tráfico en una calle de un solo sentido o en una
     rampa de autopista. Deténgase inmediatamente y dé la vuelta o retroceda de manera
     segura.
   id: 189
@@ -2484,7 +2481,7 @@ questions:
   answer: B
   explanation: Una señal amarilla en forma de diamante con la silueta de un ciervo
     advierte que estos animales cruzan la carretera con frecuencia en esta zona. Reduzca
-    la velocidad y esté atento a los animales, especialmente al amanecer y al anochecer.
+    la velocidad y esté atento a los animales, especialmente al amanecer y al atardecer.
   id: 192
 - image: school_zone.png
   category: signs_and_signals
@@ -2492,12 +2489,12 @@ questions:
   choices:
     A: Un cruce de ferrocarril
     B: Una zona de construcción
-    C: Una zona escolar o cruce escolar
+    C: Una zona escolar o un cruce escolar
     D: Una zona de hospital
   answer: C
-  explanation: Una señal pentagonal (de 5 lados) de color amarillo-verde fluorescente
-    indica una zona escolar o un cruce escolar. Reduzca la velocidad y esté atento
-    a los niños.
+  explanation: Una señal en forma de pentágono (5 lados) de color amarillo verdoso
+    fluorescente indica una zona escolar o un cruce escolar. Reduzca la velocidad
+    y esté atento a los niños.
   id: 193
 - image: railroad_crossbuck.png
   category: signs_and_signals
@@ -2508,34 +2505,34 @@ questions:
     C: En la entrada de un hospital
     D: En un puente peatonal
   answer: B
-  explanation: La señal blanca en forma de X (aspa) de cruce de ferrocarril se coloca
-    en los cruces de vías férreas. Significa que debe ceder el paso a los trenes.
-    Si se acerca un tren, debe detenerse.
+  explanation: La señal blanca en forma de X (cruz de San Andrés) se coloca en los
+    cruces de ferrocarril. Significa que debe ceder el paso a los trenes. Si se aproxima
+    un tren, debe detenerse.
   id: 194
 - image: sharp_turn_right.png
   category: signs_and_signals
   question: ¿En qué se diferencia esta señal de una señal de curva?
   choices:
     A: Indica un giro menos pronunciado
-    B: Advierte de un giro cerrado que requiere una mayor reducción de velocidad
+    B: Advierte de un giro brusco que requiere una mayor reducción de velocidad
     C: Significa girar a la derecha solamente
-    D: Solo se usa en autopistas
+    D: Solo se utiliza en autopistas
   answer: B
-  explanation: Una señal de giro cerrado (con una flecha más angulada) indica un giro
-    más pronunciado que una señal de curva. Debe reducir su velocidad de manera más
-    significativa antes de este giro.
+  explanation: Una señal de giro brusco (con una flecha más angulada) indica un giro
+    más cerrado que una señal de curva. Debe reducir su velocidad de manera más significativa
+    antes de este giro.
   id: 195
 - image: divided_highway.png
   category: signs_and_signals
   question: ¿Qué indica esta señal que hay más adelante?
   choices:
     A: Fin de la carretera
-    B: Tráfico de doble sentido
-    C: Comienza una carretera dividida
+    B: Tráfico en ambos sentidos
+    C: Comienza una autopista dividida
     D: Salida de la autopista
   answer: C
   explanation: Esta señal advierte que la carretera más adelante se convierte en una
-    carretera dividida con una mediana o barrera que separa el tráfico opuesto. Manténgase
+    autopista dividida con una mediana o barrera que separa el tráfico opuesto. Manténgase
     a la derecha.
   id: 196
 - image: handicap_parking.png
@@ -2543,14 +2540,14 @@ questions:
   question: ¿Quién tiene permitido estacionar en un espacio marcado con esta señal?
   choices:
     A: Cualquier persona por menos de 15 minutos
-    B: Solo personas mayores
-    C: Solo vehículos que exhiban un cartel o placa de discapacidad válida
+    B: Solo personas de la tercera edad
+    C: Solo vehículos que exhiban un cartel o placa de discapacidad vigente
     D: Cualquier conductor con un pasajero que tenga una discapacidad
   answer: C
   explanation: Una señal azul con el símbolo de la silla de ruedas marca el estacionamiento
     reservado para personas con discapacidades. Solo los vehículos que exhiban un
     cartel o placa de matrícula de estacionamiento para personas con discapacidad
-    válida pueden estacionar en estos espacios. Las infracciones conllevan multas
+    vigente pueden estacionar en estos espacios. Las infracciones conllevan multas
     elevadas.
   id: 197
 - id: 198
@@ -2558,38 +2555,38 @@ questions:
   question: ¿Qué establece el Manual del Conductor de Ohio sobre su autoridad legal
     en relación con la ley estatal?
   choices:
-    A: Sustituye al Código Revisado de Ohio (Ohio Revised Code) si hay un conflicto.
-    B: No es un sustituto y no reemplaza al Código Revisado de Ohio.
+    A: Reemplaza al Código Revisado de Ohio si hay un conflicto.
+    B: No es un sustituto del Código Revisado de Ohio y no lo reemplaza.
     C: Contiene todas las leyes de vehículos motorizados aplicables en su totalidad.
-    D: Sirve como el documento legal principal para los procedimientos en el tribunal
+    D: Sirve como el documento legal principal para los procedimientos en los tribunales
       de tránsito.
   answer: B
-  explanation: 'El manual establece: ''Este manual no es un sustituto y no reemplaza
-    al Código Revisado de Ohio ni al Código Administrativo de Ohio''.'
+  explanation: 'El manual establece: "Este manual no es un sustituto del Código Revisado
+    de Ohio o del Código Administrativo de Ohio, y no los reemplaza".'
 - id: 199
   category: license_system
   question: ¿Cuál es un posible resultado del examen de la vista al solicitar una
     licencia de conducir de Ohio?
   choices:
     A: Un aumento automático en sus tarifas de seguro.
-    B: Un requisito para completar un curso de conducción avanzada.
+    B: El requisito de completar un curso de conducción avanzada.
     C: La aplicación de restricciones de conducción a su licencia.
-    D: Emisión inmediata de una licencia de conducir comercial.
+    D: La emisión inmediata de una licencia de conducir comercial.
   answer: C
-  explanation: 'El manual establece: ''Podrían aplicarse restricciones de conducción
-    según los resultados del examen de la vista''.'
+  explanation: 'El manual establece: "Se podrían aplicar restricciones de conducción
+    según los resultados del examen de la vista".'
 - id: 200
   category: sharing_the_road
   question: Según el índice del manual, ¿en qué sección puede encontrar información
-    sobre la 'Ley de Hacerse a un Lado' (Move Over Law) de Ohio?
+    sobre la "Ley de Moverse al Carril de al Lado" (Move Over Law) de Ohio?
   choices:
-    A: 'Sección 6: Leyes estatales y sanciones'
+    A: 'Sección 6: Leyes y sanciones estatales'
     B: 'Sección 7: Situaciones especiales de conducción'
     C: 'Sección 9: Compartir la carretera'
     D: 'Sección 10: Situaciones de emergencia'
   answer: C
-  explanation: 'El índice enumera las ''Leyes de Hacerse a un Lado'' (Move Over Laws)
-    en la Sección 9: Compartir la carretera (Sharing the Road).'
+  explanation: 'El índice enumera las "Leyes de Moverse al Carril de al Lado" (Move
+    Over Laws) en la Sección 9: Compartir la carretera.'
 - id: 201
   category: safe_driving_rules
   question: ¿Si necesita encontrar información sobre las reglas de estacionamiento,
@@ -2598,7 +2595,7 @@ questions:
     A: 'Sección 4: Reglas de la carretera'
     B: 'Sección 5: Aprender a conducir'
     C: 'Sección 2: Antes de conducir'
-    D: 'Sección 11: Realización del examen de conducir'
+    D: 'Sección 11: Realizar el examen de conducir'
   answer: B
   explanation: 'El índice muestra que el ''Estacionamiento'' es un tema cubierto en
     la Sección 5: Aprender a conducir.'
@@ -2622,7 +2619,7 @@ questions:
     A: 'Sección 10: Situaciones de emergencia'
     B: 'Sección 2: Antes de conducir'
     C: 'Sección 7: Situaciones especiales de conducción'
-    D: 'Sección 11: Realización del examen de conducir'
+    D: 'Sección 11: Realizar el examen de conducir'
   answer: A
   explanation: 'El índice indica que las ''Fallas del vehículo'' se tratan en la Sección
     10: Situaciones de emergencia.'
@@ -2634,10 +2631,10 @@ questions:
     A: 'Sección 5: Aprender a conducir'
     B: 'Sección 8: Consejos para una conducción segura'
     C: 'Sección 2: Antes de conducir'
-    D: 'Sección 11: Realización del examen de conducir'
+    D: 'Sección 11: Realizar el examen de conducir'
   answer: C
-  explanation: 'El índice enumera la ''Inspección de su vehículo'' como el primer
-    tema de la Sección 2: Antes de conducir.'
+  explanation: 'El índice enumera ''Inspección de su vehículo'' como el primer tema
+    de la Sección 2: Antes de conducir.'
 - id: 205
   category: license_system
   question: Según la lista de verificación 'Cómo obtener su licencia de conducir',
@@ -2647,10 +2644,10 @@ questions:
     A: Programar su examen de conducir.
     B: Completar un curso de educación vial.
     C: Renovar su tarjeta de identificación de Ohio.
-    D: Reunir los documentos de prueba de identidad de la Lista de documentos aceptables.
+    D: Reunir los documentos de prueba de identidad de la Lista de Documentos Aceptables.
   answer: D
   explanation: La lista de verificación en la página 1 enumera 'Reunir documentos
-    de prueba de identidad utilizando la Lista de documentos aceptables' como un paso
+    de prueba de identidad utilizando la Lista de Documentos Aceptables' como un paso
     antes de obtener un TIPIC.
 - id: 206
   category: signs_and_signals
@@ -2704,23 +2701,23 @@ questions:
     de la Sección 13: ¿Qué más debo saber?'
 - id: 210
   category: defensive_driving
-  question: ¿En qué sección del Manual del Conductor de Ohio se analiza el tema de
-    la 'Conducción agresiva' y sus peligros?
+  question: ¿En qué sección del Manual del Conductor de Ohio se trata el tema de la
+    'Conducción agresiva' y sus peligros?
   choices:
     A: 'Sección 6: Leyes estatales y sanciones'
-    B: 'Sección 3: Esté alerta'
+    B: 'Sección 3: Estar alerta'
     C: 'Sección 8: Consejos para una conducción segura'
     D: 'Sección 10: Situaciones de emergencia'
   answer: B
   explanation: 'El índice enumera la ''Conducción agresiva'' como un tema de la Sección
-    3: Esté alerta.'
+    3: Estar alerta.'
 - id: 211
   category: driver_testing
   question: ¿Qué sección del manual detalla los requisitos para el Curso Abreviado
-    de Capacitación para Conductores Adultos (Abbreviated Adult Driver Training Course)?
+    de Capacitación para Conductores Adultos?
   choices:
     A: 'Sección 1: Cómo obtener su licencia de conducir'
-    B: 'Sección 5: Aprender a conducir'
+    B: 'Sección 5: Aprendiendo a conducir'
     C: 'Sección 11: Realización del examen de conducir'
     D: 'Sección 12: Compra de su licencia de conducir'
   answer: C
@@ -2755,8 +2752,8 @@ questions:
     conocimientos".'
 - id: 214
   category: license_system
-  question: Para un titular de TIPIC menor de 16 años, ¿quién tiene permitido legalmente
-    ocupar el asiento del pasajero delantero mientras conduce?
+  question: Para un titular de TIPIC menor de 16 años, ¿quién está legalmente autorizado
+    a ocupar el asiento del pasajero delantero mientras conduce?
   choices:
     A: Cualquier conductor con licencia que tenga al menos 18 años.
     B: Un hermano que tenga al menos 18 años y posea una licencia de conducir válida.
@@ -2771,7 +2768,7 @@ questions:
 - id: 215
   category: license_system
   question: Un titular de TIPIC de 16 años conduce con un conductor con licencia válida
-    que tiene 21 años pero no es su padre ni tutor. ¿Durante qué horas está prohibido
+    que tiene 21 años pero no es su padre ni su tutor. ¿Durante qué horas está prohibido
     esto?
   choices:
     A: De 10 p.m. a 5 a.m.
@@ -2781,7 +2778,7 @@ questions:
   answer: C
   explanation: Para un titular de TIPIC de 16 a 17 años, se permite conducir con cualquier
     conductor con licencia válida de 21 años o más, "excepto desde la medianoche hasta
-    las 6 a. m., cuando el conductor debe estar acompañado por un padre, tutor o custodio
+    las 6 a.m., cuando el conductor debe estar acompañado por un padre, tutor o custodio
     que posea una licencia de conducir válida".
 - id: 216
   category: safe_driving_rules
@@ -2795,7 +2792,7 @@ questions:
     C: Solo se permiten familiares como pasajeros.
     D: No se permite más de un pasajero en el asiento trasero.
   answer: B
-  explanation: Para todas las edades, una restricción de la TIPIC es que el "número
+  explanation: Para todas las edades, una restricción de la TIPIC es que el "Número
     total de ocupantes en el vehículo no puede exceder el número total de cinturones
     de seguridad instalados en el vehículo".
 - id: 217
@@ -2814,8 +2811,8 @@ questions:
     menos 14 días".'
 - id: 218
   category: license_system
-  question: Un residente temporal que posee una licencia extranjera no vencida de
-    ¿cuál de los siguientes países NO está exento de los requisitos de educación vial
+  question: ¿Un residente temporal que posee una licencia extranjera no vencida de
+    cuál de los siguientes países NO está exento de los requisitos de educación vial
     de Ohio?
   choices:
     A: Alemania
@@ -2828,16 +2825,16 @@ questions:
     no está en esta lista.
 - id: 219
   category: vehicle_information
-  question: Durante una inspección del vehículo, ¿cuál es el requisito para el sistema
-    de dirección?
+  question: Durante una inspección del vehículo, ¿cuál es el requisito para el conjunto
+    de la dirección?
   choices:
     A: Debe ser un sistema de dirección asistida.
     B: No debe tener un juego excesivo en el volante.
     C: El volante debe tener una bolsa de aire.
     D: Debe poder girar las ruedas de tope a tope en menos de tres rotaciones.
   answer: B
-  explanation: La ley de Ohio exige un "sistema de dirección que funcione normalmente,
-    sin un juego excesivo en el volante".
+  explanation: La ley de Ohio exige un "Conjunto de dirección que funcione normalmente,
+    sin juego excesivo en el volante".
 - id: 220
   category: vehicle_information
   question: Según la ley de Ohio, los dos reflectores rojos en la parte trasera de
@@ -2848,7 +2845,7 @@ questions:
     C: 500 pies
     D: 1,000 pies
   answer: B
-  explanation: El vehículo debe tener "dos reflectores rojos en la parte trasera del
+  explanation: El vehículo debe tener "Dos reflectores rojos en la parte trasera del
     vehículo, visibles desde 300 pies".
 - id: 221
   category: vehicle_information
@@ -2860,19 +2857,19 @@ questions:
     C: 100 pies
     D: 200 pies
   answer: B
-  explanation: El vehículo debe tener una 'luz blanca para iluminar la placa de matrícula
+  explanation: El vehículo debe tener una 'Luz blanca para iluminar la placa de matrícula
     trasera, visible desde 50 pies'.
 - id: 222
   category: vehicle_information
-  question: ¿Además del freno de servicio, qué otro sistema de frenado se requiere
-    en un vehículo y de qué debe ser capaz?
+  question: Además del freno de servicio, ¿qué otro sistema de frenado se requiere
+    en un vehículo y qué debe ser capaz de hacer?
   choices:
     A: Un sistema de frenos antibloqueo (ABS) que evite el derrape.
     B: Un freno hidráulico secundario para paradas de emergencia.
     C: Un freno de motor para controlar la velocidad en pendientes descendentes.
     D: Un freno de estacionamiento que pueda sostener el vehículo en una pendiente.
   answer: D
-  explanation: Un vehículo debe tener un 'freno de estacionamiento que sea adecuado
+  explanation: Un vehículo debe tener un 'Freno de estacionamiento que sea adecuado
     para sostener el vehículo en una pendiente'.
 - id: 223
   category: driver_testing
@@ -2893,8 +2890,8 @@ questions:
   question: Además de estar en una condición insegura que ponga en peligro a una persona,
     ¿qué más prohíbe la ley de Ohio en un vehículo?
   choices:
-    A: El polarizado de ventanas de cualquier tipo que no sea de fábrica.
-    B: Cualquier modificación del sistema de escape que no sea de fábrica.
+    A: Vidrios polarizados de cualquier tipo instalados posteriormente.
+    B: Cualquier modificación no original de fábrica en el sistema de escape.
     C: Objetos que sobresalgan o bordes afilados rotos.
     D: Calcomanías en el parachoques que puedan distraer a otros conductores.
   answer: C
@@ -2904,18 +2901,18 @@ questions:
     con ellos''.'
 - id: 225
   category: license_system
-  question: Al solicitar un TIPIC, los solicitantes deben presentar documentos para
-    demostrar varios elementos de identidad. ¿Cuál de los siguientes NO es uno de
-    los elementos requeridos enumerados?
+  question: Al solicitar una TIPIC (Tarjeta de Identificación de Permiso de Instrucción
+    Temporal), los solicitantes deben presentar documentos para demostrar varios elementos
+    de identidad. ¿Cuál de los siguientes NO es uno de los elementos requeridos enumerados?
   choices:
     A: Nombre legal completo
-    B: Prueba de empleo
+    B: Comprobante de empleo
     C: Número de Seguro Social (si se le ha asignado)
     D: Ciudadanía o presencia legal
   answer: B
   explanation: Los elementos requeridos son 'Nombre legal completo, fecha de nacimiento,
     número de Seguro Social (si se le ha asignado), ciudadanía o presencia legal,
-    dirección de residencia en Ohio'. La prueba de empleo no está en la lista.
+    dirección de residencia en Ohio'. El comprobante de empleo no está en la lista.
 - id: 226
   category: driver_testing
   question: El examen de conocimientos para conductores de Ohio está disponible en
@@ -2927,15 +2924,15 @@ questions:
     C: Criollo haitiano
     D: Ruso
   answer: B
-  explanation: El manual enumera los idiomas disponibles como 'Lenguaje de Señas Americano
+  explanation: El manual enumera los idiomas disponibles como 'lenguaje de señas americano
     (ASL), árabe, chino, inglés, francés, criollo haitiano, japonés, ruso, somalí
     y español'. El alemán no está en esta lista y requeriría que el solicitante proporcione
     su propio intérprete.
 - id: 227
   category: driver_testing
   question: ¿Cuál de las siguientes es una adaptación específica por discapacidad
-    que está disponible a pedido en una Estación de Examen de Conductores para el
-    examen de conocimientos o de habilidades?
+    que está disponible previa solicitud en una Estación de Examen de Conductores
+    para el examen de conocimientos o de habilidades?
   choices:
     A: Un supervisor de examen para leer las preguntas en voz alta y registrar las
       respuestas.
@@ -2943,14 +2940,14 @@ questions:
     C: El uso de un dispositivo traductor electrónico personal.
     D: Un límite de tiempo extendido para completar el examen.
   answer: B
-  explanation: 'El manual establece: ''Las adaptaciones disponibles a pedido en la
-    Estación de Examen de Conductores incluyen un examen de conocimientos en audio,
-    un examen de conocimientos en papel impreso, un examen de conocimientos en Lenguaje
-    de Señas Americano e instrucciones visuales durante el examen de conducción...'''
+  explanation: 'El manual establece: ''Las adaptaciones disponibles previa solicitud
+    en la Estación de Examen de Conductores incluyen un examen de conocimientos en
+    audio, un examen de conocimientos en papel impreso, un examen de conocimientos
+    en lenguaje de señas americano e instrucciones visuales durante el examen de conducción...'''
 - id: 228
   category: vehicle_information
   question: Según la ley de Ohio, ¿cuál es la distancia mínima desde la cual debe
-    ser audible la bocina (claxon) de un vehículo?
+    ser audible la bocina de un vehículo?
   choices:
     A: 100 pies
     B: 200 pies
@@ -2967,7 +2964,7 @@ questions:
     A: En el manual del propietario del vehículo
     B: En el flanco (pared lateral) del neumático
     C: En el marco de la puerta del vehículo
-    D: En la tapa del depósito de gasolina
+    D: En la tapa del tanque de gasolina
   answer: C
   explanation: El manual especifica que la presión de los neumáticos recomendada por
     el fabricante del vehículo se indica en el marco de la puerta.
@@ -2988,20 +2985,19 @@ questions:
     del presidente, sus neumáticos están demasiado desgastados''.'
 - id: 231
   category: safe_driving_rules
-  question: ¿Bajo qué circunstancia debe evitar el uso de las luces altas (luces de
-    carretera)?
+  question: ¿Bajo qué circunstancia debe evitar el uso de las luces altas de sus faros?
   choices:
-    A: Al conducir por una carretera rural sin otros vehículos
+    A: Al conducir por una carretera rural sin otros coches
     B: Al conducir con niebla o lluvia intensa
     C: Cuando se aproxima un vehículo en sentido contrario
     D: Al conducir a más de 55 mph
   answer: C
-  explanation: La ley de Ohio permite el uso de luces altas en cualquier momento en
-    que se utilicen los faros, excepto cuando se aproxima un vehículo en sentido contrario.
+  explanation: La ley de Ohio permite el uso de luces altas en cualquier momento que
+    se utilicen los faros, excepto cuando se aproxima un vehículo en sentido contrario.
 - id: 232
   category: safe_driving_rules
-  question: 'Para una postura de conducción adecuada y seguridad de las bolsas de
-    aire (airbags), la parte superior del volante debe estar colocada:'
+  question: 'Para una postura de conducción adecuada y seguridad de la bolsa de aire
+    (airbag), la parte superior del volante debe estar posicionada:'
   choices:
     A: Al nivel de su barbilla
     B: No más arriba de la parte superior de sus hombros
@@ -3009,97 +3005,96 @@ questions:
     D: Tan bajo como sea posible, siempre que pueda ver los indicadores
   answer: B
   explanation: El manual establece que cuando el asiento está ajustado correctamente,
-    'la parte superior del volante no está más arriba de la parte superior de sus
-    hombros y queda por debajo del nivel de la barbilla'.
+    'la parte superior del volante no debe estar más arriba de la parte superior de
+    sus hombros y debe estar por debajo del nivel de la barbilla'.
 - id: 233
   category: safe_driving_rules
   question: ¿Cuál es la forma correcta de usar el cinturón de seguridad de hombro?
   choices:
-    A: Debajo del brazo para mayor comodidad
+    A: Metido debajo del brazo para mayor comodidad
     B: Colocado holgadamente sobre el hombro
     C: Detrás de la espalda si resulta incómodo
-    D: Cruzando el hombro y el pecho con la mínima holgura posible
+    D: Cruzando el hombro y el pecho con el mínimo de holgura
   answer: D
   explanation: El manual especifica que el cinturón de hombro debe usarse cruzando
     el hombro y el pecho con una holgura mínima, si la hay, y advierte no usarlo debajo
-    del brazo o detrás de la espalda.
+    del brazo ni detrás de la espalda.
 - id: 234
   category: driver_responsibility
   question: ¿Qué tipo de lentes correctivos deben evitarse al conducir de noche?
   choices:
     A: Lentes bifocales
     B: Lentes antirreflejantes
-    C: Lentes oscuros o polarizados
+    C: Lentes oscuros o teñidos
     D: Cualquier tipo de lentes de contacto
   answer: C
   explanation: El manual aconseja a los conductores 'evitar el uso de lentes correctivos
-    oscuros o polarizados por la noche'.
+    oscuros o teñidos por la noche'.
 - id: 235
   category: vehicle_information
   question: ¿Cuál es la transmisión de luz máxima permitida para las ventanas laterales
     del asiento delantero en Ohio?
   choices:
     A: 70% de transmisión de luz
-    B: 50% de transmisión de luz, más o menos 3%
+    B: 50% de transmisión de luz, más o menos un 3%
     C: 35% de transmisión de luz
     D: No hay restricciones en las ventanas laterales
   answer: B
-  explanation: 'El manual establece que la transmisión de luz de las ventanas para
-    las ''ventanas laterales del asiento delantero: 50% de transmisión de luz, más
-    o menos 3%''.'
+  explanation: El manual establece que la transmisión de luz para las 'ventanas laterales
+    del asiento delantero es del 50% de transmisión de luz, más o menos un 3%'.
 - id: 236
   category: safe_driving_rules
   question: Según el manual, ¿cuál es el propósito principal de usar las luces de
     emergencia (hazard lights) de su vehículo?
   choices:
-    A: Para indicar que está a punto de girar en medio de tráfico intenso
+    A: Para señalar que está a punto de dar una vuelta en tráfico denso
     B: Para indicar que está estacionado en doble fila por un corto tiempo
     C: Para aumentar la visibilidad de un vehículo detenido en o cerca de una calzada
-    D: Para advertir a otros conductores que circula a una velocidad inferior al límite
+    D: Para advertir a otros conductores que circula más lento que el límite de velocidad
   answer: C
-  explanation: El manual indica 'usar las luces de emergencia para aumentar la visibilidad
+  explanation: El manual indica 'use las luces de emergencia para aumentar la visibilidad
     de un vehículo detenido en o cerca de una calzada'.
 - id: 237
   category: safe_driving_rules
   question: Para ajustar correctamente el espejo lateral izquierdo y reducir los puntos
-    ciegos, ¿dónde debe colocar la cabeza?
+    ciegos, ¿dónde debe posicionar su cabeza?
   choices:
-    A: Inclinada hacia la derecha, directamente sobre la consola central
+    A: Inclinándose hacia la derecha, directamente sobre la consola central
     B: Sentado erguido en su posición normal de conducción
     C: Apoyando la cabeza contra la ventana cerrada del lado del conductor
-    D: Inclinándose hacia adelante hasta que la cabeza esté cerca del volante
+    D: Inclinándose hacia adelante hasta que su cabeza esté cerca del volante
   answer: C
-  explanation: Para ajustar el espejo lateral izquierdo, el manual le indica 'apoyar
+  explanation: Para ajustar el espejo del lado izquierdo, el manual le instruye 'apoyar
     la cabeza contra la ventana cerrada del lado del conductor' y ajustar el espejo
     hasta que el borde izquierdo del vehículo sea apenas visible.
 - id: 238
   category: driver_responsibility
-  question: ¿La ley de uso obligatorio del cinturón de seguridad de Ohio exige que
-    qué ocupantes de la mayoría de los vehículos de pasajeros usen cinturones de seguridad?
+  question: La ley de uso obligatorio del cinturón de seguridad de Ohio, ¿a qué ocupantes
+    de la mayoría de los vehículos de pasajeros les exige usar cinturones de seguridad?
   choices:
-    A: Todos los ocupantes, independientemente de su posición en el asiento
-    B: Solo el conductor del vehículo
-    C: Conductores y ocupantes del asiento delantero
-    D: Todos los ocupantes menores de 18 años
+    A: A todos los ocupantes, independientemente de su posición en el asiento
+    B: Solo al conductor del vehículo
+    C: A los conductores y a los ocupantes del asiento delantero
+    D: A todos los ocupantes menores de 18 años
   answer: C
-  explanation: El manual establece que la ley de Ohio 'exige que los conductores y
-    los ocupantes del asiento delantero de la mayoría de los vehículos de pasajeros
+  explanation: El manual establece que la ley de Ohio 'requiere que los conductores
+    y los ocupantes del asiento delantero de la mayoría de los vehículos de pasajeros
     usen cinturones de seguridad'.
 - id: 239
   category: vehicle_information
-  question: ¿Desde qué distancia mínima deben ser visibles las luces rojas de freno
-    de un vehículo cuando se aplican los frenos?
+  question: ¿Desde qué distancia mínima deben ser visibles las luces rojas de parada
+    (luces de freno) de un vehículo cuando se aplican los frenos?
   choices:
     A: 200 pies
     B: 300 pies
     C: 500 pies
     D: 1000 pies
   answer: C
-  explanation: El manual requiere 'dos luces rojas de freno visibles desde 500 pies
-    cuando se aplican los frenos'.
+  explanation: El manual requiere 'dos luces rojas de parada (luces de freno) visibles
+    desde 500 pies cuando se aplican los frenos'.
 - id: 240
   category: safe_driving_rules
-  question: ¿Cuál es el espejo principal que un conductor debe usar para la visión
+  question: ¿Cuál es el espejo principal que un conductor debe usar para la vista
     hacia la parte trasera del vehículo?
   choices:
     A: El espejo exterior del lado izquierdo
@@ -3108,7 +3103,7 @@ questions:
     D: Una combinación de ambos espejos exteriores
   answer: C
   explanation: 'El manual establece: ''El espejo retrovisor es el espejo principal
-    para la visión hacia atrás''.'
+    para la vista hacia la parte trasera''.'
 - id: 241
   category: vehicle_information
   question: Además de las luces traseras y las luces de freno, ¿un vehículo debe tener
@@ -3177,9 +3172,9 @@ questions:
       a la propiedad.
     D: Usar un teléfono celular sin un dispositivo de manos libres.
   answer: C
-  explanation: El manual define que la conducción agresiva ocurre cuando un individuo
-    comete intencionalmente una acción que pone en peligro a otras personas o a la
-    propiedad.
+  explanation: El manual define la conducción agresiva como aquella que ocurre cuando
+    un individuo comete intencionalmente una acción que pone en peligro a otras personas
+    o a la propiedad.
 - id: 246
   category: alcohol_drugs_health
   question: Además de perjudicar el juicio y el tiempo de reacción, ¿cómo pueden el
@@ -3224,7 +3219,7 @@ questions:
   choices:
     A: Debe detenerse antes de girar.
     B: Puede girar en la dirección de la flecha sin detenerse.
-    C: El tráfico opuesto también tiene una luz verde.
+    C: El tráfico opuesto también tiene luz verde.
     D: Debe reducir la velocidad y prepararse para detenerse.
   answer: B
   explanation: El manual establece que un semáforo marcado con una flecha verde indica
@@ -3256,15 +3251,15 @@ questions:
 - id: 252
   category: sharing_the_road
   question: Además de los vehículos de seguridad pública y los peatones, ¿a cuál de
-    los siguientes debe un conductor ceder el derecho de paso?
+    los siguientes debe ceder el paso un conductor?
   choices:
     A: Camiones de entrega de correo.
     B: Vehículos en un cortejo fúnebre.
     C: Vehículos que giran a la derecha en rojo.
-    D: Vehículos que van a exceso de velocidad.
+    D: Vehículos que exceden el límite de velocidad.
   answer: B
   explanation: La ley de Ohio exige que los conductores cedan el derecho de paso a
-    los cortejos fúnebres por la seguridad de todos.
+    los cortejos fúnebres para la seguridad de todos.
 - id: 253
   category: penalties_and_points
   question: Un conductor de 18 años o más es citado por su primera infracción por
@@ -3273,11 +3268,11 @@ questions:
   choices:
     A: Pagar la multa en un plazo de 24 horas.
     B: Impugnar la multa en el tribunal.
-    C: Completar un curso de conducción distraída.
+    C: Completar un curso sobre conducción distraída.
     D: Prometer al oficial no volver a hacerlo.
   answer: C
   explanation: El manual establece que, para una primera infracción por conducción
-    distraída en dos años, completar un curso de conducción distraída puede ayudar
+    distraída en dos años, completar un curso sobre conducción distraída puede ayudar
     al conductor a evitar la multa y los puntos.
 - id: 254
   category: signs_and_signals
@@ -3287,15 +3282,15 @@ questions:
     A: Advertir a los conductores sobre posibles peligros más adelante.
     B: Proporcionar información sobre puntos de interés y servicios.
     C: Notificar a los viajeros sobre las leyes o reglamentos de tránsito.
-    D: Indicar el tipo de calzada, como una ruta interestatal o estatal.
+    D: Indicar el tipo de calzada, como una carretera interestatal o una ruta estatal.
   answer: C
-  explanation: Según el manual, 'Las señales reglamentarias regulan el movimiento
-    del tráfico. Estas señales notifican a los viajeros sobre las leyes o reglamentos
-    de tránsito'.
+  explanation: Según el manual, las señales reglamentarias regulan el movimiento del
+    tráfico. Estas señales notifican a los viajeros sobre las leyes o reglamentos
+    de tránsito.
 - id: 255
   category: signs_and_signals
-  question: Según la señal de advertencia de puente angosto, ¿qué vehículo tiene el
-    derecho de paso?
+  question: Según la señal de advertencia de puente estrecho, ¿qué vehículo tiene
+    el derecho de paso?
   choices:
     A: El vehículo más grande.
     B: El vehículo que viaja a una velocidad mayor.
@@ -3303,19 +3298,19 @@ questions:
     D: El vehículo más cercano al puente.
   answer: D
   explanation: 'El texto del manual que acompaña a la señal de advertencia de puente
-    angosto establece: ''EL VEHÍCULO MÁS CERCANO AL PUENTE TIENE EL DERECHO DE PASO''.'
+    estrecho establece: ''EL VEHÍCULO MÁS CERCANO AL PUENTE TIENE EL DERECHO DE PASO''.'
 - id: 256
   category: sharing_the_road
-  question: Si se encuentra con una persona con una señal o bandera dirigiendo el
-    tráfico en una zona de obras (Work Zone), ¿qué debe hacer?
+  question: Si encuentra a una persona con una señal o bandera dirigiendo el tráfico
+    en una zona de obras (Work Zone), ¿qué debe hacer?
   choices:
     A: Seguir sus instrucciones.
     B: Usar la bocina para señalar su intención de avanzar.
-    C: Proceder con precaución al límite de velocidad indicado.
+    C: Avanzar con precaución al límite de velocidad indicado.
     D: Detenerse y esperar a que llegue un oficial de policía.
   answer: A
-  explanation: 'El manual establece: ''En las zonas de obras, el tráfico puede estar
-    controlado por una persona con una señal o bandera que dirige el tráfico. Usted
+  explanation: 'El manual establece: ''En las zonas de obras, el tráfico puede ser
+    controlado por una persona con una señal o bandera que dirija el tráfico. Usted
     debe seguir sus instrucciones''.'
 - id: 257
   category: signs_and_signals
@@ -3324,25 +3319,25 @@ questions:
   choices:
     A: La distancia a la siguiente ciudad.
     B: La ubicación de hospitales y gasolineras.
-    C: El tipo de calzada (interestatal, de EE. UU., estatal, etc.).
+    C: El tipo de calzada (interestatal, federal, estatal, etc.).
     D: La presencia de una zona de obras más adelante.
   answer: C
-  explanation: 'El manual explica que para las ''Señales de número de ruta: La forma
-    y el color de estas señales indican el tipo de calzada: interestatal, de EE. UU.,
-    estatal, municipal, del condado o carretera local''.'
+  explanation: 'El manual explica que para las señales de número de ruta: ''La forma
+    y el color de estas señales indican el tipo de calzada: interestatal, federal
+    (U.S.), estatal, municipal, del condado o carretera local''.'
 - id: 258
   category: signs_and_signals
   question: Al conducir en una carretera con una línea amarilla continua junto a una
     línea amarilla discontinua, ¿qué es cierto para el automovilista en el carril
     con la línea continua?
   choices:
-    A: Puede rebasar solo cuando la carretera esté despejada.
-    B: Rebasar está prohibido.
+    A: Puede rebasar solo cuando el camino esté despejado.
+    B: Está prohibido rebasar.
     C: Puede rebasar solo durante las horas del día.
     D: Debe prepararse para incorporarse al otro carril.
   answer: B
-  explanation: 'El manual establece para una ''LÍNEA AMARILLA CONTINUA CON UNA LÍNEA
-    DISCONTINUA (PUNTEADA)'': ''Rebasar está prohibido para los automovilistas que
+  explanation: 'El manual establece para una línea amarilla continua con una línea
+    discontinua (de trazos): ''Está prohibido rebasar para los automovilistas que
     viajan en el carril con la línea continua''.'
 - id: 259
   category: safe_driving_rules
@@ -3350,7 +3345,7 @@ questions:
     de un carril exclusivo para giros a la izquierda en ambos sentidos?
   choices:
     A: Detenerse para esperar un espacio en el tráfico.
-    B: Usarlo como carril de circulación o de rebase.
+    B: Usarlo como carril de circulación o para rebasar.
     C: Entrar en él desde una calle lateral.
     D: Ceder el paso al tráfico que viene en sentido contrario dentro del carril.
   answer: B
@@ -3364,7 +3359,7 @@ questions:
   choices:
     A: Que el pie esté en el acelerador y la marcha esté en punto muerto (neutral).
     B: Que el pie esté en el pedal del freno y la marcha esté en estacionamiento (park).
-    C: Que los faros estén encendidos y los espejos ajustados.
+    C: Que las luces delanteras estén encendidas y los espejos ajustados.
     D: Que la marcha esté en 'D' (conducir) y la luz de giro esté encendida.
   answer: B
   explanation: 'El manual instruye: ''Para arrancar el motor, coloque el pie derecho
@@ -3372,7 +3367,7 @@ questions:
     (park)''.'
 - id: 261
   category: defensive_driving
-  question: Al prepararse para detener su vehículo, ¿cuál es el primer paso que debe
+  question: ¿Al prepararse para detener su vehículo, cuál es el primer paso que debe
     dar después de identificar la necesidad de detenerse?
   choices:
     A: Presionar el pedal del freno con firmeza.
@@ -3388,7 +3383,7 @@ questions:
   question: Al realizar un giro legal con luz roja, ¿qué debe hacer un conductor después
     de detenerse por completo?
   choices:
-    A: Avanzar de inmediato si el camino está despejado.
+    A: Avanzar inmediatamente si el camino está despejado.
     B: Tocar la bocina para alertar a los peatones y al resto del tráfico.
     C: Ceder el paso a todo el tráfico que cruza y a los peatones.
     D: Esperar a que el semáforo cambie a verde.
@@ -3436,22 +3431,22 @@ questions:
     que viajan en la misma dirección cuando sea seguro hacerlo".'
 - id: 266
   category: safe_driving_rules
-  question: Si hay un paso de peatones en una intersección pero también hay una línea
-    de parada pintada en la carretera antes del paso de peatones, ¿dónde debe detenerse?
+  question: Si hay un cruce de peatones en una intersección pero también hay una línea
+    de parada pintada en la carretera antes del cruce, ¿dónde debe detenerse?
   choices:
-    A: Sobre las líneas del paso de peatones.
+    A: Sobre las líneas del cruce de peatones.
     B: En cualquier lugar antes de la intersección.
     C: Se debe obedecer la línea de parada.
-    D: Después del paso de peatones pero antes de la intersección.
+    D: Después del cruce de peatones pero antes de la intersección.
   answer: C
   explanation: 'El manual aclara: "Debe ceder el paso a los peatones que entren o
-    estén en un paso de peatones. Si hay una línea de parada antes del paso de peatones,
+    estén en un cruce de peatones. Si hay una línea de parada antes del cruce de peatones,
     se debe obedecer la línea de parada".'
 - id: 267
   category: sharing_the_road
   question: Al acercarse a un vehículo de seguridad pública con luces intermitentes
-    en una carretera dividida, ¿cuándo NO se requiere que se mueva a la derecha y
-    se detenga?
+    en una carretera dividida, ¿cuándo NO se requiere que usted se mueva a la derecha
+    y se detenga?
   choices:
     A: Cuando el vehículo está a más de 500 pies detrás de usted
     B: Cuando usted está en el carril del extremo izquierdo
@@ -3471,21 +3466,21 @@ questions:
     C: Por fuera de la ventana del lado del conductor
     D: En la consola central
   answer: B
-  explanation: El manual aconseja "Coloque su brazo derecho en el respaldo del asiento
-    del pasajero y mire directamente a través de la ventana trasera".
+  explanation: 'El manual aconseja: "Coloque su brazo derecho en el respaldo del asiento
+    del pasajero y mire directamente a través de la ventana trasera".'
 - id: 269
   category: defensive_driving
-  question: Aunque las cámaras de retroceso y los espejos son útiles, ¿cuál es la
-    forma principal en la que debe mirar al retroceder su vehículo?
+  question: Aunque las cámaras de reversa y los espejos son útiles, ¿cuál es la forma
+    principal en la que debe mirar al retroceder su vehículo?
   choices:
-    A: Mirando únicamente la pantalla de la cámara de retroceso
-    B: Alternando entre los espejos laterales
+    A: Mirando únicamente la pantalla de la cámara de reversa
+    B: Alternando entre sus espejos laterales
     C: Mirando directamente a través de la ventana trasera
     D: Abriendo la puerta y mirando hacia atrás
   answer: C
   explanation: El manual establece que debe "mirar directamente a través de la ventana
-    trasera" y señala que los espejos y las cámaras de retroceso pueden no mostrar
-    toda el área detrás de su vehículo.
+    trasera" y señala que los espejos y las cámaras de reversa pueden no mostrar toda
+    el área detrás de su vehículo.
 - id: 270
   category: defensive_driving
   question: Al buscar tráfico que viene de frente y tráfico transversal en una intersección,
@@ -3493,19 +3488,19 @@ questions:
   choices:
     A: Mirar a la derecha, luego a la izquierda
     B: Mirar hacia adelante, luego a la izquierda y a la derecha
-    C: Mirar a la izquierda, a la derecha, luego a la izquierda de nuevo
-    D: Mirar a la derecha, a la izquierda, luego a la derecha de nuevo
+    C: Mirar a la izquierda, a la derecha, luego a la izquierda otra vez
+    D: Mirar a la derecha, a la izquierda, luego a la derecha otra vez
   answer: C
   explanation: El manual aconseja buscar tráfico que viene de frente y tráfico transversal
     en las intersecciones mirando "a la izquierda, a la derecha, luego a la izquierda
-    de nuevo".
+    otra vez".
 - id: 271
   category: safe_driving_rules
   question: ¿Según el Manual del Conductor de Ohio, qué error común debe evitar al
-    girar a la derecha?
+    realizar un giro a la derecha?
   choices:
-    A: Señalizar a menos de 100 pies antes del giro
-    B: Girar hacia el carril más alejado de la acera
+    A: Señalizar menos de 100 pies antes del giro
+    B: Girar hacia el carril más alejado del bordillo
     C: Abrirse demasiado hacia la izquierda antes del giro
     D: Acelerar demasiado lento después del giro
   answer: C
@@ -3519,7 +3514,7 @@ questions:
     A: El carril situado más a la derecha
     B: Cualquier carril disponible
     C: El carril justo a la derecha de la línea divisoria central
-    D: El carril del extremo derecho para permitir que otros pasen
+    D: El carril del extremo derecho para permitir que otros rebasen
   answer: C
   explanation: El manual establece que debe "girar siempre a la izquierda desde la
     parte más a la izquierda de su carril hacia el carril situado más a la izquierda,
@@ -3543,13 +3538,13 @@ questions:
   question: Una vez que haya entrado en una rotonda o glorieta, ¿qué acción está estrictamente
     prohibida?
   choices:
-    A: Usar la luz de giro para salir
+    A: Usar su señal de giro para salir
     B: Mantener su velocidad
     C: Cambiar de carril
     D: Ceder el paso a los peatones
   answer: C
-  explanation: 'El manual establece: "Una vez que haya entrado en la rotonda, siga
-    avanzando. No se detenga ni cambie de carril".'
+  explanation: 'El manual establece: "Una vez que haya entrado en la rotonda, manténgase
+    en movimiento. No se detenga ni cambie de carril".'
 - id: 275
   category: safe_driving_rules
   question: Además de rebasar o evitar una obstrucción, ¿cuál de las siguientes es
@@ -3561,8 +3556,8 @@ questions:
     D: Para evitar el resplandor del sol
   answer: B
   explanation: El manual enumera varias excepciones para conducir en la mitad derecha
-    de la carretera, incluyendo cuando "un oficial de policía o un dispositivo de
-    control de tráfico lo indique de otro modo".
+    de la carretera, incluyendo cuando sea "indicado de otro modo por un oficial de
+    policía o un dispositivo de control de tráfico".
 - id: 276
   category: defensive_driving
   question: Antes de cambiar de carril, después de revisar sus espejos, ¿cuál es la
@@ -3582,44 +3577,44 @@ questions:
   choices:
     A: Aumentar su velocidad para despejarla rápidamente
     B: Reducir su velocidad y observar el área
-    C: Cambiar al carril de más a la izquierda
-    D: Concentrarse únicamente en la señal de tráfico
+    C: Cambiar al carril del extremo izquierdo
+    D: Enfocarse solo en la señal de tráfico
   answer: B
   explanation: 'El manual establece: "En todas las intersecciones, reduzca su velocidad
     y busque" diversos peligros como controles de tráfico, vehículos y peatones.'
 - id: 278
   category: defensive_driving
-  question: Si está esperando para girar y ve un vehículo que se aproxima con la luz
+  question: Si está esperando para girar y ve un vehículo que se aproxima con su señal
     de giro encendida, ¿qué debe hacer?
   choices:
     A: Salir de inmediato, ya que están obligados a girar
     B: Esperar para asegurarse de que el conductor realmente esté girando antes de
-      avanzar
+      proceder
     C: Tocar la bocina para reconocer su señal
-    D: Hacer destellos con los faros para indicar que es seguro para ellos girar
+    D: Parpadear sus faros para indicar que es seguro para ellos girar
   answer: B
   explanation: 'El manual advierte: "No asuma que el vehículo va a girar. El conductor
     puede girar después de pasar su vehículo o puede haber olvidado apagar su señal".'
 - id: 279
   category: safe_driving_rules
-  question: Si está detenido ante una señal de alto (STOP) y su vista del tráfico
+  question: Si está detenido ante una señal de alto (stop) y su vista del tráfico
     transversal está bloqueada por un edificio u otro objeto grande, ¿qué debe hacer?
   choices:
     A: Esperar a que otro auto pase primero y seguirlo de cerca
-    B: Tocar la bocina dos veces antes de avanzar lentamente
-    C: Avanzar lentamente para revisar el tráfico antes de entrar
-    D: Dar marcha atrás y buscar una ruta diferente y más segura
+    B: Tocar la bocina dos veces antes de proceder lentamente
+    C: Avanzar lentamente para verificar el tráfico antes de entrar
+    D: Retroceder y buscar una ruta diferente y más segura
   answer: C
   explanation: 'El manual aconseja: "Cuando esté detenido ante una señal de alto donde
-    no pueda ver el tráfico transversal, avance lentamente para revisar el tráfico
+    no pueda ver el tráfico transversal, avance lentamente para verificar el tráfico
     antes de entrar en la intersección".'
 - id: 280
   category: driver_responsibility
   question: ¿Qué control de seguridad crucial debe realizarse *antes* de subirse a
-    su vehículo para dar marcha atrás?
+    su vehículo para retroceder?
   choices:
     A: Revisar la presión de los neumáticos
-    B: Revisar detrás de su vehículo si hay niños u objetos pequeños
+    B: Revisar detrás de su vehículo por si hay niños u objetos pequeños
     C: Ajustar sus espejos y el asiento
     D: Planificar su ruta usando un GPS
   answer: B

@@ -2,7 +2,7 @@
   "schema_version": 2,
   "code": "az",
   "name": "Arizona",
-  "verified_at": "2026-05-26T22:54:04Z",
+  "verified_at": "2026-07-27T00:34:39Z",
   "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://apps.azdot.gov/files/mvd/mvd-forms-lib/99-0117.pdf",
@@ -25,14 +25,12 @@
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
     "sample_size": 0,
     "judged_count": 261,
-    "avg_fidelity": 9.96,
-    "pct_at_10": 99.6,
-    "pct_above_9": 99.6,
-    "pct_above_7": 99.6,
-    "pct_zero": 0.4,
-    "flagged_question_ids": [
-      258
-    ],
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
+    "pct_zero": 0.0,
+    "flagged_question_ids": [],
     "evidence_by_question_id": {
       "1": [
         "You are required by law to notify MVD within 10-days of any change to your name or address."
@@ -58,7 +56,7 @@
         "Abandoned Vehicle Fee (on federal land) $600"
       ],
       "8": [
-        "Details of the motor vehicle laws can be found in Arizona Revised Statutes at azleg.gov under Title 28 “Transportation”"
+        "Arizona Revised Statutes at azleg.gov under Title 28 “Transportation” which offers the most up to date and accurate information."
       ],
       "9": [
         "Traffic survival schools are licensed by the Arizona Chapter of the National Safety Council (NSC)."
@@ -77,7 +75,7 @@
         "If you wish to have your new address displayed on your credential, you may apply and purchase a replacement license."
       ],
       "14": [
-        "Motor Vehicle Record Uncertified 39-month $3"
+        "Uncertified 39-month $3"
       ],
       "15": [
         "MVD, in collaboration with the Arizona Department of Education, also approves high school driver education programs."
@@ -125,9 +123,7 @@
         "Submitting a false voter registration is a Class 6 felony."
       ],
       "30": [
-        "18 years of age or older",
-        "A United States citizen.",
-        "A resident of Arizona."
+        "You are not required to register to vote in order to obtain a license."
       ],
       "31": [
         "You must be registered to vote 29 days before an election in order to qualify to vote in the upcoming election."
@@ -178,7 +174,7 @@
         "An applicant for a motorcycle license or endorsement who is under 18 must have held an Arizona motorcycle instruction permit for at least six months."
       ],
       "47": [
-        "Class C: Any single vehicle... designed to transport 16 or more passengers including the driver"
+        "is designed to transport 16 or more passengers including the driver"
       ],
       "48": [
         "Persons over the age of 65 or anyone receiving Federal Supplemental Security Income disability checks receive the card free of charge."
@@ -241,7 +237,7 @@
         "If the vehicle does not pass, you will be given 30 days to have the problem fixed and have a follow-up emission test re-check."
       ],
       "68": [
-        "prevent any of its load from dropping, sifting leaking or otherwise escaping from the vehicle.” (A.R.S. 28-1098.A.)."
+        "prevent any of its load from dropping, sifting leaking or otherwise escaping from the vehicle."
       ],
       "69": [
         "Cars and trucks must have both a foot brake and a parking brake."
@@ -283,7 +279,7 @@
         "If another driver is following too closely, gradually slow down and give additional cushion between you and the vehicle in front of you."
       ],
       "82": [
-        "Don’t assume that a vehicle or a motorcycle using a turn signal is actually going to make a turn, wait until after you see the other driver commit to the turn before entering the roadway."
+        "wait until after you see the other driver commit to the turn before entering the roadway."
       ],
       "83": [
         "The law designates which lanes and positions you must use when turning and requires you to signal at least 100 feet before you turn."
@@ -298,22 +294,24 @@
         "Do not rely on your mirrors alone to see other vehicles or motorcycles. Look over your shoulder to see if the way is clear before changing lanes."
       ],
       "87": [
-        "Signaling lets other drivers know you are going to do something different and gives them time to react to your move. Signaling does not give you the right-of-way."
+        "Signaling does not give you the right-of-way."
       ],
       "88": [
         "While operating a motor vehicle, both hands should be on the steering wheel, allowing the driver full control of the vehicle."
       ],
       "89": [
-        "Avoid driving in someone else’s blind spot... Speed up or drop back but never stay for an extended time in a blind spot area."
+        "Avoid driving in someone else’s blind spot",
+        "Speed up or drop back but never stay for an extended time in a blind spot area."
       ],
       "90": [
-        "Passing on the right is permitted only when it is safe and: • The driver of the other vehicle is turning left"
+        "Passing on the right is permitted only when it is safe and: The driver of the other vehicle is turning left"
       ],
       "91": [
         "Approaching within 100 feet of a street crossing."
       ],
       "92": [
-        "Always enter a roundabout to the right of the central island."
+        "Always enter a roundabout to the right of the central island.",
+        "Vehicles approaching the roundabout must yield to all vehicles already in the roundabout"
       ],
       "93": [
         "roundabouts are designed for speeds of 15-20 mph."
@@ -331,7 +329,7 @@
         "Leave approximately two feet between you and the forward car."
       ],
       "98": [
-        "If you park on an uphill grade, turn your wheels to the left"
+        "If you park on an uphill grade, turn your wheels to the left, let your car roll back until the right front wheel rests against the curb and stops."
       ],
       "99": [
         "If there is no curb, turn the wheels to the right so that the car will roll away from the center of the road"
@@ -350,11 +348,10 @@
         "Set your parking brake, shift into park or leave the vehicle in gear (for manual transmission), and turn off the engine."
       ],
       "104": [
-        "If you miss your exit, do not stop. Never back up on a highway. Get off the highway at the next exit and look for signs showing you how to rejoin the road"
+        "If you miss your exit, do not stop. Never back up on a highway. Get off the highway at the next exit"
       ],
       "105": [
-        "A gore area is the space between a through roadway and an entrance or exit ramp.",
-        "It is against the law to drive over or park in any part of a gore area."
+        "A gore area is the space between a through roadway and an entrance or exit ramp."
       ],
       "106": [
         "At those times, the HOV lanes are restricted to car pool vehicles, motorcycle or buses."
@@ -386,14 +383,15 @@
         "If two vehicles arrive at the intersection at about the same time, both must stop and the driver of the vehicle on the left must yield the right-of-way to the driver on the right."
       ],
       "115": [
-        "A flashing yellow arrow means you should slow down and turn with caution if the roadway is clear. Yield the right-of-way to any oncoming vehicle or pedestrian before making your turn."
+        "A flashing yellow arrow means you should slow down and turn with caution if the roadway is clear.",
+        "Yield the right-of-way to any oncoming vehicle or pedestrian before making your turn."
       ],
       "116": [
         "As you approach and enter a highway travel lane, increase your speed to match that of vehicles already on the road."
       ],
       "117": [
         "Stay to the right and only use the left lane for passing.",
-        "If you are traveling on a highway with three lanes, treat the far right lane as a slower-speed through lane and the far left lane as the passing lane."
+        "treat the far right lane as a slower-speed through lane and the far left lane as the passing lane."
       ],
       "118": [
         "Where not prohibited by signs, a right turn may be made after coming to a complete stop, when motor traffic and pedestrian traffic are clear."
@@ -418,7 +416,7 @@
       ],
       "125": [
         "You are not required to stop for a school bus on a divided roadway when traveling in the opposite direction.",
-        "Roadway striping by itself does not constitute a physical separation of the roadway."
+        "A divided roadway is one in which the road is separated by physical barriers such as a fence, curbing or separation of the pavement."
       ],
       "126": [
         "25 mph in any business or residential district."
@@ -517,7 +515,7 @@
         "When riding at night, have a white head lamp visible from 500 feet, and a rear reflector."
       ],
       "158": [
-        "Most car/motorcycle crashes are the result of a car turning in front of a motorcycle, usually because the driver did not see the motorcycle or misjudged how close it was"
+        "Most car/motorcycle crashes are the result of a car turning in front of a motorcycle, usually because the driver did not see the motorcycle"
       ],
       "159": [
         "A double solid white line separates two lanes of traffic going in the same direction. Crossing a double solid white line is prohibited."
@@ -577,7 +575,7 @@
       ],
       "176": [
         "Turn off your lights and take your foot off the brake.",
-        "Stay in the vehicle with your seat belts buckled."
+        "Wait until the dust storm has passed."
       ],
       "177": [
         "Be extra careful during the 30 minutes after rain begins; grime and oil on the road surface mix with water and make the road slippery."
@@ -587,13 +585,14 @@
       ],
       "179": [
         "Take your foot off the accelerator.",
-        "Do not brake."
+        "Do not brake.",
+        "Avoid steering changes (if possible)."
       ],
       "180": [
         "Two vehicles should not meet in deep water; one should go entirely through before another starts from the other direction. This reduces the possibility of stalling caused by waves of water."
       ],
       "181": [
-        "A driver of a vehicle who drives around barricades set up due to flooding is liable for the expenses of any emergency response that is required to remove the driver"
+        "A driver of a vehicle who drives around barricades set up due to flooding is liable for the expenses of any emergency response that is required to remove the driver or any passenger"
       ],
       "182": [
         "When driving in fog, use low beams only and look for road edge markings to guide you."
@@ -608,7 +607,7 @@
         "When following another car, use low beams whenever you are within 200 feet."
       ],
       "186": [
-        "Glance toward the right side of the road, then look ahead to determine the position of the other vehicle."
+        "If the high beams of an oncoming car are not dimmed, avoid looking directly at the bright lights. Glance toward the right side of the road, then look ahead to determine the position"
       ],
       "187": [
         "Stop every hour to walk and exercise. This will help keep you alert."
@@ -630,7 +629,7 @@
         "Upon convicting a person of knowingly purchasing for or providing spirituous liquor to a minor, the court may direct MVD to suspend the person’s driver license"
       ],
       "193": [
-        "You may be cited for aggressive driving if you commit a series of acts... exceed the posted speed limit and commit two of the following violations"
+        "You may be cited for aggressive driving if you commit a series of acts during a single, continuous period of driving that presents an immediate hazard to another person or vehicle, exceed the posted speed limit and commit two of the following violations"
       ],
       "194": [
         "First offense — You will be required to attend a Traffic Survival School course and your license may be suspended for 30 days."
@@ -645,13 +644,16 @@
         "You will be required to pay the appropriate application fee and a $20 reinstatement fee"
       ],
       "198": [
-        "Failure to stop and render aid at the site, if you are involved in a traffic crash."
+        "Failure to stop and render aid at the site, if you are involved in a traffic crash.",
+        "Your driving privilege will be revoked for, but not limited to:"
       ],
       "199": [
-        "Your driving privilege will be suspended for two or more convictions for: • Reckless driving. • Racing on the highways."
+        "Your driving privilege will be suspended for two or more convictions for:",
+        "Racing on the highways."
       ],
       "200": [
-        "A vehicle shall be impounded or immobilized when any of the following apply: • The person’s driving privilege is suspended or revoked for any reason."
+        "A vehicle shall be impounded or immobilized when any of the following apply:",
+        "The person’s driving privilege is suspended or revoked for any reason."
       ],
       "201": [
         "Remember, being under the legal limit of 0.08 BAC does not mean that it is legal or safe for you to drive and you can still be arrested for driving under the influence."
@@ -672,9 +674,7 @@
         "Leaving the scene of a crash 6"
       ],
       "207": [
-        "Reckless Driving 8",
-        "Speeding 3",
-        "Wrong-way driving 2"
+        "Reckless Driving 8"
       ],
       "208": [
         "Have been convicted of running a red light (or flashing red light). TSS is mandatory in addition to paying all court fines/fees."
@@ -772,7 +772,7 @@
         "State law requires a driver involved in a minor crash without injuries to remove a vehicle from the roadway if it is operable and can be moved safely."
       ],
       "239": [
-        "Suspended for 1 year if involving only damage to a vehicle."
+        "Conviction for failure to stop will result in your driving privilege being: Suspended for 1 year if involving only damage to a vehicle."
       ],
       "240": [
         "Revoked for 10 years, not including the time you are incarcerated, if involving a death."
@@ -799,7 +799,10 @@
         "Revoked for 3 years if involving injury other than death or serious physical injury."
       ],
       "248": [
-        "Jumper cables"
+        "Jumper cables",
+        "Flashlight",
+        "First Aid kit",
+        "Blankets"
       ],
       "249": [
         "Flares"
@@ -823,10 +826,16 @@
         "Note pad and pencil"
       ],
       "256": [
-        "Arizona Department of Transportation Motor Vehicle Division"
+        "Arizona Department of Transportation Motor Vehicle Division (ADOT MVD) is pleased to provide this guide"
       ],
       "257": [
+        "azdot.gov/mvd",
         "azdot.gov"
+      ],
+      "258": [
+        "Flares",
+        "Jumper cables",
+        "Fire extinguisher"
       ],
       "259": [
         "Hand tools (screwdriver, pliers, wrenches)"
@@ -846,12 +855,10 @@
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 28,
-    "topics_covered": 27,
-    "coverage_pct": 96.4,
-    "uncovered_topics": [
-      "Organ and tissue donation registry enrollment process"
-    ],
+    "topics_total": 26,
+    "topics_covered": 26,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
     "verdict": "PASS",
     "grade": "A"
   },
@@ -881,7 +888,7 @@
       "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
       "judged_count": 261,
       "avg_fidelity": 10.0,
-      "pct_at_10": 100.0,
+      "pct_at_10": 99.6,
       "pct_above_9": 100.0,
       "pct_above_7": 100.0,
       "pct_zero": 0.0,

@@ -2,7 +2,7 @@
   "schema_version": 2,
   "code": "wv",
   "name": "West Virginia",
-  "verified_at": "2026-05-26T23:27:14Z",
+  "verified_at": "2026-07-27T00:18:33Z",
   "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://transportation.wv.gov/DMV/DMVFormSearch/Drivers_Licensing_Handbook_web.pdf",
@@ -25,14 +25,12 @@
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
     "sample_size": 0,
     "judged_count": 373,
-    "avg_fidelity": 9.99,
-    "pct_at_10": 99.7,
-    "pct_above_9": 99.7,
-    "pct_above_7": 99.7,
+    "avg_fidelity": 10.0,
+    "pct_at_10": 100.0,
+    "pct_above_9": 100.0,
+    "pct_above_7": 100.0,
     "pct_zero": 0.0,
-    "flagged_question_ids": [
-      30
-    ],
+    "flagged_question_ids": [],
     "evidence_by_question_id": {
       "1": [
         "Kanawha City, which is open Monday - Friday 8:00 am - 6:00 pm and Saturday from 8 am - 12 pm"
@@ -76,7 +74,7 @@
         "Driving Under the Influence “Interlock”............................................................. 926‑2507"
       ],
       "14": [
-        "the Martinsburg regional office is also open on Saturday from 8:00 am - 12:00 pm."
+        "Martinsburg regional office is also open on Saturday from 8:00 am - 12:00 pm."
       ],
       "15": [
         "The driver examination program provides fundamental education in traffic safety and allows you to match your driving ability with accepted standards for safe driving."
@@ -121,12 +119,14 @@
         "Vision Screening..........................................................................................................24"
       ],
       "28": [
-        "Diabetic, Deaf, or Hard of Hearing........................................................................................13"
+        "Diabetic, Deaf, or Hard of Hearing........................................................................13"
       ],
       "29": [
-        "School Attendance for Minors.................................................................................................16"
+        "School Attendance for Minors.................................................................................16"
       ],
       "30": [
+        "Basic Vehicle Control Skills Test",
+        "Instructions.................................................................................................................27",
         "Scoring.........................................................................................................................27"
       ],
       "31": [
@@ -134,11 +134,12 @@
       ],
       "32": [
         "Three-Point Turnabout",
-        "Exercises... Three-Point Turnabout"
+        "Exercises",
+        "Three-Point Turnabout During your road test you may be asked to drive forward"
       ],
       "33": [
         "Urban Area Driving",
-        "How You Will Be Tested... Urban Area Driving"
+        "Urban Area Driving During this part of the test, you are expected to make regular traffic checks"
       ],
       "34": [
         "Angle Parking (§17C‑13‑4, W. Va. State Code)",
@@ -147,25 +148,27 @@
       "35": [
         "Sharing the Road with Heavy Trucks",
         "The “No‑Zone”",
-        "A truck’s blind spots, the “No-Zone,” are dangerous because truck drivers cannot see vehicles in these areas."
+        "A truck’s blind spots, the “No-Zone,” are dangerous because truck drivers cannot see vehicles"
       ],
       "36": [
-        "CHAPTER V Traffic Control Devices",
+        "CHAPTER V TRAFFIC CONTROL DEVICES",
         "Lane Use Control Signals"
       ],
       "37": [
-        "Diamond & Warning Signs"
+        "Diamond & Warning Signs",
+        "These diamond-shaped signs will usually appear without explanatory words beneath them."
       ],
       "38": [
-        "Exercises... Left Side or Right Side Parallel Parking",
-        "Road Test... Lane Changes... Intersections... Curves"
+        "Exercises",
+        "Left Side or Right Side Parallel Parking",
+        "Road Test... Lane Changes... Curves... Intersections"
       ],
       "39": [
-        "CHAPTER VI Traffic Laws And Rules Of The Road",
+        "CHAPTER VI TRAFFIC LAWS AND RULES OF THE ROAD",
         "Right‑of‑Way"
       ],
       "40": [
-        "CHAPTER V Traffic Control Devices",
+        "CHAPTER V TRAFFIC CONTROL DEVICES",
         "Pavement Markings"
       ],
       "41": [
@@ -175,7 +178,7 @@
       ],
       "42": [
         "Parking on Hills",
-        "If you park or stop on a grade, turn the front wheels to the curb side of the highway so the vehicle will not roll."
+        "If you park or stop on a grade, turn the front wheels to the curb side of the highway"
       ],
       "43": [
         "Square & Rectangular Signs",
@@ -191,11 +194,11 @@
       ],
       "46": [
         "Driver Conditions",
-        "Some of the most common driver conditions affecting the safe operation of a vehicle are fatigue, alcohol, emotional state"
+        "Some of the most common driver conditions affecting the safe operation of a vehicle are fatigue"
       ],
       "47": [
         "U‑Turns",
-        "You should never make a U‑turn on an interstate. Go to the next exit to turn around before re-entering the interstate."
+        "You should never make a U‑turn on an interstate. Go to the next exit to turn around"
       ],
       "48": [
         "Stuck Gas Pedal",
@@ -203,16 +206,16 @@
       ],
       "49": [
         "Fog and Smoke",
-        "Fog is an extremely hazardous driving condition. Smoke from factories, forest fires, and burning leaves can produce similar conditions."
+        "Fog is an extremely hazardous driving condition. Smoke from factories, forest fires, and burning leaves"
       ],
       "50": [
         "Oil Pressure Light Comes On",
-        "Get the vehicle off the road and immediately turn off the engine. Check the engine oil level and add oil if needed."
+        "Get the vehicle off the road and immediately turn off the engine."
       ],
       "51": [
-        "Automobile Emergency Kit & First Aid Kit",
         "The Basic Emergency Kit",
-        "The Basic First Aid Kit"
+        "The Basic First Aid Kit",
+        "Automobile Emergency Kit & First Aid Kit"
       ],
       "52": [
         "Vehicle Conditions (State Inspection Law)",
@@ -223,17 +226,19 @@
       ],
       "54": [
         "Skids",
+        "To steer out of a skid:",
         "If your vehicle begins to skid, stay calm."
       ],
       "55": [
         "Good Samaritan Law",
-        "No one... who in good faith gives emergency care at the scene of a crash, without pay, is liable for any civil damages"
+        "No one... who in good faith gives emergency care at the scene of a crash... is liable for any civil damages"
       ],
       "56": [
         "Risk Reduction for Infants and Toddlers"
       ],
       "57": [
-        "Sharing the Road with Public Buses"
+        "Sharing the Road with Public Buses",
+        "While traffic does not have to stop for a public bus, please watch for passengers crossing the street"
       ],
       "58": [
         "Construction Zones",
@@ -265,7 +270,8 @@
         "Any person who is under the age of 18 and not enrolled in, or graduated from, an approved educational institution"
       ],
       "67": [
-        "they arrive at the applicant’s address via USPS in approximately 10-15 business days."
+        "they arrive at the applicant’s address via USPS in approximately 10-15 business days.",
+        "A temporary license is issued at the time the application is accepted at DMV"
       ],
       "68": [
         "These cards contain a gold star on the face of the card, indicating that the card meets full federal requirements"
@@ -274,7 +280,7 @@
         "Blind Spots: Areas on both sides of vehicles where you cannot see without turning your head"
       ],
       "70": [
-        "permits you to enter the highway to pick up speed before merging with traffic in through lanes"
+        "Acceleration Lane: Extra lane on the side of a high‑speed highway that permits you to enter the highway to pick up speed before merging"
       ],
       "71": [
         "Antique Vehicle: Motor vehicle that is over 25 years old and is owned solely as a collector’s item"
@@ -295,10 +301,10 @@
         "hospital birth certificates and Bureau of Census records are NOT acceptable"
       ],
       "77": [
-        "This card costs an additional $10.00 and is sent to the applicant’s address via USPS in 10-15 business days."
+        "This card costs an additional $10.00 and is sent to the applicant’s address via USPS"
       ],
       "78": [
-        "they arrive at the applicant’s address via USPS in approximately 10-15 business days."
+        "arrive at the applicant’s address via USPS in approximately 10-15 business days."
       ],
       "79": [
         "the applicant must provide a letter from the Social Security Administration stating they are not eligible or provide a written self-certification statement of ineligibility."
@@ -317,10 +323,10 @@
         "who have a West Virginia driver’s license that has been expired for more than six (6) months, are considered first-time applicants."
       ],
       "84": [
-        "(a photocopy of a W-2 is not acceptable)"
+        "a photocopy of a W-2 is not acceptable"
       ],
       "85": [
-        "a signed statement may be submitted in lieu of the name change document such as the marriage certificate or divorce decree"
+        "If you are age 50 or over... a signed statement may be submitted in lieu of the name change document"
       ],
       "86": [
         "Renewal and Duplicate Applicants choosing a “For Federal Use” driver’s license or ID card are required to provide... two (2) proofs of WV residency documents"
@@ -341,7 +347,7 @@
         "A valid School Driver Eligibility Certificate is required for an applicant under the age of 18 to perform any driver’s license transaction."
       ],
       "92": [
-        "If the address on the School Driver Eligibility Certificate is a PO Box, the applicant is required to provide two (2) additional proofs of WV residency in the name of the applicant’s parent or legal guardian"
+        "If the address on the School Driver Eligibility Certificate is a PO Box, the applicant is required to provide two (2) additional proofs of WV residency in the name of the applicant’s parent"
       ],
       "93": [
         "If an applicant has already graduated from school and has not reached the age of 18, a diploma can be used in place of the School Driver Eligibility Certificate."
@@ -358,7 +364,7 @@
         "you must provide the DMV with proof that you have paid the citation"
       ],
       "97": [
-        "Any first-time applicant for an instruction permit, driver’s license, or identification card must present one (1) proof of Social Security number document, one (1) proof of identity document, and two (2) proofs of WV residency documents."
+        "Any first-time applicant... must present one (1) proof of Social Security number document, one (1) proof of identity document, and two (2) proofs of WV residency documents."
       ],
       "98": [
         "You are required to pass a vision screening, complete a brief alcohol awareness course, and surrender your out-of-state driver’s license before a WV driver’s license will be issued."
@@ -367,13 +373,13 @@
         "If the applicant’s out-of-state driver’s license has expired, the applicant is required to take all examinations that are required for a first-time applicant."
       ],
       "100": [
-        "A new resident who cannot provide their out-of-state driver’s license must obtain a certified driving record from the state or jurisdiction in which they were previously licensed in order to waive the testing requirement."
+        "A new resident who cannot provide their out-of-state driver’s license must obtain a certified driving record from the state or jurisdiction... in order to waive the testing requirement."
       ],
       "101": [
         "If you change your address you are required to notify, in writing, the DMV within 20 days of the change."
       ],
       "102": [
-        "you will not be licensed in WV until you receive a “clearance” from the Problem Driver Point System (PDPS)."
+        "All driver’s license applicants are subject to a review of their driving records through the Problem Driver Point System (PDPS)"
       ],
       "103": [
         "Any person renewing a WV driver’s license, including a CDL, that has been expired for six (6) months or more is required to retest."
@@ -400,8 +406,7 @@
         "You may only have two (2) additional non family passengers in addition to the supervising, licensed adult driver."
       ],
       "111": [
-        "Two (2) convictions will result in revocation of your instruction permit (for 90 days).",
-        "two (2) convictions will result in the revocation of your GDL for 90 days."
+        "Two (2) convictions will result in revocation of your instruction permit (for 90 days)."
       ],
       "112": [
         "You may not use a wireless communication device while operating a motor vehicle, unless the use of the wireless communication device is for contacting a 9-1-1 system"
@@ -420,13 +425,13 @@
         "a 30-day grace period (beyond the applicant’s 18th birthday) will be allowed."
       ],
       "117": [
-        "Have a parent or legal guardian certification (log sheet) of a minimum of 50 hours behind the wheel, including the minimum of 10 hours at night"
+        "certification (log sheet) of a minimum of 50 hours behind the wheel, including the minimum of 10 hours at night"
       ],
       "118": [
         "Level 2 GDL intermediate driver’s license must drive with a supervising, licensed adult driver who is age 21 or older between the hours of 10:00 pm and 5:00 am."
       ],
       "119": [
-        "A Level 2 GDL intermediate driver’s license holder may not operate a motor vehicle during their first six months with any non-family members under the age of 20 as a passenger"
+        "may not operate a motor vehicle during their first six months with any non-family members under the age of 20 as a passenger"
       ],
       "120": [
         "Under a Level 1 GDL instruction permit, two (2) convictions will result in the revocation of your GDL for 90 days."
@@ -435,11 +440,10 @@
         "Level 2 GDL intermediate driver’s license holders are required to enroll in a driver improvement program upon the first conviction."
       ],
       "122": [
-        "unless the cell phone is used for contacting a 9-1-1 system as stated in WV State Code §17B-2-3a(F).",
-        "Drivers under the age of 18 may not use a wireless communication device while operating a motor vehicle"
+        "Drivers under the age of 18 may not use a wireless communication device while operating a motor vehicle, unless the cell phone is used for contacting a 9-1-1 system"
       ],
       "123": [
-        "To be eligible for a Level 3 GDL, you must have completed 12 months of conviction-free driving under a Level 2 GDL"
+        "To be eligible for a Level 3 GDL, you must have completed 12 months of conviction-free driving under a Level 2 GDL, be at least 17 years old"
       ],
       "124": [
         "Only the applicant taking the test is allowed in the exam room."
@@ -454,7 +458,7 @@
         "2 Corrective Lenses"
       ],
       "128": [
-        "The exceptions to this rule are when the licensee is participating in, going to, or returning from: (1) lawful employment; (2) a school-sanctioned activity; (3) a religious activity; or (4) an emergency situation"
+        "The exceptions to this rule are when the licensee is participating in, going to, or returning from: (1) lawful employment; (2) a school-sanctioned activity"
       ],
       "129": [
         "The second conviction for a moving violation requires the revocation of your driving privilege until you are 18 and you will be required to retest as a first-time applicant."
@@ -469,10 +473,10 @@
         "All driver’s license renewal fees will be based on the number of years you will have a driver’s license until your age is divisible by five (25, 30, 35, 40, etc.), at a rate of $5.00 per year."
       ],
       "133": [
-        "For applicants that are diabetic, deaf, or hard of hearing... they will need audiologist and/or physician certification on the backside of the DMV-DS-23P"
+        "they will need audiologist and/or physician certification on the backside of the DMV-DS-23P, which will be turned in at the time of application."
       ],
       "134": [
-        "You are required to provide your driver’s license or instruction permit upon demand to any law enforcement officer... Violation of this requirement is a misdemeanor."
+        "You are required to provide your driver’s license or instruction permit upon demand to any law enforcement officer, magistrate, or official of the DMV. Violation of this requirement is a misdemeanor."
       ],
       "135": [
         "you will not be convicted if your driver’s license or instructional permit is valid at the time of arrest and you can produce it in court or in the office of the arresting officer."
@@ -520,7 +524,7 @@
         "Refusal to submit to this test is grounds for suspension or revocation of your driver’s license."
       ],
       "149": [
-        "Crashes resulting in injury to, or death of, any person or property damage in excess of $1,000 must be reported by the quickest means possible (oral or written) within five (5) days"
+        "Crashes resulting in injury to, or death of, any person or property damage in excess of $1,000 must be reported ... within five (5) days"
       ],
       "150": [
         "$25,000 for property damage"
@@ -529,7 +533,7 @@
         "An image displayed on a wireless communication device, as provided in §17D-2A-4, is also a valid proof of insurance."
       ],
       "152": [
-        "Filing of false or fraudulent insurance information will result in an additional 90-day suspension of your driver’s license, revocation of your vehicle registration"
+        "Filing of false or fraudulent insurance information will result in an additional 90-day suspension of your driver’s license, revocation of your vehicle registration, and possible prosecution"
       ],
       "153": [
         "Statistics show that a driver’s concentration drops by 20 – 33 percent when using a wireless communication device."
@@ -559,7 +563,8 @@
         "State law also requires the DMV to suspend your driver’s license if you fail to maintain any child support payment obligations."
       ],
       "162": [
-        "It is also illegal to use someone else’s license as your own... The penalty for these offenses is a 90-day suspension."
+        "It is also illegal to use someone else’s license as your own",
+        "The penalty for these offenses is a 90-day suspension."
       ],
       "163": [
         "Three (3) convictions of reckless driving in 24 months"
@@ -577,7 +582,7 @@
         "Speeding in a School Zone 6"
       ],
       "168": [
-        "More than 3 Passengers in the Front Seat 2"
+        "More than 3 passengers in the Front Seat 2"
       ],
       "169": [
         "Time is the only sobering influence."
@@ -592,7 +597,7 @@
         "If a driver’s BAC is 0.08 percent or more, they are presumed to be driving under the influence."
       ],
       "173": [
-        "If you refuse to take the Breathalyzer, your privilege to operate a motor vehicle will be revoked for a period of one (1) year and up to life."
+        "your privilege to operate a motor vehicle will be revoked for a period of one (1) year and up to life."
       ],
       "174": [
         "revocation of your driver’s license until you reach the age of 18 or for the applicable statutory period of revocation or suspension, whichever is longer"
@@ -617,8 +622,7 @@
       ],
       "181": [
         "Difficulty remembering the last few miles driven;",
-        "Missing road signs or exits;",
-        "Yawning; rubbing eyes; watery eyes; heavy eyelids;"
+        "Signs That You are Drowsy While Driving"
       ],
       "182": [
         "If your vision is 20/40 or better using both eyes, either with or without conventional corrective lenses, and you show no serious visual defect, you will pass the vision screening."
@@ -633,18 +637,21 @@
         "There is a time limit on the test and any questions not answered in the prescribed time will be considered incorrect."
       ],
       "186": [
-        "all first‑time applicants for a driver’s license or motorcycle‑only West Virginia driver’s license complete a short DUI awareness course",
-        "The course must be completed by all out‑of-state drivers coming into West Virginia"
+        "The DMV requires that all first‑time applicants for a driver’s license or motorcycle‑only West Virginia driver’s license complete a short DUI awareness course",
+        "The course must be completed by all out‑of-­state drivers coming into West Virginia"
       ],
       "187": [
         "The examiner may permit you to have a minor defect corrected and continue the examination.",
         "However, you will not be permitted to continue the examination in another vehicle on the same test date."
       ],
       "188": [
-        "DUI - Alcohol or Drugs w/.15 or > | 1st Offense | 45 Days"
+        "DUI - Alcohol or Drugs w/.15 or >",
+        "1st Offense",
+        "45 Days"
       ],
       "189": [
-        "DUI - With Death • Felony | 1 Year"
+        "DUI - With Death • Felony",
+        "1 Year"
       ],
       "190": [
         "If the applicant is unable to both locate and demonstrate the use of any of the vehicle safety equipment, this will result in an automatic failure on the road skills test."
@@ -677,7 +684,7 @@
         "Do not change lanes while proceeding through the intersection."
       ],
       "200": [
-        "(Driver Side Window MUST Be Operational)"
+        "Driver Side Window MUST Be Operational"
       ],
       "201": [
         "Any load on the passenger vehicle extending beyond the line of the fenders on the left side or six (6) inches beyond the line of the fenders on the right side"
@@ -718,28 +725,26 @@
         "check your blind spots by looking over your shoulder (head check)"
       ],
       "213": [
-        "Your vehicle should be centered in the proper lane (right-most lane)"
+        "Your vehicle should be centered in the proper lane ( right‑most lane)"
       ],
       "214": [
-        "outside 18” curb line (after 3 att.)",
-        "Fail"
+        "outside 18” curb line (after 3 att.)   \r\n \r\n \r\n      Fail"
       ],
       "215": [
         "Cancel turn signals upon completion of a turn or lane change."
       ],
       "216": [
         "If you refuse to perform any maneuver which is part of the road test",
-        "Road Skills Test Automatic Failures",
-        "If any of the following errors occur during the road test you will be disqualified"
+        "Road Skills Test Automatic Failures"
       ],
       "217": [
-        "Octagon These eight‑sided signs are reserved for stop signs. These signs mean you must stop completely."
+        "These eight‑sided signs are reserved for stop signs. These signs mean you must stop completely."
       ],
       "218": [
         "If there are no pavement markings or cross walks, you must stop before entering an intersection."
       ],
       "219": [
-        "Pennant This sign marks the beginning of a no-passing zone."
+        "This sign marks the beginning of a no-passing zone."
       ],
       "220": [
         "The maximum speed limit in a school zone is 15 m.p.h. when children are present or when specified."
@@ -782,13 +787,13 @@
         "Interstate markers - Are red, white, and blue.."
       ],
       "233": [
-        "It is important to note that you should not enter a railroad crossing until the vehicle ahead has moved far enough ahead that you can clear the tracks."
+        "you should not enter a railroad crossing until the vehicle ahead has moved far enough ahead that you can clear the tracks."
       ],
       "234": [
         "Steady Circular Yellow - This means that the green light is ending and will change to red."
       ],
       "235": [
-        "A driver may turn right on red at the intersection of two‑way streets, or may turn left on red from a one-way street to another one‑way street."
+        "a driver... may turn left on red from a one-way street to another one‑way street."
       ],
       "236": [
         "Drivers facing a circular flashing yellow light may proceed through the intersection with caution."
@@ -797,7 +802,7 @@
         "Yellow X: The lane is about to be closed or its direction is about to reverse. Move out of it as soon as you can."
       ],
       "238": [
-        "A blind person who is on foot and using a guide dog or other service animal... has the right-of-way on a highway, street, or road regardless of whether they are in a crosswalk or not."
+        "has the right-of-way on a highway, street, or road regardless of whether they are in a crosswalk or not."
       ],
       "239": [
         "If a solid yellow line is on your side of the road, you MUST NOT PASS."
@@ -806,7 +811,7 @@
         "When solid white lines separate lanes of traffic moving in the same direction, DO NOT CHANGE LANES."
       ],
       "241": [
-        "Special Purpose or “Diamond” Lanes - White diamond shapes painted in the roadway to inform drivers the lane is designated for car pools, bicycles, or buses."
+        "White diamond shapes painted in the roadway to inform drivers the lane is designated for car pools, bicycles, or buses."
       ],
       "242": [
         "Lanes which reverse are marked on both sides by a double yellow broken line. This is the only case where a driver may drive for any distance to the left of a yellow line."
@@ -828,7 +833,8 @@
       ],
       "248": [
         "LEFT TURN ARM STRAIGHT OUT",
-        "An arm pointing straight out indicates a left turn."
+        "RIGHT TURN ARM POINTING UP",
+        "SLOW or STOP ARM POINTING DOWN"
       ],
       "249": [
         "The left hand should be placed approximately at 8 o’clock and the right hand at 4 o’clock."
@@ -837,7 +843,7 @@
         "When waiting to turn left, do not turn the wheels to the left. Otherwise, a bump from behind could push your vehicle into oncoming traffic."
       ],
       "251": [
-        "it is against the law to turn your vehicle around near a curve, near the crest of a hill where you cannot be seen by another vehicle approaching within 500 feet in either direction"
+        "where you cannot be seen by another vehicle approaching within 500 feet in either direction"
       ],
       "252": [
         "Within 15 feet of a fire hydrant"
@@ -852,7 +858,7 @@
         "Down hill • Turn wheels to curb"
       ],
       "256": [
-        "park so the right-hand wheels are parallel to and within 18 inches of the right curb."
+        "within 18 inches of the right curb"
       ],
       "257": [
         "Within 50 feet of the nearest rail of a railroad crossing"
@@ -932,7 +938,7 @@
       "282": [
         "Ride in the same direction as other vehicles.",
         "Yield the right-of-way to pedestrians.",
-        "When walking along a road where there is no sidewalk, walk on the left side facing oncoming traffic."
+        "Signal turns and stops unless both hands are required on the handlebars for balance."
       ],
       "283": [
         "Bell or other device capable of giving a signal audible for a distance of at least 100 feet (No siren or whistle is permitted)."
@@ -950,7 +956,7 @@
         "Use your parking lights only when you are parked."
       ],
       "288": [
-        "should contact the DMV no later than 48 hours before the scheduled arrival to DMV."
+        "contact the DMV no later than 48 hours before the scheduled arrival to DMV."
       ],
       "289": [
         "Even-numbered interstates run east to west."
@@ -968,7 +974,7 @@
         "If a gap in traffic is not available, it may be necessary to drive onto the shoulder beyond the end of the acceleration lane and stop."
       ],
       "294": [
-        "Never slow down on the interstate. Wait until you are in the deceleration lane, then brake gently"
+        "Wait until you are in the deceleration lane, then brake gently until your speed matches the posted exit ramp limit."
       ],
       "295": [
         "Do not stop in an exit gore (the triangular area between the through lane and the exit ramp)."
@@ -1038,6 +1044,7 @@
         "in a vehicle without anti-lock brakes you cannot steer unless you pump the brakes, applying and releasing them several times"
       ],
       "317": [
+        "If you must drive in fog or dense smoke conditions, you should:",
         "Use your low-beam headlights."
       ],
       "318": [
@@ -1065,10 +1072,10 @@
         "The only legal exception is for persons 18 years or older who are riding in the back seat of a vehicle."
       ],
       "326": [
-        "Statistics show that wearing safety belts reduces the chances of injury or death resulting from collisions by 45 to 50 percent."
+        "wearing safety belts reduces the chances of injury or death resulting from collisions by 45 to 50 percent."
       ],
       "327": [
-        "Every driver who transports a child under the age of 8 years... shall... provide for the protection of the child by properly placing, maintaining and securing the child in a child passenger safety device system"
+        "Every driver who transports a child under the age of 8 years ... shall ... provide for the protection of the child by properly placing, maintaining and securing the child in a child passenger safety device system"
       ],
       "328": [
         "If the fog or smoke impairs your vision, leave your lights on and also turn your hazard lights on."
@@ -1077,14 +1084,14 @@
         "The lap belt should be worn so that it fits snugly and comfortably over the lower part of the hips."
       ],
       "330": [
-        "Provided, That if a child is under the age of 8 years and at least 4’-9” tall, a safety belt shall be sufficient to meet the requirements of this section."
+        "if a child is under the age of 8 years and at least 4’-9” tall, a safety belt shall be sufficient to meet the requirements of this section."
       ],
       "331": [
         "If adjustable, they should be positioned to fit against the back of your head, not your neck."
       ],
       "332": [
         "the driver must continue to steer the vehicle while pushing hard on the brake.",
-        "pumping the brake will only reduce the system’s ability to bring the vehicle to a quick, safe stop."
+        "in a vehicle equipped with an ABS, pumping the brake will only reduce the system’s ability"
       ],
       "333": [
         "in the event of a sudden stop, the ABS will improve performance by only about 10 percent at best."
@@ -1115,7 +1122,7 @@
         "Shift to a lower gear and look for a place to slow down and stop off the roadway."
       ],
       "342": [
-        "You can prevent overheating in slow-moving traffic by shifting into neutral and racing your engine briefly during stops.",
+        "prevent overheating in slow-moving traffic by shifting into neutral and racing your engine briefly during stops.",
         "This will speed up the fan and water pump."
       ],
       "343": [
@@ -1177,8 +1184,7 @@
         "Change lanes only where pavement markings indicate, and only when traffic conditions permit."
       ],
       "361": [
-        "When approaching lane closures, move into the open lane as soon as possible.",
-        "Avoid waiting until the last minute to change lanes."
+        "When approaching lane closures, move into the open lane as soon as possible."
       ],
       "362": [
         "Turn Your Headlights On Sunset to Sunrise, Even if It Isn’t Required by Law",

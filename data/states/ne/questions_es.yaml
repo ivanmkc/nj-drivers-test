@@ -14,19 +14,23 @@ metadata:
   - sharing_the_road
   - signs_and_signals
   - vehicle_information
+  translation:
+    translated_at: '2026-07-26T18:48:22Z'
+    translated_by: gemini-3-flash-preview
+    en_source_sha256: 693575e7a8ebdb7659a930f60393b3323d24b459db779c3a4d1b9cb31240db2f
 questions:
 - id: 1
   category: license_system
   question: ¿Cuántas veces consecutivas puede renovar su licencia Clase O o Clase
-    M en línea si esta vence antes de cumplir 72 años?
+    M en línea si esta vence antes de cumplir los 72 años?
   choices:
     A: Una vez
     B: Dos veces
     C: Tres veces
     D: Veces ilimitadas
   answer: B
-  explanation: 'El manual establece: ''Si su licencia vence antes de cumplir 72 años,
-    puede renovar su licencia Clase O o Clase M dos veces consecutivas en línea''.'
+  explanation: 'El manual establece: ''Si su licencia vence antes de cumplir los 72
+    años, puede renovar su licencia Clase O o Clase M dos veces consecutivas en línea''.'
 - id: 2
   category: license_system
   question: Independientemente de la edad, ¿cuántas veces consecutivas puede una persona
@@ -42,8 +46,8 @@ questions:
     en línea'.
 - id: 3
   category: driver_testing
-  question: ¿En cuáles de las siguientes ciudades de Nebraska el examen de manejo
-    se realiza estrictamente solo con cita previa?
+  question: ¿En cuál de las siguientes ciudades de Nebraska el examen de manejo es
+    estrictamente solo con cita previa?
   choices:
     A: Grand Island, Kearney y North Platte
     B: Bellevue, Lincoln y Omaha
@@ -60,7 +64,7 @@ questions:
     A: A todos los conductores que solicitan una licencia de conducir comercial
     B: A los adolescentes menores de 16 años que solicitan un permiso de aprendizaje
     C: A las personas que renuevan su licencia después de los 72 años
-    D: A los conductores a quienes se les ha suspendido la licencia
+    D: A los conductores a los que se les ha suspendido la licencia
   answer: B
   explanation: El manual establece que el Programa de Conducción Supervisada por los
     Padres 'se entrega a todos los adolescentes menores de 16 años que solicitan un
@@ -73,16 +77,16 @@ questions:
     A: Un diploma de escuela secundaria o GED
     B: Comprobante de número de seguro social o un documento I-94/I-94A válido
     C: Una tarjeta de registro de votante
-    D: Una copia certificada del historial de manejo
+    D: Una copia certificada de un historial de manejo
   answer: B
   explanation: 'El manual señala: ''Se requiere comprobante del número de seguro social
-    o un documento I-94 o I-94A válido del Servicio de Ciudadanía e Inmigración de
-    los EE. UU. (en un pasaporte extranjero válido) para todos los solicitantes por
-    primera vez y de renovación''.'
+    o un documento I-94 o I-94A válido de los Servicios de Ciudadanía e Inmigración
+    de los EE. UU. (en un pasaporte extranjero válido) para todos los solicitantes
+    por primera vez y de renovación''.'
 - id: 6
   category: driver_testing
-  question: Según el DMV de Nebraska, ¿aproximadamente qué porcentaje de los solicitantes
-    por primera vez reprueba el examen escrito?
+  question: Según el DMV de Nebraska, ¿aproximadamente qué porcentaje de solicitantes
+    por primera vez reprueban el examen escrito?
   choices:
     A: Más del 10%
     B: Más del 20%
@@ -118,8 +122,8 @@ questions:
     la renovación 60 días antes de cumplir los 21 años'.
 - id: 9
   category: license_system
-  question: ¿Cuánto tiempo puede tardar en recibir por correo los documentos permanentes
-    de la licencia de conducir?
+  question: ¿Cuánto tiempo puede tardar en recibir los documentos permanentes de la
+    licencia de conducir por correo?
   choices:
     A: Hasta 5 días
     B: Hasta 10 días
@@ -145,14 +149,14 @@ questions:
   question: ¿Cuál de los siguientes se considera un horario de mayor afluencia en
     las oficinas de licencias de conducir que los solicitantes deben tratar de evitar?
   choices:
-    A: Martes por la mañana a las 9:00 a.m.
+    A: Los martes por la mañana a las 9:00 a.m.
     B: El día antes y después de un día festivo
     C: Al mediodía de un miércoles
-    D: Cuando las escuelas están en sesión
+    D: Cuando las escuelas están en periodo de clases
   answer: B
-  explanation: 'El manual aconseja evitar las horas de mayor afluencia, que incluyen:
+  explanation: 'El manual aconseja evitar los horarios de mayor afluencia, que incluyen:
     ''1) después de las 3:00 p.m. cada día laborable, 2) cuando las escuelas no están
-    en sesión, y 3) el día antes y después de un día festivo''.'
+    en periodo de clases, y 3) el día antes y después de un día festivo''.'
 - id: 12
   category: license_system
   question: ¿Qué método de pago NO se acepta en las oficinas estatales de licencias
@@ -172,9 +176,9 @@ questions:
     trata de personas en un negocio o vivienda?
   choices:
     A: Tener un estacionamiento bien iluminado
-    B: Medidas de seguridad extraordinarias, como ventanas con rejas y exceso de cámaras
-      exteriores
-    C: Tener un sistema de alarma de seguridad estándar en el hogar
+    B: Medidas de seguridad extraordinarias, como ventanas con rejas y un número excesivo
+      de cámaras exteriores
+    C: Tener un sistema de alarma de seguridad estándar para el hogar
     D: Emplear trabajadores que viajan diariamente desde pueblos vecinos
   answer: B
   explanation: El manual enumera las 'Medidas de seguridad extraordinarias para un
@@ -188,24 +192,24 @@ questions:
     A: Tomar descansos para almorzar regulares y programados
     B: Quejarse de su salario por hora
     C: Parecer que vive en el lugar de trabajo o estar siempre trabajando
-    D: Abandonar las instalaciones inmediatamente después de que termine su turno
+    D: Salir de las instalaciones inmediatamente después de que termine su turno
   answer: C
   explanation: El manual identifica a los 'Trabajadores que parecen vivir en el lugar
-    de trabajo o que siempre están trabajando' como una señal de alerta de trata de
+    de trabajo o que están siempre trabajando' como una señal de alerta de trata de
     personas.
 - id: 15
   category: defensive_driving
   question: Según la carta del Gobernador, ¿cuál es un obstáculo que los conductores
     pueden encontrar en las carreteras de Nebraska?
   choices:
-    A: Aumentos bruscos de velocidad al acercarse a un pueblo
+    A: Velocidades que aumentan bruscamente al acercarse a un pueblo
     B: Caminos pavimentados que se convierten en grava
     C: Condiciones climáticas que permanecen constantes durante todo el año
     D: Semáforos en cada intersección rural
   answer: B
   explanation: 'La carta del Gobernador establece: ''En Nebraska, las condiciones
-    climáticas cambian inesperadamente, los caminos pavimentados dan paso a la grava
-    y las velocidades disminuyen drásticamente al acercarse a la ciudad''.'
+    climáticas cambian inesperadamente, los caminos pavimentados se convierten en
+    grava y las velocidades disminuyen drásticamente al acercarse a un pueblo''.'
 - id: 16
   category: license_system
   question: ¿Cuántos días tiene un nuevo residente con una licencia válida de otro
@@ -216,14 +220,14 @@ questions:
     C: 60 días
     D: 90 días
   answer: B
-  explanation: Según la Sección 1A del manual, cualquier nuevo residente con una licencia
-    válida de otro estado debe obtener una licencia de Nebraska en un plazo de 30
-    días.
+  explanation: De acuerdo con la Sección 1A del manual, cualquier nuevo residente
+    con una licencia válida de otro estado debe obtener una licencia de Nebraska en
+    un plazo de 30 días.
 - id: 17
   category: penalties_and_points
   question: ¿Cuál es la multa por una primera infracción por el uso de un dispositivo
     de comunicación inalámbrica interactivo mientras se opera un vehículo motorizado
-    en movimiento bajo las leyes de GDL (Licencia de Conducir Graduada)?
+    en movimiento bajo las leyes de GDL?
   choices:
     A: $50
     B: $100
@@ -244,27 +248,27 @@ questions:
     C: $50
     D: $100
   answer: B
-  explanation: De acuerdo con las restricciones de conducción de GDL (Licencia de
-    Conducir Graduada), todos los ocupantes que viajen con el titular de un permiso
-    deben usar el cinturón de seguridad, y una infracción conlleva una multa de $25.
+  explanation: De acuerdo con las restricciones de conducción de la Licencia de Conducir
+    Graduada (GDL), todos los ocupantes que viajen con el titular de un permiso deben
+    usar el cinturón de seguridad, y una infracción conlleva una multa de $25.
 - id: 19
   category: license_system
   question: ¿A quién puede transportar el titular de un Permiso Escolar (SCP)?
   choices:
     A: Cualquier pasajero menor de 19 años
     B: Hasta dos amigos que asistan a la misma escuela
-    C: Solo a los miembros de la familia que residan con ellos a la escuela a la que
-      asiste el titular
-    D: A cualquier persona siempre que un adulto esté presente
+    C: Solo a los miembros de la familia que residan con ellos hacia la escuela a
+      la que asiste el titular
+    D: A cualquier persona, siempre que un adulto esté presente
   answer: C
   explanation: El manual especifica que el titular de un Permiso Escolar (SCP) solo
-    puede transportar a los miembros de la familia que residan con él a la escuela
+    puede transportar a los miembros de la familia que residan con él hacia la escuela
     a la que asiste el titular.
 - id: 20
   category: license_system
   question: Durante los primeros 6 meses, ¿a cuántos pasajeros menores de 19 años
-    que no sean miembros de la familia inmediata está limitado el titular de un Permiso
-    de Operador Provisional (POP)?
+    que no sean miembros de la familia inmediata puede transportar el titular de un
+    Permiso de Operador Provisional (POP)?
   choices:
     A: Cero
     B: Uno
@@ -291,21 +295,21 @@ questions:
     o el trabajo.
 - id: 22
   category: alcohol_drugs_health
-  question: Bajo las leyes de "Tolerancia cero" de Nebraska para conductores menores
+  question: Bajo las leyes de 'Tolerancia cero' de Nebraska para conductores menores
     de 21 años, ¿cuál es la sanción por una primera infracción por alcohol?
   choices:
     A: Una multa de $500 y 6 puntos en la licencia
     B: Incautación judicial del permiso o licencia por 30 días
-    C: 10 días obligatorios de cárcel
+    C: 10 días obligatorios en la cárcel
     D: Revocación permanente de la licencia de conducir
   answer: B
-  explanation: Para los conductores menores de 21 años, una primera infracción bajo
-    las leyes de "Tolerancia cero" resulta en la incautación judicial del permiso
-    o licencia por 30 días.
+  explanation: Para conductores menores de 21 años, una primera infracción bajo las
+    leyes de 'Tolerancia cero' resulta en la incautación judicial del permiso o licencia
+    por 30 días.
 - id: 23
   category: penalties_and_points
-  question: ¿Qué deben hacer las personas menores de 21 años que acumulen seis o más
-    puntos en su historial de conducción en un plazo de un año?
+  question: Las personas menores de 21 años que acumulen seis o más puntos en su historial
+    de conducción en un plazo de un año, ¿qué están obligadas a hacer?
   choices:
     A: Pagar un recargo de $200
     B: Volver a tomar el examen de habilidades de conducción
@@ -320,37 +324,37 @@ questions:
   question: ¿Qué tipo de vehículos autoriza a operar un Permiso de Explotación Agrícola
     (Farm Husbandry Permit)?
   choices:
-    A: Semirremolques comerciales y autobuses
-    B: Minicamiones y equipos de explotación agrícola
+    A: Camiones semirremolques comerciales y autobuses
+    B: Minicamiones (minitrucks) y equipos de explotación agrícola
     C: Motocicletas y ciclomotores
     D: Cualquier vehículo que pese más de 26,000 libras
   answer: B
   explanation: Según la Sección 1C-1, un Permiso de Explotación Agrícola autoriza
-    la operación de minicamiones y equipos de explotación agrícola.
+    la operación de minicamiones (minitrucks) y equipos de explotación agrícola.
 - id: 25
   category: vehicle_information
-  question: 'Según el manual del conductor de Nebraska, un minicamión debe tener un
-    tamaño de motor de:'
+  question: 'Según el manual del conductor de Nebraska, un minicamión (minitruck)
+    debe tener un tamaño de motor de:'
   choices:
     A: 500 cc o menos
     B: 1,000 cc o menos
     C: 1,500 cc o menos
     D: 2,000 cc o menos
   answer: C
-  explanation: Un minicamión se define como aquel que tiene un motor de mil quinientos
-    (1,500) cc o menos.
+  explanation: Un minicamión (minitruck) se define como aquel que tiene un motor de
+    mil quinientos (1,500) cc o menos.
 - id: 26
   category: vehicle_information
   question: ¿Cuál es el peso en seco máximo permitido para que un vehículo sea clasificado
-    como minicamión?
+    como un minicamión (minitruck)?
   choices:
     A: 2,500 libras
     B: 3,000 libras
     C: 4,200 libras
     D: 5,000 libras
   answer: C
-  explanation: El manual define un minicamión como un vehículo que tiene un peso en
-    seco de 4,200 libras o menos.
+  explanation: El manual define un minicamión (minitruck) como un vehículo que tiene
+    un peso en seco de 4,200 libras o menos.
 - id: 27
   category: safe_driving_rules
   question: ¿Quién está obligado a usar el cinturón de seguridad cuando viaja en un
@@ -361,9 +365,9 @@ questions:
     C: Solo los pasajeros menores de 18 años
     D: Todos los ocupantes que viajen con el titular del permiso, incluido el conductor
   answer: D
-  explanation: Bajo las restricciones de conducción de la GDL (Licencia Graduada de
-    Conducir), todos los ocupantes que viajen con el titular de un permiso, incluido
-    el conductor, deben usar el cinturón de seguridad.
+  explanation: Bajo las restricciones de conducción de la Licencia de Conducir Graduada
+    (GDL), todos los ocupantes que viajen con el titular de un permiso, incluido el
+    conductor, deben usar el cinturón de seguridad.
 - id: 28
   category: penalties_and_points
   question: ¿Cuál es la sanción por violar la restricción del límite de pasajeros
@@ -374,33 +378,34 @@ questions:
     C: Revocación inmediata de la licencia
     D: Una suspensión de 30 días
   answer: B
-  explanation: Violar la restricción de pasajeros para un Permiso de Operador Provisional
+  explanation: Violando la restricción de pasajeros para un Permiso de Operador Provisional
     (POP) conlleva una evaluación de un punto en el historial de conducción.
 - id: 29
   category: alcohol_drugs_health
-  question: ¿Con qué contenido de alcohol en sangre (BAC) un conductor menor de 21
-    años está sujeto a las mismas leyes de DWI que una persona de 21 años o más?
+  question: ¿Con qué nivel de contenido de alcohol en sangre (BAC) un conductor menor
+    de 21 años está sujeto a las mismas leyes de DWI que una persona de 21 años o
+    más?
   choices:
-    A: .02 o más
-    B: .04 o más
-    C: .06 o más
-    D: .08 o más
+    A: .02 o superior
+    B: .04 o superior
+    C: .06 o superior
+    D: .08 o superior
   answer: D
   explanation: Un conductor menor de 21 años está sujeto a las mismas leyes de DWI
-    (conducir bajo la influencia) que una persona de 21 años o más si el contenido
-    de alcohol en sangre es de .08 (BAC) o más.
+    que una persona de 21 años o más si el contenido de alcohol en sangre (BAC) es
+    de .08 o superior.
 - id: 30
   category: vehicle_information
   question: ¿Cuál es la velocidad máxima aproximada de un vehículo clasificado como
-    minicamión bajo el Permiso de Explotación Agrícola?
+    minicamión (minitruck) bajo el Permiso de Explotación Agrícola?
   choices:
     A: 35 millas por hora
     B: 45 millas por hora
     C: 55 millas por hora
     D: 65 millas por hora
   answer: C
-  explanation: La definición de un minicamión establece que tiene una velocidad máxima
-    de aproximadamente 55 millas por hora.
+  explanation: La definición de un minicamión (minitruck) establece que tiene una
+    velocidad máxima de aproximadamente 55 millas por hora.
 - id: 31
   category: license_system
   question: ¿Cuál es la edad mínima para obtener un Permiso de Explotación Agrícola
@@ -424,7 +429,7 @@ questions:
     D: En el cumpleaños número 18 del conductor
   answer: C
   explanation: El manual establece que el vencimiento de un Permiso de Explotación
-    Agrícola es el día del cumpleaños número 16 del conductor.
+    Agrícola es el día en que el conductor cumple 16 años.
 - id: 33
   category: license_system
   question: ¿Por cuánto tiempo es válido un Permiso de Aprendizaje Escolar (Tipo LPE)?
@@ -443,13 +448,13 @@ questions:
   choices:
     A: Cualquier conductor con licencia que tenga al menos 18 años
     B: Únicamente un padre o tutor legal
-    C: Un conductor con licencia que tenga al menos 21 años y ocupe el asiento al
-      lado del conductor
-    D: Nadie es necesario si el conductor viaja hacia o desde la escuela
+    C: Un conductor con licencia que tenga al menos 21 años y que ocupe el asiento
+      junto al conductor
+    D: No se requiere a nadie si el conductor viaja hacia o desde la escuela
   answer: C
   explanation: El manual establece que el titular de un LPE debe estar acompañado
     por un conductor de vehículo motorizado con licencia que tenga al menos 21 años
-    de edad y ocupe el asiento al lado del conductor.
+    de edad y ocupe el asiento junto al conductor.
 - id: 35
   category: license_system
   question: Para ser elegible para un Permiso Escolar (Tipo SCP), ¿una persona debe
@@ -477,8 +482,8 @@ questions:
 - id: 37
   category: driver_testing
   question: Si se utiliza un formulario de certificación de 50 horas para solicitar
-    un Permiso Escolar o un Permiso de Operador Provisional (POP), ¿cuántas de esas
-    horas deben haberse conducido entre la puesta del sol y el amanecer?
+    un Permiso Escolar o un Permiso de Operador Provisional, ¿cuántas de esas horas
+    deben conducirse entre la puesta del sol y el amanecer?
   choices:
     A: 5 horas
     B: 10 horas
@@ -526,30 +531,30 @@ questions:
     un año después de la fecha de emisión.
 - id: 41
   category: safe_driving_rules
-  question: ¿En qué horario se le permite a una persona con un Permiso de Operador
+  question: ¿Durante qué horario se le permite a una persona con un Permiso de Operador
     Provisional (POP) conducir sin supervisión por cualquier motivo?
   choices:
-    A: De 5 a.m. a 10 p.m.
-    B: De 6 a.m. a 12 de la medianoche
-    C: De 7 a.m. a 9 p.m.
-    D: De 6 a.m. a 10 p.m.
+    A: 5 a.m. a 10 p.m.
+    B: 6 a.m. a 12 medianoche
+    C: 7 a.m. a 9 p.m.
+    D: 6 a.m. a 10 p.m.
   answer: B
   explanation: El Permiso de Operador Provisional permite a una persona operar un
     vehículo motorizado sin supervisión en Nebraska desde las 6 a.m. hasta las 12
-    de la medianoche.
+    medianoche.
 - id: 42
   category: safe_driving_rules
   question: ¿Bajo qué condición puede el titular de un Permiso de Operador Provisional
-    (POP) conducir sin supervisión entre las 12 de la medianoche y las 6 a.m.?
+    (POP) conducir sin supervisión entre las 12 medianoche y las 6 a.m.?
   choices:
-    A: Si conduce desde o hacia su hogar al trabajo o a una actividad escolar
+    A: Si conduce desde o hacia su casa al trabajo o a una actividad escolar
     B: Si conduce con un hermano menor de 18 años
     C: Si ha tenido el permiso por más de 3 meses
     D: Bajo ninguna circunstancia
   answer: A
   explanation: Una persona con un POP solo puede conducir sin supervisión entre las
-    12 de la medianoche y las 6 a.m. si se dirige desde o hacia su hogar al trabajo
-    o a una actividad escolar.
+    12 medianoche y las 6 a.m. si conduce desde o hacia su casa al trabajo o a una
+    actividad escolar.
 - id: 43
   category: safe_driving_rules
   question: Durante los primeros seis meses de tener un Permiso de Operador Provisional
@@ -601,7 +606,7 @@ questions:
     D: '21'
   answer: B
   explanation: Según el manual, la edad mínima para obtener una Licencia de Operador
-    Clase O es de 17 años.
+    Clase O es 17 años.
 - id: 47
   category: driver_testing
   question: ¿Qué sucede si un solicitante de una licencia Clase O reprueba tres exámenes
@@ -609,13 +614,13 @@ questions:
   choices:
     A: Debe esperar 6 meses antes de volver a solicitarla.
     B: Debe completar un curso de capacitación para conductores aprobado por el DMV
-      o tener un LPD por al menos 90 días.
+      o tener un LPD durante al menos 90 días.
     C: Se le prohíbe permanentemente obtener una licencia.
     D: Debe pagar una multa y volver a tomar el examen escrito de inmediato.
   answer: B
   explanation: El manual establece que los solicitantes que reprueben tres exámenes
-    de manejo sucesivos no serán elegibles para volver a solicitarla hasta que presenten
-    un comprobante de haber completado con éxito un curso de capacitación para conductores
+    de manejo sucesivos no serán elegibles para volver a solicitarlos hasta que muestren
+    prueba de haber completado con éxito un curso de capacitación para conductores
     aprobado por el DMV, o hayan tenido un Permiso de Aprendiz (LPD) durante al menos
     90 días.
 - id: 48
@@ -623,7 +628,7 @@ questions:
   question: ¿Cuál de los siguientes vehículos NO se puede operar con una Licencia
     Clase O estándar?
   choices:
-    A: Autociclo
+    A: Autociclo (Autocycle)
     B: Ciclomotor (Moped)
     C: Vehículo utilitario todo terreno (UTV)
     D: Motocicleta
@@ -642,7 +647,7 @@ questions:
     D: No hay horas restringidas
   answer: B
   explanation: Cualquier operación autorizada de ATV/UTV en vías públicas debe ocurrir
-    únicamente entre la salida y la puesta del sol.
+    únicamente entre la salida del sol y la puesta del sol.
 - id: 50
   category: vehicle_information
   question: ¿Cuál es el peso en seco máximo permitido para un vehículo todo terreno
@@ -653,21 +658,21 @@ questions:
     C: 1,500 libras
     D: 2,000 libras
   answer: B
-  explanation: El manual define un ATV como un dispositivo motorizado para fuera de
-    la carretera que tiene un peso en seco de mil doscientas (1,200) libras o menos.
+  explanation: El manual define un ATV como un dispositivo motorizado fuera de carretera
+    que tiene un peso en seco de mil doscientas (1,200) libras o menos.
 - id: 51
   category: safe_driving_rules
-  question: ¿A qué ángulo se debe realizar el cruce al atravesar una carretera en
-    un ATV o UTV?
+  question: ¿Al cruzar una carretera en un ATV o UTV, en qué ángulo se debe realizar
+    el cruce?
   choices:
     A: 45 grados
     B: 60 grados
     C: 90 grados
     D: 180 grados
   answer: C
-  explanation: Al cruzar una carretera en un ATV/UTV, el cruce debe realizarse a un
-    ángulo de aproximadamente 90 grados y en un lugar donde ninguna obstrucción impida
-    un cruce rápido y seguro.
+  explanation: Al cruzar una carretera en un ATV/UTV, el cruce debe realizarse en
+    un ángulo de aproximadamente 90 grados y en un lugar donde ninguna obstrucción
+    impida un cruce rápido y seguro.
 - id: 52
   category: vehicle_information
   question: ¿Qué equipo específico debe estar activo y presente al operar un ATV o
@@ -678,9 +683,9 @@ questions:
     C: Una baliza amarilla intermitente
     D: Cinta reflectante en todos los lados
   answer: B
-  explanation: Para la operación autorizada de un ATV/UTV en vías públicas, el faro
-    delantero y la luz trasera deben estar encendidos y el vehículo debe estar equipado
-    con una bandera de seguridad para bicicletas.
+  explanation: Para la operación autorizada de ATV/UTV en vías públicas, el faro delantero
+    y la luz trasera deben estar encendidos y el vehículo debe estar equipado con
+    una bandera de seguridad para bicicletas.
 - id: 53
   category: safe_driving_rules
   question: ¿Cuál es la velocidad máxima a la que se puede operar un ATV o UTV en
@@ -691,7 +696,7 @@ questions:
     C: Menos de 35 mph
     D: Menos de 45 mph
   answer: B
-  explanation: La operación autorizada de un ATV/UTV en vías públicas debe realizarse
+  explanation: La operación autorizada de ATV/UTV en vías públicas debe realizarse
     a velocidades inferiores a 30 mph.
 - id: 54
   category: license_system
@@ -719,19 +724,19 @@ questions:
   answer: C
   explanation: Para ser elegible para una licencia de operador, las personas menores
     de 18 años no deben haber acumulado tres o más puntos en sus historiales de manejo
-    durante el período de los 12 meses anteriores.
+    durante el período anterior de 12 meses.
 - id: 56
   category: driver_testing
-  question: ¿Qué tipo de vehículo NO se puede utilizar para administrar una prueba
-    de manejo para una licencia Clase O?
+  question: ¿Qué tipo de vehículo NO se puede utilizar para realizar un examen de
+    manejo para una licencia Clase O?
   choices:
     A: Un automóvil de pasajeros
     B: Una camioneta pickup
     C: Un autociclo (autocycle)
     D: Un SUV
   answer: C
-  explanation: 'El manual establece explícitamente: ''No se puede administrar una
-    prueba de manejo en un autociclo (autocycle) para una licencia Clase O''.'
+  explanation: 'El manual establece explícitamente: ''No se puede realizar un examen
+    de manejo en un autociclo para una licencia Clase O''.'
 - id: 57
   category: safe_driving_rules
   question: ¿Qué se requiere de todos los pasajeros que son transportados en un vehículo
@@ -742,9 +747,9 @@ questions:
     C: Deben sentarse en el asiento trasero.
     D: Deben tener una licencia de conducir válida.
   answer: B
-  explanation: El manual establece que todas las personas que sean transportadas en
-    un vehículo motorizado operado por un titular de un POP deben viajar aseguradas
-    en un sistema de protección para ocupantes.
+  explanation: El manual establece que todas las personas transportadas en un vehículo
+    motorizado operado por un titular de un POP deben viajar aseguradas en un sistema
+    de protección para ocupantes.
 - id: 58
   category: license_system
   question: ¿Cuándo vence un Permiso de Operador Provisional (POP)?
@@ -761,15 +766,16 @@ questions:
   question: ¿Bajo qué circunstancia se colocará una restricción "Z" en una licencia
     de conducir?
   choices:
-    A: Cuando el conductor requiere lentes correctivos para pasar la prueba de visión.
+    A: Cuando el conductor requiere lentes correctivos para aprobar el examen de la
+      vista.
     B: Cuando el conductor es menor de 18 años.
     C: Cuando se utiliza una motoneta (motor scooter), un scooter de 3 ruedas o una
-      motocicleta de 3 ruedas durante la prueba de manejo.
-    D: Cuando el conductor está restringido a conducir solo durante el día.
+      motocicleta de 3 ruedas durante el examen de manejo.
+    D: Cuando el conductor está restringido a conducir únicamente durante el día.
   answer: C
   explanation: El manual establece que se colocará una restricción "Z" en la licencia
-    cuando se utilice una motoneta (motor scooter), un scooter de 3 ruedas o una motocicleta
-    de 3 ruedas durante la prueba de manejo.
+    cuando se utilice una motoneta, un scooter de 3 ruedas o una motocicleta de 3
+    ruedas durante el examen de manejo.
 - id: 60
   category: license_system
   question: ¿Se requiere una Licencia de Conducir Comercial (CDL) para conducir un
@@ -782,7 +788,7 @@ questions:
     D: 36,000 libras
   answer: C
   explanation: Se requiere una CDL para cualquier persona que conduzca un vehículo
-    que tenga una Clasificación de Peso Combinado Bruto (GCWR) o una Clasificación
+    que tenga una Clasificación de Peso Bruto Combinado (GCWR) o una Clasificación
     de Peso Bruto Vehicular (GVWR) de más de 26,000 libras.
 - id: 61
   category: license_system
@@ -799,17 +805,17 @@ questions:
 - id: 62
   category: penalties_and_points
   question: ¿Para qué tipo de infracción se le permite al titular de una CDL ingresar
-    a un programa de desvío de tráfico para evitar una condena?
+    a un programa de desviación de tráfico para evitar una condena?
   choices:
     A: Exceso de velocidad en una zona escolar
     B: Una infracción de estacionamiento
     C: Pasarse un semáforo en rojo
-    D: Los titulares de CDL no pueden ingresar a un programa de desvío por ninguna
-      infracción
+    D: Los titulares de una CDL no pueden ingresar a un programa de desviación por
+      ninguna infracción
   answer: B
   explanation: El manual especifica que ningún titular de una CDL puede ingresar a
-    un programa de desvío de tráfico para evitar una condena por una citación de tráfico,
-    excepto por una infracción de estacionamiento.
+    un programa de desviación de tráfico para evitar una condena por una citación
+    de tráfico, excepto por una infracción de estacionamiento.
 - id: 63
   category: license_system
   question: ¿Con qué frecuencia debe un solicitante que NO es ciudadano de los EE.
@@ -845,24 +851,23 @@ questions:
     C: Una carta notarizada de un familiar
     D: Solo una nueva tarjeta de seguro social
   answer: B
-  explanation: En caso de un cambio de nombre, debe presentar documentos (licencia
-    de matrimonio certificada, sentencia de divorcio certificada o una orden judicial)
-    que vinculen su nuevo nombre con el nombre que figura actualmente en su permiso,
-    licencia de conducir o tarjeta de identificación estatal.
+  explanation: En caso de un cambio de nombre, debe presentar documentos (licencia(s)
+    de matrimonio certificada(s), sentencia(s) de divorcio certificada(s) o una orden
+    judicial) que vinculen su nuevo nombre con el nombre que figura actualmente en
+    su permiso, licencia de conducir o tarjeta de identificación estatal.
 - id: 66
   category: license_system
-  question: ¿Cuál de los siguientes certificados de nacimiento NO es aceptable como
-    prueba de ciudadanía estadounidense o estatus legal?
+  question: ¿Cuál de las siguientes actas de nacimiento NO es aceptable como prueba
+    de ciudadanía estadounidense o estatus legal?
   choices:
-    A: Un certificado de nacimiento certificado emitido por una oficina del gobierno
-      estatal
-    B: Un certificado de nacimiento emitido por un hospital
+    A: Un acta de nacimiento certificada emitida por una oficina del gobierno estatal
+    B: Un acta de nacimiento emitida por un hospital
     C: Un Informe Consular de Nacimiento en el Extranjero
-    D: Un certificado de nacimiento de Puerto Rico emitido en 2012
+    D: Un acta de nacimiento de Puerto Rico emitida en 2012
   answer: B
-  explanation: El manual establece que no se pueden aceptar certificados de nacimiento
-    emitidos por hospitales, ni certificados de nacimiento de Puerto Rico emitidos
-    antes del 30 de septiembre de 2010.
+  explanation: El manual establece que no se pueden aceptar actas de nacimiento emitidas
+    por hospitales, ni actas de nacimiento de Puerto Rico emitidas antes del 30 de
+    septiembre de 2010.
 - id: 67
   category: license_system
   question: Al verificar su dirección principal en Nebraska, ¿cuál de las siguientes
@@ -892,16 +897,16 @@ questions:
 - id: 69
   category: license_system
   question: Las licencias de conducir emitidas a personas con un estatus migratorio
-    de LIBERTAD CONDICIONAL (PAROLEE) llevarán una marca distintiva que indica ¿qué?
+    de PAROLEE llevarán una marca distintiva que indica ¿qué?
   choices:
-    A: RESTRICTED TO DAYLIGHT DRIVING (Restringido a conducción diurna)
-    B: NOT FOR FEDERAL IDENTIFICATION (No para identificación federal)
-    C: TEMPORARY RESIDENT (Residente temporal)
-    D: NON-CITIZEN DRIVER (Conductor no ciudadano)
+    A: RESTRINGIDO A CONDUCCIÓN DIURNA
+    B: NO PARA IDENTIFICACIÓN FEDERAL
+    C: RESIDENTE TEMPORAL
+    D: CONDUCTOR NO CIUDADANO
   answer: B
-  explanation: Las personas con un estatus migratorio de LIBERTAD CONDICIONAL (PAROLEE)
-    pueden recibir tarjetas que llevan una marca distintiva que indica que NO SON
-    PARA IDENTIFICACIÓN FEDERAL (NOT FOR FEDERAL IDENTIFICATION).
+  explanation: Las personas con un estatus migratorio de PAROLEE pueden recibir tarjetas
+    que llevan una marca distintiva que indica que son NO PARA IDENTIFICACIÓN FEDERAL
+    (NOT FOR FEDERAL IDENTIFICATION).
 - id: 70
   category: driver_testing
   question: ¿Qué mide el examen de la vista del DMV?
@@ -915,8 +920,8 @@ questions:
     visual y la visión periférica.
 - id: 71
   category: driver_testing
-  question: Si está realizando una prueba de manejo en un vehículo con un año de modelo
-    de 1973 o posterior, ¿qué requisito de cinturón de seguridad debe cumplir el vehículo?
+  question: ¿Si está realizando un examen de manejo en un vehículo con un año de modelo
+    de 1973 o posterior, qué requisito de cinturón de seguridad debe cumplir el vehículo?
   choices:
     A: Solo el conductor debe tener un cinturón de seguridad que funcione.
     B: Solo el asiento del pasajero debe tener un cinturón de seguridad que funcione.
@@ -931,14 +936,14 @@ questions:
 - id: 72
   category: vehicle_information
   question: ¿Cuál de los siguientes es un requisito para el vehículo que usted proporcione
-    para su prueba de manejo?
+    para su examen de manejo?
   choices:
     A: Debe tener transmisión automática.
     B: Debe tener un velocímetro y luces de freno que funcionen.
     C: Debe tener menos de 10 años de antigüedad.
     D: Debe tener controles dobles para el examinador.
   answer: B
-  explanation: El vehículo proporcionado para la prueba de manejo debe estar en buenas
+  explanation: El vehículo proporcionado para el examen de manejo debe estar en buenas
     condiciones mecánicas, tener luces de freno que funcionen y el velocímetro del
     vehículo debe funcionar correctamente.
 - id: 73
@@ -997,9 +1002,9 @@ questions:
     el Servicio Postal de los EE. UU.
 - id: 77
   category: license_system
-  question: Si a un solicitante se le deniega o rechaza una licencia o una tarjeta
-    de identificación estatal, ¿ante quién se puede apelar la decisión del personal
-    de licencias de conducir?
+  question: Si a un solicitante se le deniega o rechaza una licencia o tarjeta de
+    identificación estatal, ¿ante quién se puede apelar la decisión del personal de
+    licencias de conducir?
   choices:
     A: El Tesorero del Condado
     B: La Corte Suprema del Estado
@@ -1013,7 +1018,7 @@ questions:
   category: license_system
   question: Bajo las reglas especiales de licencias para el personal militar en servicio
     activo estacionado fuera de Nebraska, ¿por cuánto tiempo es válida una licencia
-    de Nebraska después del licenciamiento o del regreso al estado?
+    de Nebraska después de la baja o el regreso al estado?
   choices:
     A: 30 días
     B: 60 días
@@ -1021,8 +1026,7 @@ questions:
     D: 6 meses
   answer: B
   explanation: La licencia es válida mientras se esté en servicio activo y durante
-    los 60 días posteriores al licenciamiento o al regreso a Nebraska, lo que ocurra
-    más tarde.
+    60 días después de la baja o el regreso a Nebraska, lo que ocurra más tarde.
 - id: 79
   category: license_system
   question: Si indica el deseo de registrarse para votar al solicitar una licencia,
@@ -1050,9 +1054,9 @@ questions:
     los EE. UU. no son elegibles para los servicios en línea".'
 - id: 81
   category: license_system
-  question: Para obtener un Permiso de Operador Provisional (POP) en línea, ¿dentro
-    de cuántos días de su cumpleaños número 16 debe estar el solicitante y cuánto
-    tiempo debe haber tenido un Permiso de Aprendiz o un Permiso Escolar?
+  question: Para obtener un Permiso de Operador Provisional (POP) en línea, el solicitante
+    debe estar dentro de los 60 días previos a su cumpleaños número 16 y haber tenido
+    un Permiso de Aprendizaje o un Permiso Escolar durante al menos ¿cuánto tiempo?
   choices:
     A: Dos meses
     B: Tres meses
@@ -1060,8 +1064,8 @@ questions:
     D: Doce meses
   answer: C
   explanation: Para obtener un Permiso de Operador Provisional en línea, el solicitante
-    debe haber tenido un Permiso de Aprendiz Escolar, Permiso de Aprendiz, Permiso
-    Escolar o una combinación de estos durante al menos seis meses.
+    debe haber tenido un Permiso de Aprendizaje Escolar, un Permiso de Aprendizaje,
+    un Permiso Escolar o una combinación de estos durante al menos seis meses.
 - id: 82
   category: penalties_and_points
   question: Para obtener una Licencia de Operador Clase O en línea, debe tener al
@@ -1087,21 +1091,21 @@ questions:
     D: Veces ilimitadas antes de los 72 años
   answer: B
   explanation: Los titulares de licencias Clase O y Clase M pueden renovar su licencia
-    en línea dos veces consecutivas. (Los titulares de Tarjetas de Identificación
-    Estatal pueden renovarla tres veces consecutivas).
+    dos veces consecutivas en línea. (Los titulares de tarjetas de identificación
+    estatal pueden renovarla tres veces consecutivas).
 - id: 84
   category: license_system
   question: ¿Qué símbolo se colocará en la parte frontal de su permiso, licencia o
-    Tarjeta de Identificación Estatal si acepta la donación de órganos y tejidos?
+    tarjeta de identificación estatal si acepta la donación de órganos y tejidos?
   choices:
     A: Una cruz roja
-    B: Un lazo verde
+    B: Una cinta verde
     C: Un símbolo de donante de corazón
     D: Un caduceo médico
   answer: C
   explanation: Si una persona acepta la donación de órganos y/o tejidos, se colocará
-    un símbolo de donante de corazón en la parte frontal del permiso, licencia o Tarjeta
-    de Identificación Estatal.
+    un símbolo de donante de corazón en la parte frontal del permiso, licencia o tarjeta
+    de identificación estatal.
 - id: 85
   category: license_system
   question: ¿Puede un menor de entre 16 y 18 años elegir ser donante de órganos en
@@ -1118,16 +1122,16 @@ questions:
     decisión de donación.
 - id: 86
   category: driver_responsibility
-  question: Según la Legislación de Primera Persona de Nebraska, ¿quién puede rescindir
+  question: Bajo la Legislación de Primera Persona de Nebraska, ¿quién puede rescindir
     la decisión de una persona de ser donante de órganos después de su muerte?
   choices:
     A: La familia inmediata de la persona
     B: El médico tratante
     C: Nadie
-    D: El Departamento de Vehículos Motorizados (DMV)
+    D: El Departamento de Vehículos Motorizados
   answer: C
   explanation: De acuerdo con la Legislación de Primera Persona de Nebraska, una donación
-    realizada mediante permiso, licencia o Tarjeta de Identificación Estatal no puede
+    realizada mediante permiso, licencia o tarjeta de identificación estatal no puede
     ser rescindida por nadie después de la muerte de la persona.
 - id: 87
   category: driver_testing
@@ -1140,8 +1144,8 @@ questions:
     D: Recibirá una carta de advertencia
   answer: B
   explanation: No presentarse a un reexamen, no presentar las declaraciones médicas
-    o de la vista requeridas, o no aprobar las pruebas resultará en la cancelación
-    de la licencia.
+    o de visión requeridas, o no aprobar las pruebas resultará en la cancelación de
+    la licencia.
 - id: 88
   category: license_system
   question: ¿Cuándo vencen generalmente las licencias de conducir emitidas a personas
@@ -1153,7 +1157,7 @@ questions:
     D: En su cumpleaños en el 10mo año después de la emisión
   answer: C
   explanation: Las licencias emitidas a personas de 21 años o más vencen el día del
-    cumpleaños del titular de la licencia en el quinto año después de su emisión.
+    cumpleaños del titular de la licencia en el quinto año después de la emisión.
 - id: 89
   category: license_system
   question: ¿Cuántos días antes de su cumpleaños puede una persona de 21 años o más
@@ -1180,18 +1184,18 @@ questions:
     se realicen dentro de los 60 días posteriores al cambio.
 - id: 91
   category: license_system
-  question: ¿Qué indica una restricción 'G' en una licencia de conducir de Nebraska?
+  question: ¿Qué indica una restricción "G" en una licencia de conducir de Nebraska?
   choices:
     A: Se requieren lentes correctivos
-    B: Limitado únicamente a las horas del día
-    C: No se permite conducir en autopistas interestatales
+    B: Limitado únicamente a horas de luz diurna
+    C: Prohibido conducir en autopistas interestatales
     D: Se requiere transmisión automática
   answer: B
-  explanation: Una restricción 'G' en una licencia significa que el conductor está
-    limitado a conducir únicamente durante el día.
+  explanation: Una restricción "G" en una licencia significa que el conductor está
+    limitado a conducir únicamente durante las horas de luz diurna.
 - id: 92
   category: license_system
-  question: ¿Qué código de restricción indica que un conductor no tiene permitido
+  question: ¿Qué código de restricción indica que a un conductor no se le permite
     conducir en la autopista interestatal?
   choices:
     A: Código C
@@ -1199,22 +1203,23 @@ questions:
     C: Código Q
     D: Código W
   answer: C
-  explanation: El código de restricción 'Q' significa 'No conducir en autopistas interestatales'.
+  explanation: El código de restricción "Q" significa "Prohibido conducir en autopistas
+    interestatales".
 - id: 93
   category: license_system
   question: ¿Cuál de las siguientes afirmaciones es verdadera con respecto a poseer
     múltiples documentos de identificación en Nebraska?
   choices:
-    A: Puede poseer un permiso de aprendizaje y una tarjeta de identificación estatal
+    A: Puede tener un permiso de aprendizaje y una tarjeta de identificación estatal
       al mismo tiempo.
-    B: Puede poseer una licencia de conducir y una tarjeta de identificación estatal
+    B: Puede tener una licencia de conducir y una tarjeta de identificación estatal
       al mismo tiempo.
-    C: Ninguna persona podrá poseer un permiso o licencia junto con una tarjeta de
+    C: Ninguna persona podrá tener un permiso o licencia junto con una tarjeta de
       identificación estatal al mismo tiempo.
-    D: Puede poseer una licencia de conducir comercial y una tarjeta de identificación
+    D: Puede tener una licencia de conducir comercial y una tarjeta de identificación
       estatal al mismo tiempo.
   answer: C
-  explanation: La ley de Nebraska establece que ninguna persona podrá poseer un permiso
+  explanation: La ley de Nebraska establece que ninguna persona podrá tener un permiso
     o licencia junto con una tarjeta de identificación estatal al mismo tiempo.
 - id: 94
   category: penalties_and_points
@@ -1226,8 +1231,8 @@ questions:
     C: Incautación (Impoundment)
     D: Confiscación
   answer: C
-  explanation: La incautación es la confiscación y retención de la licencia por parte
-    del tribunal, después de lo cual la licencia se devuelve al titular.
+  explanation: La incautación (impoundment) es la confiscación y retención de la licencia
+    por parte del tribunal, después de lo cual la licencia se devuelve al titular.
 - id: 95
   category: penalties_and_points
   question: Si un oficial de la ley confisca su licencia por no pasar una prueba de
@@ -1238,8 +1243,9 @@ questions:
     C: 30 días
     D: 60 días
   answer: B
-  explanation: Al confiscarse una licencia por fallar o rechazar una prueba de alcohol,
-    al conductor se le emite una licencia temporal que es válida por 15 días.
+  explanation: Tras la confiscación de una licencia por fallar o negarse a una prueba
+    de alcohol, al conductor se le emite una licencia temporal que es válida por 15
+    días.
 - id: 96
   category: penalties_and_points
   question: 'Su licencia puede ser suspendida o revocada si usted está involucrado
@@ -1256,9 +1262,9 @@ questions:
     y estar involucrado en un choque con culpa.
 - id: 97
   category: penalties_and_points
-  question: A una persona menor de 21 años se le puede suspender o revocar la licencia
-    si no completa un curso de mejora para conductores después de acumular ¿cuántos
-    puntos en un año?
+  question: Una persona menor de 21 años puede sufrir la suspensión o revocación de
+    su licencia si no completa un curso de mejora para conductores después de acumular
+    ¿cuántos puntos en un año?
   choices:
     A: 4 puntos
     B: 6 puntos
@@ -1270,24 +1276,24 @@ questions:
     en un año.
 - id: 98
   category: penalties_and_points
-  question: Acumular 12 puntos en su historial de manejo dentro de un período de dos
-    años causará una revocación automática de la licencia por ¿cuánto tiempo?
+  question: Acumular 12 puntos en su registro de conducir dentro de un período de
+    dos años causará una revocación automática de la licencia por ¿cuánto tiempo?
   choices:
     A: 3 meses
     B: 6 meses
     C: 1 año
     D: 2 años
   answer: B
-  explanation: Acumular 12 puntos en un período de dos años provoca la revocación
-    automática de la licencia de operador por seis meses.
+  explanation: Acumular 12 puntos en un período de dos años causa la revocación automática
+    de la licencia de operador por seis meses.
 - id: 99
   category: license_system
-  question: Antes de que se pueda agregar una designación de 'Veterano' a una licencia
+  question: Antes de que se pueda agregar una designación de "Veterano" a una licencia
     de conducir de Nebraska, ¿dónde debe el veterano certificar su elegibilidad?
   choices:
     A: El Departamento de Vehículos Motorizados (DMV)
     B: El Departamento de Asuntos de Veteranos de Nebraska (NDVA)
-    C: La oficina del tesorero del condado local
+    C: La oficina del tesorero local del condado
     D: La Administración del Seguro Social
   answer: B
   explanation: Los veteranos deben certificar su elegibilidad a través del Departamento
@@ -1298,17 +1304,17 @@ questions:
   question: ¿Qué sucederá si solicita una licencia de conducir de Nebraska mientras
     sus privilegios de conducir están actualmente suspendidos en otro estado?
   choices:
-    A: Se le emitirá una licencia restringida de Nebraska.
-    B: Se le emitirá una licencia temporal de 30 días.
-    C: No se emitirá una licencia de Nebraska.
+    A: Se le expedirá una licencia restringida de Nebraska.
+    B: Se le expedirá una licencia temporal de 30 días.
+    C: No se expedirá una licencia de Nebraska.
     D: Debe pagar el doble de la tarifa de solicitud estándar para obtener una licencia.
   answer: C
   explanation: Si los privilegios de conducir están revocados o suspendidos en Nebraska
-    o en cualquier otro estado o jurisdicción, no se emitirá una licencia de Nebraska.
+    o en cualquier otro estado o jurisdicción, no se expedirá una licencia de Nebraska.
 - id: 101
   category: penalties_and_points
-  question: ¿La acumulación de 12 puntos en un período de dos años causa la revocación
-    automática de la licencia de conducir por cuánto tiempo?
+  question: ¿Acumular 12 puntos en un período de dos años causa la revocación automática
+    de la licencia de conducir por cuánto tiempo?
   choices:
     A: 3 meses
     B: 6 meses
@@ -1319,16 +1325,16 @@ questions:
     la revocación automática de la licencia de conducir por seis meses.
 - id: 102
   category: penalties_and_points
-  question: ¿Cuántos puntos se asignan por una tercera condena por conducir bajo los
-    efectos del alcohol?
+  question: ¿Cuántos puntos se asignan por una condena de tercera ofensa por conducir
+    bajo los efectos del alcohol?
   choices:
     A: 6 puntos
     B: 8 puntos
     C: 10 puntos
     D: 12 puntos
   answer: D
-  explanation: El Sistema de Puntos de Nebraska asigna 12 puntos por una tercera condena
-    por conducir bajo los efectos del alcohol.
+  explanation: El Sistema de Puntos de Nebraska asigna 12 puntos por una condena de
+    tercera ofensa por conducir bajo los efectos del alcohol.
 - id: 103
   category: penalties_and_points
   question: Si una persona no entrega su licencia revocada, ¿cuál es la sanción máxima?
@@ -1418,7 +1424,7 @@ questions:
 - id: 110
   category: alcohol_drugs_health
   question: Si un conductor menor de edad (20 años o menos) es condenado por una infracción
-    de conducir con un nivel de alcohol del .02%, ¿por cuánto tiempo confiscará el
+    de conducir con un nivel de alcohol de .02%, ¿por cuánto tiempo confiscará el
     tribunal su licencia?
   choices:
     A: 15 días
@@ -1431,27 +1437,27 @@ questions:
 - id: 111
   category: penalties_and_points
   question: ¿Qué se requiere para mantener la prueba de responsabilidad financiera
-    después de una revocación de la licencia?
+    tras la revocación de una licencia?
   choices:
     A: Un depósito en efectivo de $10,000
-    B: El Formulario SR-22 de una compañía de seguros durante tres años
+    B: El Formulario SR-22 de una compañía de seguros por tres años
     C: Una carta de recomendación de un empleador
-    D: Completar un curso de conducción defensiva de 8 horas
+    D: La finalización de un curso de conducción defensiva de 8 horas
   answer: B
   explanation: La prueba de responsabilidad financiera debe mantenerse durante tres
-    años a partir de la fecha de finalización de la revocación original, generalmente
-    proporcionada mediante una certificación de seguro por escrito identificada como
-    Formulario SR-22.
+    años después de la fecha de finalización de la revocación original, generalmente
+    proporcionada con una certificación de seguro por escrito identificada como Formulario
+    SR-22.
 - id: 112
   category: penalties_and_points
   question: ¿Cómo puede un conductor recibir un crédito de 2 puntos en su historial
     de conducción?
   choices:
-    A: Conduciendo un año completo sin recibir una citación
+    A: Conduciendo un año completo sin una citación
     B: Completando con éxito un curso de mejora para conductores aprobado por el DMV
       antes de acumular 12 puntos
     C: Pagando una tarifa de $100 al DMV
-    D: Entregando su licencia voluntariamente durante 30 días
+    D: Entregando su licencia voluntariamente por 30 días
   answer: B
   explanation: Se puede otorgar un crédito de 2 puntos a un conductor que complete
     con éxito un curso de mejora para conductores aprobado por el DMV antes de que
@@ -1461,18 +1467,17 @@ questions:
   question: ¿Por cuál de las siguientes infracciones NO se asignan puntos?
   choices:
     A: Operar un vehículo con una licencia vencida
-    B: Negarse a someterse a una prueba de contenido de alcohol
+    B: No someterse a una prueba de contenido de alcohol
     C: Infracciones de estacionamiento
     D: Obstrucción ilegal de la vista de un operador
   answer: C
-  explanation: No se asignan puntos por infracciones de estacionamiento, silenciador,
-    no portar una licencia de operador válida, o por infracciones relacionadas con
-    el sistema de protección de ocupantes, casco protector de motocicleta o de ciclomotor.
+  explanation: No se asignan puntos por estacionamiento, silenciador, no portar una
+    licencia de operador válida en su persona, o por infracciones que involucren el
+    sistema de protección de ocupantes, casco protector de motocicleta o ciclomotor.
 - id: 114
   category: alcohol_drugs_health
   question: Si una persona se niega a someterse a una prueba química de alcohol o
-    drogas, ¿cuánto tiempo debe cumplir de Revocación Administrativa de la Licencia
-    (ALR)?
+    drogas, ¿cuánto tiempo debe cumplir de Revocación Administrativa de Licencia (ALR)?
   choices:
     A: 90 días
     B: 180 días
@@ -1484,7 +1489,7 @@ questions:
 - id: 115
   category: penalties_and_points
   question: ¿Cuál es la sanción para un conductor menor de edad que es condenado por
-    conducir durante su período de confiscación?
+    conducir durante su período de inmovilización (impoundment)?
   choices:
     A: Licencia revocada por seis meses por el tribunal
     B: Licencia revocada por un año por el tribunal
@@ -1492,7 +1497,7 @@ questions:
     D: 30 días en la cárcel del condado
   answer: A
   explanation: Cualquier conductor menor de edad que sea condenado por conducir durante
-    la confiscación tendrá su licencia revocada por seis meses por el tribunal.
+    la inmovilización verá su licencia revocada por seis meses por el tribunal.
 - id: 116
   category: penalties_and_points
   question: Si un infractor se niega a someterse a una prueba química, ¿cuánto tiempo
@@ -1504,12 +1509,12 @@ questions:
     C: 45 días
     D: 90 días
   answer: D
-  explanation: En caso de negativa a someterse a una prueba, el infractor debe esperar
-    90 días después de que expire la licencia temporal para solicitar el SPP.
+  explanation: Por negarse a someterse a una prueba, el infractor debe esperar 90
+    días después de que expire la licencia temporal para solicitar el SPP.
 - id: 117
   category: license_system
-  question: 'Un Permiso de Conducción por Empleo permite a un conductor cuyos privilegios
-    están revocados bajo el sistema de puntos conducir:'
+  question: 'Un Permiso de Conducción por Empleo (Employment Drive Permit) permite
+    a un conductor cuyos privilegios están revocados bajo el sistema de puntos conducir:'
   choices:
     A: A cualquier lugar dentro de su condado de residencia
     B: Hacia y desde el trabajo y el hogar por la ruta más directa
@@ -1522,7 +1527,7 @@ questions:
 - id: 118
   category: penalties_and_points
   question: ¿Cuándo puede un infractor por primera vez sujeto a una Revocación Administrativa
-    de la Licencia (ALR) solicitar un Permiso de Dispositivo de Bloqueo de Encendido
+    de Licencia (ALR) solicitar un Permiso de Dispositivo de Bloqueo de Encendido
     (IIP)?
   choices:
     A: Inmediatamente después de la revocación
@@ -1536,31 +1541,31 @@ questions:
 - id: 119
   category: penalties_and_points
   question: ¿Cuál es la sanción si un conductor es condenado por manipular un sistema
-    de bloqueo de encendido y tiene un contenido de alcohol en la sangre (BAC) de
-    al menos .02%?
+    de bloqueo de encendido y tiene un contenido de alcohol en sangre (BAC) de al
+    menos .02%?
   choices:
-    A: Delito menor de Clase I
-    B: Delito menor de Clase II
-    C: Delito grave de Clase III
-    D: Delito grave de Clase IV
+    A: Delito menor (Misdemeanor) de Clase I
+    B: Delito menor (Misdemeanor) de Clase II
+    C: Delito grave (Felony) de Clase III
+    D: Delito grave (Felony) de Clase IV
   answer: D
   explanation: Una condena de un conductor por manipular o eludir un sistema de bloqueo
-    es un delito menor de Clase I. Si el conductor tiene un contenido de alcohol de
-    al menos .02 con las infracciones indicadas anteriormente, es un delito grave
-    de Clase IV.
+    de encendido es un Delito menor de Clase I. Si el conductor tiene un contenido
+    de alcohol de al menos .02 con las infracciones indicadas anteriormente, es un
+    Delito grave de Clase IV.
 - id: 120
   category: license_system
-  question: 'Un Permiso de Conducción por Dificultad Médica permite a las personas
-    con privilegios de conducción revocados conducir:'
+  question: 'Un Permiso de Conducción por Dificultad Médica (Medical Hardship Driving
+    Permit) permite a las personas con privilegios de conducción revocados conducir:'
   choices:
     A: A la farmacia para recoger recetas
     B: Desde el hogar o el trabajo a un hospital, clínica o consultorio médico específico
-      para recibir tratamiento médico
+      para tratamiento médico
     C: A cualquier instalación médica dentro de un radio de 50 millas
     D: Solo en situaciones de emergencia que requieran una ambulancia
   answer: B
   explanation: Los titulares de permisos solo pueden conducir desde el hogar o el
-    trabajo a un hospital, clínica, consultorio médico o lugar similar especificado
+    trabajo a un hospital, clínica, consultorio médico o ubicación similar especificada
     y regresar con el propósito de recibir tratamiento médico.
 - id: 121
   category: penalties_and_points
@@ -1577,7 +1582,7 @@ questions:
     de Clase IV.
 - id: 122
   category: penalties_and_points
-  question: ¿Cuál es el período máximo por el que se puede revocar una licencia de
+  question: ¿Cuál es el periodo máximo por el que se puede revocar una licencia de
     conducir por abandonar la escena de un choque de vehículo motorizado tras una
     condena?
   choices:
@@ -1587,7 +1592,7 @@ questions:
     D: 5 años
   answer: B
   explanation: A las personas que abandonan la escena de un choque de vehículo motorizado
-    se les puede revocar la licencia de conducir hasta por un año tras ser condenadas.
+    se les puede revocar la licencia de conducir hasta por un año tras una condena.
 - id: 123
   category: alcohol_drugs_health
   question: Para una segunda condena de un menor en posesión (20 años o menos), ¿por
@@ -1602,12 +1607,12 @@ questions:
     el permiso o la licencia por 90 días.
 - id: 124
   category: alcohol_drugs_health
-  question: Según la ley de Nebraska, ¿quién tiene prohibido consumir o poseer un
+  question: Según la ley de Nebraska, ¿a quién se le prohíbe consumir o poseer un
     recipiente abierto de una bebida alcohólica dentro de un vehículo en una vía pública?
   choices:
     A: Solo el conductor
     B: Solo los pasajeros menores de 21 años
-    C: Tanto los conductores como los pasajeros
+    C: Tanto conductores como pasajeros
     D: Solo los pasajeros en el asiento delantero
   answer: C
   explanation: Es ilegal consumir o estar en posesión de un recipiente abierto de
@@ -1653,7 +1658,7 @@ questions:
     D: Tener instalado un dispositivo de bloqueo de encendido
   answer: B
   explanation: Cualquier conductor que opere un vehículo en las carreteras de Nebraska
-    ya ha aceptado someterse a una prueba o pruebas químicas cuando lo solicite un
+    ya ha aceptado someterse a una o varias pruebas químicas cuando lo solicite un
     oficial de la ley.
 - id: 128
   category: penalties_and_points
@@ -1691,7 +1696,7 @@ questions:
     D: .08%
   answer: B
   explanation: Cuando el conductor debe elegir entre varias respuestas (reacción de
-    elección), el deterioro comienza con un .03% de BAC.
+    elección), el deterioro comienza a un .03% de BAC.
 - id: 131
   category: alcohol_drugs_health
   question: ¿Para cuando un conductor alcanza un .08% de BAC (concentración de alcohol
@@ -1711,13 +1716,13 @@ questions:
   question: ¿Cuál es la posición recomendada de las manos en el volante para vehículos
     equipados con bolsas de aire (airbags)?
   choices:
-    A: A las 10 y a las 2 en punto
-    B: A las 8 y a las 4 en punto
-    C: A las 9 y a las 3 en punto
-    D: A las 11 y a las 1 en punto
+    A: Las 10 y las 2
+    B: Las 8 y las 4
+    C: Las 9 y las 3
+    D: Las 11 y las 1
   answer: C
   explanation: La posición recomendada de las manos del conductor para vehículos equipados
-    con bolsas de aire ubicadas en el volante es la posición de las 9 y las 3 en punto.
+    con bolsas de aire ubicadas en el volante es la posición de las 9 y las 3.
 - id: 133
   category: safe_driving_rules
   question: ¿Cuánto espacio deben dejar los conductores de vehículos equipados con
@@ -1745,7 +1750,7 @@ questions:
 - id: 135
   category: penalties_and_points
   question: 'La ley que exige que los niños de hasta ocho años viajen correctamente
-    asegurados en un asiento de seguridad infantil aprobado por el gobierno federal
+    asegurados en un asiento de seguridad para niños aprobado por el gobierno federal
     se considera una:'
   choices:
     A: Ley Primaria
@@ -1754,22 +1759,22 @@ questions:
     D: Ley Comercial
   answer: A
   explanation: El manual identifica el requisito de que los niños de hasta ocho años
-    viajen correctamente asegurados en un asiento de seguridad infantil aprobado por
-    el gobierno federal como una Ley Primaria, lo que significa que un conductor puede
-    ser detenido y multado únicamente por esta infracción.
+    viajen correctamente asegurados en un asiento de seguridad para niños aprobado
+    por el gobierno federal como una Ley Primaria, lo que significa que un conductor
+    puede ser detenido y multado únicamente por esta infracción.
 - id: 136
   category: safe_driving_rules
   question: ¿Durante cuánto tiempo se requiere que los niños viajen en un asiento
     de seguridad orientado hacia atrás?
   choices:
     A: Hasta el año de edad
-    B: Hasta los dos años o hasta que alcancen el límite superior de altura o peso
-      permitido por el fabricante
-    C: Hasta los tres años
+    B: Hasta los dos años de edad o hasta que alcancen el límite superior de altura
+      o peso permitido por el fabricante
+    C: Hasta los tres años de edad
     D: Hasta que pesen 40 libras
   answer: B
-  explanation: Los niños deben viajar orientados hacia atrás hasta los dos años o
-    hasta que alcancen el límite superior de altura o peso permitido por el fabricante
+  explanation: Los niños viajan orientados hacia atrás hasta los dos años de edad
+    o hasta que alcancen el límite superior de altura o peso permitido por el fabricante
     del asiento de seguridad.
 - id: 137
   category: safe_driving_rules
@@ -1780,25 +1785,25 @@ questions:
     C: 16 años
     D: 18 años
   answer: D
-  explanation: Se prohíbe que los niños de hasta dieciocho años viajen en áreas de
-    carga. Esta es una Ley Primaria.
+  explanation: Se prohíbe que los niños de hasta dieciocho años viajen en las áreas
+    de carga. Esta es una Ley Primaria.
 - id: 138
   category: penalties_and_points
-  question: ¿Cuál es la sanción por violar la Ley de Restricción de Pasajeros Infantiles?
+  question: ¿Cuál es la sanción por violar la Ley de Restricción de Pasajeros Niños?
   choices:
     A: Una multa de $25 más costos judiciales y 1 punto asignado al historial de conducción
     B: Una multa de $50 y 2 puntos asignados al historial de conducción
     C: Una multa de $100 y suspensión inmediata de la licencia
     D: Una multa de $10 y escuela de tráfico obligatoria
   answer: A
-  explanation: La violación de la Ley de Restricción de Pasajeros Infantiles conlleva
-    una multa de $25 más costos judiciales y se asigna 1 punto al historial de conducción
+  explanation: La violación de la Ley de Restricción de Pasajeros Niños conlleva una
+    multa de $25 más costos judiciales y se asigna 1 punto al historial de conducción
     del operador.
 - id: 139
   category: defensive_driving
   question: Si está a punto de chocar con un ciervo, ¿cuál es su acción más segura?
   choices:
-    A: Virar hacia el carril de tráfico en sentido contrario
+    A: Virar bruscamente hacia el carril de tráfico en sentido contrario
     B: Desviarse de la calzada hacia la cuneta
     C: Frenar firmemente, maniobrar para mantener el control y detenerse de la manera
       más segura posible
@@ -1810,17 +1815,17 @@ questions:
 - id: 140
   category: license_system
   question: Si un solicitante ha sufrido una pérdida de conocimiento, ¿dentro de cuántos
-    meses previos a la obtención o renovación de una licencia debe hacer que un médico
-    certifique que puede conducir de manera segura?
+    meses antes de obtener o renovar una licencia debe un médico certificar que puede
+    conducir de manera segura?
   choices:
     A: Un mes
     B: Tres meses
     C: Six meses
     D: Doce meses
   answer: B
-  explanation: Cualquier persona que sufra de una condición médica que resulte en
-    un incidente que involucre una pérdida de conocimiento dentro de un período de
-    tres meses antes de obtener o renovar una licencia deberá contar con la certificación
+  explanation: Cualquier persona que sufra una condición médica que resulte en un
+    incidente que involucre una pérdida de conocimiento dentro de un período de tres
+    meses antes de obtener o renovar una licencia deberá contar con la certificación
     de un médico de que es capaz de operar un vehículo motorizado de manera segura.
 - id: 141
   category: vehicle_information
@@ -1855,7 +1860,7 @@ questions:
     A: La grasa absorbe más alcohol que el tejido muscular
     B: La grasa absorbe menos alcohol que el tejido muscular
     C: La grasa metaboliza el alcohol más rápido que el tejido muscular
-    D: La grasa evita por completo que el alcohol entre en el torrente sanguíneo
+    D: La grasa evita que el alcohol entre en el torrente sanguíneo por completo
   answer: B
   explanation: Una mayor proporción del peso corporal de una mujer es grasa, y la
     grasa absorbe menos alcohol que el tejido muscular, lo cual es uno de los factores
@@ -1871,18 +1876,18 @@ questions:
     C: Ley Federal
     D: Ley de Tolerancia Cero
   answer: B
-  explanation: Se requiere que los conductores y los pasajeros del asiento delantero
-    viajen abrochados con un cinturón de seguridad o en un asiento de seguridad para
-    niños. Esta se enumera como una Ley Secundaria, lo que significa que los conductores
+  explanation: Los conductores y los pasajeros del asiento delantero deben viajar
+    abrochados con un cinturón de seguridad o en un asiento de seguridad para niños.
+    Esta se enumera como una Ley Secundaria, lo que significa que los conductores
     son citados solo si son detenidos y multados por otra infracción.
 - id: 145
   category: safe_driving_rules
-  question: ¿Qué debe hacer con las luces interiores de su vehículo si la policía
-    lo detiene por la noche?
+  question: ¿Qué debe hacer con las luces interiores de su vehículo si es detenido
+    por la policía por la noche?
   choices:
     A: Apagarlas para evitar cegar al oficial
     B: Encenderlas para ayudar con la visibilidad
-    C: Parpadearlas para señalar conformidad
+    C: Hacerlas parpadear para indicar cumplimiento
     D: Atenuarlas al nivel más bajo
   answer: B
   explanation: El manual establece que durante una parada de tráfico por la noche,
@@ -1903,7 +1908,8 @@ questions:
 - id: 147
   category: driver_responsibility
   question: ¿Cuál es el monto mínimo requerido de responsabilidad financiera (seguro)
-    por lesiones o destrucción de la propiedad de terceros en un solo choque en Nebraska?
+    por lesiones o destrucción de la propiedad de terceros en cualquier accidente
+    en Nebraska?
   choices:
     A: $10,000
     B: $25,000
@@ -1912,11 +1918,11 @@ questions:
   answer: B
   explanation: La ley de Nebraska requiere responsabilidad financiera por un monto
     de veinticinco mil dólares ($25,000) debido a lesiones o destrucción de la propiedad
-    de terceros en cualquier choque.
+    de terceros en cualquier accidente.
 - id: 148
   category: vehicle_information
   question: Según la ley de Nebraska, ¿cuál es la profundidad mínima requerida de
-    la banda de rodadura para los neumáticos neumáticos?
+    la banda de rodadura para los neumáticos?
   choices:
     A: 1/32 de pulgada
     B: 2/32 de pulgada
@@ -1924,7 +1930,7 @@ questions:
     D: 4/32 de pulgada
   answer: B
   explanation: La lista de equipo requerido en el manual especifica que los vehículos
-    deben tener neumáticos neumáticos con al menos 2/32” de banda de rodadura.
+    deben tener neumáticos con al menos 2/32” de banda de rodadura.
 - id: 149
   category: vehicle_information
   question: ¿Dónde se encuentra generalmente el Número de Identificación del Vehículo
@@ -1953,7 +1959,7 @@ questions:
 - id: 151
   category: penalties_and_points
   question: ¿Cuál es la sanción por poseer u operar un vehículo motorizado en violación
-    de las restricciones de protección solar y polarizado de ventanas de Nebraska?
+    de las restricciones de Nebraska sobre protección solar y polarizado de ventanas?
   choices:
     A: Delito menor de Clase I
     B: Delito menor de Clase II
@@ -1973,10 +1979,9 @@ questions:
     C: En el bloque del motor
     D: En la tarjeta de registro del vehículo
   answer: B
-  explanation: Debe comparar la presión (PSI) medida con la presión (PSI) que se encuentra
-    en la calcomanía dentro de la puerta del conductor de su vehículo o en el manual
-    del propietario. NO debe compararla con la presión (PSI) que figura en el flanco
-    del neumático.
+  explanation: Debe comparar los psi medidos con los psi que se encuentran en la calcomanía
+    dentro de la puerta del conductor de su vehículo o en el manual del propietario.
+    NO debe compararlos con los psi del flanco del neumático.
 - id: 153
   category: vehicle_information
   question: ¿Cuál es el mejor momento para revisar la presión de sus neumáticos?
@@ -1987,58 +1992,57 @@ questions:
       después de haber conducido'
     D: Solo durante los meses de verano
   answer: C
-  explanation: El manual aconseja revisar los neumáticos cuando están "fríos", es
-    decir, antes de haber conducido o al menos tres horas después de haber conducido.
+  explanation: El manual aconseja revisar los neumáticos "fríos", es decir, antes
+    de haber conducido o al menos tres horas después de haber conducido.
 - id: 154
   category: vehicle_information
-  question: Al usar la prueba de la moneda de un centavo (penny test) para revisar
-    el desgaste de los neumáticos, ¿qué indica que está conduciendo con una cantidad
-    segura de banda de rodadura?
+  question: Al usar la prueba del centavo para verificar el desgaste de los neumáticos,
+    ¿qué indica que está conduciendo con una cantidad segura de banda de rodadura?
   choices:
     A: Puede ver toda la cabeza de Abraham Lincoln
     B: Cualquier parte de la cabeza de Abraham Lincoln está cubierta por la banda
       de rodadura
-    C: La moneda se cae de la ranura del neumático
-    D: La banda de rodadura no toca la moneda en absoluto
+    C: El centavo se cae de la ranura del neumático
+    D: La banda de rodadura no toca el centavo en absoluto
   answer: B
   explanation: Al colocar la cabeza de Lincoln en una ranura del neumático, si alguna
     parte de la cabeza de Lincoln queda cubierta por la banda de rodadura, está conduciendo
-    con una cantidad segura de banda de rodadura.
+    con la cantidad segura de banda de rodadura.
 - id: 155
   category: signs_and_signals
   question: ¿Cómo debe tratar una intersección si el semáforo está apagado debido
-    a una falla de energía y no hay ningún control de tráfico presente?
+    a una falla de energía y no hay control de tráfico en el lugar?
   choices:
-    A: Tratarla como una señal de ceder el paso
+    A: Tratarla como una señal de ceda el paso
     B: Continuar sin detenerse si el camino está despejado
     C: Tratarla como una parada obligatoria en todas las direcciones (all-way stop)
     D: Solo los vehículos en la carretera más grande tienen el derecho de paso
   answer: C
-  explanation: Si un semáforo no está funcionando (está apagado) debido a una falla
-    de energía u otra causa y no hay un oficial de paz, señalizador u otro control
-    de tráfico en el lugar, la intersección debe tratarse como una parada obligatoria
-    en todas las direcciones (all-way stop).
+  explanation: Si un semáforo no está operativo (apagado) debido a una falla de energía
+    u otra causa y no hay un oficial de paz, señalero u otro control de tráfico en
+    el lugar, la intersección se tratará como una parada obligatoria en todas las
+    direcciones (all-way stop).
 - id: 156
   category: signs_and_signals
   question: ¿Qué debe hacer al acercarse a una luz roja intermitente en un cruce de
     ferrocarril?
   choices:
     A: Reducir la velocidad y continuar si no se ve ningún tren
-    B: Detenerse por completo incluso si no se ve ningún tren
+    B: Hacer una parada completa incluso si no se ve un tren
     C: Aumentar la velocidad para cruzar las vías rápidamente
     D: Ceder el paso solo a los peatones
   answer: B
   explanation: Una luz roja intermitente en un cruce de ferrocarril requiere una parada
-    completa, incluso si no se ve ningún tren.
+    completa incluso si no se ve un tren.
 - id: 157
   category: signs_and_signals
   question: ¿Qué indica una luz de semáforo amarilla fija?
   choices:
     A: La luz está a punto de cambiar y debe detenerse de manera segura si aún no
       está en la intersección
-    B: Usted tiene el derecho de paso para girar a la izquierda
-    C: Debe detenerse por completo de inmediato sin importar su posición
-    D: Debe acelerar para pasar la luz antes de que cambie a rojo
+    B: Tiene el derecho de paso para girar a la izquierda
+    C: Debe detenerse por completo de inmediato, independientemente de su posición
+    D: Debe acelerar para ganarle a la luz antes de que cambie a rojo
   answer: A
   explanation: Una luz amarilla fija es una advertencia de que la luz está a punto
     de cambiar. Si el vehículo no ha entrado en la intersección, debe detenerse de
@@ -2051,7 +2055,7 @@ questions:
     A: Tan pronto como detenga su vehículo a un lado
     B: Mientras el oficial camina hacia su vehículo
     C: Solo después de esperar las instrucciones del oficial para hacerlo
-    D: Antes de bajar la ventanilla
+    D: Antes de bajar la ventana
   answer: C
   explanation: El manual instruye a los conductores a esperar las instrucciones del
     oficial antes de buscar su licencia de conducir o los documentos del vehículo.
@@ -2072,10 +2076,10 @@ questions:
   category: signs_and_signals
   question: ¿Qué debe hacer un conductor al acercarse a una luz de semáforo roja intermitente?
   choices:
-    A: Reducir la velocidad y continuar con precaución si la intersección está despejada.
+    A: Reducir la velocidad y proceder con precaución si la intersección está despejada.
     B: Detenerse solo si hay peatones u otros vehículos presentes.
-    C: Detenerse por completo, ceder el paso al tráfico que se aproxima o a los peatones,
-      y continuar cuando esté despejado.
+    C: Hacer una parada completa, ceder el paso al tráfico que se aproxima o a los
+      peatones, y continuar cuando esté despejado.
     D: Esperar a que la luz roja intermitente cambie a una luz verde fija.
   answer: C
   explanation: Según el manual, una luz roja intermitente requiere una parada completa,
@@ -2083,24 +2087,23 @@ questions:
     cuando el camino esté despejado.
 - id: 161
   category: safe_driving_rules
-  question: ¿Bajo qué condición es legal girar a la izquierda con un semáforo en rojo
-    circular?
+  question: ¿Bajo qué condición es legal girar a la izquierda con una luz roja circular?
   choices:
     A: Nunca se permite bajo ninguna circunstancia.
-    B: Cuando se circula por una calle de sentido único y se gira hacia otra calle
-      de sentido único.
-    C: Al girar desde una calle de doble sentido hacia una calle de sentido único.
+    B: Cuando se circula por una calle de un solo sentido y se gira hacia otra calle
+      de un solo sentido.
+    C: Al girar desde una calle de doble sentido hacia una calle de un solo sentido.
     D: Cuando no hay tráfico en sentido contrario a menos de 500 pies.
   answer: B
-  explanation: El manual establece que girar a la izquierda con un semáforo en rojo
-    circular después de detenerse se permite solo si se circula por una calle de sentido
-    único y se gira hacia otra calle de sentido único.
+  explanation: El manual establece que girar a la izquierda con una luz roja circular
+    después de detenerse se permite solo si se circula por una calle de un solo sentido
+    y se gira hacia otra calle de un solo sentido.
 - id: 162
   category: signs_and_signals
   question: ¿Cuál es la regla con respecto a girar con una señal de flecha roja?
   choices:
     A: Puede girar a la derecha después de detenerse por completo.
-    B: Puede girar a la izquierda si está girando hacia una calle de sentido único.
+    B: Puede girar a la izquierda si está girando hacia una calle de un solo sentido.
     C: Girar con una flecha roja está estrictamente prohibido.
     D: Puede girar si cede el paso a todos los peatones en el cruce peatonal.
   answer: C
@@ -2108,35 +2111,35 @@ questions:
     prohibido".'
 - id: 163
   category: signs_and_signals
-  question: ¿Qué indica una señal de uso de carril con una "X" amarilla fija?
+  question: ¿Qué indica una señal de uso de carril con una 'X' amarilla fija?
   choices:
-    A: El conductor debe salir del carril de la manera más segura posible porque pronto
-      aparecerá una "X" roja.
+    A: El conductor debe salir del carril lo más pronto posible de manera segura porque
+      pronto aparecerá una 'X' roja.
     B: El carril está abierto solo para realizar giros a la izquierda.
     C: Los conductores pueden continuar en el carril pero deben reducir su velocidad.
     D: La dirección del carril está cambiando, pero los conductores tienen el derecho
       de paso.
   answer: A
-  explanation: Una señal de "X" amarilla fija significa que el conductor debe salir
+  explanation: Una señal de 'X' amarilla fija significa que el conductor debe salir
     del carril tan pronto como sea posible de manera segura, ya que pronto aparecerá
-    una "X" roja.
+    una 'X' roja.
 - id: 164
   category: signs_and_signals
-  question: Al acercarse a una baliza híbrida para peatones (Pedestrian Hybrid Beacon)
+  question: Al acercarse a una Baliza Híbrida para Peatones (Pedestrian Hybrid Beacon)
     que parpadea en rojo, ¿qué debe hacer un conductor?
   choices:
     A: Permanecer completamente detenido hasta que la baliza se apague.
-    B: Detenerse y verificar que no haya ningún peatón en su carril ni en ningún carril
+    B: Detenerse y verificar que no haya peatones en su carril ni en ningún carril
       adyacente antes de continuar.
     C: Continuar sin detenerse si el cruce peatonal parece estar despejado.
-    D: Ceder el paso al tráfico que viene en sentido contrario antes de girar.
+    D: Ceder el paso al tráfico en sentido contrario antes de realizar un giro.
   answer: B
   explanation: Durante el intervalo de rojo intermitente de una baliza híbrida para
-    peatones, los conductores deben detenerse y verificar que no haya ningún peatón
-    en su carril ni en ningún carril adyacente antes de continuar.
+    peatones, los conductores deben detenerse y verificar que no haya peatones en
+    su carril ni en ningún carril adyacente antes de continuar.
 - id: 165
   category: signs_and_signals
-  question: ¿Qué tipo de información indica una señal de carretera de color rosa?
+  question: ¿Qué tipo de información indica una señal vial de color rosa?
   choices:
     A: Servicios para automovilistas, como áreas de descanso.
     B: Áreas de recreación e interés cultural.
@@ -2150,82 +2153,82 @@ questions:
   question: ¿Qué forma de señal se utiliza exclusivamente para marcar zonas escolares
     y advertir sobre cruces peatonales de niños en edad escolar?
   choices:
-    A: Diamante (rombo)
+    A: Diamante (Rombo)
     B: Pentágono
     C: Octágono
-    D: Banderín (triangular horizontal)
+    D: Banderín (Pennant)
   answer: B
   explanation: La forma de pentágono (cinco lados) marca las zonas escolares y advierte
     sobre los cruces peatonales de niños en edad escolar.
 - id: 167
   category: signs_and_signals
-  question: ¿Qué indica una señal con forma de banderín (pennant)?
+  question: ¿Qué indica una señal en forma de banderín (pennant)?
   choices:
     A: Un cruce de ferrocarril más adelante
-    B: Una zona de no rebasar
+    B: Una zona de no rebasar (no pasar)
     C: Un requisito de ceder el paso
     D: Una zona escolar
   answer: B
-  explanation: La forma de banderín indica una zona de no rebasar (no adelantar).
+  explanation: La forma de banderín indica una zona de no rebasar.
 - id: 168
   category: safe_driving_rules
   question: ¿Qué debe hacer si se acerca a un cruce de ferrocarril y las barreras
     están bajadas pero no se ve ningún tren?
   choices:
-    A: Conducir alrededor de las barreras con cuidado.
-    B: Esperar a que las luces dejen de parpadear y luego conducir alrededor de las
-      barreras.
-    C: Nunca conduzca alrededor de las barreras.
+    A: Conducir rodeando las barreras con cuidado.
+    B: Esperar a que las luces dejen de parpadear y luego rodear las barreras.
+    C: Nunca conduzca rodeando las barreras.
     D: Llamar a la policía para informar que la barrera está rota y luego continuar.
   answer: C
-  explanation: 'El manual establece: "NUNCA CONDUZCA ALREDEDOR DE LAS BARRERAS. Es
-    peligroso y contra la ley".'
+  explanation: 'El manual establece: "NUNCA CONDUZCA RODEANDO LAS BARRERAS. Es peligroso
+    y contra la ley".'
 - id: 169
   category: signs_and_signals
-  question: ¿Qué significa una señal de advertencia de "Carril adicional" (Added Lane)?
+  question: ¿Qué significa una señal de advertencia de 'Carril Añadido' (Added Lane)?
   choices:
     A: Debe incorporarse al carril izquierdo de inmediato.
-    B: Entrará tráfico de otra carretera, pero no es necesario incorporarse porque
+    B: El tráfico de otra carretera entrará, pero no es necesario incorporarse porque
       se ha añadido un carril.
     C: El carril derecho termina pronto y se requiere una maniobra de incorporación.
-    D: Una carretera dividida comienza más adelante.
+    D: Una autopista dividida comienza más adelante.
   answer: B
-  explanation: La señal de carril adicional significa que el tráfico de otra carretera
+  explanation: La señal de Carril Añadido significa que el tráfico de otra carretera
     entrará a la vía, y no es necesario incorporarse porque se ha añadido un carril.
 - id: 170
   category: signs_and_signals
-  question: ¿Qué indica la señal de "Fin de carretera dividida" (Divided Highway Ends)?
+  question: ¿Qué indica la señal de 'Fin de Autopista Dividida' (Divided Highway Ends)?
   choices:
     A: Los carriles de tráfico más adelante están divididos por una mediana.
     B: Un carril está terminando y debe incorporarse a la izquierda.
-    C: El tráfico de doble sentido está cambiando a tráfico de sentido único.
-    D: El carril de tráfico en sentido contrario más adelante ya no está dividido
+    C: El tráfico de doble sentido está cambiando a tráfico de un solo sentido.
+    D: El carril de tráfico en sentido contrario más adelante ya no está separado
       por una mediana o divisor.
   answer: D
-  explanation: La señal de fin de carretera dividida significa que el carril de tráfico
-    en sentido contrario más adelante ya no está dividido por una mediana o divisor,
-    y usted debe mantenerse a la derecha.
+  explanation: La señal de Fin de Autopista Dividida significa que el carril de tráfico
+    en sentido contrario más adelante ya no está separado por una mediana o divisor,
+    y debe mantenerse a la derecha.
 - id: 171
   category: safe_driving_rules
-  question: ¿Dónde debe detenerse ante una señal de alto (stop) si no hay una línea
-    de parada pintada o un cruce de peatones?
+  question: ¿Dónde debe detenerse ante una señal de alto si no hay una línea de parada
+    pintada o un cruce de peatones?
   choices:
-    A: Directamente en paralelo a la señal de alto.
-    B: En el punto más seguro más cercano a la vía que se cruza para obtener una visión
-      clara del tráfico que se aproxima.
-    C: Al menos 10 pies antes de la vía que se cruza.
+    A: Directamente paralelo a la señal de alto.
+    B: En el punto más seguro más cercano a la carretera que se cruza para obtener
+      una visión clara del tráfico que se aproxima.
+    C: Al menos 10 pies antes de la carretera que se cruza.
     D: No es necesario detenerse por completo si la intersección está despejada.
   answer: B
   explanation: Si no hay un cruce de peatones o una línea de parada pintada, debe
-    detenerse en el punto más seguro más cercano a la vía que se cruza para obtener
-    una visión clara del tráfico que se aproxima.
+    detenerse en el punto más seguro más cercano a la carretera que se cruza para
+    obtener una visión clara del tráfico que se aproxima.
 - id: 172
   category: safe_driving_rules
   question: Al acercarse a una intersección con una flecha amarilla fija, ¿qué es
     ilegal?
   choices:
     A: Detener el vehículo de manera segura antes de entrar en la intersección.
-    B: Continuar avanzando en la dirección de la flecha si ya se encuentra en la intersección.
+    B: Continuar moviéndose en la dirección de la flecha si ya se encuentra en la
+      intersección.
     C: Acelerar para "ganarle a la flecha".
     D: Despejar la intersección de manera segura.
   answer: C
@@ -2240,7 +2243,7 @@ questions:
     A: Tratarla como una parada de cuatro vías.
     B: Detenerse y esperar a que la baliza se ponga en verde.
     C: Continuar sin detenerse, ya que el estatuto que exige detenerse ante señales
-      de tráfico oscuras no se aplica a estas balizas de mitad de cuadra.
+      oscuras no se aplica a estas balizas de mitad de cuadra.
     D: Ceder el paso a la derecha antes de continuar.
   answer: C
   explanation: Una vez finalizado el ciclo peatonal, las balizas estarán oscuras.
@@ -2265,13 +2268,13 @@ questions:
     debajo de una señal de cruce de ferrocarril?
   choices:
     A: No se permite que los trenes crucen en este lugar.
-    B: Se ha establecido una zona de silencio y los trenes no tocan la bocina aquí.
-    C: La señal de cruce de ferrocarril está averiada.
-    D: Los conductores deben tocar la bocina antes de cruzar.
+    B: Se ha establecido una zona de silencio y los trenes no tocan sus bocinas aquí.
+    C: La señal del cruce de ferrocarril está averiada.
+    D: Los conductores deben tocar sus bocinas antes de cruzar.
   answer: B
   explanation: Según el manual, la señal "No Train Horn" se instala en lugares donde
     se ha establecido una zona de silencio, lo que significa que los trenes no tocan
-    la bocina en ese lugar.
+    la bocina en este lugar.
 - id: 176
   category: signs_and_signals
   question: ¿De qué color y forma es una señal de "No Passing Zone" (Zona de no adelantar)?
@@ -2284,13 +2287,13 @@ questions:
   answer: A
   explanation: El manual establece que se puede encontrar una señal amarilla en forma
     de banderín de "No Passing Zone" en el lado izquierdo de la carretera al comienzo
-    de una zona donde no se permite adelantar.
+    de una zona de no adelantar.
 - id: 177
   category: signs_and_signals
   question: ¿Hacia qué dirigen a los automovilistas las señales de servicio azules
     y blancas?
   choices:
-    A: Información de dirección y distancia
+    A: Información direccional y de distancia
     B: Zonas de obras en la carretera
     C: Servicios como hospitales, gasolina, comida y alojamiento
     D: Puntos de referencia para emergencias
@@ -2300,7 +2303,7 @@ questions:
     etc.
 - id: 178
   category: sharing_the_road
-  question: ¿A qué velocidad viajan los vehículos que exhiben un emblema de advertencia
+  question: ¿A qué velocidad viajan los vehículos que muestran un emblema de advertencia
     de vehículo de movimiento lento (Slow Moving Vehicle)?
   choices:
     A: 15 MPH o menos
@@ -2309,7 +2312,7 @@ questions:
     D: 45 MPH o menos
   answer: B
   explanation: Los emblemas de advertencia de vehículos de movimiento lento deben
-    exhibirse en vehículos que viajan a 25 MPH o menos, como equipos agrícolas, cuando
+    mostrarse en vehículos que viajan a 25 MPH o menos, como equipos agrícolas, cuando
     utilizan una vía pública.
 - id: 179
   category: signs_and_signals
@@ -2321,16 +2324,16 @@ questions:
     D: Red con letras blancas
   answer: C
   explanation: Una zona de obras en la carretera se puede identificar fácilmente por
-    señales de advertencia naranjas únicas con mensajes en letras negras, las cuales
-    están reservadas estrictamente para identificar zonas de trabajo.
+    señales de advertencia de color naranja únicas con mensajes en letras negras,
+    que se reservan estrictamente para identificar zonas de obras.
 - id: 180
   category: safe_driving_rules
-  question: ¿Qué debe hacer cuando vea una señal de "Flagger" (Señalizador) en una
-    zona de obras?
+  question: ¿Qué debe hacer cuando vea una señal de "Flagger" (Señalero) en una zona
+    de obras?
   choices:
     A: Acelerar para despejar la zona de obras rápidamente.
     B: Cambiar de carril inmediatamente.
-    C: Tocar la bocina para alertar al señalizador de su presencia.
+    C: Tocar la bocina para alertar al señalero de su presencia.
     D: Mantenerse alerta y estar preparado para detenerse.
   answer: D
   explanation: El manual establece que cuando vea la señal de "Flagger", debe MANTENERSE
@@ -2348,44 +2351,43 @@ questions:
   answer: B
   explanation: Los dispositivos de canalización, como barricadas, paneles verticales,
     tambores y conos, son los dispositivos más utilizados para guiar a los conductores
-    de manera segura a través de la zona de obras.
+    de forma segura a través de la zona de obras.
 - id: 182
   category: safe_driving_rules
   question: ¿Qué indica una línea central amarilla discontinua?
   choices:
-    A: Se permite rebasar por la izquierda cuando el camino adelante está despejado.
+    A: Se permite rebasar por la izquierda cuando el camino por delante está despejado.
     B: No se permite rebasar en ninguna dirección.
     C: El tráfico fluye en la misma dirección.
     D: Debe detenerse antes de cruzar la línea.
   answer: A
   explanation: Una línea amarilla discontinua indica que se permite rebasar por la
-    izquierda cuando el camino adelante está despejado, aunque el adelantamiento debe
-    hacerse con precaución.
+    izquierda cuando el camino por delante está despejado, aunque el adelantamiento
+    debe hacerse con cuidado.
 - id: 183
   category: safe_driving_rules
-  question: ¿Cuándo se le permite legalmente cruzar líneas amarillas dobles continuas?
+  question: ¿Cuándo se le permite legalmente cruzar líneas amarillas sólidas dobles?
   choices:
     A: Al rebasar un vehículo que circula despacio.
-    B: Al realizar un giro a la izquierda hacia un callejón, camino privado o entrada
-      particular.
+    B: Al girar a la izquierda hacia un callejón, camino privado o entrada particular.
     C: Cuando el vehículo delante de usted está girando a la derecha.
-    D: Nunca se permite cruzar líneas amarillas dobles continuas.
+    D: Nunca se permite cruzar líneas amarillas sólidas dobles.
   answer: B
-  explanation: Realizar un giro a la izquierda o evitar una obstrucción son los únicos
-    cruces legales permitidos sobre líneas amarillas dobles, al girar hacia o desde
-    un callejón, camino privado o entrada particular.
+  explanation: Girar a la izquierda o evitar una obstrucción son los únicos cruces
+    legales permitidos sobre líneas amarillas dobles, al girar hacia o desde un callejón,
+    camino privado o entrada particular.
 - id: 184
   category: safe_driving_rules
   question: ¿Cuál es el propósito de un carril central separado con líneas amarillas
-    continuas y discontinuas?
+    sólidas y discontinuas?
   choices:
-    A: Es un carril de adelantamiento para el tráfico en ambas direcciones.
+    A: Es un carril para rebasar para el tráfico en ambas direcciones.
     B: Está reservado solo para vehículos de emergencia.
     C: Reserva un carril para giros a la izquierda compartido con el tráfico de la
       dirección opuesta.
     D: Es un carril designado para bicicletas.
   answer: C
-  explanation: Un carril central separado con líneas amarillas continuas y discontinuas
+  explanation: Un carril central separado con líneas amarillas sólidas y discontinuas
     reserva un carril para giros a la izquierda compartido con el tráfico de la dirección
     opuesta. Está prohibido usar este carril para rebasar.
 - id: 185
@@ -2404,18 +2406,18 @@ questions:
   question: ¿Dónde debe detenerse un conductor cuando hay una línea de parada blanca
     en una intersección?
   choices:
-    A: En la señal de alto o semáforo.
+    A: En la señal de alto o señal de control de tráfico.
     B: En medio del cruce peatonal.
-    C: En la línea, no en la señal de alto o semáforo.
+    C: En la línea, no en la señal de alto ni en la señal de control de tráfico.
     D: Cuatro pies después del cruce peatonal.
   answer: C
   explanation: Los conductores deben detenerse en la línea de parada (cuando esté
-    presente), no en la señal de alto ni en el semáforo.
+    presente), no en la señal de alto ni en la señal de control de tráfico.
 - id: 187
   category: defensive_driving
   question: ¿Cuál es el propósito de las bandas sonoras (rumble strips) en una carretera?
   choices:
-    A: Indicar una zona de adelantamiento.
+    A: Indicar una zona para rebasar.
     B: Alertar a los conductores somnolientos o distraídos mediante vibración y sonido.
     C: Marcar la ubicación de un cruce peatonal.
     D: Proporcionar un carril seguro para ciclistas.
@@ -2434,7 +2436,7 @@ questions:
       o entrar/salir de una propiedad privada.
     D: Nunca es legal cruzar un carril para bicicletas.
   answer: C
-  explanation: Si bien es ilegal conducir en carriles para bicicletas, los automovilistas
+  explanation: Aunque es ilegal conducir en carriles para bicicletas, los automovilistas
     pueden cruzar el carril para bicicletas para moverse a otro carril de circulación
     apropiado, para entrar o salir de espacios de estacionamiento en la calle o para
     entrar o salir de una propiedad privada.
@@ -2458,15 +2460,15 @@ questions:
     A: El carril izquierdo
     B: El carril central
     C: El carril derecho
-    D: Cualquier carril, siempre que esté en el límite de velocidad
+    D: Cualquier carril siempre que esté en el límite de velocidad
   answer: C
   explanation: Cualquier vehículo que circule a una velocidad inferior a la normal
-    del tráfico debe ser conducido en el carril derecho cuando esté disponible, excepto
+    del tráfico debe conducirse en el carril derecho cuando esté disponible, excepto
     al rebasar o prepararse para un giro a la izquierda.
 - id: 191
   category: safe_driving_rules
-  question: En una intersección no controlada donde los vehículos se aproximan aproximadamente
-    al mismo tiempo, ¿qué vehículo debe ceder el paso?
+  question: ¿En una intersección no controlada donde los vehículos se aproximan aproximadamente
+    al mismo tiempo, qué vehículo debe ceder el derecho de paso?
   choices:
     A: El vehículo de la derecha debe ceder el paso al vehículo de la izquierda.
     B: El vehículo de la izquierda debe ceder el paso al vehículo de la derecha.
@@ -2481,30 +2483,30 @@ questions:
   question: ¿Cuál es la regla de cortesía común para avanzar en una intersección con
     una parada de cuatro vías (four-way stop)?
   choices:
-    A: Se debe permitir que el conductor que se detenga primero pase primero.
-    B: El conductor que gira a la izquierda siempre pasa primero.
-    C: El conductor de la izquierda siempre pasa primero.
+    A: Se debe permitir que el conductor que se detiene primero pase primero.
+    B: El conductor que gira a la izquierda siempre va primero.
+    C: El conductor de la izquierda siempre va primero.
     D: El conductor que va recto debe ceder el paso a los vehículos que giran.
   answer: A
   explanation: En las paradas de cuatro vías, la cortesía común es que se debe permitir
-    que el conductor que se detenga primero pase primero. En caso de duda, ceda el
+    que el conductor que se detiene primero pase primero. En caso de duda, ceda el
     paso al conductor a su derecha.
 - id: 193
   category: safe_driving_rules
-  question: ¿A quién se le permite utilizar los delantales para camiones (truck aprons)
-    ubicados en las rotondas?
+  question: ¿A quién se le permite utilizar las áreas de maniobra para camiones (truck
+    aprons) situadas en las rotondas?
   choices:
     A: Automóviles y SUVs
     B: Ciclistas y peatones
-    C: Camionetas (pickups)
-    D: Las ruedas traseras de camiones grandes
+    C: Camionetas pickup
+    D: Las ruedas traseras de los camiones grandes
   answer: D
-  explanation: Las rotondas cuentan con delantales para camiones (truck aprons) para
-    que las ruedas traseras de los camiones grandes los utilicen al girar. No deben
-    ser utilizados por automóviles, SUVs, camionetas, ciclistas ni peatones.
+  explanation: Las rotondas cuentan con áreas de maniobra para camiones (truck aprons)
+    para que las utilicen las ruedas traseras de los camiones grandes al girar. No
+    deben ser utilizadas por automóviles, SUVs, camionetas, ciclistas ni peatones.
 - id: 194
   category: safe_driving_rules
-  question: Al acercarse a una rotonda, ¿a quién debe cederle el paso antes de entrar?
+  question: Al acercarse a una rotonda, ¿a quién debe ceder el paso antes de entrar?
   choices:
     A: Al tráfico que se aproxima por su derecha
     B: Al tráfico que se aproxima por su izquierda y que ya está en la rotonda
@@ -2512,7 +2514,7 @@ questions:
     D: A los vehículos que entran por el lado opuesto
   answer: B
   explanation: Al conducir en una rotonda, debe ceder el paso al tráfico que se aproxima
-    por su izquierda y que ya se encuentra dentro de la rotonda antes de entrar.
+    por su izquierda y que ya se encuentra en la rotonda antes de entrar.
 - id: 195
   category: safe_driving_rules
   question: ¿Qué debe hacer si se aproxima un vehículo de emergencia mientras usted
@@ -2525,36 +2527,37 @@ questions:
     D: Orillarse en la isla central.
   answer: C
   explanation: Si ha entrado en la rotonda, continúe hasta su salida y, una vez pasada
-    la isla divisoria, oríllese y permita que pasen los vehículos de emergencia. Evite
-    detenerse dentro de la rotonda.
+    la isla divisoria (splitter island), oríllese y permita que pasen los vehículos
+    de emergencia. Evite detenerse dentro de la rotonda.
 - id: 196
   category: safe_driving_rules
-  question: Según la Ley de Hacerse a un Lado (Move Over Law) de Nebraska, ¿qué debe
-    hacer un conductor al acercarse a un vehículo de emergencia detenido con luces
-    intermitentes en una carretera de varios carriles?
+  question: Según la Ley de Nebraska de "Moverse al Carril de al Lado" (Move Over
+    Law), ¿qué debe hacer un conductor al acercarse a un vehículo de emergencia detenido
+    con luces intermitentes en una carretera de varios carriles?
   choices:
     A: Detenerse inmediatamente en su carril.
-    B: Moverse a un carril que esté al menos a un carril de distancia del vehículo
-      detenido.
+    B: Moverse a un carril que esté al menos a un carril de circulación de distancia
+      del vehículo detenido.
     C: Tocar la bocina para alertar a los trabajadores de emergencia.
-    D: Acelerar para pasar la escena rápidamente.
+    D: Acelerar para pasar rápido por el lugar.
   answer: B
-  explanation: La Ley de Hacerse a un Lado exige que los conductores que se aproximen
-    a un vehículo de emergencia detenido con luces intermitentes se muevan a un carril
-    que esté al menos a un carril de distancia. Si no es posible, deben reducir la
-    velocidad y mantener una velocidad segura.
+  explanation: La Ley de "Moverse al Carril de al Lado" (Move Over Law) exige que
+    los conductores que se aproximen a un vehículo de emergencia detenido con luces
+    intermitentes se muevan a un carril que esté al menos a un carril de circulación
+    de distancia. Si no es posible, deben reducir la velocidad y mantener una velocidad
+    segura.
 - id: 197
   category: penalties_and_points
-  question: ¿Cuál es la sanción por una primera infracción de la Ley de Hacerse a
-    un Lado (Move Over Law) de Nebraska?
+  question: ¿Cuál es la sanción por una primera infracción de la Ley de Nebraska de
+    "Moverse al Carril de al Lado" (Move Over Law)?
   choices:
     A: Una multa de hasta $100
     B: Una multa de hasta $500
     C: Hasta 7 días de cárcel
     D: Suspensión de la licencia por 30 días
   answer: A
-  explanation: Las multas por violar la Ley de Hacerse a un Lado son de hasta $100
-    por una primera infracción.
+  explanation: Las multas por violar la Ley de "Moverse al Carril de al Lado" (Move
+    Over Law) son de hasta $100 por una primera infracción.
 - id: 198
   category: safe_driving_rules
   question: Si se ve involucrado en un choque menor en la interestatal sin heridos
@@ -2568,34 +2571,35 @@ questions:
     D: Esperar a que una grúa mueva el vehículo.
   answer: B
   explanation: Los conductores involucrados en choques menores en el sistema de autopistas
-    o interestatales en los que no hay heridos y los vehículos aún se pueden conducir,
-    deben llevar los vehículos al arcén más cercano fuera de los carriles de circulación.
+    o carreteras interestatales en los que no hay heridos y los vehículos aún se pueden
+    conducir deben llevar los vehículos al arcén (hombro) más cercano fuera de los
+    carriles de circulación.
 - id: 199
   category: safe_driving_rules
-  question: ¿Qué debe hacer al salir de un callejón, entrada privada o estacionamiento
-    para entrar en una calzada?
+  question: ¿Qué debe hacer al salir de un callejón, entrada privada (driveway) o
+    estacionamiento para incorporarse a una calzada?
   choices:
     A: Tocar la bocina y avanzar sin detenerse.
     B: Detenerse solo si se aproxima un vehículo.
-    C: Detenerse antes de conducir sobre una acera o área de acera.
+    C: Detenerse antes de conducir sobre una acera o zona de acera.
     D: Ceder el paso solo a los vehículos, no a los peatones.
   answer: C
   explanation: Al salir de callejones, entradas privadas o estacionamientos para entrar
-    en una calzada, DETÉNGASE antes de conducir sobre una acera o sobre el área de
-    la acera y avance lentamente. Ceda el derecho de paso a cualquier peatón y a los
-    vehículos que se aproximen.
+    en una calzada, DETÉNGASE antes de conducir sobre una acera o zona de acera y
+    avance lentamente. Ceda el derecho de paso a cualquier peatón y a los vehículos
+    que se aproximen.
 - id: 200
   category: safe_driving_rules
-  question: ¿A qué distancia debe mantenerse cuando sigue a un equipo de bomberos
-    (fire apparatus) que viaja en estado de emergencia?
+  question: ¿A qué distancia debe mantenerse cuando sigue a un camión de bomberos
+    que circula en estado de emergencia?
   choices:
     A: Al menos 100 pies
     B: Al menos 200 pies
     C: Al menos 300 pies
     D: Al menos 500 pies
   answer: D
-  explanation: Ningún vehículo puede seguir a un equipo de bomberos que viaje en estado
-    de emergencia a una distancia menor de 500 pies.
+  explanation: Ningún vehículo puede seguir a un camión de bomberos que circule en
+    estado de emergencia a una distancia inferior a 500 pies.
 - id: 201
   category: sharing_the_road
   question: ¿Cómo se clasifican los vehículos de escolta de cortejos fúnebres según
@@ -2635,8 +2639,8 @@ questions:
     es de 75 MPH en las autopistas interestatales rurales.
 - id: 204
   category: penalties_and_points
-  question: ¿Qué sucede con las multas por exceso de velocidad en las zonas escolares
-    y cuando hay trabajadores presentes en las zonas de obra?
+  question: ¿Qué sucede con las multas por exceso de velocidad en zonas escolares
+    y cuando hay trabajadores presentes en zonas de obra?
   choices:
     A: Se reducen a la mitad
     B: Se duplican
@@ -2692,8 +2696,8 @@ questions:
     C: 200 pies
     D: 300 pies
   answer: B
-  explanation: El manual requiere que los conductores señalicen al menos 100 pies
-    antes de girar o moverse a la derecha o a la izquierda.
+  explanation: El manual exige que los conductores señalicen al menos 100 pies antes
+    de girar o moverse a la derecha o a la izquierda.
 - id: 209
   category: signs_and_signals
   question: ¿Qué tipo de marcas en el pavimento indican un carril reversible?
@@ -2705,7 +2709,7 @@ questions:
   answer: C
   explanation: Los carriles reversibles se indican mediante líneas amarillas discontinuas
     dobles, que muestran que el carril cambia de dirección del flujo de tráfico según
-    lo indiquen las señales o semáforos.
+    lo indicado por señales o semáforos.
 - id: 210
   category: safe_driving_rules
   question: ¿Dónde se establece explícitamente en el manual que NO debe cambiar de
@@ -2716,11 +2720,11 @@ questions:
     C: En una zona escolar
     D: En una calle de sentido único
   answer: B
-  explanation: 'En la sección de ''Cambio de carril'', el manual establece específicamente:
+  explanation: 'En la sección ''Cambio de carril'', el manual establece específicamente:
     ''NO cambie de carril en una intersección''.'
 - id: 211
   category: safe_driving_rules
-  question: Al realizar una parada de emergencia al costado de la carretera, ¿a cuántas
+  question: Al realizar una parada de emergencia al costado del camino, ¿a cuántas
     pulgadas del bordillo o del borde de la carretera debe estacionar su vehículo?
   choices:
     A: 6 pulgadas
@@ -2728,12 +2732,12 @@ questions:
     C: 18 pulgadas
     D: 24 pulgadas
   answer: B
-  explanation: Para una parada de emergencia al costado de la carretera, debe estacionar
+  explanation: Para una parada de emergencia al costado del camino, debe estacionar
     el vehículo a no más de 12 pulgadas y de forma paralela al bordillo o al borde
     de la carretera.
 - id: 212
   category: safe_driving_rules
-  question: ¿Es ilegal estacionar a menos de cuántos pies de un hidrante de incendios?
+  question: ¿A cuántos pies de un hidrante de incendios es ilegal estacionar?
   choices:
     A: 10 pies
     B: 15 pies
@@ -2741,7 +2745,7 @@ questions:
     D: 30 pies
   answer: B
   explanation: El manual enumera 'A menos de 15 pies de un hidrante de incendios'
-    bajo la sección 'Dónde no estacionar ni detener un vehículo'.
+    bajo la sección 'Dónde no estacionar o detener un vehículo'.
 - id: 213
   category: safe_driving_rules
   question: ¿Hacia dónde debe girar las ruedas al estacionar cuesta arriba donde hay
@@ -2776,7 +2780,7 @@ questions:
     C: No menos de 20 pies ni más de 100 pies
     D: Exactamente 15 pies
   answer: B
-  explanation: Cuando se le requiera detenerse en un cruce de ferrocarril, debe detenerse
+  explanation: Cuando se requiera detenerse en un cruce de ferrocarril, debe detenerse
     en la línea de parada. Si no hay ninguna, deténgase a no menos de 15 pies ni más
     de 50 pies del riel más cercano.
 - id: 216
@@ -2784,13 +2788,13 @@ questions:
   question: ¿Qué acción debe evitar realizar mientras conduce a través de las vías
     del ferrocarril?
   choices:
-    A: Mirar hacia ambos lados
+    A: Mirar a ambos lados
     B: Cambiar de marcha (velocidades)
     C: Mantener una velocidad constante
     D: Sujetar el volante con firmeza
   answer: B
-  explanation: 'El manual establece explícitamente bajo la sección ''Después de detenerse''
-    en los cruces de ferrocarril: ''No cambie de marcha al cruzar las vías''.'
+  explanation: 'El manual establece explícitamente bajo ''Después de detenerse'' en
+    los cruces de ferrocarril: ''No cambie de marcha al cruzar las vías''.'
 - id: 217
   category: defensive_driving
   question: Si su vehículo se apaga (se cala) en un cruce de ferrocarril, ¿qué es
@@ -2798,11 +2802,11 @@ questions:
   choices:
     A: Intentar reiniciar el motor inmediatamente
     B: Llamar a una grúa
-    C: Hacer que todos salgan y se alejen de las vías de inmediato
+    C: Sacar a todos del vehículo y alejarlos de las vías inmediatamente
     D: Poner el vehículo en punto muerto e intentar empujarlo fuera de las vías
   answer: C
-  explanation: Si el vehículo se apaga en un cruce, el manual instruye que todos salgan
-    y se alejen de las vías de inmediato, y luego se muevan en la dirección de donde
+  explanation: Si el vehículo se apaga en un cruce, el manual indica sacar a todos
+    y alejarlos de las vías inmediatamente, luego moverse en la dirección de donde
     se espera que venga el tren.
 - id: 218
   category: signs_and_signals
@@ -2814,9 +2818,9 @@ questions:
     C: Amarillo
     D: Verde
   answer: B
-  explanation: La señal ENS, que suele ser de color azul, se encuentra en todos los
-    cruces a nivel de carretera y ferrocarril y proporciona al público un número de
-    teléfono para informar problemas o emergencias.
+  explanation: La señal ENS, típicamente de color azul, se encuentra en cada cruce
+    a nivel de carretera y ferrocarril y proporciona al público un número de teléfono
+    para reportar problemas o emergencias.
 - id: 219
   category: defensive_driving
   question: ¿Cuánta distancia de frenado requiere un tren de carga promedio de 150
@@ -2855,19 +2859,18 @@ questions:
   explanation: La velocidad mínima en la interestatal es de 40 MPH.
 - id: 222
   category: safe_driving_rules
-  question: ¿Qué debe hacer si se pasa de la salida deseada en la interestatal?
+  question: ¿Qué debe hacer si se pasa la salida prevista en la interestatal?
   choices:
-    A: Retroceder con cuidado por el arcén (hombro) derecho.
+    A: Retroceder con cuidado por el arcén derecho.
     B: Usar el punto de cruce de emergencia en la mediana.
     C: Detenerse y esperar a que el tráfico se despeje antes de dar marcha atrás.
     D: Continuar hasta la siguiente salida.
   answer: D
-  explanation: Si se pasa de su salida, continúe hasta la siguiente. Está prohibido
-    retroceder o usar los puntos de cruce de emergencia en la interestatal.
+  explanation: Si se pasa su salida, continúe hasta la siguiente. Está prohibido retroceder
+    o usar los puntos de cruce de emergencia en la interestatal.
 - id: 223
   category: safe_driving_rules
-  question: Según el manual, ¿cuándo deben usarse las luces delanteras (faros) de
-    su vehículo?
+  question: Según el manual, ¿cuándo deben usarse las luces delanteras de su vehículo?
   choices:
     A: Desde la puesta del sol hasta el amanecer
     B: Solo cuando la visibilidad sea inferior a 500 pies
@@ -2884,10 +2887,10 @@ questions:
     A: Directamente a las luces del vehículo que viene en sentido contrario
     B: Hacia el borde izquierdo de la carretera
     C: Hacia el borde derecho de la carretera
-    D: Al tablero de instrumentos de su vehículo
+    D: Al tablero de su vehículo
   answer: C
-  explanation: Si las luces del sentido contrario lo deslumbran, no mire directamente
-    al vehículo, sino hacia el borde derecho de la carretera.
+  explanation: Si las luces que vienen en sentido contrario lo deslumbran, no mire
+    directamente al vehículo, sino hacia el borde derecho de la carretera.
 - id: 225
   category: defensive_driving
   question: ¿Cuánta agua en movimiento se necesita para arrastrar a la mayoría de
@@ -2929,30 +2932,30 @@ questions:
   question: Si queda varado en una tormenta de nieve, ¿qué debe hacer para mantenerse
     a salvo mientras mantiene encendidos el motor y la calefacción?
   choices:
-    A: Mantener todas las ventanas bien cerradas para conservar el calor.
-    B: Abrir un poco una ventana para que entre aire fresco y evitar que la nieve
+    A: Mantener todas las ventanas bien cerradas para retener el calor.
+    B: Abrir una ventana ligeramente para que entre aire fresco y evitar que la nieve
       bloquee el tubo de escape.
     C: Salir del vehículo y caminar para buscar ayuda.
     D: Mantener el motor en marcha continuamente hasta que pase la tormenta.
   answer: B
-  explanation: 'Si queda varado: Abra un poco una ventana para que entre aire fresco.
-    Ahorre combustible, use el motor y la calefacción con moderación, y solo con una
-    ventana ligeramente abierta para ventilación. Evite que la nieve bloquee el tubo
-    de escape.'
+  explanation: 'Si queda varado: Abra una ventana ligeramente para que entre aire
+    fresco. Ahorre combustible, use el motor y la calefacción con moderación, y solo
+    con una ventana ligeramente abierta para ventilación. Evite que la nieve bloquee
+    el tubo de escape.'
 - id: 229
   category: defensive_driving
   question: ¿Qué es lo primero que debe hacer si sus ruedas se salen del borde de
     la calzada o del pavimento?
   choices:
     A: Girar inmediatamente el volante de forma brusca para volver a la carretera.
-    B: Frenar de golpe para detenerse lo más rápido posible.
-    C: Sujetar el volante con firmeza y conducir de modo que las ruedas queden a ambos
-      lados del borde de la calzada.
+    B: Frenar bruscamente para detenerse lo más rápido posible.
+    C: Sujetar el volante con firmeza y dirigir el vehículo de modo que las ruedas
+      queden a ambos lados del borde de la calzada.
     D: Acelerar para recuperar la tracción antes de volver a girar.
   answer: C
   explanation: 'Si las ruedas se salen del borde de la calzada o del pavimento: Sujete
-    el volante con firmeza y conduzca de modo que las ruedas queden a ambos lados
-    del borde de la calzada. No intente volver a la calzada de inmediato.'
+    el volante con firmeza y dirija el vehículo de modo que las ruedas queden a ambos
+    lados del borde de la calzada. No intente volver a la calzada inmediatamente.'
 - id: 230
   category: driver_responsibility
   question: Según los estudios, ¿en cuánto aumenta el riesgo de choque de un conductor
@@ -2985,25 +2988,25 @@ questions:
     C: Interna, externa y mecánica
     D: Auditiva, visual y física
   answer: A
-  explanation: 'Existen tres tipos principales de distracción: Visual (apartar la
-    vista de la carretera), Manual (quitar las manos del volante) y Cognitiva (apartar
-    la mente o el enfoque de la tarea de conducir).'
+  explanation: 'Existen tres tipos principales de distracción: Visual (quitar la vista
+    de la carretera); Manual (quitar las manos del volante); y Cognitiva (quitar la
+    mente o el enfoque de la tarea de conducir).'
 - id: 233
   category: safe_driving_rules
-  question: ¿Por qué los teléfonos celulares "manos libres" se siguen considerando
+  question: ¿Por qué los teléfonos celulares "manos libres" todavía se consideran
     una distracción peligrosa al conducir?
   choices:
-    A: Requieren que quite las manos del volante para contestar.
+    A: Requieren que quite las manos del volante para responder.
     B: La conversación reduce la capacidad del cerebro para procesar información visual
       en movimiento en un 37%.
     C: Su uso es ilegal en Nebraska.
-    D: Hacen que el conductor aparte la vista de la carretera durante un promedio
+    D: Hacen que el conductor desvíe la mirada de la carretera durante un promedio
       de 4.6 segundos.
   answer: B
   explanation: El manual establece que el área del cerebro responsable de procesar
     la información visual en movimiento tiene un 37% menos de capacidad cuando se
     concentra en una conversación por teléfono celular, incluso si es manos libres.
-    Es la conversación, no el dispositivo, lo que genera el peligro.
+    Es la conversación, no el dispositivo, lo que crea el peligro.
 - id: 234
   category: safe_driving_rules
   question: ¿Cuál de las siguientes opciones es ilegal en Nebraska con respecto a
@@ -3021,24 +3024,24 @@ questions:
   question: ¿Cuál de los siguientes comportamientos es un ejemplo de conducción agresiva?
   choices:
     A: Usar la bocina para alertar a otro conductor de un peligro inmediato.
-    B: Tocar ligeramente los frenos para advertir a los conductores que vienen detrás.
+    B: Tocar los frenos para advertir a los conductores que vienen detrás.
     C: Seguir muy de cerca (tailgating) y cerrarle el paso a otros conductores.
     D: Conducir a 5 mph por debajo del límite de velocidad.
   answer: C
   explanation: La conducción agresiva incluye comportamientos que son intimidantes
-    o groseros, como seguir muy de cerca a otros vehículos, cerrarle el paso a otros
-    conductores, pasarse semáforos en rojo y no ceder el paso.
+    o groseros, como seguir muy de cerca al vehículo de adelante (tailgating), cerrarle
+    el paso a otros conductores, pasarse los semáforos en rojo y no ceder el paso.
 - id: 236
   category: safe_driving_rules
-  question: Si siente somnolencia mientras conduce, ¿cuál de las siguientes es una
-    forma eficaz de mantenerse alerta?
+  question: Si le da sueño mientras conduce, ¿cuál de las siguientes es una forma
+    eficaz de mantenerse alerta?
   choices:
     A: Bajar la ventanilla.
     B: Mascar chicle.
     C: Subir el volumen de la radio.
     D: Detenerse en un área segura y tomar una siesta de 10 a 20 minutos.
   answer: D
-  explanation: El manual establece que bajar la ventanilla, mascar chicle o subir
+  explanation: El manual establece que bajar una ventanilla, mascar chicle o subir
     el volumen de la radio no funcionan para prevenir la somnolencia. Tomar una siesta
     corta de 10 a 20 minutos puede marcar una gran diferencia.
 - id: 237
@@ -3052,7 +3055,7 @@ questions:
     D: 20 a 30 segundos
   answer: C
   explanation: Las técnicas de conducción defensiva requieren que mire hacia adelante
-    y analice la situación en la carretera con al menos 10 a 15 segundos de anticipación.
+    y observe la situación en la carretera con al menos 10 a 15 segundos de anticipación.
 - id: 238
   category: defensive_driving
   question: ¿Con qué frecuencia debe revisar el tráfico detrás de usted usando sus
@@ -3064,8 +3067,8 @@ questions:
     D: Solo al cambiar de carril
   answer: B
   explanation: Debe revisar el tráfico detrás de usted al menos cada 10 segundos,
-    así como al cambiar de carril, retroceder, reducir la velocidad o bajar colinas
-    empinadas.
+    así como al cambiar de carril, retroceder, reducir la velocidad o conducir por
+    colinas empinadas.
 - id: 239
   category: safe_driving_rules
   question: ¿Con cuánta anticipación debe señalizar sus intenciones antes de planear
@@ -3080,16 +3083,16 @@ questions:
     de dirección.
 - id: 240
   category: defensive_driving
-  question: Bajo la regla de los tres segundos, ¿qué debe hacer si se encuentra con
-    un factor de adversidad como lluvia o tráfico pesado?
+  question: Según la regla de los tres segundos, ¿qué debe hacer si se encuentra con
+    un factor de adversidad como lluvia o tráfico intenso?
   choices:
-    A: Disminuir su distancia de seguimiento por un segundo.
-    B: Aumentar su distancia de seguimiento por un segundo por cada factor de adversidad.
+    A: Disminuir su distancia de seguimiento en un segundo.
+    B: Aumentar su distancia de seguimiento en un segundo por cada factor de adversidad.
     C: Mantener la distancia de seguimiento de tres segundos.
-    D: Duplicar su velocidad para rebasar el tráfico rápidamente.
+    D: Duplicar su velocidad para pasar el tráfico rápidamente.
   answer: B
   explanation: La regla de los tres segundos es un requisito mínimo y debe aumentarse
-    un segundo por cada factor de adversidad encontrado, como lluvia o tráfico pesado.
+    un segundo por cada factor de adversidad encontrado, como lluvia o tráfico intenso.
 - id: 241
   category: sharing_the_road
   question: 'Al compartir la carretera con una motocicleta, usted debe:'
@@ -3101,16 +3104,16 @@ questions:
   answer: B
   explanation: Debe permitir al motociclista el ancho completo de un carril. Aunque
     parezca haber suficiente espacio, las motocicletas necesitan el espacio para maniobrar
-    de forma segura, por lo que no debe compartir el carril.
+    con seguridad, por lo que no debe compartir el carril.
 - id: 242
   category: sharing_the_road
   question: 'Casi el 40 por ciento de los choques de motocicletas que involucran a
     otro vehículo motorizado son causados por:'
   choices:
-    A: La motocicleta siguiendo demasiado cerca al otro vehículo.
-    B: El otro vehículo girando a la izquierda frente al motociclista.
-    C: La motocicleta pasándose un semáforo en rojo.
-    D: El otro vehículo chocando por detrás a la motocicleta.
+    A: La motocicleta sigue demasiado cerca al otro vehículo.
+    B: El otro vehículo gira a la izquierda frente al motociclista.
+    C: La motocicleta se pasa un semáforo en rojo.
+    D: El otro vehículo choca por detrás a la motocicleta.
   answer: B
   explanation: Según el manual, casi el 40 por ciento de los choques que involucran
     a una motocicleta y otro vehículo motorizado fueron causados por el otro vehículo
@@ -3136,7 +3139,7 @@ questions:
     A: Tienen los mismos deberes y derechos que el conductor de un vehículo motorizado.
     B: Siempre deben ceder el paso a los vehículos motorizados.
     C: Se consideran peatones y deben usar las aceras.
-    D: Solo se les permite circular por los arcenes (hombros) pavimentados.
+    D: Solo se les permite circular por los arcenes pavimentados.
   answer: A
   explanation: Según el Estatuto Revisado de Nebraska §60-6,314, una persona que monta
     en bicicleta tiene los mismos deberes y derechos que el conductor de un vehículo
@@ -3148,63 +3151,62 @@ questions:
   choices:
     A: Siempre que quiera circular al lado de otro ciclista.
     B: Cuando el carril es demasiado estrecho para que una bicicleta y un vehículo
-      circulen de forma segura uno al lado del otro.
-    C: Solo cuando viaja a la misma velocidad que el tráfico de vehículos motorizados.
+      circulen con seguridad uno al lado del otro.
+    C: Solo cuando circula a la misma velocidad que el tráfico de vehículos motorizados.
     D: A los ciclistas nunca se les permite circular por el carril principal de circulación.
   answer: B
   explanation: Los ciclistas pueden circular por el carril de circulación cuando el
-    carril es demasiado estrecho para que una bicicleta y un vehículo circulen de
-    forma segura uno al lado del otro dentro del carril.
+    carril es demasiado estrecho para que una bicicleta y un vehículo circulen con
+    seguridad uno al lado del otro dentro del carril.
 - id: 246
   category: defensive_driving
-  question: ¿Qué debe hacer si necesita advertir a los conductores que vienen detrás
-    de usted que está disminuyendo la velocidad?
+  question: ¿Qué debe hacer si necesita advertir a los conductores detrás de usted
+    que está disminuyendo la velocidad?
   choices:
-    A: Tocar la bocina con un sonido fuerte y seco.
-    B: Encender las luces de emergencia.
-    C: Presionar rápidamente los frenos varias veces.
+    A: Tocar la bocina con un sonido agudo.
+    B: Encender las luces de emergencia (hazard lights).
+    C: Tocar rápidamente los frenos varias veces.
     D: Usar señales manuales por la ventana.
   answer: C
-  explanation: Para comunicarse y advertir a los conductores que vienen detrás de
-    usted cuando disminuye la velocidad, debe presionar rápidamente los frenos varias
-    veces.
+  explanation: Para comunicarse y advertir a los conductores detrás de usted cuando
+    disminuye la velocidad, debe tocar rápidamente los frenos varias veces.
 - id: 247
   category: sharing_the_road
-  question: En calles de un solo sentido en áreas urbanas, ¿dónde se les permite circular
+  question: En calles de sentido único en áreas urbanas, ¿dónde se permite circular
     a los ciclistas?
   choices:
     A: Solo en la acera
     B: Solo en el carril del extremo derecho
     C: En el carril del extremo izquierdo
-    D: No se permiten bicicletas en calles de un solo sentido
+    D: No se permiten bicicletas en calles de sentido único
   answer: C
-  explanation: Según el manual, en calles de un solo sentido en áreas urbanas, los
-    ciclistas pueden circular por el carril del extremo izquierdo.
+  explanation: Según el manual, en calles de sentido único en áreas urbanas, los ciclistas
+    pueden circular en el carril del extremo izquierdo.
 - id: 248
   category: sharing_the_road
-  question: ¿Qué debe hacer si se aproxima a un vehículo que se ha detenido para ceder
-    el paso a un peatón en un paso de cebra?
+  question: ¿Qué debe hacer si se aproxima a un vehículo que se ha detenido para un
+    peatón en un cruce peatonal?
   choices:
-    A: Tocar la bocina para alertar al peatón y avanzar con cuidado
+    A: Tocar la bocina para alertar al peatón y proceder con cuidado
     B: Rebasar al vehículo por la derecha
     C: Rebasar al vehículo por la izquierda
     D: No rebasar al vehículo detenido
   answer: D
-  explanation: No rebase a un vehículo que se haya detenido para ceder el paso a un
-    peatón. El vehículo detenido puede bloquear la vista del peatón en la calle.
+  explanation: No rebase a un vehículo que se haya detenido para un peatón. El vehículo
+    detenido puede bloquear la vista del peatón en la calle.
 - id: 249
   category: sharing_the_road
   question: ¿Cómo debe reaccionar un conductor ante una persona ciega o con discapacidad
-    visual que utiliza un bastón blanco o un perro guía?
+    visual que utiliza un bastón blanco o un perro de servicio?
   choices:
-    A: Tocar la bocina para que sepan que usted está allí
-    B: Detenerse y permanecer detenido hasta que la persona haya despejado la calzada
-    C: Ceder el paso solo si se encuentran en un paso de cebra marcado
-    D: Maniobrar para rodearlos lentamente
+    A: Tocar la bocina para hacerles saber que usted está allí
+    B: Detenerse y permanecer detenido hasta que la persona esté fuera de la calzada
+    C: Ceder el paso solo si están en un cruce peatonal marcado
+    D: Maniobrar alrededor de ellos lentamente
   answer: B
   explanation: Siempre ceda el paso a una persona ciega o con discapacidad visual
-    (que esté usando un bastón blanco o un perro guía) deteniéndose y permaneciendo
-    detenido hasta que la persona haya despejado la calzada.
+    (que esté usando un bastón blanco o un perro de servicio) deteniéndose y permaneciendo
+    detenido hasta que la persona esté fuera de la calzada.
 - id: 250
   category: safe_driving_rules
   question: ¿Cuál es la distancia de seguimiento requerida respecto a los equipos
@@ -3225,7 +3227,7 @@ questions:
     de advertencia ámbar superiores, usted debe:'
   choices:
     A: Detenerse inmediatamente
-    B: Acelerar para pasar antes de que las luces rojas parpadeen
+    B: Aumentar la velocidad para pasar antes de que las luces rojas parpadeen
     C: Reducir la velocidad a 25 MPH y prepararse para detenerse
     D: Mantener su velocidad pero cambiarse al carril izquierdo
   answer: C
@@ -3237,18 +3239,19 @@ questions:
     escolar que tiene sus luces de parada encendidas y el brazo de parada extendido?
   choices:
     A: Cuando llega tarde a una emergencia
-    B: Al acercarse en la dirección opuesta en una calzada dividida por una mediana
+    B: Al acercarse en la dirección opuesta en una carretera dividida por una mediana
     C: Cuando el autobús está detenido en una intersección con luz verde
-    D: Cuando viaja por el carril derecho de una carretera de cuatro carriles no dividida
+    D: Cuando viaja por el carril derecho de una carretera de cuatro carriles sin
+      división
   answer: B
   explanation: No detenerse al acercarse o rebasar un autobús escolar que tiene las
     luces de parada encendidas y el brazo de parada extendido es ilegal. La única
-    excepción ocurre cuando se aproxima a un autobús escolar en la dirección opuesta
-    en una calzada dividida por una mediana.
+    excepción ocurre al acercarse a un autobús escolar en la dirección opuesta en
+    una carretera dividida por una mediana.
 - id: 253
   category: vehicle_information
   question: ¿Cuánta distancia requiere un camión cargado con buenos neumáticos y frenos
-    debidamente ajustados que viaja a 55 MPH en una calzada despejada y seca para
+    debidamente ajustados que viaja a 55 MPH en una carretera despejada y seca para
     detenerse por completo?
   choices:
     A: 150 pies
@@ -3257,7 +3260,7 @@ questions:
     D: 440 pies
   answer: C
   explanation: Un camión cargado con buenos neumáticos y frenos debidamente ajustados,
-    que viaja a 55 MPH en una calzada despejada y seca, requiere un mínimo de 340
+    que viaja a 55 MPH en una carretera despejada y seca, requiere un mínimo de 340
     pies para detenerse por completo.
 - id: 254
   category: defensive_driving
@@ -3281,13 +3284,13 @@ questions:
     A: Para permitir el paso de vehículos de emergencia
     B: Porque el carril derecho está reservado solo para automóviles de pasajeros
     C: Para reducir la posibilidad de chocar por detrás o ser chocado por detrás por
-      un vehículo grande que se mueve lentamente
+      un vehículo grande que circula despacio
     D: Porque los vehículos grandes están obligados a conducir en el carril izquierdo
       en colinas empinadas
   answer: C
   explanation: Al viajar por pendientes pronunciadas, los vehículos más grandes suelen
-    conducir más despacio y utilizar el carril derecho. Al evitar el carril derecho
-    en estas zonas, reducirá la posibilidad de chocar por detrás o ser chocado por
+    conducir más despacio y utilizan el carril derecho. Al evitar el carril derecho
+    en estas áreas, reducirá la posibilidad de chocar por detrás o ser chocado por
     detrás por un vehículo grande.
 - id: 256
   category: driver_responsibility
@@ -3296,18 +3299,18 @@ questions:
   choices:
     A: Esperar 15 minutos e irse si no aparece nadie
     B: Abandonar la escena inmediatamente si no hay daños visibles
-    C: Contactar a las autoridades competentes y dejar información por escrito donde
-      el propietario pueda encontrarla
+    C: Contactar a las autoridades correspondientes y dejar información por escrito
+      donde el propietario pueda encontrarla
     D: Informarlo únicamente a su compañía de seguros
   answer: C
   explanation: Si golpea un vehículo desatendido, comuníquese con las autoridades
-    competentes y proporcione información por escrito (nombre, dirección, teléfono,
+    correspondientes y proporcione información por escrito (nombre, dirección, teléfono,
     placa, etc.) donde el propietario pueda encontrarla.
 - id: 257
   category: driver_responsibility
-  question: ¿En cuántos días debe enviar un Informe de Choque de Vehículo Motorizado
+  question: ¿Dentro de cuántos días debe enviar un Informe de Choque de Vehículo Motorizado
     del Conductor al Departamento de Transporte si el choque cumple con los criterios
-    de informe y no fue investigado por las autoridades policiales?
+    de informe y no fue investigado por las autoridades?
   choices:
     A: 3 días
     B: 5 días
@@ -3340,26 +3343,26 @@ questions:
     D: Una multa de exactamente $1,500
   answer: B
   explanation: No informar un choque según lo requerido es ilegal y las personas que
-    infrinjan la norma serán culpables de un delito menor de Clase II o III y se les
+    infrinjan la ley serán culpables de un delito menor de Clase II o III y se les
     podrá revocar su licencia o privilegio de conducir.
 - id: 260
   category: sharing_the_road
   question: ¿Qué debe hacer un automovilista cuando se prepara para girar a la derecha
-    y hay tráfico de bicicletas viajando en la misma dirección?
+    y hay tráfico de bicicletas circulando en la misma dirección?
   choices:
-    A: Acelerar para rebasar al ciclista antes de girar
+    A: Aumentar la velocidad para rebasar al ciclista antes de girar
     B: Tocar la bocina para advertir al ciclista que se detenga
     C: Girar directamente cruzando la trayectoria del ciclista
-    D: Incorporarse al tráfico de bicicletas y evitar girar directamente a través
-      de su trayectoria
+    D: Incorporarse al tráfico de bicicletas y evitar girar directamente cruzando
+      su trayectoria
   answer: D
   explanation: Los automovilistas deben incorporarse al tráfico de bicicletas cuando
-    se preparen para girar a la derecha. Evite girar directamente a través de la trayectoria
+    se preparen para girar a la derecha. Evite girar directamente cruzando la trayectoria
     de las bicicletas que viajan en la misma dirección.
 - id: 261
   category: driver_responsibility
-  question: ¿Qué formulario debe utilizarse para enviar un informe de accidente al
-    estado?
+  question: ¿Qué formulario debe utilizarse para presentar un informe de accidente
+    al estado?
   choices:
     A: Formulario 10 del DMV
     B: Formulario de Seguridad 99
@@ -3374,13 +3377,13 @@ questions:
   question: ¿Cuál de las siguientes afirmaciones es verdadera con respecto a la Oficina
     de Licencias de Conducir North Express en Omaha?
   choices:
-    A: Está abierta los fines de semana.
+    A: Abre los fines de semana.
     B: Solo atiende a conductores comerciales.
     C: Es la única ubicación en el condado de Douglas.
     D: No se realizan exámenes de manejo allí.
   answer: D
-  explanation: El manual señala específicamente, bajo la Oficina de Licencias de Conducir
-    North Express en Omaha, que "no se realizan exámenes de manejo".
+  explanation: El manual señala específicamente que en la Oficina de Licencias de
+    Conducir North Express en Omaha 'No se realizan exámenes de manejo'.
 - id: 263
   category: alcohol_drugs_health
   question: ¿A qué nivel de concentración de alcohol en sangre (BAC) comienza a aumentar
@@ -3409,7 +3412,7 @@ questions:
 - id: 265
   category: safe_driving_rules
   question: ¿Hasta qué edad deben los niños viajar correctamente asegurados en un
-    sistema de retención infantil aprobado por el gobierno federal?
+    sistema de sujeción para niños aprobado por el gobierno federal?
   choices:
     A: Cuatro años
     B: Seis años
@@ -3417,8 +3420,8 @@ questions:
     D: Diez años
   answer: C
   explanation: El manual establece que los niños hasta los ocho años deben viajar
-    correctamente asegurados en un sistema de retención infantil aprobado por el gobierno
-    federal.
+    correctamente asegurados en un sistema de sujeción para niños aprobado por el
+    gobierno federal.
 - id: 266
   category: vehicle_information
   question: Incluso en un accidente a baja velocidad, ¿el despliegue de una bolsa
@@ -3429,9 +3432,9 @@ questions:
     C: Adolescentes entre 13 y 17 años
     D: Cualquier persona sentada en el asiento trasero
   answer: B
-  explanation: Es posible que cuando se despliega una bolsa de aire, incluso en un
+  explanation: Es posible que cuando una bolsa de aire se despliega, incluso en un
     accidente a baja velocidad, pueda representar algún riesgo de lesiones para niños
-    de 12 años o menos, conductores y pasajeros de edad avanzada y adultos de baja
+    de 12 años o menos, conductores y pasajeros de edad avanzada, y adultos de baja
     estatura de 5 pies o menos.
 - id: 267
   category: vehicle_information
@@ -3440,25 +3443,24 @@ questions:
   choices:
     A: En el asiento trasero central
     B: En el asiento trasero del lado del pasajero
-    C: En el asiento del pasajero delantero de un vehículo equipado con bolsas de
-      aire
+    C: En el asiento del pasajero delantero de un vehículo equipado con bolsa de aire
     D: En un vehículo sin bolsas de aire laterales
   answer: C
   explanation: El manual advierte explícitamente que nunca se debe usar un asiento
     de seguridad para bebés orientado hacia atrás en el asiento del pasajero delantero
-    de un vehículo equipado con bolsas de aire.
+    de un vehículo equipado con bolsa de aire.
 - id: 268
   category: sharing_the_road
   question: ¿Qué debe hacer un automovilista con respecto al tráfico de bicicletas
-    al prepararse para girar a la derecha?
+    cuando se prepara para girar a la derecha?
   choices:
     A: Tocar la bocina para advertir al ciclista que se quite del camino
     B: Acelerar para rebasar al ciclista antes de girar
     C: Incorporarse al tráfico de bicicletas
     D: Detenerse y esperar a que todas las bicicletas despejen la calle
   answer: C
-  explanation: Los automovilistas deben incorporarse al tráfico de bicicletas al prepararse
-    para girar a la derecha.
+  explanation: Los automovilistas deben incorporarse al tráfico de bicicletas cuando
+    se preparen para realizar un giro a la derecha.
 - id: 269
   category: sharing_the_road
   question: ¿Cuál de las siguientes es una práctica recomendada para los motociclistas?
@@ -3472,16 +3474,15 @@ questions:
     constantemente dentro de un carril.
 - id: 270
   category: signs_and_signals
-  question: ¿Cuándo está permitido girar a la derecha en un semáforo con luz roja
-    circular?
+  question: ¿Cuándo está permitido girar a la derecha con una luz roja circular?
   choices:
     A: En cualquier momento, sin detenerse
     B: Solo si también está iluminada una flecha verde
     C: Después de detenerse, a menos que haya señales que lo prohíban
     D: Nunca está permitido en Nebraska
   answer: C
-  explanation: Se permite girar a la derecha en un semáforo con luz roja circular
-    después de detenerse, a menos que haya señales que lo prohíban en la intersección.
+  explanation: Se permite girar a la derecha en una luz roja circular después de detenerse,
+    a menos que haya señales colocadas en la intersección que lo prohíban.
 - id: 271
   category: safe_driving_rules
   question: ¿Cuál es la señal manual correcta para dar vuelta a la izquierda?
@@ -3498,19 +3499,19 @@ questions:
   question: ¿Cuándo es obligatorio usar los faros delanteros?
   choices:
     A: De 8:00 PM a 6:00 AM
-    B: Desde el atardecer hasta el amanecer
+    B: Desde la puesta del sol hasta el amanecer
     C: Solo cuando no pueda ver a 500 pies de distancia
-    D: Desde una hora después del atardecer hasta una hora antes del amanecer
+    D: Desde una hora después de la puesta del sol hasta una hora antes del amanecer
   answer: B
-  explanation: El manual establece que los faros delanteros deben usarse desde el
-    atardecer hasta el amanecer.
+  explanation: El manual establece que los faros delanteros deben usarse desde la
+    puesta del sol hasta el amanecer.
 - id: 273
   category: safe_driving_rules
   question: ¿Cuándo es legal cruzar líneas amarillas dobles?
   choices:
-    A: Solo al dar vuelta a la izquierda o para evitar una obstrucción.
+    A: Solo al dar vuelta a la izquierda o al evitar una obstrucción.
     B: Al rebasar a un vehículo que circula despacio.
-    C: Al viajar en una calle de un solo sentido.
+    C: Al circular por una calle de un solo sentido.
     D: Nunca es legal cruzar líneas amarillas dobles.
   answer: A
   explanation: Según el manual, dar vuelta a la izquierda o evitar una obstrucción
@@ -3536,8 +3537,8 @@ questions:
     C: Indican una zona de no rebasar.
     D: Marcan el centro de una carretera de doble sentido.
   answer: B
-  explanation: Las líneas blancas separan los carriles de tráfico que circulan en
-    la misma dirección.
+  explanation: Las líneas blancas separan los carriles de tráfico que van en la misma
+    dirección.
 - id: 276
   category: safe_driving_rules
   question: Al rebasar a otro vehículo, ¿se le permite exceder el límite de velocidad
@@ -3573,15 +3574,15 @@ questions:
   explanation: Las señales naranjas indican construcción.
 - id: 279
   category: signs_and_signals
-  question: ¿Qué debe hacer un conductor al encontrarse con una señal de tránsito
-    en forma de triángulo?
+  question: ¿Qué debe hacer un conductor al encontrarse con una señal de tráfico en
+    forma de triángulo?
   choices:
     A: Detenerse
     B: Acelerar
     C: Ceder el paso
     D: Dar vuelta a la izquierda
   answer: C
-  explanation: Una señal de tránsito en forma de triángulo requiere que el conductor
+  explanation: Una señal de tráfico en forma de triángulo requiere que el conductor
     ceda el paso.
 - id: 280
   category: sharing_the_road
@@ -3618,15 +3619,16 @@ questions:
   explanation: No puede estacionarse a menos de 15 pies de un hidrante de incendios.
 - id: 283
   category: safe_driving_rules
-  question: ¿Qué carril debe utilizar el tráfico más lento al conducir en la interestatal?
+  question: ¿Qué carril debe utilizar el tráfico más lento al conducir por la carretera
+    interestatal?
   choices:
     A: El carril izquierdo
     B: El carril derecho
     C: El carril central
     D: Cualquier carril
   answer: B
-  explanation: Al conducir en la interestatal, el tráfico más lento debe mantenerse
-    a la derecha.
+  explanation: Al conducir por la carretera interestatal, el tráfico más lento debe
+    mantenerse a la derecha.
 - id: 284
   category: defensive_driving
   question: ¿Qué luces delanteras debe utilizar al conducir con niebla?
@@ -3639,19 +3641,23 @@ questions:
   explanation: Al conducir con niebla, se deben utilizar las luces bajas.
 - id: 285
   category: safe_driving_rules
-  question: Según el texto, ¿qué acción debe tomar un conductor al rebasar?
+  question: Según la Ley de Ceder el Paso (Move Over Law), si no puede cambiar de
+    carril de manera segura al acercarse a un vehículo de emergencia detenido con
+    luces intermitentes, ¿qué debe hacer?
   choices:
-    A: Acelerar para rebasar lo más rápido posible
+    A: Aumentar la velocidad para pasar lo más rápido posible
     B: Tocar la bocina y mantener la velocidad actual
-    C: Reducir la velocidad y mantener una velocidad segura
-    D: Detenerse por completo antes de continuar
+    C: Reducir la velocidad y mantener una velocidad segura al pasar
+    D: Detenerse por completo y esperar hasta que el vehículo se retire
   answer: C
-  explanation: El manual establece que al rebasar, debe "reducir la velocidad y mantener
-    una velocidad segura".
+  explanation: La Ley de Ceder el Paso (Move Over Law) exige que se cambie de carril
+    al acercarse a vehículos de emergencia o de asistencia en carretera detenidos.
+    Si no puede cambiar de carril, debe reducir la velocidad y mantener una velocidad
+    segura al pasar. (pág. 79)
 - id: 286
   category: penalties_and_points
-  question: 'Para infracciones posteriores de esta ley, las multas pueden alcanzar
-    hasta:'
+  question: 'Para infracciones posteriores por violar esta ley, las multas pueden
+    alcanzar hasta:'
   choices:
     A: $100
     B: $250
@@ -3699,16 +3705,19 @@ questions:
     multados con hasta $100".'
 - id: 290
   category: safe_driving_rules
-  question: 'Al rebasar, el manual establece que debe reducir la velocidad y mantener
-    una:'
+  question: Según la Ley de Ceder el Paso (Move Over Law), ¿cuál es la multa máxima
+    por una primera infracción por no cambiar de carril o no reducir la velocidad
+    ante un vehículo de emergencia detenido?
   choices:
-    A: Velocidad segura
-    B: Velocidad mínima de 15 mph
-    C: Velocidad igual a la del vehículo que está rebasando
-    D: Velocidad constante
-  answer: A
-  explanation: El texto instruye a los conductores a "reducir la velocidad y mantener
-    una velocidad segura al rebasar".
+    A: $50
+    B: $100
+    C: $250
+    D: $500
+  answer: B
+  explanation: Por una primera infracción de la Ley de Ceder el Paso (Move Over Law),
+    los conductores pueden ser multados con hasta $100. Las infracciones posteriores
+    pueden resultar en multas de hasta $500 y/o hasta siete días de cárcel. (pág.
+    79)
 - id: 291
   category: penalties_and_points
   question: ¿Cómo se compara la multa máxima por una infracción posterior con la de
@@ -3723,13 +3732,13 @@ questions:
     las infracciones posteriores pueden resultar en multas de hasta $500.
 - id: 292
   category: penalties_and_points
-  question: Bajo esta ley específica, ¿cuándo se menciona el tiempo de cárcel como
+  question: Según esta ley específica, ¿cuándo se menciona el tiempo de cárcel como
     una posible sanción?
   choices:
     A: Solo para una primera infracción
     B: Para infracciones posteriores
     C: Solo si ocurren daños a la propiedad
-    D: El tiempo de cárcel no es una sanción potencial
+    D: El tiempo de cárcel no es una posible sanción
   answer: B
   explanation: 'El tiempo de cárcel solo se menciona para infracciones posteriores:
     "Las infracciones posteriores pueden resultar en... hasta siete días de cárcel".'
@@ -3747,7 +3756,7 @@ questions:
     el tiempo de cárcel se reserva para infracciones posteriores.
 - id: 294
   category: penalties_and_points
-  question: 'Por una infracción posterior, un juez puede imponer:'
+  question: 'Para una infracción posterior, un juez puede imponer:'
   choices:
     A: Solo una multa, sin posibilidad de cárcel
     B: Solo tiempo de cárcel, sin posibilidad de multa
@@ -3812,7 +3821,7 @@ questions:
     D: Detenerse solo si hay otros vehículos presentes
   answer: B
   explanation: Una señal de PARE (STOP) roja y octagonal significa que debe detenerse
-    por completo en la línea de parada, el paso de peatones o antes de entrar en la
+    por completo en la línea de parada, el cruce peatonal o antes de entrar en la
     intersección. Verifique el tráfico y los peatones antes de continuar.
   id: 299
 - image: yield.png
@@ -3825,22 +3834,22 @@ questions:
     D: Continuar sin detenerse
   answer: C
   explanation: Una señal de CEDA EL PASO (YIELD) triangular roja y blanca significa
-    que debe reducir la velocidad y ceder el derecho de paso al tráfico y a los peatones.
-    Debe detenerse si es necesario para permitir que otros pasen de manera segura.
+    que debe reducir la velocidad y ceder el paso al tráfico y a los peatones. Debe
+    detenerse si es necesario para permitir que otros pasen de manera segura.
   id: 300
 - image: do_not_enter.png
   category: signs_and_signals
   question: ¿Qué significa esta señal?
   choices:
-    A: Carretera cerrada adelante
+    A: Camino cerrado más adelante
     B: No se permite estacionar
-    C: No entre en esta calzada
-    D: Calle sin salida adelante
+    C: No entre en esta vía
+    D: Calle sin salida más adelante
   answer: C
-  explanation: Una señal roja y blanca de NO ENTRE (DO NOT ENTER) significa que no
-    debe entrar en la carretera o rampa donde está colocada esta señal. Generalmente
-    se encuentra en las rampas de salida de las autopistas o en calles de un solo
-    sentido donde entrar lo pondría en la trayectoria del tráfico en sentido contrario.
+  explanation: Una señal roja y blanca de "DO NOT ENTER" (No entrar) significa que
+    no debe entrar en la carretera o rampa donde está colocada esta señal. Generalmente
+    se ve en las rampas de salida de las autopistas o en calles de un solo sentido
+    donde entrar lo pondría en el camino del tráfico en sentido contrario.
   id: 301
 - image: wrong_way.png
   category: signs_and_signals
@@ -3848,25 +3857,26 @@ questions:
   choices:
     A: Hacer un giro en U
     B: Continuar conduciendo con cuidado
-    C: Detenerse y retroceder o dar la vuelta — va en sentido contrario
-    D: Acelerar para salir del área rápidamente
+    C: Detenerse y retroceder o dar la vuelta; va en sentido contrario
+    D: Aumentar la velocidad para salir del área rápidamente
   answer: C
-  explanation: Una señal roja y blanca de SENTIDO CONTRARIO (WRONG WAY) significa
-    que está viajando contra el tráfico en una calle de un solo sentido o en una rampa
-    de autopista. Deténgase inmediatamente y dé la vuelta o retroceda de manera segura.
+  explanation: Una señal roja y blanca de "WRONG WAY" (Sentido contrario) significa
+    que está viajando en contra del tráfico en una calle de un solo sentido o en una
+    rampa de autopista. Deténgase inmediatamente y dé la vuelta o retroceda de manera
+    segura.
   id: 302
 - image: one_way_left.png
   category: signs_and_signals
   question: ¿Qué indica esta señal?
   choices:
     A: Solo giro a la izquierda
-    B: El tráfico fluye en una sola dirección — hacia la izquierda
+    B: 'El tráfico fluye en una sola dirección: hacia la izquierda'
     C: Manténgase a la izquierda de la mediana
     D: Salida de la autopista a la izquierda
   answer: B
-  explanation: Una señal de UN SOLO SENTIDO (ONE WAY) en blanco y negro con una flecha
-    indica que el tráfico en esta calle se mueve en una sola dirección — la dirección
-    que señala la flecha.
+  explanation: 'Una señal de "ONE WAY" (Una vía) en blanco y negro con una flecha
+    indica que el tráfico en esta calle se mueve en una sola dirección: la dirección
+    que señala la flecha.'
   id: 303
 - image: no_u_turn.png
   category: signs_and_signals
@@ -3875,7 +3885,7 @@ questions:
     A: Giros a la derecha
     B: Giros a la izquierda
     C: Giros en U
-    D: Rebasar a otros vehículos
+    D: Adelantar a otros vehículos
   answer: C
   explanation: Una señal reglamentaria blanca con una flecha de giro en U tachada
     significa que los giros en U están prohibidos en este lugar.
@@ -3890,7 +3900,8 @@ questions:
     D: Seguir recto
   answer: B
   explanation: Una señal reglamentaria blanca que muestra una flecha de giro a la
-    izquierda tachada significa que no se permiten giros a la izquierda en esta intersección.
+    izquierda tachada significa que no se permiten los giros a la izquierda en esta
+    intersección.
   id: 305
 - image: no_right_turn.png
   category: signs_and_signals
@@ -3899,7 +3910,7 @@ questions:
     A: No se permite el giro en U
     B: No se permite el giro a la izquierda
     C: No se permite el giro a la derecha
-    D: No se permite rebasar
+    D: No se permite adelantar
   answer: C
   explanation: Una señal reglamentaria blanca que muestra una flecha de giro a la
     derecha tachada significa que los giros a la derecha están prohibidos en este
@@ -3909,14 +3920,14 @@ questions:
   category: signs_and_signals
   question: ¿Qué indica esta señal?
   choices:
-    A: La carretera se estrecha adelante
-    B: No rebase a otros vehículos en esta zona
-    C: Tráfico de doble sentido adelante
+    A: El camino se estrecha más adelante
+    B: No adelante a otros vehículos en esta zona
+    C: Tráfico en ambos sentidos más adelante
     D: Manténgase a la derecha
   answer: B
-  explanation: Una señal en forma de banderín en blanco y negro de ZONA DE NO REBASAR
-    (NO PASSING ZONE) significa que no se le permite rebasar a otros vehículos en
-    esta área. Marca el comienzo de una zona de no rebasar.
+  explanation: Una señal en forma de banderín en blanco y negro de "NO PASSING ZONE"
+    (Zona de no adelantar) significa que no se le permite adelantar a otros vehículos
+    en esta área. Marca el inicio de una zona donde está prohibido adelantar.
   id: 307
 - image: keep_right.png
   category: signs_and_signals
@@ -3924,10 +3935,10 @@ questions:
   choices:
     A: Incorporarse a la derecha
     B: Solo giro a la derecha
-    C: Manténgase a la derecha de un divisor u obstrucción
-    D: El carril derecho termina adelante
+    C: Mantenerse a la derecha de un divisor u obstrucción
+    D: El carril derecho termina más adelante
   answer: C
-  explanation: Una señal reglamentaria blanca de MANTÉNGASE A LA DERECHA (KEEP RIGHT)
+  explanation: Una señal reglamentaria blanca de "KEEP RIGHT" (Manténgase a la derecha)
     con una flecha significa que debe mantenerse en el lado derecho de una isla de
     tráfico, mediana u obstrucción.
   id: 308
@@ -3942,20 +3953,20 @@ questions:
   answer: C
   explanation: Las señales rectangulares blancas con letras negras son señales reglamentarias.
     Las señales de límite de velocidad le indican la velocidad máxima legal para el
-    área bajo condiciones ideales.
+    área en condiciones ideales.
   id: 309
 - image: deer_crossing.png
   category: signs_and_signals
   question: ¿De qué le advierte esta señal amarilla en forma de diamante?
   choices:
-    A: Un zoológico o parque de animales adelante
-    B: Los ciervos cruzan la carretera con frecuencia en esta área
-    C: Área de caza adelante
+    A: Un zoológico o parque de animales más adelante
+    B: Los ciervos cruzan la carretera con frecuencia en esta zona
+    C: Zona de caza más adelante
     D: Un refugio de vida silvestre cercano
   answer: B
   explanation: Una señal amarilla en forma de diamante con la silueta de un ciervo
-    advierte que los ciervos cruzan la carretera con frecuencia en esta área. Reduzca
-    la velocidad y esté atento a los animales, especialmente al amanecer y al anochecer.
+    advierte que estos cruzan la carretera con frecuencia en esta zona. Reduzca la
+    velocidad y esté atento a los animales, especialmente al amanecer y al atardecer.
   id: 310
 - image: pedestrian_crossing.png
   category: signs_and_signals
@@ -3963,12 +3974,12 @@ questions:
   choices:
     A: Zona escolar más adelante
     B: Cruce de peatones más adelante
-    C: Sendero de excursión cercano
+    C: Sendero para caminatas cercano
     D: Parada de autobús más adelante
   answer: B
-  explanation: Una señal amarilla en forma de rombo con una figura de peatón advierte
-    sobre un cruce de peatones más adelante. Esté preparado para detenerse ante los
-    peatones que crucen la vía.
+  explanation: Una señal amarilla en forma de diamante con una figura de un peatón
+    advierte sobre un cruce de peatones más adelante. Esté preparado para detenerse
+    ante los peatones que crucen la calle.
   id: 311
 - image: school_zone.png
   category: signs_and_signals
@@ -3979,7 +3990,7 @@ questions:
     C: Una zona escolar o cruce escolar
     D: Una zona de hospital
   answer: C
-  explanation: Una señal pentagonal (de 5 lados) de color amarillo-verde fluorescente
+  explanation: Una señal en forma de pentágono (5 lados) de color verde-amarillo fluorescente
     indica una zona escolar o un cruce escolar. Reduzca la velocidad y esté atento
     a los niños.
   id: 312
@@ -4005,20 +4016,20 @@ questions:
     C: En la entrada de un hospital
     D: En un puente peatonal
   answer: B
-  explanation: La señal blanca en forma de X (aspa) de cruce de ferrocarril se coloca
-    en los pasos a nivel. Significa que debe ceder el paso a los trenes. Si se acerca
+  explanation: La señal blanca en forma de X (cruz de San Andrés) se coloca en los
+    cruces de ferrocarril. Significa que debe ceder el paso a los trenes. Si se aproxima
     un tren, debe detenerse.
   id: 314
 - image: curve_right.png
   category: signs_and_signals
-  question: ¿Qué indica esta señal amarilla en forma de rombo?
+  question: ¿Qué indica esta señal amarilla en forma de diamante?
   choices:
-    A: La carretera termina más adelante
+    A: El camino termina más adelante
     B: Giro a la derecha obligatorio
     C: Una curva a la derecha más adelante
     D: Desvío más adelante
   answer: C
-  explanation: Una señal amarilla en forma de rombo con una flecha curva advierte
+  explanation: Una señal amarilla en forma de diamante con una flecha curva advierte
     sobre una curva en el camino más adelante. Reduzca la velocidad antes de entrar
     en la curva.
   id: 315
@@ -4027,17 +4038,17 @@ questions:
   question: ¿En qué se diferencia esta señal de una señal de curva?
   choices:
     A: Indica un giro menos pronunciado
-    B: Advierte de un giro brusco que requiere una mayor reducción de velocidad
+    B: Advierte de un giro cerrado que requiere una mayor reducción de velocidad
     C: Significa girar a la derecha solamente
-    D: Solo se utiliza en autopistas
+    D: Solo se usa en autopistas
   answer: B
-  explanation: Una señal de giro brusco (con una flecha más angulada) indica un giro
-    más cerrado que una señal de curva. Debe reducir su velocidad de manera más significativa
-    antes de este giro.
+  explanation: Una señal de giro cerrado (con una flecha más angulada) indica un giro
+    más pronunciado que una señal de curva. Debe reducir su velocidad de manera más
+    significativa antes de este giro.
   id: 316
 - image: reverse_curve.png
   category: signs_and_signals
-  question: ¿Sobre qué condición de la vía advierte esta señal?
+  question: ¿Sobre qué condición de la carretera advierte esta señal?
   choices:
     A: Un camino sinuoso
     B: Una sola curva más adelante
@@ -4050,49 +4061,49 @@ questions:
   id: 317
 - image: winding_road.png
   category: signs_and_signals
-  question: ¿Qué le advierte esta señal que debe esperar?
+  question: ¿Qué le advierte que espere esta señal?
   choices:
-    A: Una sola curva pronunciada
+    A: Una sola curva cerrada
     B: Una superficie de carretera resbaladiza
     C: Una serie de curvas o giros más adelante
     D: Una colina más adelante
   answer: C
   explanation: Una señal de camino sinuoso advierte sobre una serie de curvas o giros
     más adelante. Reduzca su velocidad y esté alerta a los cambios en las condiciones
-    de la vía.
+    de la carretera.
   id: 318
 - image: merge.png
   category: signs_and_signals
-  question: ¿Para qué le indica esta señal que debe prepararse?
+  question: ¿Para qué le indica esta señal que se prepare?
   choices:
-    A: Un carril que termina
-    B: Tráfico que se incorpora desde otra vía
-    C: Inicio de una autopista dividida
+    A: El fin de un carril
+    B: Tráfico incorporándose desde otra carretera
+    C: El comienzo de una autopista dividida
     D: Una carretera que se estrecha a un solo carril
   answer: B
-  explanation: Una señal amarilla en forma de rombo de incorporación (merge) advierte
-    que el tráfico de otra vía se incorporará a su carril. Esté preparado para ajustar
-    su velocidad y posición.
+  explanation: Una señal amarilla en forma de diamante de incorporación (merge) advierte
+    que el tráfico de otra carretera se incorporará a su carril. Esté preparado para
+    ajustar su velocidad y posición.
   id: 319
 - image: road_narrows.png
   category: signs_and_signals
   question: ¿De qué advierte esta señal?
   choices:
     A: Puente más adelante
-    B: La carretera se estrecha más adelante
+    B: El camino se estrecha más adelante
     C: El carril termina
-    D: Termina la autopista dividida
+    D: La autopista dividida termina
   answer: B
-  explanation: Esta señal de advertencia indica que la carretera más adelante se vuelve
-    más estrecha. Esté preparado para una reducción del ancho de la vía y ajuste su
-    posición en el carril.
+  explanation: Esta señal de advertencia indica que el camino más adelante se vuelve
+    más estrecho. Esté preparado para una reducción del ancho de la carretera y ajuste
+    su posición en el carril.
   id: 320
 - image: divided_highway.png
   category: signs_and_signals
   question: ¿Qué indica esta señal que hay más adelante?
   choices:
     A: La carretera termina
-    B: Tráfico de doble sentido
+    B: Tráfico en ambos sentidos
     C: Comienza una autopista dividida
     D: Salida de la autopista
   answer: C
@@ -4105,13 +4116,13 @@ questions:
   question: ¿De qué le advierte esta señal?
   choices:
     A: Comienza una autopista dividida
-    B: La autopista dividida termina y se reanuda el tráfico de doble sentido
+    B: La autopista dividida termina y se reanuda el tráfico en ambos sentidos
     C: Un área de incorporación más adelante
-    D: Construcción vial más adelante
+    D: Construcción de carretera más adelante
   answer: B
   explanation: Esta señal advierte que la autopista dividida está terminando. El tráfico
     en sentido contrario ya no estará separado por una mediana. Esté preparado para
-    el tráfico de doble sentido.
+    el tráfico en ambos sentidos.
   id: 322
 - image: two_way_traffic.png
   category: signs_and_signals
@@ -4119,12 +4130,12 @@ questions:
   choices:
     A: Comienza una autopista dividida
     B: Una zona de adelantamiento más adelante
-    C: 'Tráfico de doble sentido más adelante: el tráfico se mueve en ambas direcciones'
+    C: Tráfico en ambos sentidos más adelante — el tráfico se mueve en ambas direcciones
     D: Un cambio de carril más adelante
   answer: C
-  explanation: Esta señal advierte de tráfico de doble sentido más adelante. Es posible
-    que esté saliendo de una vía de un solo sentido o de una autopista dividida y
-    se encuentre con vehículos que viajan en la dirección opuesta.
+  explanation: Esta señal advierte sobre tráfico en ambos sentidos más adelante. Es
+    posible que esté saliendo de una vía de un solo sentido o de una autopista dividida
+    y se encuentre con vehículos que viajan en la dirección opuesta.
   id: 323
 - image: slippery_when_wet.png
   category: signs_and_signals
@@ -4143,10 +4154,10 @@ questions:
   category: signs_and_signals
   question: ¿De qué le advierte esta señal?
   choices:
-    A: Un bache o resalto en la carretera
+    A: Un bache en la carretera
     B: Una superficie de carretera irregular
     C: Una colina o pendiente pronunciada más adelante
-    D: Construcción vial
+    D: Construcción de carretera
   answer: C
   explanation: Esta señal advierte de una colina o pendiente pronunciada más adelante.
     Es posible que deba ajustar su velocidad y cambiar a una marcha más baja, especialmente
@@ -4156,27 +4167,27 @@ questions:
   category: signs_and_signals
   question: ¿Para qué le advierte esta señal que se prepare?
   choices:
-    A: Una señal de alto (STOP) más adelante
+    A: Una señal de pare (STOP) más adelante
     B: Un semáforo más adelante
     C: Un cruce escolar
-    D: Un control policial
+    D: Un puesto de control policial
   answer: B
   explanation: Esta señal advierte de un semáforo más adelante. Esté preparado para
-    detenerse si la luz está en rojo o amarillo. Esta señal suele colocarse donde
+    detenerse si la luz está en rojo o amarillo. Esta señal a menudo se coloca donde
     el semáforo puede no ser visible desde la distancia.
   id: 326
 - image: stop_ahead.png
   category: signs_and_signals
   question: ¿Qué le indica esta señal que espere más adelante?
   choices:
-    A: Una señal de ceda el paso
+    A: Una señal de ceda el paso (YIELD)
     B: Un semáforo
-    C: Una señal de alto (STOP) donde debe detenerse
+    C: Una señal de pare (STOP) donde debe detenerse
     D: Un reductor de velocidad
   answer: C
-  explanation: Esta señal advierte que hay una señal de alto (STOP) más adelante.
+  explanation: Esta señal advierte que hay una señal de pare (STOP) más adelante.
     Comience a reducir la velocidad y prepárese para detenerse por completo en la
-    señal de alto.
+    señal de pare.
   id: 327
 - image: cross_road.png
   category: signs_and_signals
@@ -4188,19 +4199,20 @@ questions:
     D: Un cruce de peatones
   answer: B
   explanation: Esta señal advierte que hay un cruce de caminos o una intersección
-    de 4 vías más adelante. Esté atento al tráfico que entra desde las calles laterales.
+    de 4 vías más adelante. Esté atento al tráfico que ingresa desde las carreteras
+    laterales.
   id: 328
 - image: side_road.png
   category: signs_and_signals
   question: ¿De qué le advierte esta señal?
   choices:
     A: Una intersección en T más adelante
-    B: Una calle lateral que entra por la derecha
+    B: Una carretera lateral que entra por la derecha
     C: Una curva en la carretera
     D: Un callejón sin salida
   answer: B
-  explanation: Esta señal advierte de una calle lateral que entra por la derecha.
-    Esté atento a los vehículos que entran a la carretera desde la calle lateral.
+  explanation: Esta señal advierte de una carretera lateral que entra por la derecha.
+    Esté atento a los vehículos que ingresan a la autopista desde la carretera lateral.
   id: 329
 - image: added_lane.png
   category: signs_and_signals
@@ -4208,11 +4220,11 @@ questions:
   choices:
     A: Los carriles se están fusionando
     B: Un carril está terminando
-    C: Se está añadiendo un nuevo carril; no es necesario incorporarse
-    D: Giro a la derecha obligatorio
+    C: Se está añadiendo un nuevo carril — no es necesario incorporarse
+    D: Se requiere giro a la derecha
   answer: C
   explanation: Una señal de carril añadido significa que un nuevo carril se une a
-    la carretera sin necesidad de incorporarse. El tráfico que entra desde la rampa
+    la autopista sin requerir una incorporación. El tráfico que entra desde la rampa
     tiene su propio carril nuevo.
   id: 330
 - image: no_parking.png
@@ -4221,7 +4233,7 @@ questions:
   choices:
     A: Detenerse en cualquier momento
     B: Estacionarse en esta área
-    C: Detenerse momentáneamente o dejar el motor en marcha
+    C: Pararse o dejar el motor en marcha
     D: Cargar o descargar
   answer: B
   explanation: Una señal roja y blanca de NO ESTACIONAR (NO PARKING) significa que
