@@ -2,7 +2,7 @@
   "schema_version": 2,
   "code": "or",
   "name": "Oregon",
-  "verified_at": "2026-05-27T01:42:08Z",
+  "verified_at": "2026-07-27T04:25:44Z",
   "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.oregon.gov/odot/forms/dmv/37.pdf",
@@ -13,8 +13,8 @@
     "edition": "2026-2027"
   },
   "bank": {
-    "total_questions": 284,
-    "non_sign_questions": 273,
+    "total_questions": 279,
+    "non_sign_questions": 268,
     "sign_questions": 11,
     "languages": [
       "EN",
@@ -25,7 +25,7 @@
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
     "sample_size": 0,
-    "judged_count": 273,
+    "judged_count": 268,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
@@ -133,10 +133,10 @@
         "Add Lane: Two roadways join together. You do not need to merge."
       ],
       "33": [
-        "Safety Corridors: Safety corridors are designated stretches of highway... Turn on your lights for safety."
+        "Safety corridors are designated stretches of highway with more fatal and serious injury collisions than the statewide average. Turn on your lights for safety."
       ],
       "34": [
-        "Historic, Cultural, and Recreational Signs: These brown signs point to historic and cultural locations."
+        "Historic, Cultural, and Recreational Signs: These brown signs point to historic and cultural locations. They also point to scenic areas, picnic grounds, and parks."
       ],
       "35": [
         "If a signal appears dark, such as during a power failure, you should stop as if there are stop signs in all directions."
@@ -148,13 +148,16 @@
         "Flashing Yellow Arrow: A flashing yellow arrow means that you may make the movement indicated by the arrow, but first you must yield to pedestrians and oncoming traffic."
       ],
       "38": [
-        "Drive on the right side of the road except when: ... Driving to the left of center to pass an obstruction."
+        "Drive on the right side of the road except when:",
+        "Driving to the left of center to pass an obstruction."
       ],
       "39": [
         "Stop before you enter or cross a road from an alley, driveway or parking lot not controlled by signs or signals. Yield to approaching vehicles and pedestrians."
       ],
       "40": [
-        "15 Miles Per Hour • When driving in alleys. • Narrow residential areas."
+        "15 Miles Per Hour",
+        "When driving in alleys.",
+        "Narrow residential areas."
       ],
       "41": [
         "25 Miles Per Hour",
@@ -163,7 +166,7 @@
       ],
       "42": [
         "Motorist Service Signs: These blue signs tell you about services or facilities along the highway.",
-        "These signs may indicate gas, food, and lodging are available",
+        "These signs may indicate gas, food, and lodging are available at the next exit",
         "They can also indicate the road to a hospital."
       ],
       "43": [
@@ -179,10 +182,11 @@
       ],
       "46": [
         "Variable Advisory Speed: Variable advisory speed signs are yellow and say, “advisory speed.” These signs recommend a speed based on driving conditions",
-        "Variable Speed Limit: Variable speed limit signs are black and white and say, “speed limit.” These signs change the speed limit"
+        "Variable Speed Limit: Variable speed limit signs are black and white and say, “speed limit.” These signs change the speed limit based on driving conditions"
       ],
       "47": [
         "The basic rule states you must drive at a speed that is reasonable and cautious for existing conditions.",
+        "The basic rule applies on all roads at all times.",
         "The basic rule does not allow you to drive over the speed limit."
       ],
       "48": [
@@ -208,7 +212,7 @@
         "it informs you that the lane you are traveling in will not continue on the same route, such as a right-turn only lane or an exit only lane on the freeway."
       ],
       "55": [
-        "A row of triangles in your lane, pointing toward your vehicle to indicate the point at which you are required to yield."
+        "Yield line: A row of triangles in your lane, pointing toward your vehicle to indicate the point at which you are required to yield."
       ],
       "56": [
         "Striped red lines: Show where you may enter the Transit Only lane to turn, park or enter a driveway."
@@ -229,7 +233,7 @@
         "When stopping behind another vehicle, make sure you can see where the rear tires of the vehicle in front meet the road."
       ],
       "62": [
-        "If a vehicle behind you is following too closely and there is a right lane, move over to the right. If you can’t move over, slowly reduce your speed."
+        "If you can’t move over, slowly reduce your speed. This may encourage the vehicle to pass you or to stop tailgating. Never brake hard to discourage tailgating; you could get hit from behind."
       ],
       "63": [
         "To see as much as possible, turn your body and head to the right and look out through the rear window."
@@ -289,7 +293,7 @@
         "3rd offense: Up to $2,500 &, six months in jail"
       ],
       "81": [
-        "If your vehicle is moving in traffic, use your turn signal at least 100 feet before the turn or lane change."
+        "use your turn signal at least 100 feet before the turn or lane change."
       ],
       "82": [
         "Only use hand-and-arm signals in daylight and when you can clearly see people and vehicles at a distance of 1,000 feet."
@@ -301,14 +305,14 @@
         "If you are at an intersection and in the wrong lane to turn, go to the next intersection."
       ],
       "85": [
-        "On a two-way road, approach the turn with your vehicle in the lane just to the right of the center line."
+        "approach the turn with your vehicle in the lane just to the right of the center line."
       ],
       "86": [
-        "Left Turn: One-Way Road to Two-Way Road: ... You cannot make this turn against a red light.",
+        "You cannot make this turn against a red light.",
         "It is illegal to execute a left turn onto a two-way road against a red light."
       ],
       "87": [
-        "If you start to enter a freeway the wrong way... Immediately pull off to the side of the ramp and stop."
+        "Immediately pull off to the side of the ramp and stop."
       ],
       "88": [
         "Any location within city limits where your vehicle cannot be seen by traffic coming from either direction within 500 feet."
@@ -326,8 +330,7 @@
         "Never stop while inside the roundabout. Instead, move through and exit the roundabout. Once you exit, pull over to the right shoulder and allow emergency vehicles to pass."
       ],
       "93": [
-        "It is illegal to pass or drive beside a truck within the roundabout.",
-        "Do not attempt to overtake or pass any vehicles, especially large trucks and trailers within the roundabout."
+        "It is illegal to pass or drive beside a truck within the roundabout."
       ],
       "94": [
         "If you are turning at an intersection that has a traffic signal, before you begin to turn, the pedestrian must be six feet or more from the lane you are turning into."
@@ -366,16 +369,18 @@
         "Between the hours of 7 a.m. and 5 p.m. on a day school is in session."
       ],
       "106": [
-        "Children are present means: • children are waiting at a crosswalk."
+        "Children are present means: • children are waiting at a crosswalk. • children are occupying or walking within a crosswalk."
       ],
       "107": [
-        "You may cross a bike lane when turning or when entering or leaving an alley, driveway, or private road."
+        "You may cross a bike lane when turning or when entering or leaving an alley, driveway, or private road.",
+        "Do not move into or travel in a bike lane in preparation for a turn."
       ],
       "108": [
-        "At speeds greater than 35 mph, you may only pass a person on a bicycle traveling in your lane if you leave enough distance to prevent contact"
+        "At speeds greater than 35 mph, you may only pass a person on a bicycle traveling in your lane if you leave enough distance to prevent contact with the person riding a bicycle if they were to fall."
       ],
       "109": [
-        "As a driver, you must stop for a traffic signal behind the bike box. Do not stop in the box."
+        "As a driver, you must stop for a traffic signal behind the bike box. Do not stop in the box.",
+        "No right turns are allowed at these intersections when the traffic signal is red."
       ],
       "110": [
         "A sharrow indicates that the lane is shared and people riding bicycles may be in the road."
@@ -418,7 +423,7 @@
         "Loads may not extend more than 6 inches beyond the sides of the right fenders."
       ],
       "123": [
-        "it is against the law for you to join or drive between vehicles in the procession."
+        "If you are not a member of the funeral procession, it is against the law for you to join or drive between vehicles in the procession."
       ],
       "124": [
         "You may also slow down by at least 5 miles per hour under the posted speed limit."
@@ -439,7 +444,7 @@
         "If there is no stop line, stop at least 15 feet from the nearest rail."
       ],
       "130": [
-        "move at a 45 degree angle from the tracks in the direction of the train so you are not hit with debris."
+        "If a train approaches, move at a 45 degree angle from the tracks in the direction of the train so you are not hit with debris."
       ],
       "131": [
         "If it is dark, turn on the vehicle’s interior light after stopping and before the officer approaches."
@@ -477,7 +482,7 @@
       ],
       "142": [
         "If your vehicle cannot be seen from 200 feet in each direction, you need to warn approaching traffic.",
-        "This can be done with flags, flares, signs, signals or flaggers placed at least 200 feet from your vehicle"
+        "This can be done with flags, flares, signs, signals or flaggers placed at least 200 feet from your vehicle in each direction."
       ],
       "143": [
         "If you must leave your vehicle unattended, turn off the engine, remove the key, set the brakes, and turn on your hazard lights."
@@ -489,7 +494,7 @@
         "When leaving a parked or stopped position, check your blind spots and mirrors, and yield to all other traffic."
       ],
       "146": [
-        "look for an Emergency Notification System (ENS) sign located on a post at the crossing near the tracks to notify the railroads of the obstruction"
+        "look for an Emergency Notification System (ENS) sign located on a post at the crossing near the tracks to notify the railroads of the obstruction in the tracks so they can alert incoming trains."
       ],
       "147": [
         "Infants must ride rear-facing until they reach two years of age."
@@ -518,7 +523,7 @@
         "Dim your lights when following another vehicle within 350 feet."
       ],
       "155": [
-        "Look a little to the right of oncoming lights and watch the road edge or fog line."
+        "Look a little to the right of oncoming lights and watch the road edge or fog line. This helps you be less blinded by headlight glare."
       ],
       "156": [
         "If you drive into fog, dust, smoke, or any area of low visibility, use headlights on low beam."
@@ -528,10 +533,10 @@
         "Keep windows clear of snow, ice and fog, and do not use cruise control."
       ],
       "158": [
-        "gently apply the brakes while driving slowly until they begin to respond."
+        "If you drive through water and the brakes get wet, gently apply the brakes while driving slowly until they begin to respond."
       ],
       "159": [
-        "the road is likely to be the most slippery when the temperature is near the freezing point"
+        "Be aware that the road is likely to be the most slippery when the temperature is near the freezing point rather than below freezing."
       ],
       "160": [
         "Steer in the direction you want the vehicle to go."
@@ -588,7 +593,7 @@
         "Ignore the text until you stop in a safe parking area."
       ],
       "177": [
-        "A Class C non-commercial driving privilege allows you to drive a vehicle... of not more than 26,000 pounds"
+        "A Class C non-commercial driving privilege allows you to drive a vehicle (passenger car, moped, autocycle, van, or pickup) of not more than 26,000 pounds"
       ],
       "178": [
         "Be at least 15 years of age to apply for an instruction permit."
@@ -623,7 +628,7 @@
         "Damage to any vehicle is greater than $2,500 and any vehicle is towed from the scene due to damage from the collision;"
       ],
       "188": [
-        "If you cannot find the owner, leave a note with your name and address, along with a brief description of what happened."
+        "If you hit an unoccupied vehicle, try to find the owner. If you cannot find the owner, leave a note with your name and address, along with a brief description of what happened."
       ],
       "189": [
         "Failing to report a vehicle collision.",
@@ -669,37 +674,17 @@
         "For red flag indicators of human trafficking and more information, download the TAT app today."
       ],
       "203": [
-        "Vital Records—\nOregon (Birth Certificate Information)....................971-673-1190"
+        "Vital Records\u0017—\nOregon (Birth Certificate Information)....................971-673-1190"
       ],
       "215": [
-        "Additional acceptable IDs include, but are not limited to: ... Foreign government-issued passport."
-      ],
-      "216": [
-        "Published by:\nOregon Department of Transportation\nDriver and Motor Vehicle Services"
-      ],
-      "217": [
-        "Lane Travel.......................................................................18",
-        "Speed Regulations...................................................19",
-        "Pavement Markings................................................22"
-      ],
-      "218": [
-        "Turns & Intersections............................................................38",
-        "Roundabouts............................................................43"
-      ],
-      "219": [
-        "Sharing the Road....................................................................46",
-        "Large Vehicles...........................................................53"
-      ],
-      "220": [
-        "Safe & Responsible Driving..........................................................73",
-        "Safety Belts....................................................................73"
+        "Foreign government-issued passport.",
+        "A standard issue, non-REAL ID Oregon driver’s license, instruction permit or identification card is no longer accepted."
       ],
       "221": [
-        "Safe & Responsible Driving..........................................................73",
-        "Fuel Saving Techniques..........................................................86"
+        "Fuel Saving Techniques..........................................86"
       ],
       "222": [
-        "Loss of Driving Privileges.......................................................95"
+        "Loss of Driving Privileges.......................................95"
       ],
       "223": [
         "At worst, you may lose your life or cause someone else’s death, including that of a loved one."
@@ -717,11 +702,13 @@
         "Permanent Resident card."
       ],
       "228": [
-        "Mandatory Insurance..............................................................93",
-        "Traffic Collisions...............................................................93"
+        "Mandatory Insurance..............................................93",
+        "Traffic Collisions.......................................................93"
       ],
       "229": [
-        "Signs & Traffic Signals......................................................................7"
+        "Signs & Traffic Signals......................................................7",
+        "Signs.............................................................................7",
+        "Traffic Signals............................................................15"
       ],
       "230": [
         "After four attempts you must test at a DMV office."
@@ -790,7 +777,7 @@
         "The number on an exit sign helps you know which exit to take."
       ],
       "252": [
-        "Historic, Cultural, and Recreational Signs: These brown signs point to historic and cultural locations. They also point to scenic areas, picnic grounds, and parks."
+        "Historic, Cultural, and Recreational Signs: These brown signs point to historic and cultural locations."
       ],
       "253": [
         "Steady Circular Yellow: A steady yellow signal warns you that the signal is about to turn red. Stop before entering the intersection. If you cannot stop safely, drive carefully through it."
@@ -799,34 +786,34 @@
         "Red Arrow: A steady red arrow means stop and remain stopped until the signal changes, except for allowed turns on red. The same turns allowed for a steady red signal are allowed for a red arrow."
       ],
       "255": [
-        "Right Turns Permitted: This sign indicates you can briefly use the transit lane to turn into a driveway, turn at the next intersection, or pull over to park along the curb where allowed.",
-        "Always yield to transit vehicles and people riding bicycles in transit lanes. Merge into the lane behind them after they pass."
+        "Right Turns Permitted: This sign indicates you can briefly use the transit lane to turn into a driveway, turn at the next intersection, or pull over to park along the curb where allowed."
       ],
       "256": [
         "Flashing Yellow Arrow: A flashing yellow arrow means that you may make the movement indicated by the arrow, but first you must yield to pedestrians and oncoming traffic. Oncoming traffic has a steady green signal."
       ],
       "257": [
-        "Steady Circular Green: A green signal means all movements—straight ahead, left or right turns—are permitted, unless prohibited by a sign. Left turns must first yield to pedestrians and oncoming traffic.",
-        "Green Arrow: A steady green arrow means you have the right of way and may make the movement indicated by the arrow."
+        "Green Arrow: A steady green arrow means you have the right of way and may make the movement indicated by the arrow.",
+        "Steady Circular Green: A green signal means all movements—straight ahead, left or right turns—are permitted... Left turns must first yield to pedestrians and oncoming traffic."
       ],
       "258": [
         "When a road has no center line and traffic moves in opposite directions, drivers must give at least half the road to oncoming traffic."
       ],
       "259": [
-        "55 Miles Per Hour • On all roads and highways not meeting any other definition unless otherwise posted."
+        "55 Miles Per Hour: On all roads and highways not meeting any other definition unless otherwise posted."
       ],
       "260": [
         "Variable Advisory Speed: Variable advisory speed signs are yellow and say, “advisory speed.” These signs recommend a speed based on driving conditions",
-        "These are not speed limits, but police may enforce them through the basic rule law."
+        "These are not speed limits"
       ],
       "261": [
         "HIT BY A VEHICLE TRAVELING AT: 50% Risk of Death 42MPH"
       ],
       "262": [
-        "Yellow Markings are used to separate traffic moving in opposite directions (center line) and to mark the left edge of one-way roads and ramps"
+        "Yellow Markings are used to... mark the left edge of one-way roads and ramps, two-way left turn lanes, and painted medians.",
+        "Solid yellow line: Marks the left edge of one-way roads and ramps."
       ],
       "263": [
-        "You may turn left, to enter or exit a roadway, across double solid yellow lines after waiting for oncoming traffic to clear."
+        "Double solid yellow line: Indicates passing is not allowed... You may turn left, to enter or exit a roadway, across double solid yellow lines after waiting for oncoming traffic to clear."
       ],
       "264": [
         "Steady Circular Yellow: A steady yellow signal warns you that the signal is about to turn red. Stop before entering the intersection. If you cannot stop safely, drive carefully through it."
@@ -838,21 +825,21 @@
         "Yielding means you must slow down or stop to allow another vehicle or pedestrian to continue safely."
       ],
       "267": [
-        "Variable Advisory Speed: Variable advisory speed signs are yellow and say, “advisory speed.”",
-        "Variable Speed Limit: Variable speed limit signs are black and white and say, “speed limit.”",
+        "Variable Advisory Speed: Variable advisory speed signs are yellow and say, “advisory speed.” These signs recommend a speed",
+        "Variable Speed Limit: Variable speed limit signs are black and white and say, “speed limit.” These signs change the speed limit",
         "Police may enforce these signs like any other speed limit sign."
       ],
       "268": [
         "A solid yellow line on your side of the lane indicates you are not allowed to pass."
       ],
       "269": [
-        "Red Arrow: A steady red arrow means stop and remain stopped until the signal changes, except for allowed turns on red. The same turns allowed for a steady red signal are allowed for a red arrow."
+        "A steady red arrow means stop and remain stopped until the signal changes, except for allowed turns on red. The same turns allowed for a steady red signal are allowed for a red arrow."
       ],
       "270": [
-        "Yellow diagonal stripes: ... It is illegal to drive in or make a turn across these stripes."
+        "Yellow diagonal stripes: Used within a painted median to inform you of fixed objects in the road ahead or areas where vehicle use is not allowed. It is illegal to drive in or make a turn across these stripes."
       ],
       "271": [
-        "Double solid white line: ... Means you are not allowed to change lanes. Stay in your lane."
+        "Double solid white line: Usually accompanied by a sign prohibiting lane changes for a certain distance. Means you are not allowed to change lanes. Stay in your lane."
       ],
       "272": [
         "Solid red lane: Transit Only lane, not for cars. These may also say \"BUS ONLY, BUS BIKE ONLY, or LRT\"."
@@ -867,7 +854,7 @@
         "When stopped on a hill. The vehicle ahead may roll back when it starts to move."
       ],
       "276": [
-        "If possible, drop back a little or move ahead of the other vehicle."
+        "Be cautious when driving alongside other vehicles on multi-lane streets. Someone may crowd your lane or try to change lanes and hit you. If possible, drop back a little or move ahead of the other vehicle."
       ],
       "277": [
         "Keep extra space between your vehicle and parked cars by moving away from them without leaving your lane."
@@ -899,13 +886,10 @@
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 26,
-    "topics_covered": 24,
-    "coverage_pct": 92.3,
-    "uncovered_topics": [
-      "Adjusting following distance for heavy loads or trailers",
-      "Rules for carrying passengers in a towed trailer"
-    ],
+    "topics_total": 28,
+    "topics_covered": 28,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
     "verdict": "PASS",
     "grade": "A"
   },
@@ -914,18 +898,18 @@
     "category_distribution": {
       "license_system": 18,
       "driver_responsibility": 16,
-      "safe_driving_rules": 77,
+      "safe_driving_rules": 74,
       "alcohol_drugs_health": 7,
       "driver_testing": 20,
       "penalties_and_points": 12,
-      "vehicle_information": 13,
+      "vehicle_information": 12,
       "signs_and_signals": 66,
-      "sharing_the_road": 27,
+      "sharing_the_road": 26,
       "defensive_driving": 28
     },
     "missing_categories": [],
     "over_concentrated_categories": [],
-    "density_qs_per_1000_chars": 2.26,
+    "density_qs_per_1000_chars": 2.22,
     "sign_ratio_pct": 3.9,
     "verdict": "PASS",
     "grade": "A"
@@ -933,7 +917,7 @@
   "translation": {
     "es": {
       "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
-      "judged_count": 273,
+      "judged_count": 268,
       "avg_fidelity": 10.0,
       "pct_at_10": 100.0,
       "pct_above_9": 100.0,
@@ -945,7 +929,7 @@
     },
     "ja": {
       "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
-      "judged_count": 267,
+      "judged_count": 268,
       "avg_fidelity": 10.0,
       "pct_at_10": 100.0,
       "pct_above_9": 100.0,
