@@ -342,7 +342,7 @@ QUESTIONS TO JUDGE:
                 response_mime_type="application/json",
                 response_schema=FaithfulnessReport,
                 thinking_config=types.ThinkingConfig(thinking_budget=0),
-                max_output_tokens=32768,
+                max_output_tokens=65535,
             ),
         )
     )
@@ -506,7 +506,7 @@ The order of judgments MUST match the order of topics above."""
                 response_mime_type="application/json",
                 response_schema=TopicCoverageReport,
                 thinking_config=types.ThinkingConfig(thinking_budget=0),
-                max_output_tokens=32768,
+                max_output_tokens=65535,
             ),
         )
     )
@@ -679,7 +679,7 @@ PAIRS TO JUDGE:
                 response_mime_type="application/json",
                 response_schema=TranslationFaithfulnessReport,
                 thinking_config=types.ThinkingConfig(thinking_budget=0),
-                max_output_tokens=32768,
+                max_output_tokens=65535,
             ),
         )
     )
