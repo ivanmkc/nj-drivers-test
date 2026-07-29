@@ -2,7 +2,7 @@
   "schema_version": 2,
   "code": "in",
   "name": "Indiana",
-  "verified_at": "2026-07-27T00:57:25Z",
+  "verified_at": "2026-07-29T04:56:41Z",
   "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.in.gov/bmv/licenses-permits-ids/files/drivers-manual.pdf",
@@ -13,8 +13,8 @@
     "edition": ""
   },
   "bank": {
-    "total_questions": 346,
-    "non_sign_questions": 328,
+    "total_questions": 356,
+    "non_sign_questions": 338,
     "sign_questions": 18,
     "languages": [
       "EN",
@@ -25,9 +25,9 @@
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
     "sample_size": 0,
-    "judged_count": 328,
+    "judged_count": 338,
     "avg_fidelity": 10.0,
-    "pct_at_10": 99.7,
+    "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
@@ -40,28 +40,28 @@
         "With a Real ID you can board commercial flights within the United States"
       ],
       "3": [
-        "visit military bases, and enter certain federal facilities."
+        "With a Real ID you can board commercial flights within the United States, visit military bases, and enter certain federal facilities."
       ],
       "4": [
         "Visit RealID.IN.gov to learn what documents are needed to upgrade to a Real ID."
       ],
       "5": [
-        "providing best-in-class driver and vehicle services in a timely and accurate manner while ensuring security and transparency."
+        "To serve all Hoosiers by providing best-in-class driver and vehicle services in a timely and accurate manner while ensuring security and transparency."
       ],
       "6": [
-        "Vision Screening...............................................................................................................4"
+        "Vision Screening...............................................................................................................................4"
       ],
       "7": [
-        "Financial Liability for Injury or Damage.............................................................................7"
+        "Financial Liability for Injury or Damage.............................................................................................7"
       ],
       "8": [
-        "For-Hire Endorsement.......................................................................................................15"
+        "For-Hire Endorsement.......................................................................................................................15"
       ],
       "9": [
-        "Active Duty and Veteran Military Indicator........................................................................17"
+        "Active Duty and Veteran Military Indicator........................................................................................17"
       ],
       "10": [
-        "Driver Safety Program ......................................................................................................21"
+        "Driver Safety Program ......................................................................................................................21"
       ],
       "11": [
         "The BMV uses the criteria in statute... to determine whether a driver qualifies as a Habitual Traffic Violator (HTV)."
@@ -76,8 +76,7 @@
       ],
       "14": [
         "Distracted Driving",
-        "Aggressive Driving",
-        "Indiana law specifically prohibits the use of a telecommunications device, while operating a motor vehicle."
+        "Aggressive Driving"
       ],
       "15": [
         "Motor Driven Cycle (MDC)",
@@ -133,7 +132,8 @@
         "An identification card and an MDC endorsement are valid for six years"
       ],
       "32": [
-        "you must surrender any other credential to the Indiana BMV to complete an application for an identification card."
+        "Indiana residents cannot hold more than one credential at the same time",
+        "you must surrender any other credential to the Indiana BMV to complete an application for an identification card"
       ],
       "33": [
         "Identification cards may also provide privileges to operate a Motor Driven Cycle (MDC) as long as you are at least 15 years of age"
@@ -189,7 +189,8 @@
         "Upon failure of a third driving skills exam while holding a learner’s permit, you must wait for two months from the date of the last failed driving skills exam before taking the exam again."
       ],
       "50": [
-        "The parent having custody of the minor applicant or a designee of the custodial parent specified by the custodial parent"
+        "The lawful (IC 9-24-9-3) order of preference is:",
+        "1. The parent having custody of the minor applicant or a designee of the custodial parent specified by the custodial parent"
       ],
       "51": [
         "A written request to withdraw financial liability will cancel the minor’s learner’s permit or driver’s license [IC 9-24-9-4(b)]."
@@ -250,7 +251,7 @@
         "A school-sanctioned activity"
       ],
       "70": [
-        "gross vehicle weight ratings in excess of 26,000 pounds"
+        "with gross vehicle weight ratings in excess of 26,000 pounds"
       ],
       "71": [
         "credentials will only be mailed to the mailing address on file with the BMV and will not be forwarded.",
@@ -288,7 +289,8 @@
         "Is designed to be controlled with a steering wheel and pedals"
       ],
       "81": [
-        "You may operate an autocycle on Indiana roadways if you possess a valid (not expired, suspended, or revoked) Indiana driver’s license."
+        "You may operate an autocycle on Indiana roadways if you possess a valid (not expired, suspended, or revoked) Indiana driver’s license.",
+        "A motorcycle learner’s permit or motorcycle endorsement is not required."
       ],
       "82": [
         "May not be used for the purpose of a driving skills exam for a driver’s license"
@@ -390,20 +392,19 @@
         "You may replace your credential online a maximum of 10 times before you are required to visit a BMV branch for a replacement."
       ],
       "114": [
-        "This is commonly referred to as 25/50/25 liability insurance.",
-        "insured to the state’s minimum motor vehicle liability protection (25/50/25)."
+        "The state minimum insurance standard is $25,000 for bodily injury to, or the death of, one individual; $50,000 for bodily injury to, or the death of, two or more people in any one accident; and $25,000 for property damages in any one accident. This is commonly referred to as 25/50/25 liability insurance."
       ],
       "115": [
         "The COC must be received electronically from your insurer and processed by the BMV within 90 days of the BMV’s mailing of a request to verify financial responsibility"
       ],
       "116": [
-        "Indiana law requires that you have your insurance provider electronically file proof of future financial responsibility with an SR22 form"
+        "Indiana law requires that you have your insurance provider electronically file proof of future financial responsibility with an SR22 form in order for your driving privileges to be reinstated."
       ],
       "117": [
-        "Indiana law requires the BMV to suspend your driving privileges until it receives an effective SR22 policy, or until the SR22 requirement period expires."
+        "If the BMV receives an SR26 (cancellation of SR22 insurance) notice from your insurance provider, Indiana law requires the BMV to suspend your driving privileges until it receives an effective SR22 policy, or until the SR22 requirement period expires."
       ],
       "118": [
-        "Reinstatement fees are $250 for a first no-insurance suspension... that occurred after Jan. 1, 2015."
+        "Reinstatement fees are $250 for a first no-insurance suspension, $500 for a second no-insurance suspension, and $1,000 for a third and subsequent no-insurance suspension(s) that occurred after Jan. 1, 2015."
       ],
       "119": [
         "A driver may reinstate their driving privileges without having to pay a no-insurance reinstatement fee by having their insurance provider electronically submit proof of future financial responsibility (SR22 form) and maintain SR22 continuously for 180-days."
@@ -536,15 +537,15 @@
         "If you arrive at the same time as another driver, the vehicle on the left shall yield the right-of-way."
       ],
       "161": [
-        "The operator approaching an intersection controlled by a bicycle traffic signal may proceed through a steady red light if the operator comes to a complete stop for at least two minutes"
+        "The operator approaching an intersection controlled by a bicycle traffic signal may proceed through a steady red light if the operator comes to a complete stop for at least two minutes",
+        "An operator approaching an intersection controlled by a traffic signal may proceed through a steady red light if the operator comes to a complete stop for at least two minutes"
       ],
       "162": [
         "This rule does not apply to autocycles"
       ],
       "163": [
         "If you are approaching an intersection with a non-operating signal, you should stop before entering the intersection.",
-        "After stopping, you may proceed with caution only after you have yielded the right of way to: Cross-traffic that has already entered the intersection",
-        "Any vehicle that stopped before you and is entering the intersection; Any vehicle that arrived at the same time as you and is to your right; Any pedestrian traffic"
+        "After stopping, you may proceed with caution only after you have yielded the right of way to: Cross-traffic that has already entered the intersection"
       ],
       "164": [
         "Once activated by a pedestrian, the pedestrian hybrid beacon will display a flashing yellow light to allow drivers to clear the crossing."
@@ -592,7 +593,7 @@
         "A roundabout is a circular intersection in which traffic enters or exits only through right turns and proceeds in a counterclockwise direction."
       ],
       "179": [
-        "the driver in the right lane must yield the right of way to the driver in the left lane."
+        "If two large trucks are approaching or driving through a roundabout at the same time, the driver in the right lane must yield the right of way to the driver in the left lane."
       ],
       "180": [
         "Passenger vehicles may not exceed 70 miles per hour or the posted speed limit"
@@ -618,7 +619,7 @@
         "Trucks that have a declared gross vehicle weight greater than 26,000 pounds may not exceed 65 miles per hour or the posted speed limit"
       ],
       "187": [
-        "If your vehicle has an anti-lock brake system (ABS), keep your foot on the brake pedal, maintaining firm and continuous pressure, while steering normally."
+        "If your vehicle has an anti-lock brake system (ABS), keep your foot on the brake pedal, maintaining firm and continuous pressure, while steering normally. Do not pump the brakes."
       ],
       "188": [
         "If your vehicle leaves the roadway, do not turn back onto the pavement right away. Ease up on the gas pedal. When it’s safe to do so, gradually turn back onto the road."
@@ -724,17 +725,18 @@
         "The maximum height of any vehicle that may be operated without a special permit is 13 feet, 6 inches."
       ],
       "222": [
-        "A fully loaded tractor-trailer with hot brakes may take more than 400 feet to come to a complete stop"
+        "A fully loaded tractor-trailer with hot brakes may take more than 400 feet to come to a complete stop, or more than the length of a football field."
       ],
       "223": [
         "Blind spots for the tractor-trailer driver will be... up to 200 feet behind the vehicle."
       ],
       "224": [
-        "tractor-trailers stay in the center lane to help the flow of local traffic on and off the highway.",
-        "Staying in the middle lane also increases the tractor-trailer driver’s options"
+        "On multi-lane highways, tractor-trailers stay in the center lane to help the flow of local traffic on and off the highway.",
+        "Staying in the middle lane also increases the tractor-trailer driver’s options if he or she has to switch lanes in order to avoid a dangerous situation or an accident."
       ],
       "225": [
-        "Always pass a tractor-trailer completely and always on the left side."
+        "Always pass a tractor-trailer completely and always on the left side.",
+        "If you linger when passing the tractor-trailer, your position makes it impossible for the tractor- trailer driver to take evasive action"
       ],
       "226": [
         "If you cannot move over, the motorists shall reduce their speed to 10 mph under the posted limit and proceed with caution."
@@ -852,14 +854,13 @@
         "the driver should not move the motor vehicle if the accident involves the transportation of hazardous materials or results in injury, death, or entrapment."
       ],
       "263": [
-        "If the collision was with an unattended vehicle or other property, the driver must stop and remain at the scene of the accident, take reasonable steps to notify the owner of the damaged property, and if the owner cannot be located, call a law enforcement agency in order to provide information."
+        "if the owner cannot be located, call a law enforcement agency in order to provide information."
       ],
       "264": [
         "Your insurance provider must electronically file proof of financial responsibility in the form of a Certificate of Compliance (COC)."
       ],
       "265": [
-        "Hit something moving in the same direction as you rather than something that is not moving.",
-        "Choose to hit something that will give way, such as brush or shrubs, rather than something hard."
+        "Hit something moving in the same direction as you rather than something that is not moving."
       ],
       "266": [
         "Instead, drive along the shoulder and ease up on the gas pedal. After slowing down, turn back onto the road gradually."
@@ -868,7 +869,8 @@
         "The weight of the water will make it nearly impossible to open a door and water will flood the passenger compartment through an open door."
       ],
       "268": [
-        "A driver may be impaired if the vehicle: • Makes wide turns • Straddles the center line or weaves back and forth"
+        "Makes wide turns",
+        "Straddles the center line or weaves back and forth"
       ],
       "269": [
         "If you must exit the vehicle while on a roadside shoulder, exit the vehicle on the passenger side and only after checking your immediate vicinity"
@@ -952,22 +954,22 @@
       ],
       "295": [
         "Some vehicles are required by law to always stop at railroad crossings not closer than 15 feet or farther than 50 feet from the nearest rail.",
-        "Vehicles that must stop at railroad crossings include: • All vehicles carrying passengers for hire"
+        "Vehicles that must stop at railroad crossings include: •All vehicles carrying passengers for hire"
       ],
       "296": [
         "display three bi-directional emergency reflective triangles which conform to the requirements of Federal Motor Vehicle Safety Standard No. 125, or at least six fuses or three liquid-burning flares."
       ],
       "297": [
-        "A law enforcement officer’s command may be different from a traffic signal or sign. In such a case, the law enforcement officer’s command is the one that must be obeyed."
+        "In such a case, the law enforcement officer’s command is the one that must be obeyed."
       ],
       "298": [
         "Two documents proving your Indiana residency"
       ],
       "299": [
-        "Documents containing your name and full Social Security number which qualify to prove your Social Security number include: • Social Security card. • W-2 Form."
+        "Documents containing your name and full Social Security number which qualify to prove your Social Security number include: •Social Security card. •W-2 Form."
       ],
       "300": [
-        "Computer-generated bill from a utility company... issued within 60 days of the application date and containing your name and residential address."
+        "Computer-generated bill from a utility company... issued within 60 days of the application date"
       ],
       "301": [
         "Post office boxes may not be used as a residential address, unless the applicant is enrolled in the Indiana Attorney General’s Address Confidentiality Program."
@@ -1030,19 +1032,21 @@
         "Choose vehicles for safety, not image."
       ],
       "321": [
-        "Develop a strategy for progressive privileges. As the teen driver gains experience and demonstrates appropriate decisions, allow your teen to move up to a higher level of driving responsibility."
+        "Develop a strategy for progressive privileges.",
+        "allow your teen to move up to a higher level of driving responsibility."
       ],
       "322": [
-        "Anyone under 18 years of age who is operating or riding an ORV shall wear a helmet that meets the standards established by the United States Department of Transportation"
+        "Anyone under 18 years of age who is operating or riding an ORV shall wear a helmet"
       ],
       "323": [
-        "may not knowingly authorize or permit an individual under 18 years of age to operate the ORV without wearing a helmet that meets the standards established by United States Department of Transportation."
+        "may not knowingly authorize or permit an individual under 18 years of age to operate the ORV without wearing a helmet"
       ],
       "324": [
-        "Any individual obtaining a new, renewed, replacement, or amended credential may also apply to register to vote if that individual is eligible to vote."
+        "Any individual obtaining a new, renewed, replacement, or amended credential may also apply to register to vote"
       ],
       "325": [
-        "Indiana law requires the BMV, when authorized by a male younger than 26 years of age who is getting a new or renewed driver’s license, to submit the necessary information"
+        "submit the necessary information to the federal government to register that individual with the Selective Service system.",
+        "male younger than 26 years of age who is getting a new or renewed driver’s license"
       ],
       "326": [
         "Failure to register is a felony and is punishable by up to five years imprisonment and a $250,000 fine."
@@ -1051,11 +1055,41 @@
         "Plates and stickers arrive in approximately 21 days."
       ],
       "328": [
-        "The BMV offers four convenient ways to renew your vehicle registration from the comfort of your home.",
         "Visit myBMV.com",
         "Renew by phone",
         "Visit a BMV Connect kiosk",
         "Renew by mail"
+      ],
+      "347": [
+        "requires motorists to yield the right of way; move over to the right and come to a complete stop; or change lanes"
+      ],
+      "348": [
+        "If you cannot move over, the motorists shall reduce their speed to 10 mph under the posted limit and proceed with caution."
+      ],
+      "349": [
+        "Failure to do so is a Class B Infraction."
+      ],
+      "350": [
+        "1. Recovery Vehicles/Tow Trucks",
+        "Authorized vehicles with amber flashing lights include:"
+      ],
+      "351": [
+        "Disregarding a school bus stop arm can result in a Class A misdemeanor, a Level 6 felony if the offense results in bodily injury"
+      ],
+      "352": [
+        "motorcyclists and MDC operators may need the full use of the lane to maneuver safely and avoid potential hazards that are unseen by other motor vehicle operators."
+      ],
+      "353": [
+        "After parking and before opening vehicle doors, a motorist should first check for bicyclists."
+      ],
+      "354": [
+        "Sharrow markings are pavement markings of a bike with two arrows above it and are intended to help cyclists position themselves away from parked cars"
+      ],
+      "355": [
+        "A rider of a horse or horse-drawn vehicle has the same rights and responsibilities of a motor vehicle driver when riding on a public highway."
+      ],
+      "356": [
+        "Always yield the right of way to pedestrians"
       ]
     },
     "verdict": "PASS",
@@ -1082,31 +1116,34 @@
       "safe_driving_rules": 78,
       "defensive_driving": 24,
       "alcohol_drugs_health": 8,
-      "sharing_the_road": 17
+      "sharing_the_road": 27
     },
     "missing_categories": [],
     "over_concentrated_categories": [],
-    "density_qs_per_1000_chars": 1.62,
-    "sign_ratio_pct": 5.2,
+    "density_qs_per_1000_chars": 1.67,
+    "sign_ratio_pct": 5.1,
     "verdict": "PASS",
     "grade": "A"
   },
   "translation": {
     "es": {
       "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
-      "judged_count": 328,
-      "avg_fidelity": 10.0,
-      "pct_at_10": 100.0,
-      "pct_above_9": 100.0,
-      "pct_above_7": 100.0,
+      "judged_count": 338,
+      "avg_fidelity": 9.98,
+      "pct_at_10": 99.4,
+      "pct_above_9": 99.4,
+      "pct_above_7": 99.4,
       "pct_zero": 0.0,
-      "drift_flagged_ids": [],
+      "drift_flagged_ids": [
+        54,
+        159
+      ],
       "verdict": "PASS",
       "grade": "A"
     },
     "ja": {
       "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
-      "judged_count": 328,
+      "judged_count": 338,
       "avg_fidelity": 10.0,
       "pct_at_10": 100.0,
       "pct_above_9": 100.0,
