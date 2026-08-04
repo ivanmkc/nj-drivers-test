@@ -172,11 +172,11 @@ export default function App() {
   if (error) {
     return (
       <div className="max-w-lg mx-auto px-4 py-20 text-center">
-        <div className="text-red-600 text-lg font-semibold mb-2">Failed to load</div>
-        <div className="text-gray-600 text-sm mb-4">{error}</div>
+        <div className="text-error text-lg font-semibold mb-2">Failed to load</div>
+        <div className="text-muted text-base mb-4">{error}</div>
         <button
           onClick={() => window.location.reload()}
-          className="px-6 py-2 bg-blue-600 text-white rounded-xl text-sm font-semibold cursor-pointer hover:bg-blue-700 transition-colors"
+          className="px-6 py-2 bg-primary text-on-accent rounded-xl text-sm font-semibold cursor-pointer hover:bg-primary-hover transition-colors"
         >
           Retry
         </button>

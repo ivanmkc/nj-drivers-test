@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useMemo } from 'react';
 import type { Question, SessionResult } from '../types';
 import { t } from '../i18n';
 import { useStore } from '../hooks/useStore';
+import ThemeToggle from './ThemeToggle';
 
 interface QuizScreenProps {
   question: Question;
@@ -71,27 +72,30 @@ export default function QuizScreen({
 
   return (
     <>
-      <div className="h-1.5 bg-gray-200 rounded-full mb-4 overflow-hidden">
+      <div className="h-1.5 bg-border rounded-full mb-4 overflow-hidden">
         <div
-          className="h-full bg-blue-600 rounded-full transition-all duration-300"
+          className="h-full bg-primary rounded-full transition-all duration-300"
           style={{ width: `${progressPct}%` }}
         />
       </div>
-      <div className="flex justify-between items-center mb-3 text-sm text-gray-500">
-        <span>
+      <div className="flex justify-between items-center mb-3 text-sm text-muted">
+        <span className="tabular-nums">
           {currentIdx + 1} / {totalQuestions}
         </span>
-        <span className="font-semibold">
-          <span className="text-green-600">{correctCount}</span> /{' '}
-          <span className="text-red-600">{wrongCount}</span>
-        </span>
+        <div className="flex items-center gap-2">
+          <span className="font-semibold tabular-nums">
+            <span className="text-success">{correctCount}</span> /{' '}
+            <span className="text-error">{wrongCount}</span>
+          </span>
+          <ThemeToggle />
+        </div>
       </div>
       <div>
-        <span className="inline-block bg-blue-50 text-blue-600 px-2.5 py-1 rounded-full text-xs font-semibold mb-3 uppercase tracking-wider">
+        <span className="inline-block bg-primary-surface text-primary px-2.5 py-1 rounded-full text-xs font-semibold mb-3 uppercase tracking-wider">
           {question.category.replace(/_/g, ' ')}
         </span>
         {qStats?.wrong > 0 && (
-          <span className="inline-block bg-red-50 text-red-600 px-2.5 py-1 rounded-full text-xs font-semibold ml-1.5">
+          <span className="inline-block bg-error-surface text-error px-2.5 py-1 rounded-full text-xs font-semibold ml-1.5">
             {t('missed')} {missRate}%
           </span>
         )}
@@ -103,7 +107,7 @@ export default function QuizScreen({
           <img
             src={`${basePath}signs/${question.image}`}
             alt="Road sign"
-            className="max-w-full max-h-60 rounded-lg border border-gray-200 inline-block"
+            className="max-w-full max-h-60 rounded-lg border border-border inline-block"
           />
         </div>
       )}
@@ -111,20 +115,23 @@ export default function QuizScreen({
       <div className="flex flex-col gap-2.5 mb-4">
         {letters.map((letter) => {
           let btnClass =
-            'bg-white border-gray-200 hover:border-blue-300 active:scale-[0.98] cursor-pointer';
-          let letterClass = 'bg-gray-100 text-gray-500';
+            'bg-surface border-border hover:border-primary active:scale-[0.98] cursor-pointer';
+          let letterClass = 'bg-gray-surface text-muted';
+          let trailingIcon: 'check' | 'x' | null = null;
 
           if (answered) {
             const isCorrectAnswer = letter === question.answer;
             const isSelected = letter === selected;
             if (isCorrectAnswer) {
-              btnClass = 'border-green-600 bg-green-50';
-              letterClass = 'bg-green-600 text-white';
+              btnClass = 'border-success bg-success-surface';
+              letterClass = 'bg-success text-on-accent dark:bg-success-surface dark:text-success';
+              trailingIcon = 'check';
             } else if (isSelected) {
-              btnClass = 'border-red-600 bg-red-50';
-              letterClass = 'bg-red-600 text-white';
+              btnClass = 'border-error bg-error-surface';
+              letterClass = 'bg-error text-on-accent dark:bg-error-surface dark:text-error';
+              trailingIcon = 'x';
             } else {
-              btnClass = 'border-gray-200 bg-white opacity-70';
+              btnClass = 'border-border bg-surface opacity-70';
             }
             btnClass += ' cursor-default';
           }
@@ -138,14 +145,40 @@ export default function QuizScreen({
               aria-label={ariaLabel}
               aria-pressed={answered && letter === selected ? true : undefined}
               aria-disabled={answered}
-              className={`flex items-start gap-3 p-3.5 border-2 rounded-xl text-base leading-relaxed text-left w-full text-gray-900 transition-all ${btnClass}`}
+              className={`flex items-start gap-3 p-3.5 border-2 rounded-xl text-base leading-relaxed text-left w-full text-foreground transition-all ${btnClass}`}
             >
               <span
                 className={`shrink-0 w-7 h-7 flex items-center justify-center rounded-full font-bold text-sm ${letterClass}`}
               >
                 {letter}
               </span>
-              <span>{question.choices[letter]}</span>
+              <span className="flex-1">{question.choices[letter]}</span>
+              {trailingIcon === 'check' && (
+                <svg
+                  className="w-5 h-5 shrink-0 mt-0.5 text-success"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={3}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              )}
+              {trailingIcon === 'x' && (
+                <svg
+                  className="w-5 h-5 shrink-0 mt-0.5 text-error"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={3}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              )}
               {answered && letter === question.answer && (
                 <span className="sr-only">(correct answer)</span>
               )}
@@ -159,12 +192,12 @@ export default function QuizScreen({
 
       {answered && (
         <>
-          <div className="bg-blue-50 border-l-4 border-blue-600 px-4 py-3 rounded-r-xl text-sm leading-relaxed mb-4">
+          <div className="bg-primary-surface border-l-4 border-primary px-4 py-3 rounded-r-xl text-base leading-relaxed mb-4">
             {question.explanation}
           </div>
           <button
             onClick={onNext}
-            className="w-full py-4 bg-blue-600 text-white rounded-xl text-[17px] font-semibold cursor-pointer hover:bg-blue-700 active:opacity-80 transition-colors"
+            className="w-full py-4 bg-primary text-on-accent rounded-xl text-[17px] font-semibold cursor-pointer hover:bg-primary-hover active:opacity-80 transition-colors"
           >
             {currentIdx < totalQuestions - 1 ? t('next') : t('seeResults')}
           </button>

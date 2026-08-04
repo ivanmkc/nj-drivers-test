@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { getAllLangs, getLangLabel } from '../i18n';
+import ThemeToggle from './ThemeToggle';
 
 interface LangBarProps {
   currentLang: string;
@@ -21,14 +22,15 @@ export default function LangBar({ currentLang, availableLangs, onSwitch }: LangB
             key={lang}
             disabled={disabled}
             onClick={() => !disabled && onSwitch(lang)}
-            className={`px-3 py-1.5 border-[1.5px] rounded-full text-xs font-semibold transition-colors
-              ${active ? 'border-blue-500 bg-blue-50 text-blue-600' : 'border-gray-200 bg-white text-gray-500'}
+            className={`px-3 min-h-[44px] border-[1.5px] rounded-full text-xs font-semibold transition-colors
+              ${active ? 'border-primary bg-primary-surface text-primary' : 'border-border bg-surface text-muted'}
               ${disabled ? 'opacity-30 cursor-not-allowed' : 'cursor-pointer'}`}
           >
             {getLangLabel(lang)}
           </button>
         );
       })}
+      <ThemeToggle />
     </div>
   );
 }

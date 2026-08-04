@@ -1,14 +1,22 @@
 import { useRef, useEffect, useCallback } from 'react';
 import type { QuizResult } from '../types';
 import { CHART_HEIGHT, MAX_CHART_ENTRIES } from '../constants';
+import { useTheme } from '../hooks/useTheme';
 
 interface ScoreChartProps {
   history: QuizResult[];
   passingPct: number;
 }
 
+function cssColor(name: string, alpha?: number): string {
+  const raw = getComputedStyle(document.documentElement).getPropertyValue(`--color-${name}`).trim();
+  const [r, g, b] = raw.split(' ');
+  return alpha !== undefined ? `rgba(${r}, ${g}, ${b}, ${alpha})` : `rgb(${r}, ${g}, ${b})`;
+}
+
 export default function ScoreChart({ history, passingPct }: ScoreChartProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const { resolved } = useTheme();
 
   const draw = useCallback(() => {
     const canvas = canvasRef.current;
@@ -34,10 +42,9 @@ export default function ScoreChart({ history, passingPct }: ScoreChartProps) {
 
     ctx.clearRect(0, 0, W, H);
 
-    // Grid lines
-    ctx.strokeStyle = '#e5e7eb';
+    ctx.strokeStyle = cssColor('border');
     ctx.lineWidth = 1;
-    ctx.fillStyle = '#9ca3af';
+    ctx.fillStyle = cssColor('muted');
     ctx.font = '11px system-ui';
     ctx.textAlign = 'right';
     for (const pct of [0, 25, 50, 75, 100]) {
@@ -49,9 +56,8 @@ export default function ScoreChart({ history, passingPct }: ScoreChartProps) {
       ctx.fillText(pct + '%', pad.left - 6, y + 4);
     }
 
-    // Passing line
     const passY = pad.top + plotH - (passingPct / 100) * plotH;
-    ctx.strokeStyle = '#16a34a40';
+    ctx.strokeStyle = cssColor('success', 0.25);
     ctx.lineWidth = 2;
     ctx.setLineDash([6, 4]);
     ctx.beginPath();
@@ -60,46 +66,41 @@ export default function ScoreChart({ history, passingPct }: ScoreChartProps) {
     ctx.stroke();
     ctx.setLineDash([]);
 
-    // Data points
     const points = data.map((d, i) => ({
       x: pad.left + (n === 1 ? plotW / 2 : (i / (n - 1)) * plotW),
       y: pad.top + plotH - (d.pct / 100) * plotH,
       pct: d.pct,
     }));
 
-    // Line
-    ctx.strokeStyle = '#2563eb';
+    ctx.strokeStyle = cssColor('primary');
     ctx.lineWidth = 2.5;
     ctx.lineJoin = 'round';
     ctx.beginPath();
     points.forEach((p, i) => (i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y)));
     ctx.stroke();
 
-    // Fill
     ctx.beginPath();
     points.forEach((p, i) => (i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y)));
     ctx.lineTo(points[points.length - 1].x, pad.top + plotH);
     ctx.lineTo(points[0].x, pad.top + plotH);
     ctx.closePath();
     const grad = ctx.createLinearGradient(0, pad.top, 0, pad.top + plotH);
-    grad.addColorStop(0, 'rgba(37, 99, 235, 0.2)');
-    grad.addColorStop(1, 'rgba(37, 99, 235, 0.02)');
+    grad.addColorStop(0, cssColor('primary', 0.2));
+    grad.addColorStop(1, cssColor('primary', 0.02));
     ctx.fillStyle = grad;
     ctx.fill();
 
-    // Dots
     points.forEach((p) => {
       ctx.beginPath();
       ctx.arc(p.x, p.y, 4, 0, Math.PI * 2);
-      ctx.fillStyle = p.pct >= passingPct ? '#16a34a' : '#dc2626';
+      ctx.fillStyle = p.pct >= passingPct ? cssColor('success') : cssColor('error');
       ctx.fill();
-      ctx.strokeStyle = '#fff';
+      ctx.strokeStyle = cssColor('surface');
       ctx.lineWidth = 2;
       ctx.stroke();
     });
 
-    // Labels
-    ctx.fillStyle = '#9ca3af';
+    ctx.fillStyle = cssColor('muted');
     ctx.font = '10px system-ui';
     ctx.textAlign = 'center';
     const startNum = history.length - data.length + 1;
@@ -119,6 +120,10 @@ export default function ScoreChart({ history, passingPct }: ScoreChartProps) {
     observer.observe(canvas);
     return () => observer.disconnect();
   }, [draw]);
+
+  useEffect(() => {
+    draw();
+  }, [resolved, draw]);
 
   return (
     <canvas

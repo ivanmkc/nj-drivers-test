@@ -63,7 +63,7 @@ export default function StartScreen({
     <>
       <LangBar currentLang={lang} availableLangs={state.languages} onSwitch={onSwitchLang} />
       <div className="text-center pt-[4vh]">
-        <h1 className="text-2xl font-bold text-blue-600 mb-2">
+        <h1 className="text-2xl font-bold text-primary mb-2">
           {t('title', {
             state: state.code.toUpperCase(),
             state_name: state.name,
@@ -71,14 +71,14 @@ export default function StartScreen({
             pass_pct: state.passing_score_pct,
           })}
         </h1>
-        <p className="text-gray-500 text-sm mb-1 leading-relaxed">
+        <p className="text-muted text-sm mb-1 leading-relaxed">
           {t('subtitle', {
             state: state.code.toUpperCase(),
             state_name: state.name,
             agency: state.agency,
           })}
         </p>
-        <p className="text-gray-400 text-xs mb-5">
+        <p className="text-subtle text-xs mb-5">
           {t('passingScore', {
             pass_pct: state.passing_score_pct,
             pass_count: Math.ceil((state.test_question_count * state.passing_score_pct) / 100),
@@ -88,31 +88,29 @@ export default function StartScreen({
       </div>
 
       {history.length > 0 && (
-        <div className="bg-white rounded-xl p-4 mb-5 border border-gray-200">
+        <div className="bg-surface rounded-xl p-4 mb-5 border border-border">
           <div className="flex justify-between items-center">
             <div className="flex gap-4">
               <div className="text-center">
-                <div className="text-xl font-bold">{history.length}</div>
-                <div className="text-[11px] text-gray-500 uppercase tracking-wide">
-                  {t('quizzes')}
-                </div>
+                <div className="text-xl font-bold tabular-nums">{history.length}</div>
+                <div className="text-[11px] text-muted uppercase tracking-wide">{t('quizzes')}</div>
               </div>
               <div className="text-center">
-                <div className="text-xl font-bold">{avg}%</div>
-                <div className="text-[11px] text-gray-500 uppercase tracking-wide">
+                <div className="text-xl font-bold tabular-nums">{avg}%</div>
+                <div className="text-[11px] text-muted uppercase tracking-wide">
                   {t('avgScore')}
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-xl font-bold">{streak}</div>
-                <div className="text-[11px] text-gray-500 uppercase tracking-wide">
+                <div className="text-xl font-bold tabular-nums">{streak}</div>
+                <div className="text-[11px] text-muted uppercase tracking-wide">
                   {t('passStreak')}
                 </div>
               </div>
             </div>
             <button
               onClick={onShowStats}
-              className="text-blue-600 text-sm font-semibold cursor-pointer whitespace-nowrap"
+              className="text-primary text-sm font-semibold cursor-pointer whitespace-nowrap"
             >
               {t('viewStats')}
             </button>
@@ -128,18 +126,48 @@ export default function StartScreen({
               key={mode}
               onClick={() => onSetMode(mode)}
               className={`flex-1 py-3 px-2 border-2 rounded-xl text-sm font-semibold cursor-pointer text-center transition-colors
-                ${active ? 'border-blue-500 bg-blue-50 text-blue-600' : 'border-gray-200 bg-white'}`}
+                ${active ? 'border-primary bg-primary-surface text-primary' : 'border-border bg-surface'}`}
             >
-              <span className="text-xl block mb-1">
-                {mode === 'random' ? '\u{1F3B2}' : '\u{1F3AF}'}
+              <span className="block mb-1">
+                {mode === 'random' ? (
+                  <svg
+                    className="w-6 h-6 mx-auto"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="3" />
+                    <circle cx="8.5" cy="8.5" r="1" fill="currentColor" stroke="none" />
+                    <circle cx="15.5" cy="8.5" r="1" fill="currentColor" stroke="none" />
+                    <circle cx="8.5" cy="15.5" r="1" fill="currentColor" stroke="none" />
+                    <circle cx="15.5" cy="15.5" r="1" fill="currentColor" stroke="none" />
+                  </svg>
+                ) : (
+                  <svg
+                    className="w-6 h-6 mx-auto"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="9" />
+                    <circle cx="12" cy="12" r="5" />
+                    <circle cx="12" cy="12" r="1" fill="currentColor" stroke="none" />
+                  </svg>
+                )}
               </span>
               <span>{t(mode === 'random' ? 'modeRandom' : 'modeWeak')}</span>
               {mode === 'weak' && weakCount > 0 && (
-                <span className="inline-block bg-red-600 text-white text-[11px] px-1.5 rounded-full ml-1 font-bold">
+                <span className="inline-block bg-error text-on-accent text-[11px] px-1.5 rounded-full ml-1 font-bold">
                   {weakCount}
                 </span>
               )}
-              <span className="text-[11px] font-normal text-gray-500 block">
+              <span className="text-[11px] font-normal text-muted block">
                 {t(mode === 'random' ? 'modeRandomDesc' : 'modeWeakDesc')}
               </span>
             </button>
@@ -156,8 +184,8 @@ export default function StartScreen({
             <button
               key={n}
               onClick={() => onSetCount(n)}
-              className={`px-5 py-2.5 border-2 border-blue-600 rounded-xl text-base font-semibold cursor-pointer transition-colors
-                ${active ? 'bg-blue-600 text-white' : 'bg-white text-blue-600 hover:bg-blue-50'}`}
+              className={`px-5 min-h-[44px] border-2 border-primary rounded-xl text-base font-semibold cursor-pointer transition-colors tabular-nums
+                ${active ? 'bg-primary text-on-accent' : 'bg-surface text-primary hover:bg-primary-surface'}`}
             >
               {label}
             </button>
@@ -168,13 +196,13 @@ export default function StartScreen({
       <button
         onClick={onStart}
         disabled={startDisabled}
-        className="w-full py-4 bg-blue-600 text-white rounded-xl text-lg font-semibold cursor-pointer hover:bg-blue-700 active:opacity-80 transition-colors disabled:opacity-50 disabled:cursor-default"
+        className="w-full py-4 bg-primary text-on-accent rounded-xl text-lg font-semibold cursor-pointer hover:bg-primary-hover active:opacity-80 transition-colors disabled:opacity-50 disabled:cursor-default"
       >
         {startDisabled ? t('noWeakSpots') : t('startQuiz')}
       </button>
       <button
         onClick={onChangeState}
-        className="w-full py-2.5 mt-1.5 text-gray-500 text-sm font-medium bg-transparent border-none cursor-pointer"
+        className="w-full py-2.5 mt-1.5 text-muted text-sm font-medium bg-transparent border-none cursor-pointer"
       >
         {t('changeState')}
       </button>
