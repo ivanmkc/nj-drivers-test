@@ -7,10 +7,10 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 
-// From shared/theme.json
+// From data/theme.json (canonical tokens — tools/test_theme_alignment.py enforces parity)
 val Blue = Color(0xFF1A56DB)
 val BlueLight = Color(0xFFE8F0FE)
-val Green = Color(0xFF16A34A)
+val Green = Color(0xFF15803D)
 val GreenLight = Color(0xFFDCFCE7)
 val Red = Color(0xFFDC2626)
 val RedLight = Color(0xFFFEE2E2)
@@ -49,7 +49,7 @@ private val LightColorScheme = lightColorScheme(
 
 private val DarkColorScheme = darkColorScheme(
     primary = BlueDark,
-    onPrimary = Color.White,
+    onPrimary = Color(0xFF111827),
     primaryContainer = BlueLightDark,
     secondary = GreenDark,
     error = RedDark,
@@ -72,6 +72,7 @@ data class AppColors(
     val gray: Color,
     val grayLight: Color,
     val card: Color,
+    val onPrimary: Color,
 )
 
 val LightAppColors = AppColors(
@@ -80,6 +81,7 @@ val LightAppColors = AppColors(
     red = Red, redLight = RedLight,
     orange = Orange, gray = Gray, grayLight = GrayLight,
     card = Color.White,
+    onPrimary = Color.White,
 )
 
 val DarkAppColors = AppColors(
@@ -88,6 +90,7 @@ val DarkAppColors = AppColors(
     red = RedDark, redLight = RedLightDark,
     orange = OrangeDark, gray = GrayDark, grayLight = GrayLightDark,
     card = CardDark,
+    onPrimary = Color(0xFF111827),
 )
 
 val LocalAppColors = staticCompositionLocalOf { LightAppColors }

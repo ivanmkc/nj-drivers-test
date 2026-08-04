@@ -27,18 +27,21 @@ struct QuizScreen: View {
                     HStack {
                         Text("\(vm.currentIndex + 1) / \(vm.questions.count)")
                             .font(.system(size: 14))
+                            .monospacedDigit()
                             .foregroundColor(AppTheme.gray)
                         Spacer()
                         HStack(spacing: 4) {
                             Text("\(vm.correctCount)")
                                 .foregroundColor(AppTheme.green)
                                 .font(.system(size: 14, weight: .semibold))
+                                .monospacedDigit()
                             Text("/")
                                 .foregroundColor(AppTheme.gray)
                                 .font(.system(size: 14))
                             Text("\(vm.wrongCount)")
                                 .foregroundColor(AppTheme.red)
                                 .font(.system(size: 14, weight: .semibold))
+                                .monospacedDigit()
                         }
                     }
 
@@ -133,7 +136,7 @@ struct QuizScreen: View {
                             } label: {
                                 Text(isLast ? localizer.localized("seeResults") : localizer.localized("next"))
                                     .font(.system(size: 17, weight: .semibold))
-                                    .foregroundColor(.white)
+                                    .foregroundColor(AppTheme.onPrimary)
                                     .frame(maxWidth: .infinity)
                                     .padding(16)
                                     .background(AppTheme.blue)

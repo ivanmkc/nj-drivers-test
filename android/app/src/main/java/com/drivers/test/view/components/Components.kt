@@ -12,6 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -39,6 +40,7 @@ fun LanguageBar(
                 color = if (isActive) c.blue else c.gray,
                 modifier = Modifier
                     .padding(horizontal = 2.dp)
+                    .defaultMinSize(minHeight = 44.dp)
                     .clip(RoundedCornerShape(20.dp))
                     .background(if (isActive) c.blueLight else c.card)
                     .border(
@@ -47,7 +49,8 @@ fun LanguageBar(
                         RoundedCornerShape(20.dp),
                     )
                     .clickable { onSwitch(lang) }
-                    .padding(horizontal = 12.dp, vertical = 6.dp),
+                    .padding(horizontal = 12.dp, vertical = 6.dp)
+                    .wrapContentSize(Alignment.Center),
             )
         }
     }
@@ -70,7 +73,7 @@ fun PrimaryButton(
             .padding(16.dp),
         contentAlignment = Alignment.Center,
     ) {
-        Text(text, color = Color.White, fontSize = 18.sp, fontWeight = FontWeight.SemiBold)
+        Text(text, color = c.onPrimary, fontSize = 18.sp, fontWeight = FontWeight.SemiBold)
     }
 }
 
@@ -100,7 +103,12 @@ fun StatItem(
     label: String,
 ) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(value, fontSize = 22.sp, fontWeight = FontWeight.Bold)
+        Text(
+            value,
+            fontSize = 22.sp,
+            fontWeight = FontWeight.Bold,
+            style = TextStyle(fontFeatureSettings = "tnum"),
+        )
         Text(label, fontSize = 11.sp, color = AppTheme.colors.gray, fontWeight = FontWeight.Normal)
     }
 }
@@ -120,7 +128,13 @@ fun StatCard(
             .padding(vertical = 16.dp, horizontal = 12.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Text(value, fontSize = 26.sp, fontWeight = FontWeight.Bold, color = valueColor)
+        Text(
+            value,
+            fontSize = 26.sp,
+            fontWeight = FontWeight.Bold,
+            color = valueColor,
+            style = TextStyle(fontFeatureSettings = "tnum"),
+        )
         Spacer(Modifier.height(4.dp))
         Text(label, fontSize = 11.sp, color = c.gray, fontWeight = FontWeight.Normal, textAlign = TextAlign.Center)
     }

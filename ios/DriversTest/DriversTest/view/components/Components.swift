@@ -45,6 +45,8 @@ struct LanguageBarView: View {
                         .foregroundColor(lang == localizer.currentLang ? AppTheme.blue : AppTheme.gray)
                         .background(lang == localizer.currentLang ? AppTheme.blueLight : AppTheme.card)
                         .cardStyle(cornerRadius: 20, borderColor: lang == localizer.currentLang ? AppTheme.blue : AppTheme.border, borderWidth: 1.5)
+                        .frame(minHeight: 44)
+                        .contentShape(Rectangle())
                 }
             }
         }
@@ -61,6 +63,7 @@ struct StatItem: View {
         VStack(spacing: 2) {
             Text(value)
                 .font(.system(size: 22, weight: .bold))
+                .monospacedDigit()
             Text(label)
                 .font(.system(size: 11))
                 .foregroundColor(AppTheme.gray)
@@ -101,7 +104,7 @@ struct StatsBannerView: View {
 struct ModeButton: View {
     let title: String
     let desc: String
-    let icon: String
+    let systemImage: String
     let isActive: Bool
     var badgeCount: Int = 0
     let action: () -> Void
@@ -109,7 +112,9 @@ struct ModeButton: View {
     var body: some View {
         Button(action: action) {
             VStack(spacing: 4) {
-                Text(icon).font(.system(size: 20))
+                Image(systemName: systemImage)
+                    .font(.system(size: 20))
+                    .foregroundColor(isActive ? AppTheme.blue : AppTheme.gray)
                 HStack(spacing: 4) {
                     Text(title).font(.system(size: 14, weight: .semibold))
                     if badgeCount > 0 {
@@ -118,7 +123,7 @@ struct ModeButton: View {
                             .foregroundColor(.white)
                             .padding(.horizontal, 6)
                             .padding(.vertical, 1)
-                            .background(Color.red)
+                            .background(AppTheme.red)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                     }
                 }
@@ -150,12 +155,24 @@ struct ChoiceButton: View {
     var body: some View {
         Button(action: action) {
             HStack(alignment: .top, spacing: 12) {
-                Text(letter)
-                    .font(.system(size: 14, weight: .bold))
-                    .foregroundColor(letterForeground)
-                    .frame(width: 28, height: 28)
-                    .background(letterBackground)
-                    .clipShape(Circle())
+                ZStack {
+                    if state == .correct {
+                        Image(systemName: "checkmark")
+                            .font(.system(size: 14, weight: .bold))
+                            .foregroundColor(letterForeground)
+                    } else if state == .wrong {
+                        Image(systemName: "xmark")
+                            .font(.system(size: 14, weight: .bold))
+                            .foregroundColor(letterForeground)
+                    } else {
+                        Text(letter)
+                            .font(.system(size: 14, weight: .bold))
+                            .foregroundColor(letterForeground)
+                    }
+                }
+                .frame(width: 28, height: 28)
+                .background(letterBackground)
+                .clipShape(Circle())
 
                 Text(text)
                     .font(.system(size: 16))
@@ -264,6 +281,7 @@ struct StatCardView: View {
         VStack(spacing: 4) {
             Text(value)
                 .font(.system(size: 26, weight: .bold))
+                .monospacedDigit()
                 .foregroundColor(color)
             Text(label)
                 .font(.system(size: 11))
@@ -309,6 +327,7 @@ struct CategoryBarView: View {
 
             Text("\(pct)%")
                 .font(.system(size: 13, weight: .semibold))
+                .monospacedDigit()
                 .foregroundColor(barColor)
                 .frame(width: 36, alignment: .trailing)
         }
@@ -393,7 +412,7 @@ struct ScoreChartView: View {
             var passPath = Path()
             passPath.move(to: CGPoint(x: pad.leading, y: passY))
             passPath.addLine(to: CGPoint(x: size.width - pad.trailing, y: passY))
-            context.stroke(passPath, with: .color(Color.green.opacity(0.3)), style: StrokeStyle(lineWidth: 2, dash: [6, 4]))
+            context.stroke(passPath, with: .color(AppTheme.green.opacity(0.3)), style: StrokeStyle(lineWidth: 2, dash: [6, 4]))
 
             // Data points
             let points: [CGPoint] = data.enumerated().map { i, d in
@@ -432,7 +451,7 @@ struct ScoreChartView: View {
                 var dotPath = Path()
                 dotPath.addEllipse(in: CGRect(x: p.x - 4, y: p.y - 4, width: 8, height: 8))
                 context.fill(dotPath, with: .color(color))
-                context.stroke(dotPath, with: .color(.white), lineWidth: 2)
+                context.stroke(dotPath, with: .color(AppTheme.card), lineWidth: 2)
             }
 
             // X-axis labels

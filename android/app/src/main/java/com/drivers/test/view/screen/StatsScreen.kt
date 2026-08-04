@@ -12,7 +12,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.drawscope.Stroke
@@ -146,6 +145,7 @@ fun StatsScreen(vm: QuizViewModel) {
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.SemiBold,
                                 color = c.red,
+                                style = TextStyle(fontFeatureSettings = "tnum"),
                             )
                             Text("\u00B7", color = c.gray)
                             Text(w.category.replace("_", " "), fontSize = 12.sp, color = c.gray)
@@ -225,6 +225,7 @@ private fun CategoryBar(
             fontSize = 13.sp,
             fontWeight = FontWeight.SemiBold,
             color = barColor,
+            style = TextStyle(fontFeatureSettings = "tnum"),
             modifier = Modifier.width(36.dp),
         )
     }
@@ -252,12 +253,12 @@ private fun ScoreChart(
         // Grid
         for (pct in listOf(0, 25, 50, 75, 100)) {
             val y = padTop + plotH - (pct / 100f) * plotH
-            drawLine(Color.LightGray, Offset(padLeft, y), Offset(size.width - padRight, y), 1f)
+            drawLine(c.grayLight, Offset(padLeft, y), Offset(size.width - padRight, y), 1f)
             drawText(
                 textMeasurer,
                 "$pct%",
                 topLeft = Offset(0f, y - 6.dp.toPx()),
-                style = TextStyle(fontSize = 10.sp, color = Color.Gray),
+                style = TextStyle(fontSize = 10.sp, color = c.gray),
             )
         }
 
@@ -299,7 +300,7 @@ private fun ScoreChart(
         // Dots
         points.forEachIndexed { i, p ->
             val dotColor = if (scores[i] >= passingPct) c.green else c.red
-            drawCircle(Color.White, 6.dp.toPx(), p)
+            drawCircle(c.card, 6.dp.toPx(), p)
             drawCircle(dotColor, 4.dp.toPx(), p)
         }
 
@@ -311,7 +312,7 @@ private fun ScoreChart(
                     textMeasurer,
                     "#${startIndex + i}",
                     topLeft = Offset(p.x - 10.dp.toPx(), size.height - padBottom + 4.dp.toPx()),
-                    style = TextStyle(fontSize = 10.sp, color = Color.Gray),
+                    style = TextStyle(fontSize = 10.sp, color = c.gray),
                 )
             }
         }

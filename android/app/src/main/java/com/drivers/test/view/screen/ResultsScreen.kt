@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -55,6 +56,7 @@ fun ResultsScreen(vm: QuizViewModel) {
                     fontSize = 42.sp,
                     fontWeight = FontWeight.Bold,
                     color = if (vm.didPass) c.green else c.red,
+                    style = TextStyle(fontFeatureSettings = "tnum"),
                 )
                 Text(
                     if (vm.didPass) vm.t("pass") else vm.t("fail"),

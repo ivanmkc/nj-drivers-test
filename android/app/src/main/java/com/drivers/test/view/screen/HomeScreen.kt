@@ -8,6 +8,10 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -15,6 +19,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -114,7 +120,7 @@ fun HomeScreen(vm: QuizViewModel) {
             ModeButton(
                 title = vm.t("modeRandom"),
                 desc = vm.t("modeRandomDesc"),
-                icon = "\uD83C\uDFB2",
+                icon = Icons.Filled.Refresh,
                 isActive = vm.quizMode == QuizMode.RANDOM,
                 modifier = Modifier.weight(1f),
             ) { vm.quizMode = QuizMode.RANDOM }
@@ -122,7 +128,7 @@ fun HomeScreen(vm: QuizViewModel) {
             ModeButton(
                 title = vm.t("modeWeak"),
                 desc = vm.t("modeWeakDesc"),
-                icon = "\uD83C\uDFAF",
+                icon = Icons.Filled.Star,
                 isActive = vm.quizMode == QuizMode.WEAK,
                 badgeCount = vm.weakQuestions().size,
                 modifier = Modifier.weight(1f),
@@ -143,13 +149,16 @@ fun HomeScreen(vm: QuizViewModel) {
                     text = if (isAll) vm.t("all") else "$count",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.SemiBold,
-                    color = if (isSelected) Color.White else c.blue,
+                    color = if (isSelected) c.onPrimary else c.blue,
+                    style = TextStyle(fontFeatureSettings = "tnum"),
                     modifier = Modifier
+                        .defaultMinSize(minHeight = 44.dp)
                         .clip(RoundedCornerShape(12.dp))
                         .background(if (isSelected) c.blue else c.card)
                         .border(2.dp, c.blue, RoundedCornerShape(12.dp))
                         .clickable { vm.selectedCount = count }
-                        .padding(horizontal = 20.dp, vertical = 10.dp),
+                        .padding(horizontal = 20.dp, vertical = 10.dp)
+                        .wrapContentSize(Alignment.Center),
                 )
             }
         }
@@ -177,7 +186,7 @@ fun HomeScreen(vm: QuizViewModel) {
 private fun ModeButton(
     title: String,
     desc: String,
-    icon: String,
+    icon: ImageVector,
     isActive: Boolean,
     badgeCount: Int = 0,
     modifier: Modifier = Modifier,
@@ -193,7 +202,12 @@ private fun ModeButton(
             .padding(12.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Text(icon, fontSize = 20.sp)
+        Icon(
+            icon,
+            contentDescription = null,
+            tint = if (isActive) c.blue else c.gray,
+            modifier = Modifier.size(24.dp),
+        )
         Spacer(Modifier.height(4.dp))
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
             Text(

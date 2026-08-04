@@ -44,14 +44,14 @@ struct HomeScreen: View {
                     ModeButton(
                         title: localizer.localized("modeRandom"),
                         desc: localizer.localized("modeRandomDesc"),
-                        icon: "\u{1F3B2}",
+                        systemImage: "shuffle",
                         isActive: vm.quizMode == .random
                     ) { vm.quizMode = .random }
 
                     ModeButton(
                         title: localizer.localized("modeWeak"),
                         desc: localizer.localized("modeWeakDesc"),
-                        icon: "\u{1F3AF}",
+                        systemImage: "target",
                         isActive: vm.quizMode == .weak,
                         badgeCount: vm.weakQuestions.count
                     ) { vm.quizMode = .weak }
@@ -71,9 +71,11 @@ struct HomeScreen: View {
                                 .font(.system(size: 16, weight: .semibold))
                                 .padding(.horizontal, 20)
                                 .padding(.vertical, 10)
-                                .foregroundColor(vm.selectedCount == count ? .white : AppTheme.blue)
+                                .foregroundColor(vm.selectedCount == count ? AppTheme.onPrimary : AppTheme.blue)
                                 .background(vm.selectedCount == count ? AppTheme.blue : AppTheme.card)
                                 .cardStyle(borderColor: AppTheme.blue)
+                                .frame(minHeight: 44)
+                                .contentShape(Rectangle())
                         }
                     }
                 }
@@ -85,7 +87,7 @@ struct HomeScreen: View {
                 } label: {
                     Text(weakEmpty ? localizer.localized("noWeakSpots") : localizer.localized("startQuiz"))
                         .font(.system(size: 18, weight: .semibold))
-                        .foregroundColor(.white)
+                        .foregroundColor(AppTheme.onPrimary)
                         .frame(maxWidth: .infinity)
                         .padding(16)
                         .background(weakEmpty ? AppTheme.blue.opacity(0.5) : AppTheme.blue)

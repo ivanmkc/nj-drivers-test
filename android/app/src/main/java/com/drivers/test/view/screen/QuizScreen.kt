@@ -11,6 +11,10 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -24,6 +28,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -65,11 +70,28 @@ fun QuizScreen(vm: QuizViewModel) {
 
         // Header
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-            Text("${vm.currentIndex + 1} / ${vm.questions.size}", fontSize = 14.sp, color = c.gray)
+            Text(
+                "${vm.currentIndex + 1} / ${vm.questions.size}",
+                fontSize = 14.sp,
+                color = c.gray,
+                style = TextStyle(fontFeatureSettings = "tnum"),
+            )
             Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                Text("${vm.correctCount}", fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = c.green)
+                Text(
+                    "${vm.correctCount}",
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    color = c.green,
+                    style = TextStyle(fontFeatureSettings = "tnum"),
+                )
                 Text("/", fontSize = 14.sp, color = c.gray)
-                Text("${vm.wrongCount}", fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = c.red)
+                Text(
+                    "${vm.wrongCount}",
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    color = c.red,
+                    style = TextStyle(fontFeatureSettings = "tnum"),
+                )
             }
         }
 
@@ -91,6 +113,7 @@ fun QuizScreen(vm: QuizViewModel) {
                     fontSize = 12.sp,
                     fontWeight = FontWeight.SemiBold,
                     color = c.red,
+                    style = TextStyle(fontFeatureSettings = "tnum"),
                     modifier = Modifier.clip(RoundedCornerShape(20.dp)).background(c.redLight)
                         .padding(horizontal = 10.dp, vertical = 4.dp),
                 )
@@ -212,17 +235,34 @@ private fun ChoiceButton(
             .padding(14.dp),
         verticalAlignment = Alignment.Top,
     ) {
-        Text(
-            letter,
-            fontSize = 14.sp,
-            fontWeight = FontWeight.Bold,
-            color = letterFg,
+        Box(
             modifier = Modifier
                 .size(28.dp)
                 .clip(CircleShape)
-                .background(letterBg)
-                .wrapContentSize(Alignment.Center),
-        )
+                .background(letterBg),
+            contentAlignment = Alignment.Center,
+        ) {
+            when (state) {
+                ChoiceState.CORRECT -> Icon(
+                    Icons.Filled.Check,
+                    contentDescription = null,
+                    tint = Color.White,
+                    modifier = Modifier.size(18.dp),
+                )
+                ChoiceState.WRONG -> Icon(
+                    Icons.Filled.Close,
+                    contentDescription = null,
+                    tint = Color.White,
+                    modifier = Modifier.size(18.dp),
+                )
+                else -> Text(
+                    letter,
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = letterFg,
+                )
+            }
+        }
         Spacer(Modifier.width(12.dp))
         Text(text, fontSize = 16.sp, lineHeight = 22.sp)
     }
