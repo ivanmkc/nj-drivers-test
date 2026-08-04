@@ -39,6 +39,7 @@ class ApiClient {
 
     private init() {}
 
+    // Not thread-safe — must only be called from QuizViewModel's single load path.
     func loadBundle() throws {
         guard !loaded else { return }
         guard let url = Bundle.main.url(forResource: "questions_bundle.json", withExtension: "gz") else {

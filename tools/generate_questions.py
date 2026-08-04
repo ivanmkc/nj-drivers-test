@@ -36,6 +36,8 @@ Rules:
 6. Explanations should cite the relevant rule or fact from the manual
 7. Do NOT create questions that require viewing an image to answer
 8. Return valid JSON only, no markdown fences
+9. ONLY use facts stated in the provided manual text; never use outside knowledge to create or answer questions; if a chunk lacks enough substantive content, return an empty JSON array
+10. Never write questions about the manual document itself — table of contents, section titles, page numbers, publisher, edition, or the agency's website/apps. Questions must test driving knowledge
 
 Output format - JSON array:
 [

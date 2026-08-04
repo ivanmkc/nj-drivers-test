@@ -122,10 +122,24 @@ def main() -> None:
             print(f"OK ({len(result)} questions)")
         except Exception as e:
             print(
-                f"WARNING: skipping {len(batch)} questions "
-                f"(Q{batch[0]['id']}-Q{batch[-1]['id']}): {e}"
+                f"WARNING: batch failed "
+                f"(Q{batch[0]['id']}-Q{batch[-1]['id']}): {e}; "
+                f"retrying {len(batch)} questions individually..."
             )
-            skipped += len(batch)
+            rescued_ids: list[int] = []
+            failed_ids: list[int] = []
+            for q in batch:
+                try:
+                    single = retry_with_backoff(lambda q=q: translate_batch([q], lang_name))
+                    translated.extend(single)
+                    rescued_ids.append(q["id"])
+                except Exception:
+                    failed_ids.append(q["id"])
+                    skipped += 1
+            if rescued_ids:
+                print(f"  rescued: Q{rescued_ids}")
+            if failed_ids:
+                print(f"  skipped: Q{failed_ids}")
 
         if i + batch_size < total:
             time.sleep(1)

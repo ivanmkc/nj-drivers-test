@@ -95,14 +95,16 @@ def backfill_state(code: str, *, dry_run: bool) -> list[str]:
             )
             continue
 
-        metadata["translation"] = {
-            "backfilled_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-            "method": (
-                "provenance backfill — bank verified against this EN content by the "
-                "quiz_gates translation gate (verdict PASS)"
-            ),
-            "en_source_sha256": en_sha256,
-        }
+        metadata.setdefault("translation", {}).update(
+            {
+                "backfilled_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                "method": (
+                    "provenance backfill — bank verified against this EN content by the "
+                    "quiz_gates translation gate (verdict PASS)"
+                ),
+                "en_source_sha256": en_sha256,
+            }
+        )
         if not dry_run:
             with open(lang_path, "w", encoding="utf-8") as f:
                 yaml.dump(data, f, allow_unicode=True, default_flow_style=False, sort_keys=False)

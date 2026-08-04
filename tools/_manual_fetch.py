@@ -65,7 +65,13 @@ def extract_pdf_text(pdf_path: str) -> str:
         for page in doc:
             out.append(str(page.get_text()))
             out.append("\n")
-        return "".join(out)
+        result = "".join(out)
+        if not result.strip():
+            raise ValueError(
+                f"No extractable text in {pdf_path!r} — the PDF may be scanned or image-only. "
+                "Use an OCR tool or find a text-based version."
+            )
+        return result
     finally:
         doc.close()
 
@@ -310,6 +316,13 @@ def assemble_manual_text(entry: dict[str, Any], out_path: str, *, force: bool = 
         raise ValueError(f"Catalog entry for {code!r} has neither manual_url nor urls.")
 
     text = "".join(parts)
+    char_count = len(text.strip())
+    if char_count < 5000:
+        raise ValueError(
+            f"Manual text for {code!r} is only {char_count:,} chars (minimum 5,000). "
+            "The source URL may point to a login page, CAPTCHA, or non-text PDF. "
+            f"Check the source URL in config.json for {code!r}."
+        )
     os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
     with open(out_path, "w") as f:
         f.write(text)

@@ -8,6 +8,35 @@ from typing import TypedDict, TypeVar
 
 T = TypeVar("T")
 
+DEDUP_STOPWORDS: frozenset[str] = frozenset(
+    {
+        "the",
+        "a",
+        "an",
+        "you",
+        "your",
+        "must",
+        "will",
+        "is",
+        "are",
+        "to",
+        "of",
+        "for",
+        "if",
+        "when",
+        "not",
+        "should",
+        "can",
+        "may",
+        "what",
+        "which",
+        "how",
+        "driver",
+        "license",
+        "vehicle",
+    }
+)
+
 TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(TOOLS_DIR)
 STATES_DIR = os.path.join(ROOT_DIR, "data", "states")
@@ -59,6 +88,16 @@ def chunk_text(text: str, chunk_size: int = 10000, overlap: int = 500) -> list[s
     return chunks
 
 
+def _distinctive_words(text: str) -> set[str]:
+    """Return words from *text* minus high-frequency stopwords.
+
+    Falls back to the unfiltered set if filtering would empty it.
+    """
+    all_words = set(text.lower().strip().split())
+    filtered = all_words - DEDUP_STOPWORDS
+    return filtered if filtered else all_words
+
+
 def deduplicate(
     new_questions: list[dict],
     existing_questions: list[dict] | None = None,
@@ -69,17 +108,20 @@ def deduplicate(
     Compares each question in *new_questions* against both previously-accepted
     questions and, optionally, an *existing_questions* baseline.  Questions whose
     word-overlap ratio exceeds *threshold* are dropped.
+
+    High-frequency terms (``DEDUP_STOPWORDS``) are excluded before computing
+    overlap so that legal boilerplate sharing vocabulary doesn't inflate the
+    score (e.g. AK $25k-property vs $50k-bodily insurance questions
+    false-positived at 71%).
     """
     seen: set[frozenset[str]] = set()
     if existing_questions:
         for q in existing_questions:
-            key = q["question"].lower().strip()
-            seen.add(frozenset(key.split()))
+            seen.add(frozenset(_distinctive_words(q["question"])))
 
     unique: list[dict] = []
     for q in new_questions:
-        key = q["question"].lower().strip()
-        words = set(key.split())
+        words = _distinctive_words(q["question"])
         is_dup = False
         for existing_words in seen:
             overlap = len(words & existing_words) / max(len(words | existing_words), 1)

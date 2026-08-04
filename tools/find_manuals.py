@@ -171,7 +171,7 @@ def main() -> None:
             for entry in json.load(f):
                 catalog[entry["code"]] = entry
     for r in all_results:
-        catalog[r["code"]] = r
+        catalog.setdefault(r["code"], {}).update(r)
     merged = sorted(catalog.values(), key=lambda e: e["code"])
     with open(output_path, "w") as f:
         json.dump(merged, f, indent=2)

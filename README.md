@@ -151,8 +151,21 @@ Every question set **must** be grounded in a real official driver's manual. Neve
 ```bash
 python3 tools/audit_questions.py        # Validate all question data
 python3 tools/verify_manuals.py         # HEAD-check every catalog URL
+pytest tools/                           # Run unit tests for Python tooling
 ```
 
 For ongoing catalog maintenance — refreshing a stale URL, adding a state,
 handling multi-PDF manuals, and interpreting the monthly tracking issue —
 see [`docs/maintaining-state-data.md`](docs/maintaining-state-data.md).
+
+### Troubleshooting
+
+| Symptom | Cause | Fix |
+|---------|-------|-----|
+| Questions about website CSS, chatbots, or page layout | `manual_url` points to an HTML page, not a PDF | Re-point `manual_url` to the actual PDF and regenerate questions |
+| Mass unfaithful/hallucinated questions | Generated from LLM knowledge instead of manual text | Verify `manual_text.txt` contains real manual content, regenerate, and run `quiz_gates` to confirm |
+| `audit_questions.py` flags stale `en_source_sha256` | EN questions were edited without re-translating | Re-run `translate.py <code> es` (and `ja` if the file exists); provenance stamps update automatically |
+| Extracted manual text is garbage (raw PDF bytes, HTML tags) | Content-sniff or extraction failure | Check the cached extraction under `$TMPDIR/drivers_cache_<uid>/`; re-download the PDF if corrupt |
+| 403 or connection-reset when downloading a manual | State site blocks cloud/datacenter IPs (known: ilsos.gov, mass.gov) | Use an Internet Archive PDF snapshot and record it as `recovery_url` in the state's `config.json` |
+| Repeated single-batch translation failures | Gemini rejects a batch (usually over-long or malformed) | `translate.py` auto-falls-back to per-question translation; check the rescued/skipped ID summary in its output |
+| 1-3 judge flags fluctuate between identical `quiz_gates` runs | Normal LLM variance on borderline questions | Grade-A PASS is the bar, not zero flags; thresholds absorb the wobble |

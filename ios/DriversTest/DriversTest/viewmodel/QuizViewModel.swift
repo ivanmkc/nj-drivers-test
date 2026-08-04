@@ -48,6 +48,13 @@ class QuizViewModel: ObservableObject {
         cachedWeakQuestionsCode = nil
     }
 
+    private func updateStoreCache(_ s: QuizStore) {
+        cachedStore = s
+        cachedStoreCode = currentState?.code
+        cachedWeakQuestions = nil
+        cachedWeakQuestionsCode = nil
+    }
+
     private var cachedWeakQuestions: [WeakQuestion]?
     private var cachedWeakQuestionsCode: String?
 
@@ -227,7 +234,7 @@ class QuizViewModel: ObservableObject {
         if !isCorrect { record.wrong += 1 }
         s.questions[idStr] = record
         storage.saveStore(s, for: state.code)
-        invalidateStoreCache()
+        updateStoreCache(s)
 
         sessionResults.append(SessionResult(
             id: q.id,
@@ -264,7 +271,7 @@ class QuizViewModel: ObservableObject {
             mode: quizMode.rawValue
         ))
         storage.saveStore(s, for: state.code)
-        invalidateStoreCache()
+        updateStoreCache(s)
         screen = .results
     }
 
