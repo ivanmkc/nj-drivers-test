@@ -30,6 +30,7 @@ export default {
         },
         warning: v('warning'),
         'on-accent': v('on-accent'),
+        'on-primary': v('on-primary'),
         border: {
           DEFAULT: v('border'),
           subtle: v('border-subtle'),

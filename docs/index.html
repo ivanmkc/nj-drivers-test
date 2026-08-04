@@ -1,15 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="theme-color" content="#2563eb">
-  <title>Driver's Test Practice</title>
-  <script type="module" crossorigin src="/nj-drivers-test/assets/index-FwSD77GB.js"></script>
-  <link rel="stylesheet" crossorigin href="/nj-drivers-test/assets/index-MQcpRf92.css">
-</head>
-<body class="bg-gray-50 text-gray-900 min-h-dvh font-sans antialiased">
-  <div id="root"></div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#1a56db" />
+    <title>Driver's Test Practice</title>
+    <script>
+      (function () {
+        var t = localStorage.getItem('theme');
+        var d = t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches);
+        if (d) {
+          document.documentElement.classList.add('dark');
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#111827');
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/nj-drivers-test/assets/index-TKu-GXNr.js"></script>
+    <link rel="stylesheet" crossorigin href="/nj-drivers-test/assets/index-BCqvK3eS.css">
+  </head>
+  <body class="bg-background text-foreground min-h-dvh font-sans antialiased">
+    <div id="root"></div>
+  </body>
 </html>

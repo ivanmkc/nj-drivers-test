@@ -150,7 +150,33 @@ export default function QuizScreen({
               <span
                 className={`shrink-0 w-7 h-7 flex items-center justify-center rounded-full font-bold text-sm ${letterClass}`}
               >
-                {letter}
+                {answered && letter === question.answer ? (
+                  <svg
+                    className="w-4 h-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={3}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                ) : answered && letter === selected && letter !== question.answer ? (
+                  <svg
+                    className="w-4 h-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={3}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M18 6L6 18M6 6l12 12" />
+                  </svg>
+                ) : (
+                  letter
+                )}
               </span>
               <span className="flex-1">{question.choices[letter]}</span>
               {trailingIcon === 'check' && (
@@ -197,7 +223,7 @@ export default function QuizScreen({
           </div>
           <button
             onClick={onNext}
-            className="w-full py-4 bg-primary text-on-accent rounded-xl text-[17px] font-semibold cursor-pointer hover:bg-primary-hover active:opacity-80 transition-colors"
+            className="w-full py-4 bg-primary text-on-primary rounded-xl text-[17px] font-semibold cursor-pointer hover:bg-primary-hover active:opacity-80 transition-colors"
           >
             {currentIdx < totalQuestions - 1 ? t('next') : t('seeResults')}
           </button>

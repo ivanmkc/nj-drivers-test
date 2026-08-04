@@ -176,7 +176,7 @@ export default function App() {
         <div className="text-muted text-base mb-4">{error}</div>
         <button
           onClick={() => window.location.reload()}
-          className="px-6 py-2 bg-primary text-on-accent rounded-xl text-sm font-semibold cursor-pointer hover:bg-primary-hover transition-colors"
+          className="px-6 py-2 bg-primary text-on-primary rounded-xl text-sm font-semibold cursor-pointer hover:bg-primary-hover transition-colors"
         >
           Retry
         </button>

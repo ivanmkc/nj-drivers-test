@@ -51,7 +51,7 @@ export default function ResultsScreen({
         </div>
         <button
           onClick={onNewQuiz}
-          className="w-full py-4 bg-primary text-on-accent rounded-xl text-lg font-semibold cursor-pointer hover:bg-primary-hover active:opacity-80 transition-colors"
+          className="w-full py-4 bg-primary text-on-primary rounded-xl text-lg font-semibold cursor-pointer hover:bg-primary-hover active:opacity-80 transition-colors"
         >
           {t('newQuiz')}
         </button>

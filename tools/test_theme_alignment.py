@@ -66,7 +66,7 @@ FRONTEND_NAMES = {
     "orange": "warning",
     "gray": "muted",
     "grayLight": "border-subtle",
-    "onPrimary": "on-accent",
+    "onPrimary": "on-primary",
 }
 
 

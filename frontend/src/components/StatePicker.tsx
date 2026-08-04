@@ -57,7 +57,7 @@ export default function StatePicker({
       <LangBar currentLang={lang} onSwitch={onSwitchLang} />
       <div className="text-center pt-4">
         <h1 className="text-2xl font-bold text-primary mb-1">{t('appTitle')}</h1>
-        <p className="text-muted text-sm mb-4">{t('selectStateDesc')}</p>
+        <p className="text-muted text-base mb-4">{t('selectStateDesc')}</p>
       </div>
       <div className="relative mb-4">
         <svg
@@ -135,7 +135,7 @@ export default function StatePicker({
           );
         })}
         {totalShown === 0 && (
-          <div className="text-subtle text-sm py-10 text-center">
+          <div className="text-subtle text-base py-10 text-center">
             No states found matching &ldquo;{query}&rdquo;
           </div>
         )}

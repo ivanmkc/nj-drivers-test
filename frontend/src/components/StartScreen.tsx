@@ -71,7 +71,7 @@ export default function StartScreen({
             pass_pct: state.passing_score_pct,
           })}
         </h1>
-        <p className="text-muted text-sm mb-1 leading-relaxed">
+        <p className="text-muted text-base mb-1 leading-relaxed">
           {t('subtitle', {
             state: state.code.toUpperCase(),
             state_name: state.name,
@@ -185,7 +185,7 @@ export default function StartScreen({
               key={n}
               onClick={() => onSetCount(n)}
               className={`px-5 min-h-[44px] border-2 border-primary rounded-xl text-base font-semibold cursor-pointer transition-colors tabular-nums
-                ${active ? 'bg-primary text-on-accent' : 'bg-surface text-primary hover:bg-primary-surface'}`}
+                ${active ? 'bg-primary text-on-primary' : 'bg-surface text-primary hover:bg-primary-surface'}`}
             >
               {label}
             </button>
@@ -196,7 +196,7 @@ export default function StartScreen({
       <button
         onClick={onStart}
         disabled={startDisabled}
-        className="w-full py-4 bg-primary text-on-accent rounded-xl text-lg font-semibold cursor-pointer hover:bg-primary-hover active:opacity-80 transition-colors disabled:opacity-50 disabled:cursor-default"
+        className="w-full py-4 bg-primary text-on-primary rounded-xl text-lg font-semibold cursor-pointer hover:bg-primary-hover active:opacity-80 transition-colors disabled:opacity-50 disabled:cursor-default"
       >
         {startDisabled ? t('noWeakSpots') : t('startQuiz')}
       </button>
