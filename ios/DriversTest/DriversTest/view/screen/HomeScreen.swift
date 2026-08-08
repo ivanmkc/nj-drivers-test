@@ -95,18 +95,21 @@ struct HomeScreen: View {
                 }
                 .disabled(weakEmpty)
 
-                // About this test
-                if let state = vm.currentState {
-                    AboutTestSection(state: state, localizer: localizer)
-                }
-
-                // Change state
+                // Change state (kept above the About section so it stays on
+                // screen without scrolling — UI tests and users both tap it)
                 Button {
                     vm.goStatePicker()
                 } label: {
                     Text(localizer.localized("changeState"))
                         .font(.system(size: 14))
                         .foregroundColor(AppTheme.gray)
+                        .frame(minHeight: 44)
+                        .contentShape(Rectangle())
+                }
+
+                // About this test
+                if let state = vm.currentState {
+                    AboutTestSection(state: state, localizer: localizer)
                 }
 
             }
@@ -125,31 +128,48 @@ private struct AboutTestSection: View {
     @State private var isExpanded = false
 
     var body: some View {
-        DisclosureGroup(isExpanded: $isExpanded) {
-            VStack(alignment: .leading, spacing: 12) {
-                if let verification = state.verification {
-                    VerificationBadgesView(verification: verification, localizer: localizer)
+        // Plain button-toggled collapsible (not DisclosureGroup — its
+        // DisclosureTriangle automation type confuses XCUITest element queries).
+        VStack(alignment: .leading, spacing: 0) {
+            Button {
+                withAnimation(.easeInOut(duration: 0.2)) { isExpanded.toggle() }
+            } label: {
+                HStack(spacing: 6) {
+                    Image(systemName: "info.circle")
+                        .foregroundColor(AppTheme.blue)
+                    Text(localizer.localized("aboutThisTest"))
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundColor(.primary)
+                    Spacer()
+                    Image(systemName: "chevron.down")
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundColor(AppTheme.gray)
+                        .rotationEffect(.degrees(isExpanded ? 180 : 0))
                 }
-
-                if let source = state.source {
-                    SourceRow(source: source, manualUrl: state.verification?.manualUrl, localizer: localizer)
-                }
-
-                if let categories = state.categories, !categories.isEmpty {
-                    CategoryBreakdownView(categories: categories, localizer: localizer)
-                }
+                .frame(minHeight: 44)
+                .contentShape(Rectangle())
             }
-            .padding(.top, 8)
-        } label: {
-            HStack(spacing: 6) {
-                Image(systemName: "info.circle")
-                    .foregroundColor(AppTheme.blue)
-                Text(localizer.localized("aboutThisTest"))
-                    .font(.system(size: 15, weight: .semibold))
-                    .foregroundColor(.primary)
+            .buttonStyle(.plain)
+
+            if isExpanded {
+                VStack(alignment: .leading, spacing: 12) {
+                    if let verification = state.verification {
+                        VerificationBadgesView(verification: verification, localizer: localizer)
+                    }
+
+                    if let source = state.source {
+                        SourceRow(source: source, manualUrl: state.verification?.manualUrl, localizer: localizer)
+                    }
+
+                    if let categories = state.categories, !categories.isEmpty {
+                        CategoryBreakdownView(categories: categories, localizer: localizer)
+                    }
+                }
+                .padding(.top, 8)
             }
         }
-        .padding(14)
+        .padding(.horizontal, 14)
+        .padding(.vertical, 6)
         .cardStyle(borderWidth: 1)
     }
 }
