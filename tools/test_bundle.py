@@ -83,3 +83,56 @@ def test_build_bundle_happy_path(states_dir) -> None:
     assert codes == ["ab", "cd"]
     assert len(result["states"][0]["languages"]["en"]) == 3
     assert len(result["states"][1]["languages"]["en"]) == 2
+
+
+def test_build_bundle_trust_metadata(states_dir) -> None:
+    """States carry categories, source, verification, and per-question evidence."""
+    sdir = states_dir["write"](
+        "tv",
+        questions=_sample_questions(3),
+        config={
+            "name": "TV",
+            "agency": "DMV",
+            "passing_score_pct": 80,
+            "test_question_count": 25,
+            "source": "2026 TV Driver Manual",
+        },
+    )
+    report = {
+        "verified_at": "2026-08-01T00:00:00Z",
+        "overall_verdict": "PASS",
+        "source": {"manual_url": "https://example.gov/manual.pdf", "edition": "2026"},
+        "precision": {
+            "avg_fidelity": 9.9,
+            "grade": "A",
+            "judged_count": 3,
+            "evidence_by_question_id": {"1": ["Quote one.", "Quote two.", "Quote three."]},
+        },
+        "recall": {"coverage_pct": 96.0},
+        "translation": {"es": {"verdict": "PASS"}},
+    }
+    (sdir / "verification_report.json").write_text(json.dumps(report))
+
+    result = bundle.build_bundle()
+    state = next(s for s in result["states"] if s["code"] == "tv")
+    assert state["source"] == "2026 TV Driver Manual"
+    assert state["categories"] == {"safe_driving_rules": 3}
+    v = state["verification"]
+    assert v["overall"] == "PASS"
+    assert v["manual_url"] == "https://example.gov/manual.pdf"
+    assert v["precision_grade"] == "A"
+    assert v["recall_coverage_pct"] == 96.0
+    assert v["translations"] == {"es": "PASS"}
+    q1 = next(q for q in state["languages"]["en"] if q["id"] == 1)
+    assert q1["evidence"] == ["Quote one.", "Quote two."]  # capped at 2 quotes
+    q2 = next(q for q in state["languages"]["en"] if q["id"] == 2)
+    assert "evidence" not in q2
+
+
+def test_build_bundle_no_report_yields_null_verification(states_dir) -> None:
+    states_dir["write"]("nr", questions=_sample_questions(2))
+    result = bundle.build_bundle()
+    state = next(s for s in result["states"] if s["code"] == "nr")
+    assert state["verification"] is None
+    assert state["categories"] == {"safe_driving_rules": 2}
+    assert all("evidence" not in q for q in state["languages"]["en"])
