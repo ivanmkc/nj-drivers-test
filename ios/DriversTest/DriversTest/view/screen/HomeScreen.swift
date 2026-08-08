@@ -193,7 +193,13 @@ private struct VerificationBadgesView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            FlowBadges {
+            // Adaptive grid wraps badge pills; the iOS 16 Layout protocol is
+            // unavailable on this app's iOS 15 target.
+            LazyVGrid(
+                columns: [GridItem(.adaptive(minimum: 96), spacing: 6, alignment: .leading)],
+                alignment: .leading,
+                spacing: 6
+            ) {
                 if let grade = verification.precisionGrade {
                     BadgePill(
                         label: localizer.localized("grade"),
@@ -292,71 +298,6 @@ private struct BadgePill: View {
         .padding(.vertical, 5)
         .background(AppTheme.blueLight)
         .clipShape(RoundedRectangle(cornerRadius: 16))
-    }
-}
-
-private struct FlowBadges: View {
-    @ViewBuilder var content: () -> some View
-
-    var body: some View {
-        let layout = FlowLayout(spacing: 6)
-        layout {
-            content()
-        }
-    }
-}
-
-private struct FlowLayout: Layout {
-    var spacing: CGFloat = 6
-
-    func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
-        let rows = computeRows(proposal: proposal, subviews: subviews)
-        guard !rows.isEmpty else { return .zero }
-        let height = rows.reduce(CGFloat(0)) { $0 + $1.height } + CGFloat(rows.count - 1) * spacing
-        return CGSize(width: proposal.width ?? 0, height: height)
-    }
-
-    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
-        let rows = computeRows(proposal: proposal, subviews: subviews)
-        var y = bounds.minY
-        var subviewIndex = 0
-        for row in rows {
-            var x = bounds.minX
-            for _ in 0..<row.count {
-                let size = subviews[subviewIndex].sizeThatFits(.unspecified)
-                subviews[subviewIndex].place(at: CGPoint(x: x, y: y), proposal: .unspecified)
-                x += size.width + spacing
-                subviewIndex += 1
-            }
-            y += row.height + spacing
-        }
-    }
-
-    private func computeRows(proposal: ProposedViewSize, subviews: Subviews) -> [(count: Int, height: CGFloat)] {
-        let maxWidth = proposal.width ?? .infinity
-        var rows: [(count: Int, height: CGFloat)] = []
-        var currentWidth: CGFloat = 0
-        var currentHeight: CGFloat = 0
-        var currentCount = 0
-
-        for subview in subviews {
-            let size = subview.sizeThatFits(.unspecified)
-            let needed = currentCount > 0 ? size.width + spacing : size.width
-            if currentCount > 0 && currentWidth + needed > maxWidth {
-                rows.append((count: currentCount, height: currentHeight))
-                currentWidth = size.width
-                currentHeight = size.height
-                currentCount = 1
-            } else {
-                currentWidth += needed
-                currentHeight = max(currentHeight, size.height)
-                currentCount += 1
-            }
-        }
-        if currentCount > 0 {
-            rows.append((count: currentCount, height: currentHeight))
-        }
-        return rows
     }
 }
 
