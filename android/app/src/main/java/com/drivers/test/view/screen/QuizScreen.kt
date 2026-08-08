@@ -165,6 +165,7 @@ fun QuizScreen(vm: QuizViewModel) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
+                    .height(IntrinsicSize.Min)
                     .clip(RoundedCornerShape(topEnd = 12.dp, bottomEnd = 12.dp))
                     .background(c.blueLight),
             ) {
@@ -177,6 +178,49 @@ fun QuizScreen(vm: QuizViewModel) {
                     modifier = Modifier.padding(12.dp),
                 )
             }
+            Spacer(Modifier.height(8.dp))
+        }
+
+        // Evidence from the manual
+        vm.evidence?.let { evidence ->
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(IntrinsicSize.Min)
+                    .clip(RoundedCornerShape(topEnd = 12.dp, bottomEnd = 12.dp))
+                    .background(c.grayLight),
+            ) {
+                Box(modifier = Modifier.width(4.dp).fillMaxHeight().background(c.gray))
+                Column(modifier = Modifier.padding(12.dp)) {
+                    Text(
+                        vm.t("fromManual"),
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = c.gray,
+                    )
+                    Spacer(Modifier.height(4.dp))
+                    evidence.forEach { quote ->
+                        Text(
+                            "“$quote”",
+                            fontSize = 13.sp,
+                            lineHeight = 20.sp,
+                            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
+                        )
+                    }
+                    vm.currentState?.source?.let { src ->
+                        Spacer(Modifier.height(4.dp))
+                        Text(
+                            "— $src",
+                            fontSize = 11.sp,
+                            color = c.gray,
+                        )
+                    }
+                }
+            }
+            Spacer(Modifier.height(16.dp))
+        }
+
+        if (vm.explanation == null && vm.evidence == null && vm.answered) {
             Spacer(Modifier.height(16.dp))
         }
 

@@ -54,6 +54,8 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     var selectedAnswer by mutableStateOf<String?>(null)
     var correctAnswer by mutableStateOf<String?>(null)
     var explanation by mutableStateOf<String?>(null)
+    var evidence by mutableStateOf<List<String>?>(null)
+        private set
     var sessionResults = mutableStateListOf<SessionResult>()
 
     // Settings
@@ -245,6 +247,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         selectedAnswer = null
         correctAnswer = null
         explanation = null
+        evidence = null
         screen = AppScreen.QUIZ
     }
 
@@ -258,6 +261,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         val response = api.fetchAnswer(q.id, state.code, currentLang) ?: return
         correctAnswer = response.answer
         explanation = response.explanation
+        evidence = api.fetchEvidence(q.id, state.code)
         val isCorrect = letter == response.answer
         if (isCorrect) correctCount++ else wrongCount++
 
@@ -296,6 +300,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         selectedAnswer = null
         correctAnswer = null
         explanation = null
+        evidence = null
     }
 
     private fun finishQuiz() {

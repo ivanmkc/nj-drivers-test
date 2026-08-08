@@ -142,6 +142,11 @@ class QuizViewModel: ObservableObject {
         return (record.wrong, record.seen)
     }
 
+    func evidenceForCurrentQuestion() -> [String]? {
+        guard answered, let q = currentQuestion, let state = currentState else { return nil }
+        return api.fetchEvidence(questionId: q.id, state: state.code)
+    }
+
     // MARK: - Actions
 
     func loadStates() {

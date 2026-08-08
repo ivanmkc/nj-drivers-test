@@ -12,8 +12,11 @@ interface QuizScreenProps {
   wrongCount: number;
   store: ReturnType<typeof useStore>;
   basePath: string;
+  enQuestionsMap: Map<number, Question>;
+  sourceName?: string;
   onAnswer: (result: SessionResult, isCorrect: boolean) => void;
   onNext: () => void;
+  onExit: () => void;
 }
 
 export default function QuizScreen({
@@ -24,8 +27,11 @@ export default function QuizScreen({
   wrongCount,
   store,
   basePath,
+  enQuestionsMap,
+  sourceName,
   onAnswer,
   onNext,
+  onExit,
 }: QuizScreenProps) {
   const [answered, setAnswered] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
@@ -79,6 +85,24 @@ export default function QuizScreen({
         />
       </div>
       <div className="flex justify-between items-center mb-3 text-sm text-muted">
+        <button
+          onClick={onExit}
+          aria-label="Exit quiz"
+          className="inline-flex items-center gap-1 min-w-[44px] min-h-[44px] text-primary text-sm font-semibold cursor-pointer bg-transparent border-none"
+        >
+          <svg
+            className="w-4 h-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+          </svg>
+          <span>Exit</span>
+        </button>
         <span className="tabular-nums">
           {currentIdx + 1} / {totalQuestions}
         </span>
@@ -221,6 +245,29 @@ export default function QuizScreen({
           <div className="bg-primary-surface border-l-4 border-primary px-4 py-3 rounded-r-xl text-base leading-relaxed mb-4">
             {question.explanation}
           </div>
+          {(() => {
+            const enQ = enQuestionsMap.get(question.id);
+            const evidence = enQ?.evidence;
+            if (!evidence || evidence.length === 0) return null;
+            return (
+              <div className="mb-4 flex flex-col gap-2">
+                {evidence.map((excerpt, i) => (
+                  <div
+                    key={i}
+                    className="border-l-4 border-muted px-4 py-3 rounded-r-xl bg-surface"
+                  >
+                    <p className="text-sm text-muted italic leading-relaxed">
+                      &ldquo;{excerpt}&rdquo;
+                    </p>
+                    {sourceName && (
+                      <p className="text-xs text-subtle mt-1.5">&mdash; {sourceName}</p>
+                    )}
+                  </div>
+                ))}
+                <p className="text-xs text-subtle font-semibold">From the manual</p>
+              </div>
+            );
+          })()}
           <button
             onClick={onNext}
             className="w-full py-4 bg-primary text-on-primary rounded-xl text-[17px] font-semibold cursor-pointer hover:bg-primary-hover active:opacity-80 transition-colors"

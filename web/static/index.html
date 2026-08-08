@@ -197,6 +197,49 @@
   .danger-zone { border-top: 1px solid var(--border); padding-top: 20px; margin-top: 8px; }
   .danger-btn { width: 100%; padding: 12px; background: var(--card); color: var(--red); border: 2px solid var(--red-light); border-radius: var(--radius); font-size: 15px; font-weight: 600; cursor: pointer; }
   .danger-btn:active { background: var(--red-light); }
+
+  /* About this test */
+  .about-section { margin-bottom: 20px; text-align: left; }
+  .about-section summary {
+    font-weight: 600; font-size: 15px; cursor: pointer; padding: 10px 0;
+    list-style: none; display: flex; align-items: center; gap: 6px; color: var(--text);
+  }
+  .about-section summary::-webkit-details-marker { display: none; }
+  .about-section summary::before { content: "\25B6"; font-size: 10px; transition: transform 0.2s; }
+  .about-section[open] summary::before { transform: rotate(90deg); }
+  .about-body {
+    background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 14px 16px; font-size: 14px; line-height: 1.6;
+  }
+  .about-source { margin-bottom: 10px; }
+  .about-source a { color: var(--blue); text-decoration: none; word-break: break-all; }
+  .about-source a:hover { text-decoration: underline; }
+  .about-badges { display: flex; flex-wrap: wrap; gap: 6px 10px; margin-bottom: 12px; font-size: 13px; }
+  .about-badge { display: inline-flex; align-items: center; gap: 4px; }
+  .about-badge .glyph { font-weight: 700; }
+  .about-badge .glyph.pass { color: var(--green); }
+  .about-badge .glyph.fail { color: var(--red); }
+  .about-cats { list-style: none; padding: 0; margin: 0; }
+  .about-cats li {
+    display: flex; align-items: center; gap: 10px; padding: 4px 0;
+    font-size: 13px; text-transform: capitalize;
+  }
+  .about-cats li .cat-name { flex: 1; }
+  .about-cats li .cat-bar { flex: 2; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+  .about-cats li .cat-fill { height: 100%; background: var(--blue); border-radius: 3px; }
+  .about-cats li .cat-count { width: 32px; text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; color: var(--gray); }
+
+  /* Evidence block */
+  .evidence-block {
+    background: var(--card); border-left: 4px solid var(--green);
+    padding: 10px 14px; border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: 13px; line-height: 1.6; color: var(--text); margin-bottom: 16px;
+    font-style: italic;
+  }
+  .evidence-block .evidence-label {
+    font-style: normal; font-weight: 600; font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.3px; color: var(--gray); margin-bottom: 4px;
+  }
 </style>
 </head>
 <body>
@@ -216,6 +259,11 @@
     <h1 id="home-title"></h1>
     <p class="subtitle" id="home-subtitle"></p>
     <p class="passing-info" id="home-passing"></p>
+
+    <details class="about-section" id="about-section" style="display:none;">
+      <summary>About this test</summary>
+      <div class="about-body" id="about-body"></div>
+    </details>
 
     <div class="past-stats-banner" id="past-stats-banner">
       <div class="row">
@@ -262,6 +310,7 @@
     </div>
     <div class="choices" id="choices"></div>
     <div class="explanation" id="explanation"></div>
+    <div class="evidence-block" id="evidence-block" style="display:none;"></div>
     <button class="next-btn" id="next-btn" onclick="nextQuestion()"></button>
   </div>
 
@@ -444,6 +493,63 @@ function goStatePicker() {
 }
 
 // ---- Home ----
+function renderAboutSection() {
+  const s = currentState;
+  const section = document.getElementById('about-section');
+  if (!s.source && !s.verification && !s.categories) { section.style.display = 'none'; return; }
+  section.style.display = 'block';
+  const body = document.getElementById('about-body');
+  let html = '';
+
+  if (s.source) {
+    const v = s.verification || {};
+    const href = v.manual_url ? ` href="${esc(v.manual_url)}" target="_blank" rel="noopener"` : '';
+    html += `<div class="about-source">Source: ${href ? '<a' + href + '>' : ''}${esc(s.source)}${href ? '</a>' : ''}</div>`;
+  }
+
+  const v = s.verification;
+  if (v) {
+    html += '<div class="about-badges">';
+    if (v.edition) html += `<span class="about-badge">Edition: <strong>${esc(v.edition)}</strong></span>`;
+    if (v.precision_grade) {
+      const gp = v.precision_grade === 'A' || v.precision_grade === 'B' ? 'pass' : 'fail';
+      html += `<span class="about-badge"><span class="glyph ${gp}">✓</span> Grade ${esc(v.precision_grade)}</span>`;
+    }
+    if (v.precision_avg_fidelity != null) {
+      const fp = v.precision_avg_fidelity >= 8 ? 'pass' : 'fail';
+      html += `<span class="about-badge"><span class="glyph ${fp}">✓</span> Fidelity ${v.precision_avg_fidelity}/10</span>`;
+    }
+    if (v.recall_coverage_pct != null) {
+      const cp = v.recall_coverage_pct >= 80 ? 'pass' : 'fail';
+      html += `<span class="about-badge"><span class="glyph ${cp}">✓</span> Coverage ${v.recall_coverage_pct}%</span>`;
+    }
+    if (v.translations) {
+      for (const [lang, verdict] of Object.entries(v.translations)) {
+        const tp = verdict === 'PASS' ? 'pass' : 'fail';
+        const tg = verdict === 'PASS' ? '✓' : '✕';
+        html += `<span class="about-badge"><span class="glyph ${tp}">${tg}</span> ${lang.toUpperCase()} translation</span>`;
+      }
+    }
+    if (v.verified_at) {
+      const d = new Date(v.verified_at);
+      html += `<span class="about-badge">Verified: ${d.toLocaleDateString()}</span>`;
+    }
+    html += '</div>';
+  }
+
+  if (s.categories) {
+    const entries = Object.entries(s.categories).sort((a, b) => b[1] - a[1]);
+    const maxCount = Math.max(...entries.map(e => e[1]));
+    html += '<ul class="about-cats">';
+    for (const [cat, count] of entries) {
+      const pct = Math.round((count / maxCount) * 100);
+      html += `<li><span class="cat-name">${esc(cat.replace(/_/g, ' '))}</span><span class="cat-bar"><span class="cat-fill" style="width:${pct}%"></span></span><span class="cat-count">${count}</span></li>`;
+    }
+    html += '</ul>';
+  }
+  body.innerHTML = html;
+}
+
 function renderHome() {
   const s = currentState;
   const vars = { state: s.code.toUpperCase(), state_name: s.name, agency: s.agency, pass_pct: s.passing_score_pct };
@@ -479,6 +585,7 @@ function renderHome() {
   if (!avail.includes(currentLang)) { currentLang = 'en'; localStorage.setItem('quiz_lang', 'en'); }
   buildLangBar('lang-bar', avail);
   applyI18n();
+  renderAboutSection();
   updateStartScreen();
 }
 
@@ -582,6 +689,7 @@ function showQuestion() {
   if (q.image) { imgEl.src = `/signs/${currentState.code}/${q.image}`; imgWrap.style.display = 'block'; }
   else { imgWrap.style.display = 'none'; imgEl.src = ''; }
   document.getElementById('explanation').classList.remove('visible');
+  document.getElementById('evidence-block').style.display = 'none';
   document.getElementById('next-btn').classList.remove('visible');
   const store = loadStore();
   const qData = store.questions[q.id];
@@ -621,6 +729,13 @@ async function selectAnswer(letter, btn) {
   sessionResults.push({ id: qid, question: questions[currentIdx].question, yourAnswer: letter, yourAnswerText: questions[currentIdx].choices[letter], correctAnswer: correct, correctAnswerText: questions[currentIdx].choices[correct], correct: isCorrect, explanation: data.explanation });
   document.getElementById('explanation').textContent = data.explanation;
   document.getElementById('explanation').classList.add('visible');
+  const evidenceBlock = document.getElementById('evidence-block');
+  if (data.evidence && data.evidence.length > 0) {
+    evidenceBlock.innerHTML = '<div class="evidence-label">From the manual</div>' + data.evidence.map(e => '<div>' + esc(e) + '</div>').join('');
+    evidenceBlock.style.display = 'block';
+  } else {
+    evidenceBlock.style.display = 'none';
+  }
   document.getElementById('score-correct').textContent = correctCount;
   document.getElementById('score-wrong').textContent = wrongCount;
   const nextBtn = document.getElementById('next-btn');

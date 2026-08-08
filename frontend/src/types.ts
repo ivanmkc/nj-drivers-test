@@ -6,6 +6,20 @@ export interface Question {
   answer: string;
   explanation: string;
   image?: string;
+  evidence?: string[];
+}
+
+export interface StateVerification {
+  verified_at?: string;
+  overall?: string;
+  manual_url?: string;
+  edition?: string;
+  manual_pages?: number;
+  precision_avg_fidelity?: number;
+  precision_grade?: string;
+  questions_judged?: number;
+  recall_coverage_pct?: number;
+  translations?: Record<string, string>;
 }
 
 export interface StateConfig {
@@ -14,6 +28,9 @@ export interface StateConfig {
   agency: string;
   passing_score_pct: number;
   test_question_count: number;
+  source?: string;
+  categories?: Record<string, number>;
+  verification?: StateVerification;
   languages: Record<string, Question[]>;
 }
 
@@ -29,6 +46,9 @@ export interface StateSummary {
   test_question_count: number;
   languages: string[];
   total_questions: number;
+  source?: string;
+  categories?: Record<string, number>;
+  verification?: StateVerification;
 }
 
 export interface QuizStore {

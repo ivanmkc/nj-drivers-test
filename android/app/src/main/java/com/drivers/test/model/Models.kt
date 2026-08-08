@@ -5,15 +5,31 @@ import kotlin.math.ceil
 
 // API responses
 
+data class Verification(
+    @SerializedName("verified_at") val verifiedAt: String? = null,
+    val overall: String? = null,
+    @SerializedName("manual_url") val manualUrl: String? = null,
+    val edition: String? = null,
+    @SerializedName("manual_pages") val manualPages: Int? = null,
+    @SerializedName("precision_avg_fidelity") val precisionAvgFidelity: Double? = null,
+    @SerializedName("precision_grade") val precisionGrade: String? = null,
+    @SerializedName("questions_judged") val questionsJudged: Int? = null,
+    @SerializedName("recall_coverage_pct") val recallCoveragePct: Double? = null,
+    val translations: Map<String, String>? = null,
+)
+
 data class StateInfo(
     val code: String,
     val name: String,
     val agency: String,
-    @SerializedName("passing_score_pct") val passingScorePct: Int,
-    @SerializedName("test_question_count") val testQuestionCount: Int,
+    val passingScorePct: Int,
+    val testQuestionCount: Int,
     val languages: List<String>,
-    @SerializedName("total_questions") val totalQuestions: Int,
-    @SerializedName("has_questions") val hasQuestions: Boolean,
+    val totalQuestions: Int,
+    val hasQuestions: Boolean,
+    val source: String? = null,
+    val categories: Map<String, Int>? = null,
+    val verification: Verification? = null,
 ) {
     val passCount: Int get() = ceil(testQuestionCount * passingScorePct / 100.0).toInt()
 }

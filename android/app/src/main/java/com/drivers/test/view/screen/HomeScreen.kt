@@ -1,6 +1,14 @@
 package com.drivers.test.view.screen
 
+import android.content.Intent
+import android.net.Uri
 import androidx.activity.compose.BackHandler
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.expandVertically
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -9,23 +17,29 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.drivers.test.model.QuizMode
+import com.drivers.test.model.StateInfo
 import com.drivers.test.theme.AppTheme
 import com.drivers.test.view.components.LanguageBar
 import com.drivers.test.view.components.PrimaryButton
@@ -85,6 +99,11 @@ fun HomeScreen(vm: QuizViewModel) {
         )
 
         Spacer(Modifier.height(16.dp))
+
+        if (state.source != null || state.verification != null || state.categories != null) {
+            AboutThisTestSection(state, vm)
+            Spacer(Modifier.height(16.dp))
+        }
 
         // Stats banner
         val history = vm.quizHistory()
@@ -178,6 +197,226 @@ fun HomeScreen(vm: QuizViewModel) {
             fontSize = 14.sp,
             color = c.gray,
             modifier = Modifier.clickable { vm.goStatePicker() }.padding(10.dp),
+        )
+    }
+}
+
+@Composable
+private fun AboutThisTestSection(
+    state: StateInfo,
+    vm: QuizViewModel,
+) {
+    var expanded by remember { mutableStateOf(false) }
+    val c = AppTheme.colors
+    val chevronRotation by animateFloatAsState(if (expanded) 180f else 0f, label = "chevron")
+    val context = LocalContext.current
+
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(12.dp))
+            .background(c.card)
+            .border(1.dp, MaterialTheme.colorScheme.outline, RoundedCornerShape(12.dp)),
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable { expanded = !expanded }
+                .padding(14.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Text(
+                vm.t("aboutThisTest"),
+                fontSize = 15.sp,
+                fontWeight = FontWeight.SemiBold,
+            )
+            Icon(
+                Icons.Filled.KeyboardArrowDown,
+                contentDescription = if (expanded) "Collapse" else "Expand",
+                tint = c.gray,
+                modifier = Modifier.size(20.dp).rotate(chevronRotation),
+            )
+        }
+
+        AnimatedVisibility(
+            visible = expanded,
+            enter = expandVertically() + fadeIn(),
+            exit = shrinkVertically() + fadeOut(),
+        ) {
+            Column(
+                modifier = Modifier.padding(horizontal = 14.dp).padding(bottom = 14.dp),
+            ) {
+                state.source?.let { src ->
+                    val manualUrl = state.verification?.manualUrl
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Text(
+                            "${vm.t("sourceLabel")}: ",
+                            fontSize = 13.sp,
+                            color = c.gray,
+                        )
+                        Text(
+                            src,
+                            fontSize = 13.sp,
+                            color = if (manualUrl != null) c.blue else MaterialTheme.colorScheme.onSurface,
+                            fontWeight = if (manualUrl != null) FontWeight.SemiBold else FontWeight.Normal,
+                            modifier = if (manualUrl != null) {
+                                Modifier.clickable {
+                                    context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(manualUrl)))
+                                }
+                            } else {
+                                Modifier
+                            },
+                        )
+                    }
+                }
+
+                state.verification?.edition?.let { ed ->
+                    Spacer(Modifier.height(6.dp))
+                    Text(
+                        "${vm.t("editionLabel")}: $ed",
+                        fontSize = 13.sp,
+                        color = c.gray,
+                    )
+                }
+
+                state.verification?.let { v ->
+                    val hasBadges = v.precisionGrade != null ||
+                        v.precisionAvgFidelity != null ||
+                        v.recallCoveragePct != null
+                    if (hasBadges) {
+                        Spacer(Modifier.height(10.dp))
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(6.dp),
+                            modifier = Modifier.fillMaxWidth(),
+                        ) {
+                            v.precisionGrade?.let { grade ->
+                                VerificationBadge(
+                                    "${vm.t("gradeLabel")} $grade",
+                                    c.green,
+                                    c.greenLight,
+                                )
+                            }
+                            v.precisionAvgFidelity?.let { fid ->
+                                val fidStr = if (fid % 1.0 == 0.0) "${fid.toInt()}" else "%.1f".format(fid)
+                                VerificationBadge(
+                                    "$fidStr/10 ${vm.t("fidelityLabel")}",
+                                    c.green,
+                                    c.greenLight,
+                                )
+                            }
+                            v.recallCoveragePct?.let { cov ->
+                                val covStr = if (cov % 1.0 == 0.0) "${cov.toInt()}" else "%.1f".format(cov)
+                                VerificationBadge(
+                                    "$covStr% ${vm.t("coverageLabel")}",
+                                    c.green,
+                                    c.greenLight,
+                                )
+                            }
+                        }
+                    }
+
+                    v.translations?.takeIf { it.isNotEmpty() }?.let { trans ->
+                        Spacer(Modifier.height(8.dp))
+                        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            trans.forEach { (lang, verdict) ->
+                                val isPassing = verdict == "PASS"
+                                Row(
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.spacedBy(2.dp),
+                                ) {
+                                    Icon(
+                                        if (isPassing) Icons.Filled.Check else Icons.Filled.Close,
+                                        contentDescription = verdict,
+                                        tint = if (isPassing) c.green else c.red,
+                                        modifier = Modifier.size(14.dp),
+                                    )
+                                    Text(
+                                        "${lang.uppercase()} ${verdict.lowercase()}",
+                                        fontSize = 11.sp,
+                                        fontWeight = FontWeight.SemiBold,
+                                        color = if (isPassing) c.green else c.red,
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
+
+                state.categories?.takeIf { it.isNotEmpty() }?.let { cats ->
+                    Spacer(Modifier.height(12.dp))
+                    val maxCount = cats.values.maxOrNull() ?: 1
+                    cats.entries.sortedByDescending { it.value }.forEach { (cat, count) ->
+                        CategoryRow(cat, count, maxCount, vm)
+                        Spacer(Modifier.height(4.dp))
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun VerificationBadge(
+    text: String,
+    fg: Color,
+    bg: Color,
+) {
+    Text(
+        text,
+        fontSize = 11.sp,
+        fontWeight = FontWeight.SemiBold,
+        color = fg,
+        modifier = Modifier
+            .clip(RoundedCornerShape(20.dp))
+            .background(bg)
+            .padding(horizontal = 8.dp, vertical = 3.dp),
+    )
+}
+
+@Composable
+private fun CategoryRow(
+    cat: String,
+    count: Int,
+    maxCount: Int,
+    vm: QuizViewModel,
+) {
+    val c = AppTheme.colors
+    val label = cat.split("_").joinToString(" ") { word ->
+        word.replaceFirstChar { it.uppercase() }
+    }
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(
+            label,
+            fontSize = 12.sp,
+            color = c.gray,
+            modifier = Modifier.width(130.dp),
+        )
+        Box(
+            modifier = Modifier
+                .weight(1f)
+                .height(6.dp)
+                .clip(RoundedCornerShape(3.dp))
+                .background(c.grayLight),
+        ) {
+            Box(
+                modifier = Modifier
+                    .fillMaxHeight()
+                    .fillMaxWidth(count.toFloat() / maxCount)
+                    .clip(RoundedCornerShape(3.dp))
+                    .background(c.blue),
+            )
+        }
+        Spacer(Modifier.width(8.dp))
+        Text(
+            "$count",
+            fontSize = 12.sp,
+            fontWeight = FontWeight.SemiBold,
+            color = c.blue,
+            style = TextStyle(fontFeatureSettings = "tnum"),
         )
     }
 }

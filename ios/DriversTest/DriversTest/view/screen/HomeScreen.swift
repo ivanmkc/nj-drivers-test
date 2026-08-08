@@ -95,6 +95,11 @@ struct HomeScreen: View {
                 }
                 .disabled(weakEmpty)
 
+                // About this test
+                if let state = vm.currentState {
+                    AboutTestSection(state: state, localizer: localizer)
+                }
+
                 // Change state
                 Button {
                     vm.goStatePicker()
@@ -109,5 +114,288 @@ struct HomeScreen: View {
             .padding(.top, 24)
         }
         .background(AppTheme.grayLight)
+    }
+}
+
+// MARK: - About This Test
+
+private struct AboutTestSection: View {
+    let state: StateInfo
+    @ObservedObject var localizer: Localizer
+    @State private var isExpanded = false
+
+    var body: some View {
+        DisclosureGroup(isExpanded: $isExpanded) {
+            VStack(alignment: .leading, spacing: 12) {
+                if let verification = state.verification {
+                    VerificationBadgesView(verification: verification, localizer: localizer)
+                }
+
+                if let source = state.source {
+                    SourceRow(source: source, manualUrl: state.verification?.manualUrl, localizer: localizer)
+                }
+
+                if let categories = state.categories, !categories.isEmpty {
+                    CategoryBreakdownView(categories: categories, localizer: localizer)
+                }
+            }
+            .padding(.top, 8)
+        } label: {
+            HStack(spacing: 6) {
+                Image(systemName: "info.circle")
+                    .foregroundColor(AppTheme.blue)
+                Text(localizer.localized("aboutThisTest"))
+                    .font(.system(size: 15, weight: .semibold))
+                    .foregroundColor(.primary)
+            }
+        }
+        .padding(14)
+        .cardStyle(borderWidth: 1)
+    }
+}
+
+private struct SourceRow: View {
+    let source: String
+    let manualUrl: String?
+    @ObservedObject var localizer: Localizer
+
+    var body: some View {
+        HStack(alignment: .top, spacing: 6) {
+            Text(localizer.localized("source") + ":")
+                .font(.system(size: 13))
+                .foregroundColor(AppTheme.gray)
+
+            if let urlString = manualUrl, let url = URL(string: urlString) {
+                Link(destination: url) {
+                    Text(source)
+                        .font(.system(size: 13))
+                        .foregroundColor(AppTheme.blue)
+                        .underline()
+                        .multilineTextAlignment(.leading)
+                }
+            } else {
+                Text(source)
+                    .font(.system(size: 13))
+                    .foregroundColor(.primary)
+                    .multilineTextAlignment(.leading)
+            }
+        }
+    }
+}
+
+private struct VerificationBadgesView: View {
+    let verification: StateVerification
+    @ObservedObject var localizer: Localizer
+
+    private var isPassing: Bool {
+        verification.overall == "PASS"
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            FlowBadges {
+                if let grade = verification.precisionGrade {
+                    BadgePill(
+                        label: localizer.localized("grade"),
+                        value: grade,
+                        systemImage: isPassing ? "checkmark.seal" : nil
+                    )
+                }
+
+                if let fidelity = verification.precisionAvgFidelity {
+                    BadgePill(
+                        label: localizer.localized("fidelity"),
+                        value: String(format: "%.1f/10", fidelity),
+                        systemImage: fidelity >= 7.0 ? "checkmark.seal" : nil
+                    )
+                }
+
+                if let coverage = verification.recallCoveragePct {
+                    BadgePill(
+                        label: localizer.localized("coverage"),
+                        value: String(format: "%.0f%%", coverage),
+                        systemImage: coverage >= 80 ? "checkmark.seal" : nil
+                    )
+                }
+
+                if let translations = verification.translations, !translations.isEmpty {
+                    let allPass = translations.values.allSatisfy { $0 == "PASS" }
+                    BadgePill(
+                        label: localizer.localized("translations"),
+                        value: allPass ? "OK" : "partial",
+                        systemImage: allPass ? "checkmark.seal" : nil
+                    )
+                }
+            }
+
+            HStack(spacing: 16) {
+                if let edition = verification.edition {
+                    HStack(spacing: 4) {
+                        Text(localizer.localized("edition") + ":")
+                            .foregroundColor(AppTheme.gray)
+                        Text(edition)
+                    }
+                    .font(.system(size: 12))
+                }
+
+                if let verifiedAt = verification.verifiedAt {
+                    HStack(spacing: 4) {
+                        Text(localizer.localized("verified") + ":")
+                            .foregroundColor(AppTheme.gray)
+                        Text(Self.formatDate(verifiedAt))
+                    }
+                    .font(.system(size: 12))
+                }
+            }
+        }
+    }
+
+    private static func formatDate(_ iso: String) -> String {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        if let date = formatter.date(from: iso) {
+            let display = DateFormatter()
+            display.dateStyle = .medium
+            display.timeStyle = .none
+            return display.string(from: date)
+        }
+        formatter.formatOptions = [.withInternetDateTime]
+        if let date = formatter.date(from: iso) {
+            let display = DateFormatter()
+            display.dateStyle = .medium
+            display.timeStyle = .none
+            return display.string(from: date)
+        }
+        return String(iso.prefix(10))
+    }
+}
+
+private struct BadgePill: View {
+    let label: String
+    let value: String
+    var systemImage: String?
+
+    var body: some View {
+        HStack(spacing: 4) {
+            if let systemImage {
+                Image(systemName: systemImage)
+                    .font(.system(size: 11))
+                    .foregroundColor(AppTheme.green)
+            }
+            Text(label)
+                .foregroundColor(AppTheme.gray)
+            Text(value)
+                .fontWeight(.semibold)
+        }
+        .font(.system(size: 12))
+        .padding(.horizontal, 10)
+        .padding(.vertical, 5)
+        .background(AppTheme.blueLight)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
+    }
+}
+
+private struct FlowBadges: View {
+    @ViewBuilder var content: () -> some View
+
+    var body: some View {
+        let layout = FlowLayout(spacing: 6)
+        layout {
+            content()
+        }
+    }
+}
+
+private struct FlowLayout: Layout {
+    var spacing: CGFloat = 6
+
+    func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
+        let rows = computeRows(proposal: proposal, subviews: subviews)
+        guard !rows.isEmpty else { return .zero }
+        let height = rows.reduce(CGFloat(0)) { $0 + $1.height } + CGFloat(rows.count - 1) * spacing
+        return CGSize(width: proposal.width ?? 0, height: height)
+    }
+
+    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
+        let rows = computeRows(proposal: proposal, subviews: subviews)
+        var y = bounds.minY
+        var subviewIndex = 0
+        for row in rows {
+            var x = bounds.minX
+            for _ in 0..<row.count {
+                let size = subviews[subviewIndex].sizeThatFits(.unspecified)
+                subviews[subviewIndex].place(at: CGPoint(x: x, y: y), proposal: .unspecified)
+                x += size.width + spacing
+                subviewIndex += 1
+            }
+            y += row.height + spacing
+        }
+    }
+
+    private func computeRows(proposal: ProposedViewSize, subviews: Subviews) -> [(count: Int, height: CGFloat)] {
+        let maxWidth = proposal.width ?? .infinity
+        var rows: [(count: Int, height: CGFloat)] = []
+        var currentWidth: CGFloat = 0
+        var currentHeight: CGFloat = 0
+        var currentCount = 0
+
+        for subview in subviews {
+            let size = subview.sizeThatFits(.unspecified)
+            let needed = currentCount > 0 ? size.width + spacing : size.width
+            if currentCount > 0 && currentWidth + needed > maxWidth {
+                rows.append((count: currentCount, height: currentHeight))
+                currentWidth = size.width
+                currentHeight = size.height
+                currentCount = 1
+            } else {
+                currentWidth += needed
+                currentHeight = max(currentHeight, size.height)
+                currentCount += 1
+            }
+        }
+        if currentCount > 0 {
+            rows.append((count: currentCount, height: currentHeight))
+        }
+        return rows
+    }
+}
+
+private struct CategoryBreakdownView: View {
+    let categories: [String: Int]
+    @ObservedObject var localizer: Localizer
+
+    private var sortedCategories: [(name: String, count: Int)] {
+        categories.map { (name: $0.key, count: $0.value) }
+            .sorted { $0.count > $1.count }
+    }
+
+    private var maxCount: Int {
+        categories.values.max() ?? 1
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            ForEach(sortedCategories, id: \.name) { cat in
+                HStack(spacing: 8) {
+                    Text(cat.name.replacingOccurrences(of: "_", with: " ").capitalized)
+                        .font(.system(size: 12))
+                        .frame(width: 120, alignment: .leading)
+                        .lineLimit(1)
+
+                    GeometryReader { geo in
+                        RoundedRectangle(cornerRadius: 3)
+                            .fill(AppTheme.blue)
+                            .frame(width: geo.size.width * CGFloat(cat.count) / CGFloat(maxCount), height: 8)
+                    }
+                    .frame(height: 8)
+
+                    Text("\(cat.count)")
+                        .font(.system(size: 12, weight: .semibold))
+                        .monospacedDigit()
+                        .foregroundColor(AppTheme.gray)
+                        .frame(width: 30, alignment: .trailing)
+                }
+            }
+        }
     }
 }
