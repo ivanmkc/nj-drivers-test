@@ -10,6 +10,7 @@ final class DriversTestUITests: XCTestCase {
 
     override func setUpWithError() throws {
         continueAfterFailure = false
+        app.launchArguments += ["--uitest-reset"]
         app.launch()
     }
 
