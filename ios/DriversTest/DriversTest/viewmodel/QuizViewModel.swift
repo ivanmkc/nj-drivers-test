@@ -166,9 +166,11 @@ class QuizViewModel: ObservableObject {
 
             allStates = api.fetchStates()
             // UI tests pass --uitest-reset so every test launches on the picker
-            // (saved state persists in simulator UserDefaults across launches).
+            // in English (saved state AND language persist in simulator
+            // UserDefaults across launches within a test run).
             if ProcessInfo.processInfo.arguments.contains("--uitest-reset") {
                 storage.savedStateCode = nil
+                localizer.currentLang = "en"
             }
             if let savedCode = storage.savedStateCode,
                let saved = allStates.first(where: { $0.code == savedCode && $0.hasQuestions }) {
