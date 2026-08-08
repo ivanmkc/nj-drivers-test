@@ -11,7 +11,7 @@ export default function ThemeToggle() {
       onClick={cycle}
       aria-label={label}
       title={label}
-      className="p-1.5 border-[1.5px] border-border rounded-full text-muted hover:text-primary hover:border-primary transition-colors cursor-pointer"
+      className="min-w-[44px] min-h-[44px] flex items-center justify-center p-1.5 border-[1.5px] border-border rounded-full text-muted hover:text-primary hover:border-primary transition-colors cursor-pointer"
     >
       {mode === 'system' && (
         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
