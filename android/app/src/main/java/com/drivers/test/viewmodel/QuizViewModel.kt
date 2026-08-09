@@ -182,6 +182,14 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         return localizer.t(key, currentLang, vars)
     }
 
+    fun catName(key: String): String {
+        return localizer.localizedCategory(key, currentLang)
+    }
+
+    fun fromManualLabel(): String {
+        return localizer.fromManualLabel(currentLang)
+    }
+
     // Actions
     fun loadStates() {
         val states = api.fetchStates()

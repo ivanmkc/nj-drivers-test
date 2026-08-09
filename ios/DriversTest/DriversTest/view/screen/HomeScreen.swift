@@ -397,7 +397,7 @@ private struct CategoryBreakdownView: View {
         VStack(alignment: .leading, spacing: 6) {
             ForEach(sortedCategories, id: \.name) { cat in
                 HStack(spacing: 8) {
-                    Text(cat.name.replacingOccurrences(of: "_", with: " ").capitalized)
+                    Text(localizer.localizedCategory(cat.name))
                         .font(.system(size: 12))
                         .frame(width: 120, alignment: .leading)
                         .lineLimit(1)

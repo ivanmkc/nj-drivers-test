@@ -78,6 +78,17 @@ class Localizer: ObservableObject {
                 "translations": "Translations",
                 "questionsInCategory": "questions",
                 "fromTheManual": "From the manual",
+                "fromTheManualEnNote": "",
+                "cat_license_system": "License System",
+                "cat_driver_testing": "Driver Testing",
+                "cat_driver_responsibility": "Driver Responsibility",
+                "cat_safe_driving_rules": "Safe Driving Rules",
+                "cat_defensive_driving": "Defensive Driving",
+                "cat_alcohol_drugs_health": "Alcohol, Drugs & Health",
+                "cat_penalties_and_points": "Penalties & Points",
+                "cat_sharing_the_road": "Sharing the Road",
+                "cat_vehicle_information": "Vehicle Information",
+                "cat_signs_and_signals": "Signs & Signals",
                 "officialTestLangsCaption": "✓ = offered on the official {agency} test — others practice-only",
                 "officialTestLangsRow": "Official test languages",
                 "officialTestLangsAndOthers": "and others",
@@ -142,6 +153,17 @@ class Localizer: ObservableObject {
                 "translations": "翻訳",
                 "questionsInCategory": "問",
                 "fromTheManual": "マニュアルより",
+                "fromTheManualEnNote": "（英語）",
+                "cat_license_system": "免許制度",
+                "cat_driver_testing": "運転試験",
+                "cat_driver_responsibility": "運転者の責任",
+                "cat_safe_driving_rules": "安全運転のルール",
+                "cat_defensive_driving": "防御運転",
+                "cat_alcohol_drugs_health": "飲酒・薬物・健康",
+                "cat_penalties_and_points": "罰則と点数",
+                "cat_sharing_the_road": "道路の共有",
+                "cat_vehicle_information": "車両情報",
+                "cat_signs_and_signals": "標識と信号",
                 "officialTestLangsCaption": "✓ = {agency}の公式試験で提供 — その他は練習用",
                 "officialTestLangsRow": "公式試験の言語",
                 "officialTestLangsAndOthers": "その他",
@@ -206,6 +228,17 @@ class Localizer: ObservableObject {
                 "translations": "Traducciones",
                 "questionsInCategory": "preguntas",
                 "fromTheManual": "Del manual",
+                "fromTheManualEnNote": "(en inglés)",
+                "cat_license_system": "Sistema de licencias",
+                "cat_driver_testing": "Exámenes de manejo",
+                "cat_driver_responsibility": "Responsabilidad del conductor",
+                "cat_safe_driving_rules": "Reglas de manejo seguro",
+                "cat_defensive_driving": "Manejo defensivo",
+                "cat_alcohol_drugs_health": "Alcohol, drogas y salud",
+                "cat_penalties_and_points": "Multas y puntos",
+                "cat_sharing_the_road": "Compartir el camino",
+                "cat_vehicle_information": "Información del vehículo",
+                "cat_signs_and_signals": "Señales y semáforos",
                 "officialTestLangsCaption": "✓ = disponible en el examen oficial del {agency} — los demás solo para práctica",
                 "officialTestLangsRow": "Idiomas oficiales del examen",
                 "officialTestLangsAndOthers": "y otros",
@@ -270,6 +303,17 @@ class Localizer: ObservableObject {
                 "translations": "Traductions",
                 "questionsInCategory": "questions",
                 "fromTheManual": "Du manuel",
+                "fromTheManualEnNote": "(en anglais)",
+                "cat_license_system": "Système de permis",
+                "cat_driver_testing": "Examens de conduite",
+                "cat_driver_responsibility": "Responsabilité du conducteur",
+                "cat_safe_driving_rules": "Règles de conduite sûre",
+                "cat_defensive_driving": "Conduite défensive",
+                "cat_alcohol_drugs_health": "Alcool, drogues et santé",
+                "cat_penalties_and_points": "Sanctions et points",
+                "cat_sharing_the_road": "Partage de la route",
+                "cat_vehicle_information": "Informations sur le véhicule",
+                "cat_signs_and_signals": "Panneaux et signaux",
                 "officialTestLangsCaption": "✓ = proposé à l'examen officiel de {agency} — les autres pour la pratique uniquement",
                 "officialTestLangsRow": "Langues officielles de l'examen",
                 "officialTestLangsAndOthers": "et autres",
@@ -285,5 +329,19 @@ class Localizer: ObservableObject {
             s = s.replacingOccurrences(of: "{\(k)}", with: v)
         }
         return s
+    }
+
+    func localizedCategory(_ key: String) -> String {
+        let i18nKey = "cat_" + key
+        let result = translations[currentLang]?[i18nKey] ?? translations["en"]?[i18nKey]
+        if let result, result != i18nKey { return result }
+        return key.replacingOccurrences(of: "_", with: " ").capitalized
+    }
+
+    func fromManualLabel() -> String {
+        let base = localized("fromTheManual")
+        let note = localized("fromTheManualEnNote")
+        if note.isEmpty { return base }
+        return base + " " + note
     }
 }

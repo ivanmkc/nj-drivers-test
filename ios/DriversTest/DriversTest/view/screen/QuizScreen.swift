@@ -48,7 +48,7 @@ struct QuizScreen: View {
                     if let q = vm.currentQuestion {
                         // Category badge
                         HStack(spacing: 6) {
-                            Text(q.category.replacingOccurrences(of: "_", with: " ").uppercased())
+                            Text(localizer.localizedCategory(q.category).uppercased())
                                 .font(.system(size: 12, weight: .semibold))
                                 .foregroundColor(AppTheme.blue)
                                 .padding(.horizontal, 10)
@@ -194,7 +194,7 @@ private struct EvidenceBlockView: View {
                 HStack(spacing: 4) {
                     Image(systemName: "text.book.closed")
                         .font(.system(size: 12))
-                    Text(localizer.localized("fromTheManual"))
+                    Text(localizer.fromManualLabel())
                         .font(.system(size: 12, weight: .semibold))
                 }
                 .foregroundColor(AppTheme.gray)

@@ -100,7 +100,7 @@ fun QuizScreen(vm: QuizViewModel) {
         // Category + miss badge
         Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
             Text(
-                q.category.replace("_", " ").uppercase(),
+                vm.catName(q.category).uppercase(),
                 fontSize = 12.sp,
                 fontWeight = FontWeight.SemiBold,
                 color = c.blue,
@@ -193,7 +193,7 @@ fun QuizScreen(vm: QuizViewModel) {
                 Box(modifier = Modifier.width(4.dp).fillMaxHeight().background(c.gray))
                 Column(modifier = Modifier.padding(12.dp)) {
                     Text(
-                        vm.t("fromManual"),
+                        vm.fromManualLabel(),
                         fontSize = 12.sp,
                         fontWeight = FontWeight.SemiBold,
                         color = c.gray,

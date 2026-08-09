@@ -413,9 +413,7 @@ private fun CategoryRow(
     vm: QuizViewModel,
 ) {
     val c = AppTheme.colors
-    val label = cat.split("_").joinToString(" ") { word ->
-        word.replaceFirstChar { it.uppercase() }
-    }
+    val label = vm.catName(cat)
     Row(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,

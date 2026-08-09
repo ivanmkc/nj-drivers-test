@@ -66,7 +66,16 @@ fun StatsScreen(vm: QuizViewModel) {
         // Top stats
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
             Box(Modifier.weight(1f)) { StatCard("${vm.quizHistory().size}", vm.t("quizzes"), c.blue) }
-            Box(Modifier.weight(1f)) { StatCard("${vm.averageScore()}%", vm.t("avgScore"), c.green) }
+            Box(Modifier.weight(1f)) {
+                val avgPct = vm.averageScore()
+                val passingPct = vm.currentState?.passingScorePct ?: DEFAULT_PASSING_PCT
+                val avgColor = when {
+                    avgPct >= passingPct -> c.green
+                    avgPct >= 50 -> c.orange
+                    else -> c.red
+                }
+                StatCard("$avgPct%", vm.t("avgScore"), avgColor)
+            }
             Box(Modifier.weight(1f)) { StatCard("${vm.questionsSeen()}", vm.t("qsSeen")) }
         }
         Spacer(Modifier.height(10.dp))
@@ -117,7 +126,7 @@ fun StatsScreen(vm: QuizViewModel) {
             Text(vm.t("accuracyByCategory"), fontSize = 15.sp, fontWeight = FontWeight.SemiBold)
             Spacer(Modifier.height(12.dp))
             cats.forEach { (cat, pct) ->
-                CategoryBar(cat, pct)
+                CategoryBar(cat, pct, vm)
                 Spacer(Modifier.height(8.dp))
             }
             Spacer(Modifier.height(16.dp))
@@ -148,7 +157,7 @@ fun StatsScreen(vm: QuizViewModel) {
                                 style = TextStyle(fontFeatureSettings = "tnum"),
                             )
                             Text("\u00B7", color = c.gray)
-                            Text(w.category.replace("_", " "), fontSize = 12.sp, color = c.gray)
+                            Text(vm.catName(w.category), fontSize = 12.sp, color = c.gray)
                         }
                     }
                 }
@@ -195,6 +204,7 @@ fun StatsScreen(vm: QuizViewModel) {
 private fun CategoryBar(
     category: String,
     pct: Int,
+    vm: QuizViewModel,
 ) {
     val c = AppTheme.colors
     val barColor = when {
@@ -204,7 +214,7 @@ private fun CategoryBar(
     }
     Row(verticalAlignment = Alignment.CenterVertically) {
         Text(
-            category.replace("_", " ").replaceFirstChar { it.uppercase() },
+            vm.catName(category),
             fontSize = 13.sp,
             modifier = Modifier.width(110.dp),
             maxLines = 1,

@@ -197,7 +197,7 @@
   .category-bars { margin-bottom: 24px; }
   .category-bars h4 { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
   .cat-bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 13px; }
-  .cat-bar-label { width: 110px; flex-shrink: 0; text-transform: capitalize; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .cat-bar-label { width: 110px; flex-shrink: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .cat-bar-track { flex: 1; height: 10px; background: var(--border); border-radius: 5px; overflow: hidden; }
   .cat-bar-fill { height: 100%; border-radius: 5px; }
   .cat-bar-pct { width: 36px; text-align: right; font-weight: 600; font-size: 13px; font-variant-numeric: tabular-nums; }
@@ -229,7 +229,7 @@
   .about-cats { list-style: none; padding: 0; margin: 0; }
   .about-cats li {
     display: flex; align-items: center; gap: 10px; padding: 4px 0;
-    font-size: 13px; text-transform: capitalize;
+    font-size: 13px;
   }
   .about-cats li .cat-name { flex: 1; }
   .about-cats li .cat-bar { flex: 2; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
@@ -348,7 +348,7 @@
     <div class="stats-title" data-i18n="yourProgress"></div>
     <div class="stats-grid">
       <div class="stat-card"><div class="num blue" id="s-total">0</div><div class="lbl" data-i18n="quizzes"></div></div>
-      <div class="stat-card"><div class="num green" id="s-avg">0%</div><div class="lbl" data-i18n="avgScore"></div></div>
+      <div class="stat-card"><div class="num" id="s-avg">0%</div><div class="lbl" data-i18n="avgScore"></div></div>
       <div class="stat-card"><div class="num" id="s-seen">0</div><div class="lbl" data-i18n="qsSeen"></div></div>
     </div>
     <div class="stats-grid" style="grid-template-columns: 1fr 1fr;">
@@ -398,6 +398,18 @@ function applyI18n() {
   document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
   document.querySelectorAll('[data-i18n-html]').forEach(el => { el.innerHTML = t(el.dataset.i18nHtml); });
   document.documentElement.lang = currentLang;
+}
+
+function catName(key) {
+  const i18nKey = 'cat_' + key;
+  const val = (I18N[currentLang] && I18N[currentLang][i18nKey]) || (I18N['en'] && I18N['en'][i18nKey]);
+  return val || key.replace(/_/g, ' ');
+}
+
+function avgScoreColor(pct, passingPct) {
+  if (pct >= passingPct) return 'var(--green)';
+  if (pct >= 50) return 'var(--orange)';
+  return 'var(--red)';
 }
 
 function isOfficialLang(lang, officialList) {
@@ -589,7 +601,7 @@ function renderAboutSection() {
     html += '<ul class="about-cats">';
     for (const [cat, count] of entries) {
       const pct = Math.round((count / maxCount) * 100);
-      html += `<li><span class="cat-name">${esc(cat.replace(/_/g, ' '))}</span><span class="cat-bar"><span class="cat-fill" style="width:${pct}%"></span></span><span class="cat-count">${count}</span></li>`;
+      html += `<li><span class="cat-name">${esc(catName(cat))}</span><span class="cat-bar"><span class="cat-fill" style="width:${pct}%"></span></span><span class="cat-count">${count}</span></li>`;
     }
     html += '</ul>';
   }
@@ -674,7 +686,10 @@ function updateStartScreen() {
   if (h.length === 0) { banner.style.display = 'none'; document.getElementById('weak-count').style.display = 'none'; return; }
   banner.style.display = 'block';
   document.getElementById('banner-quizzes').textContent = h.length;
-  document.getElementById('banner-avg').textContent = Math.round(h.reduce((s, r) => s + r.pct, 0) / h.length) + '%';
+  const bannerAvg = Math.round(h.reduce((s, r) => s + r.pct, 0) / h.length);
+  const bannerAvgEl = document.getElementById('banner-avg');
+  bannerAvgEl.textContent = bannerAvg + '%';
+  bannerAvgEl.style.color = avgScoreColor(bannerAvg, currentState.passing_score_pct);
   let streak = 0;
   for (let i = h.length - 1; i >= 0; i--) { if (h[i].pct >= currentState.passing_score_pct) streak++; else break; }
   document.getElementById('banner-streak').textContent = streak;
@@ -737,7 +752,7 @@ function showQuestion() {
   document.getElementById('q-counter').textContent = `${currentIdx + 1} / ${questions.length}`;
   document.getElementById('score-correct').textContent = correctCount;
   document.getElementById('score-wrong').textContent = wrongCount;
-  document.getElementById('q-category').textContent = q.category.replace(/_/g, ' ');
+  document.getElementById('q-category').textContent = catName(q.category);
   document.getElementById('q-text').textContent = q.question;
   const imgWrap = document.getElementById('q-image-wrap');
   const imgEl = document.getElementById('q-image');
@@ -786,7 +801,9 @@ async function selectAnswer(letter, btn) {
   document.getElementById('explanation').classList.add('visible');
   const evidenceBlock = document.getElementById('evidence-block');
   if (data.evidence && data.evidence.length > 0) {
-    evidenceBlock.innerHTML = '<div class="evidence-label">From the manual</div>' + data.evidence.map(e => '<div>' + esc(e) + '</div>').join('');
+    const enNote = t('fromTheManualEnNote');
+    const evidenceLabel = esc(t('fromTheManual')) + (enNote ? ' ' + esc(enNote) : '');
+    evidenceBlock.innerHTML = '<div class="evidence-label">' + evidenceLabel + '</div>' + data.evidence.map(e => '<div>' + esc(e) + '</div>').join('');
     evidenceBlock.style.display = 'block';
   } else {
     evidenceBlock.style.display = 'none';
@@ -838,7 +855,10 @@ function showStats() {
   const h = store.history;
   showScreen('stats-screen'); applyI18n();
   document.getElementById('s-total').textContent = h.length;
-  document.getElementById('s-avg').textContent = (h.length ? Math.round(h.reduce((s, r) => s + r.pct, 0) / h.length) : 0) + '%';
+  const avgPct = h.length ? Math.round(h.reduce((s, r) => s + r.pct, 0) / h.length) : 0;
+  const avgEl = document.getElementById('s-avg');
+  avgEl.textContent = avgPct + '%';
+  avgEl.style.color = avgScoreColor(avgPct, currentState.passing_score_pct);
   document.getElementById('s-seen').textContent = Object.keys(store.questions).length;
   document.getElementById('s-best').textContent = (h.length ? Math.max(...h.map(r => r.pct)) : 0) + '%';
   let streak = 0;
@@ -864,7 +884,7 @@ function showStats() {
     catBars.innerHTML = sortedCats.map(([cat, data]) => {
       const pct = Math.round((data.correct / data.seen) * 100);
       const color = pct >= 80 ? 'var(--green)' : pct >= 60 ? 'var(--orange)' : 'var(--red)';
-      return `<div class="cat-bar-row"><span class="cat-bar-label">${cat.replace(/_/g, ' ')}</span><div class="cat-bar-track"><div class="cat-bar-fill" style="width:${pct}%;background:${color}"></div></div><span class="cat-bar-pct" style="color:${color}">${pct}%</span></div>`;
+      return `<div class="cat-bar-row"><span class="cat-bar-label">${esc(catName(cat))}</span><div class="cat-bar-track"><div class="cat-bar-fill" style="width:${pct}%;background:${color}"></div></div><span class="cat-bar-pct" style="color:${color}">${pct}%</span></div>`;
     }).join('');
   }
   const weakIds = getWeakQuestionIds(store);
@@ -875,7 +895,7 @@ function showStats() {
     weakSection.style.display = 'block';
     weakList.innerHTML = weakIds.slice(0, 15).map(w => {
       const qData = store.questions[w.id];
-      return `<div class="weak-item"><div class="wq">Q${w.id}</div><div class="wm">${t('missed')} <span class="miss-pct">${w.wrong}/${w.seen} (${Math.round(w.missRate * 100)}%)</span> &middot; ${(qData.category || '').replace(/_/g, ' ')}</div></div>`;
+      return `<div class="weak-item"><div class="wq">Q${w.id}</div><div class="wm">${t('missed')} <span class="miss-pct">${w.wrong}/${w.seen} (${Math.round(w.missRate * 100)}%)</span> &middot; ${esc(catName(qData.category || ''))}</div></div>`;
     }).join('');
   }
   window.scrollTo({ top: 0 });

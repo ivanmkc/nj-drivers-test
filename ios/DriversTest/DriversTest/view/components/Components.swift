@@ -326,6 +326,7 @@ struct StatCardView: View {
 struct CategoryBarView: View {
     let category: String
     let pct: Int
+    var localizer: Localizer = .shared
 
     private var barColor: Color {
         if pct >= 80 { return AppTheme.green }
@@ -335,7 +336,7 @@ struct CategoryBarView: View {
 
     var body: some View {
         HStack(spacing: 10) {
-            Text(category.replacingOccurrences(of: "_", with: " ").capitalized)
+            Text(localizer.localizedCategory(category))
                 .font(.system(size: 13))
                 .frame(width: 110, alignment: .leading)
                 .lineLimit(1)
@@ -380,7 +381,7 @@ struct WeakItemView: View {
                     .foregroundColor(AppTheme.red)
                 Text("\u{00B7}")
                     .foregroundColor(AppTheme.gray)
-                Text(weak.category.replacingOccurrences(of: "_", with: " "))
+                Text(localizer.localizedCategory(weak.category))
                     .font(.system(size: 12))
                     .foregroundColor(AppTheme.gray)
             }

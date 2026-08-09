@@ -57,6 +57,17 @@ class Localizer {
             "sourceLabel" to "Source",
             "editionLabel" to "Edition",
             "fromManual" to "From the manual",
+            "fromManualEnNote" to "",
+            "cat_license_system" to "License System",
+            "cat_driver_testing" to "Driver Testing",
+            "cat_driver_responsibility" to "Driver Responsibility",
+            "cat_safe_driving_rules" to "Safe Driving Rules",
+            "cat_defensive_driving" to "Defensive Driving",
+            "cat_alcohol_drugs_health" to "Alcohol, Drugs & Health",
+            "cat_penalties_and_points" to "Penalties & Points",
+            "cat_sharing_the_road" to "Sharing the Road",
+            "cat_vehicle_information" to "Vehicle Information",
+            "cat_signs_and_signals" to "Signs & Signals",
             "gradeLabel" to "Grade",
             "fidelityLabel" to "fidelity",
             "coverageLabel" to "coverage",
@@ -119,6 +130,17 @@ class Localizer {
             "sourceLabel" to "出典",
             "editionLabel" to "版",
             "fromManual" to "マニュアルより",
+            "fromManualEnNote" to "（英語）",
+            "cat_license_system" to "免許制度",
+            "cat_driver_testing" to "運転試験",
+            "cat_driver_responsibility" to "運転者の責任",
+            "cat_safe_driving_rules" to "安全運転のルール",
+            "cat_defensive_driving" to "防御運転",
+            "cat_alcohol_drugs_health" to "飲酒・薬物・健康",
+            "cat_penalties_and_points" to "罰則と点数",
+            "cat_sharing_the_road" to "道路の共有",
+            "cat_vehicle_information" to "車両情報",
+            "cat_signs_and_signals" to "標識と信号",
             "gradeLabel" to "評価",
             "fidelityLabel" to "忠実度",
             "coverageLabel" to "カバー率",
@@ -181,6 +203,17 @@ class Localizer {
             "sourceLabel" to "Fuente",
             "editionLabel" to "Edición",
             "fromManual" to "Del manual",
+            "fromManualEnNote" to "(en inglés)",
+            "cat_license_system" to "Sistema de licencias",
+            "cat_driver_testing" to "Exámenes de manejo",
+            "cat_driver_responsibility" to "Responsabilidad del conductor",
+            "cat_safe_driving_rules" to "Reglas de manejo seguro",
+            "cat_defensive_driving" to "Manejo defensivo",
+            "cat_alcohol_drugs_health" to "Alcohol, drogas y salud",
+            "cat_penalties_and_points" to "Multas y puntos",
+            "cat_sharing_the_road" to "Compartir el camino",
+            "cat_vehicle_information" to "Información del vehículo",
+            "cat_signs_and_signals" to "Señales y semáforos",
             "gradeLabel" to "Grado",
             "fidelityLabel" to "fidelidad",
             "coverageLabel" to "cobertura",
@@ -245,6 +278,17 @@ class Localizer {
             "sourceLabel" to "Source",
             "editionLabel" to "Edition",
             "fromManual" to "Du manuel",
+            "fromManualEnNote" to "(en anglais)",
+            "cat_license_system" to "Système de permis",
+            "cat_driver_testing" to "Examens de conduite",
+            "cat_driver_responsibility" to "Responsabilité du conducteur",
+            "cat_safe_driving_rules" to "Règles de conduite sûre",
+            "cat_defensive_driving" to "Conduite défensive",
+            "cat_alcohol_drugs_health" to "Alcool, drogues et santé",
+            "cat_penalties_and_points" to "Sanctions et points",
+            "cat_sharing_the_road" to "Partage de la route",
+            "cat_vehicle_information" to "Informations sur le véhicule",
+            "cat_signs_and_signals" to "Panneaux et signaux",
             "gradeLabel" to "Note",
             "fidelityLabel" to "fidélité",
             "coverageLabel" to "couverture",
@@ -268,5 +312,24 @@ class Localizer {
             s = s.replace("{$k}", v)
         }
         return s
+    }
+
+    fun localizedCategory(
+        key: String,
+        lang: String,
+    ): String {
+        val i18nKey = "cat_$key"
+        val result = translations[lang]?.get(i18nKey) ?: translations["en"]?.get(i18nKey)
+        if (result != null && result != i18nKey) return result
+        return key.replace("_", " ").split(" ").joinToString(" ") { word ->
+            word.replaceFirstChar { it.uppercase() }
+        }
+    }
+
+    fun fromManualLabel(lang: String): String {
+        val base = t("fromManual", lang)
+        val note = t("fromManualEnNote", lang)
+        if (note.isEmpty()) return base
+        return "$base $note"
     }
 }
