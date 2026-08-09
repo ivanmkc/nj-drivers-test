@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import type { Question, SessionResult } from '../types';
-import { t } from '../i18n';
+import { t, categoryName } from '../i18n';
 import { useStore } from '../hooks/useStore';
 import ThemeToggle from './ThemeToggle';
 
@@ -59,6 +59,7 @@ export default function QuizScreen({
       onAnswer(
         {
           id: question.id,
+          category: question.category,
           question: question.question,
           yourAnswer: letter,
           yourAnswerText: question.choices[letter],
@@ -101,7 +102,7 @@ export default function QuizScreen({
           >
             <path d="M19 12H5M12 19l-7-7 7-7" />
           </svg>
-          <span>Exit</span>
+          <span>{t('exit')}</span>
         </button>
         <span className="tabular-nums">
           {currentIdx + 1} / {totalQuestions}
@@ -116,7 +117,7 @@ export default function QuizScreen({
       </div>
       <div>
         <span className="inline-block bg-primary-surface text-primary px-2.5 py-1 rounded-full text-xs font-semibold mb-3 uppercase tracking-wider">
-          {question.category.replace(/_/g, ' ')}
+          {categoryName(question.category)}
         </span>
         {qStats?.wrong > 0 && (
           <span className="inline-block bg-error-surface text-error px-2.5 py-1 rounded-full text-xs font-semibold ml-1.5">
@@ -264,7 +265,7 @@ export default function QuizScreen({
                     )}
                   </div>
                 ))}
-                <p className="text-xs text-subtle font-semibold">From the manual</p>
+                <p className="text-xs text-subtle font-semibold">{t('fromTheManual')}</p>
               </div>
             );
           })()}

@@ -1,14 +1,10 @@
 import { useState, useEffect, useMemo } from 'react';
 import type { StateSummary, QuizMode } from '../types';
-import { t, getLangName } from '../i18n';
+import { t, getLangName, categoryName } from '../i18n';
 import { useStore } from '../hooks/useStore';
 import { calcPassStreak, calcAverageScore } from '../utils';
 import { QUESTION_COUNT_OPTIONS, DEFAULT_QUESTION_COUNT } from '../constants';
 import LangBar from './LangBar';
-
-function prettifyCategory(cat: string): string {
-  return cat.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
-}
 
 function formatDate(iso: string): string {
   try {
@@ -47,7 +43,7 @@ function OfficialTestLanguagesRow({ state }: { state: StateSummary }) {
           {t('officialTestLangsUnknown', { agency: state.agency })}
         </p>
       )}
-      <p className="text-[11px] text-subtle leading-snug">
+      <p className="text-sm text-muted leading-snug">
         {t('appPracticeLangs', { langs: practiceLangs })}
       </p>
     </div>
@@ -131,7 +127,7 @@ export default function StartScreen({
         onSwitch={onSwitchLang}
       />
       {state.official_test_languages != null && (
-        <p className="text-subtle text-[11px] text-right mb-1 leading-snug">
+        <p className="text-muted text-sm text-right mb-1 leading-snug">
           {t('officialLangCaption', { agency: state.agency })}
         </p>
       )}
@@ -185,7 +181,7 @@ export default function StartScreen({
             aria-expanded={aboutOpen}
             className="w-full flex items-center justify-between px-4 py-3 text-sm font-semibold text-foreground bg-transparent border-none cursor-pointer"
           >
-            <span>About this test</span>
+            <span>{t('aboutThisTest')}</span>
             <svg
               className={`w-4 h-4 text-muted transition-transform ${aboutOpen ? 'rotate-180' : ''}`}
               viewBox="0 0 24 24"
@@ -203,7 +199,7 @@ export default function StartScreen({
             <div className="px-4 pb-4 text-sm leading-relaxed">
               {state.source && (
                 <p className="mb-2">
-                  <span className="text-muted">Source: </span>
+                  <span className="text-muted">{t('sourceLabel')} </span>
                   {verification?.manual_url ? (
                     <a
                       href={verification.manual_url}
@@ -229,15 +225,12 @@ export default function StartScreen({
                 <div className="mb-3">
                   <p className="flex items-start gap-1.5 mb-1.5">
                     <span className="text-success shrink-0">&#10003;</span>
-                    <span>
-                      All {verification.questions_judged} questions verified against the official
-                      manual
-                    </span>
+                    <span>{t('verifiedBadge', { count: verification.questions_judged ?? 0 })}</span>
                   </p>
                   <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-muted">
                     {verification.precision_grade && (
                       <span>
-                        Grade{' '}
+                        {t('gradeLabel')}{' '}
                         <span className="font-semibold text-foreground">
                           {verification.precision_grade}
                         </span>
@@ -245,7 +238,7 @@ export default function StartScreen({
                     )}
                     {verification.precision_avg_fidelity != null && (
                       <span>
-                        Fidelity{' '}
+                        {t('fidelityLabel')}{' '}
                         <span className="font-semibold text-foreground tabular-nums">
                           {verification.precision_avg_fidelity}/10
                         </span>
@@ -253,7 +246,7 @@ export default function StartScreen({
                     )}
                     {verification.recall_coverage_pct != null && (
                       <span>
-                        Topic coverage{' '}
+                        {t('topicCoverageLabel')}{' '}
                         <span className="font-semibold text-foreground tabular-nums">
                           {verification.recall_coverage_pct}%
                         </span>
@@ -269,7 +262,9 @@ export default function StartScreen({
                         </span>
                       ))}
                     {verification.verified_at && (
-                      <span>Verified {formatDate(verification.verified_at)}</span>
+                      <span>
+                        {t('verifiedLabel')} {formatDate(verification.verified_at)}
+                      </span>
                     )}
                   </div>
                 </div>
@@ -278,11 +273,11 @@ export default function StartScreen({
               {sortedCategories.length > 0 && (
                 <div>
                   <p className="text-xs text-muted font-semibold uppercase tracking-wider mb-2">
-                    Categories
+                    {t('categoriesLabel')}
                   </p>
                   {sortedCategories.map(([cat, count]) => (
                     <div key={cat} className="flex items-center gap-2 mb-1.5 text-xs">
-                      <span className="w-32 shrink-0 truncate">{prettifyCategory(cat)}</span>
+                      <span className="w-32 shrink-0 truncate">{categoryName(cat)}</span>
                       <div className="flex-1 h-2 bg-border rounded-full overflow-hidden">
                         <div
                           className="h-full bg-primary rounded-full"
@@ -394,7 +389,7 @@ export default function StartScreen({
       <p className="font-semibold mb-2 text-sm">{t('numQuestions')}</p>
       <div className="flex gap-2 justify-center mb-5 flex-wrap">
         {counts.map((n) => {
-          const label = n === state.total_questions ? 'All' : String(n);
+          const label = n === state.total_questions ? t('allQuestions') : String(n);
           const active = n === selectedCount;
           return (
             <button

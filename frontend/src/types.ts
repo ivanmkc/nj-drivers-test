@@ -74,6 +74,7 @@ export interface QuestionStats {
 
 export interface SessionResult {
   id: number;
+  category: string;
   question: string;
   yourAnswer: string;
   yourAnswerText: string;

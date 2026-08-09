@@ -178,7 +178,10 @@ export default function App() {
       const storeData = store.load();
       const qId = String(result.id);
       if (!storeData.questions[qId]) {
-        storeData.questions[qId] = { seen: 0, wrong: 0, category: '' };
+        storeData.questions[qId] = { seen: 0, wrong: 0, category: result.category };
+      }
+      if (!storeData.questions[qId].category) {
+        storeData.questions[qId].category = result.category;
       }
       storeData.questions[qId].seen++;
       if (!isCorrect) storeData.questions[qId].wrong++;

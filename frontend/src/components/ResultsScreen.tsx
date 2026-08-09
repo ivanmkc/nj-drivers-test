@@ -88,7 +88,7 @@ export default function ResultsScreen({
                       {r.correctAnswer}: {r.correctAnswerText}
                     </strong>
                   </div>
-                  <div className="text-xs text-muted mt-1.5 italic">{r.explanation}</div>
+                  <div className="text-sm text-muted mt-1.5 italic">{r.explanation}</div>
                 </div>
               ))}
             </div>

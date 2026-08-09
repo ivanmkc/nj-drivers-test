@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import type { StateSummary } from '../types';
-import { t } from '../i18n';
+import { t, categoryName } from '../i18n';
 import { useStore } from '../hooks/useStore';
 import { calcPassStreak, calcAverageScore } from '../utils';
 import { MAX_WEAK_DISPLAY, GOOD_ACCURACY_PCT, FAIR_ACCURACY_PCT } from '../constants';
@@ -77,7 +77,11 @@ export default function StatsScreen({ state, store, onBack }: StatsScreenProps) 
           <div className="text-[11px] text-muted uppercase tracking-wide mt-1">{t('quizzes')}</div>
         </div>
         <div className="bg-surface rounded-xl py-4 px-3 text-center border border-border">
-          <div className="text-2xl font-bold text-success tabular-nums">{avg}%</div>
+          <div
+            className={`text-2xl font-bold tabular-nums ${avg >= state.passing_score_pct ? 'text-success' : avg >= 50 ? 'text-warning' : 'text-error'}`}
+          >
+            {avg}%
+          </div>
           <div className="text-[11px] text-muted uppercase tracking-wide mt-1">{t('avgScore')}</div>
         </div>
         <div className="bg-surface rounded-xl py-4 px-3 text-center border border-border">
@@ -122,7 +126,7 @@ export default function StatsScreen({ state, store, onBack }: StatsScreenProps) 
             const cssColor = `rgb(var(--color-${colorVar}))`;
             return (
               <div key={cat} className="flex items-center gap-2.5 mb-2 text-xs">
-                <span className="w-28 shrink-0 capitalize truncate">{cat.replace(/_/g, ' ')}</span>
+                <span className="w-28 shrink-0 truncate">{categoryName(cat)}</span>
                 <div className="flex-1 h-2.5 bg-border rounded-full overflow-hidden">
                   <div
                     className="h-full rounded-full"
@@ -155,7 +159,7 @@ export default function StatsScreen({ state, store, onBack }: StatsScreenProps) 
                 <span className="text-error font-semibold tabular-nums">
                   {w.wrong}/{w.seen} ({Math.round(w.missRate * 100)}%)
                 </span>{' '}
-                &middot; {(w.category || '').replace(/_/g, ' ')}
+                &middot; {categoryName(w.category || '')}
               </div>
             </div>
           ))}

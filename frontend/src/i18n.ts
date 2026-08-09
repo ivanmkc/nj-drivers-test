@@ -63,3 +63,10 @@ export function t(key: string, vars?: Record<string, string | number>): string {
   }
   return s;
 }
+
+export function categoryName(cat: string): string {
+  const key = `cat_${cat}`;
+  const localized = i18nData[currentLang]?.[key] || i18nData['en']?.[key];
+  if (localized) return localized;
+  return cat.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+}
