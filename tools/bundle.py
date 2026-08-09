@@ -103,6 +103,7 @@ def build_bundle():
                 "passing_score_pct": cfg["passing_score_pct"],
                 "test_question_count": cfg["test_question_count"],
                 "source": cfg.get("source"),
+                "official_test_languages": cfg.get("official_test_languages"),
                 "categories": categories,
                 "verification": verification,
                 "languages": langs,
