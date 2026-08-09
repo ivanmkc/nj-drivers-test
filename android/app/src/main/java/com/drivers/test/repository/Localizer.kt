@@ -60,6 +60,12 @@ class Localizer {
             "gradeLabel" to "Grade",
             "fidelityLabel" to "fidelity",
             "coverageLabel" to "coverage",
+            "officialTestLangsLabel" to "Official test languages",
+            "officialTestCaption" to "✓ = offered on the official {agency} test — others practice-only",
+            "officialTestLangsAndOthers" to "and others",
+            "officialTestLangsUnknown" to "Not stated in the manual — check with {agency}",
+            "officialTestPracticeNote" to
+                "This app also lets you practice in languages not offered on the official test.",
         ),
         "ja" to mapOf(
             "appTitle" to "運転免許テスト練習",
@@ -116,6 +122,11 @@ class Localizer {
             "gradeLabel" to "評価",
             "fidelityLabel" to "忠実度",
             "coverageLabel" to "カバー率",
+            "officialTestLangsLabel" to "公式テスト言語",
+            "officialTestCaption" to "✓ = {agency}公式テストで利用可能 — その他は練習用のみ",
+            "officialTestLangsAndOthers" to "およびその他",
+            "officialTestLangsUnknown" to "マニュアルに記載なし — {agency}にお問い合わせください",
+            "officialTestPracticeNote" to "このアプリでは公式テスト以外の言語でも練習できます。",
         ),
         "es" to mapOf(
             "appTitle" to "Práctica de Examen de Conducir",
@@ -173,6 +184,13 @@ class Localizer {
             "gradeLabel" to "Grado",
             "fidelityLabel" to "fidelidad",
             "coverageLabel" to "cobertura",
+            "officialTestLangsLabel" to "Idiomas del examen oficial",
+            "officialTestCaption" to
+                "✓ = disponible en el examen oficial del {agency} — los demás son solo para práctica",
+            "officialTestLangsAndOthers" to "y otros",
+            "officialTestLangsUnknown" to "No indicado en el manual — consulte con {agency}",
+            "officialTestPracticeNote" to
+                "Esta app también permite practicar en idiomas no disponibles en el examen oficial.",
         ),
         "fr" to mapOf(
             "appTitle" to "Pratique d'examen de conduite",
@@ -230,6 +248,13 @@ class Localizer {
             "gradeLabel" to "Note",
             "fidelityLabel" to "fidélité",
             "coverageLabel" to "couverture",
+            "officialTestLangsLabel" to "Langues de l'examen officiel",
+            "officialTestCaption" to
+                "✓ = proposé à l'examen officiel {agency} — les autres sont pour la pratique uniquement",
+            "officialTestLangsAndOthers" to "et autres",
+            "officialTestLangsUnknown" to "Non précisé dans le manuel — vérifiez auprès de {agency}",
+            "officialTestPracticeNote" to
+                "Cette app permet aussi de pratiquer dans des langues non proposées à l'examen officiel.",
         ),
     )
 

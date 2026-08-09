@@ -23,6 +23,7 @@ private data class BundledState(
     val source: String? = null,
     val categories: Map<String, Int>? = null,
     val verification: Verification? = null,
+    @SerializedName("official_test_languages") val officialTestLanguages: List<String>? = null,
     val languages: Map<String, List<BundledQuestion>>,
 )
 
@@ -65,6 +66,7 @@ class ApiClient {
                 source = s.source,
                 categories = s.categories,
                 verification = s.verification,
+                officialTestLanguages = s.officialTestLanguages,
             )
         }
 

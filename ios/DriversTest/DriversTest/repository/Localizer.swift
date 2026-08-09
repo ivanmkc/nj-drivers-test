@@ -78,6 +78,11 @@ class Localizer: ObservableObject {
                 "translations": "Translations",
                 "questionsInCategory": "questions",
                 "fromTheManual": "From the manual",
+                "officialTestLangsCaption": "✓ = offered on the official {agency} test — others practice-only",
+                "officialTestLangsRow": "Official test languages",
+                "officialTestLangsAndOthers": "and others",
+                "officialTestLangsNotStated": "Not stated in the manual — check with {agency}",
+                "officialTestLangsPractice": "This app offers practice in all available languages regardless of official test language.",
             ],
             "ja": [
                 "appTitle": "運転免許テスト練習",
@@ -137,6 +142,11 @@ class Localizer: ObservableObject {
                 "translations": "翻訳",
                 "questionsInCategory": "問",
                 "fromTheManual": "マニュアルより",
+                "officialTestLangsCaption": "✓ = {agency}の公式試験で提供 — その他は練習用",
+                "officialTestLangsRow": "公式試験の言語",
+                "officialTestLangsAndOthers": "その他",
+                "officialTestLangsNotStated": "マニュアルに記載なし — {agency}にお問い合わせください",
+                "officialTestLangsPractice": "このアプリは公式試験の言語に関わらず、すべての利用可能な言語で練習できます。",
             ],
             "es": [
                 "appTitle": "Práctica de Examen de Conducir",
@@ -196,6 +206,11 @@ class Localizer: ObservableObject {
                 "translations": "Traducciones",
                 "questionsInCategory": "preguntas",
                 "fromTheManual": "Del manual",
+                "officialTestLangsCaption": "✓ = disponible en el examen oficial del {agency} — los demás solo para práctica",
+                "officialTestLangsRow": "Idiomas oficiales del examen",
+                "officialTestLangsAndOthers": "y otros",
+                "officialTestLangsNotStated": "No indicado en el manual — consulte con {agency}",
+                "officialTestLangsPractice": "Esta aplicación ofrece práctica en todos los idiomas disponibles sin importar el idioma oficial del examen.",
             ],
             "fr": [
                 "appTitle": "Pratique d'examen de conduite",
@@ -255,6 +270,11 @@ class Localizer: ObservableObject {
                 "translations": "Traductions",
                 "questionsInCategory": "questions",
                 "fromTheManual": "Du manuel",
+                "officialTestLangsCaption": "✓ = proposé à l'examen officiel de {agency} — les autres pour la pratique uniquement",
+                "officialTestLangsRow": "Langues officielles de l'examen",
+                "officialTestLangsAndOthers": "et autres",
+                "officialTestLangsNotStated": "Non précisé dans le manuel — contactez {agency}",
+                "officialTestLangsPractice": "Cette application propose la pratique dans toutes les langues disponibles, quel que soit la langue officielle de l'examen.",
             ],
         ]
     }

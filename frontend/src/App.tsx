@@ -100,6 +100,7 @@ export default function App() {
           source: s.source,
           categories: s.categories,
           verification: s.verification,
+          official_test_languages: s.official_test_languages,
         }));
         setAllStates(states);
 

@@ -66,7 +66,17 @@ fun HomeScreen(vm: QuizViewModel) {
             vm.currentLang,
             langs = state.languages.ifEmpty { listOf("en", "es") },
             langLabels = vm.localizer.langLabels,
+            officialTestLanguages = state.officialTestLanguages,
         ) { vm.switchLang(it) }
+
+        state.officialTestLanguages?.let {
+            Spacer(Modifier.height(4.dp))
+            Text(
+                vm.t("officialTestCaption", mapOf("agency" to state.agency)),
+                fontSize = 11.sp,
+                color = c.gray,
+            )
+        }
 
         Spacer(Modifier.height(16.dp))
 
@@ -280,6 +290,27 @@ private fun AboutThisTestSection(
                     )
                 }
 
+                Spacer(Modifier.height(6.dp))
+                val officialLangs = state.officialTestLanguages
+                val officialLangsText = if (officialLangs != null) {
+                    formatOfficialLanguages(officialLangs, vm.t("officialTestLangsAndOthers"))
+                } else {
+                    vm.t("officialTestLangsUnknown", mapOf("agency" to state.agency))
+                }
+                Text(
+                    "${vm.t("officialTestLangsLabel")}: $officialLangsText",
+                    fontSize = 13.sp,
+                    color = c.gray,
+                )
+                if (state.languages.size > 1) {
+                    Spacer(Modifier.height(4.dp))
+                    Text(
+                        vm.t("officialTestPracticeNote"),
+                        fontSize = 12.sp,
+                        color = c.gray,
+                    )
+                }
+
                 state.verification?.let { v ->
                     val hasBadges = v.precisionGrade != null ||
                         v.precisionAvgFidelity != null ||
@@ -469,5 +500,19 @@ private fun ModeButton(
             }
         }
         Text(desc, fontSize = 11.sp, color = if (isActive) c.blue else c.gray)
+    }
+}
+
+private fun formatOfficialLanguages(
+    languages: List<String>,
+    andOthersText: String,
+): String {
+    val named = languages.filter { !it.equals("many", ignoreCase = true) }
+    val hasMany = languages.any { it.equals("many", ignoreCase = true) }
+    return when {
+        named.isNotEmpty() && hasMany -> "${named.joinToString(", ")}, $andOthersText"
+        named.isNotEmpty() -> named.joinToString(", ")
+        hasMany -> andOthersText
+        else -> ""
     }
 }

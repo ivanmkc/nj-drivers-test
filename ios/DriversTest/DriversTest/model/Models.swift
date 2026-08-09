@@ -37,6 +37,7 @@ struct StateInfo: Identifiable {
     let source: String?
     let categories: [String: Int]?
     let verification: StateVerification?
+    let officialTestLanguages: [String]?
 
     var id: String { code }
 

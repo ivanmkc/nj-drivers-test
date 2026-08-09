@@ -30,6 +30,7 @@ data class StateInfo(
     val source: String? = null,
     val categories: Map<String, Int>? = null,
     val verification: Verification? = null,
+    val officialTestLanguages: List<String>? = null,
 ) {
     val passCount: Int get() = ceil(testQuestionCount * passingScorePct / 100.0).toInt()
 }

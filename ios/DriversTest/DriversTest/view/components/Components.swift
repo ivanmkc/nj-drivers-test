@@ -24,30 +24,57 @@ extension View {
 struct LanguageBarView: View {
     @ObservedObject var localizer: Localizer
     var availableLangs: [String]?
+    var officialTestLanguages: [String]?
 
     private var langs: [String] {
         availableLangs ?? ["en", "es"]
     }
 
+    private static let langCodeToEnglish: [String: String] = [
+        "en": "english", "es": "spanish", "ja": "japanese", "fr": "french",
+    ]
+
+    private func isOfficialLang(_ langCode: String) -> Bool {
+        guard let official = officialTestLanguages else { return false }
+        if official.contains(where: { $0.lowercased() == "many" }) && official.count == 1 {
+            return false
+        }
+        guard let englishName = Self.langCodeToEnglish[langCode]?.lowercased() else { return false }
+        return official.contains { $0.lowercased() == englishName }
+    }
+
     var body: some View {
         HStack(spacing: 6) {
+            Image(systemName: "globe")
+                .font(.system(size: 16))
+                .foregroundColor(AppTheme.gray)
             Spacer()
             ForEach(langs, id: \.self) { lang in
+                let isOfficial = isOfficialLang(lang)
                 Button {
                     withAnimation(.easeInOut(duration: 0.2)) {
                         localizer.currentLang = lang
                     }
                 } label: {
-                    Text(localizer.langLabels[lang] ?? lang.uppercased())
-                        .font(.system(size: 13, weight: .semibold))
-                        .padding(.horizontal, 12)
-                        .padding(.vertical, 6)
-                        .foregroundColor(lang == localizer.currentLang ? AppTheme.blue : AppTheme.gray)
-                        .background(lang == localizer.currentLang ? AppTheme.blueLight : AppTheme.card)
-                        .cardStyle(cornerRadius: 20, borderColor: lang == localizer.currentLang ? AppTheme.blue : AppTheme.border, borderWidth: 1.5)
-                        .frame(minHeight: 44)
-                        .contentShape(Rectangle())
+                    HStack(spacing: 4) {
+                        Text(localizer.langLabels[lang] ?? lang.uppercased())
+                            .font(.system(size: 13, weight: .semibold))
+                        if officialTestLanguages != nil && isOfficial {
+                            Image(systemName: "checkmark.seal")
+                                .font(.system(size: 11))
+                                .foregroundColor(AppTheme.green)
+                                .accessibilityHidden(true)
+                        }
+                    }
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 6)
+                    .foregroundColor(lang == localizer.currentLang ? AppTheme.blue : AppTheme.gray)
+                    .background(lang == localizer.currentLang ? AppTheme.blueLight : AppTheme.card)
+                    .cardStyle(cornerRadius: 20, borderColor: lang == localizer.currentLang ? AppTheme.blue : AppTheme.border, borderWidth: 1.5)
+                    .frame(minHeight: 44)
+                    .contentShape(Rectangle())
                 }
+                .accessibilityHint(isOfficial ? "Official test language" : "")
             }
         }
     }

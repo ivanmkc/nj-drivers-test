@@ -31,6 +31,7 @@ for state_data in bundle["states"]:
         "passing_score_pct": state_data["passing_score_pct"],
         "test_question_count": state_data["test_question_count"],
         "source": state_data.get("source"),
+        "official_test_languages": state_data.get("official_test_languages"),
         "categories": state_data.get("categories"),
         "verification": state_data.get("verification"),
     }
@@ -98,6 +99,7 @@ def states():
         }
         if cfg.get("source"):
             entry["source"] = cfg["source"]
+        entry["official_test_languages"] = cfg.get("official_test_languages")
         if cfg.get("categories"):
             entry["categories"] = cfg["categories"]
         if cfg.get("verification"):

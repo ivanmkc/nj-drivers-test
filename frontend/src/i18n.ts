@@ -10,6 +10,13 @@ const LANG_LABELS: Record<string, string> = {
   fr: 'FR',
 };
 
+const LANG_NAMES: Record<string, string> = {
+  en: 'English',
+  es: 'Spanish',
+  ja: 'Japanese',
+  fr: 'French',
+};
+
 export function getLang() {
   return currentLang;
 }
@@ -25,6 +32,20 @@ export function getAllLangs() {
 
 export function getLangLabel(lang: string) {
   return LANG_LABELS[lang] || lang.toUpperCase();
+}
+
+export function getLangName(lang: string) {
+  return LANG_NAMES[lang] || lang;
+}
+
+export function isOfficialLang(
+  lang: string,
+  officialTestLanguages: string[] | null | undefined,
+): boolean {
+  if (!officialTestLanguages) return false;
+  const name = LANG_NAMES[lang]?.toLowerCase();
+  if (!name) return false;
+  return officialTestLanguages.some((l) => l.toLowerCase() === name);
 }
 
 export async function loadI18n(basePath: string) {

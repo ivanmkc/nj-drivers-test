@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import type { StateSummary, QuizMode } from '../types';
-import { t } from '../i18n';
+import { t, getLangName } from '../i18n';
 import { useStore } from '../hooks/useStore';
 import { calcPassStreak, calcAverageScore } from '../utils';
 import { QUESTION_COUNT_OPTIONS, DEFAULT_QUESTION_COUNT } from '../constants';
@@ -20,6 +20,38 @@ function formatDate(iso: string): string {
   } catch {
     return iso.split('T')[0];
   }
+}
+
+function formatOfficialLangs(langs: string[]): string {
+  const filtered = langs.filter((l) => l.toLowerCase() !== 'many');
+  const hasMany = langs.some((l) => l.toLowerCase() === 'many');
+  if (filtered.length === 0 && hasMany) return 'Many languages';
+  const list = filtered.join(', ');
+  return hasMany ? `${list}, and others` : list;
+}
+
+function OfficialTestLanguagesRow({ state }: { state: StateSummary }) {
+  const practiceLangs = state.languages.map((l) => getLangName(l)).join(', ');
+
+  return (
+    <div className="mt-3 pt-3 border-t border-border">
+      <p className="text-xs text-muted font-semibold uppercase tracking-wider mb-2">
+        {t('officialTestLanguagesLabel')}
+      </p>
+      {state.official_test_languages != null ? (
+        <p className="text-xs text-foreground mb-1.5">
+          {formatOfficialLangs(state.official_test_languages)}
+        </p>
+      ) : (
+        <p className="text-xs text-muted mb-1.5">
+          {t('officialTestLangsUnknown', { agency: state.agency })}
+        </p>
+      )}
+      <p className="text-[11px] text-subtle leading-snug">
+        {t('appPracticeLangs', { langs: practiceLangs })}
+      </p>
+    </div>
+  );
 }
 
 interface StartScreenProps {
@@ -92,7 +124,17 @@ export default function StartScreen({
 
   return (
     <>
-      <LangBar currentLang={lang} availableLangs={state.languages} onSwitch={onSwitchLang} />
+      <LangBar
+        currentLang={lang}
+        availableLangs={state.languages}
+        officialTestLanguages={state.official_test_languages}
+        onSwitch={onSwitchLang}
+      />
+      {state.official_test_languages != null && (
+        <p className="text-subtle text-[11px] text-right mb-1 leading-snug">
+          {t('officialLangCaption', { agency: state.agency })}
+        </p>
+      )}
       <div className="text-center pt-[4vh]">
         <h1 className="text-2xl font-bold text-primary mb-2">
           {t('title', {
@@ -254,6 +296,8 @@ export default function StartScreen({
                   ))}
                 </div>
               )}
+
+              <OfficialTestLanguagesRow state={state} />
             </div>
           )}
         </div>

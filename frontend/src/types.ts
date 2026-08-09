@@ -31,6 +31,7 @@ export interface StateConfig {
   source?: string;
   categories?: Record<string, number>;
   verification?: StateVerification;
+  official_test_languages?: string[] | null;
   languages: Record<string, Question[]>;
 }
 
@@ -49,6 +50,7 @@ export interface StateSummary {
   source?: string;
   categories?: Record<string, number>;
   verification?: StateVerification;
+  official_test_languages?: string[] | null;
 }
 
 export interface QuizStore {

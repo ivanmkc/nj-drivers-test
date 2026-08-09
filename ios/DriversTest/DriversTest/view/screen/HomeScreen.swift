@@ -7,8 +7,21 @@ struct HomeScreen: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 16) {
-                LanguageBarView(localizer: localizer, availableLangs: vm.currentState?.languages)
-                    .padding(.bottom, 4)
+                LanguageBarView(
+                    localizer: localizer,
+                    availableLangs: vm.currentState?.languages,
+                    officialTestLanguages: vm.currentState?.officialTestLanguages
+                )
+                .padding(.bottom, 4)
+
+                if vm.currentState?.officialTestLanguages != nil {
+                    Text(localizer.localized("officialTestLangsCaption", substitutions: [
+                        "agency": vm.currentState?.agency ?? "",
+                    ]))
+                    .font(.system(size: 12))
+                    .foregroundColor(AppTheme.gray)
+                    .multilineTextAlignment(.center)
+                }
 
                 Text(localizer.localized("title", substitutions: [
                     "state": vm.currentState?.code.uppercased() ?? "",
@@ -161,6 +174,12 @@ private struct AboutTestSection: View {
                         SourceRow(source: source, manualUrl: state.verification?.manualUrl, localizer: localizer)
                     }
 
+                    OfficialTestLanguagesRow(
+                        officialTestLanguages: state.officialTestLanguages,
+                        agency: state.agency,
+                        localizer: localizer
+                    )
+
                     if let categories = state.categories, !categories.isEmpty {
                         CategoryBreakdownView(categories: categories, localizer: localizer)
                     }
@@ -199,6 +218,46 @@ private struct SourceRow: View {
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.leading)
             }
+        }
+    }
+}
+
+private struct OfficialTestLanguagesRow: View {
+    let officialTestLanguages: [String]?
+    let agency: String
+    @ObservedObject var localizer: Localizer
+
+    private var displayText: String {
+        guard let langs = officialTestLanguages else {
+            return localizer.localized("officialTestLangsNotStated", substitutions: ["agency": agency])
+        }
+        let named = langs.filter { $0.lowercased() != "many" }
+        let hasMany = langs.contains { $0.lowercased() == "many" }
+        if named.isEmpty && hasMany {
+            return localizer.localized("officialTestLangsAndOthers")
+        }
+        var text = named.joined(separator: ", ")
+        if hasMany {
+            text += " " + localizer.localized("officialTestLangsAndOthers")
+        }
+        return text
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            HStack(alignment: .top, spacing: 6) {
+                Text(localizer.localized("officialTestLangsRow") + ":")
+                    .font(.system(size: 13))
+                    .foregroundColor(AppTheme.gray)
+                Text(displayText)
+                    .font(.system(size: 13))
+                    .foregroundColor(.primary)
+                    .multilineTextAlignment(.leading)
+            }
+            Text(localizer.localized("officialTestLangsPractice"))
+                .font(.system(size: 12))
+                .foregroundColor(AppTheme.gray)
+                .italic()
         }
     }
 }

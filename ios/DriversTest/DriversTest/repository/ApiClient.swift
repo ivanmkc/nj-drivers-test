@@ -14,6 +14,7 @@ private struct BundleState: Codable {
     let passingScorePct: Int
     let testQuestionCount: Int
     let source: String?
+    let officialTestLanguages: [String]?
     let categories: [String: Int]?
     let verification: BundleVerification?
     let languages: [String: [BundledQuestion]]
@@ -22,6 +23,7 @@ private struct BundleState: Codable {
         case code, name, agency, source, categories, verification, languages
         case passingScorePct = "passing_score_pct"
         case testQuestionCount = "test_question_count"
+        case officialTestLanguages = "official_test_languages"
     }
 }
 
@@ -138,7 +140,8 @@ class ApiClient {
                 hasQuestions: enCount > 0,
                 source: bs.source,
                 categories: bs.categories,
-                verification: bs.verification?.toStateVerification()
+                verification: bs.verification?.toStateVerification(),
+                officialTestLanguages: bs.officialTestLanguages
             )
             infos.append(info)
             allQuestions[bs.code] = bs.languages
