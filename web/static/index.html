@@ -4,17 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="theme-color" content="#1a56db">
+<meta name="theme-color" content="#1a56db" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)">
 <title>Driver's Test Practice</title>
 <style>
   :root {
     --blue: #1a56db; --blue-light: #e8f0fe;
-    --green: #16a34a; --green-light: #dcfce7;
+    --green: #15803d; --green-light: #dcfce7;
     --red: #dc2626; --red-light: #fee2e2;
     --orange: #ea580c;
     --gray: #6b7280; --gray-light: #f3f4f6;
     --bg: #ffffff; --text: #111827; --radius: 12px;
     --card: #ffffff; --border: #e5e7eb;
+    --on-primary: #ffffff;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -25,6 +27,7 @@
       --gray: #9ca3af; --gray-light: #1f2937;
       --bg: #111827; --text: #f9fafb;
       --card: #1f2937; --border: #374151;
+      --on-primary: #111827;
     }
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -38,13 +41,21 @@
   .screen.active { display: block; }
 
   /* Lang bar */
-  .lang-bar { display: flex; justify-content: flex-end; gap: 4px; margin-bottom: 12px; }
+  .lang-bar { display: flex; justify-content: flex-end; gap: 4px; margin-bottom: 4px; align-items: center; }
+  .lang-bar .lang-globe {
+    margin-right: auto; display: flex; align-items: center; color: var(--gray);
+  }
   .lang-btn {
     padding: 6px 12px; border: 1.5px solid var(--border); background: var(--card);
     border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; color: var(--gray);
+    min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 4px;
   }
   .lang-btn.active { border-color: var(--blue); background: var(--blue-light); color: var(--blue); }
   .lang-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+  .lang-btn .official-check { color: var(--green); font-size: 12px; font-weight: 700; }
+  .lang-caption {
+    text-align: right; font-size: 12px; color: var(--gray); margin-bottom: 12px; line-height: 1.4;
+  }
 
   /* State picker */
   #state-screen { text-align: center; padding-top: 10vh; }
@@ -52,9 +63,10 @@
   #state-screen .sub { color: var(--gray); font-size: 15px; margin-bottom: 24px; }
   .state-list { display: flex; flex-direction: column; gap: 10px; text-align: left; }
   .state-card {
-    display: flex; justify-content: space-between; align-items: center;
+    display: flex; justify-content: space-between; align-items: center; width: 100%; text-align: left;
     padding: 16px; background: var(--card); border: 2px solid var(--border);
     border-radius: var(--radius); cursor: pointer; transition: all 0.15s;
+    font-family: inherit; font-size: inherit; color: inherit;
   }
   .state-card:active { transform: scale(0.98); }
   .state-card.disabled { opacity: 0.5; cursor: default; }
@@ -81,7 +93,7 @@
   .past-stats-banner .row { display: flex; justify-content: space-between; align-items: center; }
   .past-stats-banner .stat-group { display: flex; gap: 16px; }
   .past-stats-banner .stat { text-align: center; }
-  .past-stats-banner .stat .num { font-size: 22px; font-weight: 700; }
+  .past-stats-banner .stat .num { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
   .past-stats-banner .stat .lbl { font-size: 11px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.3px; }
   .past-stats-banner .view-link { color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none; white-space: nowrap; }
 
@@ -100,11 +112,12 @@
   .count-btn {
     padding: 10px 20px; border: 2px solid var(--blue); background: var(--card);
     color: var(--blue); border-radius: var(--radius); font-size: 16px; font-weight: 600; cursor: pointer;
+    min-height: 44px;
   }
-  .count-btn.active, .count-btn:active { background: var(--blue); color: white; }
+  .count-btn.active, .count-btn:active { background: var(--blue); color: var(--on-primary); }
 
   .start-btn {
-    width: 100%; padding: 16px; background: var(--blue); color: white; border: none;
+    width: 100%; padding: 16px; background: var(--blue); color: var(--on-primary); border: none;
     border-radius: var(--radius); font-size: 18px; font-weight: 600; cursor: pointer;
   }
   .start-btn:active { opacity: 0.8; }
@@ -115,7 +128,7 @@
   /* Quiz */
   .progress-bar { height: 6px; background: var(--border); border-radius: 3px; margin-bottom: 16px; overflow: hidden; }
   .progress-fill { height: 100%; background: var(--blue); border-radius: 3px; transition: width 0.3s ease; }
-  .quiz-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 14px; color: var(--gray); }
+  .quiz-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 14px; color: var(--gray); font-variant-numeric: tabular-nums; }
   .quiz-header .score { font-weight: 600; }
   .score .correct { color: var(--green); }
   .score .wrong { color: var(--red); }
@@ -131,14 +144,16 @@
   .choice-btn:active:not(.disabled) { transform: scale(0.98); }
   .choice-btn .letter { flex-shrink: 0; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; background: var(--gray-light); border-radius: 50%; font-weight: 700; font-size: 14px; color: var(--gray); }
   .choice-btn.correct { border-color: var(--green); background: var(--green-light); }
-  .choice-btn.correct .letter { background: var(--green); color: white; }
+  .choice-btn.correct .letter { background: var(--green); color: white; font-size: 0; }
+  .choice-btn.correct .letter::after { content: "\2713"; font-size: 14px; }
   .choice-btn.wrong { border-color: var(--red); background: var(--red-light); }
-  .choice-btn.wrong .letter { background: var(--red); color: white; }
+  .choice-btn.wrong .letter { background: var(--red); color: white; font-size: 0; }
+  .choice-btn.wrong .letter::after { content: "\2715"; font-size: 14px; }
   .choice-btn.disabled { cursor: default; opacity: 0.7; }
   .choice-btn.disabled.correct, .choice-btn.disabled.wrong { opacity: 1; }
   .explanation { display: none; background: var(--blue-light); border-left: 4px solid var(--blue); padding: 12px 16px; border-radius: 0 var(--radius) var(--radius) 0; font-size: 14px; line-height: 1.6; color: var(--text); margin-bottom: 16px; }
   .explanation.visible { display: block; }
-  .next-btn { display: none; width: 100%; padding: 16px; background: var(--blue); color: white; border: none; border-radius: var(--radius); font-size: 17px; font-weight: 600; cursor: pointer; }
+  .next-btn { display: none; width: 100%; padding: 16px; background: var(--blue); color: var(--on-primary); border: none; border-radius: var(--radius); font-size: 17px; font-weight: 600; cursor: pointer; }
   .next-btn:active { opacity: 0.8; }
   .next-btn.visible { display: block; }
 
@@ -147,7 +162,7 @@
   .results-circle { width: 160px; height: 160px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto 24px; border: 6px solid; }
   .results-circle.pass { border-color: var(--green); color: var(--green); }
   .results-circle.fail { border-color: var(--red); color: var(--red); }
-  .results-circle .pct { font-size: 42px; font-weight: 700; }
+  .results-circle .pct { font-size: 42px; font-weight: 700; font-variant-numeric: tabular-nums; }
   .results-circle .label { font-size: 14px; font-weight: 600; text-transform: uppercase; }
   .result-msg { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
   .result-detail { color: var(--gray); font-size: 15px; margin-bottom: 24px; line-height: 1.5; }
@@ -165,7 +180,7 @@
   .stats-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; }
   .stats-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 24px; }
   .stat-card { background: var(--card); border-radius: var(--radius); padding: 16px 12px; text-align: center; border: 1px solid var(--border); }
-  .stat-card .num { font-size: 26px; font-weight: 700; }
+  .stat-card .num { font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; }
   .stat-card .num.green { color: var(--green); }
   .stat-card .num.blue { color: var(--blue); }
   .stat-card .lbl { font-size: 11px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.3px; margin-top: 4px; }
@@ -182,13 +197,60 @@
   .category-bars { margin-bottom: 24px; }
   .category-bars h4 { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
   .cat-bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 13px; }
-  .cat-bar-label { width: 110px; flex-shrink: 0; text-transform: capitalize; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .cat-bar-label { width: 110px; flex-shrink: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .cat-bar-track { flex: 1; height: 10px; background: var(--border); border-radius: 5px; overflow: hidden; }
   .cat-bar-fill { height: 100%; border-radius: 5px; }
-  .cat-bar-pct { width: 36px; text-align: right; font-weight: 600; font-size: 13px; }
+  .cat-bar-pct { width: 36px; text-align: right; font-weight: 600; font-size: 13px; font-variant-numeric: tabular-nums; }
   .danger-zone { border-top: 1px solid var(--border); padding-top: 20px; margin-top: 8px; }
   .danger-btn { width: 100%; padding: 12px; background: var(--card); color: var(--red); border: 2px solid var(--red-light); border-radius: var(--radius); font-size: 15px; font-weight: 600; cursor: pointer; }
   .danger-btn:active { background: var(--red-light); }
+
+  /* About this test */
+  .about-section { margin-bottom: 20px; text-align: left; }
+  .about-section summary {
+    font-weight: 600; font-size: 15px; cursor: pointer; padding: 10px 0;
+    list-style: none; display: flex; align-items: center; gap: 6px; color: var(--text);
+  }
+  .about-section summary::-webkit-details-marker { display: none; }
+  .about-section summary::before { content: "\25B6"; font-size: 10px; transition: transform 0.2s; }
+  .about-section[open] summary::before { transform: rotate(90deg); }
+  .about-body {
+    background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 14px 16px; font-size: 14px; line-height: 1.6;
+  }
+  .about-source { margin-bottom: 10px; }
+  .about-source a { color: var(--blue); text-decoration: none; word-break: break-all; }
+  .about-source a:hover { text-decoration: underline; }
+  .about-badges { display: flex; flex-wrap: wrap; gap: 6px 10px; margin-bottom: 12px; font-size: 13px; }
+  .about-badge { display: inline-flex; align-items: center; gap: 4px; }
+  .about-badge .glyph { font-weight: 700; }
+  .about-badge .glyph.pass { color: var(--green); }
+  .about-badge .glyph.fail { color: var(--red); }
+  .about-cats { list-style: none; padding: 0; margin: 0; }
+  .about-cats li {
+    display: flex; align-items: center; gap: 10px; padding: 4px 0;
+    font-size: 13px;
+  }
+  .about-cats li .cat-name { flex: 1; }
+  .about-cats li .cat-bar { flex: 2; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+  .about-cats li .cat-fill { height: 100%; background: var(--blue); border-radius: 3px; }
+  .about-cats li .cat-count { width: 32px; text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; color: var(--gray); }
+  .about-row { margin-bottom: 10px; font-size: 14px; line-height: 1.6; }
+  .about-row .about-row-label { font-weight: 600; color: var(--gray); font-size: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+  .about-row .about-row-value { margin-top: 2px; }
+  .about-row .about-practice-note { font-size: 12px; color: var(--gray); margin-top: 4px; font-style: italic; }
+
+  /* Evidence block */
+  .evidence-block {
+    background: var(--card); border-left: 4px solid var(--green);
+    padding: 10px 14px; border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: 13px; line-height: 1.6; color: var(--text); margin-bottom: 16px;
+    font-style: italic;
+  }
+  .evidence-block .evidence-label {
+    font-style: normal; font-weight: 600; font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.3px; color: var(--gray); margin-bottom: 4px;
+  }
 </style>
 </head>
 <body>
@@ -205,9 +267,15 @@
   <!-- Start Screen -->
   <div id="start-screen" class="screen">
     <div class="lang-bar" id="lang-bar"></div>
+    <div class="lang-caption" id="lang-caption" style="display:none;"></div>
     <h1 id="home-title"></h1>
     <p class="subtitle" id="home-subtitle"></p>
     <p class="passing-info" id="home-passing"></p>
+
+    <details class="about-section" id="about-section" style="display:none;">
+      <summary>About this test</summary>
+      <div class="about-body" id="about-body"></div>
+    </details>
 
     <div class="past-stats-banner" id="past-stats-banner">
       <div class="row">
@@ -222,11 +290,11 @@
 
     <div class="mode-selector">
       <button class="mode-btn active" id="mode-random" onclick="setMode('random')">
-        <span class="mode-icon">&#127922;</span> <span data-i18n="modeRandom"></span>
+        <span class="mode-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="3"/><circle cx="8" cy="8" r="1.5" fill="currentColor" stroke="none"/><circle cx="16" cy="8" r="1.5" fill="currentColor" stroke="none"/><circle cx="8" cy="16" r="1.5" fill="currentColor" stroke="none"/><circle cx="16" cy="16" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg></span> <span data-i18n="modeRandom"></span>
         <span class="mode-desc" data-i18n="modeRandomDesc"></span>
       </button>
       <button class="mode-btn" id="mode-weak" onclick="setMode('weak')">
-        <span class="mode-icon">&#127919;</span> <span data-i18n="modeWeak"></span> <span class="weak-count" id="weak-count" style="display:none"></span>
+        <span class="mode-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span> <span data-i18n="modeWeak"></span> <span class="weak-count" id="weak-count" style="display:none"></span>
         <span class="mode-desc" data-i18n="modeWeakDesc"></span>
       </button>
     </div>
@@ -250,10 +318,11 @@
     </div>
     <div class="question-text" id="q-text"></div>
     <div id="q-image-wrap" style="display:none; text-align:center; margin:12px 0;">
-      <img id="q-image" style="max-width:100%; max-height:240px; border-radius:8px; border:1px solid #e5e7eb;" alt="Road sign">
+      <img id="q-image" style="max-width:100%; max-height:240px; border-radius:8px; border:1px solid var(--border);" alt="Road sign">
     </div>
     <div class="choices" id="choices"></div>
     <div class="explanation" id="explanation"></div>
+    <div class="evidence-block" id="evidence-block" style="display:none;"></div>
     <button class="next-btn" id="next-btn" onclick="nextQuestion()"></button>
   </div>
 
@@ -279,7 +348,7 @@
     <div class="stats-title" data-i18n="yourProgress"></div>
     <div class="stats-grid">
       <div class="stat-card"><div class="num blue" id="s-total">0</div><div class="lbl" data-i18n="quizzes"></div></div>
-      <div class="stat-card"><div class="num green" id="s-avg">0%</div><div class="lbl" data-i18n="avgScore"></div></div>
+      <div class="stat-card"><div class="num" id="s-avg">0%</div><div class="lbl" data-i18n="avgScore"></div></div>
       <div class="stat-card"><div class="num" id="s-seen">0</div><div class="lbl" data-i18n="qsSeen"></div></div>
     </div>
     <div class="stats-grid" style="grid-template-columns: 1fr 1fr;">
@@ -310,10 +379,12 @@
 // ---- i18n ----
 let I18N = {};
 let currentLang = localStorage.getItem('quiz_lang') || 'en';
-const LANG_LABELS = { en: 'EN', ja: '日本語', es: 'ES' };
+const LANG_LABELS = { en: 'EN', ja: '日本語', es: 'ES', fr: 'FR' };
+const LANG_FULL_NAMES = { en: 'English', es: 'Spanish', ja: 'Japanese', fr: 'French' };
 
 async function loadI18n() {
   const res = await fetch('/static/i18n.json');
+  if (!res.ok) throw new Error('Failed to load translations: ' + res.status);
   I18N = await res.json();
 }
 
@@ -329,13 +400,41 @@ function applyI18n() {
   document.documentElement.lang = currentLang;
 }
 
-function buildLangBar(containerId, availableLangs) {
+function catName(key) {
+  const i18nKey = 'cat_' + key;
+  const val = (I18N[currentLang] && I18N[currentLang][i18nKey]) || (I18N['en'] && I18N['en'][i18nKey]);
+  return val || key.replace(/_/g, ' ');
+}
+
+function avgScoreColor(pct, passingPct) {
+  if (pct >= passingPct) return 'var(--green)';
+  if (pct >= 50) return 'var(--orange)';
+  return 'var(--red)';
+}
+
+function isOfficialLang(lang, officialList) {
+  if (!officialList || officialList.length === 0) return false;
+  if (officialList.length === 1 && officialList[0].toLowerCase() === 'many') return false;
+  const fullName = LANG_FULL_NAMES[lang];
+  if (!fullName) return false;
+  return officialList.some(o => o.toLowerCase() === fullName.toLowerCase());
+}
+
+function buildLangBar(containerId, availableLangs, officialTestLangs) {
   const allLangs = Object.keys(I18N);
   const available = new Set(availableLangs || allLangs);
   const bar = document.getElementById(containerId);
-  bar.innerHTML = allLangs.map(lang => {
+  const globeSvg = '<span class="lang-globe"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/></svg></span>';
+  const hasAnyOfficial = officialTestLangs && officialTestLangs.length > 0 && !(officialTestLangs.length === 1 && officialTestLangs[0].toLowerCase() === 'many');
+  bar.innerHTML = globeSvg + allLangs.map(lang => {
     const disabled = !available.has(lang);
-    return `<button class="lang-btn ${lang === currentLang && !disabled ? 'active' : ''}" ${disabled ? 'disabled' : `onclick="switchLang('${lang}')"`}>${LANG_LABELS[lang] || lang.toUpperCase()}</button>`;
+    const official = isOfficialLang(lang, officialTestLangs);
+    const checkHtml = official ? '<span class="official-check" aria-hidden="true">✓</span>' : '';
+    const label = LANG_LABELS[lang] || lang.toUpperCase();
+    const ariaLabel = official
+      ? `${label} — offered on the official test`
+      : `${label}${hasAnyOfficial ? ' — practice only' : ''}`;
+    return `<button class="lang-btn ${lang === currentLang && !disabled ? 'active' : ''}" aria-label="${esc(ariaLabel)}" ${disabled ? 'disabled' : `onclick="switchLang('${lang}')"`}>${checkHtml}${esc(label)}</button>`;
   }).join('');
 }
 
@@ -346,7 +445,7 @@ function switchLang(lang) {
   applyI18n();
   const activeScreen = document.querySelector('.screen.active');
   if (activeScreen) {
-    if (activeScreen.id === 'state-screen') { renderStatePicker(); buildLangBar('lang-bar-state'); }
+    if (activeScreen.id === 'state-screen') { renderStatePicker(); buildLangBar('lang-bar-state', null, null); }
     else if (activeScreen.id === 'start-screen') { renderHome(); }
   }
 }
@@ -372,10 +471,21 @@ function apiParams() {
 }
 
 // ---- Init ----
+function showError(msg) {
+  const c = document.querySelector('.container');
+  c.innerHTML = '<div style="text-align:center;padding-top:20vh;"><p style="color:var(--red);font-weight:600;margin-bottom:8px;">Failed to load</p><p style="color:var(--gray);font-size:14px;margin-bottom:16px;">' + esc(msg) + '</p><button onclick="location.reload()" class="start-btn" style="max-width:200px;margin:0 auto;">Retry</button></div>';
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
-  await loadI18n();
-  const res = await fetch('/api/states');
-  allStates = (await res.json()).states;
+  try {
+    await loadI18n();
+    const res = await fetch('/api/states');
+    if (!res.ok) throw new Error('Failed to load states: ' + res.status);
+    allStates = (await res.json()).states;
+  } catch (e) {
+    showError(e.message || 'Failed to load application data');
+    return;
+  }
 
   const savedState = localStorage.getItem('quiz_state');
   if (savedState) {
@@ -383,28 +493,31 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (s) { currentState = s; goHome(); applyI18n(); return; }
   }
   applyI18n();
-  buildLangBar('lang-bar-state');
+  buildLangBar('lang-bar-state', null, null);
   renderStatePicker();
 });
 
 // ---- State picker ----
 function renderStatePicker() {
-  buildLangBar('lang-bar-state');
+  buildLangBar('lang-bar-state', null, null);
   const list = document.getElementById('state-list');
   list.innerHTML = allStates.map(s => {
     const hasQ = s.has_questions;
-    return `<div class="state-card ${hasQ ? '' : 'disabled'}" onclick="${hasQ ? `selectState('${s.code}')` : ''}">
+    return `<button class="state-card ${hasQ ? '' : 'disabled'}" ${hasQ ? `data-state-code="${esc(s.code)}"` : 'disabled'}>
       <div>
-        <div class="sc-name">${s.name}</div>
-        <div class="sc-detail">${s.agency} &middot; ${t('passingScore', {pass_pct: s.passing_score_pct, pass_count: Math.ceil(s.test_question_count * s.passing_score_pct / 100), test_count: s.test_question_count})}</div>
+        <div class="sc-name">${esc(s.name)}</div>
+        <div class="sc-detail">${esc(s.agency)} &middot; ${esc(t('passingScore', {pass_pct: s.passing_score_pct, pass_count: Math.ceil(s.test_question_count * s.passing_score_pct / 100), test_count: s.test_question_count}))}</div>
       </div>
       <div class="sc-right">
         ${hasQ
-          ? `<div class="sc-count">${t('questionsAvailable', {count: s.total_questions})}</div>`
-          : `<span class="sc-badge">${t('comingSoon')}</span>`}
+          ? `<div class="sc-count">${esc(t('questionsAvailable', {count: s.total_questions}))}</div>`
+          : `<span class="sc-badge">${esc(t('comingSoon'))}</span>`}
       </div>
-    </div>`;
+    </button>`;
   }).join('');
+  list.querySelectorAll('[data-state-code]').forEach(card => {
+    card.addEventListener('click', () => selectState(card.dataset.stateCode));
+  });
 }
 
 function selectState(code) {
@@ -416,11 +529,85 @@ function selectState(code) {
 function goStatePicker() {
   showScreen('state-screen');
   applyI18n();
-  buildLangBar('lang-bar-state');
+  buildLangBar('lang-bar-state', null, null);
   renderStatePicker();
 }
 
 // ---- Home ----
+function renderOfficialLangsRow(s) {
+  const langs = s.official_test_languages;
+  if (langs === undefined) return '';
+  let valueHtml = '';
+  if (langs === null) {
+    valueHtml = `<div class="about-row-value">${esc(t('officialLangUnknown', { agency: s.agency }))}</div>`;
+  } else {
+    const display = langs.map(l => l.toLowerCase() === 'many' ? esc(t('officialLangMany')) : esc(l));
+    valueHtml = `<div class="about-row-value">${display.join(', ')}</div>`;
+  }
+  const practiceNote = `<div class="about-practice-note">${esc(t('practiceLanguagesNote', { agency: s.agency }))}</div>`;
+  return `<div class="about-row"><div class="about-row-label">${esc(t('officialTestLanguages'))}</div>${valueHtml}${practiceNote}</div>`;
+}
+
+function renderAboutSection() {
+  const s = currentState;
+  const section = document.getElementById('about-section');
+  const hasOfficialLangs = s.official_test_languages !== undefined;
+  if (!s.source && !s.verification && !s.categories && !hasOfficialLangs) { section.style.display = 'none'; return; }
+  section.style.display = 'block';
+  const body = document.getElementById('about-body');
+  let html = '';
+
+  if (s.source) {
+    const v = s.verification || {};
+    const href = v.manual_url ? ` href="${esc(v.manual_url)}" target="_blank" rel="noopener"` : '';
+    html += `<div class="about-source">Source: ${href ? '<a' + href + '>' : ''}${esc(s.source)}${href ? '</a>' : ''}</div>`;
+  }
+
+  html += renderOfficialLangsRow(s);
+
+  const v = s.verification;
+  if (v) {
+    html += '<div class="about-badges">';
+    if (v.edition) html += `<span class="about-badge">Edition: <strong>${esc(v.edition)}</strong></span>`;
+    if (v.precision_grade) {
+      const gp = v.precision_grade === 'A' || v.precision_grade === 'B' ? 'pass' : 'fail';
+      html += `<span class="about-badge"><span class="glyph ${gp}">✓</span> Grade ${esc(v.precision_grade)}</span>`;
+    }
+    if (v.precision_avg_fidelity != null) {
+      const fp = v.precision_avg_fidelity >= 8 ? 'pass' : 'fail';
+      html += `<span class="about-badge"><span class="glyph ${fp}">✓</span> Fidelity ${v.precision_avg_fidelity}/10</span>`;
+    }
+    if (v.recall_coverage_pct != null) {
+      const cp = v.recall_coverage_pct >= 80 ? 'pass' : 'fail';
+      html += `<span class="about-badge"><span class="glyph ${cp}">✓</span> Coverage ${v.recall_coverage_pct}%</span>`;
+    }
+    if (v.translations) {
+      for (const [lang, verdict] of Object.entries(v.translations)) {
+        const tp = verdict === 'PASS' ? 'pass' : 'fail';
+        const tg = verdict === 'PASS' ? '✓' : '✕';
+        html += `<span class="about-badge"><span class="glyph ${tp}">${tg}</span> ${lang.toUpperCase()} translation</span>`;
+      }
+    }
+    if (v.verified_at) {
+      const d = new Date(v.verified_at);
+      html += `<span class="about-badge">Verified: ${d.toLocaleDateString()}</span>`;
+    }
+    html += '</div>';
+  }
+
+  if (s.categories) {
+    const entries = Object.entries(s.categories).sort((a, b) => b[1] - a[1]);
+    const maxCount = Math.max(...entries.map(e => e[1]));
+    html += '<ul class="about-cats">';
+    for (const [cat, count] of entries) {
+      const pct = Math.round((count / maxCount) * 100);
+      html += `<li><span class="cat-name">${esc(catName(cat))}</span><span class="cat-bar"><span class="cat-fill" style="width:${pct}%"></span></span><span class="cat-count">${count}</span></li>`;
+    }
+    html += '</ul>';
+  }
+  body.innerHTML = html;
+}
+
 function renderHome() {
   const s = currentState;
   const vars = { state: s.code.toUpperCase(), state_name: s.name, agency: s.agency, pass_pct: s.passing_score_pct };
@@ -454,8 +641,18 @@ function renderHome() {
 
   const avail = s.languages.length > 0 ? s.languages : Object.keys(I18N);
   if (!avail.includes(currentLang)) { currentLang = 'en'; localStorage.setItem('quiz_lang', 'en'); }
-  buildLangBar('lang-bar', avail);
+  const officialLangs = s.official_test_languages || null;
+  buildLangBar('lang-bar', avail, officialLangs);
+  const caption = document.getElementById('lang-caption');
+  const hasCheckmarks = officialLangs && officialLangs.length > 0 && !(officialLangs.length === 1 && officialLangs[0].toLowerCase() === 'many');
+  if (hasCheckmarks) {
+    caption.textContent = t('officialLangCaption');
+    caption.style.display = 'block';
+  } else {
+    caption.style.display = 'none';
+  }
   applyI18n();
+  renderAboutSection();
   updateStartScreen();
 }
 
@@ -489,7 +686,10 @@ function updateStartScreen() {
   if (h.length === 0) { banner.style.display = 'none'; document.getElementById('weak-count').style.display = 'none'; return; }
   banner.style.display = 'block';
   document.getElementById('banner-quizzes').textContent = h.length;
-  document.getElementById('banner-avg').textContent = Math.round(h.reduce((s, r) => s + r.pct, 0) / h.length) + '%';
+  const bannerAvg = Math.round(h.reduce((s, r) => s + r.pct, 0) / h.length);
+  const bannerAvgEl = document.getElementById('banner-avg');
+  bannerAvgEl.textContent = bannerAvg + '%';
+  bannerAvgEl.style.color = avgScoreColor(bannerAvg, currentState.passing_score_pct);
   let streak = 0;
   for (let i = h.length - 1; i >= 0; i--) { if (h[i].pct >= currentState.passing_score_pct) streak++; else break; }
   document.getElementById('banner-streak').textContent = streak;
@@ -513,10 +713,13 @@ function setMode(mode) {
 // ---- Quiz ----
 async function startQuiz() {
   if (quizMode === 'weak') { await startWeakQuiz(); return; }
-  const res = await fetch(`/api/quiz/${selectedCount}?${apiParams()}`);
-  const data = await res.json();
-  questions = data.questions;
-  beginQuiz();
+  try {
+    const res = await fetch(`/api/quiz/${selectedCount}?${apiParams()}`);
+    if (!res.ok) throw new Error('Failed to load quiz: ' + res.status);
+    const data = await res.json();
+    questions = data.questions;
+    beginQuiz();
+  } catch (e) { showError(e.message || 'Failed to start quiz'); }
 }
 
 async function startWeakQuiz() {
@@ -525,13 +728,16 @@ async function startWeakQuiz() {
   if (weakIds.length === 0) return;
   const count = Math.min(selectedCount, weakIds.length);
   const ids = weakIds.slice(0, count).map(w => w.id);
-  const res = await fetch(`/api/quiz/${currentState.total_questions}?${apiParams()}`);
-  const data = await res.json();
-  const idSet = new Set(ids);
-  questions = data.questions.filter(q => idSet.has(q.id));
-  for (let i = questions.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [questions[i], questions[j]] = [questions[j], questions[i]]; }
-  questions = questions.slice(0, count);
-  beginQuiz();
+  try {
+    const res = await fetch(`/api/quiz/${currentState.total_questions}?${apiParams()}`);
+    if (!res.ok) throw new Error('Failed to load quiz: ' + res.status);
+    const data = await res.json();
+    const idSet = new Set(ids);
+    questions = data.questions.filter(q => idSet.has(q.id));
+    for (let i = questions.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [questions[i], questions[j]] = [questions[j], questions[i]]; }
+    questions = questions.slice(0, count);
+    beginQuiz();
+  } catch (e) { showError(e.message || 'Failed to start quiz'); }
 }
 
 function beginQuiz() {
@@ -546,13 +752,14 @@ function showQuestion() {
   document.getElementById('q-counter').textContent = `${currentIdx + 1} / ${questions.length}`;
   document.getElementById('score-correct').textContent = correctCount;
   document.getElementById('score-wrong').textContent = wrongCount;
-  document.getElementById('q-category').textContent = q.category.replace(/_/g, ' ');
+  document.getElementById('q-category').textContent = catName(q.category);
   document.getElementById('q-text').textContent = q.question;
   const imgWrap = document.getElementById('q-image-wrap');
   const imgEl = document.getElementById('q-image');
   if (q.image) { imgEl.src = `/signs/${currentState.code}/${q.image}`; imgWrap.style.display = 'block'; }
   else { imgWrap.style.display = 'none'; imgEl.src = ''; }
   document.getElementById('explanation').classList.remove('visible');
+  document.getElementById('evidence-block').style.display = 'none';
   document.getElementById('next-btn').classList.remove('visible');
   const store = loadStore();
   const qData = store.questions[q.id];
@@ -565,7 +772,7 @@ function showQuestion() {
     if (!q.choices[letter]) return;
     const btn = document.createElement('button');
     btn.className = 'choice-btn';
-    btn.innerHTML = `<span class="letter">${letter}</span><span>${q.choices[letter]}</span>`;
+    btn.innerHTML = `<span class="letter">${esc(letter)}</span><span>${esc(q.choices[letter])}</span>`;
     btn.addEventListener('click', () => selectAnswer(letter, btn));
     choicesDiv.appendChild(btn);
   });
@@ -575,6 +782,7 @@ async function selectAnswer(letter, btn) {
   if (answered) return;
   answered = true;
   const res = await fetch(`/api/answer/${questions[currentIdx].id}?${apiParams()}`);
+  if (!res.ok) { showError('Failed to check answer: ' + res.status); return; }
   const data = await res.json();
   const correct = data.answer;
   const isCorrect = letter === correct;
@@ -591,6 +799,15 @@ async function selectAnswer(letter, btn) {
   sessionResults.push({ id: qid, question: questions[currentIdx].question, yourAnswer: letter, yourAnswerText: questions[currentIdx].choices[letter], correctAnswer: correct, correctAnswerText: questions[currentIdx].choices[correct], correct: isCorrect, explanation: data.explanation });
   document.getElementById('explanation').textContent = data.explanation;
   document.getElementById('explanation').classList.add('visible');
+  const evidenceBlock = document.getElementById('evidence-block');
+  if (data.evidence && data.evidence.length > 0) {
+    const enNote = t('fromTheManualEnNote');
+    const evidenceLabel = esc(t('fromTheManual')) + (enNote ? ' ' + esc(enNote) : '');
+    evidenceBlock.innerHTML = '<div class="evidence-label">' + evidenceLabel + '</div>' + data.evidence.map(e => '<div>' + esc(e) + '</div>').join('');
+    evidenceBlock.style.display = 'block';
+  } else {
+    evidenceBlock.style.display = 'none';
+  }
   document.getElementById('score-correct').textContent = correctCount;
   document.getElementById('score-wrong').textContent = wrongCount;
   const nextBtn = document.getElementById('next-btn');
@@ -625,7 +842,7 @@ function showResults() {
   if (wrongResults.length > 0) {
     reviewTitle.textContent = t('reviewMissed', { count: wrongResults.length });
     reviewList.innerHTML = wrongResults.map(r => `<div class="review-item was-wrong"><div class="rq">${esc(r.question)}</div><div class="ra">${t('yourAnswer')}: <strong>${r.yourAnswer}: ${esc(r.yourAnswerText)}</strong></div><div class="ra">${t('correct')}: <strong>${r.correctAnswer}: ${esc(r.correctAnswerText)}</strong></div><div class="ra" style="margin-top:6px;font-style:italic;">${esc(r.explanation)}</div></div>`).join('');
-  } else { reviewTitle.textContent = t('perfectScore'); reviewList.innerHTML = `<p style="color:#6b7280;">${t('perfectMsg')}</p>`; }
+  } else { reviewTitle.textContent = t('perfectScore'); reviewList.innerHTML = `<p style="color:var(--gray);">${t('perfectMsg')}</p>`; }
   applyI18n();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -638,7 +855,10 @@ function showStats() {
   const h = store.history;
   showScreen('stats-screen'); applyI18n();
   document.getElementById('s-total').textContent = h.length;
-  document.getElementById('s-avg').textContent = (h.length ? Math.round(h.reduce((s, r) => s + r.pct, 0) / h.length) : 0) + '%';
+  const avgPct = h.length ? Math.round(h.reduce((s, r) => s + r.pct, 0) / h.length) : 0;
+  const avgEl = document.getElementById('s-avg');
+  avgEl.textContent = avgPct + '%';
+  avgEl.style.color = avgScoreColor(avgPct, currentState.passing_score_pct);
   document.getElementById('s-seen').textContent = Object.keys(store.questions).length;
   document.getElementById('s-best').textContent = (h.length ? Math.max(...h.map(r => r.pct)) : 0) + '%';
   let streak = 0;
@@ -664,7 +884,7 @@ function showStats() {
     catBars.innerHTML = sortedCats.map(([cat, data]) => {
       const pct = Math.round((data.correct / data.seen) * 100);
       const color = pct >= 80 ? 'var(--green)' : pct >= 60 ? 'var(--orange)' : 'var(--red)';
-      return `<div class="cat-bar-row"><span class="cat-bar-label">${cat.replace(/_/g, ' ')}</span><div class="cat-bar-track"><div class="cat-bar-fill" style="width:${pct}%;background:${color}"></div></div><span class="cat-bar-pct" style="color:${color}">${pct}%</span></div>`;
+      return `<div class="cat-bar-row"><span class="cat-bar-label">${esc(catName(cat))}</span><div class="cat-bar-track"><div class="cat-bar-fill" style="width:${pct}%;background:${color}"></div></div><span class="cat-bar-pct" style="color:${color}">${pct}%</span></div>`;
     }).join('');
   }
   const weakIds = getWeakQuestionIds(store);
@@ -675,7 +895,7 @@ function showStats() {
     weakSection.style.display = 'block';
     weakList.innerHTML = weakIds.slice(0, 15).map(w => {
       const qData = store.questions[w.id];
-      return `<div class="weak-item"><div class="wq">Q${w.id}</div><div class="wm">${t('missed')} <span class="miss-pct">${w.wrong}/${w.seen} (${Math.round(w.missRate * 100)}%)</span> &middot; ${(qData.category || '').replace(/_/g, ' ')}</div></div>`;
+      return `<div class="weak-item"><div class="wq">Q${w.id}</div><div class="wm">${t('missed')} <span class="miss-pct">${w.wrong}/${w.seen} (${Math.round(w.missRate * 100)}%)</span> &middot; ${esc(catName(qData.category || ''))}</div></div>`;
     }).join('');
   }
   window.scrollTo({ top: 0 });
@@ -705,7 +925,9 @@ function drawChart(canvas, history) {
   ctx.beginPath(); points.forEach((p, i) => i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y));
   ctx.lineTo(points[points.length - 1].x, pad.top + plotH); ctx.lineTo(points[0].x, pad.top + plotH); ctx.closePath();
   const grad = ctx.createLinearGradient(0, pad.top, 0, pad.top + plotH);
-  grad.addColorStop(0, 'rgba(26, 86, 219, 0.2)'); grad.addColorStop(1, 'rgba(26, 86, 219, 0.02)');
+  const blueHex = cs.getPropertyValue('--blue').trim();
+  const br = parseInt(blueHex.slice(1,3),16), bg = parseInt(blueHex.slice(3,5),16), bb = parseInt(blueHex.slice(5,7),16);
+  grad.addColorStop(0, `rgba(${br},${bg},${bb},0.2)`); grad.addColorStop(1, `rgba(${br},${bg},${bb},0.02)`);
   ctx.fillStyle = grad; ctx.fill();
   points.forEach(p => { ctx.beginPath(); ctx.arc(p.x, p.y, 4, 0, Math.PI * 2); ctx.fillStyle = p.pct >= passPct ? cs.getPropertyValue('--green').trim() : cs.getPropertyValue('--red').trim(); ctx.fill(); ctx.strokeStyle = cs.getPropertyValue('--card').trim(); ctx.lineWidth = 2; ctx.stroke(); });
   ctx.fillStyle = cs.getPropertyValue('--gray').trim(); ctx.font = '10px -apple-system, sans-serif'; ctx.textAlign = 'center';

@@ -14,6 +14,19 @@ import audit_questions as aq
 import pytest
 import yaml
 
+_UNIQUE_QUESTIONS = [
+    "At what blood alcohol concentration is it illegal to operate a motor vehicle?",
+    "What is the speed limit in a residential neighborhood zone?",
+    "How far before turning should you signal to other drivers?",
+    "When approaching a school bus with flashing red lights what must you do?",
+    "What does a flashing yellow traffic signal indicate to approaching drivers?",
+    "What is the minimum following distance behind a large commercial truck?",
+    "How should you merge onto a highway from an acceleration ramp?",
+    "What penalty applies for driving without valid automobile insurance coverage?",
+    "When parallel parking how far from the curb must your vehicle be positioned?",
+    "What should you do if your vehicle begins to hydroplane on a wet surface?",
+]
+
 
 @pytest.fixture
 def state_tree(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
@@ -47,10 +60,15 @@ def state_tree(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
                 {
                     "id": i,
                     "category": extras.get(i, {}).get("category", "safe_driving_rules"),
-                    "question": extras.get(i, {}).get("question", f"q{i}"),
-                    "choices": {"A": "a", "B": "b", "C": "c", "D": "d"},
+                    "question": extras.get(i, {}).get("question", _UNIQUE_QUESTIONS[i % 10]),
+                    "choices": {
+                        "A": "choice a",
+                        "B": "choice b",
+                        "C": "choice c",
+                        "D": "choice d",
+                    },
                     "answer": "A",
-                    "explanation": f"x{i}",
+                    "explanation": f"Explanation for question {i} is important.",
                 }
                 for i in ids
             ],
@@ -170,3 +188,28 @@ def test_staleness_flags_when_sha_does_not_match(state_tree) -> None:
     es_path.write_text(yaml.safe_dump(es_data, sort_keys=False))
     issues = aq.translation_staleness_audit("xx")
     assert any("stale" in i.lower() for i in issues)
+
+
+# ---- main() exit codes ---------------------------------------------------
+
+
+def _write_config(state_tree, code: str) -> None:
+    import json
+
+    config_path = state_tree["dir"] / code / "config.json"
+    config_path.write_text(json.dumps({"name": code.upper(), "agency": "DMV"}))
+
+
+def test_main_exits_1_when_state_has_issues(state_tree, monkeypatch: pytest.MonkeyPatch) -> None:
+    state_tree["write"]("xx", "en", [1], extras={1: {"category": "BOGUS_CATEGORY"}})
+    _write_config(state_tree, "xx")
+    monkeypatch.setattr("sys.argv", ["audit_questions.py", "xx"])
+    with pytest.raises(SystemExit, match="1"):
+        aq.main()
+
+
+def test_main_completes_when_clean(state_tree, monkeypatch: pytest.MonkeyPatch) -> None:
+    state_tree["write"]("xx", "en", list(range(1, 6)))
+    _write_config(state_tree, "xx")
+    monkeypatch.setattr("sys.argv", ["audit_questions.py", "xx"])
+    aq.main()

@@ -135,3 +135,44 @@ def test_dropped_batches_produce_subset_not_orphan(
     # Subset of EN ids — no orphans
     assert set(tgt_ids).issubset({1, 2, 3})
     assert 2 not in tgt_ids  # confirms the partial-fail scenario
+
+
+def test_batch_failure_falls_back_to_per_question(
+    state_tree, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """When a full batch fails, translate.py retries each question individually.
+
+    Questions that succeed individually are rescued; poison questions that fail
+    even alone are skipped with a warning.
+    """
+    _write_en(state_tree["en_path"], list(range(1, 6)))
+    poison_id = 3
+    call_count = {"n": 0}
+
+    def flaky_translate(batch: list[dict], _lang: str) -> list[dict]:
+        call_count["n"] += 1
+        if len(batch) > 1:
+            raise RuntimeError("batch too large (simulated failure)")
+        q = batch[0]
+        if q["id"] == poison_id:
+            raise RuntimeError(f"poison question {poison_id}")
+        return [
+            {
+                "id": q["id"],
+                "category": q["category"],
+                "question": f"es {q['id']}",
+                "choices": {"A": "a", "B": "b", "C": "c", "D": "d"},
+                "answer": "A",
+                "explanation": f"e{q['id']}",
+            }
+        ]
+
+    monkeypatch.setattr(tr, "translate_batch", flaky_translate)
+    monkeypatch.setattr(tr, "time", type("T", (), {"sleep": lambda *_: None}))
+    monkeypatch.setattr(tr, "retry_with_backoff", lambda fn, **kw: fn())
+
+    _run_translate("xx", "es")
+    es = yaml.safe_load((state_tree["dir"] / "questions_es.yaml").read_text())
+    tgt_ids = sorted(q["id"] for q in es["questions"])
+    assert poison_id not in tgt_ids
+    assert set(tgt_ids) == {1, 2, 4, 5}

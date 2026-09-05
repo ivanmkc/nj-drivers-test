@@ -1,5 +1,6 @@
 package com.drivers.test.view.screen
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -11,7 +12,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.drawscope.Stroke
@@ -32,6 +32,8 @@ private const val DEFAULT_PASSING_PCT = 70
 
 @Composable
 fun StatsScreen(vm: QuizViewModel) {
+    BackHandler { vm.goHome() }
+
     val c = AppTheme.colors
     var showResetDialog by remember { mutableStateOf(false) }
 
@@ -64,7 +66,16 @@ fun StatsScreen(vm: QuizViewModel) {
         // Top stats
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
             Box(Modifier.weight(1f)) { StatCard("${vm.quizHistory().size}", vm.t("quizzes"), c.blue) }
-            Box(Modifier.weight(1f)) { StatCard("${vm.averageScore()}%", vm.t("avgScore"), c.green) }
+            Box(Modifier.weight(1f)) {
+                val avgPct = vm.averageScore()
+                val passingPct = vm.currentState?.passingScorePct ?: DEFAULT_PASSING_PCT
+                val avgColor = when {
+                    avgPct >= passingPct -> c.green
+                    avgPct >= 50 -> c.orange
+                    else -> c.red
+                }
+                StatCard("$avgPct%", vm.t("avgScore"), avgColor)
+            }
             Box(Modifier.weight(1f)) { StatCard("${vm.questionsSeen()}", vm.t("qsSeen")) }
         }
         Spacer(Modifier.height(10.dp))
@@ -115,7 +126,7 @@ fun StatsScreen(vm: QuizViewModel) {
             Text(vm.t("accuracyByCategory"), fontSize = 15.sp, fontWeight = FontWeight.SemiBold)
             Spacer(Modifier.height(12.dp))
             cats.forEach { (cat, pct) ->
-                CategoryBar(cat, pct)
+                CategoryBar(cat, pct, vm)
                 Spacer(Modifier.height(8.dp))
             }
             Spacer(Modifier.height(16.dp))
@@ -143,9 +154,10 @@ fun StatsScreen(vm: QuizViewModel) {
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.SemiBold,
                                 color = c.red,
+                                style = TextStyle(fontFeatureSettings = "tnum"),
                             )
                             Text("\u00B7", color = c.gray)
-                            Text(w.category.replace("_", " "), fontSize = 12.sp, color = c.gray)
+                            Text(vm.catName(w.category), fontSize = 12.sp, color = c.gray)
                         }
                     }
                 }
@@ -192,6 +204,7 @@ fun StatsScreen(vm: QuizViewModel) {
 private fun CategoryBar(
     category: String,
     pct: Int,
+    vm: QuizViewModel,
 ) {
     val c = AppTheme.colors
     val barColor = when {
@@ -201,7 +214,7 @@ private fun CategoryBar(
     }
     Row(verticalAlignment = Alignment.CenterVertically) {
         Text(
-            category.replace("_", " ").replaceFirstChar { it.uppercase() },
+            vm.catName(category),
             fontSize = 13.sp,
             modifier = Modifier.width(110.dp),
             maxLines = 1,
@@ -222,6 +235,7 @@ private fun CategoryBar(
             fontSize = 13.sp,
             fontWeight = FontWeight.SemiBold,
             color = barColor,
+            style = TextStyle(fontFeatureSettings = "tnum"),
             modifier = Modifier.width(36.dp),
         )
     }
@@ -249,12 +263,12 @@ private fun ScoreChart(
         // Grid
         for (pct in listOf(0, 25, 50, 75, 100)) {
             val y = padTop + plotH - (pct / 100f) * plotH
-            drawLine(Color.LightGray, Offset(padLeft, y), Offset(size.width - padRight, y), 1f)
+            drawLine(c.grayLight, Offset(padLeft, y), Offset(size.width - padRight, y), 1f)
             drawText(
                 textMeasurer,
                 "$pct%",
                 topLeft = Offset(0f, y - 6.dp.toPx()),
-                style = TextStyle(fontSize = 10.sp, color = Color.Gray),
+                style = TextStyle(fontSize = 10.sp, color = c.gray),
             )
         }
 
@@ -296,7 +310,7 @@ private fun ScoreChart(
         // Dots
         points.forEachIndexed { i, p ->
             val dotColor = if (scores[i] >= passingPct) c.green else c.red
-            drawCircle(Color.White, 6.dp.toPx(), p)
+            drawCircle(c.card, 6.dp.toPx(), p)
             drawCircle(dotColor, 4.dp.toPx(), p)
         }
 
@@ -308,7 +322,7 @@ private fun ScoreChart(
                     textMeasurer,
                     "#${startIndex + i}",
                     topLeft = Offset(p.x - 10.dp.toPx(), size.height - padBottom + 4.dp.toPx()),
-                    style = TextStyle(fontSize = 10.sp, color = Color.Gray),
+                    style = TextStyle(fontSize = 10.sp, color = c.gray),
                 )
             }
         }

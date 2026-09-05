@@ -23,7 +23,7 @@ from _util import (
 )
 from google import genai
 
-MODEL = "gemini-2.5-pro"
+MODEL = "gemini-3.1-pro-preview"
 CLIENT = genai.Client(vertexai=True, project="adk-coding-agents", location="global")
 
 SYSTEM_PROMPT = """\
@@ -39,6 +39,8 @@ Rules:
 7. Do NOT create questions that require viewing an image to answer
 8. Return valid JSON only, no markdown fences
 9. Make questions DIFFERENT from the existing ones listed below - cover different facts, scenarios, and details
+10. ONLY use facts stated in the provided manual text; never use outside knowledge to create or answer questions; if a chunk lacks enough substantive content, return an empty JSON array
+11. Never write questions about the manual document itself — table of contents, section titles, page numbers, publisher, edition, or the agency's website/apps. Questions must test driving knowledge
 
 Output format - JSON array:
 [
@@ -145,6 +147,7 @@ def main() -> None:
     chunks = chunk_text(manual_text)
     total_chunks = len(chunks)
     new_questions = []
+    skipped_chunks: list[int] = []
     next_id = len(existing) + 1
     needed = target_count - len(existing)
 
@@ -170,10 +173,16 @@ def main() -> None:
             new_questions.extend(questions)
             print(f"OK ({len(questions)} new, total new: {len(new_questions)})")
         except Exception:
-            pass  # retry_with_backoff already printed the failure
+            skipped_chunks.append(i + 1)  # retry_with_backoff already printed the failure
 
         if i + 1 < total_chunks:
             time.sleep(1)
+
+    if skipped_chunks:
+        print(
+            f"WARNING: {len(skipped_chunks)}/{total_chunks} chunks failed and were skipped: "
+            f"{skipped_chunks}. Coverage of those manual sections may be missing."
+        )
 
     # Deduplicate new questions against existing ones, then merge
     unique_new = deduplicate(new_questions, existing_questions=existing)

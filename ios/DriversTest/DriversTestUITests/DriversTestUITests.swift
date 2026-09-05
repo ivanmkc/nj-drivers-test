@@ -10,6 +10,7 @@ final class DriversTestUITests: XCTestCase {
 
     override func setUpWithError() throws {
         continueAfterFailure = false
+        app.launchArguments += ["--uitest-reset"]
         app.launch()
     }
 
@@ -67,7 +68,7 @@ final class DriversTestUITests: XCTestCase {
         navigateToHome()
         guard app.staticTexts["NJ Driver's Test"].waitForExistence(timeout: 5) else { return }
 
-        let startButton = app.staticTexts["Start Quiz"]
+        let startButton = app.buttons["Start Quiz"]
         XCTAssertTrue(startButton.exists, "Start Quiz button should be visible")
     }
 
@@ -82,14 +83,14 @@ final class DriversTestUITests: XCTestCase {
         navigateToHome()
         guard app.staticTexts["NJ Driver's Test"].waitForExistence(timeout: 5) else { return }
 
-        XCTAssertTrue(app.staticTexts["Change State"].exists, "Change State button should be visible")
+        XCTAssertTrue(app.buttons["Change State"].waitForExistence(timeout: 3), "Change State button should be visible")
     }
 
     func testChangeStateNavigatesBack() {
         navigateToHome()
         guard app.staticTexts["NJ Driver's Test"].waitForExistence(timeout: 5) else { return }
 
-        app.staticTexts["Change State"].tap()
+        app.buttons["Change State"].tap()
 
         let title = app.staticTexts["Driver's Test Practice"]
         XCTAssertTrue(title.waitForExistence(timeout: 5), "Should navigate back to state picker")
@@ -124,11 +125,11 @@ final class DriversTestUITests: XCTestCase {
         guard app.staticTexts["NJ Driver's Test"].waitForExistence(timeout: 5) else { return }
 
         // Select 10 questions for faster test
-        if app.staticTexts["10"].exists {
-            app.staticTexts["10"].tap()
+        if app.buttons["10"].exists {
+            app.buttons["10"].tap()
         }
 
-        app.staticTexts["Start Quiz"].tap()
+        app.buttons["Start Quiz"].tap()
 
         // Should see quiz progress indicator (e.g., "1 / 10")
         let counter = app.staticTexts.matching(NSPredicate(format: "label CONTAINS '/ '")).firstMatch

@@ -2,6 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --color-background: 249 250 251;
+    --color-surface: 255 255 255;
+    --color-foreground: 17 24 39;
+    --color-muted: 107 114 128;
+    --color-subtle: 156 163 175;
+    --color-primary: 26 86 219;
+    --color-primary-surface: 232 240 254;
+    --color-primary-hover: 29 78 216;
+    --color-success: 21 128 61;
+    --color-success-surface: 220 252 231;
+    --color-error: 220 38 38;
+    --color-error-surface: 254 226 226;
+    --color-warning: 234 88 12;
+    --color-on-accent: 255 255 255;
+    --color-on-primary: 255 255 255;
+    --color-border: 229 231 235;
+    --color-border-subtle: 243 244 246;
+    --color-gray-surface: 243 244 246;
+  }
+
+  .dark {
+    --color-background: 17 24 39;
+    --color-surface: 31 41 55;
+    --color-foreground: 249 250 251;
+    --color-muted: 156 163 175;
+    --color-subtle: 156 163 175;
+    --color-primary: 91 141 239;
+    --color-primary-surface: 30 41 59;
+    --color-primary-hover: 74 126 224;
+    --color-success: 74 222 128;
+    --color-success-surface: 20 51 42;
+    --color-error: 252 165 165;
+    --color-error-surface: 59 21 21;
+    --color-warning: 251 146 60;
+    --color-on-accent: 17 24 39;
+    --color-on-primary: 17 24 39;
+    --color-border: 55 65 81;
+    --color-border-subtle: 31 41 55;
+    --color-gray-surface: 45 55 72;
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--color-primary));
+    outline-offset: 2px;
+  }
+}
+
 @keyframes spin {
   to {
     transform: rotate(360deg);

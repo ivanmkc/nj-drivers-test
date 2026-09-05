@@ -37,3 +37,6 @@ jobs:
 
       - name: Pyright
         run: pyright
+
+      - name: Run tests
+        run: python3 -m pytest tools/ -q

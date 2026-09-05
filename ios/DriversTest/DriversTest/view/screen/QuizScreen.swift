@@ -27,25 +27,28 @@ struct QuizScreen: View {
                     HStack {
                         Text("\(vm.currentIndex + 1) / \(vm.questions.count)")
                             .font(.system(size: 14))
+                            .monospacedDigit()
                             .foregroundColor(AppTheme.gray)
                         Spacer()
                         HStack(spacing: 4) {
                             Text("\(vm.correctCount)")
                                 .foregroundColor(AppTheme.green)
                                 .font(.system(size: 14, weight: .semibold))
+                                .monospacedDigit()
                             Text("/")
                                 .foregroundColor(AppTheme.gray)
                                 .font(.system(size: 14))
                             Text("\(vm.wrongCount)")
                                 .foregroundColor(AppTheme.red)
                                 .font(.system(size: 14, weight: .semibold))
+                                .monospacedDigit()
                         }
                     }
 
                     if let q = vm.currentQuestion {
                         // Category badge
                         HStack(spacing: 6) {
-                            Text(q.category.replacingOccurrences(of: "_", with: " ").uppercased())
+                            Text(localizer.localizedCategory(q.category).uppercased())
                                 .font(.system(size: 12, weight: .semibold))
                                 .foregroundColor(AppTheme.blue)
                                 .padding(.horizontal, 10)
@@ -122,6 +125,17 @@ struct QuizScreen: View {
                             .transition(.opacity)
                         }
 
+                        // Evidence from the manual
+                        if let evidence = vm.evidenceForCurrentQuestion(),
+                           !evidence.isEmpty {
+                            EvidenceBlockView(
+                                evidence: evidence,
+                                sourceName: vm.currentState?.source,
+                                localizer: localizer
+                            )
+                            .transition(.opacity)
+                        }
+
                         // Next button
                         if vm.answered {
                             let isLast = vm.currentIndex >= vm.questions.count - 1
@@ -133,7 +147,7 @@ struct QuizScreen: View {
                             } label: {
                                 Text(isLast ? localizer.localized("seeResults") : localizer.localized("next"))
                                     .font(.system(size: 17, weight: .semibold))
-                                    .foregroundColor(.white)
+                                    .foregroundColor(AppTheme.onPrimary)
                                     .frame(maxWidth: .infinity)
                                     .padding(16)
                                     .background(AppTheme.blue)
@@ -160,5 +174,51 @@ struct QuizScreen: View {
         if letter == vm.correctAnswer { return .correct }
         if letter == vm.selectedAnswer && letter != vm.correctAnswer { return .wrong }
         return .disabled
+    }
+}
+
+// MARK: - Evidence Block
+
+private struct EvidenceBlockView: View {
+    let evidence: [String]
+    let sourceName: String?
+    @ObservedObject var localizer: Localizer
+
+    var body: some View {
+        HStack(spacing: 0) {
+            Rectangle()
+                .fill(AppTheme.gray)
+                .frame(width: 4)
+
+            VStack(alignment: .leading, spacing: 8) {
+                HStack(spacing: 4) {
+                    Image(systemName: "text.book.closed")
+                        .font(.system(size: 12))
+                    Text(localizer.fromManualLabel())
+                        .font(.system(size: 12, weight: .semibold))
+                }
+                .foregroundColor(AppTheme.gray)
+
+                ForEach(evidence, id: \.self) { passage in
+                    Text(passage)
+                        .font(.system(size: 13))
+                        .italic()
+                        .foregroundColor(AppTheme.gray)
+                        .lineSpacing(3)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+
+                if let source = sourceName {
+                    Text("-- \(source)")
+                        .font(.system(size: 11))
+                        .foregroundColor(AppTheme.gray.opacity(0.7))
+                }
+            }
+            .padding(12)
+        }
+        .background(AppTheme.grayLight)
+        .clipShape(
+            .rect(topLeadingRadius: 0, bottomLeadingRadius: 0, bottomTrailingRadius: 12, topTrailingRadius: 12)
+        )
     }
 }

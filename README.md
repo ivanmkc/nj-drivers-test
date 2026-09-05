@@ -7,14 +7,13 @@ Multi-platform practice quiz app for US state driver's license exams. Supports i
 ```
 drivers/
 ├── data/                    # Question data (source of truth)
-│   ├── states/
+│   ├── states/              # 51 US jurisdictions (50 states + DC)
 │   │   ├── nj/
 │   │   │   ├── config.json          # State metadata (name, agency, passing score)
 │   │   │   ├── questions_en.yaml    # English questions
-│   │   │   ├── questions_es.yaml    # Spanish questions
-│   │   │   └── questions_ja.yaml    # Japanese questions
+│   │   │   └── questions_es.yaml    # Spanish questions
 │   │   ├── ny/ ...
-│   │   └── ca/ ...
+│   │   └── wy/ ...
 │   └── signs/               # MUTCD road sign images (PNG)
 │
 ├── tools/                   # Build and content scripts
@@ -46,8 +45,14 @@ drivers/
 │       └── index.html
 │
 └── .github/workflows/       # CI
-    ├── ios.yml
-    └── android.yml
+    ├── android.yml              # Android build
+    ├── android-lint.yml         # ktlint for Kotlin
+    ├── data-validation.yml      # Question audit + bundle build
+    ├── deploy-pages.yml         # GitHub Pages deployment
+    ├── frontend-lint.yml        # ESLint + Prettier for React frontend
+    ├── ios.yml                  # iOS build
+    ├── python-lint.yml          # Ruff + Pyright for Python tooling
+    └── verify-manuals.yml       # Monthly manual URL health check
 ```
 
 ## Data Flow
@@ -132,10 +137,9 @@ Every question set **must** be grounded in a real official driver's manual. Neve
    ```bash
    python3 tools/add_sign_questions.py <code>
    ```
-5. **Translate**:
+5. **Translate** (English is always required; Spanish is high-value):
    ```bash
    python3 tools/translate.py <code> es
-   python3 tools/translate.py <code> ja
    ```
 6. **Bundle** — builds the gzipped JSON and copies to iOS/Android:
    ```bash
@@ -147,8 +151,21 @@ Every question set **must** be grounded in a real official driver's manual. Neve
 ```bash
 python3 tools/audit_questions.py        # Validate all question data
 python3 tools/verify_manuals.py         # HEAD-check every catalog URL
+pytest tools/                           # Run unit tests for Python tooling
 ```
 
 For ongoing catalog maintenance — refreshing a stale URL, adding a state,
 handling multi-PDF manuals, and interpreting the monthly tracking issue —
 see [`docs/maintaining-state-data.md`](docs/maintaining-state-data.md).
+
+### Troubleshooting
+
+| Symptom | Cause | Fix |
+|---------|-------|-----|
+| Questions about website CSS, chatbots, or page layout | `manual_url` points to an HTML page, not a PDF | Re-point `manual_url` to the actual PDF and regenerate questions |
+| Mass unfaithful/hallucinated questions | Generated from LLM knowledge instead of manual text | Verify `manual_text.txt` contains real manual content, regenerate, and run `quiz_gates` to confirm |
+| `audit_questions.py` flags stale `en_source_sha256` | EN questions were edited without re-translating | Re-run `translate.py <code> es` (and `ja` if the file exists); provenance stamps update automatically |
+| Extracted manual text is garbage (raw PDF bytes, HTML tags) | Content-sniff or extraction failure | Check the cached extraction under `$TMPDIR/drivers_cache_<uid>/`; re-download the PDF if corrupt |
+| 403 or connection-reset when downloading a manual | State site blocks cloud/datacenter IPs (known: ilsos.gov, mass.gov) | Use an Internet Archive PDF snapshot and record it as `recovery_url` in the state's `config.json` |
+| Repeated single-batch translation failures | Gemini rejects a batch (usually over-long or malformed) | `translate.py` auto-falls-back to per-question translation; check the rescued/skipped ID summary in its output |
+| 1-3 judge flags fluctuate between identical `quiz_gates` runs | Normal LLM variance on borderline questions | Grade-A PASS is the bar, not zero flags; thresholds absorb the wobble |

@@ -56,12 +56,12 @@ export default function StatePicker({
     <>
       <LangBar currentLang={lang} onSwitch={onSwitchLang} />
       <div className="text-center pt-4">
-        <h1 className="text-2xl font-bold text-blue-600 mb-1">{t('appTitle')}</h1>
-        <p className="text-gray-500 text-sm mb-4">{t('selectStateDesc')}</p>
+        <h1 className="text-2xl font-bold text-primary mb-1">{t('appTitle')}</h1>
+        <p className="text-muted text-base mb-4">{t('selectStateDesc')}</p>
       </div>
       <div className="relative mb-4">
         <svg
-          className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none"
+          className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-subtle pointer-events-none"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -78,7 +78,7 @@ export default function StatePicker({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search states..."
-          className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl text-base bg-white text-gray-900 outline-none focus:border-blue-500 transition-colors"
+          className="w-full pl-10 pr-4 py-3 border-2 border-border rounded-xl text-base bg-surface text-foreground outline-none focus:border-primary transition-colors placeholder:text-subtle"
         />
       </div>
       <div>
@@ -88,7 +88,7 @@ export default function StatePicker({
           const info = COUNTRIES[country] || { name: country.toUpperCase(), flag: '' };
           return (
             <div key={country} className="mb-5">
-              <div className="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wider px-1 pb-2 border-b border-gray-200 mb-2">
+              <div className="flex items-center gap-2 text-xs font-bold text-muted uppercase tracking-wider px-1 pb-2 border-b border-border mb-2">
                 <span className="text-lg">{info.flag}</span> {info.name}{' '}
                 <span className="font-normal">({countryStates.length})</span>
               </div>
@@ -96,15 +96,16 @@ export default function StatePicker({
                 {countryStates.map((s) => {
                   const hasQ = s.total_questions > 0;
                   return (
-                    <div
+                    <button
                       key={s.code}
                       onClick={() => hasQ && onSelectState(s.code)}
-                      className={`flex justify-between items-center p-4 bg-white border-2 rounded-xl transition-all
-                        ${hasQ ? 'border-gray-200 cursor-pointer hover:border-blue-300 active:scale-[0.98]' : 'border-gray-100 opacity-50 cursor-default'}`}
+                      disabled={!hasQ}
+                      className={`flex justify-between items-center p-4 bg-surface border-2 rounded-xl transition-all text-left w-full
+                        ${hasQ ? 'border-border cursor-pointer hover:border-primary active:scale-[0.98]' : 'border-border-subtle opacity-50 cursor-default'}`}
                     >
                       <div>
                         <div className="text-base font-semibold">{s.name}</div>
-                        <div className="text-xs text-gray-500 mt-0.5">
+                        <div className="text-xs text-muted mt-0.5">
                           {s.agency} &middot;{' '}
                           {t('passingScore', {
                             pass_pct: s.passing_score_pct,
@@ -117,16 +118,16 @@ export default function StatePicker({
                       </div>
                       <div className="text-right">
                         {hasQ ? (
-                          <div className="text-xs text-blue-600 font-semibold">
+                          <div className="text-xs text-primary font-semibold">
                             {t('questionsAvailable', { count: s.total_questions })}
                           </div>
                         ) : (
-                          <span className="text-[11px] text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">
+                          <span className="text-[11px] text-subtle bg-gray-surface px-2 py-0.5 rounded-full">
                             {t('comingSoon')}
                           </span>
                         )}
                       </div>
-                    </div>
+                    </button>
                   );
                 })}
               </div>
@@ -134,7 +135,7 @@ export default function StatePicker({
           );
         })}
         {totalShown === 0 && (
-          <div className="text-gray-400 text-sm py-10 text-center">
+          <div className="text-subtle text-base py-10 text-center">
             No states found matching &ldquo;{query}&rdquo;
           </div>
         )}

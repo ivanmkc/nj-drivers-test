@@ -2,6 +2,7 @@ import gzip
 import json
 import os
 import random
+import sys
 
 from flask import Flask, jsonify, request, send_from_directory
 
@@ -16,8 +17,11 @@ STATES_DIR = os.path.join(ROOT_DIR, "data", "states")
 STATES = {}
 CONFIG = {}
 
-with gzip.open(BUNDLE_PATH, "rt", encoding="utf-8") as f:
-    bundle = json.load(f)
+try:
+    with gzip.open(BUNDLE_PATH, "rt", encoding="utf-8") as f:
+        bundle = json.load(f)
+except FileNotFoundError:
+    sys.exit("questions bundle not found — run: python3 tools/bundle.py")
 
 for state_data in bundle["states"]:
     code = state_data["code"]
@@ -26,6 +30,10 @@ for state_data in bundle["states"]:
         "agency": state_data["agency"],
         "passing_score_pct": state_data["passing_score_pct"],
         "test_question_count": state_data["test_question_count"],
+        "source": state_data.get("source"),
+        "official_test_languages": state_data.get("official_test_languages"),
+        "categories": state_data.get("categories"),
+        "verification": state_data.get("verification"),
     }
     STATES[code] = {}
     for lang, questions in state_data["languages"].items():
@@ -79,18 +87,24 @@ def states():
         langs = sorted(STATES.get(code, {}).keys())
         total = len(STATES.get(code, {}).get("en", {}).get("questions", []))
         has_questions = total > 0
-        result.append(
-            {
-                "code": code,
-                "name": cfg["name"],
-                "agency": cfg["agency"],
-                "passing_score_pct": cfg["passing_score_pct"],
-                "test_question_count": cfg["test_question_count"],
-                "languages": langs,
-                "total_questions": total,
-                "has_questions": has_questions,
-            }
-        )
+        entry = {
+            "code": code,
+            "name": cfg["name"],
+            "agency": cfg["agency"],
+            "passing_score_pct": cfg["passing_score_pct"],
+            "test_question_count": cfg["test_question_count"],
+            "languages": langs,
+            "total_questions": total,
+            "has_questions": has_questions,
+        }
+        if cfg.get("source"):
+            entry["source"] = cfg["source"]
+        entry["official_test_languages"] = cfg.get("official_test_languages")
+        if cfg.get("categories"):
+            entry["categories"] = cfg["categories"]
+        if cfg.get("verification"):
+            entry["verification"] = cfg["verification"]
+        result.append(entry)
     return jsonify({"states": result})
 
 
@@ -147,7 +161,13 @@ def answer(question_id):
     q = data["by_id"].get(question_id)
     if not q:
         return jsonify({"error": "Question not found"}), 404
-    return jsonify({"id": q["id"], "answer": q["answer"], "explanation": q["explanation"]})
+    result = {"id": q["id"], "answer": q["answer"], "explanation": q["explanation"]}
+    en_data = STATES[state].get("en")
+    if en_data:
+        en_q = en_data["by_id"].get(question_id)
+        if en_q and en_q.get("evidence"):
+            result["evidence"] = en_q["evidence"]
+    return jsonify(result)
 
 
 @app.route("/api/answers", methods=["POST"])

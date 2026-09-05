@@ -36,6 +36,8 @@ Rules:
 6. Explanations should cite the relevant rule or fact from the manual
 7. Do NOT create questions that require viewing an image to answer
 8. Return valid JSON only, no markdown fences
+9. ONLY use facts stated in the provided manual text; never use outside knowledge to create or answer questions; if a chunk lacks enough substantive content, return an empty JSON array
+10. Never write questions about the manual document itself — table of contents, section titles, page numbers, publisher, edition, or the agency's website/apps. Questions must test driving knowledge
 
 Output format - JSON array:
 [
@@ -103,6 +105,7 @@ def main() -> None:
     chunks = chunk_text(manual_text)
     total_chunks = len(chunks)
     all_questions = []
+    skipped_chunks: list[int] = []
     next_id = 1
 
     print(f"Generating questions for {state_name} from {len(chunks)} chunks...")
@@ -122,10 +125,16 @@ def main() -> None:
             all_questions.extend(questions)
             print(f"OK ({len(questions)} questions, total: {len(all_questions)})")
         except Exception:
-            pass  # retry_with_backoff already printed the failure
+            skipped_chunks.append(batch_num)  # retry_with_backoff already printed the failure
 
         if i + 1 < total_chunks:
             time.sleep(1)
+
+    if skipped_chunks:
+        print(
+            f"WARNING: {len(skipped_chunks)}/{total_chunks} chunks failed and were skipped: "
+            f"{skipped_chunks}. The question bank may have topic gaps — re-run to fill them."
+        )
 
     unique = deduplicate(all_questions)
 

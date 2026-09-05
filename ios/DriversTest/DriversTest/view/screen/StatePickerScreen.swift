@@ -19,10 +19,25 @@ struct StatePickerScreen: View {
                     .foregroundColor(AppTheme.gray)
                     .padding(.bottom, 8)
 
-                ForEach(vm.allStates) { state in
-                    StateCard(state: state, localizer: localizer) {
-                        if state.hasQuestions {
-                            vm.selectState(state)
+                if vm.isLoading {
+                    ProgressView()
+                        .padding(.top, 40)
+                } else if let error = vm.loadError {
+                    VStack(spacing: 8) {
+                        Text("Failed to load questions")
+                            .font(.system(size: 15, weight: .semibold))
+                            .foregroundColor(AppTheme.red)
+                        Text(error)
+                            .font(.system(size: 13))
+                            .foregroundColor(AppTheme.gray)
+                    }
+                    .padding(.top, 40)
+                } else {
+                    ForEach(vm.allStates) { state in
+                        StateCard(state: state, localizer: localizer) {
+                            if state.hasQuestions {
+                                vm.selectState(state)
+                            }
                         }
                     }
                 }

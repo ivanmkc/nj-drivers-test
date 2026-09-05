@@ -370,6 +370,8 @@ def main() -> None:
     print(
         f"TOTAL: {total_questions} questions across {len(state_codes)} states, {total_issues} issues found"
     )
+    if total_issues > 0:
+        sys.exit(1)
 
 
 if __name__ == "__main__":

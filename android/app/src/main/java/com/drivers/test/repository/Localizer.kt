@@ -53,6 +53,30 @@ class Localizer {
             "cancel" to "Cancel",
             "resetButton" to "Reset",
             "all" to "All",
+            "aboutThisTest" to "About this test",
+            "sourceLabel" to "Source",
+            "editionLabel" to "Edition",
+            "fromManual" to "From the manual",
+            "fromManualEnNote" to "",
+            "cat_license_system" to "License System",
+            "cat_driver_testing" to "Driver Testing",
+            "cat_driver_responsibility" to "Driver Responsibility",
+            "cat_safe_driving_rules" to "Safe Driving Rules",
+            "cat_defensive_driving" to "Defensive Driving",
+            "cat_alcohol_drugs_health" to "Alcohol, Drugs & Health",
+            "cat_penalties_and_points" to "Penalties & Points",
+            "cat_sharing_the_road" to "Sharing the Road",
+            "cat_vehicle_information" to "Vehicle Information",
+            "cat_signs_and_signals" to "Signs & Signals",
+            "gradeLabel" to "Grade",
+            "fidelityLabel" to "fidelity",
+            "coverageLabel" to "coverage",
+            "officialTestLangsLabel" to "Official test languages",
+            "officialTestCaption" to "✓ = offered on the official {agency} test — others practice-only",
+            "officialTestLangsAndOthers" to "and others",
+            "officialTestLangsUnknown" to "Not stated in the manual — check with {agency}",
+            "officialTestPracticeNote" to
+                "This app also lets you practice in languages not offered on the official test.",
         ),
         "ja" to mapOf(
             "appTitle" to "運転免許テスト練習",
@@ -102,6 +126,29 @@ class Localizer {
             "cancel" to "キャンセル",
             "resetButton" to "リセット",
             "all" to "全て",
+            "aboutThisTest" to "このテストについて",
+            "sourceLabel" to "出典",
+            "editionLabel" to "版",
+            "fromManual" to "マニュアルより",
+            "fromManualEnNote" to "（英語）",
+            "cat_license_system" to "免許制度",
+            "cat_driver_testing" to "運転試験",
+            "cat_driver_responsibility" to "運転者の責任",
+            "cat_safe_driving_rules" to "安全運転のルール",
+            "cat_defensive_driving" to "防御運転",
+            "cat_alcohol_drugs_health" to "飲酒・薬物・健康",
+            "cat_penalties_and_points" to "罰則と点数",
+            "cat_sharing_the_road" to "道路の共有",
+            "cat_vehicle_information" to "車両情報",
+            "cat_signs_and_signals" to "標識と信号",
+            "gradeLabel" to "評価",
+            "fidelityLabel" to "忠実度",
+            "coverageLabel" to "カバー率",
+            "officialTestLangsLabel" to "公式テスト言語",
+            "officialTestCaption" to "✓ = {agency}公式テストで利用可能 — その他は練習用のみ",
+            "officialTestLangsAndOthers" to "およびその他",
+            "officialTestLangsUnknown" to "マニュアルに記載なし — {agency}にお問い合わせください",
+            "officialTestPracticeNote" to "このアプリでは公式テスト以外の言語でも練習できます。",
         ),
         "es" to mapOf(
             "appTitle" to "Práctica de Examen de Conducir",
@@ -152,6 +199,31 @@ class Localizer {
             "cancel" to "Cancelar",
             "resetButton" to "Restablecer",
             "all" to "Todos",
+            "aboutThisTest" to "Acerca de este examen",
+            "sourceLabel" to "Fuente",
+            "editionLabel" to "Edición",
+            "fromManual" to "Del manual",
+            "fromManualEnNote" to "(en inglés)",
+            "cat_license_system" to "Sistema de licencias",
+            "cat_driver_testing" to "Exámenes de manejo",
+            "cat_driver_responsibility" to "Responsabilidad del conductor",
+            "cat_safe_driving_rules" to "Reglas de manejo seguro",
+            "cat_defensive_driving" to "Manejo defensivo",
+            "cat_alcohol_drugs_health" to "Alcohol, drogas y salud",
+            "cat_penalties_and_points" to "Multas y puntos",
+            "cat_sharing_the_road" to "Compartir el camino",
+            "cat_vehicle_information" to "Información del vehículo",
+            "cat_signs_and_signals" to "Señales y semáforos",
+            "gradeLabel" to "Grado",
+            "fidelityLabel" to "fidelidad",
+            "coverageLabel" to "cobertura",
+            "officialTestLangsLabel" to "Idiomas del examen oficial",
+            "officialTestCaption" to
+                "✓ = disponible en el examen oficial del {agency} — los demás son solo para práctica",
+            "officialTestLangsAndOthers" to "y otros",
+            "officialTestLangsUnknown" to "No indicado en el manual — consulte con {agency}",
+            "officialTestPracticeNote" to
+                "Esta app también permite practicar en idiomas no disponibles en el examen oficial.",
         ),
         "fr" to mapOf(
             "appTitle" to "Pratique d'examen de conduite",
@@ -202,6 +274,31 @@ class Localizer {
             "cancel" to "Annuler",
             "resetButton" to "Réinitialiser",
             "all" to "Tout",
+            "aboutThisTest" to "A propos de cet examen",
+            "sourceLabel" to "Source",
+            "editionLabel" to "Edition",
+            "fromManual" to "Du manuel",
+            "fromManualEnNote" to "(en anglais)",
+            "cat_license_system" to "Système de permis",
+            "cat_driver_testing" to "Examens de conduite",
+            "cat_driver_responsibility" to "Responsabilité du conducteur",
+            "cat_safe_driving_rules" to "Règles de conduite sûre",
+            "cat_defensive_driving" to "Conduite défensive",
+            "cat_alcohol_drugs_health" to "Alcool, drogues et santé",
+            "cat_penalties_and_points" to "Sanctions et points",
+            "cat_sharing_the_road" to "Partage de la route",
+            "cat_vehicle_information" to "Informations sur le véhicule",
+            "cat_signs_and_signals" to "Panneaux et signaux",
+            "gradeLabel" to "Note",
+            "fidelityLabel" to "fidélité",
+            "coverageLabel" to "couverture",
+            "officialTestLangsLabel" to "Langues de l'examen officiel",
+            "officialTestCaption" to
+                "✓ = proposé à l'examen officiel {agency} — les autres sont pour la pratique uniquement",
+            "officialTestLangsAndOthers" to "et autres",
+            "officialTestLangsUnknown" to "Non précisé dans le manuel — vérifiez auprès de {agency}",
+            "officialTestPracticeNote" to
+                "Cette app permet aussi de pratiquer dans des langues non proposées à l'examen officiel.",
         ),
     )
 
@@ -215,5 +312,24 @@ class Localizer {
             s = s.replace("{$k}", v)
         }
         return s
+    }
+
+    fun localizedCategory(
+        key: String,
+        lang: String,
+    ): String {
+        val i18nKey = "cat_$key"
+        val result = translations[lang]?.get(i18nKey) ?: translations["en"]?.get(i18nKey)
+        if (result != null && result != i18nKey) return result
+        return key.replace("_", " ").split(" ").joinToString(" ") { word ->
+            word.replaceFirstChar { it.uppercase() }
+        }
+    }
+
+    fun fromManualLabel(lang: String): String {
+        val base = t("fromManual", lang)
+        val note = t("fromManualEnNote", lang)
+        if (note.isEmpty()) return base
+        return "$base $note"
     }
 }

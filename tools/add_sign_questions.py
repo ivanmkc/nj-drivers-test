@@ -10,6 +10,7 @@ import os
 import sys
 
 import yaml
+from _util import resolve_state_paths
 
 # Sign questions with real MUTCD sign images (public domain, national standard)
 SIGN_QUESTIONS = [
@@ -464,10 +465,8 @@ def main() -> None:
         sys.exit(1)
 
     state_code = sys.argv[1].lower()
-    state_dir = os.path.join(
-        os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "states", state_code
-    )
-    yaml_path = os.path.join(state_dir, "questions_en.yaml")
+    paths = resolve_state_paths(state_code)
+    yaml_path = paths["questions_en_path"]
 
     if not os.path.exists(yaml_path):
         print(f"Questions file not found: {yaml_path}")

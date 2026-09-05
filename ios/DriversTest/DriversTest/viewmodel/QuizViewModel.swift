@@ -23,6 +23,8 @@ class QuizViewModel: ObservableObject {
     // Settings
     @Published var quizMode: QuizMode = .random
     @Published var selectedCount = 50
+    @Published var isLoading = true
+    @Published var loadError: String?
 
     private let localizer = Localizer.shared
     private let api = ApiClient.shared
@@ -42,11 +44,29 @@ class QuizViewModel: ObservableObject {
     private func invalidateStoreCache() {
         cachedStore = nil
         cachedStoreCode = nil
+        cachedWeakQuestions = nil
+        cachedWeakQuestionsCode = nil
     }
+
+    private func updateStoreCache(_ s: QuizStore) {
+        cachedStore = s
+        cachedStoreCode = currentState?.code
+        cachedWeakQuestions = nil
+        cachedWeakQuestionsCode = nil
+    }
+
+    private var cachedWeakQuestions: [WeakQuestion]?
+    private var cachedWeakQuestionsCode: String?
 
     var weakQuestions: [WeakQuestion] {
         guard let state = currentState else { return [] }
-        return storage.getWeakQuestions(for: state.code)
+        if cachedWeakQuestionsCode == state.code, let cached = cachedWeakQuestions {
+            return cached
+        }
+        let result = storage.getWeakQuestions(for: state.code)
+        cachedWeakQuestions = result
+        cachedWeakQuestionsCode = state.code
+        return result
     }
 
     var quizHistory: [QuizHistoryEntry] {
@@ -122,16 +142,44 @@ class QuizViewModel: ObservableObject {
         return (record.wrong, record.seen)
     }
 
+    func evidenceForCurrentQuestion() -> [String]? {
+        guard answered, let q = currentQuestion, let state = currentState else { return nil }
+        return api.fetchEvidence(questionId: q.id, state: state.code)
+    }
+
     // MARK: - Actions
 
     func loadStates() {
-        allStates = api.fetchStates()
-        if let savedCode = storage.savedStateCode,
-           let saved = allStates.first(where: { $0.code == savedCode && $0.hasQuestions }) {
-            currentState = saved
-            invalidateStoreCache()
-            selectedCount = min(50, saved.totalQuestions)
-            screen = .home
+        Task {
+            isLoading = true
+            loadError = nil
+
+            do {
+                try await Task.detached {
+                    try ApiClient.shared.loadBundle()
+                }.value
+            } catch {
+                loadError = error.localizedDescription
+                isLoading = false
+                return
+            }
+
+            allStates = api.fetchStates()
+            // UI tests pass --uitest-reset so every test launches on the picker
+            // in English (saved state AND language persist in simulator
+            // UserDefaults across launches within a test run).
+            if ProcessInfo.processInfo.arguments.contains("--uitest-reset") {
+                storage.savedStateCode = nil
+                localizer.currentLang = "en"
+            }
+            if let savedCode = storage.savedStateCode,
+               let saved = allStates.first(where: { $0.code == savedCode && $0.hasQuestions }) {
+                currentState = saved
+                invalidateStoreCache()
+                selectedCount = min(50, saved.totalQuestions)
+                screen = .home
+            }
+            isLoading = false
         }
     }
 
@@ -191,14 +239,14 @@ class QuizViewModel: ObservableObject {
 
         if isCorrect { correctCount += 1 } else { wrongCount += 1 }
 
-        var s = storage.loadStore(for: state.code)
+        var s = store
         let idStr = String(q.id)
         var record = s.questions[idStr] ?? QuestionRecord(seen: 0, wrong: 0, category: q.category)
         record.seen += 1
         if !isCorrect { record.wrong += 1 }
         s.questions[idStr] = record
         storage.saveStore(s, for: state.code)
-        invalidateStoreCache()
+        updateStoreCache(s)
 
         sessionResults.append(SessionResult(
             id: q.id,
@@ -226,7 +274,7 @@ class QuizViewModel: ObservableObject {
 
     private func finishQuiz() {
         guard let state = currentState else { return }
-        var s = storage.loadStore(for: state.code)
+        var s = store
         s.history.append(QuizHistoryEntry(
             date: Date(),
             correct: correctCount,
@@ -235,7 +283,7 @@ class QuizViewModel: ObservableObject {
             mode: quizMode.rawValue
         ))
         storage.saveStore(s, for: state.code)
-        invalidateStoreCache()
+        updateStoreCache(s)
         screen = .results
     }
 

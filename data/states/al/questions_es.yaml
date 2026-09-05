@@ -1,7 +1,7 @@
 metadata:
   source: Alabama Driver Manual (alea.gov)
   source_original: Alabama Driver Manual (alea.gov)
-  total_questions: 292
+  total_questions: 299
   language: es
   categories:
   - alcohol_drugs_health
@@ -14,6 +14,10 @@ metadata:
   - sharing_the_road
   - signs_and_signals
   - vehicle_information
+  translation:
+    translated_at: '2026-07-27T02:57:54Z'
+    translated_by: gemini-3-flash-preview
+    en_source_sha256: 21e45ca366868277e542f6bc43a7d2e90f9af7c4fba76aa2f00528a2bf8df59a
 questions:
 - id: 1
   category: driver_responsibility
@@ -42,15 +46,15 @@ questions:
     un corazón rojo aparecerá en su licencia'.
 - id: 3
   category: driver_responsibility
-  question: Según el manual, ¿con qué frecuencia aproximadamente se agrega a alguien
-    a la lista de espera nacional de trasplantes de órganos?
+  question: Según el manual, ¿con qué frecuencia aproximadamente se añade a alguien
+    a la lista nacional de espera para trasplantes de órganos?
   choices:
     A: Cada minuto
     B: Cada 10 minutos
     C: Cada hora
     D: Cada día
   answer: B
-  explanation: El manual establece que 'Se agrega a alguien a la lista cada diez minutos,
+  explanation: El manual establece que 'Se añade a alguien a la lista cada diez minutos,
     y aproximadamente 18 personas morirán cada día mientras esperan un órgano'.
 - id: 4
   category: driver_responsibility
@@ -60,9 +64,9 @@ questions:
     A: Una tarifa fija de $500
     B: El costo de la operación de extracción
     C: La mitad de los gastos funerarios
-    D: No hay costo financiero por la donación de órganos o tejidos
+    D: No hay ningún costo financiero por la donación de órganos o tejidos
   answer: D
-  explanation: 'El manual aclara un mito común al afirmar: ''No hay costo financiero
+  explanation: 'El manual aclara un mito común al afirmar: ''No hay ningún costo financiero
     para la familia o el patrimonio del donante por la donación de órganos o tejidos''.'
 - id: 5
   category: license_system
@@ -70,17 +74,16 @@ questions:
   choices:
     A: Departamento de Transporte
     B: Agencia de Aplicación de la Ley de Alabama, Servicios de Licencias de Conducir
-      (Alabama Law Enforcement Agency, Driver License Services)
-    C: Departamento de Vehículos Motorizados (DMV)
+    C: Departamento de Vehículos Motorizados
     D: Oficina de Seguridad en las Carreteras
   answer: B
   explanation: 'El Capítulo 1 del manual establece: ''La Agencia de Aplicación de
-    la Ley de Alabama, Servicios de Licencias de Conducir, emite las licencias de
-    conducir''.'
+    la Ley de Alabama, Servicios de Licencias de Conducir (Alabama Law Enforcement
+    Agency, Driver License Services), emite las licencias de conducir''.'
 - id: 6
   category: driver_testing
-  question: Un solicitante cuya licencia de conducir de Alabama haya estado vencida
-    por más de ¿cuántos años? debe aprobar el examen de conducir requerido.
+  question: ¿Un solicitante cuya licencia de conducir de Alabama haya expirado por
+    más de cuántos años debe aprobar el examen de conducir requerido?
   choices:
     A: Un año
     B: Dos años
@@ -88,12 +91,12 @@ questions:
     D: Cinco años
   answer: C
   explanation: 'El manual establece: ''Todos los solicitantes que no hayan tenido
-    licencia en Alabama o cuya licencia de Alabama haya estado vencida por más de
-    tres años deben aprobar el examen de conducir requerido''.'
+    licencia en Alabama o cuya licencia de Alabama haya expirado por más de tres años
+    deben aprobar el examen de conducir requerido''.'
 - id: 7
   category: driver_testing
-  question: Si posee una licencia de conducir válida de otro estado que no ha estado
-    vencida por más de un año, ¿de qué está exento al solicitar una licencia de Alabama?
+  question: Si posee una licencia de conducir válida de otro estado que no ha expirado
+    por más de un año, ¿de qué está exento al solicitar una licencia de Alabama?
   choices:
     A: De pagar la tarifa de la licencia
     B: De aprobar un examen de conducir
@@ -101,11 +104,11 @@ questions:
     D: De proporcionar identificación
   answer: B
   explanation: Según el manual, 'El titular de una licencia de otro estado que no
-    haya estado vencida por más de un año no tiene que aprobar un examen de conducir'.
+    haya expirado por más de un año no tiene que aprobar un examen de conducir'.
 - id: 8
   category: license_system
   question: ¿Cuál de los siguientes vehículos puede operarse temporalmente en una
-    carretera de Alabama sin licencia de conducir?
+    carretera de Alabama sin una licencia de conducir?
   choices:
     A: Un camión de entrega comercial
     B: Un tractor agrícola
@@ -117,8 +120,8 @@ questions:
     de labranza operado o movido temporalmente en la carretera'.
 - id: 9
   category: license_system
-  question: ¿El personal militar de otros estados destinado en Alabama necesita obtener
-    una licencia de conducir de Alabama?
+  question: ¿El personal militar de otros estados estacionado en Alabama necesita
+    obtener una licencia de conducir de Alabama?
   choices:
     A: Sí, dentro de los 30 días posteriores a su llegada a Alabama.
     B: Sí, a menos que vivan en una base militar.
@@ -128,14 +131,14 @@ questions:
       de conducir.
   answer: C
   explanation: No se requiere una licencia de conducir de Alabama para 'Un residente
-    de al menos 16 años de edad que tenga en su posesión inmediata una licencia de
-    conducir válida emitida en su estado o país de origen. Esto incluye al personal
-    militar de otros estados y sus familias destinados en Alabama...'
+    de al menos 16 años que tenga en su posesión inmediata una licencia de conducir
+    válida emitida en su estado o país de origen. Esto incluye al personal militar
+    de otros estados y sus familias estacionados en Alabama...'
 - id: 10
   category: license_system
-  question: Un no residente que tenga una licencia de conducir válida de su estado
-    de residencia anterior puede conducir sin una licencia de Alabama durante ¿cuántos
-    días? después de convertirse en residente de Alabama.
+  question: ¿Un no residente que tiene una licencia de conducir válida de su estado
+    de residencia anterior puede conducir sin una licencia de Alabama durante cuántos
+    días después de convertirse en residente de Alabama?
   choices:
     A: 10 días
     B: 30 días
@@ -147,8 +150,8 @@ questions:
     de Alabama durante 30 días después de convertirse en residente del estado'.
 - id: 11
   category: license_system
-  question: ¿Un no residente de al menos 16 años de edad de un país que no requiere
-    licencia puede conducir en Alabama por un máximo de cuántos días en un año calendario?
+  question: ¿Por cuántos días en un año calendario puede conducir en Alabama un no
+    residente de al menos 16 años de edad proveniente de un país que no requiere licencia?
   choices:
     A: 30 días
     B: 60 días
@@ -156,37 +159,37 @@ questions:
     D: 120 días
   answer: C
   explanation: El manual establece que un no residente de un país sin requisitos de
-    licencia puede operar un vehículo motorizado 'por no más de 90 días en cualquier
+    licencia puede operar un vehículo motorizado "por no más de 90 días en cualquier
     año calendario, si el vehículo operado está debidamente registrado para el año
-    en curso en el país de origen...'
+    en curso en el país de origen..."
 - id: 12
   category: license_system
   question: ¿Cuál de los siguientes no residentes tiene permitido conducir en Alabama
     sin una licencia de conducir de Alabama?
   choices:
-    A: Un estudiante de medio tiempo sin licencia de su estado de origen
-    B: Un estudiante de tiempo completo debidamente inscrito en una escuela de Alabama
+    A: Un estudiante a tiempo parcial sin licencia de su estado de origen
+    B: Un estudiante a tiempo completo debidamente inscrito en una escuela de Alabama
       que posea una licencia válida de su estado de origen
     C: Un turista que ha estado en el estado durante 120 días
     D: Una persona cuya licencia de otro estado fue suspendida recientemente
   answer: B
-  explanation: No se requiere una licencia de Alabama para 'Cualquier estudiante no
-    residente de tiempo completo debidamente inscrito y registrado en una escuela,
+  explanation: No se requiere una licencia de Alabama para "Cualquier estudiante no
+    residente a tiempo completo debidamente inscrito y registrado en una escuela,
     colegio, universidad o escuela técnica en este estado, que posea una licencia
-    válida de su estado o país de origen'.
+    válida de su estado o país de origen".
 - id: 13
   category: license_system
-  question: Según la ley de Alabama, ¿no se emitirá una licencia de conducir a ninguna
-    persona menor de qué edad?
+  question: Según la ley de Alabama, ¿a qué edad NO se le debe emitir una licencia
+    de conducir a ninguna persona?
   choices:
     A: 14 años de edad
     B: 15 años de edad
     C: 16 años de edad
     D: 18 años de edad
   answer: C
-  explanation: La sección 'Quién no puede obtener una licencia' establece explícitamente
-    que no se emitirá una licencia de conducir de Alabama a 'Personas menores de 16
-    años de edad'.
+  explanation: La sección "Quién no puede obtener una licencia" establece explícitamente
+    que no se emitirá una licencia de conducir de Alabama a "Personas menores de 16
+    años de edad".
 - id: 14
   category: license_system
   question: ¿Puede obtener una licencia de conducir de Alabama si su privilegio de
@@ -199,26 +202,26 @@ questions:
     D: No, a menos que apruebe nuevamente el examen de manejo de Alabama.
   answer: C
   explanation: El manual establece que no se emitirá una licencia de conducir de Alabama
-    a 'Cualquier persona cuyos derechos o privilegios de conducir estén suspendidos
-    o revocados en cualquier estado'.
+    a "Cualquier persona cuyos derechos o privilegios de conducir estén suspendidos
+    o revocados en cualquier estado".
 - id: 15
   category: license_system
   question: 'No se emitirá una licencia de conducir de Alabama a una persona si tiene
-    una discapacidad física o mental que:'
+    una deficiencia física o mental que:'
   choices:
     A: Le obligue a usar anteojos mientras conduce.
-    B: Le impida operar de manera segura un vehículo motorizado en opinión de la ALEA
+    B: Le impida operar con seguridad un vehículo motorizado en opinión de la ALEA
       o del oficial examinador.
     C: Le obligue a conducir un vehículo de transmisión automática.
     D: Le impida aprobar una prueba de aptitud física.
   answer: B
-  explanation: No se emitirá una licencia a 'Cualquier persona afligida o que sufra
-    de una discapacidad física o mental que, en opinión de la ALEA o del oficial examinador,
-    le impida [operar un vehículo motorizado de manera segura]'.
+  explanation: No se emitirá una licencia a "Cualquier persona afligida o que sufra
+    de una deficiencia física o mental que, en opinión de la ALEA o del oficial examinador,
+    le impida [operar con seguridad un vehículo motorizado]".
 - id: 16
   category: license_system
-  question: De acuerdo con la ley de Alabama, una persona menor de 19 años no puede
-    obtener la licencia si no cumple con ¿cuál requisito?
+  question: De acuerdo con la ley de Alabama, ¿una persona menor de 19 años no puede
+    obtener la licencia si no cumple con qué requisito?
   choices:
     A: Registro de votantes
     B: Graduación de escuela secundaria o asistencia actual
@@ -234,28 +237,28 @@ questions:
     dos formas de identificación, ¿qué debe ser cierto sobre estos documentos?
   choices:
     A: Ambos documentos deben contener una fotografía.
-    B: Al menos uno debe contener una fotografía y uno debe ser de la 'Lista Primaria'
+    B: Al menos uno debe contener una fotografía y uno debe ser de la "Lista Primaria"
       (Primary Listing).
-    C: Ambos documentos deben ser de la 'Lista Secundaria' (Secondary Listing).
-    D: No se requiere que ninguno tenga una fotografía si están ante notario.
+    C: Ambos documentos deben ser de la "Lista Secundaria" (Secondary Listing).
+    D: No se requiere que ninguno tenga fotografía si están notariados.
   answer: B
   explanation: Los solicitantes deben presentar dos formas de identificación, al menos
-    una de las cuales debe contener una fotografía, y una forma debe ser de la 'Lista
-    Primaria' (Primary Listing).
+    una de las cuales debe contener una fotografía, y una forma debe ser de la "Lista
+    Primaria" (Primary Listing).
 - id: 18
   category: license_system
   question: ¿Qué documentación debe presentar un solicitante que transfiere una licencia
     de conducir de otro estado?
   choices:
-    A: Su licencia de fuera del estado, su tarjeta de Seguro Social y otra forma de
-      la 'Lista Primaria' (Primary Listing)
-    B: Solo su licencia de fuera del estado y un certificado de nacimiento
+    A: Su licencia de otro estado, su tarjeta de Seguro Social y otra forma de la
+      "Lista Primaria" (Primary Listing)
+    B: Solo su licencia de otro estado y un certificado de nacimiento
     C: Tres formas de identificación sin fotografía
-    D: Su licencia de fuera del estado y un diploma de escuela secundaria
+    D: Su licencia de otro estado y un diploma de escuela secundaria
   answer: A
   explanation: Los solicitantes que transfieren una licencia de conducir de otro estado
-    deben presentar su licencia de conducir de fuera del estado, su tarjeta de Seguro
-    Social (o documento aceptable) Y otra forma de la 'Lista Primaria' (Primary Listing).
+    deben presentar su licencia de conducir de otro estado, su tarjeta de Seguro Social
+    (o documento aceptable) Y otra forma de la "Lista Primaria" (Primary Listing).
 - id: 19
   category: license_system
   question: ¿Cuál de los siguientes haría que un documento sea inaceptable para probar
@@ -263,31 +266,31 @@ questions:
   choices:
     A: Es un documento original.
     B: Es una copia certificada por la agencia emisora.
-    C: Se ha utilizado líquido corrector (white-out) en información pertinente.
+    C: Se ha utilizado corrector líquido (white-out) en información pertinente.
     D: Está impreso en papel de color.
   answer: C
-  explanation: Un documento sería inaceptable si se ha utilizado líquido corrector
+  explanation: Un documento sería inaceptable si se ha utilizado corrector líquido
     (white-out) en información pertinente, entre otras alteraciones o daños.
 - id: 20
   category: license_system
-  question: ¿Cuál de los siguientes es un documento aceptable para probar su Número
+  question: ¿Cuál de los siguientes es un documento aceptable para probar su número
     de Seguro Social?
   choices:
     A: Una factura de servicios públicos con su nombre
     B: Un formulario de impuestos W2
-    C: Una tarjeta de biblioteca
+    C: Un carné de biblioteca
     D: Un contrato de arrendamiento vigente
   answer: B
   explanation: Un formulario de impuestos W2 original figura como uno de los documentos
     aceptables requeridos como prueba de un número de Seguro Social.
 - id: 21
   category: license_system
-  question: 'Para que un documento ante notario sea aceptado, la fecha de vencimiento
-    de la comisión del notario debe ser:'
+  question: 'Para que un documento notarizado sea aceptado, la fecha de vencimiento
+    de la comisión del notario debe estar:'
   choices:
     A: Dentro de los próximos 30 días
     B: Legible y vigente en la fecha en que se notarizó el documento
-    C: Válida por al menos un año a partir de la fecha de la solicitud
+    C: Válida por al menos un año a partir de la fecha de solicitud
     D: Dejada en blanco
   answer: B
   explanation: Los documentos notarizados deben cumplir con varios requisitos, incluyendo
@@ -304,42 +307,42 @@ questions:
     D: Al menos 160 días
   answer: D
   explanation: Los documentos de inmigración deben reflejar al menos 160 días de tiempo
-    de permanencia permitido restante en los Estados Unidos.
+    de permanencia permitido en los Estados Unidos.
 - id: 23
   category: license_system
   question: ¿Cuál de los siguientes formularios deben presentar todos los solicitantes
     menores de 19 años?
   choices:
-    A: Un Formulario de Inscripción/Exclusión de Estudiantes (DL-1-93) vigente
+    A: Un Formulario de Inscripción/Exclusión Estudiantil (DL-1-93) vigente
     B: Una exención de consentimiento paterno firmada
     C: Un formulario de autorización médica
-    D: Un comprobante de empleo
+    D: Un formulario de comprobante de empleo
   answer: A
   explanation: Todos los solicitantes menores de 19 años deben presentar un Formulario
-    de Inscripción/Exclusión de Estudiantes (DL-1-93) vigente, completado y firmado
-    por el personal autorizado.
+    de Inscripción/Exclusión Estudiantil (DL-1-93) vigente, completado y firmado por
+    el personal autorizado.
 - id: 24
   category: license_system
   question: ¿Qué documento específico se requiere para que todos los solicitantes
     de 15 años demuestren su fecha de nacimiento?
   choices:
     A: Una identificación escolar con foto
-    B: Un Certificado de Nacimiento de EE. UU. certificado emitido por una agencia
+    B: Un Certificado de Nacimiento de EE. UU. Certificado emitido por una agencia
       designada
     C: Una tarjeta de Seguro Social
     D: Un formulario de impuestos W2
   answer: B
-  explanation: Se requiere un Certificado de Nacimiento de EE. UU. certificado, emitido
-    por una agencia designada por la autoridad estatal o federal, para todos los solicitantes
-    de 15 años según el Título 36-6-8(b).
+  explanation: Se requiere un Certificado de Nacimiento de EE. UU. Certificado emitido
+    por una agencia designada por la autoridad estatal o federal para todos los solicitantes
+    de 15 años bajo el Título 36-6-8(b).
 - id: 25
   category: driver_testing
   question: ¿Cómo se administran los exámenes escritos de la licencia de conducir
     a los solicitantes con discapacidad auditiva?
   choices:
     A: A través de un intérprete en vivo proporcionado por el solicitante
-    B: Utilizando equipos de prueba automatizados en Lenguaje de Señas Americano (ASL)
-    C: Mediante la lectura de una versión del examen en braille
+    B: Utilizando equipo de prueba automatizado en Lenguaje de Señas Americano (ASL)
+    C: Leyendo una versión del examen en braille
     D: Viendo un video con subtítulos
   answer: B
   explanation: Los exámenes escritos pueden administrarse a personas con discapacidad
@@ -347,18 +350,18 @@ questions:
     en ciertas oficinas de Licencias de Conducir.
 - id: 26
   category: driver_testing
-  question: ¿Quién es elegible para realizar un examen oral para su licencia de conducir?
+  question: ¿Quién es elegible para realizar un Examen Oral para su licencia de conducir?
   choices:
     A: Cualquier solicitante que prefiera hablar en lugar de escribir
-    B: Solicitantes que no pueden leer ni comprender las pruebas de conocimientos
+    B: Solicitantes que no pueden leer y comprender las pruebas de conocimiento
     C: Solo solicitantes que transfieren una licencia de otro estado
     D: Solo solicitantes menores de 16 años
   answer: B
   explanation: Los exámenes orales están disponibles para los solicitantes que no
-    pueden leer ni comprender las pruebas de conocimientos.
+    pueden leer y comprender las pruebas de conocimiento.
 - id: 27
   category: license_system
-  question: ¿A qué edad puede una persona obtener una licencia de aprendizaje (Learner
+  question: ¿A qué edad puede una persona obtener una Licencia de Aprendizaje (Learner
     License) restringida en Alabama?
   choices:
     A: 14 años
@@ -366,14 +369,14 @@ questions:
     C: 16 años
     D: 18 años
   answer: B
-  explanation: Cualquier persona de 15 años de edad puede obtener una licencia de
-    aprendizaje restringida con el fin de aprender a operar un vehículo motorizado
-    de manera segura y efectiva.
+  explanation: Cualquier persona de 15 años de edad puede obtener una Licencia de
+    Aprendizaje (Learner License) restringida con el propósito de aprender a operar
+    un vehículo motorizado de manera segura y efectiva.
 - id: 28
   category: safe_driving_rules
-  question: 'La restricción ''Y'' en una licencia de conducir Clase D de Alabama indica
-    que el titular puede operar un vehículo motorizado solo si está acompañado por
-    una persona que tenga al menos:'
+  question: 'La restricción ''Y'' en una licencia de conducir de Alabama Clase D indica
+    que el titular puede operar un vehículo motorizado solo mientras esté acompañado
+    por una persona que tenga al menos:'
   choices:
     A: 18 años
     B: 19 años
@@ -381,20 +384,20 @@ questions:
     D: 25 años
   answer: C
   explanation: La restricción 'Y' indica que el titular puede operar un vehículo motorizado
-    mientras esté acompañado por una persona que tenga 21 años de edad.
+    mientras esté acompañado por una persona que tenga 21 años.
 - id: 29
   category: license_system
-  question: ¿Cuál de los siguientes se considera un 'Documento Primario' para fines
+  question: ¿Cuál de los siguientes se considera un 'Documento Principal' para fines
     de identificación?
   choices:
     A: Licencia de matrimonio
-    B: Pasaporte de los EE. UU. vigente
+    B: Pasaporte de EE. UU. vigente
     C: Tarjeta de identificación de seguro médico
     D: Tarjeta del Servicio Selectivo
   answer: B
-  explanation: Un pasaporte de los EE. UU. vigente figura en la lista de 'DOCUMENTOS
-    PRIMARIOS', mientras que las licencias de matrimonio, las tarjetas de seguro médico
-    y las tarjetas del Servicio Selectivo son 'DOCUMENTOS SECUNDARIOS'.
+  explanation: Un pasaporte de EE. UU. vigente figura en la lista de 'DOCUMENTOS PRINCIPALES',
+    mientras que las licencias de matrimonio, las tarjetas de identificación de seguro
+    médico y las tarjetas del Servicio Selectivo son 'DOCUMENTOS SECUNDARIOS'.
 - id: 30
   category: license_system
   question: Si un solicitante ha sido deportado previamente de los Estados Unidos,
@@ -418,43 +421,43 @@ questions:
     B: El titular solo puede operar una motocicleta (motor driven cycle).
     C: El titular puede operar un vehículo motorizado con un conductor con licencia
       ocupando el asiento a su lado.
-    D: El titular está restringido a conducir únicamente durante las horas del día.
+    D: El titular está restringido a conducir solo durante las horas del día.
   answer: C
   explanation: Según el manual, la restricción 'Y' indica que el titular puede operar
     un vehículo motorizado con un conductor con licencia ocupando el asiento al lado
     del conductor.
 - id: 32
   category: license_system
-  question: ¿Cuánto tiempo debe una persona de 16 años pero menor de 18 tener una
-    Licencia de Aprendiz (Learner License) antes de poder realizar el examen de conducir
-    para una licencia regular?
+  question: ¿Cuánto tiempo debe una persona de 16 años pero menor de 18 años tener
+    una Licencia de Aprendiz (Learner License) antes de poder realizar el examen de
+    manejo para una licencia de conducir regular?
   choices:
     A: 3 meses
     B: 6 meses o hasta cumplir los 18 años
     C: 9 meses
     D: 12 meses
   answer: B
-  explanation: El manual establece que una persona de 16 años pero menor de 18 debe
-    haber tenido una Licencia de Aprendiz durante seis meses o hasta cumplir los 18
-    años antes de realizar el examen de conducir.
+  explanation: El manual establece que una persona de 16 años pero menor de 18 años
+    debe haber tenido una Licencia de Aprendiz durante seis meses o hasta cumplir
+    los 18 años antes de realizar el examen de manejo.
 - id: 33
   category: vehicle_information
-  question: ¿Un joven de 14 o 15 años puede obtener una licencia restringida para
-    operar una motocicleta (motor driven cycle) que no exceda qué peso y cilindrada
-    del motor?
+  question: Una persona de 14 o 15 años puede obtener una licencia restringida para
+    operar una motocicleta (motor driven cycle) que no exceda ¿qué peso y cilindrada
+    de motor?
   choices:
     A: 200 libras y 150cc
     B: 250 libras y 200cc
     C: 300 libras y 250cc
     D: 150 libras y 100cc
   answer: A
-  explanation: El manual establece que un joven de 14 o 15 años puede obtener una
+  explanation: El manual establece que una persona de 14 o 15 años puede obtener una
     licencia restringida para operar una motocicleta que no pese más de 200 libras
     ni exceda los 150cc de cilindrada del motor.
 - id: 34
   category: license_system
   question: ¿Qué restricción se coloca en una licencia de conducir Clase M de Alabama
-    emitida a un joven de 14 o 15 años para una motocicleta (motor driven cycle)?
+    emitida a una persona de 14 o 15 años para una motocicleta (motor driven cycle)?
   choices:
     A: Una restricción 'Y'
     B: Una restricción 'B'
@@ -463,11 +466,11 @@ questions:
   answer: B
   explanation: Al aprobar el examen requerido, a un solicitante de 14 o 15 años se
     le emitirá una licencia de conducir Clase M de Alabama con una restricción 'B',
-    lo que indica que solo puede operar una motocicleta.
+    lo que indica que solo puede operar una motocicleta (motor driven cycle).
 - id: 35
   category: license_system
   question: ¿A qué edad puede una persona obtener una licencia de embarcación (vessel
-    license) de Alabama tras aprobar el examen requerido?
+    license) de Alabama al aprobar el examen requerido?
   choices:
     A: 10 años de edad o más
     B: 12 años de edad o más
@@ -475,11 +478,11 @@ questions:
     D: 16 años de edad o más
   answer: B
   explanation: El manual especifica que cualquier persona de 12 años de edad o más
-    puede obtener una licencia de embarcación tras aprobar el examen de embarcación
+    puede obtener una licencia de embarcación al aprobar el examen de embarcación
     requerido.
 - id: 36
   category: driver_testing
-  question: ¿Cuál es la tarifa para realizar el examen de conocimientos de la licencia
+  question: ¿Cuál es el costo por realizar el examen de conocimientos para la licencia
     de conducir en Alabama?
   choices:
     A: $5.00
@@ -487,64 +490,64 @@ questions:
     C: $15.00
     D: $20.00
   answer: A
-  explanation: La tarifa para cada examen de conocimientos es de $5.00 y no se aceptan
+  explanation: El costo de cada examen de conocimientos es de $5.00 y no se aceptan
     cheques.
 - id: 37
   category: driver_testing
   question: ¿Quién debe acompañar a un solicitante de 16 años cuando realiza el examen
-    de conducir?
+    de manejo?
   choices:
     A: Un instructor de manejo con licencia
     B: Cualquier conductor con licencia mayor de 21 años
-    C: Un padre, madre o tutor legal
-    D: No se requiere que nadie lo acompañe
+    C: Un padre o tutor
+    D: No se requiere que nadie los acompañe
   answer: C
   explanation: El manual establece que los solicitantes de dieciséis años deben estar
-    acompañados por un padre, madre o tutor legal para el examen de conducir.
+    acompañados por un padre o tutor para el examen de manejo.
 - id: 38
   category: driver_testing
-  question: ¿Necesita un solicitante de 17 años estar acompañado por un padre, madre
-    o tutor legal para el examen de conducir?
+  question: ¿Necesita un solicitante de 17 años estar acompañado por un padre o tutor
+    para el examen de manejo?
   choices:
-    A: Sí, todos los solicitantes menores de 18 años requieren un padre, madre o tutor.
+    A: Sí, todos los solicitantes menores de 18 años requieren un padre o tutor.
     B: Sí, a menos que hayan completado la educación vial.
-    C: No, un solicitante de 17 años no tiene que estar acompañado por un padre, madre
-      o tutor.
+    C: No, un solicitante de 17 años no tiene que estar acompañado por un padre o
+      tutor.
     D: No, pero deben estar acompañados por un instructor de manejo con licencia.
   answer: C
   explanation: Según el manual, un solicitante de diecisiete años no tiene que estar
-    acompañado por un padre, madre o tutor para el examen de conducir.
+    acompañado por un padre o tutor para el examen de manejo.
 - id: 39
   category: driver_testing
-  question: ¿Cuál de las siguientes situaciones causará una reprobación inmediata
-    y la terminación del examen de conducir?
+  question: ¿Cuál de los siguientes causará una reprobación inmediata y la terminación
+    del examen de manejo?
   choices:
     A: Pedirle al examinador que repita una instrucción
     B: Una acción peligrosa
     C: Estacionarse ligeramente torcido
     D: Conducir un vehículo con transmisión manual
   answer: B
-  explanation: Las causas de reprobación inmediata y terminación del examen de conducir
+  explanation: Las causas de reprobación inmediata y terminación del examen de manejo
     incluyen una violación de una ley de tránsito, una acción peligrosa, cualquier
     accidente prevenible o la falta de cooperación/negativa a realizar una maniobra.
 - id: 40
   category: driver_testing
   question: ¿A quién se le permite viajar en el vehículo como pasajero durante su
-    examen de conducir?
+    examen de manejo?
   choices:
-    A: Un padre, madre o tutor legal
+    A: Un padre o tutor
     B: Un instructor de manejo con licencia
     C: Un amigo o hermano
     D: No se permiten pasajeros ni mascotas
   answer: D
   explanation: El manual establece explícitamente que no se permiten pasajeros ni
-    mascotas en el vehículo durante el examen de conducir.
+    mascotas en el vehículo durante el examen de manejo.
 - id: 41
   category: driver_responsibility
   question: ¿Qué puede suceder si opera un vehículo motorizado infringiendo las restricciones
     impuestas en su licencia de conducir?
   choices:
-    A: Se le requerirá volver a tomar el examen de conocimientos.
+    A: Se le pedirá que vuelva a tomar el examen de conocimientos.
     B: Recibirá una carta de advertencia.
     C: Puede resultar en la pérdida de su licencia.
     D: Su vehículo será confiscado permanentemente.
@@ -559,7 +562,7 @@ questions:
     A: Una cámara de reversa
     B: Dos métodos separados para aplicar los frenos
     C: Un sistema de navegación GPS
-    D: Polarizado de ventanas personalizado
+    D: Vidrios polarizados personalizados
   answer: B
   explanation: El equipo requerido para el examen incluye un espejo retrovisor, bocina,
     limpiaparabrisas, dos métodos separados para aplicar los frenos, silenciador,
@@ -573,7 +576,7 @@ questions:
     B: Un vehículo motorizado que tiene un asiento o sillín, diseñado para viajar
       en no más de tres ruedas, excluyendo un tractor
     C: Cualquier vehículo de dos ruedas que pese más de 500 libras
-    D: Una bicicleta motorizada con una cilindrada inferior a 50 cc
+    D: Una bicicleta motorizada con un desplazamiento del motor inferior a 50cc
   answer: B
   explanation: Una motocicleta se define como un vehículo motorizado que tiene un
     asiento o sillín para el uso del conductor y está diseñado para viajar en no más
@@ -610,10 +613,10 @@ questions:
   question: ¿Cuál es el requisito de edad mínima para obtener una Licencia de Embarcación
     (Vessel License) en Alabama?
   choices:
-    A: 12 años de edad
-    B: 14 años de edad
-    C: 15 años de edad
-    D: 16 años de edad
+    A: 12 años
+    B: 14 años
+    C: 15 años
+    D: 16 años
   answer: A
   explanation: Según la tabla de requisitos de edad mínima del manual, debe tener
     al menos 12 años para obtener una Licencia de Embarcación.
@@ -622,13 +625,13 @@ questions:
   question: Al llegar para su examen de manejo, ¿qué se requiere con respecto al vehículo
     que trae?
   choices:
-    A: Debe ser un vehículo de entrenamiento de doble control.
+    A: Debe ser un vehículo de entrenamiento con doble control.
     B: Debe ser conducido al examen por un conductor con licencia.
     C: Debe ser alquilado en una escuela de manejo certificada.
     D: Debe tener un peso bruto vehicular inferior a 10,000 libras.
   answer: B
   explanation: A menos que ya tenga el derecho legal de conducir, debe presentarse
-    al examen de manejo en un vehículo conducido por un conductor con licencia que
+    al examen de manejo en un vehículo conducido por un conductor con licencia, quien
     debe permanecer para retirarlo si usted reprueba.
 - id: 48
   category: license_system
@@ -654,7 +657,7 @@ questions:
     D: 60 días
   answer: C
   explanation: Después de cambiar su dirección dentro de Alabama, tiene 30 días para
-    notificar a la División de Servicios de Licencias sobre la nueva dirección.
+    notificar la nueva dirección a la División de Servicios de Licencias.
 - id: 50
   category: license_system
   question: ¿Qué clase de licencia se requiere generalmente para todos los vehículos
@@ -707,7 +710,7 @@ questions:
 - id: 54
   category: license_system
   question: Se requiere una Licencia de Conducir Comercial (CDL) Clase A para vehículos
-    combinados con una Clasificación de Peso Combinado Bruto (GCWR) que exceda las
+    combinados con una Clasificación de Peso Bruto Combinado (GCWR) que exceda las
     26,000 libras, siempre que el vehículo remolcado exceda ¿qué peso?
   choices:
     A: 5,000 libras
@@ -738,12 +741,11 @@ questions:
     ¿qué se le podría exigir que proporcione al estado?
   choices:
     A: Una nueva tarifa de examen de manejo
-    B: Una declaración de un médico que muestre su historial médico y su condición
-      actual
+    B: Una declaración de un médico que muestre su historial médico y condición actual
     C: Un certificado de finalización de un curso de conducción defensiva
     D: Una declaración jurada firmada por un familiar directo
   answer: B
-  explanation: Se le puede solicitar que proporcione una declaración de un médico
+  explanation: Es posible que se le solicite presentar una declaración de un médico
     que muestre su historial médico y su condición actual en lo que respecta a su
     capacidad de conducción si tiene una deficiencia física o mental.
 - id: 57
@@ -765,12 +767,12 @@ questions:
     para No Conductores de Alabama?
   choices:
     A: No hay requisito de edad
-    B: 12 años
-    C: 14 años
-    D: 15 años
+    B: 12 años de edad
+    C: 14 años de edad
+    D: 15 años de edad
   answer: A
-  explanation: Según la tabla de requisitos de edad mínima en el manual, no hay un
-    "Requisito de edad" para una tarjeta de identificación.
+  explanation: Según la tabla de requisitos de edad mínima en el manual, 'No hay requisito
+    de edad' para una tarjeta de identificación.
 - id: 59
   category: license_system
   question: Si bien puede renovar su licencia en línea o en un quiosco, ¿qué acción
@@ -806,7 +808,7 @@ questions:
     C: Endoso H
     D: Endoso N
   answer: A
-  explanation: El manual establece que el Endoso T es requerido para remolques dobles
+  explanation: El manual establece que se requiere el Endoso T para remolques dobles
     o triples.
 - id: 62
   category: license_system
@@ -819,7 +821,7 @@ questions:
     D: 21 años
   answer: B
   explanation: La Ley de Mejora de la Seguridad en la Navegación (Boating Safety Enhancement
-    Act) establece que un operador con licencia, de 14 años o más, puede operar solo.
+    Act) exige que un operador con licencia, de 14 años o más, pueda operar solo.
 - id: 63
   category: driver_responsibility
   question: Al operar un vehículo motorizado en Alabama, ¿cuándo debe presentar su
@@ -828,7 +830,7 @@ questions:
     A: Solo si está involucrado en un choque
     B: Solo si se le emite una citación de tráfico
     C: A petición de él o ella
-    D: Solo en los puestos de control fronterizos estatales oficiales
+    D: Solo en los puestos de control oficiales de la frontera estatal
   answer: C
   explanation: En Alabama, un conductor debe estar preparado para presentar su licencia
     de conducir a cualquier oficial de la ley a petición de él o ella.
@@ -862,30 +864,30 @@ questions:
   question: ¿Cuál de las siguientes infracciones requiere que el Director revoque
     su licencia de conducir?
   choices:
-    A: Carreras en las autopistas
+    A: Carreras en las carreteras
     B: Huir o intentar eludir a un oficial de policía
     C: Tres condenas por conducción temeraria en un plazo de 12 meses
     D: No mantener el seguro SR-22
   answer: C
   explanation: El Director debe revocar su licencia al recibir un registro de su condena
-    por tres condenas por conducción temeraria (reckless driving) en un plazo de 12
-    meses. Las otras opciones son motivos de suspensión.
+    por tres condenas por conducción temeraria en un plazo de 12 meses. Las otras
+    opciones son motivos de suspensión.
 - id: 67
   category: penalties_and_points
-  question: Su licencia de conducir puede ser suspendida si tiene entre 15 y 18 años
-    y hace ¿cuál de las siguientes acciones?
+  question: ¿Su licencia de conducir puede ser suspendida si tiene entre 15 y 18 años
+    y realiza cuál de las siguientes acciones?
   choices:
     A: Recibir una multa por exceso de velocidad
     B: Retirarse de la escuela bajo ciertas condiciones antes de la graduación
     C: Conducir entre la medianoche y las 6 AM
-    D: No pasar una prueba de visión
+    D: No pasar un examen de la vista
   answer: B
   explanation: Su licencia de conducir puede ser suspendida si tiene entre 15 y 18
     años y se retira de la escuela bajo ciertas condiciones antes de la graduación.
 - id: 68
   category: penalties_and_points
   question: ¿Cuántos puntos se asignan a su registro de conducir por Conducción Temeraria
-    (Reckless Driving) o Peligro Temerario que involucre un vehículo motorizado?
+    o Peligro Temerario que involucre un vehículo motorizado?
   choices:
     A: 2 Puntos
     B: 4 Puntos
@@ -897,41 +899,41 @@ questions:
     en 6 puntos.
 - id: 69
   category: penalties_and_points
-  question: ¿Cuántos puntos se añadirán a su registro de conducir por rebasar un autobús
-    escolar detenido?
+  question: ¿Pasar un autobús escolar detenido resultará en cuántos puntos añadidos
+    a su registro de conducir?
   choices:
     A: 3 Puntos
     B: 4 Puntos
     C: 5 Puntos
     D: 6 Puntos
   answer: C
-  explanation: El Sistema de Puntos de Alabama asigna 5 puntos por Rebasar un Autobús
+  explanation: El Sistema de Puntos de Alabama asigna 5 puntos por Pasar un Autobús
     Escolar Detenido.
 - id: 70
   category: penalties_and_points
-  question: ¿Cuántos puntos se asignan por exceder el límite de velocidad en 26 mph
-    o más?
+  question: ¿Cuántos puntos se asignan por exceso de velocidad de 26 mph o más sobre
+    el límite de velocidad?
   choices:
     A: 2 Puntos
     B: 3 Puntos
     C: 4 Puntos
     D: 5 Puntos
   answer: D
-  explanation: Exceder el límite de velocidad en 26 mph o más resulta en la asignación
-    de 5 puntos en su registro de conducir.
+  explanation: El exceso de velocidad de 26 mph o más sobre el límite de velocidad
+    resulta en la asignación de 5 puntos a su registro de conducir.
 - id: 71
   category: penalties_and_points
   question: ¿Cuál de las siguientes infracciones resulta en la asignación de exactamente
     2 puntos en su historial de conducción?
   choices:
-    A: Seguir a otro vehículo demasiado de cerca
+    A: Seguir a otro vehículo demasiado cerca
     B: No ceder el paso
     C: Infracción por carril inadecuado
-    D: Conducir por el lado equivocado de la carretera/rebase ilegal
+    D: Conducir por el lado equivocado de la carretera/adelantamiento ilegal
   answer: C
-  explanation: Una infracción por carril inadecuado es una ofensa de 2 puntos. Seguir
-    demasiado de cerca son 3 puntos, no ceder el paso son 5 puntos y conducir por
-    el lado equivocado de la carretera son 4 puntos.
+  explanation: Una infracción por carril inadecuado es una falta de 2 puntos. Seguir
+    a otro vehículo demasiado cerca son 3 puntos, no ceder el paso son 5 puntos y
+    conducir por el lado equivocado de la carretera son 4 puntos.
 - id: 72
   category: penalties_and_points
   question: Según el programa del sistema de puntos de Alabama, ¿por cuánto tiempo
@@ -972,15 +974,15 @@ questions:
 - id: 75
   category: penalties_and_points
   question: ¿Cuántos puntos se añaden a su historial de conducción por realizar un
-    giro inadecuado?
+    giro indebido?
   choices:
-    A: 2 Puntos
-    B: 3 Puntos
-    C: 4 Puntos
-    D: 6 Puntos
+    A: 2 puntos
+    B: 3 puntos
+    C: 4 puntos
+    D: 6 puntos
   answer: A
-  explanation: Según el manual, realizar un giro inadecuado resulta en la adición
-    de 2 puntos a su historial de conducción.
+  explanation: Según el manual, realizar un giro indebido resulta en la adición de
+    2 puntos a su historial de conducción.
 - id: 76
   category: penalties_and_points
   question: Si un conductor acumula entre 18 y 20 puntos en un período de 2 años,
@@ -996,28 +998,28 @@ questions:
 - id: 77
   category: vehicle_information
   question: ¿Qué debe hacer antes de girar la llave de encendido si conduce un vehículo
-    equipado con una transmisión manual?
+    equipado con transmisión manual?
   choices:
     A: Presionar solo el pedal del freno
-    B: Presionar el embrague (clutch)
-    C: Cambiar a la marcha de conducción (drive)
+    B: Pisar el embrague (clutch)
+    C: Poner la palanca en marcha
     D: Encender las luces de estacionamiento
   answer: B
   explanation: Si conduce un vehículo de cambios manuales equipado con una transmisión
-    manual, debe presionar el embrague (clutch) antes de girar la llave de encendido.
+    manual, debe pisar el embrague (clutch) antes de girar la llave de encendido.
 - id: 78
   category: safe_driving_rules
   question: Al salir de un lugar de estacionamiento en paralelo, ¿qué debe hacer antes
     de incorporarse al tráfico?
   choices:
     A: Tocar la bocina para advertir a los vehículos que se aproximan
-    B: Mirar por encima del hombro y en los espejos retrovisores
+    B: Mirar por encima del hombro y por los espejos retrovisores
     C: Salir rápidamente para incorporarse al flujo del tráfico
     D: Encender las luces de emergencia
   answer: B
   explanation: Al prepararse para salir de un lugar de estacionamiento en paralelo,
-    mire por encima de su hombro así como en los espejos retrovisores y espere hasta
-    que el camino esté despejado antes de incorporarse al tráfico.
+    debe mirar por encima de su hombro así como por los espejos retrovisores y esperar
+    hasta que el camino esté despejado antes de incorporarse al tráfico.
 - id: 79
   category: safe_driving_rules
   question: ¿Cuál es la distancia mínima con la que debe señalizar sus intenciones
@@ -1035,7 +1037,7 @@ questions:
   question: ¿Por qué se recomienda utilizar señales con las manos y los brazos además
     de las luces direccionales durante el día?
   choices:
-    A: La ley estatal lo exige para todos los giros
+    A: Es requerido por la ley estatal para todos los giros
     B: Las luces direccionales se desactivan automáticamente durante las horas del
       día
     C: El reflejo de la luz solar intensa puede dificultar que otros automovilistas
@@ -1048,7 +1050,7 @@ questions:
 - id: 81
   category: safe_driving_rules
   question: ¿Desde qué carril debe girar al realizar un giro a la izquierda desde
-    una carretera de cuatro carriles o una autopista dividida?
+    una carretera de cuatro carriles o dividida?
   choices:
     A: El carril del extremo derecho
     B: El carril más cercano a la línea central o al divisor de tráfico
@@ -1072,13 +1074,13 @@ questions:
     de otros vehículos que se aproximen desde cualquier dirección a menos de 500 pies.
 - id: 83
   category: safe_driving_rules
-  question: ¿Cuál es la técnica adecuada para conducir a través de una curva?
+  question: ¿Cuál es la técnica adecuada para conducir en una curva?
   choices:
     A: Acelerar antes de entrar en la curva y frenar mientras la rodea
     B: Mantener una velocidad alta constante durante toda la curva
     C: Reducir la velocidad antes de entrar en la curva y acelerar ligeramente al
       rodearla realmente
-    D: Avanzar por inercia a través de la curva con el vehículo en punto muerto (neutral)
+    D: Avanzar por inercia a través de la curva con el vehículo en punto muerto
   answer: C
   explanation: Un conductor debe entrar en una curva lo suficientemente despacio como
     para poder acelerar ligeramente al rodear realmente la curva.
@@ -1092,15 +1094,15 @@ questions:
     C: 5 pies
     D: 6 pies
   answer: B
-  explanation: La ley estatal de Alabama exige que se adelante a una persona en bicicleta
+  explanation: La ley estatal de Alabama exige que adelante a una persona en bicicleta
     con una distancia no inferior a tres pies entre su vehículo de motor y la persona
     en bicicleta.
 - id: 85
   category: sharing_the_road
-  question: Si bien los ciclistas generalmente deben circular lo más cerca posible
+  question: Aunque los ciclistas generalmente deben circular lo más cerca posible
     del bordillo derecho, ¿en qué situación se les permite alejarse de él?
   choices:
-    A: Cuando quieran circular junto a otras tres bicicletas
+    A: Cuando quieran circular al lado de otras tres bicicletas
     B: Cuando sea razonablemente necesario para evitar peligros en la carretera como
       escombros o la apertura de puertas de automóviles
     C: Cuando viajen a una velocidad superior al límite de velocidad
@@ -1125,7 +1127,7 @@ questions:
 - id: 87
   category: sharing_the_road
   question: ¿A qué edad se requiere que las personas en bicicleta usen un casco protector
-    bien ajustado en Alabama?
+    bien sujeto en Alabama?
   choices:
     A: Menores de 12 años
     B: Menores de 16 años
@@ -1133,24 +1135,24 @@ questions:
     D: Se requiere que todas las edades usen casco
   answer: B
   explanation: Las personas en bicicleta que son menores de 16 años deben usar un
-    casco protector bien ajustado cuando circulen por vías públicas.
+    casco protector bien sujeto cuando circulen por vías públicas.
 - id: 88
   category: sharing_the_road
   question: Si el conductor de un vehículo de motor necesita girar cruzando un carril
     para bicicletas establecido, ¿qué debe hacer?
   choices:
-    A: Girar desde el carril de tráfico principal y cruzar el carril para bicicletas
-      rápidamente
+    A: Girar desde el carril de tráfico principal y cruzar rápidamente el carril para
+      bicicletas
     B: Tocar la bocina para despejar el carril para bicicletas antes de girar
     C: Entrar en el carril para bicicletas antes de realizar el giro, asegurándose
-      de no poner en peligro la seguridad del ciclista
+      de no invadir la seguridad del ciclista
     D: Detenerse en el carril de tráfico principal y esperar a que el carril para
       bicicletas esté completamente vacío durante 500 pies
   answer: C
-  explanation: Al girar a través de un carril para bicicletas, el conductor debe dirigir
+  explanation: Al girar a través de un carril para bicicletas, el conductor debe conducir
     el vehículo de motor hacia el carril para bicicletas antes de realizar el giro
-    y debe realizar el giro siempre que dicha preparación para el giro no ponga en
-    peligro la seguridad de la persona en la bicicleta.
+    y debe realizar el giro siempre que dicha preparación para el giro no invada la
+    seguridad de la persona en la bicicleta.
 - id: 89
   category: penalties_and_points
   question: ¿Cuántos días se suspenderá su licencia si acumula 24 puntos o más en
@@ -1165,18 +1167,18 @@ questions:
     de 2 años resulta en una suspensión de 365 días.
 - id: 90
   category: sharing_the_road
-  question: ¿Qué debe hacer si la carretera es estrecha y no puede adelantar de forma
-    segura a una persona en bicicleta?
+  question: ¿Qué debe hacer si la carretera es estrecha y no puede adelantar con seguridad
+    a una persona en bicicleta?
   choices:
     A: Tocar la bocina con fuerza para advertirles que se aparten
-    B: Adelantarlos de cerca a gran velocidad
+    B: Adelantarlos de cerca a alta velocidad
     C: Permanecer detrás de ellos a una distancia segura hasta que pueda adelantar
       con seguridad
-    D: Encender y apagar las luces altas hasta que se salgan de la carretera
+    D: Usar las luces altas hasta que se salgan de la carretera
   answer: C
-  explanation: Si la carretera es estrecha y no puede adelantar de forma segura a
-    una persona en bicicleta, no la siga demasiado de cerca y no toque la bocina con
-    fuerza. Permanezca detrás a una distancia segura hasta que pueda adelantar.
+  explanation: Si la carretera es estrecha y no puede adelantar con seguridad a una
+    persona en bicicleta, no la siga demasiado de cerca y no toque la bocina con fuerza.
+    Permanezca detrás a una distancia segura hasta que pueda adelantar.
 - id: 91
   category: defensive_driving
   question: ¿Cómo afecta el clima lluvioso a una persona que monta en bicicleta?
@@ -1191,8 +1193,8 @@ questions:
     la disminución de la capacidad del ciclista para reducir la velocidad o detenerse.
 - id: 92
   category: sharing_the_road
-  question: ¿Qué acción representa un gran porcentaje de los accidentes con lesiones
-    entre automóviles y motocicletas?
+  question: ¿Qué acción representa un gran porcentaje de los accidentes entre automóviles
+    y motocicletas que producen lesiones?
   choices:
     A: Automóviles que giran a la izquierda frente a un motociclista que se aproxima
     B: Motociclistas que rebasan automóviles por la derecha
@@ -1201,15 +1203,15 @@ questions:
   answer: A
   explanation: Los giros a la izquierda frente a un motociclista que se aproxima representan
     un gran porcentaje de los accidentes con lesiones entre automóviles y motocicletas,
-    ya que los conductores pueden no distinguir al ciclista entre el tráfico o no
-    juzgar correctamente su velocidad.
+    ya que los conductores pueden no distinguir al ciclista en el tráfico o no juzgar
+    correctamente su velocidad.
 - id: 93
   category: vehicle_information
   question: ¿Por qué debe tener mucha precaución cuando la señal de giro de una motocicleta
     está parpadeando?
   choices:
     A: Las señales de giro de las motocicletas suelen ser más tenues que las de los
-      autos
+      automóviles
     B: Las señales de giro en la mayoría de las motocicletas no se cancelan automáticamente
     C: Los motociclistas usan las señales de giro para indicar que se están deteniendo
     D: Significa que la motocicleta está sufriendo una falla mecánica
@@ -1231,27 +1233,27 @@ questions:
     distancia de 2 segundos que se le da a cualquier otro vehículo.
 - id: 95
   category: sharing_the_road
-  question: Si un motociclista circula por un extremo de un carril ancho, ¿qué debe
-    hacer usted?
+  question: Si un motociclista circula muy pegado a un lado de un carril ancho, ¿qué
+    debe hacer usted?
   choices:
-    A: Entrar en el mismo carril junto a la motocicleta para rebasarla
+    A: Moverse al mismo carril junto a la motocicleta para rebasarla
     B: Tocar la bocina para avisarles que está compartiendo el carril
-    C: Nunca entre en el mismo carril junto a la motocicleta
+    C: Nunca se mueva al mismo carril junto a la motocicleta
     D: Rebasarlos de cerca por el lado que están evitando
   answer: C
-  explanation: Los conductores nunca deben entrar en el mismo carril junto a una motocicleta,
-    incluso si el carril es ancho y el motociclista circula por un extremo. No solo
+  explanation: Los conductores nunca deben moverse al mismo carril junto a una motocicleta,
+    incluso si el carril es ancho y el ciclista circula muy pegado a un lado. No solo
     es ilegal, sino extremadamente peligroso.
 - id: 96
   category: defensive_driving
   question: ¿Cómo podría reaccionar un motociclista al cruzar puentes metálicos o
     de rejilla?
   choices:
-    A: Acelerará para cruzar rápido
-    B: Podría cambiar de dirección rápidamente o reducir la velocidad debido a una
+    A: Acelerarán para cruzar rápido
+    B: Pueden cambiar de dirección rápidamente o reducir la velocidad debido a una
       sensación de tambaleo
-    C: Se moverá al carril de tráfico en sentido contrario
-    D: Se detendrá por completo antes de cruzar
+    C: Se moverán al carril de tráfico en sentido contrario
+    D: Se detendrán por completo antes de cruzar
   answer: B
   explanation: Los puentes metálicos o de rejilla crean una sensación de tambaleo
     en la llanta delantera de la motocicleta. Esto puede causar que un motociclista
@@ -1268,7 +1270,7 @@ questions:
   answer: B
   explanation: Si no puede ver la cara del conductor en el espejo retrovisor lateral,
     el conductor no puede verlo a usted, lo que significa que se encuentra en su "Zona
-    No-Visible" (punto ciego) lateral.
+    No" lateral (punto ciego).
 - id: 98
   category: sharing_the_road
   question: ¿Hasta qué distancia puede extenderse el enorme punto ciego directamente
@@ -1280,38 +1282,37 @@ questions:
     D: Hasta 200 pies
   answer: D
   explanation: A diferencia de los automóviles, los camiones y autobuses tienen enormes
-    zonas no-visibles directamente detrás de ellos que pueden extenderse hasta 200
-    pies.
+    "zonas no" directamente detrás de ellos que pueden extenderse hasta 200 pies.
 - id: 99
   category: safe_driving_rules
   question: ¿Qué debe hacer cuando sigue a un vehículo grande por la noche?
   choices:
     A: Mantener las luces altas encendidas para aumentar la visibilidad
-    B: Bajar siempre la intensidad de sus faros
-    C: Hacer destellos con sus faros repetidamente
+    B: Bajar siempre la intensidad de sus faros (usar luces bajas)
+    C: Parpadear sus faros repetidamente
     D: Apagar sus faros temporalmente
   answer: B
   explanation: Al seguir a un vehículo grande por la noche, baje siempre la intensidad
-    de sus faros (use luces bajas). Las luces brillantes cegarán al conductor cuando
-    se reflejen en los espejos laterales del autobús o camión.
+    de sus faros. Las luces brillantes cegarán al conductor cuando se reflejen en
+    los espejos laterales del autobús o camión.
 - id: 100
   category: sharing_the_road
-  question: Al rebasar un vehículo grande, ¿cuándo es seguro volver a colocarse delante
-    de él?
+  question: Al rebasar a un vehículo grande, ¿cuándo es seguro volver a colocarse
+    delante de él?
   choices:
     A: Tan pronto como su parachoques trasero pase la parte delantera del camión
     B: Cuando pueda ver toda la parte delantera del vehículo en su espejo retrovisor
       interior
-    C: Cuando el conductor del camión haga destellos con sus faros
+    C: Cuando el conductor del camión parpadee sus faros
     D: Después de haber mantenido su velocidad durante 5 segundos
   answer: B
-  explanation: Busque ver toda la parte delantera del vehículo en su espejo retrovisor
+  explanation: Busque toda la parte delantera del vehículo en su espejo retrovisor
     interior antes de colocarse delante y no reduzca la velocidad.
 - id: 101
   category: vehicle_information
   question: ¿Según un estudio del Consejo Nacional de Seguridad (National Safety Council),
-    cuánta distancia necesita un camión cargado para detenerse de forma segura a 55
-    millas por hora?
+    cuánta distancia necesita un camión cargado para detenerse de manera segura a
+    55 millas por hora?
   choices:
     A: 193 pies
     B: 250 pies
@@ -1320,18 +1321,18 @@ questions:
   answer: D
   explanation: Un estudio del Consejo Nacional de Seguridad determinó que a velocidades
     de 55 millas por hora, un automóvil de pasajeros necesita 193 pies para detenerse
-    de forma segura y un camión cargado necesita 430 pies.
+    de manera segura y un camión cargado necesita 430 pies.
 - id: 102
   category: defensive_driving
-  question: ¿Qué podría hacer un motociclista al acercarse a un cruce ferroviario
-    a nivel que esté en mal estado?
+  question: ¿Qué podría hacer un motociclista al acercarse a un cruce de ferrocarril
+    a nivel que sea irregular?
   choices:
     A: Levantarse del asiento para ayudar a amortiguar el impacto
     B: Acelerar rápidamente para saltar las vías
-    C: Inclinar la motocicleta para deslizarse por debajo de la barrera del cruce
+    C: Inclinar la motocicleta para deslizarse bajo la barrera del cruce
     D: Detenerse y cruzar las vías caminando con la motocicleta
   answer: A
-  explanation: En los cruces ferroviarios a nivel, el motociclista puede levantarse
+  explanation: En los cruces de ferrocarril a nivel, el motociclista puede levantarse
     del asiento para ayudar a amortiguar el impacto de un cruce irregular.
 - id: 103
   category: sharing_the_road
@@ -1344,38 +1345,39 @@ questions:
     C: Bloquean los vientos cruzados, haciendo que sea más seguro para la motocicleta
     D: Obligan a la motocicleta a detenerse por completo
   answer: B
-  explanation: Se sabe que los camiones grandes que circulan rápido crean ráfagas
-    de viento que pueden asustar a un motociclista y, bajo ciertas condiciones, desplazarlo
-    realmente fuera de su trayectoria.
+  explanation: Se sabe que los camiones grandes que circulan a alta velocidad crean
+    ráfagas de viento que pueden asustar a un motociclista y, bajo ciertas condiciones,
+    desplazarlo realmente fuera de su trayectoria.
 - id: 104
   category: sharing_the_road
   question: ¿Por qué debe evitar rebasar a un camión por la derecha cuando su luz
     direccional derecha está parpadeando?
   choices:
     A: El camión acelerará para realizar el giro.
-    B: Los camiones se abren hacia la izquierda para girar a la derecha de forma segura,
-      y usted podría quedar atrapado.
+    B: Los camiones giran ampliamente hacia la izquierda para realizar un giro a la
+      derecha de manera segura, y usted podría quedar atrapado.
     C: El conductor del camión está obligado a cederle el paso.
     D: Rebasar por la derecha siempre es ilegal.
   answer: B
-  explanation: Los conductores de camiones y autobuses necesitan abrirse hacia la
-    izquierda para realizar un giro a la derecha de forma segura. Si intenta rebasar
-    por la derecha, el conductor no podrá verlo y usted quedará atrapado.
+  explanation: Los conductores de camiones y autobuses necesitan girar ampliamente
+    hacia la izquierda para realizar un giro a la derecha de manera segura. Si intenta
+    rebasar por la derecha, el conductor no podrá verlo y usted quedará atrapado.
 - id: 105
   category: safe_driving_rules
   question: ¿Hacia qué lado debe girar las ruedas al estacionar cuesta arriba donde
-    hay un bordillo (curb)?
+    hay un bordillo?
   choices:
     A: Hacia el bordillo
     B: En dirección contraria al bordillo
-    C: Paralelas al bordillo
-    D: Hacia adelante (rectas)
+    C: Paralelo al bordillo
+    D: Hacia adelante en línea recta
   answer: B
-  explanation: Al estacionar cuesta arriba con bordillo, debe girar las ruedas en
-    dirección contraria al bordillo y poner la marcha más baja o en PARK (estacionamiento).
+  explanation: Al estacionar cuesta arriba con un bordillo, debe girar las ruedas
+    en dirección contraria al bordillo y poner la marcha más baja o en PARK (estacionamiento).
 - id: 106
   category: safe_driving_rules
-  question: ¿Cómo debe colocar las ruedas al estacionar cuesta abajo, con o sin bordillo?
+  question: ¿Cómo debe posicionar las ruedas al estacionar cuesta abajo, con o sin
+    bordillo?
   choices:
     A: Gire las ruedas hacia el bordillo o el borde de la carretera.
     B: Gire las ruedas en dirección contraria al bordillo.
@@ -1386,31 +1388,31 @@ questions:
     hacia el bordillo o el borde de la carretera.
 - id: 107
   category: safe_driving_rules
-  question: ¿A menos de cuántos pies de un hidrante de incendios NO está permitido
-    estacionar?
+  question: ¿A menos de cuántos pies NO está permitido estacionar de un hidrante de
+    incendios?
   choices:
     A: 10 pies
     B: 15 pies
     C: 20 pies
     D: 30 pies
   answer: B
-  explanation: No se permite estacionar a menos de 15 pies de un hidrante de incendios.
+  explanation: NO se permite estacionar a menos de 15 pies de un hidrante de incendios.
 - id: 108
   category: safe_driving_rules
-  question: ¿A menos de cuántos pies del riel más cercano de un cruce ferroviario
-    está prohibido estacionar?
+  question: ¿A cuántos pies del riel más cercano de un cruce de ferrocarril está prohibido
+    estacionar?
   choices:
     A: 15 pies
     B: 20 pies
     C: 30 pies
     D: 50 pies
   answer: D
-  explanation: No se permite estacionar a menos de 50 pies del riel más cercano de
-    un cruce ferroviario.
+  explanation: NO se permite estacionar a menos de 50 pies del riel más cercano de
+    un cruce de ferrocarril.
 - id: 109
   category: safe_driving_rules
   question: ¿Hasta qué edad exige la ley de retención infantil de Alabama que los
-    niños deben estar sujetos al viajar en vehículos de motor?
+    niños deben estar sujetos al viajar en vehículos motorizados?
   choices:
     A: 5 años
     B: 10 años
@@ -1418,19 +1420,19 @@ questions:
     D: 15 años
   answer: D
   explanation: La ley de retención infantil de Alabama exige que los niños hasta los
-    15 años deben estar sujetos al viajar en vehículos de motor en Alabama.
+    15 años deben estar sujetos al viajar en vehículos motorizados en Alabama.
 - id: 110
   category: penalties_and_points
   question: ¿Cuál es la multa por violar la ley de retención infantil de Alabama,
-    además de los puntos que se asignan al historial del conductor?
+    además de los puntos que se asignan al registro del conductor?
   choices:
     A: $15
     B: $25
     C: $50
     D: $100
   answer: B
-  explanation: A quienes violen la ley de retención infantil se les asignarán puntos
-    en su historial de conductor, además de incurrir en una multa de $25.
+  explanation: Los infractores de la ley de retención infantil recibirán puntos en
+    su registro de conductor, además de incurrir en una multa de $25.
 - id: 111
   category: safe_driving_rules
   question: ¿Hasta qué edad o peso debe colocarse a un bebé en un asiento exclusivo
@@ -1447,7 +1449,7 @@ questions:
 - id: 112
   category: driver_responsibility
   question: 'Según los registros de accidentes, más del 90 por ciento de los choques
-    en carretera son causados por:'
+    en autopistas son causados por:'
   choices:
     A: Fallas mecánicas
     B: Malas condiciones climáticas
@@ -1455,19 +1457,18 @@ questions:
     D: Carreteras con mantenimiento deficiente
   answer: C
   explanation: Los registros de accidentes muestran que más del 90 por ciento de los
-    choques en carretera son causados por errores del conductor, falta de conocimiento,
-    distracción, condición física o mental, actitud inadecuada o juicio erróneo.
+    choques en autopistas son causados por errores del conductor, falta de conocimiento,
+    falta de atención, condición física o mental, actitud inadecuada o juicio defectuoso.
 - id: 113
   category: defensive_driving
-  question: ¿Qué es la "hipnosis de carretera" (highway hypnosis)?
+  question: ¿Qué es la "hipnosis de autopista"?
   choices:
     A: Una condición de somnolencia o falta de conciencia provocada por la monotonía.
-    B: Una deficiencia visual causada por las luces delanteras de los vehículos que
-      vienen en sentido contrario.
-    C: Un estado de pánico causado por el tráfico intenso.
+    B: Una deficiencia visual causada por los faros que vienen en sentido contrario.
+    C: Un estado de pánico causado por el tráfico pesado.
     D: Una falla mecánica del sistema de dirección del vehículo.
   answer: A
-  explanation: Los conductores en autopistas están sujetos a la "hipnosis de carretera",
+  explanation: Los conductores en autopistas están sujetos a la "hipnosis de autopista",
     una condición de somnolencia o falta de conciencia provocada por la monotonía;
     el sonido del viento, los neumáticos sobre el pavimento y el zumbido constante
     del motor.
@@ -1494,8 +1495,8 @@ questions:
     D: $100
   answer: A
   explanation: La multa por violar la ley de mensajes de texto mientras se conduce
-    es de $25 por la primera infracción, $50 por la segunda y $75 por la tercera o
-    infracciones posteriores.
+    es de $25 por la primera infracción, $50 por la segunda infracción y $75 por la
+    tercera infracción o posteriores.
 - id: 116
   category: safe_driving_rules
   question: ¿A qué distancia debe estacionarse de un paso de peatones en una intersección
@@ -1516,8 +1517,8 @@ questions:
     A: Entablar conversaciones intensas o complicadas para mantenerse despierto.
     B: Realizar llamadas mientras se desplaza en tráfico congestionado.
     C: Usar un altavoz o un dispositivo de manos libres.
-    D: Sostener el teléfono firmemente con la mano izquierda mientras maniobra con
-      la derecha.
+    D: Sujetar el teléfono firmemente con la mano izquierda mientras gira el volante
+      con la derecha.
   answer: C
   explanation: 'Si utiliza un teléfono celular, tome precauciones como: usar el altavoz
     o un dispositivo de manos libres, evitar conversaciones intensas y evitar hablar
@@ -1530,23 +1531,23 @@ questions:
     A: Un punto
     B: Dos puntos
     C: Tres puntos
-    D: Cuatro puntos
+    D: Four puntos
   answer: B
   explanation: Por cada infracción de enviar mensajes de texto mientras se conduce,
-    se registrará una infracción de dos puntos en el historial de manejo del infractor.
+    se registrará una infracción de dos puntos en el historial de conducción del infractor.
 - id: 119
   category: defensive_driving
   question: ¿Cuál de las siguientes es una forma recomendada de combatir la "hipnosis
-    de carretera"?
+    de autopista"?
   choices:
     A: Mirar fijamente la línea central de la carretera
-    B: Confiar en "medicamentos para mantenerse despierto" para mantener la concentración
-    C: Cambiar constantemente la mirada de una zona de la calzada a otra
+    B: Confiar en "drogas para mantenerse despierto" para mantener la concentración
+    C: Mover constantemente los ojos de un área de la calzada a otra
     D: Encender la luz interior del techo de su vehículo
   answer: C
-  explanation: Para combatir la hipnosis de carretera, debe cambiar constantemente
-    la mirada de una zona de la calzada a otra y enfocarla en varios objetos cercanos
-    y lejanos.
+  explanation: Para combatir la hipnosis de autopista, debe mover constantemente los
+    ojos de un área de la calzada a otra y enfocarlos en varios objetos cercanos y
+    lejanos.
 - id: 120
   category: alcohol_drugs_health
   question: 'La cantidad de alcohol en un "trago de whisky" promedio o en una copa
@@ -1558,7 +1559,8 @@ questions:
     D: Tres botellas de cerveza
   answer: B
   explanation: El manual establece que la cantidad de alcohol en una botella de cerveza
-    es aproximadamente igual a la de un trago de whisky promedio o una copa de vino.
+    es aproximadamente igual a la que contiene un trago de whisky promedio o una copa
+    de vino.
 - id: 121
   category: alcohol_drugs_health
   question: ¿Cuál de las siguientes afirmaciones sobre el alcohol es verdadera?
@@ -1613,12 +1615,12 @@ questions:
     si un conductor arrestado por DUI se niega a someterse a una prueba química de
     aliento?
   choices:
-    A: Se le emitirá una advertencia.
+    A: Se le dará una advertencia.
     B: Su licencia de conducir será suspendida.
     C: Recibirá 48 horas obligatorias de cárcel.
     D: Se le multará con $600 de inmediato.
   answer: B
-  explanation: Un conductor bajo arresto por DUI que se niegue a someterse a pruebas
+  explanation: A un conductor bajo arresto por DUI que se niegue a someterse a pruebas
     químicas de aliento cuando lo indique un oficial, se le suspenderá su licencia
     de conducir.
 - id: 126
@@ -1626,13 +1628,13 @@ questions:
   question: ¿Cuál de las siguientes es la única forma efectiva de recuperar la sobriedad
     después de beber alcohol?
   choices:
-    A: Beber café negro
+    A: Beber café solo
     B: Tomar una ducha fría
     C: Comer una comida pesada
     D: Dar tiempo para que el hígado descomponga el alcohol
   answer: D
-  explanation: El café negro, la comida o una ducha fría pueden despertarlo, pero
-    no le devolverán la sobriedad. Una vez que el alcohol está en el torrente sanguíneo,
+  explanation: El café solo, la comida o una ducha fría pueden despertarlo, pero no
+    le devolverán la sobriedad. Una vez que el alcohol está en el torrente sanguíneo,
     el hígado debe descomponerlo, y este proceso lleva tiempo.
 - id: 127
   category: alcohol_drugs_health
@@ -1643,8 +1645,8 @@ questions:
     C: Multiplica los efectos y puede causar daños graves o la muerte.
     D: No tiene un efecto significativo en la mente o el cuerpo.
   answer: C
-  explanation: El uso de alcohol y drogas en conjunto produce efectos graves. No solo
-    duplica el efecto; lo multiplica y, cuando se excede, ha causado la muerte.
+  explanation: El uso conjunto de alcohol y drogas produce efectos graves. No solo
+    duplica el efecto; lo multiplica y, cuando se excede, puede causar la muerte.
 - id: 128
   category: safe_driving_rules
   question: Según el manual, ¿cuál es la causa de la mayoría de las colisiones por
@@ -1656,18 +1658,18 @@ questions:
     D: No usar las señales de giro
   answer: B
   explanation: La mayoría de las colisiones por alcance son causadas por seguir demasiado
-    de cerca. Los conductores deben permitir suficiente distancia de seguimiento para
+    de cerca. Los conductores deben dejar suficiente distancia de seguimiento para
     detenerse si es necesario.
 - id: 129
   category: penalties_and_points
-  question: 'Una cuarta o subsiguiente condena por DUI en Alabama se clasifica como:'
+  question: 'Una cuarta condena por DUI o posterior en Alabama se clasifica como:'
   choices:
     A: Delito menor de Clase A
     B: Delito menor de Clase B
     C: Delito grave (felonía) de Clase C
     D: Infracción de tráfico
   answer: C
-  explanation: Una cuarta condena o condena subsiguiente por DUI es un delito grave
+  explanation: Una cuarta condena o condena posterior por DUI es un delito grave (felonía)
     de Clase C, que conlleva multas elevadas, una revocación de la licencia por cinco
     años y posible encarcelamiento.
 - id: 130
@@ -1690,7 +1692,7 @@ questions:
     A: Un conteo de tres segundos
     B: Un conteo de cuatro o cinco segundos
     C: Un conteo de seis segundos
-    D: La longitud de diez vehículos
+    D: Diez largos de vehículo
   answer: B
   explanation: El manual establece que si las condiciones de la carretera y el clima
     no son buenas, debe aumentar su distancia de seguimiento a un conteo de cuatro
@@ -1705,7 +1707,7 @@ questions:
     C: El tiempo de reacción mental y física del conductor
     D: El número de pasajeros en el vehículo
   answer: C
-  explanation: Las distancias reales de frenado dependen de muchos factores, incluido
+  explanation: Las distancias reales de frenado dependen de muchos factores, incluyendo
     el tiempo de reacción mental y física del conductor.
 - id: 133
   category: defensive_driving
@@ -1717,21 +1719,21 @@ questions:
     D: La dirección del viento no tiene efecto en la distancia de frenado.
   answer: A
   explanation: Según el manual, es posible que los conductores no se den cuenta de
-    la diferencia que puede suponer un fuerte viento de cola al intentar frenar repentinamente
+    la diferencia que puede causar un fuerte viento de cola al intentar frenar repentinamente
     a alta velocidad.
 - id: 134
   category: driver_responsibility
   question: Si se ve involucrado en un choque de tráfico, ¿cuándo debe mover a una
-    persona lesionada?
+    persona herida?
   choices:
-    A: Inmediatamente, para sacarlos de la calzada.
-    B: Solo si es absolutamente necesario para retirarlos de un incendio u otros peligros.
+    A: Inmediatamente, para sacarla de la calzada.
+    B: Solo si es absolutamente necesario para retirarla de un incendio u otros peligros.
     C: Cuando le pidan ayuda para ponerse de pie.
-    D: Siempre debe moverlos al acotamiento de la carretera.
+    D: Siempre debe moverla al acotamiento de la carretera.
   answer: B
   explanation: Debe evitar mover a los heridos a menos que sea absolutamente necesario
-    para retirarlos de áreas amenazadas por incendios u otros peligros comunes en
-    la escena de un choque.
+    para retirarlos de áreas amenazadas por fuego u otros peligros comunes en la escena
+    de un choque.
 - id: 135
   category: driver_responsibility
   question: ¿Qué información está obligado a dar a otras personas involucradas en
@@ -1743,67 +1745,67 @@ questions:
     D: Su número de licencia de conducir y el número de identificación del vehículo
       (VIN).
   answer: A
-  explanation: Debe dar su nombre, dirección y número de registro, y mostrar su licencia
-    de conducir a las demás personas involucradas en cualquier tipo de accidente.
+  explanation: Debe dar su nombre, dirección y número de registro y mostrar su licencia
+    de conducir a otras personas involucradas en cualquier tipo de accidente.
 - id: 136
   category: driver_responsibility
   question: ¿Bajo qué circunstancias se debe enviar un Formulario SR-31 por escrito
     dentro de los 30 días posteriores a un choque?
   choices:
     A: Después de cada choque, independientemente de los daños o el seguro.
-    B: Si hay una lesión, muerte o daños de $500 o más, y la parte 'culpable' no tenía
-      seguro.
+    B: Si hay un herido, una fatalidad o daños de $500 o más, y la parte "culpable"
+      no estaba asegurada.
     C: Solo si el choque ocurrió en una carretera estatal.
-    D: Si ambas partes tenían seguro en el momento del accidente.
+    D: Si ambas partes estaban aseguradas en el momento del accidente.
   answer: B
   explanation: Se debe enviar un Formulario SR-31 por escrito dentro de los 30 días
-    si hay una lesión, muerte o daños de $500 o más, y la parte 'culpable' no tenía
-    seguro en el momento del percance.
+    si hay un herido, una fatalidad o daños de $500 o más, y la parte "culpable" no
+    estaba asegurada en el momento del percance.
 - id: 137
   category: driver_responsibility
   question: ¿Qué debe hacer si su vehículo choca contra un vehículo estacionado sin
     vigilancia?
   choices:
     A: Alejarse si no hay daños visibles.
-    B: Esperar en su automóvil hasta que regrese el dueño.
-    C: Notificar a la policía, intentar localizar al propietario o dejar un aviso
-      por escrito con su nombre y dirección.
+    B: Esperar en su auto hasta que regrese el dueño.
+    C: Notificar a la policía, intentar localizar al dueño o dejar una nota por escrito
+      con su nombre y dirección.
     D: Dejar su tarjeta de seguro bajo el limpiaparabrisas y alejarse.
   answer: C
   explanation: Si su vehículo choca contra un vehículo sin vigilancia, debe notificar
-    a la policía, intentar localizar al propietario o dejar un aviso por escrito en
-    un lugar visible con su nombre y dirección.
+    a la policía, intentar localizar al dueño o dejar un aviso por escrito en un lugar
+    visible con su nombre y dirección.
 - id: 138
   category: signs_and_signals
   question: ¿Qué indica una señal redonda y amarilla con una X negra y las letras
     RR?
   choices:
     A: Un cruce de ferrocarril está exactamente a 100 pies adelante.
-    B: Hay un cruce de ferrocarril más adelante y la señal se coloca 750 pies antes
-      de la vía.
+    B: Un cruce de ferrocarril en la carretera está más adelante y se coloca a 750
+      pies antes de la vía.
     C: Debe detenerse por completo de inmediato.
     D: El cruce de ferrocarril más adelante no tiene barreras ni luces intermitentes.
   answer: B
   explanation: La señal redonda de advertencia de ferrocarril es amarilla con una
-    X negra y las letras RR. Significa que hay un cruce de ferrocarril más adelante
-    y se coloca 750 pies antes de la vía.
+    X negra y las letras RR. Significa que hay un cruce de ferrocarril en la carretera
+    más adelante y se coloca a 750 pies antes de la vía.
 - id: 139
   category: sharing_the_road
-  question: ¿Cuál de los siguientes vehículos está obligado a detenerse antes de atravesar
+  question: ¿Cuál de los siguientes vehículos está obligado a detenerse antes de cruzar
     CUALQUIER cruce de ferrocarril?
   choices:
-    A: Automóviles de pasajeros
+    A: Autos de pasajeros
     B: Motocicletas
     C: Autobuses escolares
-    D: Camionetas que remolcan un bote
+    D: Camionetas pickup remolcando un bote
   answer: C
   explanation: Los autobuses escolares, autobuses de iglesias, autobuses de pasajeros
     y camiones que transportan materiales inflamables, explosivos u otros materiales
-    peligrosos están obligados a detenerse antes de atravesar cualquier cruce de ferrocarril.
+    peligrosos están obligados a detenerse antes de cruzar cualquier cruce de ferrocarril.
 - id: 140
   category: safe_driving_rules
   question: Al acercarse a un cruce de ferrocarril donde se requiere que se detenga,
-    ¿cuál es la distancia de frenado adecuada desde las vías?
+    ¿cuál es la distancia de parada adecuada desde las vías?
   choices:
     A: De 5 a 10 pies
     B: De 15 a 50 pies
@@ -1814,23 +1816,23 @@ questions:
     pies.
 - id: 141
   category: safe_driving_rules
-  question: 'Para evitar que el motor se apague (stalling) al cruzar vías de ferrocarril,
-    un conductor con transmisión manual debe:'
+  question: 'Para evitar que el motor se apague al cruzar las vías del tren, un conductor
+    con transmisión manual debe:'
   choices:
     A: Cambiar a una marcha más alta mientras cruza.
-    B: Poner el vehículo en punto muerto e ir por inercia al cruzar.
+    B: Poner punto muerto (neutral) y cruzar por inercia.
     C: No cambiar de marcha mientras cruza la vía.
     D: Acelerar rápidamente y cambiar de marcha a mitad del camino.
   answer: C
   explanation: Para evitar que el motor se apague, el conductor no debe cambiar de
     marcha mientras cruza la vía. Si su vehículo tiene transmisión manual, reduzca
-    la marcha antes de llegar y no cambie de marcha mientras cruza.
+    la marcha y no cambie de marcha mientras cruza.
 - id: 142
   category: signs_and_signals
   question: 'Si se aproxima a un cruce de ferrocarril y las barreras están bajadas,
     usted debe:'
   choices:
-    A: Rodear las barreras si no ve venir un tren.
+    A: Rodear las barreras si no ve que venga un tren.
     B: Detenerse y permanecer detenido hasta que se levanten las barreras y las luces
       dejen de parpadear.
     C: Detenerse, mirar a ambos lados y avanzar lentamente rodeando las barreras.
@@ -1846,43 +1848,43 @@ questions:
   choices:
     A: Siempre aumentan la distancia de frenado independientemente de la superficie.
     B: Ayudan a detenerse más rápido en superficies lisas y secas, pero derrapan o
-      patinan (hydroplane) más fácilmente en superficies mojadas.
+      hidroplanean más fácilmente en superficies mojadas.
     C: Cortan el agua estancada mejor que los neumáticos estrechos.
     D: Pierden potencia de frenado en general debido a que hay menos caucho en la
       carretera.
   answer: B
   explanation: Los neumáticos grandes y anchos pueden ayudar a detenerse más rápido
-    en superficies lisas y secas, pero derraparán o patinarán (hydroplane) más fácilmente
+    en superficies lisas y secas, pero derraparán o hidroplanearán más fácilmente
     en superficies resbaladizas o mojadas.
 - id: 144
   category: driver_responsibility
   question: Si ocurre un accidente con heridos o víctimas mortales dentro de un municipio,
     ¿a quién se debe notificar por el medio de comunicación más rápido?
   choices:
-    A: A los patrulleros estatales (State Troopers)
+    A: A la policía estatal (State Troopers)
     B: A la policía local
     C: Al Departamento de Transporte
     D: Al hospital local
   answer: B
-  explanation: Cualquier accidente con heridos o víctimas mortales debe reportarse
-    a la policía local si ocurre dentro de un municipio, o a los patrulleros estatales
-    (State Troopers) si ocurre en una carretera estatal.
+  explanation: Cualquier accidente con heridos o víctimas mortales debe informarse
+    a la policía local si ocurre dentro de un municipio, o a la policía estatal (State
+    Troopers) si ocurre en una carretera estatal.
 - id: 145
   category: safe_driving_rules
   question: ¿Qué debe hacer si conduce un vehículo con transmisión manual y necesita
-    cruzar vías de ferrocarril?
+    cruzar las vías del tren?
   choices:
     A: Cambiar a una marcha más alta para cruzar las vías rápidamente.
     B: Reducir la marcha y no cambiar de marcha mientras cruza las vías.
-    C: Poner el vehículo en punto muerto e ir por inercia a través de las vías.
+    C: Poner el vehículo en punto muerto (neutral) y cruzar las vías por inercia.
     D: Poner la marcha atrás si ve que se acerca un tren.
   answer: B
   explanation: Según el manual, si su vehículo tiene transmisión manual, debe reducir
     la marcha y no cambiar de marcha mientras cruza las vías.
 - id: 146
   category: defensive_driving
-  question: Aproximadamente, ¿cuánto tarda un tren de carga que viaja a 55 mph en
-    detenerse por completo?
+  question: ¿Aproximadamente cuánto tiempo le toma a un tren de carga que viaja a
+    55 mph detenerse por completo?
   choices:
     A: Aproximadamente media milla
     B: Menos de 500 pies
@@ -1890,30 +1892,29 @@ questions:
     D: Dos millas
   answer: C
   explanation: El manual establece que un tren de carga que viaja a 55 mph tarda una
-    milla o más en detenerse, lo cual equivale a la longitud de 18 campos de fútbol
-    americano.
+    milla o más en detenerse, lo cual es la longitud de 18 campos de fútbol americano.
 - id: 147
   category: safe_driving_rules
-  question: ¿Qué es lo primero que debe hacer si su vehículo se apaga (stalls) en
-    un cruce de ferrocarril?
+  question: ¿Qué es lo primero que debe hacer si su vehículo se apaga en un cruce
+    de ferrocarril?
   choices:
-    A: Intentar reiniciar el motor mientras vigila si viene un tren.
+    A: Intentar arrancar el motor mientras vigila si viene un tren.
     B: Hacer que todos salgan del vehículo inmediatamente y se alejen de las vías.
-    C: Permanecer en el vehículo y llamar a una grúa para pedir ayuda.
-    D: Poner punto muerto e intentar empujar el vehículo fuera de las vías.
+    C: Quedarse en el vehículo y llamar a una grúa para pedir ayuda.
+    D: Poner punto muerto (neutral) e intentar empujar el vehículo fuera de las vías.
   answer: B
-  explanation: Si su vehículo se apaga en un cruce, el manual indica que debe hacer
-    que todos salgan del vehículo inmediatamente y se alejen de las vías, y luego
-    llamar a las autoridades locales.
+  explanation: Si su vehículo se apaga en un cruce, el manual indica que debe sacar
+    a todos del vehículo de inmediato y alejarlos de las vías, y luego llamar a las
+    autoridades locales.
 - id: 148
   category: signs_and_signals
   question: ¿Cuáles son los tres tipos de señales de tráfico clasificadas según su
     función?
   choices:
-    A: Reglamentarias, de advertencia y de información o guía
-    B: De pare, ceda el paso y límite de velocidad
-    C: De construcción, zona escolar y ferrocarril
-    D: De carreteras interestatales, estatales y locales
+    A: Señales reglamentarias, de advertencia y de información o guía
+    B: Señales de pare, ceda el paso y límite de velocidad
+    C: Señales de construcción, zona escolar y ferrocarril
+    D: Señales interestatales, de carretera y de caminos locales
   answer: A
   explanation: Los tres tipos de señales de tráfico se clasifican según su función.
     Son señales reglamentarias, de advertencia y de información o guía.
@@ -1947,7 +1948,7 @@ questions:
   choices:
     A: Zonas de construcción y desvíos
     B: Cruces de peatones y zonas escolares
-    C: Cruces de ferrocarril y gálibos bajos (espacios de baja altura)
+    C: Cruces de ferrocarril y espacios libres bajos
     D: Salidas de autopista y áreas de descanso
   answer: B
   explanation: Según el manual, el amarillo fluorescente indica cruces de peatones
@@ -2001,8 +2002,8 @@ questions:
     la vía que las personas en bicicleta podrían ocupar el carril de circulación.
 - id: 156
   category: defensive_driving
-  question: Según el manual, ¿cuántas veces más probable es que un automovilista muera
-    en un choque que involucre a un tren en comparación con otros choques?
+  question: Según el manual, ¿cuántas veces más probabilidades tiene un automovilista
+    de morir en un choque que involucre a un tren en comparación con otros choques?
   choices:
     A: 10 veces
     B: 20 veces
@@ -2018,7 +2019,7 @@ questions:
     en un espacio de estacionamiento para personas con discapacidad?
   choices:
     A: Un marco de matrícula especial
-    B: Una calcomanía o distintivo de discapacidad
+    B: Una calcomanía de discapacidad
     C: Una nota del médico en el tablero
     D: Una señal de luces de emergencia
   answer: B
@@ -2051,19 +2052,19 @@ questions:
     en la calle o carretera que se cruza.
 - id: 160
   category: safe_driving_rules
-  question: ¿En qué dirección fluye el tráfico en una rotonda?
+  question: ¿En qué dirección fluye el tráfico en una glorieta o rotonda?
   choices:
     A: En el sentido de las agujas del reloj
     B: En sentido contrario a las agujas del reloj
     C: En ambas direcciones
     D: Directo a través de la isla central
   answer: B
-  explanation: Una rotonda es una intersección circular que normalmente no incluye
+  explanation: Una glorieta es una intersección circular que generalmente no incluye
     un semáforo y fluye en sentido contrario a las agujas del reloj alrededor de una
     isla central.
 - id: 161
   category: safe_driving_rules
-  question: ¿A quién debe ceder el paso al entrar en una rotonda?
+  question: Al entrar en una rotonda (glorieta), ¿a quién debe ceder el paso?
   choices:
     A: Al tráfico que entra por la izquierda
     B: Al tráfico que ya se encuentra en la rotonda
@@ -2071,7 +2072,7 @@ questions:
     D: Solo a los peatones
   answer: B
   explanation: Los automovilistas deben entrar por la derecha, cediendo el paso al
-    tráfico que ya está en la rotonda, y seguir el círculo hacia la derecha.
+    tráfico que ya se encuentra en la rotonda, y seguir el círculo hacia la derecha.
 - id: 162
   category: signs_and_signals
   question: ¿De qué color son las señales de guía o informativas que dirigen a los
@@ -2086,17 +2087,17 @@ questions:
     y blanco.
 - id: 163
   category: signs_and_signals
-  question: ¿Dónde comienza el millaje cero para los postes de millaje (mileposts)
+  question: ¿Dónde comienza el kilometraje cero para los postes de millaje (mileposts)
     erigidos a lo largo de las carreteras estatales?
   choices:
-    A: En los límites estatales del norte y el este
-    B: En los límites estatales del sur y el oeste o en los empalmes donde comienzan
+    A: En las líneas estatales del norte y del este
+    B: En las líneas estatales del sur y del oeste o en los cruces donde comienzan
       las rutas
     C: En la ciudad capital del estado
     D: En el centro geográfico del estado
   answer: B
-  explanation: El millaje cero debe comenzar en los límites estatales del sur y el
-    oeste o en los empalmes donde comienzan las rutas.
+  explanation: El kilometraje cero debe comenzar en las líneas estatales del sur y
+    del oeste o en los cruces donde comienzan las rutas.
 - id: 164
   category: signs_and_signals
   question: ¿De qué color se pintan las líneas centrales en las carreteras de dos
@@ -2107,7 +2108,7 @@ questions:
     C: Rojo
     D: Azul
   answer: B
-  explanation: Bajo el Código Uniforme, las líneas centrales deben pintarse de amarillo
+  explanation: Según el Código Uniforme, las líneas centrales deben pintarse de amarillo
     en las carreteras de dos carriles.
 - id: 165
   category: signs_and_signals
@@ -2116,11 +2117,11 @@ questions:
     A: El tráfico circula en direcciones opuestas y se permite rebasar.
     B: El tráfico circula en la misma dirección y está prohibido cruzar las líneas.
     C: El tráfico circula en la misma dirección y se permite cruzar con precaución.
-    D: El carril está reservado para vehículos de alta ocupación.
+    D: El carril está reservado para vehículos de alta ocupación (HOV).
   answer: B
   explanation: Se utiliza una línea blanca sólida doble para delimitar un carril de
-    viaje donde el tráfico va en la misma dirección y se permite en ambos lados de
-    la línea, pero está prohibido cruzar las líneas dobles.
+    circulación donde el tráfico va en la misma dirección y se permite en ambos lados
+    de la línea, pero está prohibido cruzar las líneas dobles.
 - id: 166
   category: signs_and_signals
   question: ¿Cuándo se utilizan líneas amarillas como franjas de borde?
@@ -2128,20 +2129,20 @@ questions:
     A: Para las líneas de borde derechas en carreteras de dos carriles
     B: Para las líneas de borde izquierdas en carreteras divididas donde el tráfico
       no puede salirse completamente de la calzada
-    C: Para marcar cruces peatonales
+    C: Para marcar los cruces peatonales
     D: Para indicar una zona escolar más adelante
   answer: B
-  explanation: Ocasionalmente se utilizan líneas amarillas para las líneas de borde
+  explanation: Ocasionalmente, se utilizan líneas amarillas para las líneas de borde
     izquierdas en carreteras divididas donde el tráfico no puede salirse completamente
-    de la calzada, y para marcar obstrucciones e islas.
+    de la calzada, para marcar obstrucciones e islas.
 - id: 167
   category: signs_and_signals
-  question: ¿Qué significa una señal de tráfico circular amarilla fija?
+  question: ¿Qué significa una señal de tráfico amarilla circular fija?
   choices:
     A: Acelerar para pasar antes de la luz roja
     B: Detenerse inmediatamente en la intersección
     C: Despejar la intersección
-    D: Avanzar con precaución sin detenerse
+    D: Continuar con precaución sin detenerse
   answer: C
   explanation: Una luz amarilla circular fija significa despejar la intersección.
     Sigue a una señal verde. No debe entrar en la intersección cuando se encienda
@@ -2151,25 +2152,25 @@ questions:
   question: ¿Qué debe hacer al acercarse a un cruce de ferrocarril con señales de
     luces rojas intermitentes?
   choices:
-    A: Reducir la velocidad y avanzar si no se ve ningún tren
-    B: Detenerse porque hay un tren cerca y no avanzar hasta que sea seguro
+    A: Reducir la velocidad y continuar si no se ve ningún tren
+    B: Detenerse porque hay un tren cerca y no continuar hasta que sea seguro
     C: Acelerar para cruzar las vías rápidamente
     D: Ceder el paso a los vehículos que vienen detrás
   answer: B
   explanation: Deténgase siempre cuando las luces comiencen a parpadear porque hay
-    un tren cerca. No avance hasta que pueda hacerlo de manera segura.
+    un tren cerca. No continúe hasta que pueda hacerlo de manera segura.
 - id: 169
   category: signs_and_signals
   question: ¿Qué indica una flecha verde fija?
   choices:
-    A: Puede avanzar en la dirección de la flecha mientras que el tráfico opuesto
-      debe detenerse.
+    A: Puede avanzar en la dirección de la flecha mientras el tráfico opuesto debe
+      detenerse.
     B: Debe ceder el paso al tráfico opuesto antes de girar.
     C: El movimiento de giro protegido está terminando.
     D: Solo puede seguir recto a través de la intersección.
   answer: A
   explanation: Las FLECHAS VERDES le permiten avanzar en la dirección de la flecha
-    mientras que el tráfico opuesto debe detenerse.
+    mientras el tráfico opuesto debe detenerse.
 - id: 170
   category: signs_and_signals
   question: ¿Qué significa una señal de control de uso de carril con una "X ROJA FIJA"?
@@ -2180,10 +2181,10 @@ questions:
     D: El carril está reservado solo para giros a la izquierda.
   answer: C
   explanation: Un conductor que se enfrente a una indicación de "X ROJA FIJA" no deberá
-    conducir en el carril sobre el cual se encuentra ubicada la señal.
+    conducir en el carril sobre el cual se encuentra la señal.
 - id: 171
   category: driver_responsibility
-  question: ¿Según el manual, a quiénes se aplican las leyes de tránsito?
+  question: Según el manual, ¿a quiénes se aplican las leyes de tránsito?
   choices:
     A: Solo a los conductores de vehículos motorizados
     B: A los conductores de vehículos y operadores de motocicletas, pero no a los
@@ -2224,27 +2225,28 @@ questions:
     de Alabama?
   choices:
     A: Siempre debe conducir exactamente al límite de velocidad indicado.
-    B: Nunca debe conducir un vehículo a una velocidad superior a la razonable bajo
-      las condiciones existentes.
+    B: Nunca debe conducir un vehículo a una velocidad superior a la que sea razonable
+      bajo las condiciones existentes.
     C: Debe conducir 5 mph por debajo del límite de velocidad durante condiciones
       climáticas adversas.
     D: Puede exceder el límite de velocidad por 10 mph si está rebasando a otro vehículo.
   answer: B
   explanation: La ley de velocidad básica de Alabama establece que nunca debe conducir
-    un vehículo a una velocidad superior a la razonable bajo las condiciones existentes,
-    considerando el estado de la carretera, el clima y las condiciones del vehículo.
+    un vehículo a una velocidad superior a la que sea razonable bajo las condiciones
+    existentes, considerando el estado de la carretera, el clima y las condiciones
+    del vehículo.
 - id: 175
   category: signs_and_signals
   question: ¿Dónde debe detener su vehículo ante una señal de PARE (STOP) si no hay
     una línea de parada marcada?
   choices:
-    A: Antes de entrar al paso de peatones en el lado cercano de la intersección.
+    A: Antes de entrar al cruce de peatones en el lado cercano de la intersección.
     B: Directamente al lado de la señal de PARE (STOP).
     C: Diez pies antes de la intersección.
     D: En medio de la intersección para tener una vista despejada.
   answer: A
   explanation: Si no hay una línea de parada marcada, el vehículo debe detenerse antes
-    de entrar al paso de peatones en el lado cercano de la intersección.
+    de entrar al cruce de peatones en el lado cercano de la intersección.
 - id: 176
   category: safe_driving_rules
   question: ¿Bajo qué condición puede realizar un giro a la izquierda después de detenerse
@@ -2258,8 +2260,8 @@ questions:
     D: Si no hay tráfico en sentido contrario por al menos 500 pies.
   answer: C
   explanation: Puede realizar un giro a la izquierda después de detenerse si está
-    conduciendo en una calle de un solo sentido y la calle a la que gira a la izquierda
-    es de un solo sentido con el tráfico moviéndose de derecha a izquierda.
+    conduciendo en una calle de un solo sentido y la calle a la que gira es también
+    de un solo sentido con el tráfico moviéndose de derecha a izquierda.
 - id: 177
   category: signs_and_signals
   question: ¿Cómo debe tratar una intersección si el semáforo no funciona?
@@ -2267,7 +2269,7 @@ questions:
     A: Trate la intersección como una señal de ceda el paso.
     B: Trate la intersección como lo haría con una parada de cuatro vías (four-way
       stop).
-    C: Atraviese la intersección sin detenerse si el camino está despejado.
+    C: Continúe por la intersección sin detenerse si el camino está despejado.
     D: Espere en la intersección hasta que llegue la policía.
   answer: B
   explanation: El manual establece que si el semáforo no funciona, debe tratar la
@@ -2292,16 +2294,16 @@ questions:
     A: Cuando viaja por una carretera de dos carriles.
     B: Cuando se encuentra en una carretera de cuatro carriles sin división.
     C: Cuando se encuentra en una carretera dividida de cuatro o más carriles y el
-      autobús está detenido en el carril opuesto.
-    D: Cuando va tarde y no hay niños visibles.
+      autobús está detenido en el sentido contrario.
+    D: Cuando llega tarde y no hay niños visibles.
   answer: C
   explanation: No se requiere detenerse en una carretera dividida que tenga cuatro
     o más carriles y que permita al menos dos carriles de tráfico en direcciones opuestas
-    al encontrarse con un autobús escolar detenido en el carril opuesto.
+    al encontrarse con un autobús escolar detenido en el sentido contrario.
 - id: 180
   category: sharing_the_road
-  question: En áreas rurales, ¿con cuánta anticipación usan los autobuses escolares
-    las luces ámbar intermitentes para advertir a los conductores que se están preparando
+  question: En áreas rurales, ¿con qué anticipación utilizan los autobuses escolares
+    las luces ámbar intermitentes para advertir a los conductores que se preparan
     para detenerse?
   choices:
     A: Al menos 50 pies
@@ -2313,41 +2315,41 @@ questions:
     300 pies antes de detenerse para advertir a los demás conductores.
 - id: 181
   category: safe_driving_rules
-  question: ¿Si dos vehículos entran en una intersección no controlada desde diferentes
-    calzadas aproximadamente al mismo tiempo, quién tiene el derecho de paso?
+  question: Si dos vehículos entran en una intersección no controlada desde diferentes
+    calzadas aproximadamente al mismo tiempo, ¿quién tiene el derecho de paso?
   choices:
-    A: El vehículo a la izquierda debe ceder el paso al vehículo a la derecha.
-    B: El vehículo a la derecha debe ceder el paso al vehículo a la izquierda.
+    A: El vehículo de la izquierda deberá ceder el paso al vehículo de la derecha.
+    B: El vehículo de la derecha deberá ceder el paso al vehículo de la izquierda.
     C: El vehículo que viaja a una velocidad más rápida tiene el derecho de paso.
     D: El vehículo más grande tiene el derecho de paso.
   answer: A
   explanation: Si dos vehículos entran en una intersección no controlada por señales
-    o semáforos aproximadamente al mismo tiempo, el conductor del vehículo a la izquierda
-    debe ceder el paso al vehículo a la derecha.
+    o semáforos aproximadamente al mismo tiempo, el conductor del vehículo de la izquierda
+    deberá ceder el paso al vehículo de la derecha.
 - id: 182
   category: safe_driving_rules
   question: ¿Qué sucede si entra en una intersección no controlada a una velocidad
     ilegal?
   choices:
     A: Mantiene el derecho de paso pero puede recibir una citación.
-    B: Pierde cualquier derecho de paso que de otro modo podría tener.
+    B: Pierde cualquier derecho de paso que pudiera tener de otro modo.
     C: Otros conductores deben cederle el paso para evitar un choque.
-    D: Debe retroceder inmediatamente fuera de la intersección.
+    D: Debe retroceder inmediatamente para salir de la intersección.
   answer: B
   explanation: 'El manual establece explícitamente: ''Si entra en una intersección
-    no controlada a una velocidad ilegal, pierde cualquier derecho de paso que de
-    otro modo podría tener''.'
+    no controlada a una velocidad ilegal, pierde cualquier derecho de paso que pudiera
+    tener de otro modo''.'
 - id: 183
   category: sharing_the_road
-  question: ¿La ley exige que se detenga y ceda el derecho de paso a una persona ciega
-    que lleve qué tipo de bastón?
+  question: ¿La ley exige que usted se detenga y ceda el derecho de paso a una persona
+    ciega que lleve qué tipo de bastón?
   choices:
     A: Un bastón amarillo sólido.
     B: Un bastón blanco con punta roja.
     C: Un bastón negro sólido.
     D: Un bastón rojo con punta blanca.
   answer: B
-  explanation: La ley exige que se detenga y ceda el derecho de paso en cualquier
+  explanation: La ley exige que usted se detenga y ceda el derecho de paso en cualquier
     intersección a una persona ciega que lleve un bastón blanco con punta roja y sostenga
     el bastón con el brazo extendido.
 - id: 184
@@ -2357,27 +2359,27 @@ questions:
   choices:
     A: Detenerse inmediatamente en medio de la intersección.
     B: Acelerar para salir de la intersección lo más rápido posible.
-    C: Despejar la intersección antes de hacerse a un lado de la calzada y detenerse.
-    D: Hacerse al lado izquierdo de la intersección y detenerse.
+    C: Despejar la intersección antes de orillarse al lado de la calzada y detenerse.
+    D: Orillarse al lado izquierdo de la intersección y detenerse.
   answer: C
   explanation: Al ceder el paso a un vehículo de emergencia, si se encuentra en una
     intersección, debe despejarla antes de detenerse. Diríjase al lado de la calzada
     y deténgase.
 - id: 185
   category: safe_driving_rules
-  question: Al adelantar a otro vehículo en una carretera de dos carriles, ¿cuándo
-    es seguro regresar al carril derecho?
+  question: Al rebasar a otro vehículo en una carretera de dos carriles, ¿cuándo es
+    seguro regresar al carril derecho?
   choices:
     A: Tan pronto como su parachoques trasero pase el parachoques delantero del vehículo
-      adelantado.
-    B: Cuando esté a 50 pies por delante del vehículo adelantado.
-    C: Cuando el conductor del vehículo adelantado haga parpadear sus faros.
-    D: Cuando pueda ver toda la parte delantera del vehículo que acaba de adelantar
+      rebasado.
+    B: Cuando esté a 50 pies por delante del vehículo rebasado.
+    C: Cuando el conductor del vehículo rebasado haga cambio de luces con sus faros.
+    D: Cuando pueda ver la parte delantera completa del vehículo que acaba de rebasar
       en su espejo retrovisor interior.
   answer: D
   explanation: No regrese al carril derecho demasiado pronto; no lo haga hasta que
-    pueda ver toda la parte delantera del vehículo que acaba de adelantar en su espejo
-    retrovisor interior.
+    pueda ver la parte delantera completa del vehículo que acaba de rebasar en su
+    espejo retrovisor interior.
 - id: 186
   category: safe_driving_rules
   question: ¿Qué debe hacer al salir de un callejón, entrada privada o edificio dentro
@@ -2386,23 +2388,23 @@ questions:
     A: Detenerse siempre antes de cruzar la acera o el área del cruce de peatones.
     B: Tocar la bocina y avanzar sin detenerse.
     C: Ceder el paso solo si hay vehículos aproximándose por la calle.
-    D: Reducir la velocidad a 5 mph antes de entrar a la calle.
+    D: Reducir la velocidad a 5 mph antes de entrar en la calle.
   answer: A
   explanation: Al salir de un callejón, entrada privada o edificio dentro de un distrito
     comercial o residencial, siempre debe detenerse antes de cruzar la acera o el
     área del cruce de peatones.
 - id: 187
   category: safe_driving_rules
-  question: 'Se le prohíbe cruzar la línea central para adelantar en una curva o colina
-    a menos que tenga una distancia de adelantamiento despejada de al menos:'
+  question: 'Se le prohíbe cruzar la línea central para rebasar en una curva o colina
+    a menos que tenga una distancia de paso despejada de al menos:'
   choices:
     A: 200 pies
     B: 300 pies
     C: 400 pies
     D: 500 pies
   answer: D
-  explanation: No puede cruzar la línea central para adelantar en una curva o colina
-    donde no pueda ver una distancia de adelantamiento despejada de al menos 500 pies.
+  explanation: No puede cruzar la línea central para rebasar en una curva o colina
+    donde no pueda ver una distancia de paso despejada de al menos 500 pies.
 - id: 188
   category: sharing_the_road
   question: 'Los conductores deben ceder el paso a un peatón ciego que esté:'
@@ -2417,16 +2419,17 @@ questions:
     al entrar en una intersección.
 - id: 189
   category: sharing_the_road
-  question: 'Al caminar por una calzada donde no hay aceras, los peatones deben:'
+  question: 'Al caminar por una calzada donde no se proporcionan aceras, los peatones
+    deben:'
   choices:
     A: Caminar por el lado derecho de la calzada con el tráfico.
     B: Caminar por el lado izquierdo de la calzada cediendo el paso al tráfico que
-      viene en sentido contrario.
-    C: Caminar por el centro de la calzada.
-    D: Caminar por cualquier lado siempre que lleven ropa reflectante.
+      viene de frente.
+    C: Caminar en el centro de la calzada.
+    D: Caminar por cualquier lado siempre que usen ropa reflectante.
   answer: B
   explanation: El manual establece que los peatones deben caminar por el lado izquierdo
-    de la calzada cediendo el paso al tráfico que viene en sentido contrario.
+    de la calzada cediendo el paso al tráfico que viene de frente.
 - id: 190
   category: safe_driving_rules
   question: ¿Cuál es la distancia mínima de seguimiento requerida para vehículos no
@@ -2442,7 +2445,7 @@ questions:
 - id: 191
   category: safe_driving_rules
   question: ¿En cuál de las siguientes vías está estrictamente prohibido dar marcha
-    atrás con un vehículo para vehículos que no sean de emergencia?
+    atrás para vehículos que no sean de emergencia?
   choices:
     A: Calles urbanas de sentido único
     B: Autopistas de acceso controlado (freeways y expressways)
@@ -2450,7 +2453,7 @@ questions:
     D: Entradas residenciales
   answer: B
   explanation: Dar marcha atrás está prohibido en autopistas de acceso controlado
-    (freeways y expressways), excepto para vehículos de emergencia en el desempeño
+    (freeways y expressways), excepto para vehículos de emergencia en el cumplimiento
     de sus funciones.
 - id: 192
   category: signs_and_signals
@@ -2458,9 +2461,9 @@ questions:
     disminuir la velocidad?
   choices:
     A: Mano y brazo extendidos hacia arriba
-    B: Mano y brazo extendidos hacia afuera horizontalmente
+    B: Mano y brazo extendidos hacia afuera en línea recta
     C: Mano y brazo extendidos hacia abajo
-    D: Mover la mano en un movimiento circular
+    D: Mover la mano en movimiento circular
   answer: C
   explanation: La señal manual correcta para DETENERSE O DISMINUIR LA VELOCIDAD es
     la mano y el brazo extendidos hacia abajo.
@@ -2474,13 +2477,13 @@ questions:
     C: Cuatro
     D: Cinco
   answer: B
-  explanation: Es ilegal conducir cualquier vehículo tan cargado o cuando haya un
-    número de personas superior a tres en el asiento delantero que obstruya la visión
-    del conductor o dificulte el control.
+  explanation: Es ilegal conducir cualquier vehículo con una carga tal o cuando haya
+    un número de personas superior a tres en el asiento delantero que obstruya la
+    vista del conductor o dificulte el control.
 - id: 194
   category: vehicle_information
   question: Durante el día, si una carga sobresale 4 pies o más de la parte trasera
-    de un vehículo, ¿qué debe colocarse al final de la carga?
+    de un vehículo, ¿qué se debe colocar al final de la carga?
   choices:
     A: Una luz roja visible a 500 pies
     B: Una señal de advertencia amarilla
@@ -2500,13 +2503,13 @@ questions:
     C: Registro del vehículo
     D: Título del vehículo
   answer: D
-  explanation: Cuando se le detiene por una infracción de tráfico, los tres documentos
-    que deben presentarse son la licencia de conducir, el comprobante de seguro y
-    el registro del vehículo. El título del vehículo no figura en la lista.
+  explanation: Cuando lo detienen por una infracción de tráfico, los tres documentos
+    que debe presentar son la Licencia de conducir, el Comprobante de seguro y el
+    Registro del vehículo. El Título del vehículo no es requerido.
 - id: 196
   category: driver_responsibility
   question: Según la Ley de Seguro de Responsabilidad Obligatorio de Alabama, ¿cuál
-    es la cobertura mínima requerida por muerte o lesiones corporales a una persona?
+    es la cobertura mínima requerida por muerte o lesiones corporales de una persona?
   choices:
     A: $10,000
     B: $15,000
@@ -2514,18 +2517,18 @@ questions:
     D: $50,000
   answer: C
   explanation: Las pólizas de seguro de responsabilidad civil deben emitirse por no
-    menos de $25,000 por muerte o lesiones corporales a una persona.
+    menos de $25,000 por muerte o lesiones corporales de una persona.
 - id: 197
   category: penalties_and_points
-  question: ¿Cuál es la multa máxima por una primera condena por una infracción de
-    seguro de responsabilidad obligatorio?
+  question: ¿Cuál es la multa máxima por una primera condena por infracción del seguro
+    de responsabilidad obligatorio?
   choices:
     A: $100
     B: $250
     C: $500
     D: $1,000
   answer: C
-  explanation: Un propietario u operador condenado por una infracción de seguro de
+  explanation: Un propietario u operador condenado por una infracción del seguro de
     responsabilidad obligatorio puede ser multado con hasta $500 por la primera infracción.
 - id: 198
   category: vehicle_information
@@ -2537,7 +2540,7 @@ questions:
     C: 32 por ciento
     D: 50 por ciento
   answer: C
-  explanation: En los automóviles de pasajeros, como sedanes, cupés y camionetas familiares
+  explanation: En los automóviles de pasajeros como sedanes, cupés y camionetas familiares
     (station wagons), todas las ventanas (laterales y traseras) pueden tener un tintado
     que permita al menos un 32 por ciento de transmisión de luz.
 - id: 199
@@ -2554,11 +2557,11 @@ questions:
     de conducir.
 - id: 200
   category: defensive_driving
-  question: Al cambiar de carril, ¿por qué debería mirar por encima del hombro además
+  question: Al cambiar de carril, ¿por qué debe mirar por encima del hombro además
     de revisar los espejos?
   choices:
     A: Para revisar el "punto ciego" que su espejo no cubre
-    B: Para ver si el conductor detrás de usted está haciendo señales
+    B: Para ver si el conductor detrás de usted está señalizando
     C: Para asegurarse de que su placa trasera sea visible
     D: Para buscar vehículos de emergencia a lo lejos
   answer: A
@@ -2573,25 +2576,25 @@ questions:
     C: Una suspensión de la licencia por un año
     D: Revocación permanente de la licencia
   answer: B
-  explanation: Según la ley de Alabama, en una segunda condena por retirarse de las
-    instalaciones de un establecimiento de gasolina sin pagar, la licencia de conducir
-    será suspendida por un período de seis meses.
+  explanation: De acuerdo con la ley de Alabama, ante una segunda condena por retirarse
+    de las instalaciones de un establecimiento de gasolina sin pagar, la licencia
+    de conducir será suspendida por un período de seis meses.
 - id: 202
   category: penalties_and_points
   question: ¿Cómo se clasifica el delito de conducir su vehículo fuera de las instalaciones
     de un establecimiento de gasolina sin pagar?
   choices:
-    A: Un delito menor de Clase A
-    B: Un delito grave de Clase B
+    A: Un delito menor de Clase A (Class A misdemeanor)
+    B: Un delito grave de Clase B (Class B felony)
     C: Una infracción de tráfico
-    D: Un delito menor de Clase C
+    D: Un delito menor de Clase C (Class C misdemeanor)
   answer: A
   explanation: El Proyecto de Ley del Senado de Alabama 459 establece que una persona
     que se retire sin pagar la gasolina será culpable de un delito menor de Clase
-    A.
+    A (Class A misdemeanor).
 - id: 203
   category: safe_driving_rules
-  question: 'Según la Ley de Ceder el Paso (Move-Over Law), si no puede cambiar de
+  question: 'Bajo la Ley de Ceder el Paso (Move-Over Law), si no puede cambiar de
     carril de manera segura en una carretera de cuatro carriles al acercarse a un
     vehículo de emergencia con luces intermitentes, usted debe:'
   choices:
@@ -2606,8 +2609,8 @@ questions:
 - id: 204
   category: safe_driving_rules
   question: En una carretera de dos carriles con un límite de velocidad de 20 mph,
-    ¿a qué velocidad debe circular al rebasar un vehículo de emergencia detenido con
-    luces intermitentes?
+    ¿a qué velocidad debe circular al pasar junto a un vehículo de emergencia detenido
+    con luces intermitentes?
   choices:
     A: 5 mph
     B: 10 mph
@@ -2627,57 +2630,59 @@ questions:
     C: 500 pies
     D: 1000 pies
   answer: B
-  explanation: El manual establece que las luces delanteras en posición de luces altas
-    normalmente iluminan la carretera a unos 350 pies en condiciones normales.
+  explanation: El manual establece que los faros en luz alta normalmente iluminan
+    la carretera a unos 350 pies en condiciones normales.
 - id: 206
   category: safe_driving_rules
-  question: ¿Por ley, se requiere que baje sus luces delanteras cuando se encuentre
-    a qué distancia de un vehículo que viene en sentido contrario?
+  question: Por ley, se requiere que baje la intensidad de sus faros (cambie a luces
+    bajas) cuando se encuentre a qué distancia de un vehículo que viene en sentido
+    contrario?
   choices:
     A: 200 pies
     B: 300 pies
     C: 400 pies
     D: 500 pies
   answer: D
-  explanation: Debe bajar sus luces delanteras cuando esté a menos de 500 pies de
-    un vehículo que se aproxima.
+  explanation: Debe bajar la intensidad de sus faros cuando esté a menos de 500 pies
+    de un vehículo que se aproxima en sentido contrario.
 - id: 207
   category: safe_driving_rules
-  question: 'Al seguir a otro vehículo por la noche, debe bajar sus luces delanteras
-    cuando se encuentre a menos de:'
+  question: 'Al seguir a otro vehículo por la noche, debe bajar la intensidad de sus
+    faros cuando se encuentre a una distancia de:'
   choices:
     A: 100 pies
     B: 200 pies
     C: 350 pies
     D: 500 pies
   answer: B
-  explanation: La ley exige que baje sus luces delanteras cuando esté a menos de 200
-    pies al seguir a otro vehículo.
+  explanation: La ley exige que baje la intensidad de sus faros cuando esté a menos
+    de 200 pies al seguir a otro vehículo.
 - id: 208
   category: defensive_driving
-  question: 'Para reducir el deslumbramiento de las luces delanteras de los vehículos
-    que vienen en sentido contrario por la noche, usted debe:'
+  question: 'Para reducir el deslumbramiento de los faros que vienen en sentido contrario
+    por la noche, usted debe:'
   choices:
     A: Mirar directamente a las luces que se aproximan para rastrear el vehículo
     B: Encender sus luces altas para mejorar su propia visibilidad
     C: Mirar hacia el borde derecho del pavimento y concentrarse en la línea blanca
     D: Cerrar un ojo hasta que el vehículo pase
   answer: C
-  explanation: El deslumbramiento de las luces que se aproximan se puede reducir desviando
-    la vista de ellas, lo cual se hace mirando hacia el borde derecho del pavimento
-    y concentrándose en la línea blanca.
+  explanation: El deslumbramiento de las luces que vienen en sentido contrario se
+    puede reducir desviando la vista de ellas, lo cual se hace mirando hacia el borde
+    derecho del pavimento y concentrándose en la línea blanca.
 - id: 209
   category: safe_driving_rules
   question: Si debe convertirse en peatón durante una emergencia en la carretera por
-    la noche, ¿cómo debe caminar por la autopista?
+    la noche, ¿cómo debe caminar a lo largo de la autopista?
   choices:
     A: En el borde derecho de la carretera con el flujo del tráfico
-    B: En el borde izquierdo de la carretera o en el arcén de frente al tráfico
+    B: En el borde izquierdo de la carretera o en el acotamiento (shoulder) de frente
+      al tráfico
     C: En el centro del carril para permanecer visible
-    D: En el arcén derecho de espaldas al tráfico
+    D: En el acotamiento derecho de espaldas al tráfico
   answer: B
   explanation: Si DEBE convertirse en peatón, lleve una luz y camine por el borde
-    izquierdo de la carretera o el arcén DE FRENTE al tráfico.
+    izquierdo de la carretera o el acotamiento (shoulder) DE FRENTE al tráfico.
 - id: 210
   category: safe_driving_rules
   question: Si tiene bengalas o reflectores durante una emergencia nocturna, ¿dónde
@@ -2693,16 +2698,16 @@ questions:
     tráfico.
 - id: 211
   category: safe_driving_rules
-  question: ¿Según la ley estatal, durante qué horas deben estar encendidas las luces
-    delanteras?
+  question: De acuerdo con la ley estatal, ¿durante qué horas deben estar encendidas
+    las luces delanteras?
   choices:
     A: Desde el atardecer hasta el amanecer
     B: Desde media hora después del atardecer hasta media hora antes del amanecer
     C: Desde una hora después del atardecer hasta una hora antes del amanecer
-    D: Desde las 8:00 PM hasta las 6:00 AM
+    D: De 8:00 PM a 6:00 AM
   answer: B
-  explanation: Según la ley estatal, las luces delanteras deben estar encendidas desde
-    media hora después del atardecer hasta media hora antes del amanecer y durante
+  explanation: De acuerdo con la ley estatal, las luces delanteras deben estar encendidas
+    desde media hora después del atardecer hasta media hora antes del amanecer y durante
     otros periodos de visibilidad limitada.
 - id: 212
   category: safe_driving_rules
@@ -2760,24 +2765,24 @@ questions:
   question: ¿Qué debe hacer para superar un derrape si conduce un vehículo convencional
     de tracción trasera?
   choices:
-    A: Presionar ligeramente el acelerador
+    A: Pisar ligeramente el acelerador
     B: Frenar bruscamente de inmediato
-    C: Soltar suavemente el acelerador
-    D: Cambiar a reversa
+    C: Soltar el acelerador gradualmente
+    D: Poner la marcha atrás
   answer: C
-  explanation: Con un vehículo convencional de tracción trasera, cuando suelta suavemente
-    el acelerador, el motor actúa como un freno para reducir ligeramente la velocidad
-    de las ruedas traseras, permitiendo que la parte delantera se estabilice.
+  explanation: Con un vehículo convencional de tracción trasera, cuando suelta el
+    acelerador, el motor actúa como freno para reducir ligeramente la velocidad de
+    las ruedas traseras, permitiendo que la parte delantera se nivele.
 - id: 217
   category: defensive_driving
   question: ¿Cómo debe manejar un derrape en un vehículo de tracción delantera?
   choices:
     A: Soltar el acelerador por completo
-    B: Presionar ligeramente el acelerador
+    B: Pisar ligeramente el acelerador
     C: Aplicar los frenos con firmeza
     D: Poner el vehículo en punto muerto (neutral)
   answer: B
-  explanation: Para superar un derrape con vehículos de tracción delantera, presionar
+  explanation: Para superar un derrape con vehículos de tracción delantera, pisar
     ligeramente el acelerador aumentará la velocidad de las ruedas delanteras para
     que la parte delantera pueda alcanzar a la parte trasera que se desliza.
 - id: 218
@@ -2790,8 +2795,8 @@ questions:
     C: 45 mph
     D: 55 mph
   answer: B
-  explanation: En un automóvil de pasajeros estándar, el hidroplaneo parcial comienza
-    a unas 35 mph y aumenta con la velocidad hasta unas 55 mph.
+  explanation: En un automóvil de pasajeros estándar, el hidroplaneo (hydroplaning)
+    parcial comienza a unas 35 mph y aumenta con la velocidad hasta unas 55 mph.
 - id: 219
   category: defensive_driving
   question: ¿Cuál es la mejor acción a tomar si su vehículo comienza a hidroplanear
@@ -2815,7 +2820,7 @@ questions:
     D: Solo las luces de emergencia
   answer: B
   explanation: Mantenga las luces delanteras en la posición de cruce (bajas) para
-    reducir el reflejo deslumbrante de sus luces sobre la capa de niebla espesa o
+    reducir el reflejo deslumbrante de sus luces sobre la espesa capa de niebla o
     la nieve cegadora.
 - id: 221
   category: safe_driving_rules
@@ -2849,7 +2854,8 @@ questions:
     C: Conducir en carreteras mojadas
     D: Usar las luces altas
   answer: B
-  explanation: El inflado insuficiente es una de las razones más comunes de los reventones.
+  explanation: El inflado insuficiente es una de las razones más comunes de los reventones
+    de neumáticos.
 - id: 224
   category: defensive_driving
   question: ¿Qué debe hacer primero si experimenta un reventón repentino de un neumático?
@@ -2857,7 +2863,7 @@ questions:
     A: Frenar bruscamente de inmediato
     B: Virar bruscamente hacia el arcén (hombro) de la carretera
     C: Sujetar firmemente el volante y mantener la dirección recta
-    D: Poner la marcha en punto muerto (neutral)
+    D: Poner la transmisión en punto muerto (neutral)
   answer: C
   explanation: Para recuperar el control durante un reventón, sujete firmemente el
     volante, mantenga la dirección recta y suelte gradualmente el acelerador. No frene
@@ -2869,7 +2875,7 @@ questions:
   choices:
     A: Hará que el motor se apague
     B: Puede desequilibrar el vehículo y hacer que pierda el control
-    C: Hará que los neumáticos sufran hidroplaneo (aquaplaning)
+    C: Hará que los neumáticos patinen sobre el agua (hidroplaneo)
     D: Dañará las pastillas de freno
   answer: B
   explanation: Si frena o intenta cambiar de marcha durante una falla en la dirección,
@@ -2882,11 +2888,11 @@ questions:
   choices:
     A: Apagar el motor inmediatamente
     B: Cambiar a una marcha más alta
-    C: Intentar bombear el pedal para aumentar la presión
+    C: Intentar bombear el pedal para generar presión
     D: Dirigirse hacia la zanja más cercana
   answer: C
   explanation: Si el pedal del freno se hunde repentinamente hasta el fondo, intente
-    bombear el pedal para aumentar la presión.
+    bombear el pedal para generar presión.
 - id: 227
   category: safe_driving_rules
   question: ¿Cuál es el procedimiento correcto si sus ruedas se desvían hacia el arcén
@@ -2908,49 +2914,51 @@ questions:
     hacia el carril izquierdo para evitarlo?
   choices:
     A: Es ilegal cruzar la línea central
-    B: El conductor que viene de frente podría reaccionar y volver a la trayectoria
-      de su automóvil
+    B: El conductor que viene en sentido contrario podría reaccionar y volver a la
+      trayectoria de su automóvil
     C: Su vehículo perderá tracción y patinará
     D: No podrá ver claramente en el carril izquierdo
   answer: B
   explanation: No gire hacia el carril izquierdo porque el conductor del vehículo
-    que viene de frente podría reaccionar y volver a la trayectoria de su automóvil.
+    que viene en sentido contrario podría reaccionar y volver a la trayectoria de
+    su automóvil.
 - id: 229
   category: sharing_the_road
   question: Si un automóvil intenta adelantarlo pero no puede completar la maniobra
-    debido al tráfico que viene de frente, y un choque es casi seguro, ¿qué debe hacer?
+    debido al tráfico en sentido contrario, y un choque es casi seguro, ¿qué debe
+    hacer?
   choices:
     A: Acelerar para bloquear al automóvil que intenta adelantar
     B: Moverse rápidamente hacia el arcén (hombro) derecho para permitir que el automóvil
       entre en su carril
     C: Detener su vehículo inmediatamente en el carril
-    D: Encender las luces altas para advertir al tráfico que viene de frente
+    D: Encender las luces altas para advertir al tráfico que viene en sentido contrario
   answer: B
   explanation: Si el arcén derecho es adecuado y un choque es casi seguro, muévase
     rápidamente hacia el arcén para permitir que el automóvil que lo adelanta entre
     en su carril.
 - id: 230
   category: vehicle_information
-  question: ¿Cómo podría mover un automóvil con transmisión manual que se ha apagado
-    en las vías del tren?
+  question: ¿Cómo podría mover un automóvil con transmisión manual que se ha detenido
+    (calado) en las vías del tren?
   choices:
-    A: Empujándolo solo desde atrás
+    A: Empujándolo desde atrás únicamente
     B: Accionando el motor de arranque mientras el automóvil está en primera o segunda
       marcha
     C: Poniendo el punto muerto (neutral) y dejándolo rodar
     D: Acelerando el motor en reversa
   answer: B
-  explanation: Si su automóvil se apaga en las vías del tren y tiene transmisión manual,
-    es posible que pueda moverlo fuera de las vías accionando el motor de arranque
-    mientras el automóvil está en primera o segunda marcha.
+  explanation: Si su automóvil se detiene en las vías del tren y tiene transmisión
+    manual, es posible que pueda moverlo fuera de las vías accionando el motor de
+    arranque mientras el automóvil está en primera o segunda marcha.
 - id: 231
   category: defensive_driving
-  question: Si su vehículo cae en aguas profundas pero no se hunde de inmediato, ¿cuál
-    es la mejor manera de escapar?
+  question: ¿Si su vehículo cae en aguas profundas pero no se hunde de inmediato,
+    cuál es la mejor manera de escapar?
   choices:
-    A: Abrir la puerta rápidamente antes de que el agua suba.
+    A: Abrir la puerta rápidamente antes de que suba el nivel del agua.
     B: Esperar a que el vehículo se llene de agua para igualar la presión.
-    C: Escapar a través de una ventana inmediatamente.
+    C: Escapar a través de una ventana de inmediato.
     D: Moverse al asiento trasero y esperar el rescate.
   answer: C
   explanation: 'El manual aconseja: "Si su vehículo cae en aguas profundas PERO NO
@@ -2974,13 +2982,13 @@ questions:
     tráfico lento?
   choices:
     A: Encender la calefacción del vehículo al máximo.
-    B: Poner el vehículo en punto muerto (neutral) y acelerar el motor brevemente
-      durante las paradas.
+    B: Poner la marcha en punto muerto (neutral) y acelerar el motor brevemente durante
+      las paradas.
     C: Apagar el motor cada vez que el tráfico se detenga.
     D: Abrir ligeramente la tapa del radiador para liberar presión.
   answer: B
   explanation: 'El manual establece: "Puede ayudar a prevenir el sobrecalentamiento
-    en tráfico lento poniendo el vehículo en punto muerto (neutral) y acelerando el
+    en tráfico lento poniendo la marcha en punto muerto (neutral) y acelerando el
     motor brevemente durante las paradas. Esto acelerará el ventilador y la bomba
     de agua".'
 - id: 234
@@ -2988,7 +2996,7 @@ questions:
   question: Si el pedal del acelerador se queda atascado y decide apagar el motor
     para reducir la velocidad, ¿qué peligro secundario debe esperar?
   choices:
-    A: El volante se bloqueará inmediatamente.
+    A: El volante se bloqueará de inmediato.
     B: Las bolsas de aire se desplegarán.
     C: Perderá la asistencia de la dirección hidráulica y de los frenos de potencia.
     D: La transmisión cambiará automáticamente a reversa.
@@ -2999,14 +3007,14 @@ questions:
 - id: 235
   category: safe_driving_rules
   question: Al conducir en una autopista, ¿qué deben hacer los vehículos que circulan
-    más despacio?
+    más lento?
   choices:
     A: Conducir por el acotamiento izquierdo.
     B: Mantenerse a la derecha.
     C: Mantener una velocidad de al menos 55 mph.
-    D: Conducir por el carril central con las luces de emergencia encendidas.
+    D: Conducir en el carril central con las luces de emergencia encendidas.
   answer: B
-  explanation: 'El manual establece: "Los vehículos que circulan más despacio, aquellos
+  explanation: 'El manual establece: "Los vehículos que circulan más lento, aquellos
     que viajan a una velocidad inferior a la normal del tráfico en ese momento, DEBEN
     MANTENERSE A LA DERECHA".'
 - id: 236
@@ -3015,18 +3023,18 @@ questions:
     a las autoridades?
   choices:
     A: Pararse en el carril derecho y agitar los brazos.
-    B: Tocar la bocina continuamente siguiendo un patrón de SOS.
+    B: Tocar la bocina continuamente en un patrón de SOS.
     C: Abrir el maletero, levantar el capó y atar un paño blanco a la manija de una
       puerta o a la antena.
     D: Colocar triángulos de advertencia exactamente a 100 pies detrás de su vehículo.
   answer: C
   explanation: 'El manual aconseja para emergencias: "Abra el maletero, levante el
     capó si el clima lo permite y ate un paño blanco a la manija de una puerta o a
-    la antena, donde se vea mejor. Estas son señales de auxilio...".'
+    la antena, donde se vea mejor. Estas son señales de auxilio..."'
 - id: 237
   category: safe_driving_rules
   question: ¿Cuál es el procedimiento adecuado para usar un carril de aceleración
-    para entrar en una autopista?
+    para entrar a una autopista?
   choices:
     A: Detenerse por completo al final del carril y esperar un espacio.
     B: Conducir hasta el final del carril y forzar su entrada al tráfico.
@@ -3034,7 +3042,7 @@ questions:
       buscar un espacio, señalizar e incorporarse.
     D: Mantener una velocidad lenta hasta estar seguro en el carril derecho.
   answer: C
-  explanation: 'El manual establece: "Al acercarse y entrar en el carril de aceleración,
+  explanation: 'El manual establece: "Al acercarse y entrar al carril de aceleración,
     aumente la velocidad para igualar la de los vehículos en los carriles de circulación,
     si es posible. Busque un espacio, active su señal de giro e incorpórese suavemente
     con el resto del tráfico".'
@@ -3044,39 +3052,39 @@ questions:
     donde los giros a la izquierda se realizan DESPUÉS de salir de la autopista?
   choices:
     A: Direccional
-    B: Trébol (Cloverleaf)
-    C: Diamante (Diamond)
-    D: Trompeta (Trumpet)
+    B: Trébol
+    C: Diamante
+    D: Trompeta
   answer: C
-  explanation: 'El manual describe un Intercambio de Diamante como: "Caracterizado
+  explanation: 'El manual describe un intercambio de diamante como: "Caracterizado
     por cuatro rampas, que permiten a los vehículos entrar o salir de la carretera
     principal mientras fluyen con el tráfico. Los giros a la izquierda se realizan
     DESPUÉS de salir de la autopista".'
 - id: 239
   category: safe_driving_rules
-  question: ¿Qué debe hacer si se pasa de la salida prevista en la autopista?
+  question: ¿Qué debe hacer si se pasa de la salida deseada en la autopista?
   choices:
     A: Detenerse y retroceder con cuidado por el acotamiento.
     B: Hacer un giro en U a través de la mediana.
     C: Continuar hasta la siguiente salida y regresar a la que se pasó.
     D: Reducir la velocidad drásticamente y esperar un espacio en el tráfico para
-      dar marcha atrás.
+      retroceder.
   answer: C
   explanation: 'El manual establece explícitamente: "Si se pasa de su salida, no debe
     detenerse, retroceder ni intentar dar la vuelta; continúe hasta la siguiente salida
     y regrese a la que se pasó".'
 - id: 240
   category: vehicle_information
-  question: Según la ley de Alabama, ¿los espejos retrovisores de todos los vehículos
-    deben permitir al conductor ver a qué distancia hacia atrás?
+  question: ¿Según la ley de Alabama, qué distancia hacia atrás deben permitir ver
+    los espejos retrovisores en todos los vehículos?
   choices:
     A: 100 pies
     B: 200 pies
     C: 300 pies
     D: 500 pies
   answer: B
-  explanation: El manual establece que los espejos retrovisores "Para permitir al
-    conductor ver 200 pies hacia atrás son obligatorios en todos los vehículos".
+  explanation: El manual establece que se requieren espejos retrovisores en todos
+    los vehículos "para permitir al conductor ver 200 pies hacia atrás".
 - id: 241
   category: vehicle_information
   question: ¿A qué distancia deben ser visibles los faros delanteros y las luces traseras
@@ -3106,23 +3114,23 @@ questions:
   question: Según las estadísticas del manual, ¿qué causa el 40 por ciento de las
     muertes en un choque?
   choices:
-    A: Golpear el parabrisas, el marco del parabrisas o el panel de instrumentos.
+    A: Impactar contra el parabrisas, el marco del parabrisas o el panel de instrumentos.
     B: Ser expulsado completamente fuera del vehículo.
-    C: El conjunto de la dirección.
+    C: El sistema de dirección.
     D: Segundas colisiones con otros pasajeros.
   answer: A
   explanation: 'El manual establece: "Las estadísticas muestran que en un choque,
-    los conjuntos de dirección causan el 30 por ciento de las lesiones fatales, y
-    otro 40 por ciento de las muertes son causadas por golpear el parabrisas, el marco
-    del parabrisas o el panel de instrumentos".'
+    los sistemas de dirección causan el 30 por ciento de las lesiones fatales, y otro
+    40 por ciento de las muertes son causadas por impactar contra el parabrisas, el
+    marco del parabrisas o el panel de instrumentos".'
 - id: 244
   category: signs_and_signals
   question: ¿Qué tipo de intercambio utiliza conexiones de tipo bucle para eliminar
     los giros a la izquierda y los conflictos de tráfico cruzado en todos los movimientos?
   choices:
-    A: Diamante (Diamond)
-    B: Direccional (Directional)
-    C: Trompeta (Trumpet)
+    A: Diamante
+    B: Direccional
+    C: Trompeta
     D: Trébol (Cloverleaf)
   answer: D
   explanation: 'El manual describe un intercambio de trébol (Cloverleaf) como: "Diseñado
@@ -3143,16 +3151,16 @@ questions:
     de pulgada de profundidad.
 - id: 246
   category: safe_driving_rules
-  question: ¿Los niños menores de qué edad requieren sistemas especiales de retención
-    infantil para protegerlos de lesiones graves o la muerte?
+  question: ¿Los niños menores de qué edad requieren sistemas de retención especiales
+    para niños e infantes para protegerlos de lesiones graves o la muerte?
   choices:
     A: Menores de cuatro años
     B: Menores de cinco años
     C: Menores de seis años
     D: Menores de ocho años
   answer: C
-  explanation: Para los niños menores de seis años, se necesitan sistemas especiales
-    de retención infantil para protegerlos de lesiones graves o la muerte.
+  explanation: Para los niños menores de seis años, se necesitan sistemas de retención
+    especiales para niños e infantes para protegerlos de lesiones graves o la muerte.
 - id: 247
   category: vehicle_information
   question: ¿Cuándo es legal usar la bocina de su vehículo motorizado?
@@ -3163,7 +3171,7 @@ questions:
       segura
     D: Para expresar frustración por el error de otro conductor
   answer: C
-  explanation: Es ilegal usar la bocina de un vehículo motorizado para cualquier propósito
+  explanation: Es ilegal usar la bocina de un vehículo motorizado para cualquier propósito,
     excepto para dar una advertencia cuando sea razonablemente necesario para garantizar
     una operación segura. Nunca use la bocina para anunciar su llegada o llamar a
     sus pasajeros.
@@ -3176,16 +3184,16 @@ questions:
     B: El área dentro del autobús donde ocurren la mayoría de las lesiones
     C: El punto ciego directamente detrás del conductor del autobús
     D: El área alrededor de un autobús escolar detenido donde los niños corren el
-      riesgo de ser atropellados por automovilistas
+      riesgo de ser golpeados por automovilistas
   answer: D
   explanation: El área alrededor del autobús escolar detenido se denomina "ZONA DE
-    MUERTE" (DEATH ZONE). La mayoría de los niños heridos o muertos son atropellados
+    MUERTE" (DEATH ZONE). La mayoría de los niños heridos o muertos son golpeados
     fuera del autobús por automovilistas que no se detienen ante las luces rojas intermitentes
     y las señales de alto extendidas.
 - id: 249
   category: license_system
-  question: Un joven de 15 años con una licencia de aprendizaje válida puede conducir
-    cuando esté acompañado en el asiento delantero por ¿cuál de los siguientes?
+  question: ¿Un joven de 15 años con una licencia de aprendizaje válida puede conducir
+    cuando está acompañado en el asiento delantero por cuál de los siguientes?
   choices:
     A: Cualquier conductor con licencia que tenga al menos 18 años
     B: Un conductor con licencia que tenga al menos 21 años
@@ -3222,7 +3230,7 @@ questions:
     D: 1 a.m. y 5 a.m.
   answer: C
   explanation: El estudiante no puede operar un vehículo entre las 12 de la medianoche
-    y las 6 a.m. a menos que esté acompañado por un padre o tutor legal (o cumpla
+    y las 6 a.m. a menos que esté acompañado por un padre o tutor legal (o que cumpla
     con excepciones específicas).
 - id: 252
   category: license_system
@@ -3231,16 +3239,16 @@ questions:
   choices:
     A: Ir o volver de la casa de un amigo
     B: Ir o volver de un evento patrocinado por la escuela
-    C: Ir a una película nocturna
-    D: Conducir a un gimnasio de 24 horas
+    C: Ir a una película a altas horas de la noche
+    D: Conducir a un gimnasio abierto las 24 horas
   answer: B
   explanation: Las excepciones a la restricción de medianoche a 6 a.m. incluyen ir
-    o volver de un evento patrocinado por la escuela, lugar de trabajo regular, evento
-    religioso o conducir debido a una emergencia médica, de incendio o relacionada
-    con el cumplimiento de la ley.
+    o volver de un evento patrocinado por la escuela, del lugar de trabajo habitual,
+    de un evento religioso o conducir debido a una emergencia médica, de incendio
+    o relacionada con las fuerzas del orden.
 - id: 253
   category: penalties_and_points
-  question: ¿Cuántos puntos se evaluarán en el historial de un conductor adolescente
+  question: ¿Cuántos puntos se evaluarán en el registro de un conductor adolescente
     por violar las restricciones de pasajeros o de toque de queda de la Licencia de
     Conducir Graduada (GDL)?
   choices:
@@ -3256,14 +3264,14 @@ questions:
   question: ¿Cuál es la sanción por violar cualquiera de las restricciones de la Licencia
     de Conducir Graduada (GDL)?
   choices:
-    A: Una multa de $500 e incautación del vehículo
+    A: Una multa de $500 y la inmovilización del vehículo
     B: Revocación inmediata de la licencia por un año
     C: El período restrictivo se extiende por 6 meses o hasta los 18 años
     D: Servicio comunitario obligatorio y un curso de conducción defensiva
   answer: C
   explanation: La violación de cualquiera de las restricciones anteriores resultará
-    en que el período restrictivo se extienda por 6 meses o hasta que el conductor
-    alcance los 18 años de edad.
+    en la extensión del período restrictivo por 6 meses o hasta que el conductor cumpla
+    los 18 años de edad.
 - id: 255
   category: penalties_and_points
   question: 'La licencia de un conductor de 16 años será suspendida automáticamente
@@ -3347,7 +3355,7 @@ questions:
     17 años.
 - id: 261
   category: penalties_and_points
-  question: Si un conductor de 16 años es condenado por conducción temeraria, ¿por
+  question: ¿Si un conductor de 16 años es condenado por conducción temeraria, por
     cuánto tiempo se suspenderá automáticamente su licencia?
   choices:
     A: 30 días o hasta los 18 años, lo que ocurra primero
@@ -3362,13 +3370,13 @@ questions:
   category: license_system
   question: ¿Qué significan las siglas GDL en el manual del conductor de Alabama?
   choices:
-    A: General Driving License (Licencia de Conducir General)
-    B: Graduated Drivers License (Licencia de Conducir Graduada)
-    C: Guided Driver Learning (Aprendizaje de Conducción Guiado)
-    D: Guaranteed Driving Limits (Límites de Conducción Garantizados)
+    A: Licencia de Conducir General
+    B: Licencia de Conducir Graduada (GDL)
+    C: Aprendizaje de Conducción Guiado
+    D: Límites de Conducción Garantizados
   answer: B
-  explanation: El manual se refiere explícitamente a GDL como la "Graduated Drivers
-    License" (Licencia de Conducir Graduada).
+  explanation: El manual se refiere explícitamente a GDL como la "Licencia de Conducir
+    Graduada" (Graduated Drivers License).
 - id: 263
   category: driver_responsibility
   question: ¿Cuántos días tienen los titulares de una licencia de conducir de Alabama
@@ -3386,16 +3394,16 @@ questions:
   question: ¿Con cuánta antelación se debe solicitar una cita para la licencia de
     conducir?
   choices:
-    A: 24 horas antes de la fecha preferida para el examen
-    B: 48 horas antes de la fecha preferida para el examen
-    C: 72 horas antes de la fecha preferida para el examen
-    D: Una semana antes de la fecha preferida para el examen
+    A: 24 horas antes de la fecha preferida del examen
+    B: 48 horas antes de la fecha preferida del examen
+    C: 72 horas antes de la fecha preferida del examen
+    D: Una semana antes de la fecha preferida del examen
   answer: B
   explanation: El manual establece que todas las solicitudes de citas para la licencia
-    de conducir deben realizarse 48 horas antes de la fecha preferida para el examen.
+    de conducir deben realizarse 48 horas antes de la fecha preferida del examen.
 - id: 265
   category: license_system
-  question: ¿Qué agencia opera las oficinas de exámenes de licencias de conducir en
+  question: ¿Qué agencia opera las oficinas de examen de licencias de conducir en
     Alabama?
   choices:
     A: Departamento de Transporte
@@ -3403,8 +3411,8 @@ questions:
     C: Agencia de Aplicación de la Ley de Alabama (ALEA)
     D: Oficina de Seguridad en las Carreteras
   answer: C
-  explanation: Las oficinas de exámenes de licencias de conducir son operadas por
-    la Agencia de Aplicación de la Ley de Alabama (ALEA).
+  explanation: Las oficinas de examen de licencias de conducir son operadas por la
+    Agencia de Aplicación de la Ley de Alabama (ALEA).
 - id: 266
   category: license_system
   question: ¿Cuál de los siguientes servicios se puede completar en línea en el sitio
@@ -3420,7 +3428,7 @@ questions:
 - id: 267
   category: penalties_and_points
   question: ¿Cuál de las siguientes infracciones provocará una suspensión automática
-    de la licencia de 60 días para un conductor de 17 años?
+    de la licencia por 60 días para un conductor de 17 años?
   choices:
     A: Una infracción de estacionamiento
     B: Conducir por el lado equivocado de la carretera
@@ -3432,11 +3440,11 @@ questions:
     de un conductor de 15, 16 o 17 años por 60 días.
 - id: 268
   category: driver_testing
-  question: Además de la programación en línea, ¿de qué otra manera se pueden solicitar
+  question: ¿Además de la programación en línea, ¿de qué otra manera se pueden solicitar
     citas para la licencia de conducir?
   choices:
     A: Por teléfono durante el horario comercial habitual
-    B: Enviando una carta por correo al gobernador
+    B: Enviando una carta al gobernador
     C: Enviando una solicitud por fax a la estación de policía local
     D: Enviando un correo electrónico al Departamento de Transporte
   answer: A
@@ -3444,8 +3452,8 @@ questions:
     durante el horario comercial habitual.
 - id: 269
   category: license_system
-  question: ¿Dónde puede encontrar los formularios de cambio de dirección para su
-    licencia de conducir de Alabama?
+  question: ¿Dónde puede encontrar formularios de cambio de dirección para su licencia
+    de conducir de Alabama?
   choices:
     A: Solo en la oficina de correos
     B: En el sitio web de ALEA en www.alea.gov/driver license/change of address
@@ -3463,7 +3471,7 @@ questions:
     B: Se revoca permanentemente
     C: Se suspende automáticamente por 60 días o hasta los 18 años, lo que ocurra
       primero
-    D: Se le requiere tomar un curso de conducción defensiva sin suspensión
+    D: Se les requiere tomar un curso de conducción defensiva sin suspensión
   answer: C
   explanation: Para los conductores de 15, 16 y 17 años, intentar eludir a un oficial
     de la ley resulta en una suspensión automática de la licencia por 60 días o hasta
@@ -3498,10 +3506,10 @@ questions:
   question: ¿A qué edades de conductores se aplica la regla de suspensión automática
     de 60 días por infracciones de tráfico específicas?
   choices:
-    A: Conductores de 14, 15 y 16 años
-    B: Conductores de 15, 16 y 17 años
-    C: Conductores de 16, 17 y 18 años
-    D: Conductores de 18, 19 y 20 años
+    A: Jóvenes de 14, 15 y 16 años
+    B: Jóvenes de 15, 16 y 17 años
+    C: Jóvenes de 16, 17 y 18 años
+    D: Jóvenes de 18, 19 y 20 años
   answer: B
   explanation: El manual aborda específicamente esta regla bajo el encabezado "¡¡ATENCIÓN
     CONDUCTORES DE 15, 16 Y 17 AÑOS!!".
@@ -3522,12 +3530,12 @@ questions:
   category: signs_and_signals
   question: ¿Qué significa esta señal?
   choices:
-    A: Reducir la velocidad y avanzar con precaución
-    B: Detenerse por completo
-    C: Ceder el paso al tráfico que se aproxima
-    D: Detenerse solo si hay otros vehículos presentes
+    A: Reduzca la velocidad y proceda con precaución
+    B: Deténgase por completo
+    C: Ceda el paso al tráfico que viene en sentido contrario
+    D: Deténgase solo si hay otros vehículos presentes
   answer: B
-  explanation: Una señal de PARE (STOP) octagonal roja significa que debe detenerse
+  explanation: Una señal de PARE (STOP) roja y octagonal significa que debe detenerse
     por completo en la línea de parada, el paso de peatones o antes de entrar en la
     intersección. Verifique el tráfico y los peatones antes de continuar.
   id: 275
@@ -3540,24 +3548,10 @@ questions:
     C: Reducir la velocidad y ceder el derecho de paso al tráfico y a los peatones
     D: Continuar sin detenerse
   answer: C
-  explanation: Una señal triangular roja y blanca de CEDA EL PASO (YIELD) significa
+  explanation: Una señal de CEDA EL PASO (YIELD) triangular roja y blanca significa
     que debe reducir la velocidad y ceder el derecho de paso al tráfico y a los peatones.
     Debe detenerse si es necesario para permitir que otros pasen de manera segura.
   id: 276
-- image: do_not_enter.png
-  category: signs_and_signals
-  question: ¿Qué significa esta señal?
-  choices:
-    A: Carretera cerrada más adelante
-    B: No se permite estacionar
-    C: No entrar en esta calzada
-    D: Callejón sin salida más adelante
-  answer: C
-  explanation: Una señal roja y blanca de NO ENTRAR (DO NOT ENTER) significa que no
-    debe entrar en la carretera o rampa donde está colocada esta señal. Generalmente
-    se ve en las rampas de salida de las autopistas o en calles de un solo sentido
-    donde entrar lo pondría en el camino del tráfico que viene en sentido contrario.
-  id: 277
 - image: wrong_way.png
   category: signs_and_signals
   question: Si ve esta señal, ¿qué debe hacer?
@@ -3567,24 +3561,24 @@ questions:
     C: Detenerse y retroceder o dar la vuelta; va en sentido contrario
     D: Aumentar la velocidad para salir del área rápidamente
   answer: C
-  explanation: Una señal roja y blanca de SENTIDO CONTRARIO (WRONG WAY) significa
-    que está viajando contra el tráfico en una carretera de un solo sentido o en una
+  explanation: Una señal de SENTIDO CONTRARIO (WRONG WAY) roja y blanca significa
+    que está viajando en contra del tráfico en una calle de un solo sentido o en una
     rampa de autopista. Deténgase inmediatamente y dé la vuelta o retroceda de manera
     segura.
-  id: 278
+  id: 277
 - image: one_way_left.png
   category: signs_and_signals
   question: ¿Qué indica esta señal?
   choices:
-    A: Giro a la izquierda solamente
+    A: Solo giro a la izquierda
     B: 'El tráfico fluye en una sola dirección: hacia la izquierda'
-    C: Mantenerse a la izquierda de la mediana
+    C: Manténgase a la izquierda de la mediana
     D: Salida de la autopista a la izquierda
   answer: B
   explanation: 'Una señal de UNA VÍA (ONE WAY) en blanco y negro con una flecha indica
     que el tráfico en esta calle se mueve en una sola dirección: la dirección que
     señala la flecha.'
-  id: 279
+  id: 278
 - image: no_u_turn.png
   category: signs_and_signals
   question: ¿Qué prohíbe esta señal?
@@ -3592,63 +3586,36 @@ questions:
     A: Giros a la derecha
     B: Giros a la izquierda
     C: Giros en U
-    D: Rebasar a otros vehículos
+    D: Adelantar a otros vehículos
   answer: C
   explanation: Una señal reglamentaria blanca con una flecha de giro en U tachada
     significa que los giros en U están prohibidos en este lugar.
-  id: 280
+  id: 279
 - image: no_left_turn.png
   category: signs_and_signals
-  question: ¿Qué acción prohíbe esta señal?
+  question: ¿Qué acción está prohibida por esta señal?
   choices:
     A: Girar a la derecha
     B: Girar a la izquierda
-    C: Dar una vuelta en U
+    C: Hacer un giro en U
     D: Seguir recto
   answer: B
   explanation: Una señal reglamentaria blanca que muestra una flecha de giro a la
-    izquierda tachada significa que no se permiten los giros a la izquierda en esta
-    intersección.
-  id: 281
-- image: no_right_turn.png
-  category: signs_and_signals
-  question: ¿Qué significa esta señal?
-  choices:
-    A: No se permite dar la vuelta en U
-    B: No se permite girar a la izquierda
-    C: No se permite girar a la derecha
-    D: No se permite rebasar
-  answer: C
-  explanation: Una señal reglamentaria blanca que muestra una flecha de giro a la
-    derecha tachada significa que los giros a la derecha están prohibidos en este
-    lugar.
-  id: 282
-- image: no_passing.png
-  category: signs_and_signals
-  question: ¿Qué indica esta señal?
-  choices:
-    A: El camino se estrecha más adelante
-    B: No rebase a otros vehículos en esta zona
-    C: Tráfico en ambos sentidos más adelante
-    D: Manténgase a la derecha
-  answer: B
-  explanation: Una señal en forma de banderín en blanco y negro de ZONA DE NO REBASAR
-    (NO PASSING ZONE) significa que no se le permite rebasar a otros vehículos en
-    esta área. Marca el inicio de una zona de no rebasar.
-  id: 283
+    izquierda tachada significa que no se permiten giros a la izquierda en esta intersección.
+  id: 280
 - image: keep_right.png
   category: signs_and_signals
-  question: ¿Qué instruye esta señal a los conductores?
+  question: ¿Qué indica esta señal que deben hacer los conductores?
   choices:
-    A: Incorpórese a la derecha
-    B: Giro a la derecha solamente
-    C: Manténgase a la derecha de un divisor u obstrucción
+    A: Incorporarse a la derecha
+    B: Girar a la derecha solamente
+    C: Mantenerse a la derecha de un divisor u obstrucción
     D: El carril derecho termina más adelante
   answer: C
-  explanation: Una señal reglamentaria blanca de MANTÉNGASE A LA DERECHA (KEEP RIGHT)
-    con una flecha significa que debe mantenerse en el lado derecho de una isla de
-    tráfico, mediana u obstrucción.
-  id: 284
+  explanation: Una señal reglamentaria blanca de "MANTÉNGASE A LA DERECHA" (KEEP RIGHT)
+    con una flecha significa que debe mantenerse al lado derecho de una isla de tráfico,
+    mediana u obstrucción.
+  id: 281
 - image: speed_limit_25.png
   category: signs_and_signals
   question: ¿Qué tipo de señal es esta, según su forma y color?
@@ -3659,9 +3626,9 @@ questions:
     D: Una señal de construcción
   answer: C
   explanation: Las señales rectangulares blancas con letras negras son señales reglamentarias.
-    Las señales de límite de velocidad le indican la velocidad máxima legal para el
-    área bajo condiciones ideales.
-  id: 285
+    Las señales de límite de velocidad indican la velocidad máxima legal para el área
+    en condiciones ideales.
+  id: 282
 - image: deer_crossing.png
   category: signs_and_signals
   question: ¿De qué le advierte esta señal amarilla en forma de diamante?
@@ -3669,25 +3636,12 @@ questions:
     A: Un zoológico o parque de animales más adelante
     B: Los ciervos cruzan la carretera con frecuencia en esta zona
     C: Zona de caza más adelante
-    D: Un refugio de vida silvestre cerca
+    D: Un refugio de vida silvestre cercano
   answer: B
   explanation: Una señal amarilla en forma de diamante con la silueta de un ciervo
-    advierte que los ciervos cruzan la carretera con frecuencia en esta zona. Reduzca
+    advierte que estos animales cruzan la carretera con frecuencia en esta zona. Reduzca
     la velocidad y esté atento a los animales, especialmente al amanecer y al atardecer.
-  id: 286
-- image: pedestrian_crossing.png
-  category: signs_and_signals
-  question: ¿De qué le advierte esta señal?
-  choices:
-    A: Zona escolar más adelante
-    B: Cruce de peatones más adelante
-    C: Sendero de caminata cerca
-    D: Parada de autobús más adelante
-  answer: B
-  explanation: Una señal amarilla en forma de diamante con una figura de peatón advierte
-    de un cruce de peatones más adelante. Esté preparado para detenerse ante los peatones
-    que cruzan la calle.
-  id: 287
+  id: 283
 - image: school_zone.png
   category: signs_and_signals
   question: ¿Qué indica la forma de esta señal?
@@ -3697,23 +3651,10 @@ questions:
     C: Una zona escolar o cruce escolar
     D: Una zona de hospital
   answer: C
-  explanation: Una señal en forma de pentágono (5 lados) de color amarillo-verde fluorescente
+  explanation: Una señal en forma de pentágono (5 lados) de color verde-amarillo fluorescente
     indica una zona escolar o un cruce escolar. Reduzca la velocidad y esté atento
     a los niños.
-  id: 288
-- image: railroad_crossing.png
-  category: signs_and_signals
-  question: ¿De qué le advierte esta señal circular amarilla?
-  choices:
-    A: Una rotonda más adelante
-    B: Una zona de hospital
-    C: Un cruce de ferrocarril más adelante
-    D: Una zona de no rebasar
-  answer: C
-  explanation: Una señal circular amarilla con una X negra y dos letras R es la señal
-    de advertencia anticipada de un cruce de ferrocarril más adelante. Reduzca la
-    velocidad, mire y escuche si vienen trenes.
-  id: 289
+  id: 284
 - image: railroad_crossbuck.png
   category: signs_and_signals
   question: ¿Dónde vería normalmente esta señal?
@@ -3723,33 +3664,192 @@ questions:
     C: En la entrada de un hospital
     D: En un puente peatonal
   answer: B
-  explanation: La señal blanca en forma de X de cruce de ferrocarril (crossbuck) se
-    coloca en los cruces de ferrocarril. Significa que debe ceder el paso a los trenes.
-    Si se acerca un tren, debe detenerse.
-  id: 290
-- image: curve_right.png
-  category: signs_and_signals
-  question: ¿Qué indica esta señal amarilla en forma de diamante?
-  choices:
-    A: La carretera termina más adelante
-    B: Giro a la derecha obligatorio
-    C: Una curva a la derecha más adelante
-    D: Desvío más adelante
-  answer: C
-  explanation: Una señal amarilla en forma de diamante con una flecha curva advierte
-    sobre una curva en el camino más adelante. Reduzca la velocidad antes de entrar
-    en la curva.
-  id: 291
+  explanation: La señal blanca en forma de X (cruz de San Andrés) se coloca en los
+    cruces de ferrocarril. Significa que debe ceder el paso a los trenes. Si se aproxima
+    un tren, debe detenerse.
+  id: 285
 - image: sharp_turn_right.png
   category: signs_and_signals
   question: ¿En qué se diferencia esta señal de una señal de curva?
   choices:
     A: Indica un giro menos pronunciado
-    B: Advierte de un giro cerrado que requiere una mayor reducción de velocidad
-    C: Significa que solo se puede girar a la derecha
+    B: Advierte de un giro brusco que requiere una mayor reducción de velocidad
+    C: Significa girar a la derecha solamente
     D: Solo se utiliza en autopistas
   answer: B
-  explanation: Una señal de giro cerrado (con una flecha más angulada) indica un giro
-    más pronunciado que una señal de curva. Debe reducir su velocidad de manera más
-    significativa antes de este giro.
+  explanation: Una señal de giro brusco (con una flecha más angulada) indica un giro
+    más cerrado que una señal de curva. Debe reducir su velocidad de manera más significativa
+    antes de este giro.
+  id: 286
+- image: reverse_curve.png
+  category: signs_and_signals
+  question: ¿Sobre qué condición de la carretera advierte esta señal?
+  choices:
+    A: Una carretera sinuosa
+    B: Una sola curva más adelante
+    C: Una serie de dos curvas en direcciones opuestas
+    D: Una rotonda más adelante
+  answer: C
+  explanation: Una señal de curva inversa advierte de dos curvas en direcciones opuestas
+    más adelante. Reduzca la velocidad y prepárese para que la carretera gire primero
+    en un sentido y luego en el otro.
+  id: 287
+- image: winding_road.png
+  category: signs_and_signals
+  question: ¿Qué le advierte esta señal que debe esperar?
+  choices:
+    A: Una sola curva cerrada
+    B: Una superficie de carretera resbaladiza
+    C: Una serie de curvas o giros más adelante
+    D: Una colina más adelante
+  answer: C
+  explanation: Una señal de carretera sinuosa advierte de una serie de curvas o giros
+    más adelante. Reduzca su velocidad y esté alerta a los cambios en las condiciones
+    de la carretera.
+  id: 288
+- image: merge.png
+  category: signs_and_signals
+  question: ¿Para qué le indica esta señal que debe prepararse?
+  choices:
+    A: El fin de un carril
+    B: Tráfico que se incorpora desde otra carretera
+    C: El comienzo de una autopista dividida
+    D: Una carretera que se estrecha a un solo carril
+  answer: B
+  explanation: Una señal amarilla en forma de diamante de incorporación (merge) advierte
+    que el tráfico de otra carretera se incorporará a su carril. Esté preparado para
+    ajustar su velocidad y posición.
+  id: 289
+- image: divided_highway.png
+  category: signs_and_signals
+  question: ¿Qué indica esta señal que hay más adelante?
+  choices:
+    A: La carretera termina
+    B: Tráfico en ambos sentidos
+    C: Comienza una autopista dividida
+    D: Salida de la autopista
+  answer: C
+  explanation: Esta señal advierte que la carretera más adelante se convierte en una
+    autopista dividida con una mediana o barrera que separa el tráfico opuesto. Manténgase
+    a la derecha.
+  id: 290
+- image: stop_ahead.png
+  category: signs_and_signals
+  question: ¿Qué le indica esta señal que debe esperar más adelante?
+  choices:
+    A: Una señal de ceda el paso
+    B: Un semáforo
+    C: Una señal de alto (STOP) donde debe detenerse
+    D: Un reductor de velocidad (speed bump)
+  answer: C
+  explanation: Esta señal advierte que hay una señal de alto más adelante. Comience
+    a reducir la velocidad y prepárese para detenerse por completo en la señal de
+    alto.
+  id: 291
+- image: handicap_parking.png
+  category: signs_and_signals
+  question: ¿Quién tiene permitido estacionarse en un espacio marcado con esta señal?
+  choices:
+    A: Cualquier persona por menos de 15 minutos
+    B: Solo personas de la tercera edad
+    C: Solo vehículos que exhiban un cartel o placa de discapacidad vigente
+    D: Cualquier conductor con un pasajero que tenga una discapacidad
+  answer: C
+  explanation: Una señal azul con el símbolo de la silla de ruedas marca el estacionamiento
+    reservado para personas con discapacidades. Solo los vehículos que exhiban un
+    cartel o placa de matrícula de estacionamiento para personas con discapacidad
+    vigente pueden estacionarse en estos espacios. Las infracciones conllevan multas
+    elevadas.
   id: 292
+- category: penalties_and_points
+  question: ¿Cuántos puntos se asignan por no obedecer los marcadores de zona de construcción
+    o mantenimiento en Alabama?
+  choices:
+    A: 2 puntos
+    B: 3 puntos
+    C: 4 puntos
+    D: 5 puntos
+  answer: B
+  explanation: El Sistema de Puntos de Alabama asigna 3 puntos por no obedecer los
+    marcadores de zona de construcción o mantenimiento. (Cap. 2, tabla del Sistema
+    de Puntos de Alabama)
+  id: 293
+- category: penalties_and_points
+  question: ¿Cuántos puntos asigna el Sistema de Puntos de Alabama por no ceder el
+    paso?
+  choices:
+    A: 2 puntos
+    B: 3 puntos
+    C: 4 puntos
+    D: 5 puntos
+  answer: D
+  explanation: No ceder el paso resulta en la asignación de 5 puntos contra su historial
+    de manejo bajo el Sistema de Puntos de Alabama. (Cap. 2, tabla del Sistema de
+    Puntos de Alabama)
+  id: 294
+- category: penalties_and_points
+  question: Al recibir la notificación de que su licencia de conducir de Alabama será
+    suspendida bajo el sistema de puntos, ¿qué puede solicitar?
+  choices:
+    A: Un juicio por jurado en un tribunal de circuito
+    B: Una audiencia administrativa o previa a la suspensión en el condado de su residencia
+    C: Una exención de la oficina del Gobernador
+    D: Una extensión automática de 90 días
+  answer: B
+  explanation: Al recibir la notificación de la suspensión de su licencia de conducir,
+    el conductor puede solicitar una audiencia administrativa o previa a la suspensión
+    en el condado de su residencia ante un agente de la Agencia de Aplicación de la
+    Ley de Alabama (ALEA). (Cap. 2)
+  id: 295
+- category: penalties_and_points
+  question: ¿Cuántos puntos se asignan por la operación inadecuada de una motocicleta
+    en Alabama?
+  choices:
+    A: 2 puntos
+    B: 3 puntos
+    C: 5 puntos
+    D: 6 puntos
+  answer: A
+  explanation: La operación inadecuada de una motocicleta resulta en 2 puntos bajo
+    el Sistema de Puntos de Alabama. (Cap. 2, tabla del Sistema de Puntos de Alabama)
+  id: 296
+- category: penalties_and_points
+  question: ¿Cuántos puntos asigna el Sistema de Puntos de Alabama por beber alcohol
+    mientras se opera un vehículo?
+  choices:
+    A: 2 puntos
+    B: 3 puntos
+    C: 5 puntos
+    D: 6 puntos
+  answer: A
+  explanation: Beber alcohol mientras se opera un vehículo es una infracción de 2
+    puntos bajo el Sistema de Puntos de Alabama. Esto es distinto de un DUI (conducir
+    bajo la influencia), que implica un mayor nivel de deterioro y la revocación obligatoria.
+    (Cap. 2, tabla del Sistema de Puntos de Alabama)
+  id: 297
+- category: penalties_and_points
+  question: ¿Cuántos puntos se asignan por conducir en el lado equivocado de la carretera
+    o por rebasar ilegalmente en Alabama?
+  choices:
+    A: 2 puntos
+    B: 3 puntos
+    C: 4 puntos
+    D: 5 puntos
+  answer: C
+  explanation: Conducir en el lado equivocado de la carretera o rebasar ilegalmente
+    es una infracción de 4 puntos bajo el Sistema de Puntos de Alabama. (Cap. 2, tabla
+    del Sistema de Puntos de Alabama)
+  id: 298
+- category: penalties_and_points
+  question: ¿Cuántos puntos se agregan a su historial de manejo de Alabama por seguir
+    a otro vehículo demasiado cerca?
+  choices:
+    A: 2 puntos
+    B: 3 puntos
+    C: 4 puntos
+    D: 5 puntos
+  answer: B
+  explanation: Seguir a otro vehículo demasiado cerca resulta en la asignación de
+    3 puntos bajo el Sistema de Puntos de Alabama. (Cap. 2, tabla del Sistema de Puntos
+    de Alabama)
+  id: 299

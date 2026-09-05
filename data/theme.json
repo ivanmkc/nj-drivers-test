@@ -1,0 +1,15 @@
+{
+  "_comment": "Canonical cross-platform design tokens. Source of truth for the 10 semantic color roles shared by all four surfaces (iOS Asset Catalog colorsets, android theme/Theme.kt, web/static/index.html CSS vars, frontend/src/index.css CSS vars). tools/test_theme_alignment.py fails CI if any platform drifts from these values. Surface colors (background/card/border/text) are platform-idiomatic and intentionally not enforced here — iOS uses system adaptive colors. Light green is #15803D (not #16A34A) for WCAG AA on white; dark onPrimary is #111827 because white on the dark-mode blue #5B8DEF fails AA.",
+  "tokens": {
+    "blue": { "light": "#1A56DB", "dark": "#5B8DEF" },
+    "blueLight": { "light": "#E8F0FE", "dark": "#1E293B" },
+    "green": { "light": "#15803D", "dark": "#4ADE80" },
+    "greenLight": { "light": "#DCFCE7", "dark": "#14332A" },
+    "red": { "light": "#DC2626", "dark": "#FCA5A5" },
+    "redLight": { "light": "#FEE2E2", "dark": "#3B1515" },
+    "orange": { "light": "#EA580C", "dark": "#FB923C" },
+    "gray": { "light": "#6B7280", "dark": "#9CA3AF" },
+    "grayLight": { "light": "#F3F4F6", "dark": "#1F2937" },
+    "onPrimary": { "light": "#FFFFFF", "dark": "#111827" }
+  }
+}

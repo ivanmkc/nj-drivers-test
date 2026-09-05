@@ -12,7 +12,20 @@ enum AppScreen {
 
 // MARK: - API Response Models
 
-struct StateInfo: Codable, Identifiable {
+struct StateVerification {
+    let verifiedAt: String?
+    let overall: String?
+    let manualUrl: String?
+    let edition: String?
+    let manualPages: Int?
+    let precisionAvgFidelity: Double?
+    let precisionGrade: String?
+    let questionsJudged: Int?
+    let recallCoveragePct: Double?
+    let translations: [String: String]?
+}
+
+struct StateInfo: Identifiable {
     let code: String
     let name: String
     let agency: String
@@ -21,19 +34,15 @@ struct StateInfo: Codable, Identifiable {
     let languages: [String]
     let totalQuestions: Int
     let hasQuestions: Bool
+    let source: String?
+    let categories: [String: Int]?
+    let verification: StateVerification?
+    let officialTestLanguages: [String]?
 
     var id: String { code }
 
     var passCount: Int {
         Int(ceil(Double(testQuestionCount) * Double(passingScorePct) / 100.0))
-    }
-
-    enum CodingKeys: String, CodingKey {
-        case code, name, agency, languages
-        case passingScorePct = "passing_score_pct"
-        case testQuestionCount = "test_question_count"
-        case totalQuestions = "total_questions"
-        case hasQuestions = "has_questions"
     }
 }
 

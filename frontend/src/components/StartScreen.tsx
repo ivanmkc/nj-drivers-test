@@ -1,10 +1,54 @@
 import { useState, useEffect, useMemo } from 'react';
 import type { StateSummary, QuizMode } from '../types';
-import { t } from '../i18n';
+import { t, getLangName, categoryName } from '../i18n';
 import { useStore } from '../hooks/useStore';
 import { calcPassStreak, calcAverageScore } from '../utils';
 import { QUESTION_COUNT_OPTIONS, DEFAULT_QUESTION_COUNT } from '../constants';
 import LangBar from './LangBar';
+
+function formatDate(iso: string): string {
+  try {
+    return new Date(iso).toLocaleDateString(undefined, {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    });
+  } catch {
+    return iso.split('T')[0];
+  }
+}
+
+function formatOfficialLangs(langs: string[]): string {
+  const filtered = langs.filter((l) => l.toLowerCase() !== 'many');
+  const hasMany = langs.some((l) => l.toLowerCase() === 'many');
+  if (filtered.length === 0 && hasMany) return 'Many languages';
+  const list = filtered.join(', ');
+  return hasMany ? `${list}, and others` : list;
+}
+
+function OfficialTestLanguagesRow({ state }: { state: StateSummary }) {
+  const practiceLangs = state.languages.map((l) => getLangName(l)).join(', ');
+
+  return (
+    <div className="mt-3 pt-3 border-t border-border">
+      <p className="text-xs text-muted font-semibold uppercase tracking-wider mb-2">
+        {t('officialTestLanguagesLabel')}
+      </p>
+      {state.official_test_languages != null ? (
+        <p className="text-xs text-foreground mb-1.5">
+          {formatOfficialLangs(state.official_test_languages)}
+        </p>
+      ) : (
+        <p className="text-xs text-muted mb-1.5">
+          {t('officialTestLangsUnknown', { agency: state.agency })}
+        </p>
+      )}
+      <p className="text-sm text-muted leading-snug">
+        {t('appPracticeLangs', { langs: practiceLangs })}
+      </p>
+    </div>
+  );
+}
 
 interface StartScreenProps {
   state: StateSummary;
@@ -33,7 +77,10 @@ export default function StartScreen({
   onShowStats,
   onSwitchLang,
 }: StartScreenProps) {
-  const [storeData] = useState(() => store.load());
+  const [storeData, setStoreData] = useState(() => store.load());
+  useEffect(() => {
+    setStoreData(store.load());
+  }, [store]);
   const history = storeData.history;
 
   const weakCount = useMemo(() => {
@@ -56,11 +103,36 @@ export default function StartScreen({
 
   const startDisabled = quizMode === 'weak' && weakCount === 0;
 
+  const [aboutOpen, setAboutOpen] = useState(false);
+
+  const verification = state.verification;
+  const categories = state.categories;
+
+  const sortedCategories = useMemo(() => {
+    if (!categories) return [];
+    return Object.entries(categories).sort((a, b) => b[1] - a[1]);
+  }, [categories]);
+
+  const maxCategoryCount = useMemo(
+    () => (sortedCategories.length > 0 ? sortedCategories[0][1] : 1),
+    [sortedCategories],
+  );
+
   return (
     <>
-      <LangBar currentLang={lang} availableLangs={state.languages} onSwitch={onSwitchLang} />
+      <LangBar
+        currentLang={lang}
+        availableLangs={state.languages}
+        officialTestLanguages={state.official_test_languages}
+        onSwitch={onSwitchLang}
+      />
+      {state.official_test_languages != null && (
+        <p className="text-muted text-sm text-right mb-1 leading-snug">
+          {t('officialLangCaption', { agency: state.agency })}
+        </p>
+      )}
       <div className="text-center pt-[4vh]">
-        <h1 className="text-2xl font-bold text-blue-600 mb-2">
+        <h1 className="text-2xl font-bold text-primary mb-2">
           {t('title', {
             state: state.code.toUpperCase(),
             state_name: state.name,
@@ -68,14 +140,32 @@ export default function StartScreen({
             pass_pct: state.passing_score_pct,
           })}
         </h1>
-        <p className="text-gray-500 text-sm mb-1 leading-relaxed">
+        <button
+          onClick={onChangeState}
+          aria-label="Change state"
+          className="inline-flex items-center gap-1 text-primary text-sm font-semibold cursor-pointer bg-transparent border-none mb-1"
+        >
+          <span>{state.name}</span>
+          <svg
+            className="w-4 h-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </button>
+        <p className="text-muted text-base mb-1 leading-relaxed">
           {t('subtitle', {
             state: state.code.toUpperCase(),
             state_name: state.name,
             agency: state.agency,
           })}
         </p>
-        <p className="text-gray-400 text-xs mb-5">
+        <p className="text-subtle text-xs mb-5">
           {t('passingScore', {
             pass_pct: state.passing_score_pct,
             pass_count: Math.ceil((state.test_question_count * state.passing_score_pct) / 100),
@@ -84,32 +174,154 @@ export default function StartScreen({
         </p>
       </div>
 
+      {(state.source || verification) && (
+        <div className="bg-surface rounded-xl border border-border mb-5 overflow-hidden">
+          <button
+            onClick={() => setAboutOpen((prev) => !prev)}
+            aria-expanded={aboutOpen}
+            className="w-full flex items-center justify-between px-4 py-3 text-sm font-semibold text-foreground bg-transparent border-none cursor-pointer"
+          >
+            <span>{t('aboutThisTest')}</span>
+            <svg
+              className={`w-4 h-4 text-muted transition-transform ${aboutOpen ? 'rotate-180' : ''}`}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2.5}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </button>
+
+          {aboutOpen && (
+            <div className="px-4 pb-4 text-sm leading-relaxed">
+              {state.source && (
+                <p className="mb-2">
+                  <span className="text-muted">{t('sourceLabel')} </span>
+                  {verification?.manual_url ? (
+                    <a
+                      href={verification.manual_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary font-medium underline"
+                    >
+                      {state.source}
+                    </a>
+                  ) : (
+                    <span className="font-medium">{state.source}</span>
+                  )}
+                  {verification?.edition && (
+                    <span className="inline-block bg-primary-surface text-primary text-[11px] font-semibold px-2 py-0.5 rounded-full ml-1.5">
+                      {verification.edition}
+                    </span>
+                  )}
+                  <span className="text-muted"> ({state.agency})</span>
+                </p>
+              )}
+
+              {verification && verification.questions_judged != null && (
+                <div className="mb-3">
+                  <p className="flex items-start gap-1.5 mb-1.5">
+                    <span className="text-success shrink-0">&#10003;</span>
+                    <span>{t('verifiedBadge', { count: verification.questions_judged ?? 0 })}</span>
+                  </p>
+                  <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-muted">
+                    {verification.precision_grade && (
+                      <span>
+                        {t('gradeLabel')}{' '}
+                        <span className="font-semibold text-foreground">
+                          {verification.precision_grade}
+                        </span>
+                      </span>
+                    )}
+                    {verification.precision_avg_fidelity != null && (
+                      <span>
+                        {t('fidelityLabel')}{' '}
+                        <span className="font-semibold text-foreground tabular-nums">
+                          {verification.precision_avg_fidelity}/10
+                        </span>
+                      </span>
+                    )}
+                    {verification.recall_coverage_pct != null && (
+                      <span>
+                        {t('topicCoverageLabel')}{' '}
+                        <span className="font-semibold text-foreground tabular-nums">
+                          {verification.recall_coverage_pct}%
+                        </span>
+                      </span>
+                    )}
+                    {verification.translations &&
+                      Object.entries(verification.translations).map(([langCode, verdict]) => (
+                        <span key={langCode}>
+                          {langCode.toUpperCase()}{' '}
+                          <span className={verdict === 'PASS' ? 'text-success' : 'text-error'}>
+                            {verdict === 'PASS' ? '✓' : '✗'}
+                          </span>
+                        </span>
+                      ))}
+                    {verification.verified_at && (
+                      <span>
+                        {t('verifiedLabel')} {formatDate(verification.verified_at)}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {sortedCategories.length > 0 && (
+                <div>
+                  <p className="text-xs text-muted font-semibold uppercase tracking-wider mb-2">
+                    {t('categoriesLabel')}
+                  </p>
+                  {sortedCategories.map(([cat, count]) => (
+                    <div key={cat} className="flex items-center gap-2 mb-1.5 text-xs">
+                      <span className="w-32 shrink-0 truncate">{categoryName(cat)}</span>
+                      <div className="flex-1 h-2 bg-border rounded-full overflow-hidden">
+                        <div
+                          className="h-full bg-primary rounded-full"
+                          style={{ width: `${(count / maxCategoryCount) * 100}%` }}
+                        />
+                      </div>
+                      <span className="w-7 text-right font-semibold tabular-nums text-muted">
+                        {count}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              <OfficialTestLanguagesRow state={state} />
+            </div>
+          )}
+        </div>
+      )}
+
       {history.length > 0 && (
-        <div className="bg-white rounded-xl p-4 mb-5 border border-gray-200">
+        <div className="bg-surface rounded-xl p-4 mb-5 border border-border">
           <div className="flex justify-between items-center">
             <div className="flex gap-4">
               <div className="text-center">
-                <div className="text-xl font-bold">{history.length}</div>
-                <div className="text-[11px] text-gray-500 uppercase tracking-wide">
-                  {t('quizzes')}
-                </div>
+                <div className="text-xl font-bold tabular-nums">{history.length}</div>
+                <div className="text-[11px] text-muted uppercase tracking-wide">{t('quizzes')}</div>
               </div>
               <div className="text-center">
-                <div className="text-xl font-bold">{avg}%</div>
-                <div className="text-[11px] text-gray-500 uppercase tracking-wide">
+                <div className="text-xl font-bold tabular-nums">{avg}%</div>
+                <div className="text-[11px] text-muted uppercase tracking-wide">
                   {t('avgScore')}
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-xl font-bold">{streak}</div>
-                <div className="text-[11px] text-gray-500 uppercase tracking-wide">
+                <div className="text-xl font-bold tabular-nums">{streak}</div>
+                <div className="text-[11px] text-muted uppercase tracking-wide">
                   {t('passStreak')}
                 </div>
               </div>
             </div>
             <button
               onClick={onShowStats}
-              className="text-blue-600 text-sm font-semibold cursor-pointer whitespace-nowrap"
+              className="text-primary text-sm font-semibold cursor-pointer whitespace-nowrap"
             >
               {t('viewStats')}
             </button>
@@ -125,18 +337,48 @@ export default function StartScreen({
               key={mode}
               onClick={() => onSetMode(mode)}
               className={`flex-1 py-3 px-2 border-2 rounded-xl text-sm font-semibold cursor-pointer text-center transition-colors
-                ${active ? 'border-blue-500 bg-blue-50 text-blue-600' : 'border-gray-200 bg-white'}`}
+                ${active ? 'border-primary bg-primary-surface text-primary' : 'border-border bg-surface'}`}
             >
-              <span className="text-xl block mb-1">
-                {mode === 'random' ? '\u{1F3B2}' : '\u{1F3AF}'}
+              <span className="block mb-1">
+                {mode === 'random' ? (
+                  <svg
+                    className="w-6 h-6 mx-auto"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="3" />
+                    <circle cx="8.5" cy="8.5" r="1" fill="currentColor" stroke="none" />
+                    <circle cx="15.5" cy="8.5" r="1" fill="currentColor" stroke="none" />
+                    <circle cx="8.5" cy="15.5" r="1" fill="currentColor" stroke="none" />
+                    <circle cx="15.5" cy="15.5" r="1" fill="currentColor" stroke="none" />
+                  </svg>
+                ) : (
+                  <svg
+                    className="w-6 h-6 mx-auto"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="9" />
+                    <circle cx="12" cy="12" r="5" />
+                    <circle cx="12" cy="12" r="1" fill="currentColor" stroke="none" />
+                  </svg>
+                )}
               </span>
               <span>{t(mode === 'random' ? 'modeRandom' : 'modeWeak')}</span>
               {mode === 'weak' && weakCount > 0 && (
-                <span className="inline-block bg-red-600 text-white text-[11px] px-1.5 rounded-full ml-1 font-bold">
+                <span className="inline-block bg-error text-on-accent text-[11px] px-1.5 rounded-full ml-1 font-bold">
                   {weakCount}
                 </span>
               )}
-              <span className="text-[11px] font-normal text-gray-500 block">
+              <span className="text-[11px] font-normal text-muted block">
                 {t(mode === 'random' ? 'modeRandomDesc' : 'modeWeakDesc')}
               </span>
             </button>
@@ -147,14 +389,14 @@ export default function StartScreen({
       <p className="font-semibold mb-2 text-sm">{t('numQuestions')}</p>
       <div className="flex gap-2 justify-center mb-5 flex-wrap">
         {counts.map((n) => {
-          const label = n === state.total_questions ? 'All' : String(n);
+          const label = n === state.total_questions ? t('allQuestions') : String(n);
           const active = n === selectedCount;
           return (
             <button
               key={n}
               onClick={() => onSetCount(n)}
-              className={`px-5 py-2.5 border-2 border-blue-600 rounded-xl text-base font-semibold cursor-pointer transition-colors
-                ${active ? 'bg-blue-600 text-white' : 'bg-white text-blue-600 hover:bg-blue-50'}`}
+              className={`px-5 min-h-[44px] border-2 border-primary rounded-xl text-base font-semibold cursor-pointer transition-colors tabular-nums
+                ${active ? 'bg-primary text-on-primary' : 'bg-surface text-primary hover:bg-primary-surface'}`}
             >
               {label}
             </button>
@@ -165,15 +407,9 @@ export default function StartScreen({
       <button
         onClick={onStart}
         disabled={startDisabled}
-        className="w-full py-4 bg-blue-600 text-white rounded-xl text-lg font-semibold cursor-pointer hover:bg-blue-700 active:opacity-80 transition-colors disabled:opacity-50 disabled:cursor-default"
+        className="w-full py-4 bg-primary text-on-primary rounded-xl text-lg font-semibold cursor-pointer hover:bg-primary-hover active:opacity-80 transition-colors disabled:opacity-50 disabled:cursor-default"
       >
         {startDisabled ? t('noWeakSpots') : t('startQuiz')}
-      </button>
-      <button
-        onClick={onChangeState}
-        className="w-full py-2.5 mt-1.5 text-gray-500 text-sm font-medium bg-transparent border-none cursor-pointer"
-      >
-        {t('changeState')}
       </button>
     </>
   );

@@ -8,14 +8,51 @@ import re
 import shutil
 
 import yaml
+from _util import ROOT_DIR, STATES_DIR
 
-TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
-ROOT_DIR = os.path.dirname(TOOLS_DIR)
-STATES_DIR = os.path.join(ROOT_DIR, "data", "states")
 SIGNS_DIR = os.path.join(ROOT_DIR, "data", "signs")
 SHARED_DIR = os.path.join(ROOT_DIR, "shared")
 IOS_RESOURCES = os.path.join(ROOT_DIR, "ios", "DriversTest", "DriversTest", "Resources")
 ANDROID_ASSETS = os.path.join(ROOT_DIR, "android", "app", "src", "main", "assets")
+
+# Trust metadata shipped with each state: per-question manual excerpts are
+# capped so the bundle doesn't balloon (2 quotes x 220 chars ~= +1.9 MB raw).
+MAX_EVIDENCE_QUOTES = 2
+MAX_EVIDENCE_CHARS = 220
+
+
+def load_trust_meta(state_dir: str) -> tuple[dict | None, dict[str, list[str]]]:
+    """Return (verification summary, evidence-by-question-id) from a state's report.
+
+    Returns (None, {}) when the state has no verification_report.json.
+    """
+    report_path = os.path.join(state_dir, "verification_report.json")
+    if not os.path.exists(report_path):
+        return None, {}
+    with open(report_path) as f:
+        report = json.load(f)
+    precision = report.get("precision") or {}
+    recall = report.get("recall") or {}
+    source = report.get("source") or {}
+    translations = report.get("translation") or {}
+    summary = {
+        "verified_at": report.get("verified_at"),
+        "overall": report.get("overall_verdict"),
+        "manual_url": source.get("manual_url"),
+        "edition": source.get("edition") or None,
+        "manual_pages": source.get("manual_pages"),
+        "precision_avg_fidelity": precision.get("avg_fidelity"),
+        "precision_grade": precision.get("grade"),
+        "questions_judged": precision.get("judged_count"),
+        "recall_coverage_pct": recall.get("coverage_pct"),
+        "translations": {lang: t.get("verdict") for lang, t in translations.items()},
+    }
+    evidence = {}
+    for qid, quotes in (precision.get("evidence_by_question_id") or {}).items():
+        capped = [q[:MAX_EVIDENCE_CHARS] for q in quotes[:MAX_EVIDENCE_QUOTES] if q.strip()]
+        if capped:
+            evidence[qid] = capped
+    return summary, evidence
 
 
 def build_bundle():
@@ -40,7 +77,23 @@ def build_bundle():
             lang = match.group(1)
             with open(os.path.join(state_dir, fname)) as f:
                 data = yaml.safe_load(f)
+            if not isinstance(data, dict) or "questions" not in data:
+                raise ValueError(
+                    f"{state_code}/{fname}: expected a mapping with a 'questions' key, "
+                    f"got {type(data).__name__}"
+                )
             langs[lang] = data["questions"]
+
+        verification, evidence = load_trust_meta(state_dir)
+
+        # Category breakdown from the EN bank; evidence excerpts attach to EN
+        # questions only — other languages look the excerpt up by question id.
+        categories: dict[str, int] = {}
+        for q in langs.get("en", []):
+            categories[q["category"]] = categories.get(q["category"], 0) + 1
+            quotes = evidence.get(str(q.get("id")))
+            if quotes:
+                q["evidence"] = quotes
 
         states.append(
             {
@@ -49,6 +102,10 @@ def build_bundle():
                 "agency": cfg["agency"],
                 "passing_score_pct": cfg["passing_score_pct"],
                 "test_question_count": cfg["test_question_count"],
+                "source": cfg.get("source"),
+                "official_test_languages": cfg.get("official_test_languages"),
+                "categories": categories,
+                "verification": verification,
                 "languages": langs,
             }
         )

@@ -1,6 +1,6 @@
 metadata:
   source: Delaware Driver Manual (Jul 2025) (dmv.de.gov)
-  total_questions: 649
+  total_questions: 652
   categories:
   - alcohol_drugs_health
   - defensive_driving
@@ -562,17 +562,17 @@ questions:
     restrained by a safety belt or appropriate child restraint system.
 - id: 46
   category: sharing_the_road
-  question: According to the manual, which of the following is explicitly listed as
-    a vehicle type you must share the road with?
+  question: According to the manual, which of the following has a dedicated section
+    titled 'Sharing The Road With' that specific vehicle type?
   choices:
-    A: Bicycles
+    A: Electric Scooters
     B: Motorcycles
-    C: Electric Scooters
-    D: Hoverboards
+    C: Hoverboards
+    D: Skateboards
   answer: B
-  explanation: The manual specifically includes a section titled 'Sharing The Road
-    With Motorcycles.' Bicycles and scooters are not mentioned in this specific text
-    excerpt.
+  explanation: The manual includes a dedicated section titled 'Sharing The Road With
+    Motorcycles.' Electric scooters, hoverboards, and skateboards do not have their
+    own sharing-the-road sections. (p. 97)
 - id: 47
   category: safe_driving_rules
   question: Which of the following is listed as a necessary step in the 'Before You
@@ -7099,15 +7099,17 @@ questions:
     you should directly contact the DelDOT Transportation Management Center.
 - id: 576
   category: safe_driving_rules
-  question: What is the recommended following distance rule mentioned in the manual?
+  question: According to the manual, what is the minimum following distance you should
+    maintain behind another vehicle under normal conditions?
   choices:
-    A: 2 second rule
-    B: 3 second rule
-    C: 4 second rule
-    D: 5 second rule
-  answer: C
-  explanation: The manual refers to the 'Following, Sight of Distance' as the 4 second
-    rule.
+    A: 2 seconds
+    B: 3 seconds
+    C: 4 seconds
+    D: 5 seconds
+  answer: B
+  explanation: The manual states you should follow no closer than three seconds behind
+    the vehicle ahead. The four-second rule applies to sight distance, not following
+    distance. (p. 125)
 - id: 577
   category: safe_driving_rules
   question: What does the acronym HOV stand for in relation to lane control?
@@ -7957,3 +7959,43 @@ questions:
     with disabilities. Only vehicles displaying a valid disability parking placard
     or license plate may park in these spaces. Violations carry heavy fines.
   id: 649
+- category: safe_driving_rules
+  question: According to the Delaware driver manual, what is the legal definition of
+    an intersection?
+  choices:
+    A: Any place where a traffic signal is installed
+    B: The area common to two or more highways that meet, whether or not one highway
+      crosses another
+    C: Only the point where two roads cross each other at a right angle
+    D: Any area where a stop sign or yield sign is posted
+  answer: B
+  explanation: The manual defines an "Intersection" as the area common to two or more
+    highways that meet, whether or not one highway crosses another. (Definitions section)
+  id: 650
+- category: vehicle_information
+  question: How does the Delaware driver manual define a motor vehicle?
+  choices:
+    A: Any vehicle with an engine larger than 50cc
+    B: Any self-propelled vehicle designed to operate on a roadway, except farm tractors
+      and OHVs
+    C: Any vehicle registered with the Division of Motor Vehicles
+    D: Any wheeled vehicle capable of exceeding 25 mph
+  answer: B
+  explanation: The manual defines a "Motor Vehicle" as any self-propelled vehicle designed
+    to operate on a roadway, except farm tractors and OHVs (Off-Highway Vehicles).
+    (Definitions section)
+  id: 651
+- category: license_system
+  question: What is an Individualized Education Program (IEP) as defined in the Delaware
+    driver manual?
+  choices:
+    A: A state-sponsored defensive driving course for new drivers
+    B: A program for individuals who are eligible for specialized education
+    C: A driver improvement course required after accumulating points
+    D: A commercial driver training program approved by the Division
+  answer: B
+  explanation: The manual defines "IEP" as an Individualized Education Program, which
+    is a program for individuals who are eligible for specialized education. Under
+    the GDL program, persons under age 22 receiving services under an active IEP are
+    eligible for a Graduated Driver License. (Definitions section)
+  id: 652

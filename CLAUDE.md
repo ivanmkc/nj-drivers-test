@@ -75,6 +75,7 @@ cd android && ./gradlew ktlintCheck                 # Lint Kotlin code
 - Use `@StateObject` for objects created inline, `@ObservedObject` only for injected objects
 - Cache expensive computed properties (especially UserDefaults/disk reads) — don't deserialize in SwiftUI `body`
 - `private` by default for ViewModel internals not needed by views
+- After mutating and saving a store, update the cache in place (see `updateStoreCache`) rather than invalidating — avoids a redundant disk read
 
 ### Android (ktlint)
 - Jetpack Compose, Kotlin 1.9+, Material 3
@@ -120,3 +121,8 @@ Valid categories: `license_system`, `driver_testing`, `driver_responsibility`, `
 - Sign images live in `data/signs/` (shared MUTCD signs) and are copied to each platform by `bundle.py`.
 - The web Flask app (`web/app.py`) loads the bundle into memory once at import time. If the bundle file doesn't exist, the import crashes.
 - `tools/translate.py` skips failed batches rather than inserting untranslated English. Check output for skip warnings.
+- After editing ANY EN questions, re-run `translate.py <code> es` (and `ja` if the file exists) — otherwise `audit_questions.py` flags stale `en_source_sha256` provenance and CI fails.
+- `manual_url` must be a PDF or clean text source. HTML pages produce questions about the website's CSS/chatbot (CA shipped 100+ such questions before verification caught it). Extension-less download URLs are content-sniffed for `%PDF`.
+- Some state sites block datacenter IPs (known: ilsos.gov, mass.gov). Set `recovery_url` in the state's `config.json` to an Internet Archive snapshot; `manual_url` stays canonical.
+- `quiz_gates` judge results wobble by 1-3 borderline flags between identical runs — PASS thresholds absorb this; don't chase zero flags.
+- Driving facts are NOT universal across states (Utah BAC is 0.05, NYC bans right-on-red). Only MUTCD sign questions are shared; everything else must come from that state's manual.

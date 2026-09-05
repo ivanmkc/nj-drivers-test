@@ -16,6 +16,7 @@ struct ResultsScreen: View {
                     VStack(spacing: 2) {
                         Text("\(vm.resultPct)%")
                             .font(.system(size: 42, weight: .bold))
+                            .monospacedDigit()
                             .foregroundColor(vm.didPass ? AppTheme.green : AppTheme.red)
                         Text(vm.didPass ? localizer.localized("pass") : localizer.localized("fail"))
                             .font(.system(size: 14, weight: .semibold))
@@ -47,7 +48,7 @@ struct ResultsScreen: View {
                 } label: {
                     Text(localizer.localized("newQuiz"))
                         .font(.system(size: 18, weight: .semibold))
-                        .foregroundColor(.white)
+                        .foregroundColor(AppTheme.onPrimary)
                         .frame(maxWidth: .infinity)
                         .padding(16)
                         .background(AppTheme.blue)

@@ -5,6 +5,14 @@ struct StatsScreen: View {
     @ObservedObject var localizer: Localizer
     @State private var showResetAlert = false
 
+    private var avgScoreColor: Color {
+        let pct = vm.averageScore
+        let passingPct = vm.currentState?.passingScorePct ?? 70
+        if pct >= passingPct { return AppTheme.green }
+        if pct >= 50 { return AppTheme.orange }
+        return AppTheme.red
+    }
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
@@ -30,7 +38,7 @@ struct StatsScreen: View {
                     GridItem(.flexible()),
                 ], spacing: 10) {
                     StatCardView(value: "\(vm.quizHistory.count)", label: localizer.localized("quizzes"), color: AppTheme.blue)
-                    StatCardView(value: "\(vm.averageScore)%", label: localizer.localized("avgScore"), color: AppTheme.green)
+                    StatCardView(value: "\(vm.averageScore)%", label: localizer.localized("avgScore"), color: avgScoreColor)
                     StatCardView(value: "\(vm.questionsSeen)", label: localizer.localized("qsSeen"), color: .primary)
                 }
 
@@ -71,7 +79,7 @@ struct StatsScreen: View {
                             .font(.system(size: 15, weight: .semibold))
 
                         ForEach(vm.categoryStats, id: \.category) { cat in
-                            CategoryBarView(category: cat.category, pct: cat.pct)
+                            CategoryBarView(category: cat.category, pct: cat.pct, localizer: localizer)
                         }
                     }
                 }

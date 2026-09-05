@@ -24,28 +24,57 @@ extension View {
 struct LanguageBarView: View {
     @ObservedObject var localizer: Localizer
     var availableLangs: [String]?
+    var officialTestLanguages: [String]?
 
     private var langs: [String] {
-        availableLangs ?? ["en", "ja", "es"]
+        availableLangs ?? ["en", "es"]
+    }
+
+    private static let langCodeToEnglish: [String: String] = [
+        "en": "english", "es": "spanish", "ja": "japanese", "fr": "french",
+    ]
+
+    private func isOfficialLang(_ langCode: String) -> Bool {
+        guard let official = officialTestLanguages else { return false }
+        if official.contains(where: { $0.lowercased() == "many" }) && official.count == 1 {
+            return false
+        }
+        guard let englishName = Self.langCodeToEnglish[langCode]?.lowercased() else { return false }
+        return official.contains { $0.lowercased() == englishName }
     }
 
     var body: some View {
         HStack(spacing: 6) {
+            Image(systemName: "globe")
+                .font(.system(size: 16))
+                .foregroundColor(AppTheme.gray)
             Spacer()
             ForEach(langs, id: \.self) { lang in
+                let isOfficial = isOfficialLang(lang)
                 Button {
                     withAnimation(.easeInOut(duration: 0.2)) {
                         localizer.currentLang = lang
                     }
                 } label: {
-                    Text(localizer.langLabels[lang] ?? lang.uppercased())
-                        .font(.system(size: 13, weight: .semibold))
-                        .padding(.horizontal, 12)
-                        .padding(.vertical, 6)
-                        .foregroundColor(lang == localizer.currentLang ? AppTheme.blue : AppTheme.gray)
-                        .background(lang == localizer.currentLang ? AppTheme.blueLight : AppTheme.card)
-                        .cardStyle(cornerRadius: 20, borderColor: lang == localizer.currentLang ? AppTheme.blue : AppTheme.border, borderWidth: 1.5)
+                    HStack(spacing: 4) {
+                        Text(localizer.langLabels[lang] ?? lang.uppercased())
+                            .font(.system(size: 13, weight: .semibold))
+                        if officialTestLanguages != nil && isOfficial {
+                            Image(systemName: "checkmark.seal")
+                                .font(.system(size: 11))
+                                .foregroundColor(AppTheme.green)
+                                .accessibilityHidden(true)
+                        }
+                    }
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 6)
+                    .foregroundColor(lang == localizer.currentLang ? AppTheme.blue : AppTheme.gray)
+                    .background(lang == localizer.currentLang ? AppTheme.blueLight : AppTheme.card)
+                    .cardStyle(cornerRadius: 20, borderColor: lang == localizer.currentLang ? AppTheme.blue : AppTheme.border, borderWidth: 1.5)
+                    .frame(minHeight: 44)
+                    .contentShape(Rectangle())
                 }
+                .accessibilityHint(isOfficial ? "Official test language" : "")
             }
         }
     }
@@ -61,6 +90,7 @@ struct StatItem: View {
         VStack(spacing: 2) {
             Text(value)
                 .font(.system(size: 22, weight: .bold))
+                .monospacedDigit()
             Text(label)
                 .font(.system(size: 11))
                 .foregroundColor(AppTheme.gray)
@@ -101,7 +131,7 @@ struct StatsBannerView: View {
 struct ModeButton: View {
     let title: String
     let desc: String
-    let icon: String
+    let systemImage: String
     let isActive: Bool
     var badgeCount: Int = 0
     let action: () -> Void
@@ -109,7 +139,9 @@ struct ModeButton: View {
     var body: some View {
         Button(action: action) {
             VStack(spacing: 4) {
-                Text(icon).font(.system(size: 20))
+                Image(systemName: systemImage)
+                    .font(.system(size: 20))
+                    .foregroundColor(isActive ? AppTheme.blue : AppTheme.gray)
                 HStack(spacing: 4) {
                     Text(title).font(.system(size: 14, weight: .semibold))
                     if badgeCount > 0 {
@@ -118,7 +150,7 @@ struct ModeButton: View {
                             .foregroundColor(.white)
                             .padding(.horizontal, 6)
                             .padding(.vertical, 1)
-                            .background(Color.red)
+                            .background(AppTheme.red)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                     }
                 }
@@ -150,12 +182,24 @@ struct ChoiceButton: View {
     var body: some View {
         Button(action: action) {
             HStack(alignment: .top, spacing: 12) {
-                Text(letter)
-                    .font(.system(size: 14, weight: .bold))
-                    .foregroundColor(letterForeground)
-                    .frame(width: 28, height: 28)
-                    .background(letterBackground)
-                    .clipShape(Circle())
+                ZStack {
+                    if state == .correct {
+                        Image(systemName: "checkmark")
+                            .font(.system(size: 14, weight: .bold))
+                            .foregroundColor(letterForeground)
+                    } else if state == .wrong {
+                        Image(systemName: "xmark")
+                            .font(.system(size: 14, weight: .bold))
+                            .foregroundColor(letterForeground)
+                    } else {
+                        Text(letter)
+                            .font(.system(size: 14, weight: .bold))
+                            .foregroundColor(letterForeground)
+                    }
+                }
+                .frame(width: 28, height: 28)
+                .background(letterBackground)
+                .clipShape(Circle())
 
                 Text(text)
                     .font(.system(size: 16))
@@ -192,7 +236,7 @@ struct ChoiceButton: View {
         switch state {
         case .correct: return AppTheme.greenLight
         case .wrong: return AppTheme.redLight
-        default: return .white
+        default: return AppTheme.card
         }
     }
 
@@ -264,6 +308,7 @@ struct StatCardView: View {
         VStack(spacing: 4) {
             Text(value)
                 .font(.system(size: 26, weight: .bold))
+                .monospacedDigit()
                 .foregroundColor(color)
             Text(label)
                 .font(.system(size: 11))
@@ -281,6 +326,7 @@ struct StatCardView: View {
 struct CategoryBarView: View {
     let category: String
     let pct: Int
+    var localizer: Localizer = .shared
 
     private var barColor: Color {
         if pct >= 80 { return AppTheme.green }
@@ -290,7 +336,7 @@ struct CategoryBarView: View {
 
     var body: some View {
         HStack(spacing: 10) {
-            Text(category.replacingOccurrences(of: "_", with: " ").capitalized)
+            Text(localizer.localizedCategory(category))
                 .font(.system(size: 13))
                 .frame(width: 110, alignment: .leading)
                 .lineLimit(1)
@@ -309,6 +355,7 @@ struct CategoryBarView: View {
 
             Text("\(pct)%")
                 .font(.system(size: 13, weight: .semibold))
+                .monospacedDigit()
                 .foregroundColor(barColor)
                 .frame(width: 36, alignment: .trailing)
         }
@@ -334,7 +381,7 @@ struct WeakItemView: View {
                     .foregroundColor(AppTheme.red)
                 Text("\u{00B7}")
                     .foregroundColor(AppTheme.gray)
-                Text(weak.category.replacingOccurrences(of: "_", with: " "))
+                Text(localizer.localizedCategory(weak.category))
                     .font(.system(size: 12))
                     .foregroundColor(AppTheme.gray)
             }
@@ -393,7 +440,7 @@ struct ScoreChartView: View {
             var passPath = Path()
             passPath.move(to: CGPoint(x: pad.leading, y: passY))
             passPath.addLine(to: CGPoint(x: size.width - pad.trailing, y: passY))
-            context.stroke(passPath, with: .color(Color.green.opacity(0.3)), style: StrokeStyle(lineWidth: 2, dash: [6, 4]))
+            context.stroke(passPath, with: .color(AppTheme.green.opacity(0.3)), style: StrokeStyle(lineWidth: 2, dash: [6, 4]))
 
             // Data points
             let points: [CGPoint] = data.enumerated().map { i, d in
@@ -432,7 +479,7 @@ struct ScoreChartView: View {
                 var dotPath = Path()
                 dotPath.addEllipse(in: CGRect(x: p.x - 4, y: p.y - 4, width: 8, height: 8))
                 context.fill(dotPath, with: .color(color))
-                context.stroke(dotPath, with: .color(.white), lineWidth: 2)
+                context.stroke(dotPath, with: .color(AppTheme.card), lineWidth: 2)
             }
 
             // X-axis labels

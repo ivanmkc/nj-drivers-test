@@ -35,6 +35,7 @@ Reference docs already in the repo (read these first if anything below is unclea
 4. **English required; Spanish high-value.** Japanese is no longer in scope — do NOT generate `questions_ja.yaml` for new states. (Existing JA files for the 23 already-shipped states stay; just don't add more.)
 5. **One state per PR/change.** Bundle artifacts churn; reviewing one state at a time keeps diffs sane.
 6. **All Python tools run from the repo root** as `python3 tools/<script>.py`. Never `cd tools && python3 <script>.py` — the `_util.py` path resolution assumes repo-root cwd.
+7. **Re-translate after any EN edit.** Changing `questions_en.yaml` invalidates the `en_source_sha256` provenance stamp on translated banks. Re-run `translate.py <code> es` (and `ja` if the file exists) — otherwise `audit_questions.py` flags the mismatch and CI fails.
 
 ## Pipeline
 
@@ -52,6 +53,7 @@ Acceptable verdicts:
 - HTTP 200 + `Content-Type: text/html` → manual is web-only or split into chapters. See **Multi-source manuals** below.
 - 302 → 200 → fine, same as above (note the final URL).
 - 302 → 404, 403, "200 but tiny size" → URL is dead/blocked. **Find a new one.**
+- 403 or connection-reset from a known-good URL → datacenter-IP blocking (known: ilsos.gov, mass.gov). Download the PDF via Internet Archive (`web.archive.org/web/…`) and record it as `recovery_url` in the state's `config.json`; `manual_url` stays canonical.
 
 To find a new URL:
 ```bash
@@ -74,6 +76,8 @@ This script chains: download PDF → extract text with PyMuPDF → write `config
 
 If a sub-step is already done (existing `questions_en.yaml`, etc.), it's skipped — safe to re-run.
 
+**After setup completes, verify the extracted manual text reads as prose** — not raw PDF bytes, HTML/CSS tags, or encoding garbage. An LLM will happily generate plausible-looking questions from nonsense input. The extraction now hard-fails under 5,000 characters, but garbage that happens to be long enough still gets through. Check the cached file under `$TMPDIR/drivers_cache_<uid>/`.
+
 ### Step 2 — Audit and bundle
 
 ```bash
@@ -84,12 +88,16 @@ ruff check . && ruff format --check . && pyright
 
 If audit fails on the new state: don't relax the audit, fix the underlying questions (usually a missing/weak `explanation`).
 
+Note: `quiz_gates` judge results wobble by 1-3 borderline flags between identical runs — grade-A PASS is the bar, not zero flags. And `translate.py` auto-retries failed batches per-question; check the rescued/skipped summary lines in its output rather than assuming a batch failure means data was lost.
+
 ### Step 3 — Spot-check 10 questions
 
 Open `data/states/<code>/questions_en.yaml` and read 10 random entries. For each:
 - The fact in `question`/`explanation` is in the manual you sourced.
 - The `explanation` cites a chapter or page (e.g. "Ch. 4, p. 32").
 - The correct answer matches the manual.
+- Reject questions testing another state's numbers or "universal" facts not in this manual (e.g. Utah BAC 0.05 appearing in a Texas bank).
+- Reject meta-content questions about the Table of Contents, publisher, page numbers, or the agency website — these are a recurring generation failure mode and are now also banned in the generation prompt.
 
 If multiple are wrong: re-check that the extracted text in `/tmp/<code>_manual_text.txt` is sensible (not garbled), then re-run `generate_questions.py`. If only 1-2 are wrong: hand-edit those YAML entries.
 

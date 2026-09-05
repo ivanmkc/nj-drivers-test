@@ -27,6 +27,7 @@ import sys
 from typing import Any
 
 from _manual_fetch import assemble_manual_text
+from _util import cache_path
 
 
 def _resolve_entry(argv: list[str]) -> dict[str, Any]:
@@ -87,7 +88,7 @@ def main() -> None:
     _write_config(state_dir, entry)
 
     # Download + extract manual text.
-    manual_text_path = os.path.join("/tmp", f"{code}_manual_text.txt")
+    manual_text_path = cache_path(f"{code}_manual_text.txt")
     print(f"\nResolving manual text for {name} ({code})...")
     assemble_manual_text(entry, manual_text_path)
 

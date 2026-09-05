@@ -162,10 +162,19 @@ def main() -> None:
         except Exception as e:
             print(f"    ERROR: {e}")
 
-    # Write results
+    # Merge into the existing catalog (keyed by state code) so a partial run
+    # never wipes previously-found entries.
     output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "manual_urls.json")
+    catalog: dict[str, dict] = {}
+    if os.path.exists(output_path):
+        with open(output_path) as f:
+            for entry in json.load(f):
+                catalog[entry["code"]] = entry
+    for r in all_results:
+        catalog.setdefault(r["code"], {}).update(r)
+    merged = sorted(catalog.values(), key=lambda e: e["code"])
     with open(output_path, "w") as f:
-        json.dump(all_results, f, indent=2)
+        json.dump(merged, f, indent=2)
         f.write("\n")
 
     found = [r for r in all_results if r.get("manual_url")]

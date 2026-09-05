@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import type {
   Bundle,
   StateConfig,
@@ -33,11 +33,50 @@ export default function App() {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [sessionResults, setSessionResults] = useState<SessionResult[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [statsEnteredFromResults, setStatsEnteredFromResults] = useState(false);
 
-  const correctCount = sessionResults.filter((r) => r.correct).length;
-  const wrongCount = sessionResults.filter((r) => !r.correct).length;
+  const correctCount = useMemo(
+    () => sessionResults.filter((r) => r.correct).length,
+    [sessionResults],
+  );
+  const wrongCount = useMemo(
+    () => sessionResults.filter((r) => !r.correct).length,
+    [sessionResults],
+  );
 
   const store = useStore(currentState?.code ?? null);
+
+  const isPoppingState = useRef(false);
+
+  const navigateTo = useCallback((target: Screen) => {
+    setScreen(target);
+    if (!isPoppingState.current) {
+      window.history.pushState({ screen: target }, '');
+    }
+  }, []);
+
+  useEffect(() => {
+    window.history.replaceState({ screen }, '');
+
+    const handlePopState = (e: PopStateEvent) => {
+      const target: Screen | undefined = e.state?.screen;
+      isPoppingState.current = true;
+
+      if (target === 'quiz' || target === 'results') {
+        setScreen('start');
+        setQuizMode('random');
+      } else if (target) {
+        setScreen(target);
+      } else {
+        setScreen('state-picker');
+      }
+
+      isPoppingState.current = false;
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Load bundle and i18n
   useEffect(() => {
@@ -58,6 +97,10 @@ export default function App() {
           test_question_count: s.test_question_count,
           languages: Object.keys(s.languages),
           total_questions: (s.languages.en || []).length,
+          source: s.source,
+          categories: s.categories,
+          verification: s.verification,
+          official_test_languages: s.official_test_languages,
         }));
         setAllStates(states);
 
@@ -66,16 +109,16 @@ export default function App() {
           const s = states.find((st) => st.code === saved && st.total_questions > 0);
           if (s) {
             setCurrentState(s);
-            setScreen('start');
+            navigateTo('start');
             return;
           }
         }
-        setScreen('state-picker');
+        navigateTo('state-picker');
       })
       .catch((err) => {
         setError(err instanceof Error ? err.message : 'Failed to load application data');
       });
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const switchLang = useCallback((newLang: string) => {
     setLang(newLang);
@@ -88,11 +131,11 @@ export default function App() {
       if (s) {
         setCurrentState(s);
         localStorage.setItem('quiz_state', code);
-        setScreen('start');
+        navigateTo('start');
         setQuizMode('random');
       }
     },
-    [allStates],
+    [allStates, navigateTo],
   );
 
   const getQuestions = useCallback(
@@ -125,8 +168,8 @@ export default function App() {
     setQuestions(qs);
     setCurrentIdx(0);
     setSessionResults([]);
-    setScreen('quiz');
-  }, [currentState, lang, quizMode, selectedCount, getQuestions, store]);
+    navigateTo('quiz');
+  }, [currentState, lang, quizMode, selectedCount, getQuestions, store, navigateTo]);
 
   const recordAnswer = useCallback(
     (result: SessionResult, isCorrect: boolean) => {
@@ -135,7 +178,10 @@ export default function App() {
       const storeData = store.load();
       const qId = String(result.id);
       if (!storeData.questions[qId]) {
-        storeData.questions[qId] = { seen: 0, wrong: 0, category: '' };
+        storeData.questions[qId] = { seen: 0, wrong: 0, category: result.category };
+      }
+      if (!storeData.questions[qId].category) {
+        storeData.questions[qId].category = result.category;
       }
       storeData.questions[qId].seen++;
       if (!isCorrect) storeData.questions[qId].wrong++;
@@ -155,22 +201,30 @@ export default function App() {
       mode: quizMode,
     });
     store.save(storeData);
-    setScreen('results');
-  }, [correctCount, questions.length, store, quizMode]);
+    navigateTo('results');
+  }, [correctCount, questions.length, store, quizMode, navigateTo]);
 
   const goHome = useCallback(() => {
-    setScreen('start');
+    navigateTo('start');
     setQuizMode('random');
-  }, []);
+  }, [navigateTo]);
+
+  const enQuestionsMap = useMemo(() => {
+    if (!bundle || !currentState) return new Map<number, Question>();
+    const sd = bundle.states.find((s) => s.code === currentState.code);
+    if (!sd) return new Map<number, Question>();
+    const enQs = sd.languages['en'] || [];
+    return new Map(enQs.map((q) => [q.id, q]));
+  }, [bundle, currentState]);
 
   if (error) {
     return (
       <div className="max-w-lg mx-auto px-4 py-20 text-center">
-        <div className="text-red-600 text-lg font-semibold mb-2">Failed to load</div>
-        <div className="text-gray-600 text-sm mb-4">{error}</div>
+        <div className="text-error text-lg font-semibold mb-2">Failed to load</div>
+        <div className="text-muted text-base mb-4">{error}</div>
         <button
           onClick={() => window.location.reload()}
-          className="px-6 py-2 bg-blue-600 text-white rounded-xl text-sm font-semibold cursor-pointer hover:bg-blue-700 transition-colors"
+          className="px-6 py-2 bg-primary text-on-primary rounded-xl text-sm font-semibold cursor-pointer hover:bg-primary-hover transition-colors"
         >
           Retry
         </button>
@@ -200,8 +254,11 @@ export default function App() {
           onSetMode={setQuizMode}
           onSetCount={setSelectedCount}
           onStart={startQuiz}
-          onChangeState={() => setScreen('state-picker')}
-          onShowStats={() => setScreen('stats')}
+          onChangeState={() => navigateTo('state-picker')}
+          onShowStats={() => {
+            setStatsEnteredFromResults(false);
+            navigateTo('stats');
+          }}
           onSwitchLang={switchLang}
         />
       )}
@@ -214,10 +271,13 @@ export default function App() {
           wrongCount={wrongCount}
           store={store}
           basePath={BASE}
+          enQuestionsMap={enQuestionsMap}
+          sourceName={currentState.source}
           onAnswer={recordAnswer}
           onNext={
             currentIdx + 1 >= questions.length ? finishQuiz : () => setCurrentIdx((i) => i + 1)
           }
+          onExit={goHome}
         />
       )}
       {screen === 'results' && currentState && (
@@ -228,11 +288,18 @@ export default function App() {
           agency={currentState.agency}
           sessionResults={sessionResults}
           onNewQuiz={goHome}
-          onShowStats={() => setScreen('stats')}
+          onShowStats={() => {
+            setStatsEnteredFromResults(true);
+            navigateTo('stats');
+          }}
         />
       )}
       {screen === 'stats' && currentState && (
-        <StatsScreen state={currentState} store={store} onBack={goHome} />
+        <StatsScreen
+          state={currentState}
+          store={store}
+          onBack={statsEnteredFromResults ? () => navigateTo('results') : goHome}
+        />
       )}
     </div>
   );

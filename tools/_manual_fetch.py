@@ -24,6 +24,7 @@ from typing import Any
 from urllib.parse import urlparse
 
 import requests
+from _util import cache_path as _util_cache_path
 
 # Full Chrome desktop UA. Bare "Mozilla/5.0" or Linux-suffixed UAs get 403/404
 # from several state CDNs (confirmed 2026-04-29 on michigan.gov, mass.gov,
@@ -64,7 +65,13 @@ def extract_pdf_text(pdf_path: str) -> str:
         for page in doc:
             out.append(str(page.get_text()))
             out.append("\n")
-        return "".join(out)
+        result = "".join(out)
+        if not result.strip():
+            raise ValueError(
+                f"No extractable text in {pdf_path!r} — the PDF may be scanned or image-only. "
+                "Use an OCR tool or find a text-based version."
+            )
+        return result
     finally:
         doc.close()
 
@@ -219,7 +226,7 @@ def _extract_edition_from_text(text: str) -> str:
 def fetch_pdf_text(url: str, *, cache_path: str | None = None) -> str:
     """Download a PDF (caching to ``cache_path`` if given) and return extracted text."""
     if cache_path is None:
-        cache_path = os.path.join("/tmp", os.path.basename(urlparse(url).path) or "manual.pdf")
+        cache_path = _util_cache_path(os.path.basename(urlparse(url).path) or "manual.pdf")
     if not os.path.exists(cache_path):
         print(f"  downloading {url} -> {cache_path}", flush=True)
         _http_get(url, dest=cache_path)
@@ -228,8 +235,8 @@ def fetch_pdf_text(url: str, *, cache_path: str | None = None) -> str:
     return extract_pdf_text(cache_path)
 
 
-def fetch_html_text(url: str) -> str:
-    """Fetch ``url`` as HTML, strip nav/footer, return main-content text."""
+def fetch_html_text(url: str, body: bytes | None = None) -> str:
+    """Fetch ``url`` as HTML (or parse pre-fetched ``body``), return main-content text."""
     try:
         from bs4 import BeautifulSoup  # type: ignore[import-not-found]
     except ImportError:
@@ -237,7 +244,8 @@ def fetch_html_text(url: str) -> str:
             "beautifulsoup4 not installed. Run: pip install beautifulsoup4"
         ) from None
 
-    body = _http_get(url)
+    if body is None:
+        body = _http_get(url)
     soup = BeautifulSoup(body, "html.parser")
     # Strip the obvious chrome.
     for selector in ("nav", "header", "footer", "script", "style", "aside", "form"):
@@ -251,7 +259,7 @@ def fetch_html_text(url: str) -> str:
 def assemble_manual_text(entry: dict[str, Any], out_path: str, *, force: bool = False) -> str:
     """Resolve ``entry`` -> single text file at ``out_path``. Returns the text.
 
-    Side effects: writes ``out_path``, downloads PDFs to ``/tmp`` for caching.
+    Side effects: writes ``out_path``, downloads PDFs to a per-user scratch dir for caching.
     Skipped (no-op) if ``out_path`` already exists and ``force`` is False.
     """
     if os.path.exists(out_path) and not force:
@@ -278,22 +286,43 @@ def assemble_manual_text(entry: dict[str, Any], out_path: str, *, force: bool = 
         if not all(_is_pdf_url(u) for u in urls):
             print("  WARNING: non-PDF URL in `urls` list; treating each as a PDF anyway.")
         for i, url in enumerate(urls, start=1):
-            cache = os.path.join("/tmp", f"{code}_chapter{i:02d}.pdf")
+            cache = _util_cache_path(f"{code}_chapter{i:02d}.pdf")
             text = fetch_pdf_text(url, cache_path=cache)
             parts.append(f"\n\n=== chapter {i} ===\n\n")
             parts.append(text)
     elif effective_url and _is_pdf_url(effective_url):
         # Single-PDF: existing happy path (recovery_url-aware).
-        cache = os.path.join("/tmp", f"{code}_manual.pdf")
+        cache = _util_cache_path(f"{code}_manual.pdf")
         parts.append(fetch_pdf_text(effective_url, cache_path=cache))
     elif effective_url:
-        # HTML index: scrape main-content text.
-        print(f"  scraping HTML at {effective_url}")
-        parts.append(fetch_html_text(effective_url))
+        # Extension-less URL: sniff the content. Several agencies serve PDFs
+        # from download endpoints without a .pdf path (e.g. mass.gov
+        # /doc/<name>/download); routing those to the HTML scraper would
+        # "extract" raw PDF bytes as text.
+        pdf_cache = _util_cache_path(f"{code}_manual.pdf")
+        if os.path.exists(pdf_cache):
+            print(f"  cached {pdf_cache}")
+            parts.append(extract_pdf_text(pdf_cache))
+        else:
+            body = _http_get(effective_url)
+            if body[:5] == b"%PDF-":
+                with open(pdf_cache, "wb") as f:
+                    f.write(body)
+                parts.append(extract_pdf_text(pdf_cache))
+            else:
+                print(f"  scraping HTML at {effective_url}")
+                parts.append(fetch_html_text(effective_url, body=body))
     else:
         raise ValueError(f"Catalog entry for {code!r} has neither manual_url nor urls.")
 
     text = "".join(parts)
+    char_count = len(text.strip())
+    if char_count < 5000:
+        raise ValueError(
+            f"Manual text for {code!r} is only {char_count:,} chars (minimum 5,000). "
+            "The source URL may point to a login page, CAPTCHA, or non-text PDF. "
+            f"Check the source URL in config.json for {code!r}."
+        )
     os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
     with open(out_path, "w") as f:
         f.write(text)

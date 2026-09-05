@@ -1,15 +1,56 @@
 """Shared utilities for driver's test tools."""
 
 import os
+import tempfile
 import time
 from collections.abc import Callable
 from typing import TypedDict, TypeVar
 
 T = TypeVar("T")
 
+DEDUP_STOPWORDS: frozenset[str] = frozenset(
+    {
+        "the",
+        "a",
+        "an",
+        "you",
+        "your",
+        "must",
+        "will",
+        "is",
+        "are",
+        "to",
+        "of",
+        "for",
+        "if",
+        "when",
+        "not",
+        "should",
+        "can",
+        "may",
+        "what",
+        "which",
+        "how",
+        "driver",
+        "license",
+        "vehicle",
+    }
+)
+
 TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(TOOLS_DIR)
 STATES_DIR = os.path.join(ROOT_DIR, "data", "states")
+
+
+def cache_path(filename: str) -> str:
+    """Return a path inside a per-user scratch dir for downloaded/extracted artifacts.
+
+    Namespaced by uid so parallel runs by different users don't clobber each
+    other's cached manuals (plain /tmp paths collided).
+    """
+    cache_dir = os.path.join(tempfile.gettempdir(), f"drivers_cache_{os.getuid()}")
+    os.makedirs(cache_dir, exist_ok=True)
+    return os.path.join(cache_dir, filename)
 
 
 class StatePaths(TypedDict):
@@ -31,6 +72,8 @@ def strip_code_fences(text: str) -> str:
 
 def chunk_text(text: str, chunk_size: int = 10000, overlap: int = 500) -> list[str]:
     """Split text into overlapping chunks, breaking at paragraph boundaries."""
+    if overlap >= chunk_size:
+        raise ValueError(f"overlap ({overlap}) must be smaller than chunk_size ({chunk_size})")
     chunks: list[str] = []
     start = 0
     while start < len(text):
@@ -45,6 +88,16 @@ def chunk_text(text: str, chunk_size: int = 10000, overlap: int = 500) -> list[s
     return chunks
 
 
+def _distinctive_words(text: str) -> set[str]:
+    """Return words from *text* minus high-frequency stopwords.
+
+    Falls back to the unfiltered set if filtering would empty it.
+    """
+    all_words = set(text.lower().strip().split())
+    filtered = all_words - DEDUP_STOPWORDS
+    return filtered if filtered else all_words
+
+
 def deduplicate(
     new_questions: list[dict],
     existing_questions: list[dict] | None = None,
@@ -55,17 +108,20 @@ def deduplicate(
     Compares each question in *new_questions* against both previously-accepted
     questions and, optionally, an *existing_questions* baseline.  Questions whose
     word-overlap ratio exceeds *threshold* are dropped.
+
+    High-frequency terms (``DEDUP_STOPWORDS``) are excluded before computing
+    overlap so that legal boilerplate sharing vocabulary doesn't inflate the
+    score (e.g. AK $25k-property vs $50k-bodily insurance questions
+    false-positived at 71%).
     """
     seen: set[frozenset[str]] = set()
     if existing_questions:
         for q in existing_questions:
-            key = q["question"].lower().strip()
-            seen.add(frozenset(key.split()))
+            seen.add(frozenset(_distinctive_words(q["question"])))
 
     unique: list[dict] = []
     for q in new_questions:
-        key = q["question"].lower().strip()
-        words = set(key.split())
+        words = _distinctive_words(q["question"])
         is_dup = False
         for existing_words in seen:
             overlap = len(words & existing_words) / max(len(words | existing_words), 1)
@@ -96,7 +152,8 @@ def retry_with_backoff(fn: Callable[[], T], max_attempts: int = 3, base_delay: i
                 time.sleep(wait)
             else:
                 print(f"FAILED: {exc}")
-    assert last_exc is not None
+    if last_exc is None:
+        raise RuntimeError("retry_with_backoff exhausted attempts without capturing an exception")
     raise last_exc
 
 
