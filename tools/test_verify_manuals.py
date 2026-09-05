@@ -243,6 +243,29 @@ def test_verify_entry_recovery_promotes_to_recovered() -> None:
     assert result.recovery_content_type == "application/pdf"
 
 
+def test_verify_entry_recovery_after_transport_error() -> None:
+    """A timeout/reset on the canonical host must still try the recovery URL.
+
+    ilsos.gov times out from datacenter IPs; without this the entry reported
+    ``error`` for months even though its Wayback snapshot served the PDF.
+    """
+    recovery_pdf = _make_response(
+        status=200, content_type="application/pdf", content_length=6_900_000
+    )
+    entry = {
+        "code": "il",
+        "manual_url": "https://www.ilsos.gov/publications/pdf_publications/dsd_a112.pdf",
+        "recovery_url": "https://web.archive.org/web/2025/https://www.ilsos.gov/publications/pdf_publications/dsd_a112.pdf",
+    }
+    sess = MagicMock(spec=requests.Session)
+    sess.head.side_effect = [requests.ReadTimeout("read timed out"), recovery_pdf]
+    sess.get.side_effect = [requests.ReadTimeout("read timed out"), recovery_pdf]
+    result = vm.verify_entry(entry, session=sess)
+    assert result.error == "ReadTimeout"
+    assert result.recovery_http == 200
+    assert result.verdict == "recovered"
+
+
 def test_verify_entry_recovery_not_probed_when_canonical_ok() -> None:
     canonical_pdf = _make_response(
         status=200, content_type="application/pdf", content_length=2_000_000
