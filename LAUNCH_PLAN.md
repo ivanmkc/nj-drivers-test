@@ -92,7 +92,10 @@ _Status 2026-09-05: items 1, 2, 4 and 5 done on `main` or this branch. #62, #63,
    git push origin --delete docs/app-store-copy feat/verification-rigor fix/audit-findings \
      $(git branch -r | sed 's|origin/||' | grep -E '^(quality-report-|worktree-agent-|quality-tn|verify-ct-quality|add-.*-linting)')
    ```
-4. ~~Fix `verify-manuals.yml`: create the `infra`, `catalog`, `monthly` labels.~~ Done on this branch (idempotent `gh label create` step before the issue step). Still to do: re-run it manually after merge and triage the 10 stale URLs it reports. Note #61 added a second weekly `source-liveness.yml` cron that creates its own `stale-source` label; consider folding the monthly job into it.
+4. ~~Fix `verify-manuals.yml`: create the `infra`, `catalog`, `monthly` labels.~~ Done on this branch (idempotent `gh label create` step before the issue step). Re-run via `workflow_dispatch` on this branch: green, tracking issue #64 created. Result: 40 ok, SD recovered via archive, 10 failing, triaged on #64:
+   - Bot-wall / datacenter blocks, fix by adding `recovery_url` (archive snapshot) to `config.json`: MA, NH, NY (403), IL (timeout), TX (connection error).
+   - Real URL rot, needs a new `manual_url` in `tools/manual_urls.json` and `config.json`: KY, NC, UT, OH, WV (404, OH and WV even after following the agency redirect).
+   - No shipped bank is affected; all ten states still have `manual.pdf` in LFS and grade A reports. This is a citation-link problem. Note #61 added a second weekly `source-liveness.yml` cron that creates its own `stale-source` label; consider folding the monthly job into it.
 5. ~~Update `README.md` bundle size and remove the stale "Flask backend required" comment in `DriversTestUITests`.~~ Done on this branch.
 
 ### Phase 1 — Store-readiness engineering (weeks 1–3, parallel tracks)
