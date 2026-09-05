@@ -103,23 +103,25 @@ _Status 2026-09-05: items 1, 2, 4 and 5 done on `main` or this branch. #62, #63,
 Exit criterion: a signed release build of each mobile app uploads cleanly to TestFlight and the Play internal track; the web app loads a single state in under one second on a mid-range phone.
 
 **Track A: Identity and assets** (blocks everything else, do first)
-- Decide app name, bundle ID / package name, and register the App ID in Apple Developer and the package in Play Console. Suggested: `com.<yourdomain>.driverstest` on both.
-- Produce the app icon: one 1024×1024 master, exported to `AppIcon.appiconset`, Android adaptive icon (`mipmap-anydpi-v26` foreground/background) plus legacy densities, 512×512 Play icon, web `favicon.ico`, `apple-touch-icon`, and PWA icons (192, 512, maskable).
-- Host the legal pages on the existing Pages site: `/privacy/`, `/support/`, `/about/` (sources and MUTCD attribution, unofficial disclaimer). Because the app stores everything locally and makes no network calls, the privacy policy is short; the store forms still require a URL.
+
+_Status 2026-09-05: icon, legal pages, and display name done (PR after #65). Bundle ID / package name and the developer-account registration are still the owner's._
+- Decide bundle ID / package name and register the App ID in Apple Developer and the package in Play Console. Suggested: `com.<yourdomain>.driverstest` on both. Display name is now "Driver's Test" on both platforms; store name stays "Driver's Test Prep — Real Manuals" per PR #57.
+- ~~Produce the app icon.~~ Done: `tools/make_icons.py` renders one mark (white rounded diamond + check on brand blue) to `AppIcon.appiconset/icon-1024.png`, Android adaptive icon (vector foreground + monochrome, legacy PNG densities), `docs/app-store/marketing/play-icon-512.png`, and web favicon / apple-touch / PWA icons. Re-run the script after any design change.
+- ~~Host the legal pages on the existing Pages site.~~ Done: `tools/build_site_pages.py` generates `/about/` (source table from `config.json` + verification grades, MUTCD credit, disclaimer), `/privacy/`, `/support/`, and `404.html` into `frontend/public/`; `deploy-pages.yml` runs it before the Vite build. The app footer links to them with an unofficial-product disclaimer in en/es/ja/fr.
 
 **Track B: iOS**
-- Add `PrivacyInfo.xcprivacy` declaring `NSPrivacyAccessedAPICategoryUserDefaults` with reason `CA92.1`, no tracking, no collected data types.
-- Set `DEVELOPMENT_TEAM`, real bundle ID, `CFBundleDisplayName`, `ITSAppUsesNonExemptEncryption = NO`, `CFBundleLocalizations` (en, es).
-- Decide iPad: either add a real iPad layout pass or set `TARGETED_DEVICE_FAMILY = 1` and lock portrait for v1 (recommended).
-- Add a Release lane to `ios.yml`: `xcodebuild archive` + `exportArchive` + upload via App Store Connect API key stored in repo secrets (or Fastlane `pilot`). Bump `CURRENT_PROJECT_VERSION` from the CI run number.
+- ~~Add `PrivacyInfo.xcprivacy`.~~ Done, registered in the Xcode project as a resource.
+- ~~`CFBundleDisplayName`, `ITSAppUsesNonExemptEncryption = NO`, `CFBundleLocalizations`.~~ Done (`Info.plist` + `INFOPLIST_KEY_CFBundleDisplayName`). Still owner's: `DEVELOPMENT_TEAM` and the real bundle ID.
+- ~~Decide iPad.~~ Done: iPhone-only (`TARGETED_DEVICE_FAMILY = 1`), portrait only.
+- Partly done: `ios.yml` now compiles the Release configuration for a generic device (unsigned). Still to do: `xcodebuild archive` + `exportArchive` + upload via an App Store Connect API key in repo secrets, and `CURRENT_PROJECT_VERSION` from the CI run number.
 - Add a small XCTest unit target for `QuizViewModel` and `LocalStore` so the vacuous UI tests are not the only coverage.
 
 **Track C: Android**
-- `compileSdk`/`targetSdk` → 35 (AGP 8.2 needs an upgrade to 8.6+, Kotlin to 2.x, Compose BOM to a 2025 release; do this in one PR and let CI catch API changes).
-- Add a release `signingConfig` reading keystore path and passwords from environment variables, `isMinifyEnabled = true` with `isShrinkResources = true`, and confirm the existing Gson keep rules survive.
-- Add `bundleRelease` to `android.yml` behind a tag or manual dispatch, with the keystore in repo secrets, uploading the AAB as an artifact (or straight to the internal track via `r0adkll/upload-google-play`).
-- Move the app name to `strings.xml`, add `values-es`, `values-night`, a Material 3 theme, and a splash theme (`androidx.core:core-splashscreen`).
-- Make `bundleQuestions` fail the build when `bundle.py` fails.
+- ~~`compileSdk`/`targetSdk` → 35 with toolchain bump.~~ Done: AGP 8.7.3, Gradle 8.9, Kotlin 2.0.21 + Compose compiler plugin, Compose BOM 2024.12.01, lifecycle 2.8.7, activity-compose 1.9.3.
+- ~~Release `signingConfig` from env vars, minify + shrink, Gson keep rules.~~ Done: `ANDROID_KEYSTORE_PATH/PASSWORD`, `ANDROID_KEY_ALIAS/PASSWORD`; unsigned when absent. `versionCode` comes from `ANDROID_VERSION_CODE` (CI run number).
+- ~~`bundleRelease` in `android.yml`.~~ Done as the `release-bundle` job on every push/PR; it signs only when `ANDROID_KEYSTORE_BASE64` and the password secrets exist, otherwise uploads an unsigned AAB. Owner still needs to generate the upload keystore and add the four secrets.
+- ~~`strings.xml` (+ es/ja/fr), `values-night`, splash theme.~~ Done via `core-splashscreen`.
+- ~~Make `bundleQuestions` fail the build when `bundle.py` fails.~~ Done.
 - Add a `src/test` unit suite for `QuizViewModel` and `LocalStore`.
 
 **Track D: Web**

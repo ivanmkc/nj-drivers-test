@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.DriversTest" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <!-- Shown by the system before the first Compose frame (androidx.core:core-splashscreen). -->
+    <style name="Theme.DriversTest.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="postSplashScreenTheme">@style/Theme.DriversTest</item>
+    </style>
 </resources>

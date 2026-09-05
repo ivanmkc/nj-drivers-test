@@ -8,7 +8,7 @@ import type {
   QuizMode,
   SessionResult,
 } from './types';
-import { loadI18n, getLang, setLang } from './i18n';
+import { loadI18n, getLang, setLang, t } from './i18n';
 import { useStore } from './hooks/useStore';
 import { shuffleArray } from './utils';
 import { DEFAULT_QUESTION_COUNT } from './constants';
@@ -300,6 +300,22 @@ export default function App() {
           store={store}
           onBack={statsEnteredFromResults ? () => navigateTo('results') : goHome}
         />
+      )}
+      {(screen === 'state-picker' || screen === 'start') && (
+        <footer className="mt-10 pb-6 text-center text-xs text-subtle">
+          <p className="mb-2">{t('footerDisclaimer')}</p>
+          <nav className="flex justify-center gap-4">
+            <a className="underline hover:text-muted" href={`${BASE}about/`}>
+              {t('footerAbout')}
+            </a>
+            <a className="underline hover:text-muted" href={`${BASE}privacy/`}>
+              {t('footerPrivacy')}
+            </a>
+            <a className="underline hover:text-muted" href={`${BASE}support/`}>
+              {t('footerSupport')}
+            </a>
+          </nav>
+        </footer>
       )}
     </div>
   );
