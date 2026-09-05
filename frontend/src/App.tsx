@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import type {
-  Bundle,
-  StateConfig,
+  StateIndexEntry,
   StateSummary,
   Question,
   Screen,
@@ -9,6 +8,7 @@ import type {
   SessionResult,
 } from './types';
 import { loadI18n, getLang, setLang, t } from './i18n';
+import { loadIndex, loadQuestions, prefetchQuestions } from './data';
 import { useStore } from './hooks/useStore';
 import { shuffleArray } from './utils';
 import { DEFAULT_QUESTION_COUNT } from './constants';
@@ -23,8 +23,9 @@ const BASE = import.meta.env.BASE_URL;
 
 export default function App() {
   const [screen, setScreen] = useState<Screen>('loading');
-  const [bundle, setBundle] = useState<Bundle | null>(null);
   const [allStates, setAllStates] = useState<StateSummary[]>([]);
+  const [enQuestions, setEnQuestions] = useState<Question[]>([]);
+  const [stateLoading, setStateLoading] = useState(false);
   const [currentState, setCurrentState] = useState<StateSummary | null>(null);
   const [lang, setLangState] = useState(getLang());
   const [quizMode, setQuizMode] = useState<QuizMode>('random');
@@ -78,25 +79,19 @@ export default function App() {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Load bundle and i18n
+  // Load the i18n strings and the state index (metadata only). Question
+  // banks are fetched per state + language when needed, see data.ts.
   useEffect(() => {
-    Promise.all([
-      loadI18n(BASE),
-      fetch(`${BASE}questions_bundle.json`).then((r) => {
-        if (!r.ok) throw new Error(`Failed to load questions: ${r.status}`);
-        return r.json();
-      }),
-    ])
-      .then(([, bundleData]) => {
-        setBundle(bundleData);
-        const states: StateSummary[] = bundleData.states.map((s: StateConfig) => ({
+    Promise.all([loadI18n(BASE), loadIndex(BASE)])
+      .then(([, index]) => {
+        const states: StateSummary[] = index.states.map((s: StateIndexEntry) => ({
           code: s.code,
           name: s.name,
           agency: s.agency,
           passing_score_pct: s.passing_score_pct,
           test_question_count: s.test_question_count,
           languages: Object.keys(s.languages),
-          total_questions: (s.languages.en || []).length,
+          total_questions: s.languages.en ?? 0,
           source: s.source,
           categories: s.categories,
           verification: s.verification,
@@ -109,6 +104,7 @@ export default function App() {
           const s = states.find((st) => st.code === saved && st.total_questions > 0);
           if (s) {
             setCurrentState(s);
+            prefetchQuestions(BASE, s.code, [getLang(), 'en']);
             navigateTo('start');
             return;
           }
@@ -131,28 +127,36 @@ export default function App() {
       if (s) {
         setCurrentState(s);
         localStorage.setItem('quiz_state', code);
+        prefetchQuestions(BASE, code, [lang, 'en']);
         navigateTo('start');
         setQuizMode('random');
       }
     },
-    [allStates, navigateTo],
+    [allStates, lang, navigateTo],
   );
 
-  const getQuestions = useCallback(
-    (stateCode: string, language: string): Question[] => {
-      if (!bundle) return [];
-      const sd = bundle.states.find((s) => s.code === stateCode);
-      if (!sd) return [];
-      return sd.languages[language] || sd.languages['en'] || [];
-    },
-    [bundle],
-  );
-
-  const startQuiz = useCallback(() => {
+  const startQuiz = useCallback(async () => {
     if (!currentState) return;
-    let qs: Question[];
-    const allQs = getQuestions(currentState.code, lang);
+    // Fall back to English when the state has no bank in the UI language.
+    const bankLang = currentState.languages.includes(lang) ? lang : 'en';
+    setStateLoading(true);
+    let allQs: Question[];
+    let enQs: Question[];
+    try {
+      // The English bank is always needed: manual excerpts attach to it.
+      [allQs, enQs] = await Promise.all([
+        loadQuestions(BASE, currentState.code, bankLang),
+        loadQuestions(BASE, currentState.code, 'en'),
+      ]);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to load questions');
+      return;
+    } finally {
+      setStateLoading(false);
+    }
+    setEnQuestions(enQs);
 
+    let qs: Question[];
     if (quizMode === 'weak') {
       const storeData = store.load();
       const weakIds = Object.entries(storeData.questions)
@@ -169,7 +173,7 @@ export default function App() {
     setCurrentIdx(0);
     setSessionResults([]);
     navigateTo('quiz');
-  }, [currentState, lang, quizMode, selectedCount, getQuestions, store, navigateTo]);
+  }, [currentState, lang, quizMode, selectedCount, store, navigateTo]);
 
   const recordAnswer = useCallback(
     (result: SessionResult, isCorrect: boolean) => {
@@ -209,13 +213,7 @@ export default function App() {
     setQuizMode('random');
   }, [navigateTo]);
 
-  const enQuestionsMap = useMemo(() => {
-    if (!bundle || !currentState) return new Map<number, Question>();
-    const sd = bundle.states.find((s) => s.code === currentState.code);
-    if (!sd) return new Map<number, Question>();
-    const enQs = sd.languages['en'] || [];
-    return new Map(enQs.map((q) => [q.id, q]));
-  }, [bundle, currentState]);
+  const enQuestionsMap = useMemo(() => new Map(enQuestions.map((q) => [q.id, q])), [enQuestions]);
 
   if (error) {
     return (
@@ -232,7 +230,7 @@ export default function App() {
     );
   }
 
-  if (screen === 'loading') return <LoadingScreen />;
+  if (screen === 'loading' || stateLoading) return <LoadingScreen />;
 
   return (
     <div className="max-w-lg mx-auto px-4 py-4">

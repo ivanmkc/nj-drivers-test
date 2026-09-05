@@ -136,3 +136,31 @@ def test_build_bundle_no_report_yields_null_verification(states_dir) -> None:
     assert state["verification"] is None
     assert state["categories"] == {"safe_driving_rules": 2}
     assert all("evidence" not in q for q in state["languages"]["en"])
+
+
+def test_split_for_web_replaces_banks_with_counts(states_dir) -> None:
+    states_dir["write"]("ab", questions=_sample_questions(3))
+    result = bundle.build_bundle()
+    index, banks = bundle.split_for_web(result)
+    entry = index["states"][0]
+    assert entry["code"] == "ab"
+    assert entry["languages"] == {"en": 3}
+    assert "verification" in entry and "categories" in entry
+    assert [q["id"] for q in banks["ab"]["en"]] == [1, 2, 3]
+
+
+def test_write_web_split_layout(states_dir, tmp_path: Path) -> None:
+    states_dir["write"]("ab", questions=_sample_questions(2))
+    states_dir["write"]("cd", questions=_sample_questions(1))
+    result = bundle.build_bundle()
+    out = tmp_path / "web"
+    data_dir = Path(bundle.write_web_split(result, str(out)))
+    assert data_dir == out / "data"
+    index = json.loads((data_dir / "index.json").read_text())
+    assert [s["code"] for s in index["states"]] == ["ab", "cd"]
+    assert json.loads((data_dir / "states" / "ab" / "en.json").read_text())[0]["id"] == 1
+    assert len(json.loads((data_dir / "states" / "cd" / "en.json").read_text())) == 1
+    # Re-running recreates the directory so stale banks disappear.
+    (data_dir / "states" / "zz").mkdir()
+    bundle.write_web_split(result, str(out))
+    assert not (data_dir / "states" / "zz").exists()

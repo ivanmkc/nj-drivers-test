@@ -1,5 +1,15 @@
 #!/usr/bin/env python3
-"""Build questions_bundle.json.gz from states/ directory and copy to app assets."""
+"""Build the question bundle from data/states and copy it to every platform.
+
+Outputs:
+  shared/questions_bundle.json(.gz)   full bundle, shipped inside iOS + Android
+  shared/web/data/index.json          web: state metadata only (a few KB)
+  shared/web/data/states/<c>/<l>.json web: one question bank per state/language
+  frontend/public/{data,signs}/       web dev + Vite build input (gitignored)
+
+The web app never downloads the full 27 MB bundle: it loads index.json, then
+only the bank(s) for the state and language the user picked.
+"""
 
 import gzip
 import json
@@ -14,6 +24,8 @@ SIGNS_DIR = os.path.join(ROOT_DIR, "data", "signs")
 SHARED_DIR = os.path.join(ROOT_DIR, "shared")
 IOS_RESOURCES = os.path.join(ROOT_DIR, "ios", "DriversTest", "DriversTest", "Resources")
 ANDROID_ASSETS = os.path.join(ROOT_DIR, "android", "app", "src", "main", "assets")
+WEB_SHARED_DIR = os.path.join(SHARED_DIR, "web")
+FRONTEND_PUBLIC = os.path.join(ROOT_DIR, "frontend", "public")
 
 # Trust metadata shipped with each state: per-question manual excerpts are
 # capped so the bundle doesn't balloon (2 quotes x 220 chars ~= +1.9 MB raw).
@@ -128,6 +140,71 @@ def write_bundle(bundle):
     print(f"  {gz_path} ({os.path.getsize(gz_path) / 1024 / 1024:.1f} MB)")
 
 
+def split_for_web(bundle: dict) -> tuple[dict, dict[str, dict[str, list]]]:
+    """Return (index, banks) for the per-state web layout.
+
+    index["states"] mirrors the bundle's state records but replaces the
+    ``languages`` dict of question lists with a dict of question counts.
+    banks maps state code -> language -> question list.
+    """
+    index_states = []
+    banks: dict[str, dict[str, list]] = {}
+    for state in bundle["states"]:
+        entry = {k: v for k, v in state.items() if k != "languages"}
+        entry["languages"] = {lang: len(qs) for lang, qs in state["languages"].items()}
+        index_states.append(entry)
+        banks[state["code"]] = state["languages"]
+    return {"states": index_states}, banks
+
+
+def write_web_split(bundle: dict, out_dir: str = WEB_SHARED_DIR) -> str:
+    """Write index.json + per-state/language banks under ``out_dir``/data.
+
+    The directory is recreated so removed states or languages never linger.
+    Returns the path of the ``data`` directory that was written.
+    """
+    data_dir = os.path.join(out_dir, "data")
+    if os.path.isdir(data_dir):
+        shutil.rmtree(data_dir)
+    os.makedirs(data_dir, exist_ok=True)
+
+    index, banks = split_for_web(bundle)
+    with open(os.path.join(data_dir, "index.json"), "w") as f:
+        json.dump(index, f, separators=(",", ":"))
+
+    total_bytes = 0
+    for code, langs in banks.items():
+        state_dir = os.path.join(data_dir, "states", code)
+        os.makedirs(state_dir, exist_ok=True)
+        for lang, questions in langs.items():
+            path = os.path.join(state_dir, f"{lang}.json")
+            with open(path, "w") as f:
+                json.dump(questions, f, separators=(",", ":"))
+            total_bytes += os.path.getsize(path)
+
+    n_files = sum(len(langs) for langs in banks.values())
+    index_kb = os.path.getsize(os.path.join(data_dir, "index.json")) / 1024
+    print(
+        f"  {data_dir} (index {index_kb:.0f} KB, {n_files} banks, {total_bytes / 1024 / 1024:.1f} MB)"
+    )
+    return data_dir
+
+
+def copy_to_frontend(data_dir: str) -> None:
+    """Mirror the web split + sign images into frontend/public for dev and Vite."""
+    os.makedirs(FRONTEND_PUBLIC, exist_ok=True)
+    dest_data = os.path.join(FRONTEND_PUBLIC, "data")
+    if os.path.isdir(dest_data):
+        shutil.rmtree(dest_data)
+    shutil.copytree(data_dir, dest_data)
+    dest_signs = os.path.join(FRONTEND_PUBLIC, "signs")
+    if os.path.isdir(SIGNS_DIR):
+        if os.path.isdir(dest_signs):
+            shutil.rmtree(dest_signs)
+        shutil.copytree(SIGNS_DIR, dest_signs)
+    print(f"  Copied web data + signs -> {FRONTEND_PUBLIC}")
+
+
 def copy_to_apps():
     gz_src = os.path.join(SHARED_DIR, "questions_bundle.json.gz")
 
@@ -152,6 +229,8 @@ if __name__ == "__main__":
     total_langs = sum(len(s["languages"]) for s in bundle["states"])
     print(f"  {len(bundle['states'])} states, {total_langs} language files")
     write_bundle(bundle)
+    web_data_dir = write_web_split(bundle)
     print("Copying to apps...")
     copy_to_apps()
+    copy_to_frontend(web_data_dir)
     print("Done.")
