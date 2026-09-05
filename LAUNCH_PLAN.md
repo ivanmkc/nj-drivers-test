@@ -113,13 +113,13 @@ _Status 2026-09-05: icon, legal pages, and display name done (PR after #65). Bun
 - ~~Add `PrivacyInfo.xcprivacy`.~~ Done, registered in the Xcode project as a resource.
 - ~~`CFBundleDisplayName`, `ITSAppUsesNonExemptEncryption = NO`, `CFBundleLocalizations`.~~ Done (`Info.plist` + `INFOPLIST_KEY_CFBundleDisplayName`). Still owner's: `DEVELOPMENT_TEAM` and the real bundle ID.
 - ~~Decide iPad.~~ Done: iPhone-only (`TARGETED_DEVICE_FAMILY = 1`), portrait only.
-- Partly done: `ios.yml` now compiles the Release configuration for a generic device (unsigned). Still to do: `xcodebuild archive` + `exportArchive` + upload via an App Store Connect API key in repo secrets, and `CURRENT_PROJECT_VERSION` from the CI run number.
+- ~~Release lane.~~ Done: `ios.yml` compiles Release unsigned on every PR; `ios-release.yml` (manual dispatch) archives with automatic signing via an App Store Connect API key, sets `CURRENT_PROJECT_VERSION` to the run number, and uploads to TestFlight through `ios/ExportOptions.plist`. It fails fast naming any missing secret.
 - Add a small XCTest unit target for `QuizViewModel` and `LocalStore` so the vacuous UI tests are not the only coverage.
 
 **Track C: Android**
 - ~~`compileSdk`/`targetSdk` → 35 with toolchain bump.~~ Done: AGP 8.7.3, Gradle 8.9, Kotlin 2.0.21 + Compose compiler plugin, Compose BOM 2024.12.01, lifecycle 2.8.7, activity-compose 1.9.3.
 - ~~Release `signingConfig` from env vars, minify + shrink, Gson keep rules.~~ Done: `ANDROID_KEYSTORE_PATH/PASSWORD`, `ANDROID_KEY_ALIAS/PASSWORD`; unsigned when absent. `versionCode` comes from `ANDROID_VERSION_CODE` (CI run number).
-- ~~`bundleRelease` in `android.yml`.~~ Done as the `release-bundle` job on every push/PR; it signs only when `ANDROID_KEYSTORE_BASE64` and the password secrets exist, otherwise uploads an unsigned AAB. Owner still needs to generate the upload keystore and add the four secrets.
+- ~~`bundleRelease` in `android.yml`.~~ Done as the `release-bundle` job on every push/PR (unsigned when the keystore secrets are absent). `android-release.yml` (manual dispatch) builds the signed AAB and uploads it to the chosen Play track via a service account. Owner still needs to generate the upload keystore, create the Play app with one manual first upload, and add the secrets.
 - ~~`strings.xml` (+ es/ja/fr), `values-night`, splash theme.~~ Done via `core-splashscreen`.
 - ~~Make `bundleQuestions` fail the build when `bundle.py` fails.~~ Done.
 - Add a `src/test` unit suite for `QuizViewModel` and `LocalStore`.
@@ -179,6 +179,19 @@ Exit criterion: both apps in review with complete metadata; web launched.
 - Content cadence: monthly URL verification (cron, now fixed), quarterly re-verification of the 50 manuals with `quiz_gates.py --write-report`, and a re-generation policy: when a manual edition changes, regenerate that state's EN bank, re-translate ES, re-run gates, bump the app.
 - Release cadence: data-only updates ship as new app builds (the bundle is compiled in), so budget a monthly mobile release.
 - v1.1 backlog: DC via headless-browser capture, full #58 modal and per-language stats, Spanish-by-default from device locale, flashcard mode, iPad layout, Canadian provinces (INTERNATIONAL.md).
+
+## 3a. Secrets to configure (owner)
+
+Both release lanes refuse to run until these repository secrets exist. Nothing else in CI needs them.
+
+| Secret | Used by | Where to get it |
+|---|---|---|
+| `APPLE_TEAM_ID` | `ios-release.yml` | Apple Developer > Membership |
+| `APP_STORE_CONNECT_KEY_ID`, `APP_STORE_CONNECT_ISSUER_ID`, `APP_STORE_CONNECT_KEY_P8` | `ios-release.yml` | App Store Connect > Users and Access > Integrations > App Store Connect API (role: App Manager); paste the `.p8` file contents |
+| `ANDROID_KEYSTORE_BASE64`, `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`, `ANDROID_KEY_PASSWORD` | `android.yml` (optional), `android-release.yml` | `keytool -genkeypair -v -keystore upload.keystore -alias upload -keyalg RSA -keysize 2048 -validity 10000`, then `base64 -w0 upload.keystore`. Enrol in Play App Signing so this stays an upload key. |
+| `PLAY_SERVICE_ACCOUNT_JSON` | `android-release.yml` | Google Cloud service account linked in Play Console > Users and permissions with the Release manager role; paste the JSON key |
+
+Before the first run: set the real bundle ID / `applicationId` in the projects, register the App ID under the Apple team, create the Play app and upload one AAB by hand (Play requires the first upload through the console).
 
 ## 4. Decisions needed from the owner
 

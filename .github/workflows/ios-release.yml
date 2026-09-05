@@ -1,0 +1,124 @@
+name: iOS Release (TestFlight)
+
+# Manual lane: archives the Release configuration with automatic signing via
+# an App Store Connect API key and uploads it to TestFlight. Every run gets a
+# unique build number (the workflow run number) so uploads never collide.
+#
+# Required repository secrets (see LAUNCH_PLAN.md, "Secrets to configure"):
+#   APPLE_TEAM_ID                 10-character team identifier
+#   APP_STORE_CONNECT_KEY_ID      API key ID (Users and Access > Integrations)
+#   APP_STORE_CONNECT_ISSUER_ID   issuer ID from the same page
+#   APP_STORE_CONNECT_KEY_P8      contents of the AuthKey_<ID>.p8 file
+#
+# The bundle identifier in the Xcode project must already exist as an App ID
+# under that team; automatic signing then creates the provisioning profile.
+
+on:
+  workflow_dispatch:
+    inputs:
+      marketing_version:
+        description: 'Marketing version (CFBundleShortVersionString), e.g. 1.0.0'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  archive-and-upload:
+    runs-on: macos-14
+    defaults:
+      run:
+        working-directory: ios/DriversTest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check secrets
+        env:
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+          KEY_P8: ${{ secrets.APP_STORE_CONNECT_KEY_P8 }}
+        run: |
+          missing=()
+          [ -n "$APPLE_TEAM_ID" ] || missing+=(APPLE_TEAM_ID)
+          [ -n "$KEY_ID" ] || missing+=(APP_STORE_CONNECT_KEY_ID)
+          [ -n "$ISSUER_ID" ] || missing+=(APP_STORE_CONNECT_ISSUER_ID)
+          [ -n "$KEY_P8" ] || missing+=(APP_STORE_CONNECT_KEY_P8)
+          if [ ${#missing[@]} -gt 0 ]; then
+            echo "::error::Missing repository secrets: ${missing[*]}"
+            exit 1
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Bundle questions
+        run: |
+          pip install pyyaml
+          python3 ../../tools/bundle.py
+
+      - name: Select Xcode
+        run: |
+          XCODE_PATH=$(ls -d /Applications/Xcode_15*.app 2>/dev/null | sort -V | tail -1)
+          if [ -z "$XCODE_PATH" ]; then XCODE_PATH=$(ls -d /Applications/Xcode*.app 2>/dev/null | sort -V | tail -1); fi
+          echo "Using $XCODE_PATH"
+          sudo xcode-select -s "$XCODE_PATH/Contents/Developer"
+
+      - name: Write App Store Connect API key
+        env:
+          KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          KEY_P8: ${{ secrets.APP_STORE_CONNECT_KEY_P8 }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/asc"
+          printf '%s' "$KEY_P8" > "$RUNNER_TEMP/asc/AuthKey_$KEY_ID.p8"
+          chmod 600 "$RUNNER_TEMP/asc/AuthKey_$KEY_ID.p8"
+          echo "ASC_KEY_PATH=$RUNNER_TEMP/asc/AuthKey_$KEY_ID.p8" >> "$GITHUB_ENV"
+
+      - name: Archive (Release, automatic signing)
+        env:
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+          MARKETING_VERSION_INPUT: ${{ github.event.inputs.marketing_version }}
+        run: |
+          EXTRA=()
+          if [ -n "$MARKETING_VERSION_INPUT" ]; then EXTRA+=("MARKETING_VERSION=$MARKETING_VERSION_INPUT"); fi
+          xcodebuild archive \
+            -project DriversTest.xcodeproj \
+            -scheme DriversTest \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -archivePath "$RUNNER_TEMP/DriversTest.xcarchive" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$ASC_KEY_PATH" \
+            -authenticationKeyID "$KEY_ID" \
+            -authenticationKeyIssuerID "$ISSUER_ID" \
+            DEVELOPMENT_TEAM="$APPLE_TEAM_ID" \
+            CURRENT_PROJECT_VERSION="${{ github.run_number }}" \
+            "${EXTRA[@]}"
+
+      - name: Export and upload to TestFlight
+        env:
+          KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+        run: |
+          xcodebuild -exportArchive \
+            -archivePath "$RUNNER_TEMP/DriversTest.xcarchive" \
+            -exportOptionsPlist ../ExportOptions.plist \
+            -exportPath "$RUNNER_TEMP/export" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$ASC_KEY_PATH" \
+            -authenticationKeyID "$KEY_ID" \
+            -authenticationKeyIssuerID "$ISSUER_ID"
+
+      - name: Upload export log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-export-${{ github.run_number }}
+          path: ${{ runner.temp }}/export
+          if-no-files-found: ignore
