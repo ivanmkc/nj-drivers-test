@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "vt",
   "name": "Vermont",
-  "verified_at": "2026-05-26T02:35:22Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:21:15Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://dmv.vermont.gov/sites/dmv/files/documents/VN-007-Drivers_Manual.pdf",
     "manual_pdf_sha256": "f2de61f6c4ee2b693abbde07150945cb9ceee4cdefd225a4a5deb0cd04b1ff34",
@@ -23,25 +23,883 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
-    "avg_fidelity": 10.0,
-    "pct_at_10": 100.0,
-    "pct_above_9": 100.0,
-    "pct_above_7": 100.0,
+    "sample_size": 0,
+    "judged_count": 271,
+    "avg_fidelity": 9.98,
+    "pct_at_10": 99.6,
+    "pct_above_9": 99.6,
+    "pct_above_7": 99.6,
     "pct_zero": 0.0,
-    "flagged_question_ids": [],
+    "flagged_question_ids": [
+      73
+    ],
+    "evidence_by_question_id": {
+      "1": [
+        "Fact: There is no cost to the donor or their family for donation to take place."
+      ],
+      "2": [
+        "Fact: Saying “Yes” to donation will not affect your medical care."
+      ],
+      "3": [
+        "Study for your Learner’s Permit test and learn to drive safely using our web tutorial, DriveVermont."
+      ],
+      "4": [
+        "The learner permit test is no longer taken in our office. It is an online test available on our website, mydmv.vermont.gov."
+      ],
+      "5": [
+        "you can file a complaint with the Vermont Human Rights Commission by calling 800.416.2010."
+      ],
+      "6": [
+        "Vehicle collisions are the leading cause of hospitalization and death from injuries."
+      ],
+      "7": [
+        "Having a license is a privilege; one that is earned by demonstrating your driving skills"
+      ],
+      "8": [
+        "maintaining a safe operating vehicle that meets Vermont’s emissions standards, carrying liability insurance, always obeying the rules of the road, and adopting habits that eliminate driving distractions."
+      ],
+      "9": [
+        "A holiday which falls on a Saturday shall be observed on the preceding Friday."
+      ],
+      "10": [
+        "Bennington Battle Day August 16th"
+      ],
+      "11": [
+        "All office visits are by appointment only."
+      ],
+      "12": [
+        "you will be required to contact the Teen Alcohol Safety Program (TASP) of Vermont Court Diversion"
+      ],
+      "13": [
+        "failure to contact the diversion board within 15 days will result in the case being referred to the judicial bureau"
+      ],
+      "14": [
+        "will be subject to a penalty of $300.00 and a 90-day suspension of the person's Driver’s License"
+      ],
+      "15": [
+        "if you fail to complete TASP or other Diversion requirements, your license or privilege to drive will be SUSPENDED."
+      ],
+      "16": [
+        "if you fail to complete TASP or other Diversion requirements, your license or privilege to drive will be SUSPENDED."
+      ],
+      "17": [
+        "shall be fined not more than $1,000 or imprisoned not more than two years, or both and shall have his or her privilege to operate suspended for 90 days."
+      ],
+      "18": [
+        "If the results of the PDPS inquiry indicate you are suspended, revoked, denied, or canceled in another state, you will be denied the issuance of a Vermont Driver's License"
+      ],
+      "19": [
+        "Documents must be original, or copies certified by the issuing agency. Faxed or photocopied documents will NOT be accepted."
+      ],
+      "20": [
+        "An EDL requires proof of US Citizenship in addition to proof of Identity, SSN and Vermont Residency."
+      ],
+      "21": [
+        "W-2 form,",
+        "SSA-1099 form,",
+        "pay stub showing name and SSN (minimum of last 4 digits)"
+      ],
+      "22": [
+        "If you need to correct or update information at the Social Security Administration, do so before you visit DMV."
+      ],
+      "23": [
+        "The Vermont DMV will not issue a Driver's License or ID if you have less than 30 days of Lawful Presence remaining."
+      ],
+      "24": [
+        "The residential address you supply must be a street or highway address. It may not be a post office box."
+      ],
+      "25": [
+        "Two pieces of mail with current name and street address."
+      ],
+      "26": [
+        "Utility bill (must list service address)."
+      ],
+      "27": [
+        "military ID and proof Vermont is their residence in military records, such as Leave and Earnings Statement or orders."
+      ],
+      "28": [
+        "Vermont Residency Certification and one (1) parent residency document from above.",
+        "Parent/Guardian evidence of relationship to applicant."
+      ],
+      "29": [
+        "If the applicant is not a Vermont resident, he/she may only obtain a Vermont Learner’s Permit for the purpose of participating in a driver education and training course."
+      ],
+      "30": [
+        "A letter from a school Guidance Counselor stating the student/applicant is to be enrolled in a driver education course"
+      ],
+      "31": [
+        "A person who has moved into the state from another jurisdiction with a valid license from that state shall obtain a Vermont license within 60 days of moving into the state."
+      ],
+      "32": [
+        "any person holding a commercial driver’s license from another state must transfer their commercial driver’s license within 30 days of establishing residency in Vermont."
+      ],
+      "33": [
+        "You must be at least 15 years old to take the test."
+      ],
+      "34": [
+        "licensed and unimpaired parent or guardian, or a licensed or certified unimpaired driver education instructor or a licensed and unimpaired individual 25 years of age or older riding in the front seat."
+      ],
+      "35": [
+        "If the applicant is not a Vermont resident, he/she may only obtain a Vermont Learner’s Permit for the purpose of participating in a driver education and training course."
+      ],
+      "36": [
+        "A Driver Privilege Card is a Vermont license or permit that is NOT Real ID compliant.",
+        "Issuance of the DPC does not require proof of legal presence or US citizenship."
+      ],
+      "37": [
+        "The following are self-designated descriptors for a Vermont Driver’s License or Non-Driver Identification card.",
+        "Height Weight Eye color Gender",
+        "Applicants are not required under Vermont or federal law to present documentation that confirms the information they submit for these entries."
+      ],
+      "38": [
+        "To apply for a Learner’s Permit, an individual under the age of 18 must have maintained a ‘clean’ driving record in the previous two (2) years."
+      ],
+      "39": [
+        "An individual must possess a Learner’s Permit for at least one (1) year prior to obtaining a Junior Driver’s License."
+      ],
+      "40": [
+        "In addition to the hours indicated above, you must complete 40 hours of driving practice, with at least 10 hours being nighttime driving."
+      ],
+      "41": [
+        "Nighttime driving is considered driving during the period of 30 minutes after sunset, to 30 minutes before sunrise."
+      ],
+      "42": [
+        "If it has been expired more than 3 years a written exam would be required before the road test can be given."
+      ],
+      "43": [
+        "If you are a foreign exchange student, you may obtain a Foreign Exchange Parental Authorization Form (VL-036) to be signed by a parent or legal guardian. A host parent cannot sign."
+      ],
+      "44": [
+        "Be sure the emergency/parking brake is working properly."
+      ],
+      "45": [
+        "unless you have held the Junior Driver’s License in the other state for a period of at least six months."
+      ],
+      "46": [
+        "unless you have held the Junior Driver’s License in the other state for a period of at least six months."
+      ],
+      "47": [
+        "A student who passed the road test which was given by the high school driver education instructor will be issued a Driver Education Examination Certificate."
+      ],
+      "48": [
+        "cannot operate a vehicle in the course of your employment for one (1) year following the issuance of the Junior Driver’s License.",
+        "until they have had their Junior Driver’s License for one (1) year, or until they reach the age of eighteen (18), whichever comes first."
+      ],
+      "49": [
+        "Passengers are permitted only if there is a licensed and unimpaired parent or guardian, or a licensed or certified unimpaired driver education instructor or a licensed and unimpaired individual 25 years of age or older riding in the front seat."
+      ],
+      "50": [
+        "During the second three (3) months of operation under a Junior Driver’s License, the individual may begin transporting family members."
+      ],
+      "51": [
+        "A person shall not use any portable electronic device while operating a motor vehicle.",
+        "This includes reading, and the manual composing or sending of electronic communications"
+      ],
+      "52": [
+        "Be sure the emergency/parking brake is working properly.",
+        "Have a vehicle that is clean, in good mechanical condition, legal, and with a valid inspection sticker."
+      ],
+      "53": [
+        "If your license has been expired for more than three (3) years... you will have to take the vision, written and road tests."
+      ],
+      "54": [
+        "A person whose privilege to operate a motor vehicle in any state has been suspended, revoked, or refused cannot be issued a license"
+      ],
+      "55": [
+        "If you transport school children in school buses rated by the manufacturer for fewer than 16 passengers, you are required to obtain a Type II school bus endorsement"
+      ],
+      "56": [
+        "Any person 16 years old or older who has a license may get a motorcycle endorsement or a motorcycle permit by passing a test."
+      ],
+      "57": [
+        "Students who successfully complete the Course are exempt from taking the state written and skill exams required to obtain a motorcycle endorsement."
+      ],
+      "58": [
+        "All DMV visits are by appointment only."
+      ],
+      "59": [
+        "If the results of the screening determine that your vision does not meet the required standards of 20/40, you will be referred to an eye doctor"
+      ],
+      "60": [
+        "After holding a Junior Driver’s License for six (6) months, there is no restriction on the number of passengers they can transport... not allowed to transport more passengers than there are safety belts."
+      ],
+      "61": [
+        "The knowledge test is online and has 20 questions.",
+        "You must answer at least 16 questions correctly to pass the test."
+      ],
+      "62": [
+        "If you fail a road test three times, a minimum waiting period of one month is required."
+      ],
+      "63": [
+        "No road test will be given in a vehicle displaying agriculture, antique or exhibit plates because these plates, by law, are restricted in their use."
+      ],
+      "64": [
+        "Safety belts and defrosters are required in 1964 and later models.",
+        "No road test will be given in a vehicle that does not have safety belts."
+      ],
+      "65": [
+        "A licensed and unimpaired person at least twenty-five (25) years of age."
+      ],
+      "66": [
+        "Prior to obtaining a Junior Driver’s License, an individual must complete an additional forty (40) hours of practice behind the wheel"
+      ],
+      "67": [
+        "‘Nighttime driving’ is defined as driving during the period of thirty (30) minutes after sunset, to thirty (30) minutes before sunrise."
+      ],
+      "68": [
+        "During the first three (3) months of operation under a Junior Driver’s License, the individual is restricted to driving alone."
+      ],
+      "69": [
+        "Junior Operator texting (JRT) = 30 day recall (includes fines of at least $100 and at least two points on your driving record)"
+      ],
+      "70": [
+        "Junior Operator Points Accumulation Recall (JRP) = 90 day recall (for a single 3 pt. Speeding violation or a 6 pt. Total)"
+      ],
+      "71": [
+        "If you fail the road test for any reason, you must wait at least one week before taking another test.",
+        "During the road test, you will not be asked to do anything which is against the law.",
+        "No animals are allowed in the vehicle during a road test."
+      ],
+      "72": [
+        "More US teens are killed texting while driving than drinking."
+      ],
+      "74": [
+        "Replacement of lost or corrected Learner’s Permit or License (name or address change) - $24.00"
+      ],
+      "75": [
+        "A license photo is valid for 8 years."
+      ],
+      "76": [
+        "A Vermont license that has expired for more than 14 days is not a valid license. You may not drive with it."
+      ],
+      "77": [
+        "If you have changed your name or address, you must report the change to the Department of Motor Vehicles within 30 days."
+      ],
+      "78": [
+        "If traffic is backing up behind you, you are required by law to pull over to the side of the road, when it is safe to do so, and allow following vehicles to go by."
+      ],
+      "79": [
+        "If you look at the steering wheel as the face of a clock, a 9 and 3 or an 8 and 4 position is recommended."
+      ],
+      "80": [
+        "After seeing danger, it takes the average driver about 3/4 of a second to apply the brakes."
+      ],
+      "81": [
+        "The distance your vehicle travels from the time the brakes are applied to the time that the vehicle is brought to a stop is called braking distance."
+      ],
+      "82": [
+        "The law states that a driver must use a turn signal not less than 100 feet before making a turn or changing lanes."
+      ],
+      "83": [
+        "Keep your wheels straight until you are ready to turn - that way you will not be pushed into oncoming traffic if you are hit from behind."
+      ],
+      "84": [
+        "Position your vehicle within one foot of the centerline, if it is safe to do so."
+      ],
+      "85": [
+        "At the approach to a right turn the vehicle should be about three feet from the right side of the road."
+      ],
+      "86": [
+        "Signaling three to five seconds before any of these actions covers this requirement."
+      ],
+      "87": [
+        "Signal 3 to 5 seconds before turn and begin slowing down."
+      ],
+      "88": [
+        "Using the 4-second method, you should have enough space between your vehicle and the vehicle in front of you"
+      ],
+      "89": [
+        "The maximum speed for any vehicle on an Interstate in Vermont is 65 miles per hour or as posted."
+      ],
+      "90": [
+        "the driver on the left should yield the right-of-way to the driver on the right."
+      ],
+      "91": [
+        "If you are turning left, you must yield to all oncoming traffic. Any vehicle coming toward you, whether it is a motor vehicle or a bicyclist, has the right of way."
+      ],
+      "92": [
+        "A vehicle parked on a 2-lane road must have the right wheels within 12 inches of the right side of the road or curb."
+      ],
+      "93": [
+        "Within 6 feet of a fire hydrant"
+      ],
+      "94": [
+        "On any railroad tracks, or within 50 feet of the nearest rail of a railroad crossing"
+      ],
+      "95": [
+        "A roundabout is an intersection control feature where traffic enters and exits only through right turns and proceeds in a counter clockwise direction."
+      ],
+      "96": [
+        "Drivers may not change lanes once in the roundabout."
+      ],
+      "97": [
+        "If you are already in the roundabout pull over when you have safely exited the roundabout."
+      ],
+      "98": [
+        "If in a dimly lit area turn on the vehicle’s interior lights, after stopping, and before the officer approaches."
+      ],
+      "99": [
+        "Keep your safety belt fastened until the officer has seen you wearing it."
+      ],
+      "100": [
+        "Be careful not to stop on a hill, curve, or where your vehicle cannot be seen for at least 150 feet in either direction"
+      ],
+      "101": [
+        "Then follow the basic rule of driving on a multilane road: Drive to the right unless you are passing or turning."
+      ],
+      "102": [
+        "the law says you must pull over to the right side of the road and stop. You must remain stopped until the emergency or law enforcement vehicle has gone by."
+      ],
+      "103": [
+        "If you are on a four-lane highway, such as an Interstate, the law also requires you to make a lane change if you can do so safely."
+      ],
+      "104": [
+        "If a signal light is dark, as in a power failure, stop as if there are stop signs in all directions."
+      ],
+      "105": [
+        "Right turns at circular red lights are usually allowed, but only after the driver has stopped completely, scanned the intersection and yielded the right of way"
+      ],
+      "106": [
+        "The flashing circular red light is like a stop sign. Stop, and proceed after yielding the right of way to all pedestrians, bicyclists, and vehicles."
+      ],
+      "107": [
+        "Flashing Yellow Arrow: Drivers are allowed to turn left after yielding to all oncoming traffic and to any pedestrians in the crosswalk."
+      ],
+      "108": [
+        "Yield right-of-way signs are the shape of an upside down triangle"
+      ],
+      "109": [
+        "A sign in the shape of a triangle with the points cut off is displayed on vehicles which travel at slow speeds."
+      ],
+      "110": [
+        "Rectangular signs with white backgrounds indicate what things a driver must or must not do. These signs display speed limits, turning and passing laws"
+      ],
+      "111": [
+        "If there is a solid line but a broken line in your lane, you may pass if it is clear ahead."
+      ],
+      "112": [
+        "Continuous two-way left turn lanes are not designed to be used as travel lanes",
+        "A short distance prior to your left turn, you should signal and carefully move into the turning lane."
+      ],
+      "113": [
+        "This series of white triangles, pointing toward approaching cars, shows drivers where they should stop"
+      ],
+      "114": [
+        "When driving from one road onto a multiple lane road where there is a choice of lanes, right turning drivers must turn into the right lane."
+      ],
+      "115": [
+        "Lane changes may take place after the turn has been completed. Avoid changing lanes while turning."
+      ],
+      "116": [
+        "Most crashes in work zones are rear end crashes that are caused by driving too fast for conditions"
+      ],
+      "117": [
+        "Maintain a 4 second following distance."
+      ],
+      "118": [
+        "FINES ARE DOUBLED FOR SPEEDING IN A WORK ZONE"
+      ],
+      "119": [
+        "Work zone signs are orange and diamond or rectangular shaped."
+      ],
+      "120": [
+        "A flagger has the legal authority to control traffic and must be obeyed."
+      ],
+      "121": [
+        "If your wheels drop off the pavement onto a low shoulder, reduce speed without braking, and turn back onto the pavement very carefully at a slow speed."
+      ],
+      "122": [
+        "By law, drivers must STOP not less than 15 feet from the nearest rail when: 1. Flashing lights, lowered gates, or a flagman signals the approach or passage of a railroad train."
+      ],
+      "123": [
+        "It is also against the law to pass another vehicle at a railroad crossing."
+      ],
+      "124": [
+        "When a vehicle ahead of you stops for a pedestrian, do not pass the stopped vehicle even if there are two lanes provided."
+      ],
+      "125": [
+        "Even when pedestrians cross the street carelessly, the driver must yield."
+      ],
+      "126": [
+        "When a pedestrian who has a white cane or is being led by a guide dog is crossing or waiting to cross the street ahead of you, you must stop and yield the right-of-way."
+      ],
+      "127": [
+        "Remember: DO NOT turn right on a red arrow."
+      ],
+      "128": [
+        "Note that regular school hours are not the only time children are present at schools. After school and weekend activities often take place at schools."
+      ],
+      "129": [
+        "Drivers should slow down when they see the panels in “caution” mode."
+      ],
+      "130": [
+        "If you have already started to cross during the “walk” signal, you will have time to safely complete your crossing during the flashing “Don’t Walk”."
+      ],
+      "131": [
+        "If there are no sidewalks, you should walk as far as possible to the left side of the road facing traffic.",
+        "Along streets or highways without sidewalks never walk on the right side with back to traffic."
+      ],
+      "132": [
+        "the school bus driver activates the alternately flashing yellow lights and begins slowing down. You should be preparing to stop."
+      ],
+      "133": [
+        "You do not have to stop on a divided highway if the school bus is traveling in the opposite direction.",
+        "A concrete barrier may be used to separate traffic from the bus, and you are not required to stop."
+      ],
+      "134": [
+        "if you are found guilty of passing a stopped school bus with its warning lights on, you will be subject to a substantial fine and five points on your driver’s license."
+      ],
+      "135": [
+        "Leave at least four feet of passing space between the right side of your vehicle and a bicyclist."
+      ],
+      "136": [
+        "In some instances it is safest for a bicyclist to “take the lane” by riding toward the center of the lane.",
+        "reasons for the bicyclist to be riding in the travel lane, such as roadway hazards not visible to motorists"
+      ],
+      "137": [
+        "Be aware that two bicyclists may legally ride side by side.",
+        "Bicyclists are allowed to ride two abreast so long as they do not impede the normal and reasonable flow of traffic."
+      ],
+      "138": [
+        "Opening a vehicle door into the path of a bicyclist."
+      ],
+      "139": [
+        "when a bicyclist is making a left turn, the cyclist should signal and move to the left side of the lane or into the turning lane."
+      ],
+      "140": [
+        "Motorcyclists often slow by downshifting or merely rolling off the throttle, thus not activating the brake light. Allow more than 4 seconds of following distance."
+      ],
+      "141": [
+        "Turn signals on a motorcycle usually are not self-canceling, thus some riders, (especially beginners) sometimes forget to turn them off after a turn or lane change."
+      ],
+      "142": [
+        "When walking at dusk or at night, wear light colored or reflective clothing and carry a light.",
+        "Carry a flashlight and wear reflectorized clothing."
+      ],
+      "143": [
+        "When you approach a bicyclist, keep on the lookout and slow down. Give them plenty of room when passing and be prepared to stop suddenly."
+      ],
+      "144": [
+        "the speed limit signs will have the words “when flashing” or “when children are present” to let you know when the speed limit is in effect.",
+        "After school and weekend activities often take place at schools."
+      ],
+      "145": [
+        "Turn signals on a motorcycle usually are not self-canceling, thus some riders, (especially beginners) sometimes forget to turn them off after a turn or lane change."
+      ],
+      "146": [
+        "Because of its small size a motorcycle seems to be moving faster than it really is.",
+        "Because of its small size, a motorcycle may look farther away than it is."
+      ],
+      "147": [
+        "Keep at least a four second space cushion when following a motorcyclist."
+      ],
+      "148": [
+        "Motorcycles are entitled to a full lane. When passing a motorcycle, change lanes completely."
+      ],
+      "149": [
+        "In more than 70% of fatal crashes involving automobiles and trucks, it was the driver of the other vehicle, not the truck driver, who caused the crash."
+      ],
+      "150": [
+        "Remember, if you can’t see the trucks rear (side) view mirrors then the truck driver can’t see you."
+      ],
+      "151": [
+        "Be sure you can see the cab of the truck in your inside rearview mirror before returning to the right lane."
+      ],
+      "152": [
+        "Truck drivers often need to swing wide to the left in order to make a right turn.",
+        "Do not cut in between the truck and the curb or shoulder to the right; this increases the possibility of a crash."
+      ],
+      "153": [
+        "It is identified by an orange and red triangular sign mounted on the rear of the vehicle."
+      ],
+      "154": [
+        "If an aggressive driver cuts you off or does something else that is unsafe, do not try to get even. Stay calm. Get out of the drivers way. Don’t challenge them."
+      ],
+      "155": [
+        "When on a public highway a person riding an animal, or driving an animal drawn vehicle, is granted all the rights of a driver of a motor vehicle."
+      ],
+      "156": [
+        "A motor vehicle operator should never blow their horn or rev their engine... so as not to startle the animal/animals when meeting , following, or passing such animals."
+      ],
+      "157": [
+        "The presence of moose and deer on highways is most likely to occur during late evening, night time and early morning hours."
+      ],
+      "158": [
+        "Carrying a passenger complicates a motorcyclist’s task. Balance is more difficult. Stopping distance is increased. Maneuverability is reduced."
+      ],
+      "159": [
+        "Most crashes involving automobiles and trucks occur in daylight on straight and dry pavement under good weather conditions."
+      ],
+      "160": [
+        "The presence of moose and deer on highways is most likely to occur during late evening, night time and early morning hours."
+      ],
+      "161": [
+        "Moose weigh much more than deer—more than a thousand pounds. Also, they are much taller than deer, and in a collision can land on top of the vehicle and its occupants with crushing force."
+      ],
+      "162": [
+        "If your vehicle stalls in a flooded area, abandon it as soon as possible. Flood waters can rise rapidly and sweep away a car and its occupants."
+      ],
+      "163": [
+        "As little as 4 inches of water can make it difficult to walk and can obstruct hazards from view."
+      ],
+      "164": [
+        "If you cannot clearly see persons or vehicles 500 feet ahead, the law requires drivers to have headlights turned on."
+      ],
+      "165": [
+        "Bridges, ramps, and overpasses are likely to freeze first."
+      ],
+      "166": [
+        "Keep more than four seconds of space between you and the motor vehicle in front of you.",
+        "Increase your following distance to more than 4 seconds."
+      ],
+      "167": [
+        "Never combine different types of tires on the same vehicle."
+      ],
+      "168": [
+        "Run the engine and heater about 10 minutes each hour to keep warm."
+      ],
+      "169": [
+        "To help protect from possible carbon monoxide poisoning, keep snow clear from the exhaust pipe."
+      ],
+      "170": [
+        "Drink fluids to avoid dehydration. However, do not drink alcohol."
+      ],
+      "171": [
+        "Most skids are caused by the driver's failure to react in time to adjust the vehicle's speed to road and traffic conditions."
+      ],
+      "172": [
+        "Don’t hit the brakes, it will just make the skid worse.",
+        "Steer in the direction you want the vehicle to go."
+      ],
+      "173": [
+        "If your vehicle is equipped with anti-lock brakes use steady brake pressure, do not pump the brakes!"
+      ],
+      "174": [
+        "Do not use cruise control in these situations.",
+        "Never use cruise control in driving conditions such as rain, fog, snow, ice, etc."
+      ],
+      "175": [
+        "Don’t pump the brake or take your foot off the brake pedal because it will disengage the anti-lock system."
+      ],
+      "176": [
+        "If your ABS light stays on after you begin to drive, your vehicle’s ABS system is not working. However, the vehicle does still have brakes."
+      ],
+      "177": [
+        "driving with low beam headlights on during the daytime reduces the risk of head-on collisions by more than 20%."
+      ],
+      "178": [
+        "The law requires headlights on vehicles to be turned on a half hour after sunset to a half hour before sunrise."
+      ],
+      "179": [
+        "you should look ahead towards the right edge of the highway until the bright lights have gone by and your vision has returned to normal."
+      ],
+      "180": [
+        "The entering driver must yield to drivers already on the interstate."
+      ],
+      "181": [
+        "If you must stop for an emergency, move into the breakdown lane and as far to the right as possible.",
+        "raise the hood of your vehicle, tie a white cloth on the vehicle, and stay in your vehicle."
+      ],
+      "182": [
+        "If you miss your exit ramp, never stop and back up and never use the emergency turnaround. Go on to the next exit."
+      ],
+      "183": [
+        "If you are unable to change lanes you must slow down to 20 mph below the speed limit in order to go by the stopped vehicles."
+      ],
+      "184": [
+        "You are going the WRONG WAY on a divided highway or Interstate. On a divided highway the line to your right should be white."
+      ],
+      "185": [
+        "Leave at least four feet of clearance between your vehicle and any vehicle or bicycle you are passing."
+      ],
+      "186": [
+        "you are able to see the entire front of the motor vehicle or the bicyclist in your inside rearview mirror."
+      ],
+      "187": [
+        "a driver may pass on the right of a vehicle or bicycle turning or preparing to turn left, if there is room to go by safely."
+      ],
+      "188": [
+        "Never use cruise control in driving conditions such as rain, fog, snow, ice, etc."
+      ],
+      "189": [
+        "Drugs, even prescription and over the counter drugs, can seriously affect your ability to drive safely.",
+        "Driving while drowsy can also affect your ability to drive and can be very dangerous."
+      ],
+      "190": [
+        "Vermont law states that when a person's blood alcohol concentration (BAC) is .08 or above, he/she is “under the influence” or “impaired”."
+      ],
+      "191": [
+        "People under the age of 21 who operate a vehicle with an alcohol concentration of .02 or more can receive a civil traffic violation.",
+        "The Driver’s License will be suspended and the driver must complete an alcohol and driving education program at their own expense."
+      ],
+      "192": [
+        "Time is the only way to reduce the effects of alcohol.",
+        "Drinking coffee, taking a shower, exercising, etc., cannot reduce your BAC or the effects of alcohol."
+      ],
+      "193": [
+        "Feelings (Senses) - Your feelings are suppressed; you don't feel speed so you won't realize that you could be speeding."
+      ],
+      "194": [
+        "If the driver refuses, they will lose their Driver's License for at least six (6) months."
+      ],
+      "195": [
+        "Vermont has an administrative suspension process, which means that you can lose your license through a civil process before a criminal DUI conviction."
+      ],
+      "196": [
+        "Drifting out of the travel lane",
+        "Not remembering the last few miles you drove",
+        "Yawning repeatedly"
+      ],
+      "197": [
+        "If you become drowsy while you’re on the road, find a safe place to pull over and stop.",
+        "Opening your window and turning up your radio will not keep you awake."
+      ],
+      "198": [
+        "Inattention and failure to yield are the most common driver contributing actions in pedestrian and bicycle motor vehicle crashes in Vermont."
+      ],
+      "199": [
+        "Pre-program your favorite radio stations for easy access",
+        "Do your personal grooming at home, not in the vehicle.",
+        "Pets can be distracting and should be in a carrier, not in your lap or free to move."
+      ],
+      "200": [
+        "A person who violates this law shall be subject to a fine of not less than $100.00 and not more than $200.00 for a first violation"
+      ],
+      "201": [
+        "A person convicted of violating this section while operating within a properly designated work zone... shall have two points assessed against his or her driving record for a first conviction"
+      ],
+      "202": [
+        "The Vermont Emergency Nurses Association (ENCARE) sponsors the installation of signs at the site of alcohol related fatal crashes.",
+        "When you see one of these signs, it means someone died at that location because of a drunk driver."
+      ],
+      "203": [
+        "Emotions affect safe driving. You may not be able to drive well if you are overly worried, excited, afraid, angry or depressed.",
+        "Give yourself time to cool off and calm down. Taking a walk is a good way to do this."
+      ],
+      "204": [
+        "It is against the law for drivers to use a portable electronic device while operating a motor vehicle on a public highway in Vermont, including while the vehicle is stationary"
+      ],
+      "205": [
+        "Secure your phone in the vehicle so that it does not become a projectile in a crash."
+      ],
+      "206": [
+        "Before driving up the hill, put the vehicle in gear. Signal left. Check your mirrors and left blind spot to be sure that traffic is clear."
+      ],
+      "207": [
+        "When driving downhill, you should not coast with the clutch to the floor or the gearshift in neutral."
+      ],
+      "208": [
+        "Drive just past the street and stop about 18 inches from the curb or edge of the road. Shift into reverse."
+      ],
+      "209": [
+        "Going around the block or using a parking lot is the safest option."
+      ],
+      "210": [
+        "Stop alongside the front vehicle, two to three feet away. Shift to reverse."
+      ],
+      "211": [
+        "If possible, move the involved vehicles out of the traveled lanes and onto the shoulder."
+      ],
+      "212": [
+        "Leave the injured person where they are. You may injure the person more by moving that person the wrong way. Keep the person warm and calm."
+      ],
+      "213": [
+        "If you hit a parked vehicle and cause damage, and you can't find the owner, you must write your name, address and phone number and leave it in, or on the vehicle."
+      ],
+      "214": [
+        "If any person has been injured, or if the damage is over $3,000, you must make a written report to the Department of Motor Vehicles within 72 hours."
+      ],
+      "215": [
+        "If a Vermont driver has a crash in another state, it must be reported in the state where the crash happened."
+      ],
+      "216": [
+        "Your vehicle must be inspected once a year."
+      ],
+      "217": [
+        "All motor vehicles have to be inspected within 15 days of registration, unless bearing a valid Vermont inspection sticker."
+      ],
+      "218": [
+        "The most common cause of bad brakes is that they do not operate together properly. When applying the brakes suddenly, one takes hold before the other and causes your vehicle to swerve."
+      ],
+      "219": [
+        "Tires must have at least 2/32\" of tread depth."
+      ],
+      "220": [
+        "The back license plate must be lighted so it can be seen and read at least 50 feet from the back of the vehicle."
+      ],
+      "221": [
+        "You cannot smell carbon monoxide gas. If you become drowsy or nauseous, it could indicate carbon monoxide poisoning."
+      ],
+      "222": [
+        "The law states there shall not be anything hanging from the rearview mirror or sun visors."
+      ],
+      "223": [
+        "A child under two years of age must be properly secured in a federally approved rear-facing child car seat with a harness."
+      ],
+      "224": [
+        "A child under 13 years of age must, if practical, ride in the back seat."
+      ],
+      "225": [
+        "Lap belts should fit snugly across the hips, not over the stomach. Shoulder belts go over the shoulder and across the center of the chest."
+      ],
+      "226": [
+        "When a driver receives a total of 10 points, a letter will be sent notifying the driver that their privilege to drive is to be suspended."
+      ],
+      "227": [
+        "Texting while driving, 2 - 5 points."
+      ],
+      "228": [
+        "Failure to stop for a school bus that has stopped with the red warning lights flashing, 5 points."
+      ],
+      "229": [
+        "Points are not assessed for parking or defective equipment violations."
+      ],
+      "230": [
+        "Wavy marks on your front tires may mean that the wheels are out of alignment."
+      ],
+      "231": [
+        "If your vehicle is supposed to have a catalytic converter and it is not present or if the catalytic converter fails, it must be replaced."
+      ],
+      "232": [
+        "A child in a rear-facing car seat must not ride in front of an active airbag.",
+        "NOTE: Never place a child’s safety seat in front of an air bag!"
+      ],
+      "233": [
+        "When a driver receives a total of 10 points, a letter will be sent notifying the driver that their privilege to drive is to be suspended."
+      ],
+      "234": [
+        "If you are moving to Vermont from another state, you must register your vehicle within 60 days of moving into the state."
+      ],
+      "235": [
+        "The rear plate must be lighted so that it can be read from at least 50 feet away."
+      ],
+      "236": [
+        "An odometer statement is required to be signed by both seller and buyer on all sales of vehicles model year 2011 or newer."
+      ],
+      "237": [
+        "Purchase and Use Tax and is 6% of the price you paid for the non-leased vehicle or the current fair market value, whichever is greater."
+      ],
+      "238": [
+        "Some exceptions are: a motorcycle with less than 300 cc's of engine displacement and a trailer with empty weight of 1,500 pounds or less."
+      ],
+      "239": [
+        "Vehicles with registrations from any foreign country, including Canada."
+      ],
+      "240": [
+        "The title to your vehicle, when issued, will be sent to the lien holder and will not be given to you until you pay back the money you borrowed."
+      ],
+      "241": [
+        "The amount of coverage MUST be at least $25,000 for death or injury of one person; $50,000 for death or injury of 2 or more persons; $10,000 for property damage."
+      ],
+      "242": [
+        "If a police officer stops you and asks to see proof of your insurance and you do not have insurance, the officer will give you a ticket. You will be fined and assessed two points on your driving record."
+      ],
+      "243": [
+        "If you have insurance on your vehicle and a police officer stops you, and you cannot show the card to the officer, you have 15 days to do so."
+      ],
+      "244": [
+        "If you are driving without insurance and any of the following happen, your license will be taken away by the Commissioner of Motor Vehicles until you get insurance.",
+        "You are in a crash, even if it isn’t your fault,",
+        "You will have to prove to the Commissioner that you have insurance for a full 3 years."
+      ],
+      "245": [
+        "All motor vehicles have to be inspected within 15 days of registration, unless bearing a valid Vermont inspection sticker."
+      ],
+      "246": [
+        "Don't drive with the windows open unless your keep your speed under 50 mph. Driving with the windows open at highway speeds increases aerodynamic drag on the vehicle and lowers fuel economy."
+      ],
+      "247": [
+        "If you're parked in town, idling for more than 10 seconds uses more fuel than shutting off and restarting."
+      ],
+      "248": [
+        "Keep tires properly inflated to the recommended tire pressure (which can be found on the placard in the driver's side door jam of the vehicle and in the vehicle owner's manual)."
+      ],
+      "249": [
+        "A Commercial Driver’s License is required for operators of vehicles rated in excess of 26,000 pounds"
+      ],
+      "250": [
+        "Class B - Single vehicles with GVWR of 26,001 pounds or more, providing any towed vehicle has GVWR of 10,000 pounds or less."
+      ],
+      "251": [
+        "you must notify the Department of Motor Vehicles, Driver Improvement Section at 802.828.2000 prior to making an appointment for an examination."
+      ],
+      "252": [
+        "A person who has trouble walking may park without a fee, for 10 days, in a parking place where other drivers can only park a set time."
+      ],
+      "253": [
+        "The Disabled Plates/Placard of a disabled person may be revoked if the disabled person allows individuals not disabled to abuse the privileges"
+      ],
+      "254": [
+        "Self-service gasoline stations... shall require an attendant to dispense gasoline at the self-service cost."
+      ],
+      "255": [
+        "The vehicle controls must be altered so that it enables you to operate the vehicle, or must have a mechanical lifting device to allow entry and exit"
+      ],
+      "256": [
+        "Allowing a vehicle to idle while unattended in public is in violation of Vermont's unattended motor vehicle law; if you leave your vehicle, you must shut it off."
+      ],
+      "257": [
+        "Decreasing your usage of the air conditioner when temperatures are above 80 degrees can help you save 10-15 percent of fuel."
+      ],
+      "258": [
+        "You and any titled owners/registrants may have only one active registration involving a purchase and use tax exemption at a time."
+      ],
+      "259": [
+        "Your Driver’s License must be restricted to operation with altered controls, if you are claiming exemption due to the installation of altered controls."
+      ],
+      "260": [
+        "Form VT-014 signed by a physician."
+      ],
+      "261": [
+        "Assure your teen has plenty of chances to practice supervised driving, even more than the required 40 hours."
+      ],
+      "262": [
+        "Nighttime driving (after 9pm)"
+      ],
+      "263": [
+        "Both the Learner’s Permit and the Junior Driver’s License are “provisional” and can be recalled."
+      ],
+      "264": [
+        "As a parent or guardian, you may suspend your child’s provisional license by writing to the Commissioner of the Department of Motor Vehicles"
+      ],
+      "265": [
+        "A recommendation from a Diversion/Reparative Board may result in a 30 day recall"
+      ],
+      "266": [
+        "Visit www.iihs.org/ratings for crash ratings of vehicles and other information about choosing safe vehicles for teens"
+      ],
+      "267": [
+        "Multiple teen passengers"
+      ],
+      "268": [
+        "The vehicle controls must be altered so that it enables you to operate the vehicle, or must have a mechanical lifting device to allow entry and exit from the vehicle."
+      ],
+      "269": [
+        "This will help all teens stay safe and within the GDL law."
+      ],
+      "270": [
+        "Encourage your teen to speak up for safety when riding with other drivers."
+      ],
+      "271": [
+        "Department of Motor Vehicles 120 State Street Montpelier, Vermont 05603-0001",
+        "Montpelier Washington County - Main Office 120 State Street"
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 30,
-    "topics_covered": 30,
-    "coverage_pct": 100.0,
-    "uncovered_topics": [],
+    "topics_total": 25,
+    "topics_covered": 22,
+    "coverage_pct": 88.0,
+    "uncovered_topics": [
+      "organ and tissue donation registration process",
+      "use of rental vehicles for the driving road test",
+      "graduated license recall for carrying passengers for hire"
+    ],
     "verdict": "PASS",
-    "grade": "A"
+    "grade": "B"
   },
   "coverage": {
     "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
@@ -63,6 +921,22 @@
     "sign_ratio_pct": 11.1,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 271,
+      "avg_fidelity": 9.98,
+      "pct_at_10": 99.6,
+      "pct_above_9": 99.6,
+      "pct_above_7": 99.6,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [
+        130
+      ],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

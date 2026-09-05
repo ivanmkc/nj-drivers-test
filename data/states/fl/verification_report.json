@@ -1,16 +1,16 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "fl",
   "name": "Florida",
-  "verified_at": "2026-05-26T02:25:31Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-27T01:17:15Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.flhsmv.gov/pdf/handbooks/englishdriverhandbook.pdf",
     "manual_pdf_sha256": "5c0b8e495f955b9ee030058489b74b8876614251462211774c97ce98fb9ed269",
     "manual_text_sha256": "f5c7699735bb5cb6548bca88a655d8f96778abe772b12f07a43ce0c37d4ccae6",
     "manual_text_chars": 214816,
     "manual_pages": 104,
-    "edition": ""
+    "edition": "Rev 08/2023"
   },
   "bank": {
     "total_questions": 345,
@@ -24,21 +24,1042 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 327,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "The penalty can be up to five years in prison, a $5,000 fine, and suspension of any existing driving privilege for at least one year."
+      ],
+      "2": [
+        "it is illegal to permit or authorize an unlicensed person to drive a motor vehicle and doing so can result in a 60-day jail sentence and a $500 fine."
+      ],
+      "3": [
+        "the person who permitted the unlicensed person to drive may (unless it is an automatic mandatory suspension) have their license suspended for one year."
+      ],
+      "4": [
+        "Personal information, including name, address, and driver license number is exempt from public disclosure, but may be given to law enforcement agencies"
+      ],
+      "5": [
+        "Drivers under 18 can submit proof of their IEP to prevent a truancy-related driver license suspension."
+      ],
+      "6": [
+        "Expands the Move Over Law to include moving over for: A disabled motor vehicle that is stopped and displaying warning lights or hazard lights."
+      ],
+      "7": [
+        "The registered owner of a motor vehicle found who is in violation is subject to a $100 fine."
+      ],
+      "8": [
+        "The registered owner of a motor vehicle found who is in violation is subject to a civil penalty of $200"
+      ],
+      "9": [
+        "The buses equipped with the infraction detection system will have the following: The words “CAMERA ENFORCED.”"
+      ],
+      "10": [
+        "avoid suspension of their driver license... to include when the obligor is participating in good faith in job training."
+      ],
+      "11": [
+        "a person operating a golf cart on public roads or streets who is under 18 years of age must possess a valid learner’s driver license or valid driver license"
+      ],
+      "12": [
+        "a person commits a third-degree felony when they knowingly and willfully transport into this state an individual who the person knows, or reasonably should know, has entered the United States"
+      ],
+      "13": [
+        "It also enhances the offense to a second-degree felony if a person: Transports a minor into the state in violation of this section;"
+      ],
+      "14": [
+        "The handbook is not a legal authority and is not intended for use in court."
+      ],
+      "15": [
+        "Optional Designations",
+        "Veteran Designation"
+      ],
+      "16": [
+        "Required Designations",
+        "Selective Service"
+      ],
+      "17": [
+        "Basic Driver Improvement (BDI) Course"
+      ],
+      "18": [
+        "Advanced Driver Improvement (ADI) Courses"
+      ],
+      "19": [
+        "These laws include the No-Fault Law and Financial Responsibility Law."
+      ],
+      "20": [
+        "Restrictions for Minors (Driving Curfews)"
+      ],
+      "21": [
+        "Losing the Privilege to Drive",
+        "Suspensions",
+        "Revocations",
+        "Cancellations"
+      ],
+      "22": [
+        "Advanced Driver Assistance Systems (ADAS)"
+      ],
+      "23": [
+        "Driving Under the Influence (DUI)"
+      ],
+      "24": [
+        "ID Cards for Homeless Persons",
+        "ID Cards for Persons at or Below Poverty Level"
+      ],
+      "25": [
+        "Drivers 80 Years Old and Older"
+      ],
+      "26": [
+        "Move Over Law"
+      ],
+      "27": [
+        "Specialized Signs and Signals",
+        "Drawbridge Signs & Signals"
+      ],
+      "28": [
+        "Treat For Shock"
+      ],
+      "29": [
+        "Golf Carts"
+      ],
+      "30": [
+        "Must only drive during daylight hours during the first three months."
+      ],
+      "31": [
+        "Must have at least 50 hours of driving experience prior to getting driver license, and 10 hours should be at night."
+      ],
+      "32": [
+        "AGE 16 WITH DRIVER LICENSE May drive from 6 am to 11 pm unless driving to or from work OR accompanied by a licensed driver who is 21+."
+      ],
+      "33": [
+        "AGE 17 WITH DRIVER LICENSE May drive from 5 am to 1 am unless driving to or from work OR accompanied by a licensed driver who is 21+."
+      ],
+      "34": [
+        "Drivers under the age of 18 who accumulate six or more points within a 12-month period are automatically restricted to driving for “Business Purposes ONLY” for one year."
+      ],
+      "35": [
+        "Always carry your driver license with you when driving, and always have proof of vehicle registration and insurance with you in the vehicle you are driving."
+      ],
+      "36": [
+        "A non-resident... who accepts employment or engages in a trade, profession or occupation in this state... must get a Florida driver license within 30 days"
+      ],
+      "37": [
+        "A non-resident... who... enrolls their child in a Florida public school must get a Florida driver license within 30 days",
+        "Any non-resident attending college in Florida.",
+        "Members of the Armed Forces stationed in Florida, their spouses and dependents."
+      ],
+      "38": [
+        "Germany (driving skills test only)"
+      ],
+      "39": [
+        "Note: A vision exam is still required."
+      ],
+      "40": [
+        "Class E allows drivers to operate non-commercial vehicles with Gross Vehicle Weight Rating (GVWR) less than 26,001 pounds."
+      ],
+      "41": [
+        "To operate any two or three wheel motorcycle, whose engine size is more than 50 cc, you are required to have a motorcycle endorsement"
+      ],
+      "42": [
+        "A vehicle designed to transport 16 or more passengers (including the driver);"
+      ],
+      "43": [
+        "Two documents that show your Florida residential address."
+      ],
+      "44": [
+        "you will need to present a name change document such as a marriage certificate, divorce decree or court order"
+      ],
+      "45": [
+        "Learner’s License 1. Be at least 15 years old."
+      ],
+      "46": [
+        "must certify that the driver has had at least 50 hours of driving experience, of which 10 hours were at night."
+      ],
+      "47": [
+        "Must hold a learner’s license for 12 months or until the 18th birthday, whichever comes first."
+      ],
+      "48": [
+        "W-2 form.",
+        "Social Security card.",
+        "Paycheck containing your complete social security number."
+      ],
+      "49": [
+        "Hospital birth certificates will not be accepted."
+      ],
+      "50": [
+        "may be issued a 60-day temporary driving permit without a photo."
+      ],
+      "51": [
+        "Completion of Traffic Law and Substance Abuse Education Course (TLSAE)*.",
+        "Traffic Law Substance Abuse Education (TLSAE) Course"
+      ],
+      "52": [
+        "Applicants who successfully pass a driver's education course at a certified DELAP school are exempt from the TLSAE requirement"
+      ],
+      "53": [
+        "Must have NO moving traffic violation convictions for 12 months from learner’s license date of issue. May have ONE moving traffic violation... if adjudication is withheld."
+      ],
+      "54": [
+        "If you are under age 18 and are not married, a parent or legal guardian must sign your license application"
+      ],
+      "55": [
+        "* Individuals living with another person must present two documents and a letter from that person."
+      ],
+      "56": [
+        "If you recently changed your name, you must update your records with the Social Security Administration first."
+      ],
+      "57": [
+        "Marriage certificate.",
+        "Secondary Identification... If you have never been issued a social security number and you are a US citizen or immigrant, you must provide one of the secondary documents"
+      ],
+      "58": [
+        "If you are under age 18 and are not married, a parent or legal guardian must sign your license application"
+      ],
+      "59": [
+        "The signer must write a letter to FLHSMV requesting to withdraw their consent",
+        "The signer may also go to MyDMVPortal.flhsmv.gov to cancel the license."
+      ],
+      "60": [
+        "If you are diabetic and use insulin, you may request that “Insulin Dependent” is indicated on your driver license."
+      ],
+      "61": [
+        "If you have a restriction on your license and do not comply with the requirements, you could receive a citation and have your license suspended."
+      ],
+      "62": [
+        "G | Daylight Driving Only. (Dawn to dusk)"
+      ],
+      "63": [
+        "Be 5 years of age or older*.",
+        "* Any person, regardless of age, can be issued an ID card if applying for a disabled parking permit."
+      ],
+      "64": [
+        "ID cards issued to persons 5–14 years of age will be valid for four years; all others will be valid for eight years."
+      ],
+      "65": [
+        "Persons holding a driver license who wish to obtain a Florida ID card must surrender their driver license.",
+        "You are prohibited from holding both a driver license and an ID card at the same time."
+      ],
+      "66": [
+        "If you are homeless, you can get an ID card at no cost. You must provide a current letter from a local homeless shelter verifying that you are homeless"
+      ],
+      "67": [
+        "State law requires any male who is a US citizen or immigrant, who is at least 18 years old but less than 26 years old, to comply with Federal Selective Service System requirements"
+      ],
+      "68": [
+        "Sexual predators and offenders must report in person to a driver license service center... within 48 hours after any change in name or address."
+      ],
+      "69": [
+        "By registering as a donor, you could save up to eight lives."
+      ],
+      "70": [
+        "The veteran will need to provide a copy of their DD214 or other approved discharge document at the time of issuance."
+      ],
+      "71": [
+        "You must obtain a new driver license within 30 calendar days of any change to your mailing or residential address."
+      ],
+      "72": [
+        "Present an original or certified government issued marriage certificate, divorce decree, or court order as a name change document."
+      ],
+      "73": [
+        "Canadian Citizens must change your name on your Canadian passport before applying for a name change on your driver license or ID card."
+      ],
+      "74": [
+        "If the card was stolen and you provide a copy of the police report (in person), the replacement fee is waived as long as you are not making any changes to the card."
+      ],
+      "75": [
+        "Class E driver licenses are valid for six to eight years."
+      ],
+      "76": [
+        "You did not answer a summons which involved a traffic violation."
+      ],
+      "77": [
+        "Your previous renewal was by phone, mail, or online."
+      ],
+      "78": [
+        "All drivers who are 80 years of age or older and who are renewing their driver license are required to pass a vision exam."
+      ],
+      "79": [
+        "Initial license fee for first Florida license..................................................................$48"
+      ],
+      "80": [
+        "Application for renewal received after the license expiration date (midnight of your birthday) requires a $15 late fee."
+      ],
+      "81": [
+        "Administrative fee alcohol & drug-related offenses............................... $130"
+      ],
+      "82": [
+        "Failure to maintain PIP insurance: (1st suspension)....................................................................................................... $150"
+      ],
+      "83": [
+        "Written re-tests (Class E Knowledge Exam).............................................. $10"
+      ],
+      "84": [
+        "Any veteran honorably discharged... determined by the Veterans Administration to have a 100% service-connected disability, is exempt from paying certain driver license fees"
+      ],
+      "85": [
+        "If you have never held—or do not have in your possession—a driver license in any state, country, or jurisdiction, you must complete a TLSAE course"
+      ],
+      "86": [
+        "If you are under 21 years old and receive a notice of suspension for driving with a Blood Alcohol Level (BAL) of .02 to .05, you must complete a TLSAE course"
+      ],
+      "87": [
+        "You were a driver in a crash and are found at fault and someone was transported to the hospital."
+      ],
+      "88": [
+        "A person may make no more than five elections in a lifetime."
+      ],
+      "89": [
+        "You may not elect to attend if you were charged with exceeding the speed limit by more than 30 MPH."
+      ],
+      "90": [
+        "If your Florida driver license was suspended for points, as a habitual traffic offender (non-DUI)... you must complete an advanced driver improvement course"
+      ],
+      "91": [
+        "The minimum acceptable field of vision for an applicant or licensed driver is 130 degrees."
+      ],
+      "92": [
+        "(The use of telescopic lenses to meet visual standards is not recognized in Florida.)"
+      ],
+      "93": [
+        "The Class E Knowledge Exam consists of 50 multiple-choice questions"
+      ],
+      "94": [
+        "No windshield wipers on the driver’s side."
+      ],
+      "95": [
+        "Back up a distance of 50 feet at a slow speed while looking to the rear. Do not use the rear-view mirror or rear-view camera monitor."
+      ],
+      "96": [
+        "Keep a minimum following distance of three to four seconds."
+      ],
+      "97": [
+        "signal your turn for the last 100 feet."
+      ],
+      "98": [
+        "Within 30 days from the date you received the traffic citation and prior to attending class, you must: 1. Inform the Clerk of Court"
+      ],
+      "99": [
+        "Students under 18 may take the knowledge exam online."
+      ],
+      "100": [
+        "If one eye is blind or 20/200 or worse, the other eye must be 20/40 or better with or without corrective lenses."
+      ],
+      "101": [
+        "No other passengers are permitted during the exam (unless a language interpreter is necessary)."
+      ],
+      "102": [
+        "Signal and Turn. Get into the proper lane and signal your turn for the last 100 feet."
+      ],
+      "103": [
+        "Three Point Turn. Turn car around in a 20–40 foot space."
+      ],
+      "104": [
+        "have a minimum of $10,000 in PIP AND a minimum of $10,000 in PDL coverage;"
+      ],
+      "105": [
+        "You must comply if you own a motor vehicle that has been in the state for 90 days (consecutive or non-consecutive) during the last 365 days."
+      ],
+      "106": [
+        "Turn in your plate before canceling your insurance to prevent the suspension of your license and to avoid reinstatement fees."
+      ],
+      "107": [
+        "if you falsify the card—you may be arrested and charged with a second-degree misdemeanor."
+      ],
+      "108": [
+        "This higher coverage must be in effect for three years after your DUI conviction."
+      ],
+      "109": [
+        "Must only drive during daylight hours during the first three months. After three months, may drive until 10 pm."
+      ],
+      "110": [
+        "A 16-year-old licensed driver may not drive between 11 pm and 6 am unless driving to or from work or accompanied by a licensed driver age 21 or older."
+      ],
+      "111": [
+        "A 17-year-old licensed driver may not drive between 1 am and 5 am, unless driving to or from work or accompanied by a licensed driver age 21 or older."
+      ],
+      "112": [
+        "Anyone who obtains or uses a permit that does not belong to them can be charged with a second degree misdemeanor, punishable by a $500 fine or up to 6 months in jail"
+      ],
+      "113": [
+        "Use Proper Posture. Keep both hands on the steering wheel and do not rest your elbow in the window."
+      ],
+      "114": [
+        "If your driver license or license plate is suspended for not having insurance, you won’t be able to get a temporary license for any reason, not even to go to work."
+      ],
+      "115": [
+        "Stay in Proper Lane. Drive in the right lane except on a one-way street."
+      ],
+      "116": [
+        "Allowing an unlicensed person to use your car, or renting a motor vehicle to someone without a license."
+      ],
+      "117": [
+        "If you refuse to take the tests when asked, your license will automatically be suspended for one year."
+      ],
+      "118": [
+        "A second refusal will result in an 18 month suspension and a first degree misdemeanor."
+      ],
+      "119": [
+        "In DUI cases involving death or serious injury, you will be required to take a blood test with or without your consent."
+      ],
+      "120": [
+        "Any driver under 21 years of age who is stopped by law enforcement and has a BAL of .02 or higher will automatically have their driving privilege suspended for six months."
+      ],
+      "121": [
+        "If you throw more than 15 pounds of litter, you can be charged with a first-degree misdemeanor, fined up to $1,000, and receive 3 points on your driving record."
+      ],
+      "122": [
+        "Four points on your driver license;"
+      ],
+      "123": [
+        "Suspension of license for a minimum of one year;"
+      ],
+      "124": [
+        "children ages 4 and 5 must be in either a safety seat or a booster seat."
+      ],
+      "125": [
+        "Drivers will be charged with a safety belt/child restraint violation if any passenger under 18 is not properly restrained."
+      ],
+      "126": [
+        "Employee of a newspaper home delivery service while delivering newspapers."
+      ],
+      "127": [
+        "In Florida, the speed limit will never be higher than 70 mph."
+      ],
+      "128": [
+        "License Revocation: Minimum 180 days."
+      ],
+      "129": [
+        "your car may be seized and forfeited to the arresting agency as contraband."
+      ],
+      "130": [
+        "It is against the law to damage the roads by driving on the rim of a flat tire or by any other means."
+      ],
+      "131": [
+        "The fine for exceeding the speed limit by more than 50 MPH is $1,000 for the first offense and $2,500 for the second."
+      ],
+      "132": [
+        "Fines are doubled when speeding infractions occur within a school zone or construction zone, with possible civil penalties up to $1,000"
+      ],
+      "133": [
+        "If you are found at fault in a crash where anyone was injured and transported to a medical treatment facility... you will be required by law to attend a Traffic Collision Avoidance Course."
+      ],
+      "134": [
+        "receive 4 hours of behind-the- wheel training from a Florida licensed commercial driving school (CDS);"
+      ],
+      "135": [
+        "18 points within a 18-month period—3 month suspension"
+      ],
+      "136": [
+        "Passing a stopped school bus 4"
+      ],
+      "137": [
+        "Texting resulted in a crash +6*"
+      ],
+      "138": [
+        "Fail to pay child support.",
+        "A felony for drug possession.",
+        "Racing on the highway."
+      ],
+      "139": [
+        "You give false information or identification."
+      ],
+      "140": [
+        "you must apply for a formal or informal review hearing at the appropriate BAR office within 10 days of your date of arrest."
+      ],
+      "141": [
+        "If you have difficulty turning your head to check blind spots, consider getting a larger side mirror;"
+      ],
+      "142": [
+        "Avoid risky driving times: Dusk, dawn, and nighttime. Bad weather. Rush-hour traffic. Fast-paced highways."
+      ],
+      "143": [
+        "There are three main categories of driver distraction: 1. Visual 2. Manual 3. Cognitive"
+      ],
+      "144": [
+        "Texting involves all three categories of distractions, making it one of the most dangerous of distracted driving behaviors."
+      ],
+      "145": [
+        "Florida law prohibits a person from operating a motor vehicle while using a wireless communications device in a handheld manner in a designated school crossing, school zone, or work zone."
+      ],
+      "146": [
+        "A person’s judgment is the first thing affected after drinking an alcoholic beverage."
+      ],
+      "147": [
+        "A DUI (Driving Under the Influence) conviction must remain on your driving record for 75 years."
+      ],
+      "148": [
+        "On long trips, take a break every 100 miles or 2 hours."
+      ],
+      "149": [
+        "Mixing alcohol and drugs often multiplies the effects of the alcohol and drugs."
+      ],
+      "150": [
+        "remain calm and try to put as much distance between you and them as possible. Slow down and let them pass.",
+        "If you need help, call *FHP (*347) or 911."
+      ],
+      "151": [
+        "must obtain the registration certificate and license plate within 10 days after beginning employment or enrollment."
+      ],
+      "152": [
+        "The vehicle identification number (VIN) on any vehicle previously titled or registered in another state must be verified"
+      ],
+      "153": [
+        "Registrations expire at midnight on the birthday of the first owner listed on the registration form"
+      ],
+      "154": [
+        "Registrations may be renewed up to 90 days prior to the expiration date."
+      ],
+      "155": [
+        "to improve the safety, access, and mobility needs of Florida’s aging road users."
+      ],
+      "156": [
+        "These drugs can give a person a false sense of alertness and self-confidence or make a person drowsy"
+      ],
+      "157": [
+        "mobile homes and semi-trucks/ semi-trailers renew yearly by December 31."
+      ],
+      "158": [
+        "Registrations expire at midnight on the birthday of the first owner listed on the registration form"
+      ],
+      "159": [
+        "mobile homes and semi-trucks/ semi-trailers renew yearly by December 31."
+      ],
+      "160": [
+        "Low Beam Headlights: Show objects 150 feet ahead. Visible from 1,000 feet."
+      ],
+      "161": [
+        "Brake Lights: Two red brake lights. Visible from 300 feet in the daytime."
+      ],
+      "162": [
+        "Horn: Heard from a distance of 200 feet."
+      ],
+      "163": [
+        "Tires: Should have a minimum tread of at least 3/32 of an inch or greater, and no worn spots showing the ply."
+      ],
+      "164": [
+        "Red lights visible from front or blue lights. For emergency/law enforcement vehicles only."
+      ],
+      "165": [
+        "Headsets/headphones worn by driver while operating a vehicle."
+      ],
+      "166": [
+        "Air bags are designed to work with safety belts to protect occupants during a collision. Air bags are NOT a replacement for wearing a safety belt."
+      ],
+      "167": [
+        "Collision Warning Systems only provide warnings to drivers and do NOT take action to avoid a crash.",
+        "Collision Intervention Systems are designed to take action to avoid a crash."
+      ],
+      "168": [
+        "Drivers with ABS need to press down hard on the brake pedal, hold it, and steer out of danger."
+      ],
+      "169": [
+        "Drivers with conventional brakes must pump the brakes in order to stop in an emergency situation where traction is lost and the vehicle slides."
+      ],
+      "170": [
+        "Height limitations are governed by the net shipping weight of the vehicle, not the modified or altered weight."
+      ],
+      "171": [
+        "Tampering can cause damage your vehicle, increased air pollution, lower gas mileage, less vehicle efficiency and breathing difficulties."
+      ],
+      "172": [
+        "At least one rear-view mirror with view 200 feet to the rear."
+      ],
+      "173": [
+        "not be more than 15 feet long unless you are towing poles, pipes, machinery, or other objects"
+      ],
+      "174": [
+        "extending more than 6 inches beyond the line of the fenders on the right side."
+      ],
+      "175": [
+        "During the day, red flags at least 18 inches square must mark the extremities of the load."
+      ],
+      "176": [
+        "Double solid white lines. Crossing a double solid line/ changing lanes is not allowed."
+      ],
+      "177": [
+        "Double yellow lines–broken on right (“your side” of line), solid on left. Passing is permitted"
+      ],
+      "178": [
+        "Motorized vehicles are not allowed to drive in bike lanes; they may cross over them when turning"
+      ],
+      "179": [
+        "Flourescent Yellow Green: High emphasis warning of school, pedestrian and bicycling activity."
+      ],
+      "180": [
+        "Brown: Areas of public recreation, cultural and historical significance."
+      ],
+      "181": [
+        "East-West routes have even numbers and North-South have odd numbers."
+      ],
+      "182": [
+        "Brakes that can be operated by the driver in the towing vehicle. The brakes must be designed and connected to automatically stop the trailer if it breaks away from the towing vehicle."
+      ],
+      "183": [
+        "You must use a close-fitting cover when hauling loads which could fall or blow onto the roadway (e.g., dirt, sand, gravel)."
+      ],
+      "184": [
+        "Two-way roadway with center lane: drivers from either direction may use the center lane for left turns; you must not use for passing."
+      ],
+      "185": [
+        "Curbs are often marked yellow to indicate no parking zones near fire hydrants or intersections."
+      ],
+      "186": [
+        "Single solid yellow line. Marks the left edge of the roadway on divided highways and one-way streets."
+      ],
+      "187": [
+        "East-West routes have even numbers and North-South have odd numbers."
+      ],
+      "188": [
+        "Brown and White Signs. Direct you to scenic areas, parks, and areas of cultural/historical significance."
+      ],
+      "189": [
+        "If vehicles arrive at approximately the same time, each driver must yield to the driver on their right."
+      ],
+      "190": [
+        "Speeding Fines Doubled. Posted in active school and work zones. Fines will be doubled if you are cited for speeding in this area."
+      ],
+      "191": [
+        "Begin Right Turn Lane. When entering a right turn lane you may encounter bicyclists traveling straight; you must yield to the bicyclists."
+      ],
+      "192": [
+        "Slower Traffic Keep Right. Slower traffic must stay in the right lane unless passing. Slower traffic must move out of the left lane when being overtaken by a faster vehicle."
+      ],
+      "193": [
+        "Warning signs are normally yellow and diamond-shaped. They alert drivers to conditions ahead and what to look out for."
+      ],
+      "194": [
+        "Divided Highway Ends. The divided highway ends 350 to 500 feet ahead. You will then be on a roadway with two-way traffic."
+      ],
+      "195": [
+        "Hill/Downgrade. The road goes downhill ahead. Slow down and be ready to shift to lower gear to control speed."
+      ],
+      "196": [
+        "If a traffic signal is out of order and law enforcement is not present, treat the light/intersection as a four-way stop sign"
+      ],
+      "197": [
+        "You may turn left from a one-way street onto a one-way street that has traffic moving to the left."
+      ],
+      "198": [
+        "YELLOW LIGHT Warning—the light is changing to red. Stop if you can safely do so."
+      ],
+      "199": [
+        "Slippery Surface. In wet weather, drive slowly. Don't speed up or brake quickly. Make turns at slow speeds."
+      ],
+      "200": [
+        "Center Turn Lane. The center lane is shared, allowing left turns in both directions of travel."
+      ],
+      "201": [
+        "No Parking on Pavement. If you stop, you must always park off the pavement of the roadway."
+      ],
+      "202": [
+        "FLASHING RED LIGHT Used at dangerous intersections. Treat it like a stop sign; stop and proceed when safe."
+      ],
+      "203": [
+        "Red X. Never drive in a lane under the red X."
+      ],
+      "204": [
+        "Ramp signals control the rate of vehicles entering an expressway"
+      ],
+      "205": [
+        "stripes on barricades and panel devices slope downward in the direction traffic must travel."
+      ],
+      "206": [
+        "Flashing Yellow Signal. When the yellow light is flashing, the drawbridge is in operation. Slow down and prepare to stop."
+      ],
+      "207": [
+        "If you are already in the crosswalk when this signal begins flashing, quickly finish crossing the street."
+      ],
+      "208": [
+        "If there is a red flashing light, proceed with caution. If no pedestrian is present and the intersection is clear, go."
+      ],
+      "209": [
+        "Do not stop on the railroad tracks or within 15 feet of the crossing."
+      ],
+      "210": [
+        "Dynamic Envelope. White roadway markings in the shape of connecting X’s used to visually highlight the danger zone where road users should not stop."
+      ],
+      "211": [
+        "many are required to stop at railroad crossings even when gates are up/lights are not flashing."
+      ],
+      "212": [
+        "Turns are allowed in the direction of the arrow.",
+        "The oncoming traffic has a green light. Yield to oncoming traffic and pedestrians."
+      ],
+      "213": [
+        "alert motorists of an upcoming school bus stop that may be unexpected or obscured by roadway geometry"
+      ],
+      "214": [
+        "Approach at a speed that will allow you to slow down if the light changes."
+      ],
+      "215": [
+        "It's against the law to drive around or under a crossing gate—either down or while being opened or closed."
+      ],
+      "216": [
+        "the vehicle must be equipped with side mirrors on both sides that allow the driver a rearview of at least 200 feet."
+      ],
+      "217": [
+        "Place your right arm on the back of the passenger seat and turn around so that you can look directly through the rear window."
+      ],
+      "218": [
+        "Doubling the speed means the braking distance and impact are 4 times greater."
+      ],
+      "219": [
+        "total minimum distance your vehicle will travel (perception distance, reaction distance, and braking distance)"
+      ],
+      "220": [
+        "Keep a minimum following distance of four seconds during favorable weather and traffic conditions."
+      ],
+      "221": [
+        "It's against the law to follow a fire truck responding to an emergency closer than 500 feet."
+      ],
+      "222": [
+        "A truck or any vehicle towing another vehicle must not follow within 300 feet of another truck or another vehicle in tow."
+      ],
+      "223": [
+        "If vehicles arrive at approximately the same time, each driver must yield to the drivers on their right."
+      ],
+      "224": [
+        "you enter a paved road from an unpaved road;"
+      ],
+      "225": [
+        "Roundabouts travel in a one-way, counter-clockwise direction."
+      ],
+      "226": [
+        "To go straight or left, and to make a U-turn, use the left lane."
+      ],
+      "227": [
+        "turn your head to make sure these areas are clear."
+      ],
+      "228": [
+        "If your vehicle is being followed too closely, slow down and keep to the right."
+      ],
+      "229": [
+        "Tripling the speed means the braking distance and impact are 9 times greater."
+      ],
+      "230": [
+        "At a two-way stop, the turning vehicle yields to the vehicle going straight."
+      ],
+      "231": [
+        "motor-driven cycles/motor scooters (with 150 cubic centimeter displacement or less) are not allowed on limited-access highways."
+      ],
+      "232": [
+        "Adjust your speed to safely merge into traffic when you reach the end of the acceleration lane."
+      ],
+      "233": [
+        "Don’t follow too closely. Rear-end collisions are the greatest danger on limited access highways."
+      ],
+      "234": [
+        "On a Two-Lane Roadway You must slow down to 20 MPH below the posted speed limit."
+      ],
+      "235": [
+        "If the speed limit is 20 MPH or less, you must travel at 5 MPH."
+      ],
+      "236": [
+        "with right-hand wheels parallel to and within 12 inches of the curb or side of roadway."
+      ],
+      "237": [
+        "Uphill with Curb Turn wheels away from curb."
+      ],
+      "238": [
+        "15 feet of a fire hydrant."
+      ],
+      "239": [
+        "Do not return to the right side of the road until you can see the tires of the vehicle you passed in your rear-view mirror."
+      ],
+      "240": [
+        "You must return to the right side of the road before coming within 200 feet of any approaching vehicle."
+      ],
+      "241": [
+        "on hills or curves where you can’t see at least 500 feet ahead;"
+      ],
+      "242": [
+        "Florida Law states that a driver must move out of the left lane when being overtaken from behind by another vehicle traveling at a faster speed."
+      ],
+      "243": [
+        "Passing on the right is only legal when there are two or more traffic lanes moving in the same direction or the vehicle you are passing is making a left turn."
+      ],
+      "244": [
+        "Municipal, Business, or Residential Area: 30 MPH*"
+      ],
+      "245": [
+        "When you double the speed of a car, you increase its force of impact four times."
+      ],
+      "246": [
+        "On highways, when the posted speed limit is 70 MPH, the minimum speed limit is 50 MPH."
+      ],
+      "247": [
+        "The center lane of a three-lane or five-lane highway is used only for turning left."
+      ],
+      "248": [
+        "If you see red reflectors facing you on the lane lines, you are on the wrong side of the road."
+      ],
+      "249": [
+        "You must give a turn signal at least 100 feet BEFORE making your turn."
+      ],
+      "250": [
+        "Turn right into the right lane of the roadway entered. A left turn may be completed in any lane lawfully available"
+      ],
+      "251": [
+        "Use a three-point turn only if the road is too narrow for a U-turn and you can’t go around the block.",
+        "Never make a three-point turn or a U-turn on a curve, a hill, the highway, or where there is a sign that prohibits U-turns."
+      ],
+      "252": [
+        "If collision is inevitable, do not swerve to avoid the animal. Keep your vehicle under control and on the roadway."
+      ],
+      "253": [
+        "Drive with lights on low beam. High beams will reflect off the fog and impair visibility even more.",
+        "Parking lights are not a substitute."
+      ],
+      "254": [
+        "When you turn on your windshield wipers, turn on your headlights."
+      ],
+      "255": [
+        "If this happens, slow down and gently push on the brake pedal until your brakes are working again."
+      ],
+      "256": [
+        "High beam headlights can reveal objects up to a distance of at least 450 feet and are most effective for speeds faster than 25 MPH."
+      ],
+      "257": [
+        "Some highways reserve the left lane for vehicles with two or more occupants or hybrid/low emission vehicles (LEV)."
+      ],
+      "258": [
+        "If you come to a flooded roadway, turn around and find another route. Do not attempt to drive through the water!"
+      ],
+      "259": [
+        "Not use high beam headlights within 500 feet of an oncoming vehicle; use low beam headlights."
+      ],
+      "260": [
+        "Not use high beam headlights within 300 feet of the vehicle ahead of you; use low beam headlights."
+      ],
+      "261": [
+        "Not drive using only parking lights in place of headlights.",
+        "Turn on your parking lights at night when parking on a roadway or shoulder outside of cities and towns."
+      ],
+      "262": [
+        "Crashes happen at intersections more than any other place."
+      ],
+      "263": [
+        "Hitting a vehicle moving in the same direction as you is better than hitting a vehicle head-on."
+      ],
+      "264": [
+        "Turn on your interior lights if you are pulled over at night to assist with visibility."
+      ],
+      "265": [
+        "Your acceptance and signature on a traffic ticket is not an admission of guilt."
+      ],
+      "266": [
+        "Let the officer know if you have a weapon in the vehicle upon first contact."
+      ],
+      "267": [
+        "If the crash is minor and your vehicle is blocking the flow of traffic, you must move it or have it moved."
+      ],
+      "268": [
+        "you must make a written report of the crash to FLHSMV within 10 days."
+      ],
+      "269": [
+        "you must leave a note including your name, contact information, and license plate (registration) number."
+      ],
+      "270": [
+        "Death: 1st degree felony, minimum 4-year prison term."
+      ],
+      "271": [
+        "All of the above include losing your driver license for 3 years minimum.",
+        "Death: 1st degree felony, minimum 4-year prison term.",
+        "Serious bodily injury: 2nd degree felony."
+      ],
+      "272": [
+        "Have the person lie flat and elevate their legs.",
+        "Cover the person with blankets to hold body heat.",
+        "Don’t give them anything to drink."
+      ],
+      "273": [
+        "Keep a minimum following distance of four seconds during favorable weather and traffic conditions.",
+        "To avoid striking the vehicle in front of you, keep at least four seconds following distance"
+      ],
+      "274": [
+        "If possible, park where the disabled vehicle can be seen for 200 feet in each direction."
+      ],
+      "275": [
+        "Drivers with anti-lock brakes (ABS) must press down hard on the brake pedal, hold it, and steer out of danger."
+      ],
+      "276": [
+        "NEVER apply water to a gasoline or diesel fire."
+      ],
+      "277": [
+        "1. Take your foot of the gas pedal.",
+        "2. Press the clutch (manual transmission) or shift into neutral (automatic transmission)."
+      ],
+      "278": [
+        "In circumstances where the power is out and traffic signals are not active, treat intersections as a four-way stop"
+      ],
+      "279": [
+        "1. Take your foot off the gas pedal.",
+        "3. Turn the vehicle’s front tires in the direction you want to go (steer in the direction of the skid)."
+      ],
+      "280": [
+        "If a train is coming, run in a 45-degree angle away from the tracks, but in a direction toward the train"
+      ],
+      "281": [
+        "your vehicle will only float on the surface for 30–60 seconds."
+      ],
+      "282": [
+        "Take your foot off the gas. Do not use the brakes.",
+        "Concentrate on steering.",
+        "Brake softly when the car is under control."
+      ],
+      "283": [
+        "Dry brakes by driving slowly in low gear and applying brakes."
+      ],
+      "284": [
+        "Florida law requires that you give bicyclists a minimum of three feet of clearance"
+      ],
+      "285": [
+        "When you must cross into a bike lane to make a turn, yield to any bicyclist and make your turn behind the bicyclist."
+      ],
+      "286": [
+        "A bicyclist may use the full lane even while traveling below the speed of traffic if the lane is too narrow for both a car and bicycle to share."
+      ],
+      "287": [
+        "a red reflector and a red light visible from 600 feet on the rear."
+      ],
+      "288": [
+        "Bicyclists must not wear headphones/earbuds in both ears while bicycling on the roadway."
+      ],
+      "289": [
+        "Avoid passing a CMV on a downgrade; its weight and momentum will cause it to increase speed."
+      ],
+      "290": [
+        "Do not drive between the CMV and the curb—they will not be able to see you."
+      ],
+      "291": [
+        "Pull over to the closest edge of the roadway immediately and stop until the emergency vehicle has passed."
+      ],
+      "292": [
+        "All vehicles in the procession should have their headlights on or may use flashing hazard lights as a signal to others not to drive between the funeral procession."
+      ],
+      "293": [
+        "a person who is 18 years of age or older must possess a valid form of government-issued photographic identification."
+      ],
+      "294": [
+        "You may cross state roads if the posted speed limit is 45 MPH or less and only at an intersection with a traffic control device."
+      ],
+      "295": [
+        "only be operated on streets with a posted speed limit is 35 MPH or less."
+      ],
+      "296": [
+        "Do not follow too closely behind a motorcycle because they have the ability to stop more quickly than other vehicles."
+      ],
+      "297": [
+        "Motorcyclists often slow down by down-shifting or rolling of the throttle, thus not activating the brake light."
+      ],
+      "298": [
+        "they must yield right-of-way to pedestrians and must give an audible signal before passing."
+      ],
+      "299": [
+        "Don’t use high beam headlights when following a CMV at night. Bright lights will blind the driver when they reflect of the CMV’s large side mirrors."
+      ],
+      "300": [
+        "You must not attempt to share a lane with a motorcycle. The motorcyclist is entitled to the entire lane."
+      ],
+      "301": [
+        "If transporting a child under age four or who weighs 40 pounds or less, bicyclists must use a backpack/sling, child seat, or trailer designed to carry children."
+      ],
+      "302": [
+        "You must be 16 years of age or older to operate a motorcycle or moped on a public road."
+      ],
+      "303": [
+        "Operators of mopeds must have a Class E driver license. A motorcycle endorsement is not required."
+      ],
+      "304": [
+        "Operators of motorcycles must wear a helmet unless they are 21 or older AND carry a medical insurance policy providing for at least $10,000 in medical benefits for injuries."
+      ],
+      "305": [
+        "You may not overtake or pass a vehicle that's stopped at a crosswalk to allow a pedestrian to cross the roadway.",
+        "A driver approaching a vehicle from the rear that is stopped at a crosswalk must assume that a pedestrian may be crossing"
+      ],
+      "306": [
+        "When walking on a roadway without a sidewalk, always walk on the shoulder on the left side, facing traffic."
+      ],
+      "307": [
+        "All drivers shall yield the right-of-way to public transit buses traveling in the same direction that have signaled and are reentering the traffic flow from a specifically designated pullout bay."
+      ],
+      "308": [
+        "If the highway is divided by a raised barrier or an unpaved median at least five feet wide, you do not have to stop if you are moving in the opposite direction of the bus."
+      ],
+      "309": [
+        "Painted lines or pavement markings are not considered barriers."
+      ],
+      "310": [
+        "Farm vehicles designed for operation at speeds less than 25 MPH must display this sign on the rear when using public highways (not limited access/interstates)."
+      ],
+      "311": [
+        "Come to a complete stop, yield the right-of-way, and use extra caution when approaching: a visually impaired pedestrian who is carrying a white cane with a red tip"
+      ],
+      "312": [
+        "Operators of motorcycles and mopeds do not have to carry Personal Injury Protection (PIP) insurance."
+      ],
+      "313": [
+        "When children or school crossing guards are present in a crosswalk, you must yield and stop at the stop line and not in the crosswalk."
+      ],
+      "314": [
+        "When entering or leaving an alley, driveway, or private road, you must stop for pedestrians on the sidewalk."
+      ],
+      "315": [
+        "If under 18, you must hold a learner’s license for 12 months with no moving violation convictions prior to the issuance of a Motorcycle Only license."
+      ],
+      "316": [
+        "Park parallel to the curb in the direction of traffic, with right-hand wheels parallel to and within 12 inches of the curb or side of roadway."
+      ],
+      "317": [
+        "Turn your wheels so that if your car starts to move, it will roll away from traffic or into the curb.",
+        "Downhill: Turn wheels to curb."
+      ],
+      "318": [
+        "Florida law requires that you give bicyclists a minimum of three feet of clearance and use caution/slow speed when driving next to or passing them."
+      ],
+      "319": [
+        "If the highway is divided by a raised barrier or an unpaved median at least five feet wide, you do not have to stop if you are moving in the opposite direction of the bus."
+      ],
+      "320": [
+        "Stay out of the “No Zone.” CMVs have large blind spots in front, behind, and on both sides of the vehicle."
+      ],
+      "321": [
+        "Not use high beam headlights within 300 feet of the vehicle ahead of you; use low beam headlights."
+      ],
+      "322": [
+        "Drive with lights on low beam. High beams will reflect off the fog and impair visibility even more.",
+        "When you turn on your windshield wipers, turn on your headlights."
+      ],
+      "323": [
+        "If you refuse to take the tests when asked, your license will automatically be suspended for one year."
+      ],
+      "324": [
+        "Must have at least 50 hours of driving experience prior to getting driver license, and 10 hours should be at night."
+      ],
+      "325": [
+        "Completion of Traffic Law and Substance Abuse Education Course (TLSAE)*.",
+        "You must complete a TLSAE course if you have never held— or do not have in your possession— a driver license"
+      ],
+      "326": [
+        "Renew or replace your driver license or identification card",
+        "If you are a US citizen or immigrant, you can renew your driver license online at MyDMVPortal.flhsmv.gov."
+      ],
+      "327": [
+        "The MyFlorida app allows customers to securely renew a registration on an eligible vehicle or vessel"
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 27,
-    "topics_covered": 27,
+    "topics_total": 30,
+    "topics_covered": 30,
     "coverage_pct": 100.0,
     "uncovered_topics": [],
     "verdict": "PASS",
@@ -64,6 +1085,32 @@
     "sign_ratio_pct": 5.2,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 327,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    },
+    "ja": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 327,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

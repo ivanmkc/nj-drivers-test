@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "wy",
   "name": "Wyoming",
-  "verified_at": "2026-05-26T02:35:22Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:25:07Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.dot.state.wy.us/files/live/sites/wydot/files/shared/Driver_Services/Help%20Documents%20and%20Manuals/2021_DriverManual_web_ClassC_w%20cover.pdf",
     "manual_pdf_sha256": "708b7f50fad23370574598ffa04674f1cc592891bec1f2439b5806b8323aee7a",
@@ -23,14 +23,798 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 247,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "Safe driving involves obeying traffic rules and regulations, being courteous on the road, driving defensively and making sure that you and your passengers wear a seat belt."
+      ],
+      "2": [
+        "The language of the Wyoming Motor Vehicle Law is not used in this manual, which therefore cannot be used as an actual expression of the law."
+      ],
+      "3": [
+        "We urge persons who are just learning to drive to also take advantage of local driver education classes."
+      ],
+      "4": [
+        "REQUIRED TESTS..........................................................................................6",
+        "Vision screening...........................................................................................6"
+      ],
+      "5": [
+        "At 16 and one half..................................................................................11",
+        "At 16 and one-half years of age, applicants may also be issued full driving privileges"
+      ],
+      "6": [
+        "At age 17...................................................................................9",
+        "At 17, an applicant may be issued a Wyoming driver’s license with full driving privileges"
+      ],
+      "7": [
+        "For extreme inconvenience....................................................................................11",
+        "A restricted license may be issued to applicants, 14-15, when an extreme inconvenience exists"
+      ],
+      "8": [
+        "Alcohol the major cause of crashes........................................................31"
+      ],
+      "9": [
+        "Statutes relating to driver licensing and motor vehicles are found in Wyoming Laws and Related Statutes."
+      ],
+      "10": [
+        "Ignition interlock devices........................................................................................26"
+      ],
+      "11": [
+        "WYOMING ORGAN AND TISSUE DONOR REGISTRY................15",
+        "Wyoming Organ and Tissue Donor Registry"
+      ],
+      "12": [
+        "WYOMING AMBER ALERT SYSTEM..........................................13",
+        "Wyoming Amber Alert System"
+      ],
+      "13": [
+        "THE DRIVER LICENSE COMPACT...............................................31",
+        "The Driver License Compact"
+      ],
+      "14": [
+        "SR-22..............................................................................................25",
+        "SR-22 An SR-22 is an insurance certificate that your insurance company files with the department."
+      ],
+      "15": [
+        "contact Driver Services at (307) 777-4800, or write to us at Wyoming Department of Transportation, Driver Services"
+      ],
+      "16": [
+        "Members of the Armed Forces stationed in Wyoming, and their dependents, who have a valid license issued by their state of residence"
+      ],
+      "17": [
+        "their out-of-state license must be surrendered within one year of residency in Wyoming."
+      ],
+      "18": [
+        "For full driving privileges, an applicant must be at least 17",
+        "Persons under 16 years of age;",
+        "Persons whose driving privileges are suspended, canceled, denied or revoked in this or any other state"
+      ],
+      "19": [
+        "The Class C license authorizes operation of a single vehicle or combination of vehicles... with a GVWR less than 26,001 pounds"
+      ],
+      "20": [
+        "The class “M” license is issued solely for the operation of motorcycles."
+      ],
+      "21": [
+        "B – Corrective lenses"
+      ],
+      "22": [
+        "G – Daylight driving only"
+      ],
+      "23": [
+        "An instruction permit may be obtained at 15."
+      ],
+      "24": [
+        "For full driving privileges, an applicant must be at least 17, or be 16-1/2 and have completed an approved driver education course and held an intermediate license for six months."
+      ],
+      "25": [
+        "First-time applicants for a driver license or identification card must provide a state-certified birth certificate, a valid U.S. passport or immigration documents."
+      ],
+      "26": [
+        "When licensees change their addresses, they must notify the department in writing within 10 days of the change."
+      ],
+      "27": [
+        "Any two of the following are acceptable documents that must be provided as proof that you are a Wyoming resident"
+      ],
+      "28": [
+        "they must show a residential address, not a P.O. Box:"
+      ],
+      "29": [
+        "A person must have 20/40 acuity with both eyes, either with or without glasses"
+      ],
+      "30": [
+        "and a combined horizontal field vision of at least 120 degrees to meet Wyoming vision standards"
+      ],
+      "31": [
+        "If your visual acuity is worse than 20/40 but at least 20/100, you will be required to take a driving skills test."
+      ],
+      "32": [
+        "Applicants for a driver's license are allowed to take the written test twice in one day."
+      ],
+      "33": [
+        "It must also state that the student has completed 30 hours of classroom instruction and six hours of behind-the-wheel driving."
+      ],
+      "34": [
+        "the driver must be accompanied by a person 18 or older, who possesses a valid driver license for the type of vehicle being driven."
+      ],
+      "35": [
+        "If licensee is under 21 and wants an \"adult\"-type license, they can only renew within 30 days of their 21st birthday."
+      ],
+      "36": [
+        "At 16 and one-half years of age, applicants may also be issued full driving privileges if they have a current intermediate license that is at least six months old"
+      ],
+      "37": [
+        "The applicant must have held an instruction permit and must live five or more miles from school and/or employment."
+      ],
+      "38": [
+        "The license is only valid between the hours of 5 a.m. and 8 p.m. and within 50 miles of the licensee's residence."
+      ],
+      "39": [
+        "completed 50 hours of behind-the-wheel driving, including 10 hours of nighttime driving, as certified by a parent or legal guardian."
+      ],
+      "40": [
+        "May not transport more than one passenger under the age of 18 who is not an immediate family member unless also accompanied by a licensed driver 18 years of age or older"
+      ],
+      "41": [
+        "May not drive between 11 p.m. and 5 a.m. unless the holder meets an exception criteria and presents a completed exception form."
+      ],
+      "42": [
+        "An intermediate license will be suspended for 30 days for any violation of these provisions."
+      ],
+      "43": [
+        "An additional technology fee of $5 will be imposed on all classes of driver licenses and CDL Skills tests."
+      ],
+      "44": [
+        "All tests are given in English only, so if a person cannot speak or write the English language, an interpreter may be used."
+      ],
+      "45": [
+        "An intermediate license automatically expires 30 days after the holder’s 17th birthday."
+      ],
+      "46": [
+        "The child must be 17 years of age or younger."
+      ],
+      "47": [
+        "more than 50% of those fatalities were not wearing their seat belts."
+      ],
+      "48": [
+        "It is possible to obtain another’s driver record provided a written release is presented to the examiner from the person whose driver record is being released."
+      ],
+      "49": [
+        "The Federal Driver’s Privacy Protection Act prohibits WYDOT from providing personal information to individuals and businesses for the purposes of surveys, marketing and solicitations."
+      ],
+      "50": [
+        "A parent's or guardian's signature is required to approve an anatomical gift for minors under eighteen (18) years of age."
+      ],
+      "51": [
+        "Permanent disabled placards are issued to persons who suffer from physical impairments. The impairment must last a minimum of 12 months."
+      ],
+      "52": [
+        "Temporary placards may be issued to persons who suffer an impairment for up to 6 months."
+      ],
+      "53": [
+        "Disabled placards are available at no cost to the applicant."
+      ],
+      "54": [
+        "Funds in the wildlife conservation account shall only be used to provide for wildlife conservation efforts related to the transportation system"
+      ],
+      "55": [
+        "results of your chemical test show an alcohol concentration of 0.08 percent or greater."
+      ],
+      "56": [
+        "Length of suspension: 90 days. (If you are convicted of the DWUI in court, the time served for the Administrative Per Se suspension will be credited)"
+      ],
+      "57": [
+        "Start of suspension/disqualification: 30 days after the issuance of the temporary driver’s license and notice of suspension given by the officer"
+      ],
+      "58": [
+        "If your BAC (blood alcohol content) at the time of arrest was .15% or greater, you will be required to hold an ignition interlock restricted driver license for a period of 6 months"
+      ],
+      "59": [
+        "2nd offense (within previous 10 years) Length of suspension: One year."
+      ],
+      "60": [
+        "If convicted of 4th or subsequent DWUI which includes alcohol, you will be required to hold an ignition interlock restricted driver license for life"
+      ],
+      "61": [
+        "If you are younger than 21 years of age and are in actual physical control of a vehicle with an alcohol concentration of two one-hundredths of one percent (0.02 percent) or more"
+      ],
+      "62": [
+        "First offense: Length of suspension: 90 days."
+      ],
+      "63": [
+        "This suspension results upon receipt of a conviction of driving a vehicle with willful or wanton disregard for the safety of persons or property."
+      ],
+      "64": [
+        "Second offense (within previous five years) Length of suspension: Six months."
+      ],
+      "65": [
+        "Transporting Liquor to a Minor Suspension",
+        "Length of suspension: One year."
+      ],
+      "66": [
+        "This results when a court informs the department that you have not complied with the terms of a traffic citation."
+      ],
+      "67": [
+        "You are allowed up to three moving violations within a 12-month period. Upon receipt of conviction for a fourth moving violation, you will be notified that your driving privilege will be suspended."
+      ],
+      "68": [
+        "Length of suspension: Until an SR-22 insurance form has been filed with the department."
+      ],
+      "69": [
+        "These actions may result in the cancellation of the card, and/or a 90-day suspension for the person using or lending the driver’s license or ID card."
+      ],
+      "70": [
+        "This results upon notification from the Department of Family Services (DFS) that you are in arrears of $5,000 or more for 90 consecutive days."
+      ],
+      "71": [
+        "A 90-day suspension is imposed for a first offense and a one-year suspension for a second or subsequent offense."
+      ],
+      "72": [
+        "Intermediate License Suspension This suspension is the result of a violation of the restrictions for an intermediate license. A 30-day suspension is imposed for this offense."
+      ],
+      "73": [
+        "Driving under Suspension, Revocation or Cancellation This results in a 30-day suspension of your driving privileges if you are under 21 years of age."
+      ],
+      "74": [
+        "An intermediate license will be suspended for 30 days for any violation of these provisions."
+      ],
+      "75": [
+        "Post a cash deposit for the total amount of property damage, plus $25,000 per injury."
+      ],
+      "76": [
+        "You can only be issued one probationary driver’s license in a five-year period"
+      ],
+      "77": [
+        "The reinstatement fee for a child support suspension is $5."
+      ],
+      "78": [
+        "Offenses that will cause a revocation are: • Third or subsequent Driving While Under the Influence (DWUI); • Third or subsequent Reckless Driving; • Leaving the Scene of an Injury Accident;"
+      ],
+      "79": [
+        "Proof of financial responsibility must be maintained for three years from the date it is required."
+      ],
+      "80": [
+        "The start of a suspension/revocation is 30 days from the date the order is mailed to you by the department or given to you by law enforcement"
+      ],
+      "81": [
+        "Six-month ignition interlock requirement if convicted, or receive a deferred prosecution, of a 1st DWUI and the department’s administrative action indicates a BAC of .15 percent or greater."
+      ],
+      "82": [
+        "Lifetime ignition interlock requirement if convicted of a 4th or subsequent DWUI when alcohol is involved; however, may petition for removal of requirement five years after conviction date."
+      ],
+      "83": [
+        "The lap belt should be drawn snugly across the hip bones. It should never be worn across the stomach or soft part of the abdomen."
+      ],
+      "84": [
+        "Child who has not reached his/her ninth birthday."
+      ],
+      "85": [
+        "Child must be secured in vehicle seat other than front seat except in vehicles with one row of seats, or if all safety belts are in use by other child passengers."
+      ],
+      "86": [
+        "Maximum $60 fine for first offense. Fine shall be waived by the court upon receipt of proof of purchase, lease, or other acquisition, of an approved restraint after the offense occurred."
+      ],
+      "87": [
+        "Vehicles that were not equipped with safety belts at time of manufacture. (Passenger vehicles before MY1967; Vans and trucks before MY1972)."
+      ],
+      "88": [
+        "A driver may apply for a 24/7 restricted driver license if they have received an order from the Court ordering the driver to participate in the 24/7 Sobriety Program in lieu of the ignition interlock requirement."
+      ],
+      "89": [
+        "If head rest available, use low back belt-positioning booster and adjust head rest to middle of child’s head behind the ears."
+      ],
+      "90": [
+        "Keep the shoulder belt on the shoulder resting snugly over the chest and lap belt low across the hip/upper thigh."
+      ],
+      "91": [
+        "Who is a U.S. postal service worker performing duties as a postal carrier;"
+      ],
+      "92": [
+        "All states except Georgia, Massachusetts, Michigan, Tennessee and Wisconsin are currently members."
+      ],
+      "93": [
+        "Driving while under the influence of alcohol is the major cause of ALMOST HALF of the crashes in which someone is killed."
+      ],
+      "94": [
+        "Three factors influence a person’s BAC: • The amount of alcohol consumed; • The period of time over which the alcohol was consumed; and • The person’s body weight."
+      ],
+      "95": [
+        "Therefore, 12 ounces of beer, three to five ounces of wine, and one and one-half ounces of 86 proof hard liquor each have about one-half ounce of alcohol."
+      ],
+      "96": [
+        "it takes 30 to 40 minutes to totally absorb the alcohol contained in a single drink."
+      ],
+      "97": [
+        "TIME IS THE ONLY SIGNIFICANT FACTOR IN REDUCING BAC LEVELS."
+      ],
+      "98": [
+        "Approximately 90 percent of the alcohol in your body is eliminated by the liver."
+      ],
+      "99": [
+        "Therefore if a heavy person and a light person drink the same amount of alcohol, the heavy person will likely have a lower BAC."
+      ],
+      "100": [
+        "Impaired drivers tend to fix their vision on a particular object and not see others. The ability to detect persons and vehicles to the side is almost completely lost."
+      ],
+      "101": [
+        "Because of this reduced ability to execute, a drinking driver, traveling at 55 mph, will drive an additional 32 feet or more before he can apply the brakes."
+      ],
+      "102": [
+        "In fact, anger and alcohol have been found to be one of the most dangerous combinations. Alcohol makes it much more difficult for people to control themselves."
+      ],
+      "103": [
+        "If no head rest on vehicle seat, use high back belt positioning booster to provide head protection."
+      ],
+      "104": [
+        "Under the Implied Consent law, drivers are deemed to have given their consent to such tests whenever driving on a public street or highway."
+      ],
+      "105": [
+        "If you submit to the required test or tests and your BAC is 0.08 percent or more, your driver license and driving privileges will be suspended for 90 days"
+      ],
+      "106": [
+        "While a BAC of 0.08 percent or more may result in a conviction, you may also be convicted of DWUI with a BAC of 0.05 percent and other supporting evidence."
+      ],
+      "107": [
+        "Diet and \"stay-awake\" pills... give drivers a false feeling of alertness and often increase self-confidence, which may lead to excessive risk-taking."
+      ],
+      "108": [
+        "Do not stop in the lane of travel, on bridges, or against guardrails."
+      ],
+      "109": [
+        "Keep your hands on the steering wheel so the officer can see them."
+      ],
+      "110": [
+        "Inform the officer of any weapons in your vehicle and their location. Do not reach or point to the location."
+      ],
+      "111": [
+        "If you come across an emergency or maintenance vehicle with its lights activated on the side of the road, remember Wyoming law requires you to... reduce your speed by at least 20 mph (two lane road)."
+      ],
+      "112": [
+        "If you are being overtaken by an emergency vehicle with its lights activated, Wyoming law requires you to pull off to the right side of the road and stop until the emergency vehicle has passed."
+      ],
+      "113": [
+        "Residential Areas..................................................30 mph"
+      ],
+      "114": [
+        "approach a “blind” intersection at no more than 15 mph."
+      ],
+      "115": [
+        "Packed snow\t Reduce speed by at least half."
+      ],
+      "116": [
+        "If you then drive faster than 55 mph on a dark road, you are really “driving blind” because you won't be able to stop within the 250 feet ahead of you that is lit well enough to see."
+      ],
+      "117": [
+        "All bicycles should be identified as slow-moving traffic and your speed and driving should be adjusted to accommodate them.",
+        "bicyclists have as much legal right to be on a public roadway as you."
+      ],
+      "118": [
+        "Adjust speed BEFORE entering a curve. Going too fast can break the grip that tires have on the road."
+      ],
+      "119": [
+        "Whenever you cannot see well enough, pull off the road and wait until it clears.",
+        "In a very heavy rain, snowstorm or thick fog, you may not be able to see more than 100 feet ahead."
+      ],
+      "120": [
+        "bicyclists are classified as vehicles and are granted the same rights and responsibilities that operators of motor vehicles have."
+      ],
+      "121": [
+        "Where no signs or signals are in place, you must watch for any driver coming from your right and yield the right of way regardless of who first reaches and enters the intersection."
+      ],
+      "122": [
+        "Black ice is invisible and is treacherous, so always watch for sudden changes in road surface conditions, from merely wet, to extremely icy.",
+        "These changes occur often at bridge decks, overpasses, on high fills, in deep cuts and near snow fences."
+      ],
+      "123": [
+        "Allow the car ahead to pass a landmark, and then count “one- thousand-one\" through \"one-thousand-four.” If your car reaches the same landmark before you finish, you are following too closely."
+      ],
+      "124": [
+        "Locked wheels and skids typically result when drivers jam on conventional brakes. Pumping those brakes once every second is a good rule of thumb."
+      ],
+      "125": [
+        "But if you begin to skid, gently turn into the skid and ease your foot off the gas until you regain control."
+      ],
+      "126": [
+        "If you enter an intersection while violating the speed law, you forfeit any right of way you might have had."
+      ],
+      "127": [
+        "Traffic moves at slow speeds in a counterclockwise direction, and is constantly moving except when yielding to traffic in the roundabout and pedestrians in the crosswalks."
+      ],
+      "128": [
+        "If you are already in a roundabout, continue to your exit, leave the roundabout and then pull over to the right so the emergency vehicle can pass."
+      ],
+      "129": [
+        "On roads with only one lane in each direction, you must reduce your speed to at least 20 mph below the speed limit when approaching a parked emergency vehicle."
+      ],
+      "130": [
+        "When a blind pedestrian is carrying a clearly visible white cane or is accompanied by a guide dog."
+      ],
+      "131": [
+        "It takes about 3/4 second to move your foot from the accelerator to the brake."
+      ],
+      "132": [
+        "roll down the window and look on the downwind side of the car to determine where you are on the road, by using either the center stripe or the edge of the road."
+      ],
+      "133": [
+        "A heavy vehicle with a loaded trailer will usually take over two-thirds the length of a football field (about 190-200 feet) to stop."
+      ],
+      "134": [
+        "on divided roadway, only vehicles on the same side of the separation as the bus must stop."
+      ],
+      "135": [
+        "Do not change lanes before or while in an intersection."
+      ],
+      "136": [
+        "At least 100 feet from an intersection."
+      ],
+      "137": [
+        "For a right turn, the hand and arm are extended straight up from the elbow."
+      ],
+      "138": [
+        "Check behind your vehicle by walking behind it before you back up."
+      ],
+      "139": [
+        "A driver may exceed the speed limit by up to 10 miles an hour while passing another vehicle that is traveling at less than the legal maximum speed."
+      ],
+      "140": [
+        "You may pass on the right: • When the vehicle you are overtaking is making a left turn"
+      ],
+      "141": [
+        "When space allows, maintain at least 3 feet of separation between your vehicle and the bicyclist."
+      ],
+      "142": [
+        "be sure you can see both headlights and the entire cab of the truck in your rearview mirror before pulling back into your lane."
+      ],
+      "143": [
+        "When directed to do so by a police officer. A police officer’s directions outweigh traffic lights or signs;"
+      ],
+      "144": [
+        "Many motorists believe that because a truck driver sits twice as high as the driver of a passenger vehicle, he can see further ahead and can react sooner."
+      ],
+      "145": [
+        "Exhaust coming from the tail pipe;",
+        "Brake lights on, a turn signal flashing, or white back-up lights on;",
+        "Front wheels turning out;"
+      ],
+      "146": [
+        "You MUST always stop your vehicle:",
+        "When entering a street from a driveway, alley, building, or parking lot (W.S. 31-5-506)"
+      ],
+      "147": [
+        "A \"right-turn squeeze\" occurs when the driver of a passenger vehicle finds himself in the blind spot located on the right side of a heavy vehicle that is in the process of turning right."
+      ],
+      "148": [
+        "Within 15 feet of a fire hydrant;"
+      ],
+      "149": [
+        "If you park facing uphill where there is a curb, you should set the parking brake and turn the wheels away from the curb."
+      ],
+      "150": [
+        "The entrance ramp usually takes you to an acceleration lane. Its purpose is to let you match your speed to that of Interstate traffic."
+      ],
+      "151": [
+        "Always leave at least two seconds space cushion between you and the vehicle ahead."
+      ],
+      "152": [
+        "If you MISS your exit, go on to the next exit. Backing up on the Interstate is dangerous."
+      ],
+      "153": [
+        "NEVER slow on the Interstate.",
+        "SLOW after turning into the deceleration lane."
+      ],
+      "154": [
+        "Turn on your four-way emergency warning lights. At night, use flares or reflectors.",
+        "Do not open the doors or get out on the traffic side of your vehicle."
+      ],
+      "155": [
+        "When the word “ONLY” is used, you must go in the direction the arrow points; there is no other option."
+      ],
+      "156": [
+        "When there are three or more lanes going in one direction, the middle lane or lanes are usually the smoothest."
+      ],
+      "157": [
+        "White lines separate traffic going the same direction.",
+        "Solid white lines indicate that passing or lane changing is hazardous."
+      ],
+      "158": [
+        "Crossbuck signs are yield signs. You are legally required to yield the right of way to trains."
+      ],
+      "159": [
+        "Rear-end collisions are the most frequent type of crashes on the Interstate."
+      ],
+      "160": [
+        "CHECK to see if anyone is coming. Be especially watchful for bicyclists or motorcyclists"
+      ],
+      "161": [
+        "When crossing more than one set of tracks, there will be a sign below the crossbuck indicating how many there are."
+      ],
+      "162": [
+        "Contact the police if there is an injury, death or property damage amounting to $1,000 or more."
+      ],
+      "163": [
+        "DO NOT MOVE AN INJURED PERSON unless there is danger of another crash;"
+      ],
+      "164": [
+        "Then you must also contact the nearest law enforcement agency."
+      ],
+      "165": [
+        "Check tire pressure using the recommended psi (pounds per square inch) found in the vehicle owner's manual or the driver's side door jamb of the vehicle."
+      ],
+      "166": [
+        "If any part of Lincoln's head is covered by the tread, you're driving with the safe amount of tread."
+      ],
+      "167": [
+        "Drivers turning left in front of an oncoming cyclist cause a large percentage of car-cycle crashes."
+      ],
+      "168": [
+        "No more than two motorcycles may be driven abreast in the same lane and must be by consent of both motorcycle drivers."
+      ],
+      "169": [
+        "If your vehicle is disabled and you must walk where there are no sidewalks, walk on the left side of the road facing traffic."
+      ],
+      "170": [
+        "Any bicycle used after dark must have a front light and rear reflectors, but these may be very hard to see."
+      ],
+      "171": [
+        "When you see this symbol on the back of a vehicle ahead, it is a warning to slow down. It means the vehicle cannot travel faster than 25 miles per hour."
+      ],
+      "172": [
+        "National Highway and Traffic Safety Administration statistics indicate most fatal crashes involving a heavy vehicle and one or more other vehicles are caused by the passenger vehicle."
+      ],
+      "173": [
+        "the driver shall merge into the lane farthest from the vehicle or at least one (1) lane of traffic apart from the vehicle except when otherwise directed by a police officer"
+      ],
+      "174": [
+        "the driver shall slow to a speed that is twenty (20) miles per hour less than the posted speed limit, except when otherwise directed by a police officer."
+      ],
+      "175": [
+        "Never move into the same lane alongside a motorcycle, even if the lane is wide and the cyclist is riding far to one side. It is not only illegal, but it boxes both of you in"
+      ],
+      "176": [
+        "the driver shall slow to a speed that is twenty (20) miles per hour less than the posted speed limit, except when otherwise directed by a police officer."
+      ],
+      "177": [
+        "While such crashes can occur at any time of the year, they are most prevalent during the fall and spring, while animals are migrating"
+      ],
+      "178": [
+        "be careful about flashing your headlights because one unintended effect may be to “freeze\" the deer or other animal on the road directly ahead."
+      ],
+      "179": [
+        "If a collision seems inevitable, don’t swerve suddenly to avoid the animal. Your risk of personal injury may be greater if you do. Brake as quickly as you safely can"
+      ],
+      "180": [
+        "PREDICT: When defensive drivers identify a critical object, they predict what could happen. They predict the worst."
+      ],
+      "181": [
+        "Decisions are based on what can be done to prevent a crash, and not who is right or who is wrong."
+      ],
+      "182": [
+        "Defensive drivers scan at least 10 to 15 seconds ahead."
+      ],
+      "183": [
+        "Giving hand or electrical signals at least four to five seconds before turning;"
+      ],
+      "184": [
+        "If you are driving a car, stay at least two seconds back from the vehicle ahead."
+      ],
+      "185": [
+        "Quadrupling the number of seconds when ice covers the road (cars, eight seconds)."
+      ],
+      "186": [
+        "tractor-trailer drivers at least six seconds back."
+      ],
+      "187": [
+        "Increase the following distance between you and the vehicle in front of you."
+      ],
+      "188": [
+        "Avoid driving next to a bicyclist for prolonged periods of time;"
+      ],
+      "189": [
+        "Take risks one at a time whenever possible.",
+        "make a DECISION to speed up or slow down in order to pass the joggers before or after the truck."
+      ],
+      "190": [
+        "reduce your speed and tap your brakes, to warn other drivers, and sound your horn."
+      ],
+      "191": [
+        "When you cannot separate risks and must deal with two or more at the same time, compromise by giving the most room to the worst danger."
+      ],
+      "192": [
+        "Headlights must be used from one-half hour after sunset until one-half hour before sunrise"
+      ],
+      "193": [
+        "You should dim at least 500 feet (about four to five seconds) before meeting an oncoming vehicle."
+      ],
+      "194": [
+        "If you are within 300 feet from the rear of a vehicle you are approaching, dim your lights to their lowest beam."
+      ],
+      "195": [
+        "It is not legal to drive with only parking lights when headlights are required."
+      ],
+      "196": [
+        "Use low beam headlights. Front fog lights are sometimes helpful."
+      ],
+      "197": [
+        "Be careful during the first half hour after the rain begins. Dust and oil mix with the water and make the roadway slippery."
+      ],
+      "198": [
+        "Quadruple the distance on ice (cars, eight seconds)."
+      ],
+      "199": [
+        "DO NOT use cruise control."
+      ],
+      "200": [
+        "Run the engine and heater sparingly, and only with a window open for ventilation."
+      ],
+      "201": [
+        "If it is not possible to avoid a collision, make sure you do not hit the other vehicle head-on.",
+        "The rule of thumb is to turn right."
+      ],
+      "202": [
+        "Try to free the pedal with your foot (If this does not work, push in the clutch or shift to neutral.);"
+      ],
+      "203": [
+        "The main thing to remember in a skid is to keep calm and not overreact.",
+        "DO NOT APPLY THE BRAKES!"
+      ],
+      "204": [
+        "In an emergency situation, ABS pumps the brakes for the driver — much faster than the driver can.",
+        "All drivers need to do is press down hard on the brake pedal, hold it and steer out of danger."
+      ],
+      "205": [
+        "All drivers need to do is press down hard on the brake pedal, hold it and steer out of danger.",
+        "Drivers should be aware that removing steady pressure from the brake pedal or pumping the brakes will disengage or turn off the ABS system."
+      ],
+      "206": [
+        "Pump the brake pedal rapidly;",
+        "Do not try to drive the car to a garage."
+      ],
+      "207": [
+        "Ease your foot off the gas pedal but do not hit the brakes.",
+        "After the car is under control, brake gently, and pull off the road at the nearest safe spot."
+      ],
+      "208": [
+        "If an oncoming or stopped vehicle should suddenly appear in your lane of travel and there is immediate danger of a collision, STEER OFF THE ROAD TO THE RIGHT."
+      ],
+      "209": [
+        "Never turn your ignition key to the lock position while the vehicle is in motion.",
+        "That will cause the steering to lock and, quite possibly, loss of control of the vehicle."
+      ],
+      "210": [
+        "Stay on the shoulder. Ease off the accelerator.",
+        "Brake gently and slow gradually.",
+        "After speed has been reduced, check behind as well as ahead for oncoming traffic.",
+        "Turn sharply onto the pavement."
+      ],
+      "211": [
+        "You should always test your brakes after driving through deep water. Brake gently several times until your brakes are dry and work properly."
+      ],
+      "212": [
+        "DO NOT walk for help if you are on the Interstate.",
+        "To indicate vehicle problems, tie a white cloth to an antenna or door handle and raise your hood or trunk lid",
+        "Turn on your emergency four-way flashers"
+      ],
+      "213": [
+        "Signs of carbon monoxide poisoning are weariness, yawning, dizziness, nausea, headache and ringing in the ears."
+      ],
+      "214": [
+        "NEVER pass another vehicle at a highway-rail intersection."
+      ],
+      "215": [
+        "If there is not enough braking distance between the truck and your passenger vehicle, the truck will rear end your vehicle, causing a serious or fatal crash."
+      ],
+      "216": [
+        "This includes, but is not limited to, walkers, joggers, skaters and people using wheelchairs."
+      ],
+      "217": [
+        "Regretfully, the safest thing for you and other drivers that may be near you, may be hitting the animal."
+      ],
+      "218": [
+        "These and other deep emotions can overcome a person’s power to think clearly. The ability to identify critical objects and make sound decisions is lost."
+      ],
+      "219": [
+        "Drivers with POOR SIDE VISION must look to the sides by moving their head as well as their eyes."
+      ],
+      "220": [
+        "Looking to the right side of the road, away from the glare, can help."
+      ],
+      "221": [
+        "using hands-free cell phones provides little safety benefit over hand-held phones, according to the National Highway Traffic Safety Administration.",
+        "it is the actual process of conversing that proves to be among the greatest driver distractions."
+      ],
+      "222": [
+        "Wyoming law prohibits reading or sending a text message from a cell phone or other device while operating a vehicle."
+      ],
+      "223": [
+        "If you must dial while driving on a road on which cell phone calls are allowed, dial a few numbers, look back at the highway and in your mirrors for any developing safety problems, and then dial the last numbers."
+      ],
+      "224": [
+        "Legally classified as vehicles, bicycles can be ridden on all public roads in Wyoming."
+      ],
+      "225": [
+        "Blind Spot: the area near the right and left rear corners of the vehicle which cannot be seen through rearview mirrors."
+      ],
+      "226": [
+        "If there are no markings, a crosswalk is considered to be where imaginary lines would connect the sidewalks on each side of the street or highway."
+      ],
+      "227": [
+        "Emancipated Minor: a person at least 17 years of age who is or was married, is in the military service of the United States, or who has been emancipated by the district court."
+      ],
+      "228": [
+        "Hydroplaning: when a vehicle's tires ride on a thin film of water instead of the road."
+      ],
+      "229": [
+        "It is not legal to ride over, across or on the median."
+      ],
+      "230": [
+        "whose motor is capable of propelling the vehicle at a maximum speed of no more than 30 miles per hour on a level road surface."
+      ],
+      "231": [
+        "Drivers with POOR DISTANCE JUDGMENT must allow more following distance to compensate for their inability to accurately predict what’s happening 10 to 15 seconds ahead of them."
+      ],
+      "232": [
+        "For the purpose of registration and titling, \"motorcycle\" includes motorized bicycles, scooters and recreational vehicles primarily designed for off-road use",
+        "but excludes mopeds and off-road three-wheel recreational vehicles."
+      ],
+      "233": [
+        "The vehicle must be registered and plated to be operated on streets and highways, but may NOT be operated on interstate highways and is subject to slow-moving vehicle requirements."
+      ],
+      "234": [
+        "No-Zone: an area on either side or directly behind a heavy vehicle in which another vehicle is not visible to the driver."
+      ],
+      "235": [
+        "OR any person holding a valid Wyoming resident hunting or fishing license."
+      ],
+      "236": [
+        "Suspension: the TEMPORARY REMOVAL of a person’s privilege to drive."
+      ],
+      "237": [
+        "Total Stopping Distance: the distance a vehicle travels before it comes to a complete stop. It includes the complete distance traveled while deciding to stop, then reacting, and finally after brakes are then applied."
+      ],
+      "238": [
+        "Pentagon This sign warns of a school zone ahead or marks a school crossing."
+      ],
+      "239": [
+        "The absolute speed limit in a school zone is 20 mph."
+      ],
+      "240": [
+        "Pennant-shaped signs are located at the beginning of a no-passing zone."
+      ],
+      "241": [
+        "While most warning signs are yellow, construction and maintenance warning signs are orange.",
+        "Construction signs have black lettering on an orange background."
+      ],
+      "242": [
+        "You can turn right at a RED light unless there is a sign that prohibits the turn.",
+        "You may turn RIGHT only after STOPPING AND YIELDING to persons and other vehicles."
+      ],
+      "243": [
+        "Flashing red light: You must come to a complete stop before entering the intersection.",
+        "This light has the same meaning as a “STOP” sign."
+      ],
+      "244": [
+        "Amber light: If possible, you MUST stop before entering the intersection.",
+        "If you cannot stop safely, you should carefully go through the intersection."
+      ],
+      "245": [
+        "If the operator is a minor, or if a minor is a rider, they shall be operated in accordance with all Wyoming helmet laws",
+        "and be operated only by a person who possesses a valid driver license with a motorcycle endorsement."
+      ],
+      "246": [
+        "In no case shall a pedestrian vehicle exceed 48 inches in width."
+      ],
+      "247": [
+        "Moving Violation: an act of control or lack of control by the driver of a motor vehicle while the vehicle is in motion",
+        "including a conviction for driving in violation of the restriction for corrective lenses and/or outside mirrors."
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
@@ -63,6 +847,23 @@
     "sign_ratio_pct": 12.1,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 247,
+      "avg_fidelity": 9.96,
+      "pct_at_10": 98.8,
+      "pct_above_9": 99.2,
+      "pct_above_7": 99.2,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [
+        133,
+        186
+      ],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

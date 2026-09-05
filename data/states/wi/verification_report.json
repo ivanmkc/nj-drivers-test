@@ -1,16 +1,16 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "wi",
   "name": "Wisconsin",
-  "verified_at": "2026-05-26T02:35:24Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-27T01:44:05Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://wisconsindot.gov/Documents/dmv/shared/bds126-motorists-handbook.pdf",
     "manual_pdf_sha256": "9983bf68bce25ab758ad7db061be0d162aac4112a9804eb90a8a9c6044159ddd",
     "manual_text_sha256": "c00a6109afce6f08a3f3939e350c24837b20d9a7ca3b4023298a56f4b3f04828",
     "manual_text_chars": 97763,
     "manual_pages": 64,
-    "edition": ""
+    "edition": "2025"
   },
   "bank": {
     "total_questions": 321,
@@ -24,21 +24,988 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 310,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "It’s also crucial to remember that driving is a privilege and a very important responsibility."
+      ],
+      "2": [
+        "Share the road with pedestrians and bicyclists."
+      ],
+      "3": [
+        "Wisconsin State Patrol educates the public about rules of the road and enforces Wisconsin traffic laws."
+      ],
+      "4": [
+        "DMV ensures drivers are trained and qualified to operate a vehicle, including through helpful resources like this Motorists’ Handbook."
+      ],
+      "5": [
+        "aims to design and operate Wisconsin’s transportation system so driver mistakes do not become deadly."
+      ],
+      "6": [
+        "It can be found on our DMV website wisconsindmv.gov."
+      ],
+      "7": [
+        "Cases of human trafficking have been reported in all 72 counties in Wisconsin."
+      ],
+      "8": [
+        "Anyone under age 18 that exchanges sex acts for money or other things of value is considered a victim of human trafficking."
+      ],
+      "9": [
+        "or text HELP to BeFree (233733)"
+      ],
+      "10": [
+        "Traffickers often meet their victims online while they are pretending to be someone else."
+      ],
+      "11": [
+        "Section 1: Driving Test Requirements",
+        "B. Highway Signs Test"
+      ],
+      "12": [
+        "Section 2: Progression of Licenses",
+        "B. Instruction Permit",
+        "C. Probationary License"
+      ],
+      "13": [
+        "Section 9: Dangerous Driving Behaviors",
+        "C. Drowsy Driving"
+      ],
+      "14": [
+        "Section 10: Sharing the Road",
+        "F. No-Zones"
+      ],
+      "15": [
+        "Section 11: Your Driving Privilege",
+        "A. Point System"
+      ],
+      "16": [
+        "Visual acuity of at least 20/40 in one eye (corrected or uncorrected)"
+      ],
+      "17": [
+        "70-degree field of vision from the center of each eye."
+      ],
+      "18": [
+        "There are 15 questions on this test. You need to answer 12 questions (80%) correctly to pass the test."
+      ],
+      "19": [
+        "Tests in a DMV customer service center is free."
+      ],
+      "20": [
+        "Applicants between ages 15 and 17 may also take the knowledge test online for a fee of $10."
+      ],
+      "21": [
+        "They will check the horn, lights/signals, license plates, doors, mirrors and more."
+      ],
+      "22": [
+        "Two documents that prove you live in Wisconsin. Examples: Utility bill or financial statement"
+      ],
+      "23": [
+        "The sponsor accepts liability, meaning they are legally and financially responsible for incidents caused by the minor driving."
+      ],
+      "24": [
+        "You must file proof of insurance instead of having a sponsor if you meet the criteria below:",
+        "Are married and your spouse is under 18 years of age"
+      ],
+      "25": [
+        "In addition to passing the knowledge test... and being at least 15 years old, you must be enrolled in a driver education program"
+      ],
+      "26": [
+        "If you operate a vehicle during hours of darkness, you must be accompanied by a qualified instructor or a licensed person 25 years of age with at least two years of licensed driving experience"
+      ],
+      "27": [
+        "This person must have at least two years of licensed driving experience."
+      ],
+      "28": [
+        "You need to have your instruction permit for at least six months and turn 16 years old."
+      ],
+      "29": [
+        "you must practice driving for at least 40 hours during daylight and 10 hours during darkness (50 total hours)."
+      ],
+      "30": [
+        "Remember that phones are not allowed while driving unless you need to report an emergency."
+      ],
+      "31": [
+        "These restrictions are required for the first nine months, unless you turn 18 years old before then."
+      ],
+      "32": [
+        "From 12 p.m. (midnight) to 5 a.m, you can drive: Alone only IF driving between home, school and/or work."
+      ],
+      "33": [
+        "The graduated driver license restrictions will be extended six months if: You are convicted of a moving traffic violation"
+      ],
+      "34": [
+        "Renewing your drivers license needs to be done every eight years."
+      ],
+      "35": [
+        "For regular out of state driver license, you should apply for a Wisconsin driver license within 60 days after moving."
+      ],
+      "36": [
+        "Wisconsin DMV issues REAL-ID (marked with a star ) that meets these requirements."
+      ],
+      "37": [
+        "If one or more driver arrives to the stop at the same time, the driver on the right goes first"
+      ],
+      "38": [
+        "Pedestrians using a guide dog or carrying a white cane (even if they are no in the intersection). Stop at least ten feet away until the person is off the roadway"
+      ],
+      "39": [
+        "Use the “Four Second Following Distance Rule.”"
+      ],
+      "40": [
+        "The normal speed limit in a school zone when children are present is 15 miles per hour."
+      ],
+      "41": [
+        "Unless otherwise posted, the speed limit in residential areas is 25 miles per hour."
+      ],
+      "42": [
+        "It is your responsibility to find a safe gap in traffic to legally merge."
+      ],
+      "43": [
+        "To have better control of your vehicle, the driver needs to be able to see 10 to 15 seconds ahead of their vehicle."
+      ],
+      "44": [
+        "Be alert by searching left, right and left again before going through the intersection even if you have the right-of-way."
+      ],
+      "45": [
+        "You should yield right-of-way to:",
+        "Cross traffic in an uncontrolled T-intersection"
+      ],
+      "46": [
+        "Do not coast while driving, this means putting your car in the neutral position."
+      ],
+      "47": [
+        "Check your rearview mirror every 6 to 8 seconds to see if someone is following too closely (tailgating)."
+      ],
+      "48": [
+        "If someone is tailgating you, slowly reduce your speed. This should encourage them to drive around you."
+      ],
+      "49": [
+        "If you turn your wheel to the left and someone hits you from behind, you will be pushed into oncoming traffic."
+      ],
+      "50": [
+        "You can make a U-turn in any rural two-lane highway if it is done safely and you do not interfere with traffic."
+      ],
+      "51": [
+        "To turn right off a four-lane roadway, you must turn from the lane nearest the right curb or edge of the roadway."
+      ],
+      "52": [
+        "1. Signal right. Check for traffic to the right and in your mirrors. Pull as far right as possible. Stop."
+      ],
+      "53": [
+        "You can use a paved shoulder to go around someone only if they are stopped or making a left turn."
+      ],
+      "54": [
+        "Once you see both headlights of the vehicle you just passed in your rearview mirror it is safe to return to the driving lane."
+      ],
+      "55": [
+        "When backing up is necessary move slowly. Back up no faster than a slow walk."
+      ],
+      "56": [
+        "If you miss your exit or turn on a road, do not back up. Go on to the next exit and re-enter the road to get back to the exit you missed."
+      ],
+      "57": [
+        "Parking is not allowed where there are yellow markings on the curb or areas in front of fire hydrants."
+      ],
+      "58": [
+        "You cannot go over the speed limit to pass another vehicle on the road."
+      ],
+      "59": [
+        "If you are parked uphill with a curb, you will turn your wheels all the way to the left before you put your car in park."
+      ],
+      "60": [
+        "If you are parked downhill, you will move your wheels all the way to the right."
+      ],
+      "61": [
+        "Find a parking space that is about 3-6 feet longer than your vehicle."
+      ],
+      "62": [
+        "You should be about a foot away from the curb and at least 2 feet away from the vehicle in front of you and behind you."
+      ],
+      "63": [
+        "You cannot see a vehicle or person that is 500 feet (about one block) away"
+      ],
+      "64": [
+        "It is a half hour past sunset to half hour before sunrise"
+      ],
+      "65": [
+        "If someone is driving toward you and forgets to turnoff their brights, look toward the right side of the road"
+      ],
+      "66": [
+        "If you are turning at an intersection, you should start signaling about three seconds (about 100 feet) before the turn."
+      ],
+      "67": [
+        "If you would like to turn right, bend your elbow and point your hand up."
+      ],
+      "68": [
+        "These signs are yellow with black lettering or symbols. Most are diamond shaped."
+      ],
+      "69": [
+        "A triangle shaped sign with reflective orange markings. This vehicle could travel at 25 mph or less."
+      ],
+      "70": [
+        "No Passing Zone – A yellow pennant with black lettering."
+      ],
+      "71": [
+        "You must follow their directions even if they are different from the traffic light or sign on the road."
+      ],
+      "72": [
+        "You can push hard on your horn to warn someone if you are going to hit them or they are going to hit you."
+      ],
+      "73": [
+        "Parking Lights should only be used when you are parked and idling."
+      ],
+      "74": [
+        "Traffic fines double in these areas."
+      ],
+      "75": [
+        "You can only use your cellphone in a construction zone if you are reporting an emergency."
+      ],
+      "76": [
+        "Destination signs are square or rectangular. They are green or brown with white lettering.",
+        "Brown Destination Signs – They show information about fun or beautiful places."
+      ],
+      "77": [
+        "These signs help you locate where you are on the road. They improve emergency response times to highway incidents."
+      ],
+      "78": [
+        "Interstate Highway – This sign looks like a shield with red on top and blue on the bottom. It has white lettering."
+      ],
+      "79": [
+        "Do not shift gears while crossing the railroad tracks."
+      ],
+      "80": [
+        "An “Exempt” sign means certain vehicles are not required to stop before crossing."
+      ],
+      "81": [
+        "Report Problem or Emergency – This sign is blue with white lettering. This sign is at every highway-railroad crossing. It shows a phone number to report unsafe conditions."
+      ],
+      "82": [
+        "If a traffic light loses power or is not working right, proceed as if the signal were a stop sign."
+      ],
+      "83": [
+        "You may turn left on red if you are turning from a one-way on to a one-way street."
+      ],
+      "84": [
+        "If you are in the intersection when the yellow light comes on, do not stop. You can continue through the intersection."
+      ],
+      "85": [
+        "Flashing Yellow – Slow down, check for cross traffic and proceed with caution."
+      ],
+      "86": [
+        "If you are turning left, a steady green light means you may turn, but only when it is safe to do so. Oncoming traffic has the right-of-way."
+      ],
+      "87": [
+        "If you are turning left, a steady green light means you may turn, but only when it is safe to do so. Oncoming traffic has the right-of-way."
+      ],
+      "88": [
+        "Solid White Line – A solid white line between lanes means you cannot cross. You can only cross if there is a hazard or you are turning within the next block."
+      ],
+      "89": [
+        "You can pass a vehicle going less than half the speed limit if it is safe, except if it is farm equipment."
+      ],
+      "90": [
+        "Your front wheels should stop just before the solid white line. Do not stop on the crosswalk."
+      ],
+      "91": [
+        "This lane is only for vehicles turning left or making a U-turn.",
+        "Vehicles can use this lane going in either direction."
+      ],
+      "92": [
+        "Yellow “X” – Lane is changing. Move to a Green “arrow” lane"
+      ],
+      "93": [
+        "You can travel in this lane if you need to turn across the reserved lane in the next half of a block."
+      ],
+      "94": [
+        "No large trucks can drive in the flex lane."
+      ],
+      "95": [
+        "Traffic moves counterclockwise."
+      ],
+      "96": [
+        "Yield to traffic on your left that is already in the roundabout"
+      ],
+      "97": [
+        "If you are already in the roundabout, safely exit at the next right, then pull over. Avoid stopping in the roundabout."
+      ],
+      "98": [
+        "You should pull completely up to the white stop line so your tires will trigger the sensors in the pavement."
+      ],
+      "99": [
+        "Steady Green Arrow – You can turn in the direction of the arrow. There should be no oncoming or crossing traffic while the arrow is green."
+      ],
+      "100": [
+        "Dashed and Solid Yellow Lines – This means you may pass if you are on the dashed side of the line. If you are on the solid side of the line, you may not pass."
+      ],
+      "101": [
+        "If there is a bicyclist in the lane move behind them and make your turn once it is safe to do so."
+      ],
+      "102": [
+        "You should pull completely up to the white stop line so your tires will trigger the sensors in the pavement."
+      ],
+      "103": [
+        "Put your hands on the top of the steering wheel in plain sight"
+      ],
+      "104": [
+        "Deer are the most active in the sunset to sunrise hours."
+      ],
+      "105": [
+        "If you hit a deer, you can keep it. If you do not want it, the next motorist can keep it."
+      ],
+      "106": [
+        "Vehicles in the line must have their headlights on."
+      ],
+      "107": [
+        "It is important to remember that in severe weather bridges and overpasses freeze before the rest of the roadway."
+      ],
+      "108": [
+        "Ease your foot off the gas pedal",
+        "Keep the wheel straight",
+        "Do not try to stop or turn until your tires are gripping the road again"
+      ],
+      "109": [
+        "Turn the wheel in the direction you want the vehicle to go"
+      ],
+      "110": [
+        "Give snowplows at least 200 feet of room when their lights are flashing red, amber or green."
+      ],
+      "111": [
+        "Do not honk your horn because this might scare the animal.",
+        "You should yield the right-of-way to livestock on or along the highway."
+      ],
+      "112": [
+        "If you see a vehicle on the side of the road, warn other vehicles behind you by tapping your brake pedal three or four times."
+      ],
+      "113": [
+        "The proper way to use ABS in an emergency is to apply firm, continuous pressure to the brake pedal."
+      ],
+      "114": [
+        "Property damage of $1,000 or more"
+      ],
+      "115": [
+        "Government property damage of $200 or more (ex: signs, guard rails)"
+      ],
+      "116": [
+        "Do not use cruise control on slippery roads"
+      ],
+      "117": [
+        "Hold the steering wheel to keep your vehicle going straight",
+        "Lift your foot off the gas pedal and slow down little by little"
+      ],
+      "118": [
+        "Keep your eyes on the road",
+        "Switch the car to neutral"
+      ],
+      "119": [
+        "The legal alcohol concentration allowed for drivers under the age of 21 is 0.00%."
+      ],
+      "120": [
+        "You will lose your driving privileges for at least one year and face other consequences."
+      ],
+      "121": [
+        "Instruction permit and probationary license holders can only use a cell phone to report an emergency."
+      ],
+      "122": [
+        "If you see a police car is stopped on the side of the road with their lights and sirens on, move over or slow down, it’s the law.",
+        "make sure to move into the lane not nearest the stopped vehicle."
+      ],
+      "123": [
+        "When a school bus is stopped with its red lights flashing you need to stop at least 20 feet from it."
+      ],
+      "124": [
+        "If you are on a divided highway/roadway and not on the side of the school bus, you do not need to stop."
+      ],
+      "125": [
+        "Give bicyclists at least three feet of room when you pass."
+      ],
+      "126": [
+        "No-Zones are where large vehicles cannot see you. This area is about 200 feet behind and 20 feet in front of large trucks."
+      ],
+      "127": [
+        "You will not be able to drive if you get 12 or more demerit points within any 12-month period."
+      ],
+      "128": [
+        "If you hold a probationary license, ID card or no type of license, you will have your points doubled. These points are doubled on the second conviction and any thereafter."
+      ],
+      "129": [
+        "A habitual offender is someone who is convicted of four or more major traffic violations or 12 or more minor violations within five years."
+      ],
+      "130": [
+        "An occupational license allows you to drive up to 12 hours a day and up to 60 hours a week to and from work, school, and places that you need to visit to maintain your household"
+      ],
+      "131": [
+        "Wisconsin law requires that you and your passengers wear seat belts (safety belts) at any age."
+      ],
+      "132": [
+        "You still need to wear your seat belt even if your vehicle has air bags."
+      ],
+      "133": [
+        "The lap belt should fit snugly across your hip bones just under your stomach."
+      ],
+      "134": [
+        "The shoulder belt should be worn across your chest. Adjust your belt so that you can put your fist between the belt and your chest."
+      ],
+      "135": [
+        "Generally, children must be in a child safety seat until they reach age four and in a booster seat until age eight."
+      ],
+      "136": [
+        "Generally, children must be in a child safety seat until they reach age four and in a booster seat until age eight."
+      ],
+      "137": [
+        "You must have valid liability car insurance to drive in Wisconsin."
+      ],
+      "138": [
+        "If you are driving someone else’s car, it is your job to make sure it has insurance."
+      ],
+      "139": [
+        "The disclosure that you make will be available to law enforcement officers and employees of the Wisconsin Department of Transportation (WisDOT)."
+      ],
+      "140": [
+        "You must be at least 17 years of age and a U.S. citizen to start this process."
+      ],
+      "141": [
+        "If you are 18 years old or older, your decision may not be overridden by your family or any other person"
+      ],
+      "142": [
+        "Low air pressure in tires decreases fuel mileage."
+      ],
+      "143": [
+        "When you slow down little by little this helps save fuel and your brakes."
+      ],
+      "144": [
+        "The new Driver Education Grant Program enables teens who are income eligible to have their classroom and/or behind-the-wheel driver training paid for by the state."
+      ],
+      "145": [
+        "You should report health conditions that could affect your driving to the DMV."
+      ],
+      "146": [
+        "The maximum speed limit in outlying parts of cities and villages with no posted speed limit is 35mph."
+      ],
+      "147": [
+        "If you are involved in a serious motor vehicle crash, what should you do? ... B. Determine if anyone is injured"
+      ],
+      "148": [
+        "Call 911 if you or someone else is hurt."
+      ],
+      "149": [
+        "Drivers turning left must yield to: ... C. Oncoming cars moving straight ahead or turning right"
+      ],
+      "150": [
+        "When driving in fog, heavy rain or snow use: ... C. Low beams"
+      ],
+      "151": [
+        "It is recommended that you use your low beams/headlights when: 1. You are using your windshield wipers 2. It is rainy, snowy or foggy"
+      ],
+      "152": [
+        "Flashing Yellow – Slow down, check for cross traffic and proceed with caution."
+      ],
+      "153": [
+        "Dashed Yellow Line – This means you may pass other vehicles when it is safe to do so.",
+        "Yellow Lane Lines... These lines separate traffic going in opposite directions."
+      ],
+      "154": [
+        "Solid Yellow Lines – These lines separate traffic going in opposite directions."
+      ],
+      "155": [
+        "It is your responsibility to find a safe gap in traffic to legally merge."
+      ],
+      "156": [
+        "It is illegal to go over the speed limit that is on the sign. You cannot drive over the speed limit to pass other vehicles."
+      ],
+      "157": [
+        "To have better control of your vehicle, the driver needs to be able to see 10 to 15 seconds ahead of their vehicle."
+      ],
+      "158": [
+        "Wait for oncoming traffic to clear before passing a bicyclist."
+      ],
+      "159": [
+        "Question 12: D",
+        "Increase your following distance"
+      ],
+      "171": [
+        "Wisconsin State Patrol educates the public about rules of the road and enforces Wisconsin traffic laws."
+      ],
+      "172": [
+        "It can happen at hotels and motels, truck stops, rest stops, casinos, restaurants, nail salons, farms, and more."
+      ],
+      "173": [
+        "Section 8: Handling Emergencies",
+        "C. Roadside Emergencies . . . . . . . . . . . . . . . 48"
+      ],
+      "174": [
+        "Section 7: Driving Conditions",
+        "B. Severe Weather . . . . . . . . . . . . . . . . . . 44"
+      ],
+      "175": [
+        "contact the National Human Trafficking Hotline: 1-888-3737-888"
+      ],
+      "176": [
+        "Section 6: Driving Situations",
+        "C. Diverging Diamond Interchange (DDI) . . . . 42"
+      ],
+      "177": [
+        "Section 9: Dangerous Driving Behaviors",
+        "C. Drowsy Driving . . . . . . . . . . . . . . . . . . 50"
+      ],
+      "178": [
+        "Eliminate distractions and focus on safely operating the vehicle."
+      ],
+      "179": [
+        "Learn tips for how you and your friends can stay safe online: love146.org/online-safety."
+      ],
+      "180": [
+        "Section 10: Sharing the Road",
+        "C. School Buses . . . . . . . . . . . . . . . . . . . 51"
+      ],
+      "181": [
+        "Any time a person manipulates or takes advantage of someone else so they will work for them or provide sex acts for money, that’s human trafficking."
+      ],
+      "182": [
+        "Section 5: Signals, Pavement Markings and Lane Controls",
+        "B. Types of Line Markings . . . . . . . . . 34"
+      ],
+      "183": [
+        "Section 4: Signs A. Warning B. Regulatory C. Construction D. Destination E. Service F. Mile Marker G. Route Number H. Railroad Crossing"
+      ],
+      "184": [
+        "KnowToDrive.com/Wisconsin Take your knowledge test AT HOME"
+      ],
+      "185": [
+        "Wisconsin’s roads are engineered through a strategic Safe System approach to highway safety"
+      ],
+      "186": [
+        "Section 7: Driving Conditions ... D. Farm Safety/Rural Driving . . . . . . . 45"
+      ],
+      "187": [
+        "This test will take about 45 minutes to complete."
+      ],
+      "188": [
+        "You need to answer 12 questions (80%) correctly to pass the test.",
+        "You need to answer 40 questions (80%) correctly to pass the test."
+      ],
+      "189": [
+        "Maneuvers such as a Y-turn, roadside stop/start and parking"
+      ],
+      "190": [
+        "All the items above must be valid – no photocopies and not expired."
+      ],
+      "191": [
+        "Proof of identity. Examples: Social Security card with your signature or a state issued ID card"
+      ],
+      "192": [
+        "This sponsor will sign and verify that the person under 18 years of age is enrolled in a school program and is not habitually truant."
+      ],
+      "193": [
+        "The sponsor may remove their sponsorship at any time."
+      ],
+      "194": [
+        "Sibling 18 years of age or older"
+      ],
+      "195": [
+        "This involves going to the vision specialist with the Certificate of Vision Examination by Competent Authority (MV3030V/T579)."
+      ],
+      "196": [
+        "The knowledge test will include 50 questions."
+      ],
+      "197": [
+        "They will check the horn, lights/signals, license plates, doors, mirrors and more."
+      ],
+      "198": [
+        "Two documents that prove you live in Wisconsin. Examples: Utility bill or financial statement with your name and WI address listed."
+      ],
+      "199": [
+        "You will still need a sponsor during your probationary phase until you turn 18."
+      ],
+      "200": [
+        "Section 11: Your Driving Privilege",
+        "A. Point System . . . . . . . . . . . . . . . . . . . . . . . . 53"
+      ],
+      "201": [
+        "Section 12: Other Important Information",
+        "E. Insurance Requirements . . . . . . . . . . . . . . . 55"
+      ],
+      "202": [
+        "The DMV examiner will give you instructions like, “At the next intersection, turn left,” or “Make a Y-Turn.”"
+      ],
+      "203": [
+        "A person 21 years of age or older. If the permit holder is under 18 years old, the accompanying licensed person is required to have written authorization"
+      ],
+      "204": [
+        "Any number of immediate family members can ride along",
+        "One other person"
+      ],
+      "205": [
+        "you will be required to show identification that is REAL ID-compliant... beginning May 7, 2025."
+      ],
+      "206": [
+        "The restrictions are similar to the permit as the points on second or future convictions double."
+      ],
+      "207": [
+        "practice driving for at least 40 hours during daylight and 10 hours during darkness (50 total hours)."
+      ],
+      "208": [
+        "You can renew your license up to a year in advance from the expiration date."
+      ],
+      "209": [
+        "No. You will need to present all acceptable documents to Wisconsin."
+      ],
+      "210": [
+        "one other licensed person 25 years of age or more with at least 2 years driving experience may occupy a seat in the vehicle other than the front seat."
+      ],
+      "211": [
+        "Your behind-the-wheel school will provide you with a signed Wisconsin Driver License (DL) Application MV3001."
+      ],
+      "212": [
+        "Any number of immediate family members can ride along"
+      ],
+      "213": [
+        "A qualified instructor age 19 or older"
+      ],
+      "214": [
+        "practice driving for at least 40 hours during daylight and 10 hours during darkness (50 total hours)."
+      ],
+      "215": [
+        "You will receive a renewal reminder notice 45 to 60 days before your birthday in the year your driver license expires."
+      ],
+      "216": [
+        "they can download our RoadReady mobile app."
+      ],
+      "217": [
+        "If you are 18 years or older you can start by passing the knowledge test, highway signs test and the vision screening."
+      ],
+      "218": [
+        "you will be required to show identification that is REAL ID-compliant (or show another acceptable form of identification, such as a passport) beginning May 7, 2025."
+      ],
+      "219": [
+        "Make sure you have your valid driver license, proof of insurance and vehicle registration"
+      ],
+      "220": [
+        "If you reach the object before you finish saying, “one thousand four,” you are going too fast."
+      ],
+      "221": [
+        "Add a second for every adverse condition such as heavier traffic, rain, snow and/or ice."
+      ],
+      "222": [
+        "Drive in the far-right lane of a multi-lane road if you are driving slower than most traffic."
+      ],
+      "223": [
+        "Racing and driving recklessly are not allowed and are illegal."
+      ],
+      "224": [
+        "Avoid forcing another driver to change speed or direction because of you merging."
+      ],
+      "225": [
+        "In the deceleration lane (off-ramp) traffic slows down, this is where you will gradually slow down as well."
+      ],
+      "226": [
+        "Intersections include cross streets, driveways, parking lot entrances and railroad crossings."
+      ],
+      "227": [
+        "Approach a blocked intersection at a slow pace.",
+        "If you cannot see, move forward with caution."
+      ],
+      "228": [
+        "Do not look at drivers that have been pulled over or other roadside activity. This could cause a crash."
+      ],
+      "229": [
+        "If a vehicle is driving right next to you on a roadway move ahead or move behind the vehicle when it is safe."
+      ],
+      "230": [
+        "Vehicles coming from the right when there are no signals or traffic lights (uncontrolled intersections)"
+      ],
+      "231": [
+        "Approaching vehicles if you are making a left turn or a U-turn"
+      ],
+      "232": [
+        "You might need to give additional seconds of space in front of you if: ... You are following trucks, buses, vans, large vehicles, motorcycles or bicycles"
+      ],
+      "233": [
+        "Check your rearview mirror every 6 to 8 seconds to see if someone is following too closely (tailgating)."
+      ],
+      "234": [
+        "Leave extra space to large vehicles such as trucks and buses as they may cross the center line during a turn."
+      ],
+      "235": [
+        "Slowly approach the intersection and wait about halfway in the intersection. Make sure to leave room for oncoming traffic to turn in front of you."
+      ],
+      "236": [
+        "If you are in the middle lane you need to end up in the middle lane of the street you are turning onto."
+      ],
+      "237": [
+        "3. Look behind you, over your right shoulder. Reverse your car enough so that you can move forward again. Stop."
+      ],
+      "238": [
+        "If someone is trying to pass you, stay in your lane and slow down."
+      ],
+      "239": [
+        "If moving to the left lane, check over your left shoulder.",
+        "You cannot see these areas by only looking in your mirrors."
+      ],
+      "240": [
+        "There might not be enough time to pass several vehicles at once or the one in front of you. Pass only one vehicle at a time on the left side."
+      ],
+      "241": [
+        "Do not only depend on your mirrors and backup camera when backing up.",
+        "Turn your body and look behind you and out of your windows. Look over your right shoulder through the rear window."
+      ],
+      "242": [
+        "When parking on a level surface, put your vehicle in (P) Park (or in gear if you have a manual transmission) and set the parking brake."
+      ],
+      "243": [
+        "You can help a driver behind you by keeping a steady speed and signaling in advance when you need to slow down or turn."
+      ],
+      "244": [
+        "When you cross traffic and multi-lane roads make sure there is enough room to get all the way across."
+      ],
+      "245": [
+        "Last second changes are unsafe and could cause a crash."
+      ],
+      "246": [
+        "The lane farthest on the left of a multi-lane road is used for vehicles to go around slower ones."
+      ],
+      "247": [
+        "If you are parked uphill without a curb, you will turn your wheels all the way to the right before you put your car in park."
+      ],
+      "248": [
+        "Once your front door passes the back bumper of the vehicle you are parking behind, straighten your wheel."
+      ],
+      "249": [
+        "You should be about a foot away from the curb and at least 2 feet away from the vehicle in front of you and behind you."
+      ],
+      "250": [
+        "Do not drive if you are very worried, excited, afraid, angry or depressed."
+      ],
+      "251": [
+        "A light tap on the horn should be enough to signal to another driver to get their attention on the road."
+      ],
+      "252": [
+        "You can use your high beams/brights when: 1. There are no vehicles coming toward you 2. You are in an unfamiliar place or construction area"
+      ],
+      "253": [
+        "If you are turning after an intersection, start signaling once you cross the intersection."
+      ],
+      "254": [
+        "If you are stopping or slowing down point your hand to the ground."
+      ],
+      "255": [
+        "2-Way Traffic – You will see this sign when you are leaving a one-way roadway and entering a roadway with opposing traffic."
+      ],
+      "256": [
+        "School Crossing, School Zone (May be fluorescent green or yellow)"
+      ],
+      "257": [
+        "Keep Right – A traffic island or obstacle divides the road ahead."
+      ],
+      "258": [
+        "Do Not Enter – You cannot enter. This is used on exit ramps going the wrong direction or one-way streets."
+      ],
+      "259": [
+        "Parking is not allowed where there are yellow markings on the curb or areas in front of fire hydrants."
+      ],
+      "260": [
+        "Stop evenly with the vehicle ahead of where you want to park. Stop about 2 feet away from it."
+      ],
+      "261": [
+        "State Road – The sign looks like a milk jug with a spout at the bottom. This sign is white with black lettering."
+      ],
+      "262": [
+        "Do not shift gears while crossing the railroad tracks."
+      ],
+      "263": [
+        "Slow Moving Vehicle – A triangle shaped sign with reflective orange markings. This vehicle could travel at 25 mph or less."
+      ],
+      "264": [
+        "No Passing Zone – A yellow pennant with black lettering."
+      ],
+      "265": [
+        "Each mile marker includes the direction of travel, route number and mile number."
+      ],
+      "266": [
+        "They are at every one to two-tenths of a mile."
+      ],
+      "267": [
+        "Road Construction Flagger Ahead – A worker with a sign or a flag. You must follow their directions."
+      ],
+      "268": [
+        "Railroad Crossing Warning – This sign is round with a yellow background. It has an “X” symbol with black lettering."
+      ],
+      "269": [
+        "In this example the far-left lane is used to go left or stay straight. The middle lane is to go straight. The right lane is to turn right."
+      ],
+      "270": [
+        "Brown Destination Signs – They show information about fun or beautiful places."
+      ],
+      "271": [
+        "Train Approaching – This sign has the crossbuck with the lettering of “Railroad Crossing” and the number of tracks is listed."
+      ],
+      "272": [
+        "In this example you can only use the left lane to turn left or make a U-turn. You would use the right lane to go straight or turn right."
+      ],
+      "273": [
+        "The county sign is rectangular with rounded edges. It is white with black lettering."
+      ],
+      "274": [
+        "Some signs may have a “Tracks out-of-service” sign across them. This means that the tracks are no longer in use."
+      ],
+      "275": [
+        "This sign is blue with white lettering. This sign is at every highway-railroad crossing. It shows a phone number to report unsafe conditions."
+      ],
+      "276": [
+        "Before crossing double railroad tracking you should wait until the train is far away so you can see the tracks are clear."
+      ],
+      "277": [
+        "Flashing Red Arrow – You must come to a full stop. You may go when it is safe to do so."
+      ],
+      "278": [
+        "Steady Yellow – The light is about to change to red. You must slow down and stop before entering the intersection."
+      ],
+      "279": [
+        "You may turn left on red if you are turning from a one-way on to a one-way street."
+      ],
+      "280": [
+        "A solid or dashed yellow line indicates the left edge of the traffic lanes going in your direction."
+      ],
+      "281": [
+        "Solid White Line – A solid white line between lanes means you cannot cross. You can only cross if there is a hazard or you are turning within the next block."
+      ],
+      "282": [
+        "You can cross the line if you turn into a driveway and it is safe to do so."
+      ],
+      "283": [
+        "Reversible lanes have different operational hours for each lane. Each lane has double dashed yellow lines."
+      ],
+      "284": [
+        "Green “arrow” – Lane is open"
+      ],
+      "285": [
+        "If you are stopped and then the light turns green, you must allow cross traffic to clear before you can go ahead."
+      ],
+      "286": [
+        "You can pass a vehicle going less than half the speed limit if it is safe, except if it is farm equipment."
+      ],
+      "287": [
+        "Flashing Yellow Arrow – Yield first before turning and proceed with caution."
+      ],
+      "288": [
+        "Do not drive around the gate or under a raising or lowering gate."
+      ],
+      "289": [
+        "A solid white line indicates the right edge of the traffic lane."
+      ],
+      "290": [
+        "This lane is only for vehicles turning left or making a U-turn."
+      ],
+      "291": [
+        "Red “X” – Lane is closed",
+        "Red X – The lane is closed and cannot be used."
+      ],
+      "292": [
+        "These signs often have a white diamond posted at the side of the sign and on the roadway."
+      ],
+      "293": [
+        "You can travel in this lane if you need to turn across the reserved lane in the next half of a block."
+      ],
+      "294": [
+        "Example: There must be four people in the car. You can only drive between 6 a.m. and 9 a.m., Monday through Friday."
+      ],
+      "295": [
+        "A solid yellow line separates this special lane."
+      ],
+      "296": [
+        "Yield to semitrucks"
+      ],
+      "297": [
+        "As you reach your exit, turn on your right turn signal and exit"
+      ],
+      "298": [
+        "This helps evenly space the number of vehicles merging on to the freeway. This reduces the congestion on the freeway and at the entrance ramp."
+      ],
+      "299": [
+        "If you disobey a ramp signal, you can be ticketed."
+      ],
+      "300": [
+        "The ramp is metered when the sign “Ramp Metered When Flashing” is on."
+      ],
+      "301": [
+        "This road helps with safety, gets rid of crowding and lowers the cost for new roads."
+      ],
+      "302": [
+        "The top priority of law enforcement is the safety and well-being of the public."
+      ],
+      "303": [
+        "Green Arrow – The lane is open and can be used."
+      ],
+      "304": [
+        "Signage will tell you when you can use this lane as a “flex lane.”",
+        "SHOULDER USE PERMITTED ON GREEN ARROW ONLY"
+      ],
+      "305": [
+        "Do not switch lanes while you are in the roundabout."
+      ],
+      "306": [
+        "Put your vehicle in park, turn off your car and radio"
+      ],
+      "307": [
+        "Do not argue if given a ticket. You will have an opportunity in front of a judge or court to express concerns."
+      ],
+      "308": [
+        "If you see their eyes, slow down. Use your horn and be ready to stop."
+      ],
+      "309": [
+        "If you hit a deer, you can keep it.",
+        "Call the police so they can issue a tag for the deer."
+      ],
+      "310": [
+        "The first vehicle in the line must follow traffic signs and signals."
+      ],
+      "311": [
+        "Bald tires reduce traction and increase stopping distance."
+      ],
+      "312": [
+        "When there is reduced visibility, vehicles may appear to be moving slower than they actually."
+      ],
+      "313": [
+        "If your car does not have Anti-Lock Braking System (ABS), gently pump the brakes."
+      ],
+      "314": [
+        "Shady spots, overpasses and bridges on cold wet days"
+      ],
+      "315": [
+        "It is important to remove snow and ice from, all windows, vehicle lamps, side mirrors and license plates"
+      ],
+      "316": [
+        "Turn on your headlights and do not use your high beams (brights)"
+      ],
+      "317": [
+        "No one under 16 years old can operate a farm tractor or self-propelled farm machinery on highways."
+      ],
+      "318": [
+        "The chance of a crash doubles if a teen driver has another teen in the vehicle."
+      ],
+      "319": [
+        "Once you have turned away or changed lanes, you must be ready to keep the vehicle under control."
+      ],
+      "320": [
+        "This may happen when another vehicle is about to hit you from the side or from behind you."
+      ],
+      "321": [
+        "Stay off the brake",
+        "Turn the wheel in the direction you want the vehicle to go"
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 28,
-    "topics_covered": 28,
+    "topics_total": 25,
+    "topics_covered": 25,
     "coverage_pct": 100.0,
     "uncovered_topics": [],
     "verdict": "PASS",
@@ -64,6 +1031,32 @@
     "sign_ratio_pct": 3.4,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 310,
+      "avg_fidelity": 9.99,
+      "pct_at_10": 99.4,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    },
+    "ja": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 310,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

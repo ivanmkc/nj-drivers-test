@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "nm",
   "name": "New Mexico",
-  "verified_at": "2026-05-26T02:31:23Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:09:19Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.mvd.newmexico.gov/mvd-drivers-license-manuals/",
     "manual_pdf_sha256": "5260a4f3ccbfa02b748d190fb98e1ab016ef45126304b1d4142c4f9e9267c5eb",
@@ -23,23 +23,622 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 188,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "The three different levels of Graduated driver license (GDL) are: • Instructional Permit • Provisional License • Unrestricted Drivers License"
+      ],
+      "2": [
+        "Traffic control devices include traffic signals, signs and pavement markings."
+      ],
+      "3": [
+        "OTHER LANE CONTROLS ............................................................................................................. 9 Reversible Lanes ... 9 Reserved Lanes ... 9 Shared Center Lane ... 9"
+      ],
+      "4": [
+        "BASIC DRIVING ................................................................................................................................. 14 Starting ... Accelerating ... Steering ... Speeding ... Stopping ... Scanning"
+      ],
+      "5": [
+        "ADJUSTING TO ROAD CONDITIONS ........................................................................................... 20 Driving with Wildlife in Mind ......................................................................................... 21"
+      ],
+      "6": [
+        "Vehicle Emergencies ........................................................................................................... 31 Brake Failure ... Tire Blowout ... Power Failure"
+      ],
+      "7": [
+        "LARGE TUCKS AND RVS ........................................................................................................... 27 Trucker's Blind Spots ........................................................................................................... 27"
+      ],
+      "8": [
+        "BE IN SHAPE TO DRIVE ........................................................................................................ 28 VISION ... FATIGUE ... DRINKING AND DRIVING ... HEALTH ... EMOTIONS"
+      ],
+      "9": [
+        "The three different levels of Graduated driver license (GDL) are: • Instructional Permit • Provisional License • Unrestricted Drivers License"
+      ],
+      "10": [
+        "SHARING SPACE ....................................................................................................................... 23 Space Ahead ... Space Behind ... Space to the Side ... Space to Merge"
+      ],
+      "11": [
+        "Other Drugs And Driving",
+        "Besides alcohol, there are many other drugs that can affect a person’s ability to drive safely."
+      ],
+      "12": [
+        "Vehicle Emergencies",
+        "Brake Failure",
+        "Tire Blowout",
+        "Power Failure"
+      ],
+      "13": [
+        "LETTING OTHERS KNOW YOU ARE THERE",
+        "LETTING OTHERS KNOW WHAT YOU ARE DOING"
+      ],
+      "14": [
+        "OTHER LANE CONTROLS",
+        "Reversible Lanes",
+        "Reserved Lanes",
+        "Shared Center Lane"
+      ],
+      "15": [
+        "Anyone operating a motor vehicle or motorcycle on public roadways in the State of New Mexico must have a driver license."
+      ],
+      "16": [
+        "Instructional Permit — also known as a “learners permit”",
+        "Provisional License",
+        "Unrestricted Drivers License"
+      ],
+      "17": [
+        "The minimum age for an instructional permit is 15 years of age."
+      ],
+      "18": [
+        "In all vehicles except motorcycles, the licensed driver must sit in the right front seat."
+      ],
+      "19": [
+        "On motorcycles, the licensed driver must follow the learner."
+      ],
+      "20": [
+        "The driver is with a licensed driver 21years of age or older who has been licensed for at least three years in this state or any other state."
+      ],
+      "21": [
+        "The driver must retain the instructional permit for at least six months."
+      ],
+      "22": [
+        "The driver must complete not less than 50 hours of practice driving, including not less than 10 hours of nighttime driving."
+      ],
+      "23": [
+        "The driver may not operate a motor vehicle upon public highways between the hours of midnight and 5:00 AM."
+      ],
+      "24": [
+        "Driving to and from work as evidenced by a signed statement from the licensee’s employer."
+      ],
+      "25": [
+        "you may not have more than one other passenger under the age of 21 who is not a member of your immediate family in the vehicle."
+      ],
+      "26": [
+        "The driver must have held a provisional license for the 12- month period immediately preceding the date of application for a driver license."
+      ],
+      "27": [
+        "The driver must not have been convicted of a traffic violation 90 days prior to applying for a driver license."
+      ],
+      "28": [
+        "Your driver license is valid for either 4 or 8 years."
+      ],
+      "29": [
+        "You may renew the license anytime up to 90 days before or 30 days after it expires."
+      ],
+      "30": [
+        "Failing to settle a financial judgment made against you for damages resulting from a motor vehicle accident"
+      ],
+      "31": [
+        "If you have an automatic shoulder belt, be sure to buckle your lap belt as well. Otherwise, in a collision you could slide out of the belt and be hurt or killed."
+      ],
+      "32": [
+        "Children under the age of 24 months, or weighing less than 60 pounds, must be secured in an approved safety device."
+      ],
+      "33": [
+        "If you are stopped and then the light turns green, you must allow crossing traffic to clear the intersection before you go ahead."
+      ],
+      "34": [
+        "A flashing YELLOW traffic light means slow down and proceed with caution."
+      ],
+      "35": [
+        "A flashing RED traffic light means the same as a stop sign. You must come to a full stop and then may proceed when it is safe to do so."
+      ],
+      "36": [
+        "Warning Signs—These signs are usually yellow with black lettering or symbols and most are diamond shaped."
+      ],
+      "37": [
+        "A white, X-shaped sign or “crossbuck” with “Railroad Crossing” on it is located at the railroad crossing. This sign has the same meaning as a “Yield” sign."
+      ],
+      "38": [
+        "School buses, taxis and other vehicles for hire that carry passengers and trucks that transport explosives, gasoline or other dangerous materials must stop at least 15 feet from a railroad crossing"
+      ],
+      "39": [
+        "Work Area Signs—These construction, maintenance or emergency operations signs are generally diamond or rectangular shaped, orange with black letters or symbols"
+      ],
+      "40": [
+        "Some regulatory signs have a red circle with a red slash over a symbol. These signs prohibit certain actions, i.e., no left turn, no right turn, no U-turn, etc."
+      ],
+      "41": [
+        "The maximum limit should be driven only in ideal driving conditions and you must reduce your speed when conditions require it."
+      ],
+      "42": [
+        "If you are turning left, a steady green traffic light means you may turn but only when safe to do so. Oncoming traffic has the right-of-way."
+      ],
+      "43": [
+        "The maximum limit should be driven only in ideal driving conditions and you must reduce your speed when conditions require it."
+      ],
+      "44": [
+        "A square sign with a white horizontal line inside a red ball means you cannot enter."
+      ],
+      "45": [
+        "A reflective orange triangle on the rear of a vehicle means it is traveling less than 25 mph."
+      ],
+      "46": [
+        "Service Signs—These signs are square or rectangular shaped and are blue with white letters or symbols. They show the location of various services such as rest areas, gas stations, campgrounds or hospitals."
+      ],
+      "47": [
+        "A solid white line between lanes of traffic means that you should stay in your lane unless a special situation requires you to change lanes."
+      ],
+      "48": [
+        "Where there is both a solid and a dashed yellow line between opposing lanes of traffic, you may not pass if the solid yellow line is on your side. If the dashed line is on your side, you may pass if it is safe to do so."
+      ],
+      "49": [
+        "You may cross a solid yellow line to turn into a drive way if it safe to do so."
+      ],
+      "50": [
+        "A flashing yellow “X” means the lane is only for turning."
+      ],
+      "51": [
+        "“HOV” stands for “High Occupancy Vehicles” and indicates lanes reserved for vehicles with more than one person in them.",
+        "For example, “HOV 3” means there must be at least three people in the vehicle."
+      ],
+      "52": [
+        "These center lanes are reserved for making left turns (or U-turns when they are permitted) but can be used by vehicles traveling in both directions.",
+        "These lanes are marked on each side by a solid yellow and dashed yellow line."
+      ],
+      "53": [
+        "Never back a vehicle in any travel lane except to parallel park. It is illegal and unsafe to do so."
+      ],
+      "54": [
+        "On a road with three or more lanes traveling in the same direction, if there is a lot of entering or exiting traffic, use the center travel lane."
+      ],
+      "55": [
+        "Where there are no signs or lane markings to control turning, you should turn from the lane that is closest to the direction you want to go and turn into the lane closest to the one you came from."
+      ],
+      "56": [
+        "On right turns, avoid swinging wide to the left before turning to make the turn. If you swing wide, the driver behind you may think you are changing lanes or going to turn left and may try to pass you on the right."
+      ],
+      "57": [
+        "On right turns, avoid swinging wide to the left before turning to make the turn."
+      ],
+      "58": [
+        "The White Cane Law, 28-7-1 NMSA (1978) enables persons who are blind, visually impaired, or who have other physical disabilities access to all roads and sidewalks.",
+        "shall take all necessary precautions to avoid injury to such blind pedestrian"
+      ],
+      "59": [
+        "At a 4-way stop, the driver reaching the intersection first, goes first (after coming to a complete stop). If more than one vehicle arrives at the same time, the vehicle on the right goes first."
+      ],
+      "60": [
+        "If you are in an intersection, drive through the intersection before you pull over."
+      ],
+      "61": [
+        "You are not required to stop if the bus is traveling towards you and the roadway is separated by a median or other physical barrier."
+      ],
+      "62": [
+        "30 mph in business or residential areas, unless posted otherwise"
+      ],
+      "63": [
+        "75 mph on rural interstate highways, unless, posted otherwise"
+      ],
+      "64": [
+        "When you park on a hill, turn your wheels sharply towards the side of the road or curb. This way, if your vehicle starts to roll downhill, it will roll away from traffic."
+      ],
+      "65": [
+        "within 15 ft. of a fire hydrant,"
+      ],
+      "66": [
+        "more than 18 in. from the curb,"
+      ],
+      "67": [
+        "red—indicates a fire zone with no parking or standing permitted."
+      ],
+      "68": [
+        "If a driver has twelve or more points within a twelve-month period, their driver's license will be suspended for one year."
+      ],
+      "69": [
+        "One balanced position for steering control is at the 10 o'clock and 2 o'clock positions. Some drivers prefer placing their hands at 9 and 3 o'clock."
+      ],
+      "70": [
+        "Drivers may not enter an intersection unless they can get through it without having to stop. You should wait until traffic ahead clears so that you are not blocking the intersection."
+      ],
+      "71": [
+        "At an intersection where there is no stop sign, yield sign or traffic signal, drivers must yield to vehicles coming from the right."
+      ],
+      "72": [
+        "When you complete a turn, straighten out the steering wheel by hand. Letting it slip through your fingers could be dangerous."
+      ],
+      "73": [
+        "People are not very good at judging how fast they are going. It is easy to be traveling much faster than you think."
+      ],
+      "74": [
+        "When you brake quickly, you could skid and lose control of your vehicle. You also make it harder for drivers behind you to stop without hitting you."
+      ],
+      "75": [
+        "Safer drivers tend to look at least 10 seconds ahead of their vehicle."
+      ],
+      "76": [
+        "In the city, 10 seconds is about one block. When you drive in city traffic, you should try to look at least one block ahead."
+      ],
+      "77": [
+        "If you were stopped and your view of a cross street is blocked, edge forward slowly until you can see."
+      ],
+      "78": [
+        "You may also turn left from a one-way street into another one-way street unless prohibited."
+      ],
+      "79": [
+        "At crossings with more than one track, wait until the passing train is well down the track before starting to cross. Another train may be hidden by the one that just passed."
+      ],
+      "80": [
+        "These areas are called “blind spots” because you cannot see them through your mirrors. You must turn your head and look to see vehicles in your blind spot."
+      ],
+      "81": [
+        "Check quickly. Do not take your eyes off the road ahead for more than an instant. Traffic ahead of you could stop suddenly while you are checking traffic to the sides, rear or over your shoulder."
+      ],
+      "82": [
+        "Place your right arm on the back of the seat and turn around so that you can look directly through the rear window. Do not depend on your rearview or side mirrors"
+      ],
+      "83": [
+        "Check behind your vehicle before you get in. Children or small objects cannot be seen from the driver’s seat."
+      ],
+      "84": [
+        "Check your mirrors when you are going down hills or mountains. Vehicles often build up speed going down a steep grade. Be alert for large trucks and buses that may be going too fast."
+      ],
+      "85": [
+        "By looking well ahead... you can drive more safely, save on fuel, help keep traffic moving at a steady pace",
+        "Looking well down the road will also help you to steer straighter with less weaving."
+      ],
+      "86": [
+        "Dim your high beams whenever you come within about a one-block distance of an oncoming vehicle."
+      ],
+      "87": [
+        "Use the low beams in fog or when it is snowing or raining hard. Light from high beams will reflect back, causing glare and making it more difficult to see ahead."
+      ],
+      "88": [
+        "Remember, if you turn on your wipers, turn on your headlights."
+      ],
+      "89": [
+        "If there is danger, do not be afraid to sound a SHARP BLAST on your horn. Do this: when a child or older person is about to walk, run or ride into the street"
+      ],
+      "90": [
+        "Get your vehicle off the road and away from traffic if at all possible",
+        "Try to stop where other drivers have a clear view of your vehicle if you cannot get your vehicle off the roadway. (Do not stop just over a hill or just around a curve.)"
+      ],
+      "91": [
+        "Never stay along side a large vehicle such as a truck or bus. These vehicles have large blind spots and it hard for drivers of large vehicles to see you."
+      ],
+      "92": [
+        "Signal at least 100 feet before you make your turn."
+      ],
+      "93": [
+        "If another vehicle is about to enter the street between you and where you plan to turn, wait until you have passed it to signal your turn."
+      ],
+      "94": [
+        "Always slow down before you enter the curve so you do not have to brake in the curve. Braking in a curve can cause the vehicle to skid."
+      ],
+      "95": [
+        "On a wet road you should reduce your speed about 10 mph. On packed snow you should cut your speed in half.",
+        "On ice, you must slow to a crawl."
+      ],
+      "96": [
+        "This is because bridges do not have earth underneath them to help insulate them against the cold and thus can be colder and icier than other roadways."
+      ],
+      "97": [
+        "If it starts to rain on a hot day, pavement can be very slippery for the first few minutes. Heat causes the oil in the asphalt to come to the surface."
+      ],
+      "98": [
+        "In a heavy rain, your tires can lose all traction with the road at about 50 mph.",
+        "When it is raining or the road is wet, most tires have good traction up to about 35 mph."
+      ],
+      "99": [
+        "Do not drive at any time with only your parking lights on. Parking lights are for parking only."
+      ],
+      "100": [
+        "Back slowly; your vehicle is much harder to steer while you are backing.",
+        "Whenever possible, use a person outside the vehicle to help you back."
+      ],
+      "101": [
+        "Ease your foot off the gas pedal.",
+        "Keep the steering wheel straight.",
+        "Do not try to stop or turn until your tires are gripping the road again."
+      ],
+      "102": [
+        "Be especially watchful for wildlife at dawn, dusk, and in the first few hours after darkness falls. Many animals are most active at these times."
+      ],
+      "103": [
+        "Animals with hooves, such as deer, often slow down on slick surfaces. So be ready to slow down to let them cross."
+      ],
+      "104": [
+        "Do not drive to the end of the ramp and stop or you will not have enough room to get up to the speed of traffic."
+      ],
+      "105": [
+        "If the road you are traveling has exit ramps, do not slow down until you move onto the exit ramp."
+      ],
+      "106": [
+        "At 50 mph, it can take about 400 feet to react to something you see and bring your vehicle to a stop."
+      ],
+      "107": [
+        "At 30 mph, it can take about 200 feet to stop. That is almost half a city block in length."
+      ],
+      "108": [
+        "Your headlights will let you see about 400 feet ahead. You should drive at a speed that allows you to stop within this distance or about 50 mph."
+      ],
+      "109": [
+        "When you cannot see any farther than that, you cannot safely drive faster than 30 mph."
+      ],
+      "110": [
+        "To tell if you are driving too fast for conditions, use the “Four Second Sight Distance Rule.”"
+      ],
+      "111": [
+        "There is an easy way to tell if you are following too closely. It is called the “three-second rule,” and it works at any speed."
+      ],
+      "112": [
+        "If vehicles are piled-up behind you, pull over when safe to do so and let them pass."
+      ],
+      "113": [
+        "Toll plazas—Vehicles are changing lanes and preparing to stop and then speeding-up again when leaving the plaza."
+      ],
+      "114": [
+        "It is called the “three-second rule,” and it works at any speed."
+      ],
+      "115": [
+        "For example, you may need a four second following distance to be safe; (1) on slippery roads, (2) when following motorcycles"
+      ],
+      "116": [
+        "Anytime you want to merge with other traffic, you need a gap of about four seconds.",
+        "You need a four-second gap whenever you change lanes, enter a roadway or when your lane merges with another travel lane."
+      ],
+      "117": [
+        "Even if you have the green light, do not start across the intersection if there are vehicles blocking your way."
+      ],
+      "118": [
+        "Oncoming vehicles—At a speed of 55 mph, you need about 10 seconds to pass."
+      ],
+      "119": [
+        "This means you should not start to pass if you are within one-third of a mile of a hill or curve."
+      ],
+      "120": [
+        "When you can see both headlights of the vehicle you just passed in your rear-view mirror, it is safe to return to the driving lane."
+      ],
+      "121": [
+        "Keep a safe distance when passing a bicyclist, trying for at least five feet"
+      ],
+      "122": [
+        "Do not make a sudden right turn after passing a bicyclist on your right. Instead, slow down and merge behind the bicyclist before turning."
+      ],
+      "123": [
+        "They indicate that bicyclists are encouraged to take the whole travel lane and that motorists shall yield to the bicyclist as needed."
+      ],
+      "124": [
+        "But a large truck could take almost 800 feet to stop."
+      ],
+      "125": [
+        "They often swing wide to make a right turn.",
+        "If you think the truck is turning left, wait a second and check the turn signals again. The driver may really be turning right."
+      ],
+      "126": [
+        "In general, if you can’t see the driver in the side mirror, the driver can’t see you."
+      ],
+      "127": [
+        "Always pass a large truck or RV on the left side."
+      ],
+      "128": [
+        "Adults should, and minors must, wear a well-fitting helmet."
+      ],
+      "129": [
+        "Always pass a large truck or RV on the left side. After you pass, move ahead of it. Don’t stay in the driver’s blind spot."
+      ],
+      "130": [
+        "Remember that a big truck or RV may look like it’s going more slowly than it is."
+      ],
+      "131": [
+        "This test measures that you have at least 20/40 vision in at least one eye, with or without corrective lenses."
+      ],
+      "132": [
+        "Avoid using dark glasses or tinted contact lenses at night, even if you think they help with glare. The problem is that they cut down the light that you need to see clearly."
+      ],
+      "133": [
+        "Eat lightly. Do not eat a large meal before you leave. Some people get sleepy after they eat a big meal."
+      ],
+      "134": [
+        "Alcohol goes from your stomach into your blood and to all parts of your body. It reaches your brain in 20 to 40 minutes."
+      ],
+      "135": [
+        "An alcohol drink is 1 1/2 oz. of 80-proof liquor (one shot glass) straight or with a mixer, 12 oz. of beer (a regular size can, bottle, or glass) or a 5 oz. glass of wine."
+      ],
+      "136": [
+        "Your body gets rid of one alcoholic drink per hour. There is no way to sober up quickly. Coffee, fresh air, exercise or cold showers will not help. Time is the only thing that will sober you up."
+      ],
+      "137": [
+        "In New Mexico, if you are under 21, you also can be arrested for BAC at .02%."
+      ],
+      "138": [
+        "If a police or traffic officer asks you to take a BAC test and refuse to do so, you can lose your driver license for one year."
+      ],
+      "139": [
+        "Any DWI conviction will remain on your driving record for twenty-five years."
+      ],
+      "140": [
+        "Pep pills, “uppers” and diet pills can make a driver feel more alert for a short time. Later however, they can cause a person to be nervous, dizzy, unable to concentrate, and they can affect your vision."
+      ],
+      "141": [
+        "People with epilepsy should have frequent check-ups, practice careful management of medicine, and be stable and seizure free for a 6-month period before being issued a driver's license."
+      ],
+      "142": [
+        "Pull over to the side of the road to place or take a call whenever possible.",
+        "Dialing, or even just talking on a cell phone, can be a dangerous distraction from safe driving."
+      ],
+      "143": [
+        "If you are found guilty of DWI and it is your first conviction, you will pay stiff fines and court costs, and you could be sentenced to jail.",
+        "You will also be ordered to treatment and to install an ignition interlock device on your vehicle."
+      ],
+      "144": [
+        "Pull over to the side of the road to place or take a call whenever possible.",
+        "Dialing, or even just talking on a cell phone, can be a dangerous distraction from safe driving."
+      ],
+      "145": [
+        "Pump the brake pedal several times. This will often build up enough brake pressure to allow you to stop."
+      ],
+      "146": [
+        "Hold the steering wheel tightly and keep the vehicle going straight.",
+        "Slow down gradually. Take your foot off the gas pedal and use the brakes lightly."
+      ],
+      "147": [
+        "Keep a strong grip on the steering wheel. Be aware that the steering may be difficult to turn, but you can turn it.",
+        "The brakes will still work but you may have to push very hard on the brake pedal."
+      ],
+      "148": [
+        "Quickly shift to neutral.",
+        "Keep your eyes on the road."
+      ],
+      "149": [
+        "In avoiding a collision, drivers have three options: stop, turn or speed up."
+      ],
+      "150": [
+        "Press on the brake pedal as hard as you can and keep pressing on it.",
+        "The ABS system will only work with the brake pedal pushed down."
+      ],
+      "151": [
+        "Without ABS—If you do not have ABS, you must use a different procedure to turn quickly. You should step on the brake pedal, then let-up and turn the steering wheel."
+      ],
+      "152": [
+        "Skids are caused by drivers traveling too fast for conditions."
+      ],
+      "153": [
+        "Stay off the brake. Until the vehicle slows, your brakes will not work and could cause you to skid more."
+      ],
+      "154": [
+        "If your vehicle is about to be hit from the front it is important to try and have a “glancing blow” rather than being struck head on. This means... you should try to turn the vehicle."
+      ],
+      "155": [
+        "If your vehicle can move, get it off the road so that it does not block traffic or cause another crash."
+      ],
+      "156": [
+        "Do not move the injured unless they are in a burning vehicle or in other immediate danger of being hit by another vehicle."
+      ],
+      "157": [
+        "If there is bleeding, apply pressure directly on the wound with your hand or with a cloth."
+      ],
+      "158": [
+        "Press yourself against the back of your seat and put your head against the head restraint."
+      ],
+      "159": [
+        "To help prevent an injured person from going into shock, cover them with a blanket or coat to keep them warm."
+      ],
+      "160": [
+        "Should the accident involve a parked vehicle, try to find the owner. If you cannot, leave a note in a place where it can be seen with information on how the owner can reach you"
+      ],
+      "161": [
+        "$10,000 Injury to or destruction of property of others in any one accident."
+      ],
+      "162": [
+        "$50,000 Bodily injury to or death of two or more persons in any one accident."
+      ],
+      "163": [
+        "Failure to have insurance could result in non-issuance or suspension of your vehicle registration, and surrender of the license plates"
+      ],
+      "164": [
+        "The front brake is more powerful and can provide as much as three-quarters of your total stopping power."
+      ],
+      "165": [
+        "Use both brakes every time you slow or stop.",
+        "Apply both brakes at the same time."
+      ],
+      "166": [
+        "You might be in the blind spot of a car in the next lane, which could switch into your lane without warning.",
+        "Cars in the next lane also block your escape if you come upon danger in your own lane."
+      ],
+      "167": [
+        "If oncoming traffic is present, it is usually best to remain in the center lane position to maximize your space cushion."
+      ],
+      "168": [
+        "Discourage lane sharing by others. Keep a center of the lane position whenever drivers might be tempted to squeeze by you."
+      ],
+      "169": [
+        "The center of a lane can be oily. It collects the drippings from cars, particularly at intersections."
+      ],
+      "170": [
+        "Use them anytime you plan to change lanes. Use them even though you think no one else is around."
+      ],
+      "171": [
+        "New Mexico Law requires all motorcycle drivers and passengers under 18 years old to wear a helmet."
+      ],
+      "172": [
+        "Most motorcycles have rounded (convex) mirrors. These provide a wider view of the road behind than flat mirrors do. They also make cars seem father away than they really are."
+      ],
+      "173": [
+        "If there is bleeding, apply pressure directly on the wound with your hand or with a cloth. Even severe bleeding can almost always be stopped or slowed by putting pressure on the wound."
+      ],
+      "174": [
+        "Most motorcycles have rounded (convex) mirrors. These provide a wider view of the road behind than flat mirrors do. They also make cars seem father away than they really are."
+      ],
+      "175": [
+        "Open up a three second following distance and allow more distance to pass and to be passed."
+      ],
+      "176": [
+        "Use your high beam. Get all the light you can. Use your high beam whenever you are not following or meeting a car."
+      ],
+      "177": [
+        "Staggered Formation—This is the best way to keep ranks close yet maintain an adequate space cushion."
+      ],
+      "178": [
+        "The leader rides in the left side of the lane, while the second rider stays one second behind in the right side of the lane."
+      ],
+      "179": [
+        "Riders in a staggered formation should pass one at a time. First the lead rider should pull out and pass when it is safe"
+      ],
+      "180": [
+        "It is best to move into a single-file formation when riding curves, turning, entering or leaving a highway."
+      ],
+      "181": [
+        "If you are chased, shift down and approach the animal slowly. As you approach it, speed up and leave the animal behind. Do not kick at the animal."
+      ],
+      "182": [
+        "The greatest potential for conflict between you and other traffic is at intersections."
+      ],
+      "183": [
+        "Over half of motorcycle/car collisions are caused by drivers entering a rider's right-of-way."
+      ],
+      "184": [
+        "As you approach the intersection, select a lane position to increase your visibility to the driver. Cover the clutch and both brakes to reduce reaction time."
+      ],
+      "185": [
+        "Then edge forward and stop again, just short of where the cross-traffic lane meets your lane. From that position, lean your body forward and look around buildings"
+      ],
+      "186": [
+        "Close the throttle gradually to slow the motorcycle. Do no apply the brakes; braking could make the wobble worse"
+      ],
+      "187": [
+        "Close the throttle gradually to slow the motorcycle. Do no apply the brakes; braking could make the wobble worse"
+      ],
+      "188": [
+        "When you are being passed from behind or by an oncoming vehicle, stay in the center portion of your lane."
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 25,
-    "topics_covered": 25,
-    "coverage_pct": 100.0,
-    "uncovered_topics": [],
+    "topics_total": 30,
+    "topics_covered": 29,
+    "coverage_pct": 96.7,
+    "uncovered_topics": [
+      "Yielding right-of-way at traffic circles and rotaries"
+    ],
     "verdict": "PASS",
     "grade": "A"
   },
@@ -63,6 +662,20 @@
     "sign_ratio_pct": 15.3,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 188,
+      "avg_fidelity": 9.99,
+      "pct_at_10": 99.5,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

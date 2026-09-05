@@ -1,16 +1,16 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "nj",
   "name": "New Jersey",
-  "verified_at": "2026-05-26T02:31:30Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-27T01:25:41Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
     "manual_pdf_sha256": "8a39817ae134a219ef71d641ac4dc27c796e580811c04e2331e7b3e2f1ea257e",
     "manual_text_sha256": "5d4488e8b9154a0774a8b8e0698d08514cdc9f7029f456fdcc1c4a1c06f8bb33",
     "manual_text_chars": 348322,
     "manual_pages": 243,
-    "edition": ""
+    "edition": "2025"
   },
   "bank": {
     "total_questions": 307,
@@ -24,30 +24,1021 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
-    "avg_fidelity": 9.87,
-    "pct_at_10": 96.7,
-    "pct_above_9": 96.7,
-    "pct_above_7": 96.7,
-    "pct_zero": 0.0,
+    "sample_size": 0,
+    "judged_count": 289,
+    "avg_fidelity": 9.93,
+    "pct_at_10": 97.9,
+    "pct_above_9": 98.6,
+    "pct_above_7": 99.3,
+    "pct_zero": 0.3,
     "flagged_question_ids": [
-      259
+      249,
+      283
     ],
+    "evidence_by_question_id": {
+      "1": [
+        "A motorist who operates a motor vehicle in the State of New Jersey must carry a valid driver license, a valid probationary license, or a validated New Jersey permit.",
+        "The motorist must also carry valid insurance and vehicle registration cards."
+      ],
+      "2": [
+        "A motorist who changes addresses must report this change to the MVC within one week after moving."
+      ],
+      "3": [
+        "A motorist with a valid out-of-state license who moves to New Jersey must apply for a New Jersey license within 60 days... or before the current license expires, whichever is sooner."
+      ],
+      "4": [
+        "Driver licenses are valid for four years."
+      ],
+      "5": [
+        "Must be at least 16 years old",
+        "Any New Jersey resident who is at least 16 years old and is not in suspension status may enroll in a behind-the-wheel driver training course to obtain a special learner permit"
+      ],
+      "6": [
+        "Must complete a minimum of 50 practice driving hours, including 10 hours during darkness",
+        "GDL permit holders under 21 years of age must have a minimum of six months supervised practice driving which must include a minimum of 50 practice driving hours, including 10 during darkness"
+      ],
+      "7": [
+        "No driving between 11:01 pm and 5:00 am",
+        "If the Examination Permit or Probationary License holder is 21 years of age or older, hour, passenger and decal restrictions do not apply."
+      ],
+      "8": [
+        "No using hand-held or hands-free cell phones or any other electronic devices.",
+        "A graduated driver license (GDL) holder may not use a handheld or hands-free cellular telephone, or any other handheld electronic device, when behind the wheel."
+      ],
+      "9": [
+        "One decal is to be displayed on the top left corner of the rear license plate and the other on the top left corner of the front license plate."
+      ],
+      "10": [
+        "Permit holder must be accompanied in the front seat by an adult supervising driver who is at least 21 years of age and who possesses a valid New Jersey driver license and has a minimum of three years’ driving experience"
+      ],
+      "11": [
+        "Must practice unsupervised driving for at least one year",
+        "Must have completed one year of unsupervised driving with probationary driver license restrictions"
+      ],
+      "12": [
+        "All Standard New Jersey driver license applicants must provide 6 points of ID Verification",
+        "At least six points of ID"
+      ],
+      "13": [
+        "A motorist with a valid license from another country may drive with that license for up to a year."
+      ],
+      "14": [
+        "Altering a driver license or presenting an altered driver license may result in the loss of a motorist’s driving privilege, a fine up to $1,000, and/ or imprisonment."
+      ],
+      "15": [
+        "Must be at least 21 years old",
+        "Must practice with an adult supervising driver",
+        "Must practice at least three months"
+      ],
+      "16": [
+        "80 percent, or 40 of the 50 questions, must have correct answers."
+      ],
+      "17": [
+        "Basic License Applicants: 20/50 vision with or without corrective lenses."
+      ],
+      "18": [
+        "The knowledge test consists of 50 questions: plus, a survey question about organ donation."
+      ],
+      "19": [
+        "The driver is responsible for all passengers under age 18."
+      ],
+      "20": [
+        "Seat belts can save a life and improve a motorist’s chances of surviving a crash by 60 percent."
+      ],
+      "21": [
+        "All children under age eight must be seated in a rear seat."
+      ],
+      "22": [
+        "Children under age two and those who weigh less than 30 pounds must ride in a federally approved rear-facing child passenger restraint system that is equipped with a five-point harness."
+      ],
+      "23": [
+        "For normal driving, a motorist should grip the steering wheel by the outside rim at the 9 and 3 o’clock positions, keeping his/her thumbs along the face of the wheel."
+      ],
+      "24": [
+        "A motorist should be able to stop within 25 feet at 20 mph."
+      ],
+      "25": [
+        "A motorist should put on the turn signal at least 100 feet before turning and be sure to cancel the signal after making a turn."
+      ],
+      "26": [
+        "Right turn: hand and arm upward.",
+        "Left turn: hand and arm straight out.",
+        "Stop or slowing down: hand and arm downward, palm facing to the rear."
+      ],
+      "27": [
+        "When parking a vehicle facing uphill: The hand brake should be set, and the vehicle’s wheels should be turned away from the curb."
+      ],
+      "28": [
+        "The vehicle’s tires should be no more than six inches from the curb."
+      ],
+      "29": [
+        "New Jersey law requires all motorists to restrict vehicle idling to three minutes or less. (N.J.A.C. 7:27-15.8)"
+      ],
+      "30": [
+        "Any person who violates this law is subject to fines of $25 to $75, regardless of whether any snow or ice is dislodged from the vehicle."
+      ],
+      "31": [
+        "Hitting the dashboard or windshield at 30 mph is like falling from the top of a three-story building."
+      ],
+      "32": [
+        "Air bags inflate at speeds of up to 200 mph to protect adults in a front-end crash."
+      ],
+      "33": [
+        "keep at least 10 inches between the center of the steering wheel and the center of the breastbone."
+      ],
+      "34": [
+        "A vehicle should be driven slowly in reverse – typically, walking speed (2 to 4 mph)."
+      ],
+      "35": [
+        "He/she will be asked to back the vehicle about 100 feet in a straight line, slowly and smoothly."
+      ],
+      "36": [
+        "A vehicle should not be driven with tires that have less than 1/16 inch of tread (about the edge of a penny)."
+      ],
+      "37": [
+        "Under normal conditions, the horn should be able to be heard for at least 200 feet."
+      ],
+      "38": [
+        "25 mph School zones, business, or residential districts"
+      ],
+      "39": [
+        "35 mph Suburban business and residential districts"
+      ],
+      "40": [
+        "50 mph Non-posted rural roadways"
+      ],
+      "41": [
+        "Motorists pay double fines for exceeding the 65 mph limit by 10 miles per hour or more."
+      ],
+      "42": [
+        "Passing on the right is allowed only on roads with more than one lane going in the same direction",
+        "when the motorist ahead is making a left turn and there is room to pass.",
+        "Never pass on the right shoulder of the road."
+      ],
+      "43": [
+        "Both center lines are solid: No passing allowed."
+      ],
+      "44": [
+        "At a multi-way stop or stop intersection, a motorist must yield to the motorist on the right if both motorists get there at the same time."
+      ],
+      "45": [
+        "When a traffic signal is not illuminated because of a power failure or other malfunction; the traffic signal is observed as a 4-way stop signal."
+      ],
+      "46": [
+        "Unless a No Turn on Red sign is posted, New Jersey law authorizes a right turn on a red light after a motorist comes to a full stop and checks for traffic."
+      ],
+      "47": [
+        "State law requires a motorist to stop at least 25 feet away if he/she is traveling on a two-lane road",
+        "A motorist must stop for a school bus with flashing red lights."
+      ],
+      "48": [
+        "If a school bus has stopped directly in front of a school to pick up or let off children... a motorist may pass from either direction at a speed of no more than 10 mph."
+      ],
+      "49": [
+        "A motorist must stop at least 15 feet from a railroad crossing when there are flashing red lights, ringing bells, descending or lowered gates, or flag signals."
+      ],
+      "50": [
+        "Afterward, the motorist should keep at least 300 feet behind a signaling emergency vehicle. (N.J.S.A. 39:4-92)"
+      ],
+      "51": [
+        "Headlights must be used between one-half hour after sunset and one-half hour before sunrise.",
+        "Headlights must also be used when visibility is 500 feet or less, when using windshield wipers"
+      ],
+      "52": [
+        "Within 10 feet of a fire hydrant."
+      ],
+      "53": [
+        "Within 25 feet of a crosswalk at an intersection or sideline of a street or intersection highway, except at alleys."
+      ],
+      "54": [
+        "Within 50 feet of a stop sign."
+      ],
+      "55": [
+        "Within 50 feet of a railroad crossing."
+      ],
+      "56": [
+        "It is illegal for a vehicle to be parked more than six inches from the curb. (N.J.S.A. 39:4-135)"
+      ],
+      "57": [
+        "The fine for breaking this law is $200-$400 for a first offense, $400-$600 for a second offense within 10 years of the first offense, $600-$800 for a third offense"
+      ],
+      "58": [
+        "New Jersey’s “Move Over” law requires all motorists approaching a stationary, authorized emergency vehicle... to change lanes, safety and traffic conditions permitting",
+        "If a lane change is impossible, prohibited by law or unsafe, the motorist must reduce the speed of his/her vehicle"
+      ],
+      "59": [
+        "A motorist should never park within 200 feet of a fire department vehicle in service"
+      ],
+      "60": [
+        "Stop, and then drive past the truck at a speed of no more than 15 mph."
+      ],
+      "61": [
+        "Stop for pedestrians in crosswalks. Failure to stop carries a fine of up to $500, up to 25 days in jail, community service, a driving privilege suspension of up to 6 months, and 2 points."
+      ],
+      "62": [
+        "Driving on private property to avoid a traffic signal or sign is a motor vehicle violation. (N.J.S.A. 39:4-66.2)"
+      ],
+      "63": [
+        "New Jersey law prohibits add-on tinting on windshields and front side windows. (N.J.S.A 39:3-74)"
+      ],
+      "64": [
+        "When traveling on a dual-lane highway, a motorist should slow to 10 mph if on the other side of a safety island or raised median."
+      ],
+      "65": [
+        "brings the vehicle to a complete stop at a point within five feet of the nearest crosswalk or stop line marked upon the pavement at the near side of the intersection street."
+      ],
+      "66": [
+        "If it takes at least three seconds before your vehicle passes the object, a motorist should have enough distance for a sudden stop."
+      ],
+      "67": [
+        "During bad weather, the time interval should be increased to four or more seconds."
+      ],
+      "68": [
+        "the rule of thumb most often used is to keep one car length back (about 20 feet) for each 10 miles per hour of speed."
+      ],
+      "69": [
+        "60 mph | 66 ft | 277 ft | 343 ft"
+      ],
+      "70": [
+        "A vehicle travels 88 feet per second at 60 mph."
+      ],
+      "71": [
+        "Wet road surfaces can cause tires to hydroplane, or ride up on a film of water, starting at about 35 mph",
+        "After 55 mph, tires may totally leave the road surface."
+      ],
+      "72": [
+        "To avoid a spin, the motorist should turn in the direction the rear of the vehicle is skidding, without over steering.",
+        "When skidding, a motorist should look in the direction that he/she wants to go."
+      ],
+      "73": [
+        "The trance-like state may be avoided by not looking at any one thing for more than a few seconds.",
+        "It is also recommended that a motorist rest every two hours"
+      ],
+      "74": [
+        "Maggie’s Law, enacted in June 2003, makes it illegal to knowingly drive a vehicle while impaired by lack of sleep.",
+        "This law establishes driving while fatigued as recklessness under the vehicular homicide statute."
+      ],
+      "75": [
+        "Instead, a motorist should stay on the shoulder and ease up on the gas pedal.",
+        "After the vehicle has slowed down to 25 mph or less, the motorist may turn back onto the road by turning the steering wheel one-quarter turn toward the roadway."
+      ],
+      "76": [
+        "Fog: Always slow down when driving in fog. Headlights should be kept on low beam and fog lights should be turned on if the vehicle has them."
+      ],
+      "77": [
+        "A good rule on snow-covered roads is to maintain a following distance of six seconds or more."
+      ],
+      "78": [
+        "If a gas pedal sticks, the motorist should keep his/her eyes on the road while quickly shifting to neutral.",
+        "Steer the vehicle to a safe area off the roadway, turn the engine off and call for help."
+      ],
+      "79": [
+        "If a vehicle stalls on railroad tracks, the motorist and any passengers should get out and move far away from the vehicle and tracks",
+        "run at a 45-degree angle away from the vehicle and tracks but in the direction of the train to avoid being injured by flying debris."
+      ],
+      "80": [
+        "Be alert: Never think the other motorist will not make a driving mistake.",
+        "Be prepared: Learn what to do in any situation when you have to act fast",
+        "Act in time: Try not to panic. Know what to do if something happens suddenly."
+      ],
+      "81": [
+        "A vehicle with windows and doors closed will float for about three to ten minutes."
+      ],
+      "82": [
+        "shift to a lower gear and pump the brake pedal fast and hard several times.",
+        "If that does not work, the parking brake should be used while holding the brake release"
+      ],
+      "83": [
+        "hold the steering wheel firmly and keep the vehicle straight while gradually slowing down.",
+        "remove his/her foot from the gas pedal but not use the brakes.",
+        "vehicle should coast to a stop"
+      ],
+      "84": [
+        "In New Jersey, traffic fines are doubled for motor vehicle violations committed in roadway construction zones."
+      ],
+      "85": [
+        "60 mph",
+        "132 ft",
+        "277 ft",
+        "409 ft"
+      ],
+      "86": [
+        "A motorist should look at least 12 seconds ahead.",
+        "While driving at 25 mph on a clear road in a city, a motorist should be able to see about a block ahead."
+      ],
+      "87": [
+        "In New Jersey, motorists may use studded snow tires between November 15 and April 1."
+      ],
+      "88": [
+        "Put another warning device at least 300 feet back (about 120 paces)."
+      ],
+      "89": [
+        "In New Jersey, it is illegal for an individual to drive... with a BAC of 0.08 percent or higher."
+      ],
+      "90": [
+        "For individuals younger than 21, it is illegal to drive with a BAC of 0.01 percent or higher."
+      ],
+      "91": [
+        "The only thing that can make a person sober is time. Alcohol is removed slowly by the body."
+      ],
+      "92": [
+        "Every drink contains about a 1/2 ounce of alcohol.",
+        "1½ ounces of 80-proof whiskey, 12 ounces of beer or 5 ounces of wine all contain the same amount of alcohol"
+      ],
+      "93": [
+        "If a motorist has reached a BAC of slightly above 0.05 percent after drinking, the risk for causing a motor vehicle crash doubles."
+      ],
+      "94": [
+        "New Jersey has an implied consent law. This means that motorists on New Jersey roadways have agreed... to submit to a breath test"
+      ],
+      "95": [
+        "Motorists who refuse to take a breath test in New Jersey are subject to a violation surcharge of $1,000 per year for three years.",
+        "conviction for refusal could result in the loss of driving privileges",
+        "installation of an ignition interlock device."
+      ],
+      "96": [
+        "After alcohol, marijuana is the drug most often found with drivers involved in crashes."
+      ],
+      "97": [
+        "BAC is determined by four factors: Quantity of alcohol consumed, Body weight, How quickly drinks are consumed, Food eaten"
+      ],
+      "98": [
+        "The majority (90 %) of the alcohol that is detoxified is oxidized (burned up) by the liver. The other 10 % is eliminated in breath, urine, and sweat."
+      ],
+      "99": [
+        "First offense/Operating under the influence of alcohol/BAC 0.08% or more but less than 0.10%. (N.J.S.A. 39:4-50) $250-$400 fine."
+      ],
+      "100": [
+        "$1,000 annual surcharge for three years. (N.J.S.A. 17:29A-35(b)(2)(b))"
+      ],
+      "101": [
+        "Driving with no insurance (first offense) 1 year $300-$1,000 fine; $250 per yr. for 3 yrs. surcharge",
+        "CS determined by court"
+      ],
+      "102": [
+        "Exceeding maximum speed 1-14 mph over the limit 2"
+      ],
+      "103": [
+        "Reckless driving 5"
+      ],
+      "104": [
+        "Tailgating 5"
+      ],
+      "105": [
+        "Improper passing of a school bus 5"
+      ],
+      "106": [
+        "Leaving the scene of a crash Personal injury 8",
+        "No personal injury 2"
+      ],
+      "107": [
+        "Up to three points will be subtracted from a motorist’s point total every year that the motorist goes without a violation or suspension"
+      ],
+      "108": [
+        "Motorists who accumulate six or more points within three years are subject to a surcharge of $150 for six points and $25 for each additional point."
+      ],
+      "109": [
+        "Racing on highway 5"
+      ],
+      "110": [
+        "A habitual offender is a motorist whose driver license has been suspended three times in three years."
+      ],
+      "111": [
+        "Hit-and-run involving bodily injury or death may result in a fine of $2,500 to $5,000 and/or 180 days in jail",
+        "In addition, for a first offense, the motorist loses his/her license for one year."
+      ],
+      "112": [
+        "Two points will be removed from the accumulated points currently on a driver license. (N.J.S.A. 39:5-30.9)"
+      ],
+      "113": [
+        "A motorist who successfully completes a Driver Improvement Program will have three points removed from his/her record."
+      ],
+      "114": [
+        "The MVC will only recognize a defensive driving course once every five years for point reduction. (N.J.S.A. 39:5-30.9)"
+      ],
+      "115": [
+        "First offense: Fine of $500 and up to six months additional license and/or registration suspension. (N.J.S.A. 39:3-40)"
+      ],
+      "116": [
+        "Send a written report to the MVC within 10 days if no police report is filed."
+      ],
+      "117": [
+        "New Jersey law requires motorists to notify the police of crashes where there is injury, death, or vehicle or property damage.",
+        "When damage to the property is more than $500 or there is personal injury"
+      ],
+      "118": [
+        "Two points will be added to a driving record for traffic violations committed in other states."
+      ],
+      "119": [
+        "On a single-lane road, drivers must allow at least a 4-foot safety zone when they pass"
+      ],
+      "120": [
+        "If 4 feet is not possible on a section of road, drivers must slow to 25 mph and be prepared to stop until they can pass safely"
+      ],
+      "121": [
+        "Buses When re-entering the flow of traffic.",
+        "Postal vehicles When the vehicle re-enters the flow of traffic."
+      ],
+      "122": [
+        "A motorist’s failure to detect and recognize motorcycles in traffic is the most common cause of motorcycle crashes."
+      ],
+      "123": [
+        "during bad weather, a truck, or tractor-trailer, or bus can take as much as 25 percent longer to stop."
+      ],
+      "124": [
+        "NO-ZONE 200 FEET",
+        "The area behind the truck or tractor-trailer is a no-zone (blind spot)"
+      ],
+      "125": [
+        "motorists must give the right-of-way when any of the following crosses any highway or intersection: blind persons who use a predominately white or metallic cane"
+      ],
+      "126": [
+        "Vehicle- pedestrian crashes have a five percent fatality rate if the car is going 20 mph, but the rate jumps to 85 percent at 40 mph."
+      ],
+      "127": [
+        "a motorist should stop approximately 30 feet before a crosswalk to avoid blocking visibility of a motorist in the second lane."
+      ],
+      "128": [
+        "motorists are required to reduce their speed to 25 mph or less and proceed with caution."
+      ],
+      "129": [
+        "A freight train traveling at 55 mph can take a mile or more to stop."
+      ],
+      "130": [
+        "Do not pass other vehicles within 100 feet of a railroad crossing."
+      ],
+      "131": [
+        "Under New Jersey law, bicyclists, skateboarders, and inline skaters have the same rights and responsibilities as motor vehicles."
+      ],
+      "132": [
+        "Moped drivers may not exceed 25 mph, must follow all traffic signs and signals, and drive on the right side of the road with the flow of traffic."
+      ],
+      "133": [
+        "There is a crosswalk at every intersection, even if it is not marked as such. This is known as an “unmarked crosswalk.”"
+      ],
+      "134": [
+        "Motor vehicle liability insurance is mandatory in the State of New Jersey. Every vehicle registered in New Jersey must have liability insurance."
+      ],
+      "135": [
+        "If a motorist moves into this State, the law requires his/her vehicle to be titled and registered within 60 days; sooner, if the out-of-state registration expires before then."
+      ],
+      "136": [
+        "All gasoline-fueled, passenger-registered vehicles, model year 1996 and newer, more than five model years old, registered in New Jersey, must pass State inspections every two years"
+      ],
+      "137": [
+        "All new passenger vehicles less than five model years old are issued a new car dealer sticker expiring five years after they are initially registered."
+      ],
+      "138": [
+        "When moving to New Jersey from another state, a motorist must have his/her passenger vehicle five model years or older inspected within 14 days after registering it."
+      ],
+      "139": [
+        "one plate should be attached to the front of the vehicle and the other to the rear, at least 12 inches but less than 48 inches above the ground."
+      ],
+      "140": [
+        "If a motorist terminates vehicle insurance, the plates must be returned to the MVC. (N.J.A.C. 13:21-5.10b)"
+      ],
+      "141": [
+        "Using license plates covers or holders that obscure or conceal any lettering on the license plate is a violation, with a fine of up to $100."
+      ],
+      "142": [
+        "A motorist should stop before entering the intersection or crosswalk, unless his/her vehicle is so close to the intersection that it cannot be stopped safely."
+      ],
+      "143": [
+        "FLASHING RED LIGHT Stop. Yield to traffic and pedestrians. Go only when safe."
+      ],
+      "144": [
+        "Be alert for a stale green light; this is a light that has been green for some time.",
+        "Be prepared for it to change to yellow and then to red. Slow down and stop accordingly."
+      ],
+      "145": [
+        "One center line is broken: Passing is allowed only on the side with the broken line."
+      ],
+      "146": [
+        "The signs are yellow and diamond-shaped with a black symbol or word message."
+      ],
+      "147": [
+        "Regulatory signs are generally rectangular... and have black wording and border on a white background.",
+        "STOP signs only Red Octagon",
+        "YIELD signs Red Triangle"
+      ],
+      "148": [
+        "STOP signs only Red Octagon 8 sides"
+      ],
+      "149": [
+        "Green Rectangle 4 Direction guidance"
+      ],
+      "150": [
+        "Orange Diamond 4 Construction and maintenance warning"
+      ],
+      "151": [
+        "A single solid white line across a road at an intersection means that a motorist must stop behind the line for a traffic signal or sign."
+      ],
+      "152": [
+        "Blue signs indicate services available near the highway, such as gas stations, food, and hospitals.",
+        "Motorists services and information",
+        "Blue: Motorists services and information"
+      ],
+      "153": [
+        "Fines of up to $1,000 may be imposed on motorists found throwing “dangerous objects” from a vehicle onto a roadway.",
+        "If the vehicle is moving when litter is thrown, the motorist may lose his/her license."
+      ],
+      "154": [
+        "Carbon monoxide (CO) is an odorless, colorless gas that is present in a vehicle’s exhaust."
+      ],
+      "155": [
+        "Choose to hit something moving in the same direction, rather than something that is not moving.",
+        "Choose to hit something not moving, rather than something coming straight on.",
+        "The motorist should choose to hit something that will give way (such as a bush or shrubs) rather than something hard."
+      ],
+      "156": [
+        "The vehicle to the left yields the right-of-way to the vehicle approaching from the right."
+      ],
+      "157": [
+        "If a motorist misses an exit ramp on a highway, parkway, or turnpike, he/she should go to the next exit.",
+        "Never back up on an exit ramp or deceleration lane."
+      ],
+      "158": [
+        "In New Jersey, a person must be age 21 or older to purchase, possess or consume alcohol."
+      ],
+      "159": [
+        "“Kulesh’s, Kuberts’ and Bolis’ Law,” enacted in 2012, establishes illegal use of a cellular telephone while driving as recklessness under the vehicular homicide (N.J.S.A. 2C:11-5) and assault by auto (N.J.S.A. 2C-12-1) statutes."
+      ],
+      "160": [
+        "it is important to remember that there are several no-zones (blind spots) in which the truck, tractor-trailer, or bus driver cannot see other vehicles.",
+        "The red areas are “no-zones.” If you are in one of these areas, the driver of the truck can’t see you"
+      ],
+      "161": [
+        "Drivers who do not follow the Safe Passing Law and cause bodily injury as defined in N.J.S.A. 2C:11-1 shall be fined $500 and assessed two motor vehicle penalty points"
+      ],
+      "162": [
+        "A motorist should never pump an ABS or jerk the steering wheel when braking.",
+        "If a vehicle has an anti-lock braking system (ABS), the brakes can be tested by applying steady pressure to the brake pedal."
+      ],
+      "163": [
+        "Failure to comply with this law can subject a person to a fine of not less than $50 nor more than $75, plus fees and court costs. (N.J.S.A. 39:3-76.2d)"
+      ],
+      "164": [
+        "If a vehicle is approaching with high beams, a motorist should look to the right of the road until the vehicle passes. Never flash high beams at an approaching motorist."
+      ],
+      "165": [
+        "It can take three to five seconds for a motorist to recover from the glare of approaching high-beam headlights."
+      ],
+      "166": [
+        "Motorists who refuse to take a breath test in New Jersey are subject to a violation surcharge of $1,000 per year for three years."
+      ],
+      "167": [
+        "An ignition interlock device has a built-in breathalyzer and prevents the vehicle from starting if the motorist’s BAC exceeds 0.05%."
+      ],
+      "168": [
+        "A school bus driver may not use a handheld or hands-free cellular telephone while operating a school bus, except in an emergency or when the school bus is parked in a safe area off a highway."
+      ],
+      "169": [
+        "The penalty for pedestrians under 17 who violate the pedestrian laws is a $22 fine. (N.J.S.A. 39:4-203.3)"
+      ],
+      "170": [
+        "Vehicle and property owners face fines of $250 to $1,000 for each violation of this law. (N.J.S.A. 39:3-70.2)"
+      ],
+      "171": [
+        "Motorists who carry open or unsealed alcoholic beverage containers... are subject to a fine of $200 for a first offense"
+      ],
+      "172": [
+        "Moped License (Standard/REAL ID) For unlicensed motorists 15 years of age and older.",
+        "Minimum Age: 15"
+      ],
+      "173": [
+        "MINIMUM SAFE FOLLOWING DISTANCE (IN CAR LENGTHS)",
+        "Wet pavement 30 mph 6 car lengths"
+      ],
+      "174": [
+        "MINIMUM SAFE FOLLOWING DISTANCE (IN CAR LENGTHS)",
+        "Ice 20 mph 12 car lengths"
+      ],
+      "175": [
+        "Speed up to the flow of traffic when leaving the acceleration lane.",
+        "Yield to traffic and enter the right-hand lane when safe."
+      ],
+      "176": [
+        "If the brakes do lock, release the brake pedal, and immediately reapply with slightly less pressure.",
+        "This process should be repeated with less and less pressure on the brake pedal until the vehicle is under control."
+      ],
+      "177": [
+        "For offenses on or after 12/1/19: Alcohol or drug-related DUI third offense... 8 years"
+      ],
+      "178": [
+        "The Safe Corridors law doubles fines on various state highways for a variety of driving offenses",
+        "Highways are designated as safe corridors based on statistics showing crash rates 50 percent over the state rate and 1,000 or more crashes reported over a three-year period."
+      ],
+      "179": [
+        "N.J.S.A. 39:4-35 Failure to yield to a pedestrian in a crosswalk 2"
+      ],
+      "180": [
+        "N.J.S.A. 39:4-125 Improper U-turn 3"
+      ],
+      "181": [
+        "N.J.S.A. 39:4-84 Failure to pass right of vehicle proceeding in opposite direction 5"
+      ],
+      "182": [
+        "The best way to enter a curve is to slow down before entering and avoid drifting into another lane."
+      ],
+      "183": [
+        "upon a signal by putting up the hand... the motorist must stop his/her motor vehicle and remain stationary for as long as it takes the horse to pass."
+      ],
+      "184": [
+        "Most car fires are caused by short circuits in the electrical system."
+      ],
+      "185": [
+        "It is against New Jersey law (N.J.S.A. 39:3-52) to have any backup lights on while a vehicle is moving forward."
+      ],
+      "186": [
+        "STOP COMPLETELY. I will come to a complete halt at any STOP sign",
+        "STAY ALERT. I will strive to keep my hands on the wheel",
+        "TALK SAFE. I will use a hands-free cell phone system... PLAN AHEAD. I will give myself an extra 5 minutes"
+      ],
+      "187": [
+        "New Jersey’s annual motorcycle registration fee is $65."
+      ],
+      "188": [
+        "N.J.S.A. 39:4-128.4 Improper passing of a frozen dessert truck 4"
+      ],
+      "189": [
+        "Motorists who accumulate between 12 and 14 points in a 24-month period or more will receive a Notice of Scheduled Suspension by mail from the MVC."
+      ],
+      "190": [
+        "Voter registration deadline is 21 days before an election."
+      ],
+      "191": [
+        "Driving while a license and/or registration is suspended for a drug or alcohol offense, refusal to take a breath test... will result in a fine of $500 and an additional license suspension of one to two years and/or possible court-ordered imprisonment for 10 to 90 days."
+      ],
+      "192": [
+        "30- to 90-day suspension of driving privilege",
+        "15 to 30 days community service.",
+        "Participation in an Intoxicated Driver Resource Center (IDRC) or alcohol education and highway safety program."
+      ],
+      "193": [
+        "A motorist should always give a proper signal when turning, changing lanes, stopping, or slowing down.",
+        "You should use your signal when pulling into traffic from a curbside parking space, moving into a new lane, or passing another vehicle."
+      ],
+      "194": [
+        "It is important to stay alert on highways.",
+        "The trance-like state may be avoided by not looking at any one thing for more than a few seconds.",
+        "Always be ready to react to the unexpected."
+      ],
+      "195": [
+        "Larger vehicles may roll backward slightly when starting.",
+        "A motorist should not pass: On a hill or curve or at any time he/she cannot see far enough ahead.",
+        "drivers must be aware that large vehicles often travel at a speed slower than the posted speed limit"
+      ],
+      "196": [
+        "These aggressive motorists may... make hand or facial gestures, scream, honk horns or flash high beams.",
+        "When behind the wheel, a motorist should always remain calm",
+        "Avoid making eye contact with them, or making body movements or gestures that could provoke them."
+      ],
+      "197": [
+        "For a blind pedestrian using a white or metallic walking cane, or a trained guide dog"
+      ],
+      "198": [
+        "If a motorist misses an exit ramp on a highway, parkway, or turnpike, he/she should go to the next exit.",
+        "Never back up on an exit ramp or deceleration lane."
+      ],
+      "199": [
+        "A motorist should always give a proper signal when turning, changing lanes, stopping, or slowing down.",
+        "State law requires a motorist to move to the proper lane and signal at least 100 feet before making any turn."
+      ],
+      "200": [
+        "Alcohol should never be mixed with any drugs or medications.",
+        "Never mix drugs without asking a medical professional about possible side effects or how the drug may affect driving."
+      ],
+      "201": [
+        "Drive more slowly on wet roads.",
+        "Wet road surfaces can cause tires to hydroplane, or ride up on a film of water, starting at about 35 mph",
+        "The three-seconds-plus rule should be increased to four or more seconds."
+      ],
+      "202": [
+        "The signs are yellow and diamond-shaped with a black symbol or word message.",
+        "Some of the warning signs alert motorists to... curved roadways.",
+        "Yellow Diamond: Roadway hazard and railroad crossing warning signs"
+      ],
+      "203": [
+        "A motorist should proceed through the intersection. Yield to pedestrians and vehicles still in the intersection"
+      ],
+      "204": [
+        "Wear the lap belt under the abdomen and low across the hips.",
+        "The shoulder portion should come over the collar bone, away from the neck, and cross over the breastbone."
+      ],
+      "205": [
+        "In case of mechanical trouble or other emergency, a motorist should stop on the right highway shoulder and turn on emergency flashers."
+      ],
+      "206": [
+        "Passing is only safe when there is no oncoming traffic.",
+        "A motorist should not pass: On a hill or curve or at any time he/she cannot see far enough ahead."
+      ],
+      "207": [
+        "Double yellow and white solid lines Prohibit passing. Do not cross the solid yellow line to pass."
+      ],
+      "208": [
+        "Passing on the right is allowed only on roads with more than one lane going in the same direction... or when the motorist ahead is making a left turn",
+        "Never pass on the right shoulder of the road. This is against the law."
+      ],
+      "209": [
+        "Signs and work zone flaggers save lives.",
+        "Flaggers have the same authority as a regulatory sign, so a motorist may be cited if he/she disobeys their directions."
+      ],
+      "210": [
+        "State law requires a motorist to move to the proper lane and signal at least 100 feet before making any turn.",
+        "A motorist should always give a proper signal when turning, changing lanes, stopping, or slowing down."
+      ],
+      "211": [
+        "A motorist should steer to the extreme right of the roadway, stop, and wait for the emergency vehicle to pass.",
+        "New Jersey law requires all motorists to yield to emergency vehicles when emergency vehicles sound sirens and/or flashing red and/or blue emergency lights."
+      ],
+      "212": [
+        "If a motorist misses an exit ramp on a highway, parkway, or turnpike, he/she should go to the next exit.",
+        "Never back up on an exit ramp or deceleration lane."
+      ],
+      "213": [
+        "State law requires a motorist to move to the proper lane and signal at least 100 feet before making any turn.",
+        "A good indication that it is safe to return to the right lane is when the vehicle that was passed is visible in the rearview mirror.",
+        "Glance behind to check blind spots. Always signal lane changes."
+      ],
+      "214": [
+        "At a multi-way stop or stop intersection, a motorist must yield to the motorist on the right if both motorists get there at the same time.",
+        "A motorist should also yield to another motorist already stopped at the intersection."
+      ],
+      "215": [
+        "Motorists who carry open or unsealed alcoholic beverage containers or unsealed cannabis items in passenger areas of motor vehicles are subject to a fine"
+      ],
+      "216": [
+        "Yield to pedestrians and vehicles still in the intersection and when turning left or right.",
+        "Motorists signaling a right turn must yield to bicyclists, skateboarders, or inline skaters moving through an intersection."
+      ],
+      "217": [
+        "Wet road surfaces can cause tires to hydroplane, or ride up on a film of water, starting at about 35 mph",
+        "Chances of hydroplaning increase as speeds increase."
+      ],
+      "218": [
+        "The rules of the road must always be obeyed, and laws must be strictly followed.",
+        "Road markings have the same force of law as signs or traffic signals."
+      ],
+      "219": [
+        "X-shaped railroad crossing sign with black wording on a white background means the same as a Yield sign. Motorists must always yield the right-of-way to trains."
+      ],
+      "220": [
+        "A motorist should always increase following distance when road conditions are poor.",
+        "During bad weather, the time interval should be increased to four or more seconds."
+      ],
+      "221": [
+        "The driver of a vehicle shall stop and remain stopped to allow a pedestrian to cross the roadway within a marked crosswalk, and shall yield the right-of-way to a pedestrian crossing the roadway within any unmarked crosswalk at an intersection"
+      ],
+      "222": [
+        "Drugs that may affect basic driving skills include cold pills, tranquillizers, and some prescription medications.",
+        "Marijuana use may affect a motorist in the following ways: Loss of tracking ability... Distance judgment... Vigilance... Divided attention"
+      ],
+      "223": [
+        "Inside and outside mirrors should be adjusted to reduce blind spots. These are areas where a motorist cannot see behind his/her vehicle (on both sides) through the mirror. A motorist can check this by turning his/her head."
+      ],
+      "224": [
+        "A motorist should always try to keep up with the normal flow of traffic, while not exceeding the posted speed limit. Some crashes are caused by driving too slowly and backing up traffic."
+      ],
+      "225": [
+        "Signal Ahead",
+        "The signs are yellow and diamond-shaped with a black symbol or word message."
+      ],
+      "226": [
+        "In all cases, if visibility is greatly reduced, a motorist should stop alongside the road or on the shoulder, out of the way of traffic, and turn on emergency flashers.",
+        "Always slow down when driving in fog."
+      ],
+      "227": [
+        "The driver of a vehicle shall stop and remain stopped to allow a pedestrian to cross the roadway within a marked crosswalk",
+        "Stop for pedestrians in crosswalks. Failure to stop carries a fine of up to $500"
+      ],
+      "228": [
+        "A motorist must stop: ... When coming from an alley, private driveway, or building."
+      ],
+      "229": [
+        "New Jersey law requires all motorists to yield to emergency vehicles when emergency vehicles sound sirens and/or flashing red and/or blue emergency lights."
+      ],
+      "230": [
+        "A motorist coming from a private road or driveway must yield to all traffic on the main road."
+      ],
+      "231": [
+        "GREEN ARROW When shown alone or in combination with the red signal, proceed only as shown by the arrow.",
+        "Before making a left turn, yield to approaching vehicles."
+      ],
+      "232": [
+        "Stopping distance = Perception Distance + Reaction Distance + Braking Distance."
+      ],
+      "233": [
+        "When the maximum safe speed around a curve or turn is lower than the posted speed limit, an advisory speed sign is used with the proper warning sign."
+      ],
+      "234": [
+        "Never drive faster than weather, road, or other conditions safely allow, regardless of the posted speed limit."
+      ],
+      "235": [
+        "A motorist should not pass: On a hill or curve... At a street crossing or intersection... When a school bus is picking up or letting off children and/or the red lights are flashing."
+      ],
+      "236": [
+        "Flaggers have the same authority as a regulatory sign, so a motorist may be cited if he/she disobeys their directions."
+      ],
+      "237": [
+        "A motorist should steer to the extreme right of the roadway, stop, and wait for the emergency vehicle to pass."
+      ],
+      "238": [
+        "Stop for all pedestrians in a crosswalk even if they began crossing with a proper signal and they are still in the crosswalk when the signal changes."
+      ],
+      "239": [
+        "Speed up to the flow of traffic when leaving the acceleration lane.",
+        "Yield to traffic and enter the right-hand lane when safe."
+      ],
+      "240": [
+        "At night, a motorist’s vision is reduced. To drive safely at night, slow down and drive within the range of the vehicle’s headlights."
+      ],
+      "241": [
+        "Failure to do so may result in a fine of $100 or suspension of a motorist’s driving privilege.",
+        "GDL restrictions placed upon first-time drivers must be strictly adhered to."
+      ],
+      "242": [
+        "the vehicle on the left should yield to the vehicle on the right.",
+        "At a multi-way stop or stop intersection, a motorist must yield to the motorist on the right if both motorists get there at the same time."
+      ],
+      "243": [
+        "When shown alone or in combination with the red signal, proceed only as shown by the arrow."
+      ],
+      "244": [
+        "Yellow center lines Separate traffic flow going in opposite directions."
+      ],
+      "245": [
+        "To avoid hydroplaning, do not drive on bald or badly worn tires, and slow down when heavy rain, standing water, or slush is present."
+      ],
+      "246": [
+        "If a vehicle is approaching with high beams, a motorist should look to the right of the road until the vehicle passes."
+      ],
+      "247": [
+        "FLASHING RED LIGHT Stop. Yield to traffic and pedestrians. Go only when safe."
+      ],
+      "248": [
+        "The only scientific way to check is through blood alcohol concentration, or BAC.",
+        "It is important to remember that it does not matter what alcoholic beverage is consumed."
+      ],
+      "249": [
+        "Agricultural License (Standard/REAL ID) For farming purposes only. May be granted to persons between 16 and 17 years old."
+      ],
+      "250": [
+        "If a motorist experiences a flat tire or blowout, he/she should hold the steering wheel firmly and keep the vehicle straight while gradually slowing down."
+      ],
+      "251": [
+        "A motorist should increase following distance behind a truck, tractor-trailer, or bus so its driver can spot a motorist’s vehicle in the rearview mirrors.",
+        "If you miss an exit ramp on a highway, parkway, or turnpike, he/she should go to the next exit.",
+        "Never follow a motorcycle too closely because motorcycles could brake within shorter distances than other types of vehicles."
+      ],
+      "252": [
+        "Stop or slowing down: hand and arm downward, palm facing to the rear."
+      ],
+      "253": [
+        "Dashed lines on a motorist’s side of the center line of the road mean that passing is permitted when safe."
+      ],
+      "254": [
+        "Any health problem can affect an individual’s driving.",
+        "Drugs that “may cause drowsiness or dizziness” should not be taken before driving.",
+        "A motorist should have his/her eyes tested every year or two."
+      ],
+      "255": [
+        "Orange, diamond-shaped signs that warn the motorist of lane closing, lane shifts, flaggers, uneven pavement, and detours."
+      ],
+      "256": [
+        "Children under age eight who are less than 57 inches (4 feet, 9 inches) tall must ride in either: a) A federally approved forward facing child passenger restraint system... OR b) A federally approved booster seat"
+      ],
+      "257": [
+        "A motorist should always keep a safe distance from other vehicles on the road so that he/she has plenty of time to react to emergencies."
+      ],
+      "258": [
+        "A motorist should steer to the extreme right of the roadway, stop, and wait for the emergency vehicle to pass."
+      ],
+      "259": [
+        "Operating a vehicle with an exhaust leak or poorly tuned engine.",
+        "Idling a vehicle in a garage or confined space, even with the outside garage door open.",
+        "Some of the most common symptoms of CO poisoning are listed below... Headache, Dizziness, Loss of consciousness, Nausea/vomiting"
+      ],
+      "260": [
+        "When a lane change must be made, look in the rearview mirror. Glance behind to check blind spots. Always signal lane changes."
+      ],
+      "261": [
+        "A fluorescent and reflective orange triangular sign indicates slow-moving vehicles",
+        "Expect vehicles using this emblem to be driving at speeds of 25 mph or slower."
+      ],
+      "262": [
+        "If a vehicle is approaching with high beams, a motorist should look to the right of the road until the vehicle passes."
+      ],
+      "263": [
+        "Start slowing down when entering a deceleration lane.",
+        "Slow to speed limit of exit lane"
+      ],
+      "264": [
+        "remove accumulated ice or snow from the exposed surfaces of his or her motor vehicle prior to driving it, including the hood, trunk, roof, and windshield."
+      ],
+      "265": [
+        "If the light changes while a driver is already in the intersection, he/ she should go through with caution."
+      ],
+      "266": [
+        "a motorist must stop before entering the intersection, unless yellow appears when the vehicle is too close to stop safely."
+      ],
+      "267": [
+        "Between intersections, solid lines show when not to pass. However, these lines may be crossed with care when entering or leaving driveways"
+      ],
+      "268": [
+        "Headlights must also be used... when using windshield wipers (during rain, snow, and ice)",
+        "The dim beams are used for city driving and driving in traffic on roadways."
+      ],
+      "269": [
+        "Under state law, the driver, and all passengers of a passenger vehicle (e.g., car, van, pickup truck, and SUV) must wear a seatbelt."
+      ],
+      "270": [
+        "If vehicle problems prevent a motorist from keeping up with the normal flow of traffic, he/she should pull off the road and activate hazard lights."
+      ],
+      "271": [
+        "Certain conditions can cause dangerous levels of CO to accumulate in or around a vehicle",
+        "Operating a vehicle with an exhaust leak or poorly tuned engine.",
+        "Some of the most common symptoms of CO poisoning are listed below... Dizziness"
+      ],
+      "272": [
+        "during bad weather, a truck, or tractor-trailer, or bus can take as much as 25 percent longer to stop."
+      ],
+      "273": [
+        "Sharing the road with larger vehicles can be safe if the motorist knows the limitations of these vehicles regarding visibility, required stopping distance and maneuverability."
+      ],
+      "274": [
+        "Stopping distance depends on: Motorist reaction time, Weather and visibility conditions, Vehicle weight, Brake conditions, Condition and type of tires, Roadway conditions, Speed"
+      ],
+      "275": [
+        "Under New Jersey law, bicyclists, skateboarders, and inline skaters have the same rights and responsibilities as motor vehicles."
+      ],
+      "276": [
+        "Yellow center lines Separate traffic flow going in opposite directions."
+      ],
+      "277": [
+        "YIELD signs White inverted triangle with red wording and border with a white border band."
+      ],
+      "278": [
+        "Inside and outside mirrors should be adjusted to reduce blind spots. These are areas where a motorist cannot see behind his/her vehicle (on both sides) through the mirror. A motorist can check this by turning his/her head."
+      ],
+      "279": [
+        "Only proceed through a railroad crossing when there is room on the other side to get completely across the tracks without stopping.",
+        "Do not pass other vehicles within 100 feet of a railroad crossing."
+      ],
+      "280": [
+        "STOP Octagonal sign with white wording and border on red background.",
+        "A motorist must stop: At an intersection with a stop sign."
+      ],
+      "281": [
+        "Left turn from a one-way road on to a one-way road: Approaching the turn in the left lane, the motorist should turn into the left lane of the road he/she is entering."
+      ],
+      "282": [
+        "These work zones are identified by an advance warning sign or flashing lights on a vehicle up to one-half mile before the work area.",
+        "Orange, diamond-shaped signs that warn the motorist of lane closing, lane shifts, flaggers, uneven pavement, and detours.",
+        "It is extremely important for motorists to remain alert when traveling through a work zone."
+      ],
+      "284": [
+        "As a rule, the vehicle on the left should yield to the vehicle on the right."
+      ],
+      "285": [
+        "Green: Rectangle: 4: Direction guidance",
+        "Guidance signs identify destinations and routes for motorists."
+      ],
+      "286": [
+        "Both center lines are solid: No passing allowed.",
+        "Double yellow and white solid lines: Prohibit passing. Do not cross the solid yellow line to pass."
+      ],
+      "287": [
+        "At an intersection with a stop sign.",
+        "At an intersection with a red light either flashing or illuminated.",
+        "When a traffic officer orders the vehicle to stop."
+      ],
+      "288": [
+        "Lack of examiner access to foot brake or parking brake",
+        "Missing seat belts (seat belts are required on all vehicles manufactured after July 1, 1966)",
+        "Some license applicants may not have the opportunity to take an initial road test because an examiner considers the vehicle unsuitable or unsafe"
+      ],
+      "289": [
+        "If a motorist is angry or excited, he/she should take time to cool off.",
+        "When behind the wheel, a motorist should always remain calm and follow the rules of the road."
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 25,
-    "topics_covered": 23,
-    "coverage_pct": 92.0,
+    "topics_total": 20,
+    "topics_covered": 15,
+    "coverage_pct": 75.0,
     "uncovered_topics": [
-      "name change reporting timeline for licensed drivers",
-      "commercial driver license classes and special endorsements"
+      "Name change reporting time",
+      "Examination permit age",
+      "GDL driver exemptions",
+      "Next-of-Kin registry",
+      "Commercial driver license classes"
     ],
     "verdict": "PASS",
-    "grade": "A"
+    "grade": "C"
   },
   "coverage": {
     "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
@@ -70,7 +1061,596 @@
     "verdict": "PASS",
     "grade": "A"
   },
-  "overall_verdict": "PASS",
-  "overall_grade": "A",
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 289,
+      "avg_fidelity": 0.33,
+      "pct_at_10": 3.1,
+      "pct_above_9": 3.1,
+      "pct_above_7": 3.1,
+      "pct_zero": 96.5,
+      "drift_flagged_ids": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289
+      ],
+      "verdict": "HARD_FAIL",
+      "grade": "F"
+    },
+    "ja": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 289,
+      "avg_fidelity": 0.27,
+      "pct_at_10": 2.4,
+      "pct_above_9": 2.4,
+      "pct_above_7": 2.8,
+      "pct_zero": 97.2,
+      "drift_flagged_ids": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289
+      ],
+      "verdict": "HARD_FAIL",
+      "grade": "F"
+    }
+  },
+  "overall_verdict": "HARD_FAIL",
+  "overall_grade": "B",
   "notes": ""
 }

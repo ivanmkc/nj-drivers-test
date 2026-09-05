@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "ny",
   "name": "New York",
-  "verified_at": "2026-05-26T02:31:12Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-27T01:30:13Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://dmv.ny.gov/driver-license/drivers-manual",
     "manual_pdf_sha256": "29619ff5befb83d85e8079142aa1c8f21ebebb4a4fbfd8b53b2058f4d38aa411",
@@ -24,14 +24,1171 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
-    "avg_fidelity": 10.0,
-    "pct_at_10": 100.0,
-    "pct_above_9": 100.0,
-    "pct_above_7": 100.0,
+    "sample_size": 0,
+    "judged_count": 373,
+    "avg_fidelity": 9.99,
+    "pct_at_10": 99.7,
+    "pct_above_9": 99.7,
+    "pct_above_7": 99.7,
     "pct_zero": 0.0,
-    "flagged_question_ids": [],
+    "flagged_question_ids": [
+      89
+    ],
+    "evidence_by_question_id": {
+      "1": [
+        "Just one person who donates their organs can save up to eight lives."
+      ],
+      "2": [
+        "even if you are licensed somewhere else, people under age 16 cannot drive in New York State."
+      ],
+      "3": [
+        "Drivers who have moved here must turn in their out-of-state driver license and get a New York license within 30 days"
+      ],
+      "4": [
+        "This may cause suspension or revocation of the driver license and criminal prosecution resulting in a fine or imprisonment."
+      ],
+      "5": [
+        "Is made or used to carry 15 or more persons, in addition to the driver;"
+      ],
+      "6": [
+        "Operator, Class D - Minimum age is 18, or age 17 with a driver education Certificate of Completion"
+      ],
+      "7": [
+        "You can also operate Class B and C mopeds with this driver license."
+      ],
+      "8": [
+        "Junior Operator, Class DJ - Minimum age is 16."
+      ],
+      "9": [
+        "Taxi/Livery, Class E - Minimum age is 18. Allows you to... transport passengers for hire in a vehicle designed or used to carry 14 or fewer passengers."
+      ],
+      "10": [
+        "Enhanced Driver License - Can be used for land and sea border crossings to and from the U.S., Canada, Mexico, Bermuda and the Caribbean."
+      ],
+      "11": [
+        "Has a manufacturer’s gross vehicle weight rating (GVWR) of more than 26,000 pounds (11,794 kg)"
+      ],
+      "12": [
+        "it is illegal to hold a New York driver license and a driver license from another state at the same time.",
+        "It is also a violation of Federal and state law to hold more than one commercial driver license (CDL)."
+      ],
+      "13": [
+        "Allows you to drive a vehicle with a GVWR of 10,000 pounds (4,536 kg) or less"
+      ],
+      "14": [
+        "Carries hazardous materials required by federal law to contain a placard."
+      ],
+      "15": [
+        "If you have a motorcycle license and another type of driver license, both classes will be listed on one document (e.g., “Class DM”)."
+      ],
+      "16": [
+        "Every air traveler flying within the United States must present a REAL ID or an Enhanced Driver License, or bring another acceptable form of identification"
+      ],
+      "17": [
+        "required for operation of recreational and/or rental vehicles... when the vehicle is over 26,000 pounds (11,794 kg.) GVWR and/or forty (40) feet in length."
+      ],
+      "18": [
+        "pass a road test in the size and type of vehicle you will drive. No written test is required."
+      ],
+      "19": [
+        "a driver who is at least 21 years old, with a license valid for the vehicle you will drive during the test, must accompany you."
+      ],
+      "20": [
+        "Your first New York driver license will be issued for a period not to exceed 5 years, on your month and day of birth."
+      ],
+      "21": [
+        "Documents that prove your name are assigned a point value. You must present proofs that total six points or more."
+      ],
+      "22": [
+        "At least one of the proofs must have your signature."
+      ],
+      "23": [
+        "Each document below has a value of 6 points:",
+        "New York Photo Driver License/Permit/Non-Driver ID Card Card"
+      ],
+      "24": [
+        "Each document below has a value of 4 points:",
+        "U.S. Passportor Passport Card (Must be valid.)"
+      ],
+      "25": [
+        "All proofs must be in English or accompanied by a certified English translation."
+      ],
+      "26": [
+        "The DMV will accept the original or certified copy of ANY ONE of these documents from the issuing agency:",
+        "U.S. Military Photo Identification Card"
+      ],
+      "27": [
+        "To pass the vision test, you must have 20/40 vision in at least one eye with or without corrective lenses."
+      ],
+      "28": [
+        "Most drivers must also complete an approved 5-hour Pre-Licensing Course and pass a road test."
+      ],
+      "29": [
+        "To pass the vision test, you must have 20/40 vision in at least one eye with or without corrective lenses."
+      ],
+      "30": [
+        "To pass the written test, you must correctly answer at least 14 of the 20 questions asked"
+      ],
+      "31": [
+        "you must correctly answer at least 14 of the 20 questions asked, but you must correctly answer two of the four questions about road signs."
+      ],
+      "32": [
+        "students who are at least age 15 and 11 months can take the written test through the DMV Online Knowledge Test Application (OKTA) program."
+      ],
+      "33": [
+        "you must be supervised by a licensed driver who is at least 21 years old, has a license valid for the type of vehicle you are driving, and is seated in the front seat with you"
+      ],
+      "34": [
+        "Vehicle must have dual controls (dual brakes)"
+      ],
+      "35": [
+        "You must drive only under the immediate supervision of your: 1. Parent 2. Guardian 3. Person “in loco parentis” 4. Driver Education Teacher 5. Driving School Instructor"
+      ],
+      "36": [
+        "In a DMV road test area.",
+        "On any street within a park in New York City or any bridge or tunnel under the jurisdiction of the Triborough Bridge and Tunnel Authority."
+      ],
+      "37": [
+        "On the Cross County, Hutchinson River, Saw Mill River, or Taconic State parkways in Westchester County."
+      ],
+      "38": [
+        "You cannot drive with more than one passenger under the age of 21 unless they are members of your immediate family or if your supervising driver is your parent, guardian"
+      ],
+      "39": [
+        "If you hold a junior permit, the only passenger allowed in the front seat is your supervising driver."
+      ],
+      "40": [
+        "Before you take the test, it is important that you have had at least 50 hours of practice, with at least 15 hours after sunset."
+      ],
+      "41": [
+        "Before you take the test, it is important that you have had at least 50 hours of practice, with at least 15 hours after sunset."
+      ],
+      "42": [
+        "Before you can make a road test appointment, you must first complete an approved safe driver course."
+      ],
+      "43": [
+        "Long Island (Nassau & Suffolk) 9PM – 5AM You must NOT drive."
+      ],
+      "44": [
+        "The certificate is valid for one year."
+      ],
+      "45": [
+        "The DMV-certified Point & Insurance Reduction Program... does NOT meet the Safe Driving course requirement."
+      ],
+      "46": [
+        "Operator, Class D - Minimum age is 18, or age 17 with a driver education Certificate of Completion"
+      ],
+      "47": [
+        "Your permit must be held, in valid status for a minimum of six months in order to take the road test."
+      ],
+      "48": [
+        "your parent or guardian certifies that you completed at least 50 hours of practice driving, including at least 15 hours after sunset"
+      ],
+      "49": [
+        "you must also bring a supervising driver who is at least 21 and holds a license valid for the vehicle you will drive during the road test."
+      ],
+      "50": [
+        "Motorcycle applicants must bring a car or truck and a licensed driver to transport the license examiner during the test."
+      ],
+      "51": [
+        "If you are eligible for point reduction, as many as four (4) points can be reduced from your driving record."
+      ],
+      "52": [
+        "You can complete this course every 18 months for the purpose of point reduction."
+      ],
+      "53": [
+        "You cannot drive with more than one passenger under the age of 21 unless they are members of your immediate family."
+      ],
+      "54": [
+        "New York City (5 Boroughs) 5AM – 9PM You must NOT drive.",
+        "New York City (5 Boroughs) 9PM – 5AM You must NOT drive."
+      ],
+      "55": [
+        "Upstate (All Other Counties) 5AM – 9PM You may drive without being accompanied."
+      ],
+      "56": [
+        "Your employer can complete a Certificate of Employment (MV-58A), available from the DMV website"
+      ],
+      "57": [
+        "The passenger side seat belt must be available and clean for use by the examiner."
+      ],
+      "58": [
+        "Your learner permit or junior license (Class M or MJ) does not allow you to carry any passenger except your supervising driver."
+      ],
+      "59": [
+        "Your learner permit or junior license (Class M or MJ) does not allow you to carry any passenger except your supervising driver."
+      ],
+      "60": [
+        "your supervising driver... must exercise general supervision and control by remaining within one-quarter mile."
+      ],
+      "61": [
+        "If you change your address you must notify DMV within 10 days by mail, on a Change-of-Address Form (MV-232), or online at the DMV website dmv.ny.gov."
+      ],
+      "62": [
+        "You can renew your license up to one year before its printed expiration date."
+      ],
+      "63": [
+        "Two proofs of New York State residence such as utility bill or mortgage statement (P.O. Box not acceptable)."
+      ],
+      "64": [
+        "you must prove you have passed an eye test within the past six months or within one year as determined by a licensed health care professional before the date you renew your license."
+      ],
+      "65": [
+        "If you enter military service, your license can be automatically extended throughout your active service and for six months after discharge."
+      ],
+      "66": [
+        "you must apply for a New York driver license within 30 days after you establish you are a New York State resident."
+      ],
+      "67": [
+        "If you are less than 16 years of age, you cannot drive in New York State even if you have an out-of-state license."
+      ],
+      "68": [
+        "“Revocation” means your license (or privilege to drive) is cancelled. To get a new license, you must re-apply to the Department of Motor Vehicles (DMV) once the revocation period is over."
+      ],
+      "69": [
+        "your permit, license or privileges will be suspended for 60 days if you are convicted of a serious traffic violation (three points or more) or two other violations."
+      ],
+      "70": [
+        "your junior permit, license or privileges will be suspended for 120 days when you are convicted of a texting or cell phone violation."
+      ],
+      "71": [
+        "A junior permit must be held for a minimum of six months, excluding any time the permit is suspended or revoked, before a road test can be scheduled."
+      ],
+      "72": [
+        "If you are 18 or older when you pass your road test for a driver license, or obtain a license following revocation, you will be on probation for six months."
+      ],
+      "73": [
+        "If you are convicted of DWAI (alcohol), speeding, reckless driving, following too closely, participating in a speed contest, or any two traffic violations while on probation, your license will be suspended for 60 days."
+      ],
+      "74": [
+        "If you are convicted of a texting or cell phone violation, your probationary license will be suspended for 120 days."
+      ],
+      "75": [
+        "Your driver license will be suspended indefinitely. If you do not respond that you have received the ticket, you could be found guilty by default conviction."
+      ],
+      "76": [
+        "The New York State Department of Motor Vehicles does not record convictions of moving traffic violations by NYS non-commercial licensed drivers in other jurisdictions, except traffic offenses committed in the provinces of Ontario and Quebec in Canada."
+      ],
+      "77": [
+        "If you are over 21 years old and are convicted of an alcohol- or drug-related driving violation (e.g., DUI) in another state or in Canada, your New York driver license will be revoked for at least 90 days."
+      ],
+      "78": [
+        "If you are under 21 years old and convicted of any alcohol or drug-related violation that occurred out of state, your New York driver license will be revoked for at least one year."
+      ],
+      "79": [
+        "Aggravated driving while intoxicated (Agg-DWI), with .18 of one percent blood alcohol content (.18 BAC): minimum one-year revocation."
+      ],
+      "80": [
+        "Driving while ability impaired by alcohol (DWAI): 90-day suspension."
+      ],
+      "81": [
+        "Chemical test refusal, drivers over age 21: minimum one-year revocation"
+      ],
+      "82": [
+        "Under the state’s “Zero Tolerance Law,” a driver under age 21 will have thier license suspended for six months if found to have a BAC from .02 to .07."
+      ],
+      "83": [
+        "Three speeding and/or misdemeanor traffic violations within 18 months (based on date of violation, not date of conviction)."
+      ],
+      "84": [
+        "Your driver license will be revoked for at least one year if you operate or allow another person to operate your uninsured vehicle"
+      ],
+      "85": [
+        "Your driver license will also be suspended indefinitely if you fail to file an crash report, fail to pay child support, fail to pay taxes"
+      ],
+      "86": [
+        "21 to 30 mph 6"
+      ],
+      "87": [
+        "Use of portable electronic device “texting” 5",
+        "Improper cell phone use 5"
+      ],
+      "88": [
+        "The point values charged against your record are from the date you commit the violation, not the date you are convicted."
+      ],
+      "89": [
+        "If you get 11 or more points within 24 months, you will be notified by mail that your driver license will be suspended."
+      ],
+      "90": [
+        "You can reduce your point total by up to four points and save up to 10 percent on your auto liability and collision insurance premiums"
+      ],
+      "91": [
+        "If you are involved in a traffic crash in which another person is killed, your license can be suspended or revoked after a DMV hearing even if you were not charged with a violation"
+      ],
+      "92": [
+        "your license will not be returned until you pay a non-refundable $50 suspension termination fee."
+      ],
+      "93": [
+        "First violation - penalty of $250",
+        "use stop-arm cameras on school buses to impose penalties on the owners of vehicles which pass a school bus"
+      ],
+      "94": [
+        "Chemical test refusal: $500 civil penalty ($550 if while driving a commercial motor vehicle)."
+      ],
+      "95": [
+        "If you are convicted of... Driving While Intoxicated (DWI)... you will be required to pay a driver responsibility assessment of $250 each year for the next three years."
+      ],
+      "96": [
+        "For each additional point you receive during that period, you will be required to pay another $25 per point every year for three years."
+      ],
+      "97": [
+        "It is a criminal offense to drive while your license is suspended or revoked, and there are mandatory fines from $200 to $5,000.",
+        "The vehicle being driven could be seized and forfeited."
+      ],
+      "98": [
+        "A title certificate proves who owns the vehicle."
+      ],
+      "99": [
+        "You must be at least 16 to register a vehicle. You can title a vehicle at any age."
+      ],
+      "100": [
+        "A new resident of the state must get a New York registration within 30 days of establishing residence."
+      ],
+      "101": [
+        "you will also receive a 10-day inspection extension sticker on request when you register the vehicle. You must then have the vehicle inspected within 10 days from the date of registration."
+      ],
+      "102": [
+        "A motor vehicle office will not accept a title certificate if the correct odometer or damage disclosure statement is not completed, or if information on the title is adjusted, erased or canceled."
+      ],
+      "103": [
+        "A motor vehicle office will not accept a title certificate if the correct odometer or damage disclosure statement is not completed, or if information on the title is adjusted, erased or canceled."
+      ],
+      "104": [
+        "If you purchase a vehicle eight model years old or newer, the DMV will NOT register your vehicle or issue you a new title certificate unless the seller has completed, and you have signed, both the odometer and the damage disclosure statements"
+      ],
+      "105": [
+        "The DMV must examine every vehicle described as “Rebuilt Salvage”, OR SIMILAR WORDS, for stolen parts before the vehicle can be registered or titled."
+      ],
+      "106": [
+        "If the form is not completed by the seller, you will be charged sales tax based on the current fair market value of the vehicle."
+      ],
+      "107": [
+        "The name(s) and vehicle identification number (VIN) on these cards must exactly match the information on the registration application."
+      ],
+      "108": [
+        "Registrations for most vehicles with a maximum gross weight of not more than 18,000 pounds (8,165 kg) are valid for two years, and fees are based on vehicle weight."
+      ],
+      "109": [
+        "By law, registration fees cannot be refunded if you use the vehicle plates or registration sticker on your vehicle even for one day."
+      ],
+      "110": [
+        "Before you trade in or sell your old vehicle, make sure to remove the vehicle plates and the windshield registration sticker, which shows your plate number."
+      ],
+      "111": [
+        "If you did not answer three or more parking tickets, or if your registration is suspended or revoked, you will not receive the reminder."
+      ],
+      "112": [
+        "If the expiration date falls on a weekend or legal state holiday, your registration is automatically extended to midnight of the next business day."
+      ],
+      "113": [
+        "must be accompanied by the original New York license/permit/non-driver identification card for the second party and either the original or a photocopy for the registrant."
+      ],
+      "114": [
+        "Your vehicle must be covered by liability insurance as long as it is registered, even if you do not drive it."
+      ],
+      "115": [
+        "Minimum liability coverage is required of ... $10,000 against property damage."
+      ],
+      "116": [
+        "If your vehicle is not insured for 90 days, unless you have turned in your vehicle plates, your driver license will also be suspended."
+      ],
+      "117": [
+        "Motorcycles must be insured, but you are not required to turn in the vehicle plate when your motorcycle insurance is discontinued or expires."
+      ],
+      "118": [
+        "If you are convicted of driving an uninsured vehicle ... your license or privilege to drive in New York State will be revoked for at least one year."
+      ],
+      "119": [
+        "If you purchase a vehicle from someone who is not a NYS dealer, you must have the vehicle inspected within 10 days after you register it."
+      ],
+      "120": [
+        "An attempt must be made to repair the malfunction and the cost for repairs must be at least $450."
+      ],
+      "121": [
+        "Exceptions are gasoline-powered vehicles that are 26 or more model years old, or less than two model years old, or registered as historic. Those vehicles are subject to a safety inspection only."
+      ],
+      "122": [
+        "By regulation, the DMV can receive a repair shop complaint only within 90 days or 3,000 miles (4,828 km) of the vehicle repairs, whichever comes first."
+      ],
+      "123": [
+        "REGULATION SIGNS normally are white rectangles with black letters or symbols, but some are different shapes, and some can use red letters or symbols."
+      ],
+      "124": [
+        "WARNING SIGNS normally are yellow and diamond-shaped, with black letters or symbols."
+      ],
+      "125": [
+        "SERVICE SIGNS are blue with white letters and symbols.",
+        "MEANING: Show the location of services, like rest areas, gas stations, camping or medical facilities."
+      ],
+      "126": [
+        "If there is no stop line or crosswalk, you must stop before you enter the intersection, at the point nearest the intersection that gives you a view of traffic on the intersecting roadway."
+      ],
+      "127": [
+        "Work Area Signs COLOR: Orange, with black letters or symbols"
+      ],
+      "128": [
+        "if the traffic lights or controls are out of service or do not operate correctly when you approach an intersection, you must come to a stop as you would for a stop sign."
+      ],
+      "129": [
+        "You can make a left turn at a steady red light when you turn from a one-way road into another one-way road after you come to a full stop and yield the right-of-way to oncoming traffic and pedestrians."
+      ],
+      "130": [
+        "You are not allowed to turn on a red light in New York City unless a sign that permits it is posted."
+      ],
+      "131": [
+        "If a person moves to NYS, an inspection certificate that was issued before is valid until it expires or one year from the date it was issued, whichever occurs first."
+      ],
+      "132": [
+        "Motorcycles must be insured, but you are not required to turn in the vehicle plate when your motorcycle insurance is discontinued or expires."
+      ],
+      "133": [
+        "FLASHING RED: Means the same as a STOP sign: Stop, yield the right-of-way, and go when it is safe."
+      ],
+      "134": [
+        "FLASHING YELLOW “X”: This lane can only be used for a left turn."
+      ],
+      "135": [
+        "An edge line that angles towards the center of the road shows that the road is narrower ahead."
+      ],
+      "136": [
+        "Lines that separate lanes of traffic that move in the same direction are white. Lines that separate traffic that moves in opposite directions are yellow."
+      ],
+      "137": [
+        "Solid line with broken line: If you are on the side with the solid line, you cannot pass other vehicles or go across the line except to make a left turn into a driveway."
+      ],
+      "138": [
+        "Double solid lines: You cannot pass or change lanes. You cannot go across the lines except to turn left to enter or leave the highway (e.g. to or from a driveway or to do a U-turn)."
+      ],
+      "139": [
+        "Diamond Symbol: This symbol indicates the lane is reserved lanes for buses, HOV (High-Occupancy Vehicles) like car-pools and van-pools, bicycles or other special vehicles."
+      ],
+      "140": [
+        "Directions given by traffic officers take precedence over signs, signals or pavement markings.",
+        "If an officer signals you to drive through a red light or stop sign, you must do it."
+      ],
+      "141": [
+        "If drivers approaching from opposite directions reach an intersection at about the same time, a driver that turns left must yield to traffic that moves straight or turns right."
+      ],
+      "142": [
+        "Keep your wheels straight to prevent being pushed into oncoming traffic if your vehicle is hit from behind."
+      ],
+      "143": [
+        "the driver on the left must yield the right-of-way to the driver on the right."
+      ],
+      "144": [
+        "One solid line: You can pass other vehicles or change lanes, but you can only do so when obstructions in the road or traffic conditions make it necessary."
+      ],
+      "145": [
+        "the driver on the left must yield the right-of-way to the driver on the right."
+      ],
+      "146": [
+        "A vehicle that enters a roadway from a driveway, private road or another place that is not a roadway, must stop and yield the right-of-way to traffic on the roadway and to pedestrians."
+      ],
+      "147": [
+        "You cannot enter an intersection if traffic is backed up on the other side and you cannot get completely through the intersection. Wait until traffic ahead clears, so you do not block the intersection."
+      ],
+      "148": [
+        "You must pull over and stop for an emergency vehicle even if it is headed toward you in the opposite lane of a two-way roadway."
+      ],
+      "149": [
+        "If you hear a siren or air-horn close by but do not know exactly where the emergency vehicle is, you must safely pull over to the right-side edge of the road and stop until you are sure it is not headed toward you."
+      ],
+      "150": [
+        "Drivers must reduce speed on all roads when encountering such vehicles, but on parkways, interstates and other controlled access roads with multiple lanes, drivers are further required to move from the lane adjacent to the emergency or hazard vehicle"
+      ],
+      "151": [
+        "personal vehicles driven by volunteer ambulance or rescue squad members can display green lights."
+      ],
+      "152": [
+        "The vehicles that display blue, green or amber lights are not authorized emergency vehicles.",
+        "While you are not required to yield the right-of-way, you should yield as a courtesy if you can safely do so."
+      ],
+      "153": [
+        "The law requires you to signal a turn or lane change with your turn lights or hand signals at least 100 feet (30 m) ahead."
+      ],
+      "154": [
+        "Keep your wheels straight until you actually begin to make your turn.",
+        "If your wheels are turned, and you are hit from behind, your vehicle could be pushed into the oncoming lane of traffic."
+      ],
+      "155": [
+        "Remember that your rear wheels will travel inside the path of the front wheels, nearer to the curb (right turn) or to traffic headed toward you (left turn)."
+      ],
+      "156": [
+        "Most crashes that involve motorcycles and other vehicles are caused because the driver of the other vehicle has failed to see the motorcycle."
+      ],
+      "157": [
+        "Approach the turn from the right half of the roadway closest to the center."
+      ],
+      "158": [
+        "You can make a U-turn only from the left portion of the lane nearest to the centerline of the roadway, never from the right lane."
+      ],
+      "159": [
+        "Violations of this law are punishable as a moving violation."
+      ],
+      "160": [
+        "In addition, it is prohibited for a vehicle to make a U-turn in a school zone."
+      ],
+      "161": [
+        "You cannot make a U-turn near the top of a hill, a curve or any other location where other drivers cannot see your vehicle from 500 feet (150 m) away in either direction."
+      ],
+      "162": [
+        "1. Signal with your right turn signal, then pull over to the right and stop."
+      ],
+      "163": [
+        "When you pass a motorcycle, remember to give the motorcycle the same full-lane width as other vehicles are allowed.",
+        "Never move into the same lane space as a motorcycle, even if the lane is wide and the motorcycle is to one side."
+      ],
+      "164": [
+        "The law requires you to use turn signal lamps or hand and arm signals to indicate your intention to change lanes at least 100 feet (30 m) before you make a lane change."
+      ],
+      "165": [
+        "You are within 100 feet (30 m) of a railroad crossing on a two-way roadway."
+      ],
+      "166": [
+        "You cannot safely return to the right lane before any oncoming vehicle comes within 200 feet (60 m) of you."
+      ],
+      "167": [
+        "Never depend on your mirrors when you prepare to change lanes. Even correctly adjusted mirrors will leave “blind spots” behind both sides of your vehicle."
+      ],
+      "168": [
+        "Before you return to the right lane, signal and look at your interior rear-view mirror and make sure you can see the front bumper of the vehicle you passed."
+      ],
+      "169": [
+        "You can pass on the right: • When a vehicle ahead makes a left turn."
+      ],
+      "170": [
+        "If another vehicle passes you on the left, decrease your speed slightly and stay centered in your lane."
+      ],
+      "171": [
+        "You should stop at least 20 feet (6 m) away from the bus."
+      ],
+      "172": [
+        "You must stop for a school bus even if it is on the opposite side of a divided highway."
+      ],
+      "173": [
+        "If you are convicted of three of these violations in three years, your driver license will be revoked for a minimum of six months."
+      ],
+      "174": [
+        "Before a school bus stops to load or discharge passengers, the driver will usually flash yellow warning lights"
+      ],
+      "175": [
+        "The fine when you pass a stopped school bus ranges from a minimum of $250 for a first violation"
+      ],
+      "176": [
+        "Third violation (or more) within 18 months - penalty of $300"
+      ],
+      "177": [
+        "In your final parking position, your wheels must be no more than one foot (30 cm) from the curb."
+      ],
+      "178": [
+        "Look through the rear window, not the mirrors, when you back up."
+      ],
+      "179": [
+        "Turn the wheels toward the curb or side of the road, so they will keep your vehicle from heading into traffic."
+      ],
+      "180": [
+        "A NO PARKING sign means you can make a temporary stop to load or discharge merchandise or passengers."
+      ],
+      "181": [
+        "A NO STANDING sign means you can only make a temporary stop to load or discharge passengers. The driver cannot exit the vehicle."
+      ],
+      "182": [
+        "Within 15 feet (5 m) of a fire hydrant, unless a licensed driver remains in the vehicle to move it in an emergency."
+      ],
+      "183": [
+        "Within 20 feet (6 m) of a crosswalk at an intersection."
+      ],
+      "184": [
+        "Within 30 feet (10 m) of a traffic light, STOP sign or YIELD sign."
+      ],
+      "185": [
+        "You cannot park your vehicle within 50 feet (15 m) of a railroad crossing."
+      ],
+      "186": [
+        "You can park in reserved spaces only if you have a permit or vehicle plates for persons with disabilities and only when the person who received the permit or vehicle plates is in the vehicle."
+      ],
+      "187": [
+        "Do not park in the spaces with diagonal stripes next to reserved parking areas. These spaces are needed to give access to those with wheelchairs and vehicles with special equipment."
+      ],
+      "188": [
+        "It is a misdemeanor to make a false statement or give false information on an application for vehicle plates, and you would be subject to a mandatory license revocation"
+      ],
+      "189": [
+        "A mandatory surcharge of $30 will be added to each penalty."
+      ],
+      "190": [
+        "You should sit in a comfortable but vertical position and keep both hands on the steering wheel."
+      ],
+      "191": [
+        "It is better to assume the other driver will not stop."
+      ],
+      "192": [
+        "Avoid arguments and stressful or emotional conversations with passengers."
+      ],
+      "193": [
+        "Aggressive driving generally involves the violation of a traffic safety law, while road rage involves the breaking of a criminal law."
+      ],
+      "194": [
+        "Do not make eye contact.",
+        "Remain calm and relaxed.",
+        "Try to move away safely."
+      ],
+      "195": [
+        "If an aggressive driver is following you, do not stop or get out of your vehicle. Drive to the nearest police station."
+      ],
+      "196": [
+        "If you have the right-of-way, do not think of it as a complete right. Be prepared to yield the right-of-way to other highway users."
+      ],
+      "197": [
+        "If no limit is posted, drive no more than 55 mph (88 km/h)."
+      ],
+      "198": [
+        "the speed limit is 25 mph (48 km/h) in New York City unless another limit is posted."
+      ],
+      "199": [
+        "a police officer could ticket you for a speed “not reasonable” for the conditions."
+      ],
+      "200": [
+        "To keep a smooth traffic flow, some highways also have minimum speed limits."
+      ],
+      "201": [
+        "Four of every 10 crashes involve rear-end collisions, normally because a person is following too closely (tailgating)."
+      ],
+      "202": [
+        "These behaviors can result in severe penalties that include fines, imprisonment and court-ordered probation."
+      ],
+      "203": [
+        "Roundabouts are designed so that the speed of all vehicles is restricted to 30 mph (50 km/h) or less within the roundabout."
+      ],
+      "204": [
+        "Bicyclists are permitted to ride within the roundabout and will be riding in the lane just as other vehicles do. Please do not pass a bicycle in the roundabout."
+      ],
+      "205": [
+        "As you approach your exit, turn on your right turn signal."
+      ],
+      "206": [
+        "Cross only at the designated crosswalks.",
+        "Never cross to the central island."
+      ],
+      "207": [
+        "You drift between lanes, tailgate or miss traffic signs.",
+        "You have drifted off the road and hit the rumble strips, which produce a loud noise and vibrations."
+      ],
+      "208": [
+        "Schedule regular stops for every 100 miles or two hours."
+      ],
+      "209": [
+        "Pull off into a safe area away from traffic and take a brief nap (15 to 45 minutes)."
+      ],
+      "210": [
+        "It takes about 30 minutes for caffeine to enter the bloodstream."
+      ],
+      "211": [
+        "For a first offense, you could be required to pay a fine up to $200 and receive five license points."
+      ],
+      "212": [
+        "A third or subsequent offense (all committed within 18 months) is a fine up to $450."
+      ],
+      "213": [
+        "drivers with probationary and junior licenses who use a hand-held phone or text while driving will receive a 120-day suspension for a first conviction"
+      ],
+      "214": [
+        "No person shall operate or park a vehicle on public highways unless it has been inspected at least once a year"
+      ],
+      "215": [
+        "Brakes that pull to one side may be wet or may need to be adjusted or repaired. If wet, you can dry them riding the pedal lightly."
+      ],
+      "216": [
+        "The law requires that your tires have at least 2⁄32nds of an inch (.16 cm) of tread."
+      ],
+      "217": [
+        "Place Lincoln’s head first into the deepest looking groove. Can you see all of his head? If yes, your tires are too worn"
+      ],
+      "218": [
+        "Place Lincoln’s head first into the deepest looking groove. Can you see all of his head? If yes, your tires are too worn"
+      ],
+      "219": [
+        "warning other drivers or pedestrians of possible problems. If the horn does not work, get it repaired as soon as possible. It should be used properly, not to express anger"
+      ],
+      "220": [
+        "In New York State, more than 40 percent of all motor vehicle fatalities involve impaired driving."
+      ],
+      "221": [
+        "Drivers under age 21 are approximately 4 percent of the driving population, but 7 percent of the impaired drivers involved in fatal crashes.",
+        "This is one reason the driver license revocation penalties are more severe for young drivers"
+      ],
+      "222": [
+        "Alcohol also reduces your ability to recover from the glare of headlights.",
+        "Because your vision is normally restricted at night, it is especially dangerous to drink and drive after dark."
+      ],
+      "223": [
+        "The effects of alcohol consumption can begin long before you become intoxicated or even legally impaired and begin with the first drink."
+      ],
+      "224": [
+        "a BAC of .08 percent or higher is evidence of intoxication"
+      ],
+      "225": [
+        "A BAC of more than .05 percent is legal evidence that you are impaired"
+      ],
+      "226": [
+        "the testimony of a police officer about the way you drive, and your appearance and behavior while interacting with the officer can provide enough evidence to convict you, even without a chemical test."
+      ],
+      "227": [
+        "Your BAC does not depend on the type of beverage you drink, how fit you are, or how you can “hold your liquor.”",
+        "Your (BAC) depends on: • How much alcohol you drink. • How much time passes between drinks. • Your weight."
+      ],
+      "228": [
+        "These drinks contain about the same amount of alcohol – 1-1⁄2 ounces of liquor, 5 ounces of wine, 12 ounces of beer, and 12 ounces of wine cooler."
+      ],
+      "229": [
+        "The only method to effectively reduce your BAC is not to drink over a period of time. Coffee, exercise and cold showers cannot reduce your BAC"
+      ],
+      "230": [
+        "Under New York’s “Implied Consent” law, when you drive a car in this state you are considered to have given your consent to take this type of test."
+      ],
+      "231": [
+        "If you are found guilty of any alcohol or drug-related violation, the court must revoke or suspend your driver license when you are sentenced."
+      ],
+      "232": [
+        "On average, it takes the body approximately one hour to remove that much alcohol."
+      ],
+      "233": [
+        "Under New York’s “Implied Consent” law, when you drive a car in this state you are considered to have given your consent to take this type of test."
+      ],
+      "234": [
+        "If you refuse to take the test after being arrested, your driver license will be suspended when you are arraigned in court on the alcohol or other drug-related charge."
+      ],
+      "235": [
+        "Four alcohol or drug related driving convictions or incidents in their lifetime"
+      ],
+      "236": [
+        "A serious driving offense includes: a fatal crash, a driving-related penal law conviction"
+      ],
+      "237": [
+        "Under the state’s “zero tolerance” law, it is a violation for a person under 21 to drive with any BAC that can be measured (.02 to .07)."
+      ],
+      "238": [
+        "the driver license will be suspended for six months. The driver then must pay a $100 suspension termination fee and a $125 civil penalty to be re-licensed."
+      ],
+      "239": [
+        "The penalty for a first conviction is a fine up to $150, a mandatory surcharge, a crime victim assistance fee, and possible imprisonment of 15 days."
+      ],
+      "240": [
+        "The law exempts passengers in vehicles like stretch limousines and other vehicles that display a commerce certificate or permit"
+      ],
+      "241": [
+        "state law requires the suspension of your driver license or privilege to apply for a license."
+      ],
+      "242": [
+        "a BAC of .18 percent or more is evidence of aggravated driving while intoxicated."
+      ],
+      "243": [
+        "DWI (0.08 and higher Blood Alcohol Content [BAC])",
+        "1st Offense (Misdemeanor)",
+        "Up to 1 year"
+      ],
+      "244": [
+        "Require an interlock device on the vehicle driven by the applicant for five years from the date of issuance of the licensing document."
+      ],
+      "245": [
+        "It is also a traffic infraction for a driver or passenger in a motor vehicle on a public highway, street or road to consume marijuana/cannabis."
+      ],
+      "246": [
+        "Driving while ability impaired by alcohol (DWAI): 90-day suspension."
+      ],
+      "247": [
+        "DWAI (more than 0.05 up to 0.07 Blood Alcohol Content [BAC])",
+        "2nd Offense Within 5 Years",
+        "Up to 30 Days"
+      ],
+      "248": [
+        "Drivers who commit these alcohol-related offenses with a child under 16 years old in the vehicle may be charged with a class E felony."
+      ],
+      "249": [
+        "install and maintain an ignition interlock on any vehicle owned or operated by such driver for at least 12 months."
+      ],
+      "250": [
+        "The conditional driver license will be revoked... for a conviction for any traffic offense except parking, stopping or standing."
+      ],
+      "251": [
+        "If impaired or intoxicated when you are arrested, the maximum mandatory fine is $5,000 and the vehicle can be seized."
+      ],
+      "252": [
+        "These carry a fine of thousands of dollars and can carry a maximum jail term of 25 years."
+      ],
+      "253": [
+        "When crossing tracks, always stay in your lane and in the same gear."
+      ],
+      "254": [
+        "do not proceed until the gates are completely raised and the lights are off."
+      ],
+      "255": [
+        "indicate that you must stop, at least 15 feet (5 m) from the tracks."
+      ],
+      "256": [
+        "COLOR: Yellow with black letters “RR” and “X” symbol. MEANING: There is a railroad crossing ahead."
+      ],
+      "257": [
+        "yield when you see a crossbuck sign, which is a sign shaped like an “X”"
+      ],
+      "258": [
+        "Remember that the train you see is closer and faster-moving than you think"
+      ],
+      "259": [
+        "Drink slowly. Alternate between drinks with alcohol and drinks without any alcohol."
+      ],
+      "260": [
+        "attempt to cross any railroad tracks unless you are certain your entire vehicle will clear all of the tracks at the crossing."
+      ],
+      "261": [
+        "1. GET OUT! (That includes EVERYONE in the car, children, babies, an elderly passenger, etc.)",
+        "2. Get away from the tracks, even if you do not see a train."
+      ],
+      "262": [
+        "If a train is approaching, run toward the train but away from the tracks at a 45-degree angle.",
+        "If you run “down the track,” in the same direction as the train, you can be hit with debris"
+      ],
+      "263": [
+        "School buses with or without passengers, other buses with passengers on board and vehicles with explosives or flammable cargo must stop at all railroad crossings."
+      ],
+      "264": [
+        "If you enter an expressway going a different direction than you intended, or at the wrong exit, stay on the expressway until the next exit.",
+        "IT IS DANGEROUS to back up on an entrance or exit ramp, or to try to cross a median."
+      ],
+      "265": [
+        "If the entrance lane is too short to allow acceleration to expressway speed, the safest method to enter is to stop and wait for a large space in traffic."
+      ],
+      "266": [
+        "Make sure to signal your exit at least 100 feet (30 m) before you reach the exit ramp."
+      ],
+      "267": [
+        "It is important that you drive at a speed that allows you to stop safely within that distance. This is called “driving within the range” of your headlights."
+      ],
+      "268": [
+        "The law requires you to use your headlights from one-half hour after the sun sets to one-half hour before the sun rises"
+      ],
+      "269": [
+        "Your headlights must be on low beam when you are within 500 feet (150 m) of an oncoming vehicle"
+      ],
+      "270": [
+        "To help avoid the glare of approaching high beams, move your eyes to the right. Use the road edge as a guide until the approaching vehicle passes by."
+      ],
+      "271": [
+        "In heavy rain, your tires can begin to ride on the water that is on top of the road pavement. This is called 'hydroplaning'"
+      ],
+      "272": [
+        "For better visibility during these weather conditions, keep your headlights on low beam."
+      ],
+      "273": [
+        "New York State law requires you to turn on your headlights when the weather conditions require the use of windshield wipers"
+      ],
+      "274": [
+        "Never combine radial and non-radial tires on the same vehicle."
+      ],
+      "275": [
+        "Tires with metal studs can be used in New York State only from October 16 through April 30."
+      ],
+      "276": [
+        "Never combine radial and non-radial tires on the same vehicle."
+      ],
+      "277": [
+        "Turn the steering wheel in the direction the vehicle is trying to go. If your rear wheels slide left, steer left."
+      ],
+      "278": [
+        "Take your foot off the gas and shift to neutral or push in the clutch, but do not try to immediately steer."
+      ],
+      "279": [
+        "remember that bridges, ramps and overpasses will freeze first."
+      ],
+      "280": [
+        "Daily deer activity is highest at dawn and dusk, which often is the highest time of travel for motor-vehicle commuters."
+      ],
+      "281": [
+        "If a tire blows out, hold the steering wheel tightly and slowly take your foot off the gas pedal.",
+        "Do not brake until your vehicle is controlled."
+      ],
+      "282": [
+        "The balance of the vehicle will allow it to continue going straight, but a sudden change in speed could send it out of control."
+      ],
+      "283": [
+        "Do not turn of the ignition as you could lose your steering control or or lock your steering wheel."
+      ],
+      "284": [
+        "If your wheels move off the pavement, do not suddenly steer or swerve back onto the pavement. Ease your foot off the gas pedal and brake gently."
+      ],
+      "285": [
+        "Decrease speed, pull over to the right and sound your horn to warn the other driver. Do not turn into the left lane."
+      ],
+      "286": [
+        "Release your seat belt and escape through a window. An open door would cause water to rush in and the car could turn over on top of you."
+      ],
+      "287": [
+        "If you see smoke come from under the hood, pull off the road and park your vehicle. Turn off the ignition. Get away from the car and call the fire department."
+      ],
+      "288": [
+        "If your vehicle has anti-lock brakes (ABS), keep your foot with even pressure on the brake pedal."
+      ],
+      "289": [
+        "Before you back into a driveway, or out of it, get out of the vehicle and check behind your vehicle."
+      ],
+      "290": [
+        "Pedestrians are supposed to walk on the side of the road and face the traffic in the lane nearest them."
+      ],
+      "291": [
+        "You must always give them the right-of-way when they are trying to cross at a marked or unmarked crosswalk even if the traffic signals or other right-of-way rules are not in their favor."
+      ],
+      "292": [
+        "Never stand in the road to hitchhike or conduct business with motorists."
+      ],
+      "293": [
+        "> 35% of the NYC pedestrian injury crashes occur when a driver is attempting to make a left turn."
+      ],
+      "294": [
+        "Never pass vehicles stopped at a crosswalk. There may be people crossing where you can’t see."
+      ],
+      "295": [
+        "Be aware of your vehicle’s a-pillars (vertical supports on the vehicle that are located around all glass) as these may interfere with seeing clearly (they can create blind spots!)"
+      ],
+      "296": [
+        "Bicyclists have the right to share the road and travel in the same direction as motor vehicles."
+      ],
+      "297": [
+        "Reduce speed as you pass them. Air pressure from a vehicle that passes them quickly can send them off balance."
+      ],
+      "298": [
+        "Never travel with more than two side-by-side in a single lane."
+      ],
+      "299": [
+        "Bicyclists and their passengers ages 1 - 13, must wear an approved helmet."
+      ],
+      "300": [
+        "Never carry an infant under a year old as a passenger. It is against the law."
+      ],
+      "301": [
+        "Report any bicycle crash that causes death or serious injury to DMV within 10 days of the incident."
+      ],
+      "302": [
+        "A bicycle driven on public highways must have adequate brakes and a horn or bell that can be heard at least 100 feet (30 m) away."
+      ],
+      "303": [
+        "A bicycle used at night must have a headlight visible from at least 500 feet (150 m) ahead and a red taillight visible from at least 300 feet (90 m) behind."
+      ],
+      "304": [
+        "Stop completely and look left-right-left and behind before turning right on red."
+      ],
+      "305": [
+        "Bike Box – a marked area at an intersection, ahead of where traffic is required to stop. This area provides extra space for bicyclists."
+      ],
+      "306": [
+        "Green painted bike lanes are used to increase visibility to cyclists in some high traffic areas."
+      ],
+      "307": [
+        "In addition to using the full lane, two motorcyclists are allowed to ride side-by-side in a single lane"
+      ],
+      "308": [
+        "A motorcycle’s smaller size makes it seem much farther away, and makes it difficult to judge how far away they are or how fast they are going."
+      ],
+      "309": [
+        "on most motorcycles, the directional signal does not turn off automatically after a turn, so their turn signal may be on inadvertently"
+      ],
+      "310": [
+        "41 percent of fatal motorcycle crashes in the US occurred with “the other vehicle turning left while the motorcycles were going straight"
+      ],
+      "311": [
+        "Most motorcycle brake lights are mounted lower than eye level, which makes them less obvious to many motorists.",
+        "Most cars and trucks are equipped with a “Center High Mount Stop Light” (CHMSL) which is designed to be at, or close to, eye level."
+      ],
+      "312": [
+        "The motorcyclist may quickly change speed or lane position to avoid loose gravel, debris, seams or grooves in the pavement, sewer or access covers or small animals."
+      ],
+      "313": [
+        "People on bicycles have the same rights and responsibilities as people behind the wheel of a motor vehicle."
+      ],
+      "314": [
+        "2-way cycle track – a marked bicycle lane that allows travel in both directions, similar to a sidewalk for pedestrians."
+      ],
+      "315": [
+        "You as the driver are responsible to exercise due care by being aware, alert, and driving defensively."
+      ],
+      "316": [
+        "Look before getting out of your parked vehicle; avoid opening your door into the path of an oncoming bicyclist."
+      ],
+      "317": [
+        "Headlights and taillights on motorcycles must be illuminated when driving. But, with so many vehicles equipped with daytime running lights... motorcycle headlights don’t stand out."
+      ],
+      "318": [
+        "When approaching a railroad crossing, a motorcyclist may decrease speed and rise off the seat to cushion the rough crossing"
+      ],
+      "319": [
+        "On steel deck bridges the motorcyclist may move to the center of the lane to adjust for the surface that is not even."
+      ],
+      "320": [
+        "Class B and C mopeds can be driven only in the right lane of traffic, as far to the right as possible."
+      ],
+      "321": [
+        "Mopeds are not permitted on expressways or other controlled access highways unless posted signs permit it."
+      ],
+      "322": [
+        "In more than 60 percent of all fatal crashes that involve cars and big trucks, the car driver, not the truck driver, contributes to the cause of the traffic crash."
+      ],
+      "323": [
+        "Tractors with long hoods can have a blind spot of 20 feet in front of the vehicle."
+      ],
+      "324": [
+        "For tractor trailers, the difference comes from brake delay. Air brakes transmit brake power from the tractor to the trailer and this can add many feet to the distance it takes to stop."
+      ],
+      "325": [
+        "Because trucks make wide right turns, they move to the left before they turn right."
+      ],
+      "326": [
+        "Its larger size will often make it appear to move at a slower speed than it really is."
+      ],
+      "327": [
+        "The truck or bus could move backward slightly when it starts."
+      ],
+      "328": [
+        "The “slow-moving vehicle” symbol, a reflective orange triangle, must be displayed on the back of vehicles drawn by animals, most farm vehicles, and construction equipment."
+      ],
+      "329": [
+        "Before they cross, they must come to a stop and yield to traffic. They must go across at a 90-degree angle to the road surface."
+      ],
+      "330": [
+        "They also must ride single file near the right curb or road edge or on a right shoulder, lane or path that can be used."
+      ],
+      "331": [
+        "Class A Top speed range mph (km/hr) 31 to 40 (over 48 to 64)"
+      ],
+      "332": [
+        "Never pass close behind a large vehicle that is backing up.",
+        "It is far better to wait until the large vehicle has completed its backup maneuver than to try to pass."
+      ],
+      "333": [
+        "It is illegal to sound your horn when you approach or pass a horse."
+      ],
+      "334": [
+        "It is a criminal violation to leave the scene of an incident that involves a fatality or personal injury."
+      ],
+      "335": [
+        "If a parked vehicle or property different from a vehicle is damaged or if a domestic animal is injured, you must try to find the owner or notify the police."
+      ],
+      "336": [
+        "Do not move an injured person unless it becomes necessary because of fire or another life threatening danger."
+      ],
+      "337": [
+        "Hold clothing with your hands and pull the victim head first away from the danger."
+      ],
+      "338": [
+        "If wires touch the vehicle or lay near it, warn the occupants to remain inside until help arrives."
+      ],
+      "339": [
+        "You must also report any traffic incident or crash that involves $1,000 or more in damage to the property of any one person."
+      ],
+      "340": [
+        "You must file a report with DMV within 10 days of the event."
+      ],
+      "341": [
+        "The failure to report an crash is a criminal offense (misdemeanor) and can mean the suspension or revocation of your driver license and/or registrations"
+      ],
+      "342": [
+        "If the driver is injured and unable to complete the report, a passenger or the vehicle owner may do so."
+      ],
+      "343": [
+        "When taking your driving test, you will not be allowed to use certain safety features, such as parking assist and cruise control."
+      ],
+      "344": [
+        "Be aware that safety features may not work properly in certain conditions such as rain, snow, ice, fog, hills, and curves."
+      ],
+      "345": [
+        "Rear cross-traﬃc alert Yes",
+        "Automatic parallel parking No",
+        "Adaptive cruise control No"
+      ],
+      "346": [
+        "Safety features are meant to assist you in the driving task, they are not there to drive the vehicle. You must remain engaged and always focused on the driving task."
+      ],
+      "347": [
+        "License Express 145 West 30th Street New York, NY 10001 No permit testing."
+      ],
+      "348": [
+        "To schedule a road test: dmv.ny.gov or 1-(518)-402-2100"
+      ],
+      "349": [
+        "Bureau of Consumer & Facility Services PO Box 2700-ESP Albany, NY 12220-0700",
+        "Complaints about a repair shop/dealership/ inspection station: 1-(518) 474-8943"
+      ],
+      "350": [
+        "Questions about Emissions Inspections: 1-(518)-473-0597"
+      ],
+      "351": [
+        "New York City TVB: 1-(718) 488-5710"
+      ],
+      "352": [
+        "EDL Helpline: 1-(518) 474-9981"
+      ],
+      "353": [
+        "Financial Security Bureau (formerly Insurance Services Bureau)"
+      ],
+      "354": [
+        "Within New York State: 1-(800) 368-1186"
+      ],
+      "355": [
+        "Custom Plates Unit 6 Empire State Plaza P.O. Box 2775 Albany, NY 12220"
+      ],
+      "356": [
+        "Albany Call Center General Assistance: 1-(518)-486-9786"
+      ],
+      "357": [
+        "Bronx Licensing Center 1350 Commerce Avenue Bronx, NY 10461"
+      ],
+      "358": [
+        "Brooklyn - Coney Island 2875 West 8th Street Brooklyn, NY 11224"
+      ],
+      "359": [
+        "Downstate Call Center General Assistance: 1-(718)-477-4820"
+      ],
+      "360": [
+        "Driver Improvement Bureau 6 Empire State Plaza Albany, NY 12228 1-(518) 474-0774"
+      ],
+      "361": [
+        "Outside New York State: 1-(518) 473-9002"
+      ],
+      "362": [
+        "For the most recent updates of state and county motor vehicle office locations, useful DMV addresses and telephone numbers, and other important information, please visit our website. The DMV website: dmv.ny.gov"
+      ],
+      "363": [
+        "New York State laws and regulations use U.S. measurements only."
+      ],
+      "364": [
+        "Note: Approximate metric equivalents to U.S. measures are provided for information only."
+      ],
+      "365": [
+        "This manual is intended to provide basic information and cannot possibly cover every traffic law or situation."
+      ],
+      "366": [
+        "write to: Office of Communications, Department of Motor Vehicles, 6 Empire State Plaza, Albany, NY 12228"
+      ],
+      "367": [
+        "Title Services Bureau 6 Empire State Plaza Albany, NY 12228 1-(518)-486-4714"
+      ],
+      "368": [
+        "Custom Plates Unit 6 Empire State Plaza P.O. Box 2775 Albany, NY 12220 1-(518)-402-4838"
+      ],
+      "369": [
+        "Complaints about a repair shop/dealership/ inspection station: 1-(518) 474-8943"
+      ],
+      "370": [
+        "Bureau of Consumer & Facility Services... Complaints about a repair shop/dealership/ inspection station"
+      ],
+      "371": [
+        "Office of Communications, Department of Motor Vehicles, 6 Empire State Plaza, Albany, NY 12228"
+      ],
+      "372": [
+        "The information in this manual is as accurate as possible at the time of publication but is subject to change."
+      ],
+      "373": [
+        "The DMV website: dmv.ny.gov"
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
@@ -41,7 +1198,7 @@
     "topics_covered": 29,
     "coverage_pct": 96.7,
     "uncovered_topics": [
-      "Proper use of seat belts and child safety seats"
+      "Penalties for ignoring out of state traffic tickets"
     ],
     "verdict": "PASS",
     "grade": "A"
@@ -67,7 +1224,54 @@
     "verdict": "PASS",
     "grade": "A"
   },
-  "overall_verdict": "PASS",
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 373,
+      "avg_fidelity": 9.46,
+      "pct_at_10": 94.6,
+      "pct_above_9": 94.6,
+      "pct_above_7": 94.6,
+      "pct_zero": 5.4,
+      "drift_flagged_ids": [
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90
+      ],
+      "verdict": "HARD_FAIL",
+      "grade": "F"
+    },
+    "ja": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 373,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
+  },
+  "overall_verdict": "HARD_FAIL",
   "overall_grade": "A",
   "notes": ""
 }

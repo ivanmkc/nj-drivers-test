@@ -1,16 +1,16 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "ri",
   "name": "Rhode Island",
-  "verified_at": "2026-05-26T02:33:57Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:15:42Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://dmv.ri.gov/sites/g/files/xkgbur556/files/documents/manuals/Driver_Manual_FINAL.pdf",
     "manual_pdf_sha256": "19e928fafe06b7f5f2bdcf6f6b8b2d8ebd6a029e556664a662f99c19b2a44386",
     "manual_text_sha256": "c52cd8d349cf46430b5befee842704658c57840e94697c4c25a3a2f8f562c6c0",
     "manual_text_chars": 219865,
     "manual_pages": 79,
-    "edition": null
+    "edition": "Rev 08/2015"
   },
   "bank": {
     "total_questions": 374,
@@ -23,21 +23,1080 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 340,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "Fact: There is no cost to the donor or their family for donation to take place."
+      ],
+      "2": [
+        "Fact: Saying “Yes” to donation will not affect your medical care."
+      ],
+      "3": [
+        "Fact: In the United States, it is illegal to buy or sell organs for transplantation."
+      ],
+      "4": [
+        "The Division of Motor Vehicles (DMV) is a governmental agency within the Department of Revenue for the State of Rhode Island."
+      ],
+      "5": [
+        "the college operates the statewide Driver Education and Motorcycle safety programs"
+      ],
+      "6": [
+        "a non-refundable fee of $25.00 (plus a $2.50 technology surcharge) will be charged on all operator road tests"
+      ],
+      "7": [
+        "A road test may be scheduled at the time of the computerized knowledge exam or anytime at any DMV facility."
+      ],
+      "8": [
+        "Rhode Island licenses and motor vehicle registrations are subject to surcharges as part of the Transportation Investment and Debt Reduction Act of 2011."
+      ],
+      "9": [
+        "While the manual contains a great deal of useful information about state laws and driving procedures, this is not a legal document."
+      ],
+      "10": [
+        "Motor vehicle crashes are the leading cause of death for all 15-20 year olds."
+      ],
+      "11": [
+        "And a GREAT driver knows that driving in Rhode Island is a privilege, not a right",
+        "Driving a motor vehicle is a privilege and not a right."
+      ],
+      "12": [
+        "A good driver always wears his/her seatbelt and only allows belted passengers in their vehicle."
+      ],
+      "13": [
+        "manages the state’s two primary driver retraining programs, the DWI course and the defensive driving course"
+      ],
+      "14": [
+        "B. Level One: Limited Instructional Permit ..................................................................................... 11"
+      ],
+      "15": [
+        "The three levels of the graduated licensing system are: limited instructional permit, limited provisional license and full operator’s license."
+      ],
+      "16": [
+        "A. The Three (3) Second Rule – Following Distance",
+        "The following three-second rule cannot always guarantee you time to stop to avoid a collision, but it works in most situations."
+      ],
+      "17": [
+        "E. Stuck Accelerator",
+        "V. DRIVING EMERGENCIES"
+      ],
+      "18": [
+        "D. Refusal to Take the Breathalyzer Test"
+      ],
+      "19": [
+        "P. Carbon Monoxide Poisoning",
+        "V. DRIVING EMERGENCIES"
+      ],
+      "20": [
+        "D. Blind Pedestrians",
+        "VIII. SHARING THE ROAD SAFELY"
+      ],
+      "21": [
+        "H. Threat of a Head-On Collision",
+        "I. Threat of a Side-Impact Collision",
+        "J. Threat of a Rear-End Collision"
+      ],
+      "22": [
+        "C. Implied Consent",
+        "Implied consent means that any person who drives a motor vehicle in Rhode Island has given consent to a chemical (breathalyzer-blood-urine) test"
+      ],
+      "23": [
+        "A. Sharing The Road With Large Trucks"
+      ],
+      "24": [
+        "III. Basic Driving Skills and Safety Rules",
+        "B. Rhode Island Safety Belt/Child Restraint Law"
+      ],
+      "25": [
+        "D. Blowout or Flat Tire"
+      ],
+      "26": [
+        "The three levels of the graduated licensing system are: limited instructional permit, limited provisional license and full operator’s license."
+      ],
+      "27": [
+        "First: You must pass an accredited thirty-three (33) hour classroom driver education class."
+      ],
+      "28": [
+        "If you are over age eighteen (18), you are not required to attend the classroom course, but you must take the computerized test."
+      ],
+      "29": [
+        "provided you will be at least fifteen years and ten (10) months old when the class begins."
+      ],
+      "30": [
+        "The computerized test has a 90-minute maximum, but usually takes 20-30 minutes to complete."
+      ],
+      "31": [
+        "Licensed applicants from other states are exempt from taking the test, but must turn in their out-of-state licenses for cancellation."
+      ],
+      "32": [
+        "Applicants holding active licenses from foreign countries may retain their foreign country license but must take the examination as well as a driving test."
+      ],
+      "33": [
+        "Original social security card (not a copy); no laminated cards",
+        "photocopies are not acceptable"
+      ],
+      "34": [
+        "$12.50 cash, check (no third party checks accepted), or money order;"
+      ],
+      "35": [
+        "A supervising driver must be a licensed driver who has been licensed to drive for at least five (5) years and must be twenty-one (21) years of age or older."
+      ],
+      "36": [
+        "A parent who does not hold a valid Rhode Island license can sign the application for a child who is under eighteen (18) years old, but must be seated in the back seat during practice driving."
+      ],
+      "37": [
+        "Your vision must be at least 20/40 with corrected lenses."
+      ],
+      "38": [
+        "The licensed driver must be sitting beside you at all times and be ready to take control of the vehicle in an emergency."
+      ],
+      "39": [
+        "The licensed driver is legally responsible for any driving violation you may commit."
+      ],
+      "40": [
+        "You must wear a safety belt as required by law",
+        "ALL passengers must wear a safety belt or be in a child restraint system as required by law."
+      ],
+      "41": [
+        "You must wear a safety belt as required by law unless you provide the DMV with a physician’s letter indicating you cannot wear a safety belt for medical reasons."
+      ],
+      "42": [
+        "You must hold a Limited Instructional Permit for at least six (6) months before you can take a Rhode Island DMV road test."
+      ],
+      "43": [
+        "The permit is valid for one (1) year OR until you reach the age of eighteen (18), whichever comes first."
+      ],
+      "44": [
+        "Present a statement signed by a parent or guardian stating that you have completed a minimum of fifty (50) hours of driving experience with a supervising driver with ten (10) of those hours at night."
+      ],
+      "45": [
+        "Leaving the designated roadway (driving on the sidewalk, leaving the laned roadway or leaving the lane of travel, and driving in safety zone)"
+      ],
+      "46": [
+        "If the owner is not present, a notarized letter from the owner giving permission to use the vehicle for this purpose must be presented to the DMV examiner."
+      ],
+      "47": [
+        "Valid inspection sticker (Exception: vehicles that are less than 2 years old or 24,000 miles or less, whichever comes first)."
+      ],
+      "48": [
+        "No pets allowed in vehicles used for the driving test."
+      ],
+      "49": [
+        "You must wait at least 30 days before your next appointment."
+      ],
+      "50": [
+        "A PERSON WITH A LIMITED PROVISIONAL LICENSE CANNOT DRIVE BY THEMSELVES BETWEEN THE HOURS OF 1:00AM AND 5:00AM."
+      ],
+      "51": [
+        "Without supervision in any of the following circumstances: 1. Between 5:00am and 1:00am. 2. When driving to or from work."
+      ],
+      "52": [
+        "A supervising driver must be a licensed driver who has been licensed to drive for at least five (5) years and must be twenty-one (21) years of age or older."
+      ],
+      "53": [
+        "Original permit – photocopies are not acceptable."
+      ],
+      "54": [
+        "The following is part of the safety inspection: Brake lights, Directional lights, Headlights, Hazard lights, Tires"
+      ],
+      "55": [
+        "Persons with a valid driver’s license from another state are not required to take the driving test."
+      ],
+      "56": [
+        "Without supervision in any of the following circumstances: from 5:00 AM to 1:00 AM"
+      ],
+      "57": [
+        "During the first twelve (12) months of a limited provisional license no more than one (1) passenger younger than twenty-one (21) years of age is allowed in the vehicle."
+      ],
+      "58": [
+        "In order to get your full operator’s license, you must: 1. Be at least seventeen (17) years, six (6) months old."
+      ],
+      "59": [
+        "Have not been convicted of a motor vehicle moving violation or safety belt infraction during the previous six (6) months."
+      ],
+      "60": [
+        "The suspension period does not begin until your license has been surrendered or forwarded to the DMV."
+      ],
+      "61": [
+        "A supervising driver must be a licensed driver who has been licensed to drive for at least five (5) years and must be twenty-one (21) years of age or older."
+      ],
+      "62": [
+        "No person other than the supervising driver is located in the front seat of automobile."
+      ],
+      "63": [
+        "Must complete fifty (50) hours of supervised driving with a qualified supervising driver."
+      ],
+      "64": [
+        "If your out-of-state license is currently valid or has not been expired for more than one (1) year, you will not be required to take a computerized test or a road test."
+      ],
+      "65": [
+        "Looking away from the path of travel for two or more seconds doubles the likelihood of a crash."
+      ],
+      "66": [
+        "Distraction results when a situation, event or person draws a driver’s focus away from driving. Inattention, on the other hand, occurs when a driver’s attention drifts away"
+      ],
+      "67": [
+        "Slowed perception. Distracted driving may cause drivers to be delayed in perceiving or completely fail to perceive an important traffic event."
+      ],
+      "68": [
+        "To receive a Level 1: LIMITED INSTRUCTIONAL PERMIT, you must: 1. Be sixteen (16) to eighteen (18) years of age."
+      ],
+      "69": [
+        "The fee to transfer your license is $44.50."
+      ],
+      "70": [
+        "Specifically, for teen drivers, the addition of just one teen passenger doubles the likelihood of experiencing a fatal crash."
+      ],
+      "71": [
+        "With two or more teen passengers, the risk of a fatal crash jumps by 300 percent."
+      ],
+      "72": [
+        "A physical distraction is one that causes a driver to take his or her hands off the wheel or eyes off the road, such as reaching for an object."
+      ],
+      "73": [
+        "Overall risk of a collision while using a cell phone increases by 400 percent."
+      ],
+      "74": [
+        "While a hands-free device may initially appear to be less distracting, research indicates no differences in risk between the two modes."
+      ],
+      "75": [
+        "text messaging is even riskier than talking on a cell phone, as text messaging often requires the driver to both look at the phone and manipulate the keypad"
+      ],
+      "76": [
+        "When a driver looks away from the roadway for two or more seconds, the risk of a collision doubles."
+      ],
+      "77": [
+        "Sometimes this is referred to as “rubbernecking.”"
+      ],
+      "78": [
+        "Preset radio stations, MP3 devices, and climate control."
+      ],
+      "79": [
+        "Pull safely off the road and out of traffic to deal with children."
+      ],
+      "80": [
+        "Distraction can cause a driver’s decision-making process to be delayed, or cause a driver to choose an action inappropriate for the situation at hand."
+      ],
+      "81": [
+        "Do not engage in emotional conversations while driving. Pull off the road to a safe spot before continuing this type of conversation."
+      ],
+      "82": [
+        "Let the person you are speaking with know you are driving."
+      ],
+      "83": [
+        "One study indicated that talking on a cell phone was over four times more likely to cause a near crash than the next-most frequent cause of distraction."
+      ],
+      "84": [
+        "Secure your phone in the car so that it does not become a projectile in a crash."
+      ],
+      "85": [
+        "Do not engage in emotional conversations while driving. Pull off the road to a safe spot before continuing this type of conversation."
+      ],
+      "86": [
+        "Drivers may experience short bursts of sleep lasting only a few seconds (microsleeps) or fall asleep for a longer period of time."
+      ],
+      "87": [
+        "Additionally, people sleeping fewer than five hours increase their risk of a collision by four to five times."
+      ],
+      "88": [
+        "Most people experience “lows” between approximately midnight and 6 am, and again between approximately 2 to 4 pm."
+      ],
+      "89": [
+        "Research shows that being awake for 18 hours produces an impairment approximately equal to a blood alcohol concentration (BAC) of .05 percent."
+      ],
+      "90": [
+        "After 24 hours awake, the impairment rises to that roughly equal to a BAC of .10 percent."
+      ],
+      "91": [
+        "Drivers under age 30 are involved in over two-thirds of all fall-asleep crashes."
+      ],
+      "92": [
+        "Working the night shift increases collision risk by nearly six times."
+      ],
+      "93": [
+        "Driving on an empty, straight road with no signals or billboards may seem like a simple task. Yet there is often not enough stimulation in the environment to keep you mentally alert."
+      ],
+      "94": [
+        "Trouble remembering the last few miles driven; missing exits or traffic signs."
+      ],
+      "95": [
+        "sleep experts recommend between 7 to 9 hours of sleep per night for adults and 8½ to 9½ hours for teens."
+      ],
+      "96": [
+        "A good rule of thumb is to stop every 100 miles or every two hours."
+      ],
+      "97": [
+        "Playing the radio at high volume.",
+        "The following actions will not help prevent drowsiness longer than just a few minutes:"
+      ],
+      "98": [
+        "After dark, find a populated, lighted area."
+      ],
+      "99": [
+        "Keep in mind that sleeping for more than 20 minutes can make you groggy for at least five minutes after awakening."
+      ],
+      "100": [
+        "Turn on parking lights and turn off other electrical equipment."
+      ],
+      "101": [
+        "the most critical factor in a driving record, regardless of training, is an individual’s self-awareness and ability to interact with other people."
+      ],
+      "102": [
+        "Emotions can draw a driver’s attention away from driving, reduce concentration on the roadway and impair the ability to process information and take necessary actions."
+      ],
+      "103": [
+        "Road rage occurs when a driver uses the vehicle or some other weapon to threaten or cause harm to another roadway user",
+        "Examples of road rage include throwing objects at a vehicle, yelling at a specific roadway user and attempting to ram another vehicle."
+      ],
+      "104": [
+        "Emotions are contagious. Quite often, one emotion leads to another.",
+        "Realize that smiles and courtesy can be spread among drivers just as easily as upsets and anger can."
+      ],
+      "105": [
+        "Delay driving when upset. Most emotional upsets are temporary. If you must drive, wait until the strength of the emotion has faded"
+      ],
+      "106": [
+        "Do not block the passing lane. Except when passing, stay out of the far left lane."
+      ],
+      "107": [
+        "Use your horn sparingly. A couple of short taps may be perceived as less aggressive than one long blast."
+      ],
+      "108": [
+        "When using high-beam headlights, return to using low-beam headlights as soon as you detect an oncoming vehicle.",
+        "Do not drive behind another vehicle with your high-beam headlights on."
+      ],
+      "109": [
+        "Avoid eye contact with the other driver or passengers."
+      ],
+      "110": [
+        "Do not get out of your vehicle — it offers protection.",
+        "Just as in a crash, your vehicle can give you protection. Do not lose that protection by getting out."
+      ],
+      "111": [
+        "drive to a busy public place where there are witnesses, such as a hospital, fire station or busy convenience store or gas station."
+      ],
+      "112": [
+        "Most motor vehicle collisions are caused by errors of the driver and occur within a few miles of people’s homes."
+      ],
+      "113": [
+        "Before entering your vehicle, check in front and behind the vehicle for objects, animals, or persons in your path."
+      ],
+      "114": [
+        "Before entering your vehicle, check in front and behind the vehicle for objects, animals, or persons in your path."
+      ],
+      "115": [
+        "The Seat Belt Use Law is a primary law for all ages, meaning you can be pulled over if anyone is unbuckled."
+      ],
+      "116": [
+        "The fine for violation of this section is $40.00 per occupant."
+      ],
+      "117": [
+        "Any person transporting a child under the age of eight (8), less than fifty-seven (57) inches (4 ½ feet tall) in height and less than eighty (80) pounds"
+      ],
+      "118": [
+        "the vehicle has no backseat (i.e. pickup truck, sports car, etc.)"
+      ],
+      "119": [
+        "A violation for transporting a child not in a child restraint system mandates a court appearance."
+      ],
+      "120": [
+        "Birth to at least a minimum of one (1) year old and at least 20 lbs",
+        "Rear-facing and/or convertible car seat",
+        "Back seat use only"
+      ],
+      "121": [
+        "The perception distance plus the reaction distance plus the braking distance equals the total stopping distance."
+      ],
+      "122": [
+        "After seeing danger, it takes the average driver about ¾ of a second to apply the brake."
+      ],
+      "123": [
+        "Velocitizing occurs when you begin to feel that you are going slower than your actual speed."
+      ],
+      "124": [
+        "Guard against hydroplaning by keeping tire pressure inflated to manufacturer’s recommended standard, reducing speed, and being careful while driving in the rain."
+      ],
+      "125": [
+        "One-sixth (1/6) of all crashes happen when one vehicle is turning left."
+      ],
+      "126": [
+        "Do not turn your wheels in your intended path of travel until you are clear to make your turn."
+      ],
+      "127": [
+        "Both the motor vehicle directly approaching you and the vehicle approaching on your right has the right-of-way."
+      ],
+      "128": [
+        "This is likely to make the driver of the vehicle following you assume you are going to turn left."
+      ],
+      "129": [
+        "“C” Coast into the first half of the turn, covering the brake (gentle pressure on the brake pedal) in case the need to apply the brakes arises."
+      ],
+      "130": [
+        "You have clear visibility in each direction for a distance of five hundred (500) feet."
+      ],
+      "131": [
+        "You are at least two hundred feet (200’) from an intersection."
+      ],
+      "132": [
+        "This maneuver is more hazardous because you will be backing into the travel lane."
+      ],
+      "133": [
+        "When stopping, drivers should completely cease all forward motion for a minimum of three seconds."
+      ],
+      "134": [
+        "If two vehicles arrive at the intersection at the same time, you must yield the right of way to the vehicle on your right."
+      ],
+      "135": [
+        "Within 8 feet of a fire hydrant."
+      ],
+      "136": [
+        "Within 20 feet of a crosswalk at an intersection."
+      ],
+      "137": [
+        "Within 30 feet of a flashing red or yellow light, a stop sign, or a traffic light."
+      ],
+      "138": [
+        "Within 50 feet of the nearest rail or a railroad crossing, unless you stop for just a short time to load or unload passengers or packages."
+      ],
+      "139": [
+        "a vehicle parked on a two-lane road must have the right wheels a maximum of twelve (12) inches from the right side of the road or curb."
+      ],
+      "140": [
+        "Check the rear view and side view mirrors and look over your left shoulder to cover the blind spots."
+      ],
+      "141": [
+        "When you reach the intersection, wait until the way is clear. Do not turn your wheels in your intended path of travel until you are clear to make your turn."
+      ],
+      "142": [
+        "You will be instructed by the examiner to drive to the right side of the road, stop, and then set your parking brake and shift to neutral."
+      ],
+      "143": [
+        "When entering the roadway from a private road or driveway, you must stop at the sidewalk before continuing to the curb line where you are mandated to stop again."
+      ],
+      "144": [
+        "You should go far enough past the vehicle you are passing so that you are able to see the tires on the pavement of the vehicle you passed in your inside rear view mirror."
+      ],
+      "145": [
+        "A driver may pass on the right of another vehicle only as follows: 1. When the motor vehicle ahead is making or about to make a left turn."
+      ],
+      "146": [
+        "If you are backing up for a distance greater than 30 feet, it is recommended that you activate your hazard lights to warn other motorists of your maneuvers."
+      ],
+      "147": [
+        "Velocitizing occurs when you begin to feel that you are going slower than your actual speed."
+      ],
+      "148": [
+        "To avoid the effects of highway hypnosis, (a condition caused by long periods of driving) get out of your vehicle for a while to relax and to take refreshments."
+      ],
+      "149": [
+        "The far left lane is for passing other vehicles. Trucks, busses, and other special vehicles are prohibited from traveling in this lane."
+      ],
+      "150": [
+        "Rhode Island law sets speed limits as follows: 25 miles per hour (mph) in residential areas and 50-65 mph on most highways."
+      ],
+      "151": [
+        "If you are being tailgated, change lanes. Never speed up because you will be tailgated at a higher speed. Never slam on your brakes."
+      ],
+      "152": [
+        "If you need help, raise the hood of your vehicle, tie a white cloth on the door handle and stay in your locked vehicle."
+      ],
+      "153": [
+        "If you miss your exit ramp, go on to the next exit. Never stop and back up to the missed exit."
+      ],
+      "154": [
+        "Always drive 500 feet behind emergency vehicles."
+      ],
+      "155": [
+        "The Basic Speed Law in Rhode Island requires motorists to drive only as fast as the road conditions dictate."
+      ],
+      "156": [
+        "Drivers under the age of 18 are prohibited from using a cell phone while operating a motor vehicle, per R.I.G.L. 31-22-11.9."
+      ],
+      "157": [
+        "At night it might be necessary to blink your headlights from low beam to high beam and back to low beam to warn the driver in front of you that you intend to pass."
+      ],
+      "158": [
+        "motorists must realize the speed limit sign is the maximum speed for ideal conditions and therefore, they must adjust their speed to the conditions."
+      ],
+      "159": [
+        "Third Offense + = $100.00 fine + lose license until 18 years of age."
+      ],
+      "160": [
+        "The only time a minor is permitted to use a cell phone is in the case of an emergency."
+      ],
+      "161": [
+        "First Offense = $85.00 fine",
+        "No matter the age, you are NOT allowed to use a wireless handset to compose, read or send text message while operating a motor vehicle"
+      ],
+      "162": [
+        "The law states that a driver has to make a signal by hand or by using directional lights... at least 100 feet at a minimum before making a turn."
+      ],
+      "163": [
+        "To turn right: Put left hand and arm up, keeping hand and arm still."
+      ],
+      "164": [
+        "Yellow lines separate traffic traveling in opposite directions."
+      ],
+      "165": [
+        "Motorists wishing to turn shall not enter the lane unless they intend to turn within 100 feet (minimum)."
+      ],
+      "166": [
+        "A shared-lane marking, installed in the center of a travel lane to indicate that a bicyclist may use the full lane."
+      ],
+      "167": [
+        "Roundabouts are intersections that direct traffic in a counterclockwise direction around a center island."
+      ],
+      "168": [
+        "Bicyclists should ride in the middle of the lane, not near the curb line, to prevent vehicles from passing them."
+      ],
+      "169": [
+        "Pedestrians should cross to the raised or painted splitter or refuge. Then, look right and finish crossing to the opposite sidewalk."
+      ],
+      "170": [
+        "the driver of a vehicle about to enter a rotary... shall yield the right-of-way to all vehicles already in the rotary."
+      ],
+      "171": [
+        "When approaching uncontrolled intersections, motorists must treat the intersection as if there were a yield sign present."
+      ],
+      "172": [
+        "To stop or slow down: Put left hand and arm down, keeping hand and arm still."
+      ],
+      "173": [
+        "When approaching uncontrolled intersections, motorists must treat the intersection as if there were a yield sign present."
+      ],
+      "174": [
+        "Cover the brake means taking your foot off the accelerator pedal and hovering it over the brake pedal without touching it"
+      ],
+      "175": [
+        "When nearing a flashing red traffic light, you must make a full stop and yield the right-of-way to all vehicles on your right and left. Treat the flashing red signal as a stop sign."
+      ],
+      "176": [
+        "Except when a sign is placed prohibiting a right turn on red, vehicles may turn right on a steady red light after the driver has stopped completely and yielded the right-of-way"
+      ],
+      "177": [
+        "When a flashing yellow arrow is displayed, you may proceed with turning in the direction of the arrow only after yielding to oncoming traffic and pedestrians."
+      ],
+      "178": [
+        "HAWK: High-Intensity Activated Crosswalk is used to let pedestrians safely cross a street."
+      ],
+      "179": [
+        "If your vehicle is equipped with anti-lock brakes, do not pump the brake. Press the pedal firmly and maintain pressure until the vehicle stops."
+      ],
+      "180": [
+        "To control a vehicle as it begins to skid: 1. Let off the gas."
+      ],
+      "181": [
+        "Turn in the direction you want the vehicle to go."
+      ],
+      "182": [
+        "Pump the brake pedal.",
+        "Downshift to a lower gear.",
+        "Engage the parking brake."
+      ],
+      "183": [
+        "Grip the steering wheel firmly with two (2) hands.",
+        "Ease up on the accelerator to slow the vehicle. Do not brake."
+      ],
+      "184": [
+        "Shift the car to NEUTRAL at the same time you apply the brake."
+      ],
+      "185": [
+        "shift to NEUTRAL when the engine first sputters or stops.",
+        "Try to restart the engine while you are moving."
+      ],
+      "186": [
+        "Let up on the accelerator and brake gently to five (5) or ten (10) mph."
+      ],
+      "187": [
+        "A yellow light tells a driver that a red light is next. Slow down and proceed with caution if a stop cannot be made safely."
+      ],
+      "188": [
+        "Counter-steer sharply the instant the front tires touch the roadway."
+      ],
+      "189": [
+        "Steer right toward the shoulder or curb-line. Do not steer left."
+      ],
+      "190": [
+        "If a collision is unavoidable, release your brakes just before the collision occurs. This helps soften the impact."
+      ],
+      "191": [
+        "Turn on your parking lights, hazard (emergency) flashers, or turn signal."
+      ],
+      "192": [
+        "exit your vehicle and run, far away from the tracks, in a parallel line in the opposite direction from which the train is moving."
+      ],
+      "193": [
+        "It may take a train a mile and a half to come to a complete stop after applying the brake."
+      ],
+      "194": [
+        "Pull immediately off the road, turn your ignition to the off position, and move away from the vehicle."
+      ],
+      "195": [
+        "Avoid opening your door as water will fill the inside of your vehicle and could cause your vehicle to flip onto the roof."
+      ],
+      "196": [
+        "If you have anti-lock brakes, press the pedal down firmly and hold it."
+      ],
+      "197": [
+        "If you begin to yawn or feel dizzy or nauseous, you may be experiencing the symptoms of the poisoning."
+      ],
+      "198": [
+        "If the cruise control is on when your car begins to hydroplane... your car will accelerate to a higher rate of speed making you lose control."
+      ],
+      "199": [
+        "Motorcyclists often slow by downshifting or merely rolling off the throttle, thus not activating the brake light. Allow more following distance, say three (3) to four (4) seconds."
+      ],
+      "200": [
+        "Because of its small size, a motorcycle may look farther away than it is."
+      ],
+      "201": [
+        "Mirrors are smaller on a motorcycle and usually convex. This gives the cyclist a smaller image of you and makes you appear farther back than you actually are."
+      ],
+      "202": [
+        "Carrying a passenger complicates a motorcyclist’s task. Balance is more difficult, stopping distance is increased, and maneuverability is reduced."
+      ],
+      "203": [
+        "any operator under twenty-one (21) shall at all times, wear a certified helmet.",
+        "New operators, regardless of age, must wear an approved helmet for the first year of license."
+      ],
+      "204": [
+        "Rhode Island law requires all operators to properly wear eye protection."
+      ],
+      "205": [
+        "Predict: Judge where possible points of conflict may occur."
+      ],
+      "206": [
+        "Closed zone: A space not open because of restrictions in your line of sight or intended path of travel."
+      ],
+      "207": [
+        "The Smith System has five (5) keys to collision free driving.",
+        "Leave Yourself an Out",
+        "Aim High In Steering"
+      ],
+      "208": [
+        "The Three (3) Second Rule – Following Distance",
+        "If your vehicle passes the point before you finish your count, you are following too close"
+      ],
+      "209": [
+        "When driving under adverse weather/road conditions, be sure to add another second or two to your following distance."
+      ],
+      "210": [
+        "A safe stopping distance within four (4) seconds gives you the opportunity to stop safely without colliding with a person, vehicle or object."
+      ],
+      "211": [
+        "Lane position 2: Driver positions his/her vehicle three (3) to six (6) inches from the left line of the lane.",
+        "This is the position to drive if hazards exist to the right of the vehicle or you intend to turn left."
+      ],
+      "212": [
+        "Stay at least 50 feet back if you expect the driver to see you."
+      ],
+      "213": [
+        "You know you have enough distance behind a truck or semi-tractor-trailer when you can see the side-view mirrors of the truck you are following."
+      ],
+      "214": [
+        "The airflow between the two vehicles may tend to draw them together unless you are on guard."
+      ],
+      "215": [
+        "The law requires motorists to turn their headlights on when driving from sunset to sunrise, any time you cannot see 500 feet ahead of you"
+      ],
+      "216": [
+        "The law requires that you use your low beam headlights during bad weather conditions such as snow, rain, and fog"
+      ],
+      "217": [
+        "In these situations high beams may reflect off the snow, rain, or fog in the air and shorten the distance you can see."
+      ],
+      "218": [
+        "The law requires that you use your low beam headlights during bad weather conditions such as snow, rain, and fog"
+      ],
+      "219": [
+        "The back license plate on your vehicle must be lighted so it can be seen and read at least 60 feet from the back of the vehicle."
+      ],
+      "220": [
+        "Dim your high beam headlights promptly at a distance of at least 500 feet ahead when approaching another vehicle."
+      ],
+      "221": [
+        "glance at the right edge of the roadway (or fog line) until the bright lights have gone by and your vision has returned to normal."
+      ],
+      "222": [
+        "If there are no sidewalks, pedestrians should walk on the left side of the road facing traffic."
+      ],
+      "223": [
+        "Any intersection of public roads constitutes a legal crosswalk whether it is marked or not."
+      ],
+      "224": [
+        "Fines for failing to yield to blind or low vision pedestrian may result in a fine up to $1,000."
+      ],
+      "225": [
+        "Pedestrians who are blind or have low vision use the sound of traffic (including your engine) as a guide in determining when it is safe to cross a street"
+      ],
+      "226": [
+        "A fine of up to $300 and/or suspension of your driver’s license for a period up to thirty (30) days will be imposed for the first violation of this law."
+      ],
+      "227": [
+        "Motorists do not have to stop for the flashing red lights of the school bus when the bus is opposite your vehicle on a divided highway."
+      ],
+      "228": [
+        "No more than two (2) bicycles may ride side by side."
+      ],
+      "229": [
+        "Any person fifteen (15) years of age or younger riding a bicycle or a passenger on a bicycle on a public highway... must wear a certified bicycle helmet."
+      ],
+      "230": [
+        "Assist bicyclist with lateral positioning in a shared lane with on-street parallel parking in order to reduce the chance of a bicyclist’s impacting the door of a parked vehicle."
+      ],
+      "231": [
+        "Allow as much clearance as possible (3-5 feet) when passing to prevent contact with a bicyclist"
+      ],
+      "232": [
+        "be prepared to slow down or stop when the bicyclists ahead of you “takes the travel lane,” (i.e., proceeds in the center of the road)."
+      ],
+      "233": [
+        "Do not drive in a bicycle lane. You may cross a bicycle lane when you are turning a corner or entering or leaving an alley, private road or driveway."
+      ],
+      "234": [
+        "Dooring is when the driver or passenger carelessly opens the door of a parked or stopped vehicle and collides with a passing cyclist."
+      ],
+      "235": [
+        "Using high beam headlights in heavy traffic areas.",
+        "Be aware of behaviors that have resulted in violence in the past:"
+      ],
+      "236": [
+        "If a driver continues to hassle or follow you, drive to the nearest police station or busy place to get help."
+      ],
+      "237": [
+        "Drivers of motor vehicles in Rhode Island are permitted, but not required, to turn right at a red light after a full stop unless there is a “no turn on red” sign posted."
+      ],
+      "238": [
+        "Children who are less than seven (7) years old must be transported in a federally approved restraint seat in the back seat of the vehicle."
+      ],
+      "239": [
+        "You must begin to use your directional signals a minimum distance of at least 100 feet before making turns or changing lanes."
+      ],
+      "240": [
+        "the driver of the vehicle on the left must yield the right-of-way to the vehicle on the right."
+      ],
+      "241": [
+        "Headlights must be on anytime wipers are on.",
+        "Headlights must be turned on if it is raining or snowing or in conditions which would reduce visibility to less than 500 feet."
+      ],
+      "242": [
+        "Proof of insurance ($500 fine for failure to comply) must be carried in your vehicle along with the registration at all times."
+      ],
+      "243": [
+        "You are required by law to reduce your speed and refrain from sounding a horn or causing other loud noises when approaching a horse being driven or ridden upon a public highway."
+      ],
+      "244": [
+        "Drivers in Rhode Island are not allowed to operate a motor vehicle upon a public highway while wearing earphones or headsets."
+      ],
+      "245": [
+        "If stopped by a law enforcement officer at night, a motorist is required to turn on the vehicle’s interior lights and leave them on until the officer allows the driver to drive off."
+      ],
+      "246": [
+        "If stopped by a law enforcement officer at night, a motorist is required to turn on the vehicle’s interior lights and leave them on until the officer allows the driver to drive off."
+      ],
+      "247": [
+        "Safety belt/Child restraint violation 31-22-22 85.00"
+      ],
+      "248": [
+        "If you drink, even just a little, your chances of a collision are seven (7) times greater than if you don’t drink."
+      ],
+      "249": [
+        "Upon reaching the brain, alcohol affects first the control of your judgment and skill."
+      ],
+      "250": [
+        "After drinking, there is nothing that will reduce the effects of alcohol except time."
+      ],
+      "251": [
+        "A 12 ounce container of beer, a 4 to 5 ounce glass of wine and a 1 to 1 1/2 ounce shot of hard liquor have about the same amount of alcohol."
+      ],
+      "252": [
+        "Combining alcohol with another drug can cause a synergistic (additive) effect, whereby the effects are multiplied."
+      ],
+      "253": [
+        "Any person of any age with a BAC of .08% or more is intoxicated and will be charged with drunk driving – Driving Under the Influence (DUI)."
+      ],
+      "254": [
+        "Any person under the age of twenty-one (21) with a BAC of .02% but less than .08% is impaired and will be charged with Driving While Impaired (DWI)."
+      ],
+      "255": [
+        "Implied consent means that any person who drives a motor vehicle in Rhode Island has given consent to a chemical (breathalyzer-blood-urine) test"
+      ],
+      "256": [
+        "If you refuse to take a chemical test, your license will be suspended for a minimum of six months."
+      ],
+      "257": [
+        "11 mph in excess of posted speed limit with a fine of $10.00 per mile in excess of speed limit 195.00 minimum"
+      ],
+      "258": [
+        "people who drive after smoking marijuana make more mistakes and get arrested for traffic violations more than other drivers. These drivers also have more trouble adjusting to headlight glare."
+      ],
+      "259": [
+        "Driving While Impaired (DWI) Under 18 years of age BAC 0.02% - 0.08% 1st Violation 6 – 12 month license suspension"
+      ],
+      "260": [
+        "IT IS AGAINST THE LAW FOR A DRIVER OF ANY AGE TO CONSUME AN ALCOHOLIC BEVERAGE WHILE DRIVING."
+      ],
+      "261": [
+        "BAC: 0.08% - 0.15% (or unknown) 3rd or subsequent violation (within a 5 year period) – Felony"
+      ],
+      "262": [
+        "Chemical Test Refusal Adults 1st violation 6 month – 1 year license suspension"
+      ],
+      "263": [
+        "3rd or subsequent violation (within a 5 year period) – Felony",
+        "Seizure of the vehicle by the state"
+      ],
+      "264": [
+        "This section does not apply to persons between the ages of sixteen (16) and twenty-one (21) who are transporting unopened alcoholic beverages in the course of their employment."
+      ],
+      "265": [
+        "In the event of a minor collision, if possible, drive your vehicle off to the side of the roadway and notify the police."
+      ],
+      "266": [
+        "you must leave your name and address in writing attached securely to such vehicle or property",
+        "Also, report the collision to the nearest state or local police immediately."
+      ],
+      "267": [
+        "A police report is required if: Someone is injured in the collision. Property damage is over $1,000. You hit an unattended vehicle."
+      ],
+      "268": [
+        "Driving under the influence (DUI) Death Resulting 1st violation – Felony 5 – 15 years in prison 5 year license revocation"
+      ],
+      "269": [
+        "Driving too close to the vehicle in front of you – tailgating."
+      ],
+      "270": [
+        "shall be subject to a minimum sixty (60) day suspension of his or her driver’s license"
+      ],
+      "271": [
+        "Severe penalties are imposed against drivers who choose to leave the scene of a collision (‘hit and run’) without properly identifying themselves."
+      ],
+      "272": [
+        "The name, address, license, insurance carrier and policy number, and registration state and number of the other driver"
+      ],
+      "273": [
+        "Wait for him/her to ask for your license, registration and insurance card",
+        "Do not hand the officer your license or other documents in a holder. Take them out."
+      ],
+      "274": [
+        "If asked to sign a citation, do so. It is not an admission of guilt, solely an acknowledgement that you have received the citation."
+      ],
+      "275": [
+        "You may not drive on a tire that has less than 3/32 of an inch of tread (measure the depth of the tread with a penny)."
+      ],
+      "276": [
+        "Measure tire pressure while your tire is cold to get an accurate reading."
+      ],
+      "277": [
+        "Lap and shoulder belts working together reduce the risk of death and serious injury by almost 50%."
+      ],
+      "278": [
+        "If you are under 18 years old, you need parental consent."
+      ],
+      "279": [
+        "Signing a donor card or having a donor designation on your license will not affect the quality of health care you receive.",
+        "the first priority of any health care provider is to save your life."
+      ],
+      "280": [
+        "Exception: Vehicles under two (2) years old or with less than 24,000 miles are not required to have an inspection sticker"
+      ],
+      "281": [
+        "Driving a motor vehicle is a privilege and not a right."
+      ],
+      "282": [
+        "The fine for a violation of this law is $250.00."
+      ],
+      "283": [
+        "Rhode Island follows the Federal Motor Vehicle Safety Standards of a total visible light transmittance of not less than seventy percent (70%)."
+      ],
+      "284": [
+        "If noises occur when you turn the wheel, it may be an indication you are in need of power steering fluid."
+      ],
+      "285": [
+        "Rhode Island follows the Federal Motor Vehicle Safety Standards of a total visible light transmittance of not less than seventy percent (70%)."
+      ],
+      "286": [
+        "elevating or lowering the chassis or body by more than four inches (4”) from the original manufacturer’s specified height"
+      ],
+      "287": [
+        "In speed zones of thirty-five miles per hour (35 mph) or less, not more than eighty-six (86) dbA."
+      ],
+      "288": [
+        "Use your signal, and then turn on your hazard lights."
+      ],
+      "289": [
+        "Keep your seatbelt fastened until the officer has seen you wearing it."
+      ],
+      "290": [
+        "Turn on the interior lights if the stop occurs when it is dark so the officer can easily see you and that all is in order."
+      ],
+      "291": [
+        "Keep your hands in view, preferably on the steering wheel. Ask your passengers to place their hands in plain view, such as on their laps."
+      ],
+      "292": [
+        "Do not immediately reach into your glove box, console, or backseat. Wait for the officer to request your identification, and then move to get it."
+      ],
+      "293": [
+        "If you receive a citation, you will be asked to sign it. This is not an admission of guilt. It only means that you received the citation."
+      ],
+      "294": [
+        "Construction signs are orange in color, diamond or rectangular in shape, and posted prior to, within, and after the work zones."
+      ],
+      "295": [
+        "Note: Fines are doubled for speeding tickets issued within these designated areas twenty-four (24) hours a day."
+      ],
+      "296": [
+        "Speed and inattention are two (2) of the most common causes of work zone crashes."
+      ],
+      "297": [
+        "Do not tailgate; most work zone crashes are rear-end collisions."
+      ],
+      "298": [
+        "Do not tailgate; most work zone crashes are rear-end collisions."
+      ],
+      "299": [
+        "Merge as soon as possible; motorists can help maintain traffic flow by moving to the appropriate lane at first notice."
+      ],
+      "300": [
+        "Flaggers have the legal authority to control traffic."
+      ],
+      "301": [
+        "If you are 68 years old or older, your license will only be valid for two (2) years."
+      ],
+      "302": [
+        "When you renew your license at the DMV, you will be issued a temporary license valid for sixty (60) days."
+      ],
+      "303": [
+        "You must also bring your Social Security card for verification purposes."
+      ],
+      "304": [
+        "To change your name on your Rhode Island license, you are required to change your name with the Social Security Administration first."
+      ],
+      "305": [
+        "The fee to change any information on a license is $7.50."
+      ],
+      "306": [
+        "If you lose or misplace your valid Rhode Island License, the DMV will issue a new copy. ... The fee is $27.50."
+      ],
+      "307": [
+        "At least two (2) separate documents must be presented."
+      ],
+      "308": [
+        "No photocopies will be accepted as proof of identification."
+      ],
+      "309": [
+        "Hospital-issued certificates are not acceptable"
+      ],
+      "310": [
+        "To receive Rhode Island certification, those who have taken out-of-state courses must have participated in a classroom experience of 33 hours minimum."
+      ],
+      "311": [
+        "If you do not want a new photo license, you may simply complete the Change of Address card (see 0, Sample DMV Forms, Change of Address Notice) and mail it to the DMV."
+      ],
+      "312": [
+        "Pay close attention to merge signs and flaggers and do not change lanes within the work zone."
+      ],
+      "313": [
+        "Personal check or bank statement with your name and address (no P.O. box) ; or"
+      ],
+      "314": [
+        "All new applicants must provide an official Social Security Card (laminated or metal cards are not acceptable)."
+      ],
+      "315": [
+        "If you do not have a valid social security number, you must present a foreign passport and appropriate visa or documentation to validate the ineligibility for a social security number."
+      ],
+      "316": [
+        "If a minor, school records, which include the student’s address and are for the current school year... together with and parent’s license/ID with same address. will be accepted"
+      ],
+      "317": [
+        "Valid original lease agreement with your name and address (Landlord’s name, address, and telephone number also must be provided)"
+      ],
+      "318": [
+        "ABS – Anti-lock Braking System is a computer controlled braking system"
+      ],
+      "319": [
+        "All social security numbers are verified electronically with the Social Security Administration."
+      ],
+      "320": [
+        "Cranston (Main Office): 600 New London Avenue, Cranston, RI 02920"
+      ],
+      "321": [
+        "Road Tests (401) 462-5750 325 Melrose Street, Providence"
+      ],
+      "322": [
+        "Property tax bill for your residence"
+      ],
+      "323": [
+        "Slippery When Wet",
+        "Warning Signs"
+      ],
+      "324": [
+        "Flagperson Ahead",
+        "Road Work",
+        "Detour"
+      ],
+      "325": [
+        "Safety & Emission Control (401) 462-5890 (401) 462-5893 325 Melrose Street, Providence"
+      ],
+      "326": [
+        "Welfare check stub or food stamp card with your name and address"
+      ],
+      "327": [
+        "Four (4) Second Stopping Rule ............................. 46, 48"
+      ],
+      "328": [
+        "Driving is a privilege and it is important that you learn the rules of the road"
+      ],
+      "329": [
+        "Every time you get behind the wheel, safety must be your top priority."
+      ],
+      "330": [
+        "no phone call or text message is worth endangering your life and the lives of those around you."
+      ],
+      "331": [
+        "never driving if you are feeling sleepy or are under the influence of drugs or alcohol."
+      ],
+      "332": [
+        "Please do your part by studying hard, always buckling up"
+      ],
+      "333": [
+        "Deer Crossing"
+      ],
+      "334": [
+        "Tractor Crossing"
+      ],
+      "335": [
+        "Flagperson Ahead"
+      ],
+      "336": [
+        "Object Markers (bridges)"
+      ],
+      "337": [
+        "Road Narrows (from right)"
+      ],
+      "338": [
+        "Playground"
+      ],
+      "339": [
+        "Two-Way Traffic"
+      ],
+      "340": [
+        "it is important that you learn the rules of the road in order to make your driving experience as safe as possible."
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 25,
-    "topics_covered": 25,
+    "topics_total": 30,
+    "topics_covered": 30,
     "coverage_pct": 100.0,
     "uncovered_topics": [],
     "verdict": "PASS",
@@ -63,6 +1122,20 @@
     "sign_ratio_pct": 9.1,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 340,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

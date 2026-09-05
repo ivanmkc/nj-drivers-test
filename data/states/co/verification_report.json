@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "co",
   "name": "Colorado",
-  "verified_at": "2026-05-26T02:25:22Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:32:13Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://dmv.colorado.gov/sites/dmv/files/documents/DR_2337_Jan2025.pdf",
     "manual_pdf_sha256": "87869884920039431077902663a766934c98c3abb4c2663a53c395ea06b8c866",
@@ -23,21 +23,698 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 221,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "Anyone who operates a motor vehicle, motor-driven cycle or moped on Colorado’s public streets and highways must be 16 or older and have a valid driver license."
+      ],
+      "2": [
+        "you must get a Colorado driver license within 30 days of becoming a resident"
+      ],
+      "3": [
+        "if you own or operate a business in Colorado or have resided within the state continuously for 90 days or have gainful employment within this state"
+      ],
+      "4": [
+        "If you have a change to your address or name you must notify the Division of Motor Vehicles within 30 days."
+      ],
+      "5": [
+        "Note: Written tests are not given within 30 minutes of an office’s scheduled closing time."
+      ],
+      "6": [
+        "you must have a person who is 21 years or older who has a valid Colorado license in the front passenger seat."
+      ],
+      "7": [
+        "Drive tests are primarily being given by Certified Commercial Driving Schools."
+      ],
+      "8": [
+        "it may require you to provide a vehicle that has current insurance and registration."
+      ],
+      "9": [
+        "Examiners will also check whether the vehicle’s doors and windows open from inside the automobile."
+      ],
+      "10": [
+        "For safety reasons, only the driver and the examiner are allowed in the vehicle during the test."
+      ],
+      "11": [
+        "Turn off any electronic devices in your vehicle, including the radio and your cell phone. Remove objects from the dashboard and the rearview mirror."
+      ],
+      "12": [
+        "If you fail the drive test, you must wait until the next business day before retaking the test."
+      ],
+      "13": [
+        "you must get a Colorado driver license within 30 days of becoming a resident unless you are serving on active duty in the U.S. military"
+      ],
+      "14": [
+        "The drive test measures your skill and knowledge of legal and safe driving practices. You will not be asked to do anything illegal."
+      ],
+      "15": [
+        "Pay a Reinstatement Fee",
+        "Visit myDMV.Colorado.gov and Save Time!"
+      ],
+      "16": [
+        "If you fail the drive test, you must wait until the next business day before retaking the test."
+      ],
+      "17": [
+        "use of safety-critical technologies such as back-up cameras, and blind spot and lane departure warnings are allowed but do not take the place of physical searching skills."
+      ],
+      "18": [
+        "Turn signal is turned on continuously 100 feet before turning or changing lanes in urban areas and 200 feet before turning or changing lanes on 4-lane highways."
+      ],
+      "19": [
+        "If you can see the rear wheels touching the ground of the vehicle in front of you, you are at an adequate distance"
+      ],
+      "20": [
+        "your application must be accompanied by an Affidavit of Liability (DR2460) signed and verified by your parent, stepparent, grandparent with power of attorney, legal guardian, spouse older than 18"
+      ],
+      "21": [
+        "submit a completed and signed driving log showing 50 hours of driving experience (10 of which must have been at night)."
+      ],
+      "22": [
+        "For the first six months after your license is issued, you cannot have any passengers under 21, unless a parent or another licensed adult driver is in the vehicle."
+      ],
+      "23": [
+        "For your first year as a licensed driver, driving between midnight and 5 a.m. is not allowed unless you are accompanied by an instructor, parent or legal guardian."
+      ],
+      "24": [
+        "Fail to pay ordered child support."
+      ],
+      "25": [
+        "The driver of delivery vans while on the job"
+      ],
+      "26": [
+        "Children less than 2 years old and weighing less than 40 pounds: must be properly secured in the rear seat of the vehicle in a rear-facing child restraint system."
+      ],
+      "27": [
+        "keep the vehicle’s wheels pointed straight ahead while stopped, do not turn the wheels until beginning to make the turn"
+      ],
+      "28": [
+        "Use approved method of steering control (hand-over-hand or push-pull-slide)."
+      ],
+      "29": [
+        "If the signer decides to no longer accept responsibility for your driving, that person may withdraw their signature and your permit/license will be canceled."
+      ],
+      "30": [
+        "scans for traffic when approaching an intersection, looks left, right, left before entering intersections"
+      ],
+      "31": [
+        "Children between 9 and 18 years old: must be properly restrained in a seat belt or child restraint system according to the manufacturer’s instructions."
+      ],
+      "32": [
+        "The number of passengers in vehicles driven by persons younger than 18 must not exceed the number of seat belts."
+      ],
+      "33": [
+        "It is unlawful for someone to either possess an open container of alcohol or possess an open container of marijuana while in the passenger area of a motor vehicle that is on a public road."
+      ],
+      "34": [
+        "DWAI means the driver is impaired to the slightest degree. DUI means the driver is substantially incapable of safe driving."
+      ],
+      "35": [
+        "It does not make a difference whether a drink is beer, wine or liquor. Standard servings of each contain about the same amount of alcohol."
+      ],
+      "36": [
+        "On average, a person’s BAC will drop by 0.015% per hour."
+      ],
+      "37": [
+        "1st Driving Under the Influence (DUI) | 0.08% | Revocation: 9 months | $600-$1,000 | 5-365 days | 48-96 hours"
+      ],
+      "38": [
+        "Anyone younger than 21 is convicted of buying or possessing alcohol is subject to revocation of their driving privilege even if driving is not a factor."
+      ],
+      "39": [
+        "The fact that marijuana or other drugs were used for medicinal purposes is not a defense for DUI or DWAI."
+      ],
+      "40": [
+        "Unlike with alcohol, there is no correlation between levels of Delta-9-Tetrahydrocannabinol (THC) in the blood, breath or oral fluid (or saliva sample) and the degree of individual impairment."
+      ],
+      "41": [
+        "There is a permissible inference that a driver was DUI if the driver’s blood contained 5 nanograms of THC per milliliter (ng/ml) of blood."
+      ],
+      "42": [
+        "Colorado’s data shows that polydrug impairment is more common than impairment by any single drug other than alcohol, and also more dangerous."
+      ],
+      "43": [
+        "Colorado has an express consent law, which means when you operate a motor vehicle in the Centennial State, you agree to take a chemical test to determine the presence of alcohol and/or drugs"
+      ],
+      "44": [
+        "If you refuse to take the test or do not comply with being tested, your driver license will be revoked for one year and you will be required to install an ignition interlock device on any motor vehicle you drive for two years."
+      ],
+      "45": [
+        "Colorado law does not allow you to plea bargain out of an alcohol or drug related driving offense."
+      ],
+      "46": [
+        "You may not operate a motor vehicle while wearing earphones. The definition of earphones include any device or headset which covers all or a portion of both ears."
+      ],
+      "47": [
+        "Break long driving periods into two-hour segments. If you become drowsy, pull off the road and rest."
+      ],
+      "48": [
+        "Distractions are the leading cause of driver error. A distraction is anything that takes away your attention, even momentarily, from the task of driving."
+      ],
+      "49": [
+        "If the vehicle bounces, the steering wheel shakes, or the vehicle pulls to one side, have a mechanic check your tires."
+      ],
+      "50": [
+        "Fumes from a leaky exhaust system can cause death in a very short time. Never run the motor in your garage or sit in the car with the motor running without opening a window."
+      ],
+      "51": [
+        "To adjust the passenger’s side mirror position your head so that it is centered under the inside rearview mirror or just above the center console."
+      ],
+      "52": [
+        "Ensure there are no objects on the floor that could roll under the brake pedal or accelerator and interfere with your safe driving."
+      ],
+      "53": [
+        "No matter your make and model, your right foot should be on the brake before starting the vehicle."
+      ],
+      "54": [
+        "The steering wheel is always turned in the direction you want the vehicle to move, whether moving forward or in reverse."
+      ],
+      "55": [
+        "place both hands on the outside of the steering wheel, on opposite sides, at the 3 and 9 o’clock positions or the 4 and 8 o’clock positions."
+      ],
+      "56": [
+        "Grasp the steering wheel at the 12 o’clock position with your left hand."
+      ],
+      "57": [
+        "Traffic control also can be provided by law enforcement, highway personnel, or school crossing guards. You must obey directions from these persons."
+      ],
+      "58": [
+        "Head rests: They should be adjusted so the head restraint touches the back of your head."
+      ],
+      "59": [
+        "press the accelerator gently with the ball of your foot on the pedal and the heel of your foot on the floor."
+      ],
+      "60": [
+        "If the traffic signal is not operating or is malfunctioning, treat the intersection as a four way stop."
+      ],
+      "61": [
+        "Also, you may turn left on a red light if you are turning from a one-way street onto another one-way street, unless prohibited by a sign."
+      ],
+      "62": [
+        "A flashing yellow arrow means the driver turning left should proceed with caution and must yield to oncoming traffic and pedestrians."
+      ],
+      "63": [
+        "HAWK signals (High Intensity Activated Crosswalk): HAWK signals are traffic signals that allow pedestrians to cross the road safely."
+      ],
+      "64": [
+        "Regulatory signs: These signs tell you of laws and regulations that apply at a location. They are black or red on a white background."
+      ],
+      "65": [
+        "Do not shift gears when crossing the railroad tracks in case your vehicle stalls."
+      ],
+      "66": [
+        "These blue signs are at every highway-rail grade crossing and provide the public with a telephone number to report problems or emergencies",
+        "Directly below the dispatch number on the ENS sign is a Department of Transportation number that identifies the exact location"
+      ],
+      "67": [
+        "Guide signs: These signs have a green background and provide directional and mileage information to specific destinations."
+      ],
+      "68": [
+        "Slow moving vehicle marker: A reflective orange triangle on the rear of a vehicle means it is designed to travel at speeds slower than 25 miles per hour."
+      ],
+      "69": [
+        "If you park illegally in a designated disabled parking spot without a placard or plate, you could be charged with a misdemeanor, and if convicted, subject to a $350-$5,000 fine, possible jail time"
+      ],
+      "70": [
+        "Solid yellow lines: No passing is permitted, unless to pass a bicyclist with a minimum of three feet of space when the oncoming travel lane is clear."
+      ],
+      "71": [
+        "White lines: Separate lanes of traffic moving in the same direction.",
+        "Broken white line: You may change lanes if it is safe."
+      ],
+      "72": [
+        "Green Paint: A lane or area on the roadway designated for bicyclists, and increases visibility of bicyclists."
+      ],
+      "73": [
+        "Flashing red light: A flashing red light means the same as a STOP sign. Stop; then go only after yielding to pedestrians and other traffic."
+      ],
+      "74": [
+        "letting road users know that the lane may be too narrow for drivers and bicyclists to travel side-by-side."
+      ],
+      "75": [
+        "letting road users know that the lane may be too narrow for drivers and bicyclists to travel side-by-side."
+      ],
+      "76": [
+        "Whenever you approach a vehicle from the rear that is stopped at a crosswalk, you must not pass and must stop behind the vehicle or behind the crosswalk in the adjacent lane"
+      ],
+      "77": [
+        "This lane is for the exclusive use of left turning vehicles and may be used by drivers making a left turn in either direction. It shall not be used for passing or travel"
+      ],
+      "78": [
+        "A bike lane extends through an intersection regardless of whether paint connects the bike lane on either side."
+      ],
+      "79": [
+        "Colorado law requires drivers to yield the right-of-way to the driver of a truck, bus, emergency vehicle or recreational vehicle (large vehicle) when entering, exiting or driving in a roundabout."
+      ],
+      "80": [
+        "when two drivers of large vehicles enter, exit or drive in a roundabout at the same time, the driver on the right must yield the right-of-way to the driver on the left."
+      ],
+      "81": [
+        "A diverging diamond interchange crosses traffic to the opposite side of the road across an interchange so vehicles have uninterrupted movements onto the freeway ramps."
+      ],
+      "82": [
+        "The law states who must yield the right-of-way, but it does not give anyone the right-of-way, even if your traffic signal is green."
+      ],
+      "83": [
+        "When more than one vehicle reaches the intersection at the same time, the vehicle on the left must yield the right-of-way and allow the vehicle on the right to go first."
+      ],
+      "84": [
+        "the vehicle going downhill must yield the right-of-way by backing up to a wider place or by stopping, then leaving enough space for the vehicle going uphill"
+      ],
+      "85": [
+        "If you are in an intersection, drive through the intersection, then pull over."
+      ],
+      "86": [
+        "you should slow down to: 25 MPH if the posted speed limit is 45 MPH or less"
+      ],
+      "87": [
+        "you should slow down to: 20 MPH under the posted speed limit if the posted speed limit is above 45 MPH"
+      ],
+      "88": [
+        "Conflict Zones: Broken lines in a bike or bus lane that alert drivers and bicyclists that they will be crossing each other’s path."
+      ],
+      "89": [
+        "These lanes are separated by a barrier or marked by double-broken yellow lines."
+      ],
+      "90": [
+        "25 mph in any business district"
+      ],
+      "91": [
+        "20 mph on narrow, winding mountain highways and blind curves"
+      ],
+      "92": [
+        "You must stop your vehicle at least 20 feet before reaching a school bus that is stopped with its red lights flashing"
+      ],
+      "93": [
+        "You are not required to stop if there is a median or other physical barrier separating the bus from your vehicle."
+      ],
+      "94": [
+        "It is illegal to pass an authorized snow plow when it is working in a formation in which the plows are staggered diagonally."
+      ],
+      "95": [
+        "Failure to follow the speed limit in a work/construction zone can result in double fines."
+      ],
+      "96": [
+        "In urban areas, you must signal continuously for 100 feet before making a turn or lane change."
+      ],
+      "97": [
+        "On four lane highways where the posted speed limit is faster than 40 mph, you must signal for 200 feet before making a turn or lane change."
+      ],
+      "98": [
+        "Never turn the front wheels toward the left while you are waiting to turn. If you are rear ended, you would be pushed into oncoming traffic."
+      ],
+      "99": [
+        "According to the National Safety Council, a lightweight passenger car traveling 55 mph can stop in about 200 feet."
+      ],
+      "100": [
+        "You must yield right-of-way to a transit bus if it is signaling to enter a traffic lane and the yield sign on the rear of the bus is illuminated."
+      ],
+      "101": [
+        "End your hand signal before starting to turn so that you can complete the turn with both hands on the wheel."
+      ],
+      "102": [
+        "Only use a three-point turnabout on a two-lane roadway."
+      ],
+      "103": [
+        "Within 30 feet of a traffic signal, stop sign, railroad crossing or within 15 feet of a fire hydrant"
+      ],
+      "104": [
+        "Within 30 feet of a traffic signal, stop sign, railroad crossing or within 15 feet of a fire hydrant"
+      ],
+      "105": [
+        "Where parallel parking is permitted, your vehicle must be within 12 inches of the curb"
+      ],
+      "106": [
+        "When headed uphill where there is a curb, turn the front wheels away from the curb"
+      ],
+      "107": [
+        "When headed uphill without a curb, turn your front wheels to the right so that if your vehicle moves, it will roll off the highway"
+      ],
+      "108": [
+        "When entering a freeway from an on-ramp, try to increase your speed to match freeway traffic."
+      ],
+      "109": [
+        "The passing lane (the leftmost lane) is reserved for passing vehicles in non-passing lanes, left turns"
+      ],
+      "110": [
+        "Activate your turn signal 200 feet before the beginning of the deceleration lane."
+      ],
+      "111": [
+        "Activate your turn signal. Leave it active for a minimum of 3 seconds or 200 feet before leaving your lane."
+      ],
+      "112": [
+        "Look over your shoulder to check your blind spot, which is the area slightly to the rear and side of your vehicle that you cannot see in your mirrors."
+      ],
+      "113": [
+        "When you can see both headlights of the vehicle you passed in the rearview mirror, change one lane to get back into your previous lane."
+      ],
+      "114": [
+        "If passing a bicyclist, you must have a minimum of three feet of space between the outermost part of your vehicle, including any projections such as mirrors or trailers, and the bicyclist."
+      ],
+      "115": [
+        "If passing a bicyclist, you may briefly cross a solid yellow when there is no oncoming traffic and you have a clear view ahead."
+      ],
+      "116": [
+        "Do not pass: Within 100 feet of an intersection or railroad crossing.",
+        "Pass within 100 feet of any intersection.",
+        "Pass within 100 feet of any railroad crossing."
+      ],
+      "117": [
+        "Do not pass: If you cannot safely return to the right-hand side before coming within 200 feet of an oncoming vehicle, including a bicyclist in the oncoming lane or shoulder."
+      ],
+      "118": [
+        "Please note, the following behaviors are illegal when passing: Pass within 100 feet of any intersection."
+      ],
+      "119": [
+        "Always slow down before entering a curve.",
+        "Begin your acceleration only after reaching the middle of the curve."
+      ],
+      "120": [
+        "Colorado law requires you to drive with your headlights on from sunset to sunrise or when visibility is less than 1,000 feet."
+      ],
+      "121": [
+        "When following another vehicle, you must use your low beam lights, with your fog lights off, if you are within 200 feet of the vehicle ahead of you."
+      ],
+      "122": [
+        "Never look directly into an approaching car’s headlights. As the vehicle draws near, drop your sight below the glare and use the painted edge lines to guide your vehicle."
+      ],
+      "123": [
+        "Take your foot off the gas pedal to allow the vehicle to slow down.",
+        "Slowly begin steering in the direction you are hydroplaning until you have control."
+      ],
+      "124": [
+        "If the highway is wet or icy, do not use cruise control."
+      ],
+      "125": [
+        "It is illegal to pass a city, county or state-operated snow plow while it’s working with its yellow lights flashing and is driving in tandem with one or more other snow plows."
+      ],
+      "126": [
+        "Vehicles with 4-wheel drive have increased traction, but they cannot stop any sooner than a conventional car."
+      ],
+      "127": [
+        "If you don’t have anti-lock, use threshold braking when skidding or in slippery conditions. Apply brake pressure to a point just short of locking up the brakes."
+      ],
+      "128": [
+        "Remember, vehicles going uphill have the right-of-way over vehicles going downhill."
+      ],
+      "129": [
+        "Shift to lower gears to control speeds when driving down steep hills or mountains."
+      ],
+      "130": [
+        "Washboarding, which is a series of potholes that can affect steering and vehicle control, can often be found on gravel roads."
+      ],
+      "131": [
+        "Slower speeds and more than the required three feet of passing distance are also advised when passing bicyclists on rural roads due to dangerous wind blasts that can cause vehicles to hit bicyclists."
+      ],
+      "132": [
+        "you must dim them before coming within 500 feet of any oncoming vehicle so the oncoming driver is not blinded by the glare."
+      ],
+      "133": [
+        "Like school zones, the fines are doubled in work zones."
+      ],
+      "134": [
+        "most work zone crashes are rear-end collisions due to an inattentive driver."
+      ],
+      "135": [
+        "Colorado law also prohibits the use of mobile devices for text messaging while driving unless it is to contact law enforcement, the fire department or it is an emergency."
+      ],
+      "136": [
+        "The most effective hand positions are 8 o’clock and 4 o’clock or 9 o’clock and 3 o’clock."
+      ],
+      "137": [
+        "Do not turn the wheel with the palm of your hand or let it slide through your fingers after making a turn."
+      ],
+      "138": [
+        "Always look left, right and then left again when turning, driving through or entering an intersection."
+      ],
+      "139": [
+        "you should look down the road at least 10 seconds ahead of your vehicle (city — one block, open road — half a mile)."
+      ],
+      "140": [
+        "You must check traffic behind you in your rear view mirror every 5 to 8 seconds."
+      ],
+      "141": [
+        "Under normal conditions, use the three-second rule to gauge how much space you should leave between your vehicle and the vehicle in front of you."
+      ],
+      "142": [
+        "Driving considerably slower than other vehicles can also increase unpredictability and compromise safety by causing back-ups and more passing situations."
+      ],
+      "143": [
+        "When there is a lane closure ahead, drivers should continue to drive in both lanes equally. Just before the lane ends, cars should take turns filling in the open lane carefully"
+      ],
+      "144": [
+        "Slow Zones: Places where people or traffic gather that require slower speeds and increased attention: • Shopping centers • Schools • Parks/Playgrounds • Residential streets • Rush hour traffic • Narrow bridges • Toll plazas • Rail crossings"
+      ],
+      "145": [
+        "Turn on your interior lights if you are pulled over at night to assist with visibility."
+      ],
+      "146": [
+        "Let the officer know if you have a weapon in the vehicle upon first contact, but do not reach for it or attempt to hand it to the officer."
+      ],
+      "147": [
+        "Wait for the officer’s instructions before reaching for your driver’s license or vehicle documents."
+      ],
+      "148": [
+        "However, the refusal to sign a traffic ticket may result in your arrest."
+      ],
+      "149": [
+        "pass other motor vehicles in the same lane as long as the other vehicles are stopped... and there is enough room for the two-wheeled motorcycle to pass safely at a speed no greater than 15 miles per hour."
+      ],
+      "150": [
+        "do not pull in front of a truck or bus until you can see both headlights on the front of the vehicle in your rear view mirror."
+      ],
+      "151": [
+        "Stay behind white-painted stop bars at stop signs and traffic lights because many are carefully measured to give trucks the room they need for turns."
+      ],
+      "152": [
+        "One sign of a runaway truck or bus is smoke coming from the brakes."
+      ],
+      "153": [
+        "Buses have the right-of-way when leaving a drop-off location and merging into traffic."
+      ],
+      "154": [
+        "Vehicles must stop no less than 20 feet from the front or rear bumper of the school bus."
+      ],
+      "155": [
+        "only the vehicles traveling in both lanes behind the school bus must stop, and not the traffic traveling in the opposite direction."
+      ],
+      "156": [
+        "When a school bus is about to stop and load or unload children, the bus driver activates amber warning lights."
+      ],
+      "157": [
+        "If your vehicle stalls on a crossing, get everyone out and immediately move as far away as possible, even if you do not see a train approaching."
+      ],
+      "158": [
+        "The average freight train traveling at 55 mph requires about one mile to stop."
+      ],
+      "159": [
+        "The warning sign is at a sufficient distance to allow you to stop (if necessary) before reaching the crossing. It is the only round traffic sign."
+      ],
+      "160": [
+        "If no line is visible, you must be at least 10 feet from the tracks. Trains overhang the tracks by 3 feet."
+      ],
+      "161": [
+        "Crossbuck signs: These signs should be treated the same as a yield sign."
+      ],
+      "162": [
+        "All public highway-rail grade crossings have BLUE colored Emergency Notification System (ENS) signs that provide a 24/7/365 telephone number to call for reporting problems or emergencies"
+      ],
+      "163": [
+        "By providing the DOT (X-ING) crossing number located on the sign, the railroad dispatcher knows exactly where the crossing is"
+      ],
+      "164": [
+        "Each light rail car weighs up to 40 tons and can’t stop quickly."
+      ],
+      "165": [
+        "Overhead wires are a standard height of 18 feet, 6 inches above the center of the tracks."
+      ],
+      "166": [
+        "motorists are required to give a minimum of three feet from the outermost part of their vehicle or any attachments."
+      ],
+      "167": [
+        "It is legal to cross a double yellow line with no oncoming traffic if necessary to provide a minimum of three feet of passing distance."
+      ],
+      "168": [
+        "Bicyclists may ride side-by-side if they are not impeding the normal and reasonable movement of traffic."
+      ],
+      "169": [
+        "You may cross a bike lane when turning, entering or leaving another road, driveway or alley."
+      ],
+      "170": [
+        "bicyclists ages 15 and older may now treat stop signs as yield signs and treat stop lights as stop signs."
+      ],
+      "171": [
+        "Use your hand closest to the center of the vehicle to open your door, a behavior commonly known as the “Dutch Reach.”",
+        "When parked on the street, check to the sides and rear for bicyclists before you open your vehicle door."
+      ],
+      "172": [
+        "For a right turn, extend the right arm straight out or left arm upward at a right angle."
+      ],
+      "173": [
+        "Bicyclists may choose to ride in the center of the travel lane on narrow roads or to avoid obstacles such as the door zone of parked cars, broken glass or drainage grates."
+      ],
+      "174": [
+        "On a multi-lane, one-way street, know that a bicyclist can ride on the right or left side of the roadway."
+      ],
+      "175": [
+        "Avoid sounding your horn close to bicyclists unless there is an immediate risk of a crash. Using your horn may startle a bicyclist and cause them to crash."
+      ],
+      "176": [
+        "Do not force a bicyclist off the road, this constitutes aggressive driving and has legal consequences."
+      ],
+      "177": [
+        "If slowing or stopping, drop the left arm down at the elbow."
+      ],
+      "178": [
+        "there is enough room for the two-wheeled motorcycle to pass safely at a speed no greater than 15 miles per hour. This is called lane filtering."
+      ],
+      "179": [
+        "Motorcyclists frequently move around in their lane so they can see, be seen and avoid road hazards."
+      ],
+      "180": [
+        "Always check behind you before opening a door into the roadway",
+        "When parked on the street, check to the sides and rear for bicyclists before you open your vehicle door."
+      ],
+      "181": [
+        "Pedestrians have the right-of-way at all intersections and crosswalks, even if the lines are not marked or painted."
+      ],
+      "182": [
+        "Never pass vehicles stopped at a crosswalk because the driver may be stopping for pedestrians that you can’t see."
+      ],
+      "183": [
+        "While turning at a red light, make sure you are in the correct lane and come to a complete stop. Check for pedestrians in all directions"
+      ],
+      "184": [
+        "Drivers are not allowed to use any mobile electronic device while driving unless it is with a hands-free device or in an emergency situation."
+      ],
+      "185": [
+        "you can be charged under Colorado’s reckless driving statute and if convicted, up to eight points can be assessed against your driving record."
+      ],
+      "186": [
+        "Aggressive driving is any behind-the-wheel behavior that places others and/or property in danger through willful action without regard to safety."
+      ],
+      "187": [
+        "To protect yourself from an aggressive driver, don’t engage with that driver. Avoid eye contact and don’t attempt to match an aggressive act."
+      ],
+      "188": [
+        "Dial *CSP (*277) to report aggressive drivers. The Colorado State Patrol has set aside this special cellphone number"
+      ],
+      "189": [
+        "For a right turn, extend the right arm straight out or left arm upward at a right angle."
+      ],
+      "190": [
+        "Some acts, such as displaying a weapon at another motorist, bumping or ramming another vehicle or high speed pursuit of a vehicle can result in criminal charges"
+      ],
+      "191": [
+        "Do not stop with any portion of your vehicle covering the crosswalk area."
+      ],
+      "192": [
+        "Leave early for any trip. Too frequently people don’t allow enough time to get where they want on time.",
+        "Don’t transfer the anger you may feel from other situations into your driving."
+      ],
+      "193": [
+        "To avoid a collision, drivers have three options: ● Slow down or stop ● Turn ● Speed up"
+      ],
+      "194": [
+        "With ABS: Apply the brakes with hard, firm pressure. You might feel the brake pedal pushing back when the ABS is working. Do not let up on the brake pedal."
+      ],
+      "195": [
+        "Without ABS: If you do not have ABS, you must use a different procedure to turn quickly. Step on the brake pedal, but then let up and turn the steering wheel."
+      ],
+      "196": [
+        "Regretfully, the safest alternative for passengers may be hitting the animal. Concentrate on retaining control of the vehicle before, during, and after the collision with the animal."
+      ],
+      "197": [
+        "Brake failure: Take your foot off the accelerator. Pump the brake pedal several times. This will often build up enough brake pressure to allow you to stop."
+      ],
+      "198": [
+        "Tire blowout: Hold the steering wheel tightly, and keep the vehicle going straight as you slow down gradually. Take your foot off the gas pedal and use the brakes lightly."
+      ],
+      "199": [
+        "Jammed gas pedal: Keep your eyes on the road. Quickly shift to neutral. Pull off the road when safe to do so. Turn off the engine."
+      ],
+      "200": [
+        "If you are a passenger in a vehicle involved in a crash where the driver is physically incapable of reporting the crash you are required to report the crash"
+      ],
+      "201": [
+        "If alcohol and drugs are not involved, there are no injuries and all vehicles are still drivable, exchange name, address, phone numbers, registration and insurance information.",
+        "You must file an accident report with law enforcement within 24 hours."
+      ],
+      "202": [
+        "If a crash involves a parked car and you cannot find the owner, call law enforcement and leave a note in a place where the owner of the car can find it."
+      ],
+      "203": [
+        "State law requires motorists involved in a minor crash on a divided highway to move their vehicles off the highway when: The vehicle is drivable. No drugs or alcohol are involved. There are no injuries."
+      ],
+      "204": [
+        "If it is not safe or you are traveling on a road that is one lane in each direction, you must slow down to at least 20 mph below the posted speed limit."
+      ],
+      "205": [
+        "Move a victim only if the victim’s life is in danger."
+      ],
+      "206": [
+        "Be aware that the steering may be difficult to turn but you can turn it. Pull off the roadway. The brakes will still work but you may have to push very hard on the brake pedal."
+      ],
+      "207": [
+        "Ask a conscious victim for permission before giving care."
+      ],
+      "208": [
+        "Check the victim for life threatening emergencies before providing further care."
+      ],
+      "209": [
+        "continue to provide care until more highly trained personnel arrive."
+      ],
+      "210": [
+        "If you say Yes, a heart with a “Y” will appear on the front of your license, permit or ID."
+      ],
+      "211": [
+        "Just one donor can save up to eight lives through organ donation"
+      ],
+      "212": [
+        "save and heal more than 75 lives through eye and tissue donation."
+      ],
+      "213": [
+        "Your decision to be a donor will not affect medical care. Doctors and nurses caring for you before death are not involved in the donation process."
+      ],
+      "214": [
+        "The donor registry is managed by Donor Alliance, a non-profit, federally-designated organ and tissue recovery agency"
+      ],
+      "215": [
+        "Anyone - regardless of age or medical condition - can register as a donor. Patients with chronic conditions such as diabetes and hepatitis can potentially save and heal lives through donation."
+      ],
+      "216": [
+        "Your contributions to the fund go directly to public outreach and education about organ and tissue donation."
+      ],
+      "217": [
+        "In Colorado, there are nearly 1,500 people waiting for a lifesaving organ transplant"
+      ],
+      "218": [
+        "When you sign up as an organ, eye and tissue donor, your registration remains in effect unless you change it."
+      ],
+      "219": [
+        "Upgrade your permit to a license"
+      ],
+      "220": [
+        "Pay a traffic ticket"
+      ],
+      "221": [
+        "Take your permit test at home! SCAN TO TAKE YOUR TEST NOW!",
+        "Practice quizzes are available online and through the myColorado app."
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 25,
-    "topics_covered": 25,
+    "topics_total": 27,
+    "topics_covered": 27,
     "coverage_pct": 100.0,
     "uncovered_topics": [],
     "verdict": "PASS",
@@ -63,6 +740,20 @@
     "sign_ratio_pct": 13.3,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 221,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "ky",
   "name": "Kentucky",
-  "verified_at": "2026-05-26T02:29:22Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-27T01:15:52Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://drive.ky.gov/Drivers/Documents/Kentucky-Driver-Manual.pdf",
     "manual_pdf_sha256": "d8047d28f8358bb27cb393f3c87df22ae9732e4c3783a8116f105ef48102276b",
@@ -23,14 +23,1079 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 339,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "Phillip Burnett, Jr. Commissioner Kentucky State Police"
+      ],
+      "2": [
+        "Section One The Driver’s License ............................................................................................................ 1",
+        "Loss of Driving Privileges ........................................................................................................ 16"
+      ],
+      "3": [
+        "Section Two General Information ......................................................................................................... 19",
+        "Medical Review Board ................................................................................................................................. 20"
+      ],
+      "4": [
+        "Section Three Be in Shape to Drive .......................................................................................................... 22",
+        "Fatigue ......................................................................................................................................................... 22"
+      ],
+      "5": [
+        "Section Four Before You Drive ............................................................................................................... 28",
+        "Child Passenger Safety Laws .................................................................................................................... 31"
+      ],
+      "6": [
+        "Advanced Driver Assistance Systems (ADAS) Safety Features ......................................................... 32"
+      ],
+      "7": [
+        "Section Five Basic Driving .................................................................................................................... 33",
+        "Starting the Engine .................................................................................................................................... 33",
+        "Backing Up ................................................................................................................................................. 33"
+      ],
+      "8": [
+        "Section Six Rules of the Road ............................................................................................................. 34",
+        "Traffic Signs ............................................................................................................................................... 35",
+        "Pavement Markings ................................................................................................................................... 39"
+      ],
+      "9": [
+        "Section Seven General Driving ................................................................................................................ 42",
+        "Rules for School Buses ............................................................................................................................. 44"
+      ],
+      "10": [
+        "Section Seven General Driving ................................................................................................................ 42",
+        "Roundabouts and Traffic Circles ............................................................................................................ 44"
+      ],
+      "11": [
+        "Section Eight Safe Driving Tips ...............................................................................................49",
+        "Speed Management .................................................................................................... 49",
+        "Stopping Distance ...................................................................................................... 50"
+      ],
+      "12": [
+        "Section Nine Emergency Situations and Avoiding Crashes ....................................................54"
+      ],
+      "13": [
+        "Section Two General Information ......................................................................................... 19",
+        "Organ Donation .......................................................................................................... 21"
+      ],
+      "14": [
+        "Section Three Be in Shape to Drive .......................................................................................... 22",
+        "Emotions, Aggressive Driving and Road Rage ..................................................................... 23"
+      ],
+      "15": [
+        "Section One The Driver’s License ............................................................................................ 1",
+        "Testing Requirements and Preparation .................................................................................. 10",
+        "Test Scheduling .......................................................................................................................... 13"
+      ],
+      "16": [
+        "Applicants must be a Kentucky resident and be at least 16 years of age."
+      ],
+      "17": [
+        "The Class E is for mopeds only"
+      ],
+      "18": [
+        "used within 150 miles of the point of origin."
+      ],
+      "19": [
+        "designed to transport more than sixteen (16) people including the vehicle driver."
+      ],
+      "20": [
+        "If the applicant is under the age of 18, a parent or legal guardian must sign the application."
+      ],
+      "21": [
+        "All first-time applicants must pass the vision, knowledge, and skills tests."
+      ],
+      "22": [
+        "Applicants are required to pass the general knowledge and vision tests to be issued a moped license. However, a skills test and permit are not required."
+      ],
+      "23": [
+        "capable of a maximum speed of not more than thirty (30) miles per hour."
+      ],
+      "24": [
+        "a cylinder capacity not exceeding fifty (50) cubic centimeters"
+      ],
+      "25": [
+        "Any person who is unable to understand highway warnings or directions in the English language."
+      ],
+      "26": [
+        "Operators of recreational vehicles not for commerce."
+      ],
+      "27": [
+        "provided that the gross vehicle weight rating of the towed vehicle is in excess of 10,000 pounds."
+      ],
+      "28": [
+        "Members of the military on active duty and their dependents who hold a valid license from another state."
+      ],
+      "29": [
+        "this means the CDL requirements apply to volunteer drivers, such as church bus drivers"
+      ],
+      "30": [
+        "The Class M is for motorcycles."
+      ],
+      "31": [
+        "Applicants are required to pass the general knowledge and vision tests to be issued a moped license. However, a skills test and permit are not required."
+      ],
+      "32": [
+        "Mopeds CANNOT be operated on limited-access highways where the minimum speed is more than thirty (30) miles per hour."
+      ],
+      "33": [
+        "Moped operators are not required to wear helmets or eye-protection devices, but they are strongly recommended."
+      ],
+      "34": [
+        "excluding mopeds, tractors, and vehicles on which the operator and passengers ride in an enclosed cab."
+      ],
+      "35": [
+        "The only place a driver may legally ride or operate this type of vehicle without an operator’s license and other safety equipment is on private property."
+      ],
+      "36": [
+        "a person who is at least eighteen (18) years of age may apply for an instruction permit to operate a motorcycle."
+      ],
+      "37": [
+        "Applicants for a motorcycle license will be exempted from the licensing written and skills tests if they present satisfactory evidence of successful completion of an approved rider training course."
+      ],
+      "38": [
+        "To be eligible to apply for a Kentucky Operator’s License, Motorcycle License, or Moped License, you must have reached your sixteenth birthday"
+      ],
+      "39": [
+        "Once this is received and entered, the minor’s permit or license will be canceled until another application is signed."
+      ],
+      "40": [
+        "Drivers under 18 must go through three phases of licensing: a Learner’s Permit, an Intermediate License, and then a Full Unrestricted License."
+      ],
+      "41": [
+        "School Compliance Verification Form issued by their school. (No Pass/No Drive Law)"
+      ],
+      "42": [
+        "Permit holders ages 16 – 20 must hold the driving permit for a minimum of 180 days."
+      ],
+      "43": [
+        "a driver must complete a Practice Driving Log with a minimum of 60 hours of practice driving."
+      ],
+      "44": [
+        "10 hours must be completed at night."
+      ],
+      "45": [
+        "PHOTOCOPIES WILL NOT BE ACCEPTED FOR ANY REQUIRED DOCUMENTS"
+      ],
+      "46": [
+        "Passenger restriction – limited to 1 (one) unrelated person under 20 years of age."
+      ],
+      "47": [
+        "Permit holders under the age of 18 may not drive between the hours of midnight and 6:00 a.m."
+      ],
+      "48": [
+        "All drivers under 21 are subject to “Zero Alcohol Tolerance” (Defined as .02 Blood Alcohol Concentration)"
+      ],
+      "49": [
+        "it will add an additional minimum of one hundred eighty (180) days from the date of the violation before the driver may apply for an intermediate license."
+      ],
+      "50": [
+        "A driver under the age of 18 who accumulates more than six points may have their driving privilege suspended."
+      ],
+      "51": [
+        "If you fail the road skills test, you must wait at least one week from the date of the failure before attempting the test again."
+      ],
+      "52": [
+        "After successfully completing the road test, the Kentucky State Police examiner will place an “Intermediate License” sticker on the driver’s permit."
+      ],
+      "53": [
+        "A proof-of-insurance card furnished by the insurance company.",
+        "A current insurance policy for that vehicle.",
+        "A binder from an insurance agent, in writing, stating that insurance is in force."
+      ],
+      "54": [
+        "This permit is valid for three years and may be renewed."
+      ],
+      "55": [
+        "If the permit is not renewed within one year of the expiration date, the written and vision tests must be repeated."
+      ],
+      "56": [
+        "One (1) proof of applicant’s Kentucky residency dated less than one year. Two (2) are required for a REAL ID."
+      ],
+      "57": [
+        "they are required to be accompanied by a person with a valid operator’s license who is at least 21 years of age occupying the front passenger seat beside the operator at all times."
+      ],
+      "58": [
+        "Private Driver Training course at a Division of Driver License approved driver training school (see below). Must include four (4) hours of classroom training."
+      ],
+      "59": [
+        "This permit is valid for three years and may be renewed."
+      ],
+      "60": [
+        "Permit holders ages 16 – 20 must hold the driving permit for a minimum of 180 days.",
+        "You must hold the permit for 180 days before you are eligible to take the road test."
+      ],
+      "61": [
+        "Permit holders may only drive when accompanied (in the front passenger seat) by a licensed driver 21 years of age or older",
+        "all permit holders must be accompanied by a person with a valid operator license who is 21 years of age or older and always occupying the passenger seat beside them while driving."
+      ],
+      "62": [
+        "PHOTOCOPIES WILL NOT BE ACCEPTED FOR ANY REQUIRED DOCUMENTS"
+      ],
+      "63": [
+        "A minimum visual acuity of 20/40 (corrected or uncorrected) is required before the applicant will be allowed to move on to the written test."
+      ],
+      "64": [
+        "After the referral has been completed, applicants whose visual acuity is 20/60 or better shall be eligible to test for an instruction permit or operator’s license."
+      ],
+      "65": [
+        "Applicants must make a minimum score of 80% to pass this test."
+      ],
+      "66": [
+        "the signs portion of the test must be answered by applicants from their own knowledge and understanding."
+      ],
+      "67": [
+        "Rental vehicles are allowed only if the applicant’s name appears on the rental contract as an operator of the vehicle."
+      ],
+      "68": [
+        "the passenger compartment, seat, and floor area must be clean or the vehicle may be rejected."
+      ],
+      "69": [
+        "Interpreters are not permitted in the vehicle during the road test. However, an interpreter may be present both before and after the test to assist as needed."
+      ],
+      "70": [
+        "Headlights on high beam must be strong enough to light the road sufficiently to reveal a person 350 feet ahead, and 100 feet ahead on low beam."
+      ],
+      "71": [
+        "The rear light, or taillight, must be red and must be lighted and placed so it can be seen 500 feet behind your vehicle."
+      ],
+      "72": [
+        "Violations of this or other traffic laws at the test site will cause the test to be rescheduled.",
+        "it is unlawful for applicants to drive themselves to their road test appointment without meeting this requirement."
+      ],
+      "73": [
+        "Failure to follow the Examiner’s instructions two times during the test will result in being disqualified."
+      ],
+      "74": [
+        "Should you not pass the road test, you must wait at least one week before taking the test again."
+      ],
+      "75": [
+        "Persons moving into Kentucky must obtain a Kentucky Driver's License within 30 days of establishing residence."
+      ],
+      "76": [
+        "if the license has been expired for more than one (1) year at the time of transfer, you will be required to take both the written and eye exams"
+      ],
+      "77": [
+        "A vehicle must be equipped with one mirror mounted on the left side of the vehicle, and one mirror mounted either inside the vehicle approximately in the center or on the right side of the vehicle."
+      ],
+      "78": [
+        "a person shall not operate a motor vehicle manufactured after 1981 on the public roadways of this state unless the driver and all passengers are wearing a properly adjusted and fastened seat belt"
+      ],
+      "79": [
+        "Any collision, traffic violation, or dangerous act may result in automatic failure, and the test will not be completed."
+      ],
+      "80": [
+        "Only certificates or papers required by law and sun screening material along a strip at the top of the windshield are acceptable."
+      ],
+      "81": [
+        "The Examiner will first inspect the vehicle, which includes examining the vehicle registration and insurance documents."
+      ],
+      "82": [
+        "The applicant will be given a score sheet at the completion of the test, indicating whether he or she passed or failed.",
+        "There will not be a numerical score on the score sheet."
+      ],
+      "83": [
+        "You must be at least 16 years of age to transfer a driving permit or license to Kentucky."
+      ],
+      "84": [
+        "If under age 18, you must present a School Compliance Verification Form signed by the out-of-state school (reference: No Pass/No Drive Law)."
+      ],
+      "85": [
+        "they must have a student identification card from the university, college, or technical college located in Kentucky in their immediate possession when driving in Kentucky."
+      ],
+      "86": [
+        "within 90 days of returning to the Commonwealth, be permitted to renew their license without having to take a written test or road test."
+      ],
+      "87": [
+        "If the driver is under age 21, the license expires 90 days after the driver’s 21st birthday."
+      ],
+      "88": [
+        "Age 21 and older, the license expires 31 days after the driver’s birthday and may be renewed up to six months before the expiration date."
+      ],
+      "89": [
+        "Any driver whose credential is expired more than 5 years must start over as a new driver."
+      ],
+      "90": [
+        "If you change your address or name for any reason, you must obtain a duplicate license within 10 days."
+      ],
+      "91": [
+        "A Social Security card is not acceptable as proof of name change.",
+        "you must provide proof of a new Social Security card with your new name to prove you have updated your name with the Social Security Administration."
+      ],
+      "92": [
+        "Reckless driving – three (3) convictions within twelve (12) months;"
+      ],
+      "93": [
+        "Theft of gasoline;"
+      ],
+      "94": [
+        "A permanent resident who holds an International Driver Permit from a Foreign License Reciprocity Country will be required to successfully pass the written knowledge drivers test and vision test."
+      ],
+      "95": [
+        "A Kentucky operator’s license is valid for four (4) years or eight (8) years."
+      ],
+      "96": [
+        "A driver may choose to voluntarily surrender a Kentucky driver’s license by completing the appropriate Transportation Cabinet form at any KYTC Driver Licensing Regional Office."
+      ],
+      "97": [
+        "The suspension will remain in effect indefinitely or until the judgment has been satisfied."
+      ],
+      "98": [
+        "Points assessed under this system expire two (2) years from the date of conviction."
+      ],
+      "99": [
+        "the conviction entry remains part of the driver’s record for a period of five (5) years from the conviction date."
+      ],
+      "100": [
+        "Failure to appear for the hearing results in a driving suspension for a period of six (6) months for the first such accumulation of twelve (12) points"
+      ],
+      "101": [
+        "A driver can only attend with minor traffic violations.",
+        "A driver can only complete State Traffic School once every twelve (12) months.",
+        "Non-licensed and Out-of-State drivers are not eligible to attend State Traffic School."
+      ],
+      "102": [
+        "If the driver does not comply with the court order to attend traffic school, it will suspend the driver’s driving privileges."
+      ],
+      "103": [
+        "Satisfactory completion is required before reinstatement of driving privileges may occur.",
+        "The individual must pay all mandatory alcohol assessment, education, or treatment fees",
+        "after expiration of the period of license suspension, an individual convicted of DUI is eligible to get his license reissued."
+      ],
+      "104": [
+        "brings a motor vehicle into Kentucky from another state must make application for registration within fifteen (15) days."
+      ],
+      "105": [
+        "There is no grace period for renewing your vehicle registration."
+      ],
+      "106": [
+        "the vehicle owner and driver are subject to a fine of $500.00 to $1,000.00, up to 90 days in jail, or both."
+      ],
+      "107": [
+        "as well as $25,000.00 for all property damage as a result of any one accident."
+      ],
+      "108": [
+        "Written proof, in the form of an insurance card, can be a paper insurance card or a portable electronic device to download the insurance card."
+      ],
+      "109": [
+        "Students can use their home-state registration and insurance to drive in Kentucky if they keep a current student identification card from a Kentucky college, university, or technical college."
+      ],
+      "110": [
+        "A license applicant or licensee must be free of seizures, blackout, loss of conscience, or an altered state of awareness for 90 days to obtain or maintain driving privileges."
+      ],
+      "111": [
+        "In Kentucky, visual requirements for driving require an individual to have visual acuity of at least 20/60 or better in at least one eye."
+      ],
+      "112": [
+        "The driver’s horizontal field of vision must be at least 35 degrees to both the left and the right"
+      ],
+      "113": [
+        "This program is administered by the Kentucky Office of Vocational Rehabilitation."
+      ],
+      "114": [
+        "If the driver has been named in an affidavit to the Medical Review Board by at least two citizens as incapable of properly operating a motor vehicle"
+      ],
+      "115": [
+        "Motor vehicles are major contributors to ground level ozone. Ozone pollution contributes to health problems such as chronic lung and heart disease"
+      ],
+      "116": [
+        "Pace your driving to the traffic and traffic signal timing so you can keep braking and acceleration at a minimum."
+      ],
+      "117": [
+        "licensed drivers can sign up as an organ donor when their initial driver’s license is issued or when the license is renewed."
+      ],
+      "118": [
+        "Also, avoid using dark or tinted corrective lenses at night."
+      ],
+      "119": [
+        "Drivers who know they are deaf or have hearing problems can adjust by relying more on their visual abilities."
+      ],
+      "120": [
+        "Get adequate sleep – most people need 7 to 9 hours to maintain proper alertness during the day."
+      ],
+      "121": [
+        "Plan to stop about every 100 miles or 2 hours during long trips."
+      ],
+      "122": [
+        "If you start feeling tired, stop driving, and pull off at the next exit or rest area to take a 15-to-20-minute nap"
+      ],
+      "123": [
+        "The Medical Review Board consists of ophthalmologists, neurologists, psychiatrists, and rehabilitation specialists."
+      ],
+      "124": [
+        "show proof of your active military service (pay stub, ID) to the County Clerk’s office to resolve the issue."
+      ],
+      "125": [
+        "Cognitive distraction – Tasks that are defined as the mental workload associated with a task that involves thinking about something other than the driving task."
+      ],
+      "126": [
+        "Sending or receiving a text takes a driver’s eyes from the road for an average of 4.6 seconds"
+      ],
+      "127": [
+        "portable devices increased the risk of getting into a crash by three times."
+      ],
+      "128": [
+        "If you are angry or worried, give yourself time to cool off. If necessary, take a short walk or nap"
+      ],
+      "129": [
+        "Road rage is uncontrolled anger that results in violence or threatened violence on the roadway."
+      ],
+      "130": [
+        "Aggressive driving includes tailgating, changing lanes abruptly and speeding."
+      ],
+      "131": [
+        "For your safety you should safely pull off the roadway in a well-lit, public area and call for police assistance."
+      ],
+      "132": [
+        "You sometimes get lost while driving on routes that were once familiar;"
+      ],
+      "133": [
+        "Alcohol and other impairing drugs are involved in approximately 40% of all traffic crashes in which someone is killed each year."
+      ],
+      "134": [
+        "All states have “zero tolerance” laws (no alcohol in the circulatory system) or similar laws for drivers under the age of 21."
+      ],
+      "135": [
+        "Vision is impacted at 0.02 blood alcohol content (BAC) for all drivers."
+      ],
+      "136": [
+        "Impairment starts with the first drink. Even one drink of alcohol can affect a person’s ability to drive."
+      ],
+      "137": [
+        "Over-the-counter drugs taken for headaches, colds, hay fever, or other allergies or those to calm nerves can make you drowsy and affect your driving."
+      ],
+      "138": [
+        "at 55 mph, this is the equivalent of driving the length of an entire football field [or 100 yards]."
+      ],
+      "139": [
+        "Try consuming caffeine before taking a short nap to get the benefits of both."
+      ],
+      "140": [
+        "imprisoned in the county jail for not less than forty-eight (48) hours nor more than thirty (30) days"
+      ],
+      "141": [
+        "the law applies to the state where you are arrested, not the state where you got your license."
+      ],
+      "142": [
+        "your refusal of a breath or urine test will be considered an aggravating circumstance and you will be subject to a mandatory minimum jail sentence which is twice as long"
+      ],
+      "143": [
+        "you will be afforded an opportunity of at least ten (10) minutes but not more than fifteen (15) minutes to attempt to contact and communicate with an attorney."
+      ],
+      "144": [
+        "Operating a motor vehicle while transporting a passenger under the age of twelve (12) years of age."
+      ],
+      "145": [
+        "Drivers convicted of Driving Under the Influence will forfeit their license plates to the Courts during the period in which the driver’s license is suspended"
+      ],
+      "146": [
+        "Open your car door; on the inside jamb, you should see a sticker. Write down or take a picture of the number that says “PSI”"
+      ],
+      "147": [
+        "Place Lincoln’s head first into the deepest- looking groove. Can you see all of his head? If yes, your tires are too worn"
+      ],
+      "148": [
+        "There should be 10 inches between your chest and the steering wheel."
+      ],
+      "149": [
+        "head restraints should be adjusted so the head restraint contacts the back of your head and not below the level of your ears."
+      ],
+      "150": [
+        "you have the right to have a test or tests of your blood performed by a person of your choosing ... within a reasonable time of your arrest and at your expense."
+      ],
+      "151": [
+        "The top of the steering wheel should be no higher than the top of your shoulders and below chin level."
+      ],
+      "152": [
+        "you will be fined not less than $200 nor more than $500 plus court costs, imprisoned in the county jail",
+        "and your license suspended for four (4) to six (6) months."
+      ],
+      "153": [
+        "The ignition interlock device prevents a driver from operating that vehicle if the driver’s breath-alcohol concentration exceeds .02."
+      ],
+      "154": [
+        "To set the left side mirror, the driver must rest his or her head against the closed window and set the mirror to barely show the rear edge of the vehicle."
+      ],
+      "155": [
+        "this adjustment adds 12 to 16 degrees of additional viewing area to each side of the vehicle."
+      ],
+      "156": [
+        "Do not hang anything from your rearview mirror. Do not clutter up the windshield or rear window with decals. They are unlawful and block your vision."
+      ],
+      "157": [
+        "Kentucky law states a person shall not operate a motor vehicle manufactured after 1981 on the public roadways of this state unless the driver and all passengers are wearing a properly adjusted and fastened seat belt"
+      ],
+      "158": [
+        "Your chances of surviving a crash are five times greater if you stay inside the protection of your vehicle."
+      ],
+      "159": [
+        "Seat Belt Law is primary in Kentucky and drivers can be stopped by law enforcement officers if observed driving while not wearing seat belts."
+      ],
+      "160": [
+        "The lap belt should be adjusted so that it is snug and lies low across your hips after fastening."
+      ],
+      "161": [
+        "The entire air bag deployment process takes about 1/20th of a second – faster than the blink of an eye."
+      ],
+      "162": [
+        "This substance is only a drying agent for the airbag but could be mistaken for smoke."
+      ],
+      "163": [
+        "Never place a rear-facing child safety seat in front of an active passenger air bag."
+      ],
+      "164": [
+        "transporting a child of forty (40) inches in height or less in a motor vehicle operated on the roadways, streets, and highways of this state, shall have the child properly secured in a child restraint system"
+      ],
+      "165": [
+        "shall be fined fifty dollars ($50) and shall pay an additional fee of ten dollars ($10) which shall be deposited in the Traumatic Brain Injury Trust Fund."
+      ],
+      "166": [
+        "transporting a child under the age of eight (8) years who is between forty (40) inches and fifty-seven (57) inches in height ... shall have the child properly secured in a child booster seat."
+      ],
+      "167": [
+        "In Kentucky, it is illegal to leave a child under the age of eight (8) years in a motor vehicle under circumstances which manifest an extreme indifference to human life"
+      ],
+      "168": [
+        "A load must be securely fastened and is only considered secure when nothing can slide, shift, fall, or sift onto the roadway or become airborne."
+      ],
+      "169": [
+        "When taking your driving test, you will not be allowed to use certain safety features, such as parking assist and cruise control."
+      ],
+      "170": [
+        "Be aware that safety features may not work properly in certain conditions such as rain, snow, ice, fog, hills, and curves."
+      ],
+      "171": [
+        "To start the engine, place your right foot on the brake pedal and check the gear selector lever for park."
+      ],
+      "172": [
+        "Accelerate gradually and smoothly with the top of your foot on the pedal and the heel of your foot on the floor."
+      ],
+      "173": [
+        "Placing your hands at the 2 and 10 o’clock positions is no longer recommended because it can be dangerous in a vehicle equipped with air bags."
+      ],
+      "174": [
+        "both hands should be placed on the outside of the steering wheel on opposite sides, at the 3 and 9 o’clock positions"
+      ],
+      "175": [
+        "Use your fingers instead of the palms of your hands and keep your thumbs up along the face of the steering wheel."
+      ],
+      "176": [
+        "Grasp the steering wheel at the 12 o’clock position with your left hand. Place your right arm on the back of the seat and look directly through the rear window."
+      ],
+      "177": [
+        "The driver on your right at a four-way intersection controlled by stop signs if both of you arrive at the intersection at the same time;"
+      ],
+      "178": [
+        "Upon approaching an intersection where a police officer is directing traffic, do what the officer instructs you to do regardless of traffic-control devices or signs."
+      ],
+      "179": [
+        "the red light is on the left, the yellow light is in the middle, and the green light is on the right."
+      ],
+      "180": [
+        "YELLOW Traffic Light – A yellow light means the traffic signal is about to turn red. Stop if you can do so safely."
+      ],
+      "181": [
+        "Left turns on red are permitted only when turning from a one-way street onto a one-way street.",
+        "You must first stop then turn left when the roadway is clear of vehicle or pedestrian traffic."
+      ],
+      "182": [
+        "Left turns on a green light must yield to through traffic coming from the opposite direction."
+      ],
+      "183": [
+        "Left turns on red are permitted only when turning from a one-way street onto a one-way street.",
+        "You must first stop then turn left when the roadway is clear of vehicle or pedestrian traffic."
+      ],
+      "184": [
+        "Two flashing red lights mark a railroad crossing. Stop and proceed only after the red lights stop flashing and you determine no train is approaching."
+      ],
+      "185": [
+        "These signs are usually yellow with black lettering or symbols and are diamond shaped."
+      ],
+      "186": [
+        "abandon your car immediately and run away from the railroad track in the direction the train is coming, in order to avoid being hit by flying debris."
+      ],
+      "187": [
+        "The stopping distance for an average freight train at 55 miles per hour may be a mile or more."
+      ],
+      "188": [
+        "Fines for speeding in a work zone are doubled."
+      ],
+      "189": [
+        "These are generally diamond or rectangular shaped and orange with black letters or symbols."
+      ],
+      "190": [
+        "It means you must slow down and allow traffic that has the right of way to cross before entering."
+      ],
+      "191": [
+        "This sign tells you where a lane is reserved for the use of left turning vehicles from either direction and is not to be used for through traffic or passing other vehicles."
+      ],
+      "192": [
+        "They give information on intersecting roads, help direct you to cities and towns, and show points of interest along the highway."
+      ],
+      "193": [
+        "When you need to cross railroad tracks, look both ways and cross the tracks quickly, without stopping."
+      ],
+      "194": [
+        "Speed Limit Signs – These black and white signs indicate the maximum legal speed allowed in ideal conditions."
+      ],
+      "195": [
+        "When there is more than one traffic light, obey the one that is over your lane."
+      ],
+      "196": [
+        "If there is a stop line before the crosswalk, the stop line must be obeyed first."
+      ],
+      "197": [
+        "Pentagon School signs."
+      ],
+      "198": [
+        "Round Railroad and advance warning."
+      ],
+      "199": [
+        "If you plan to turn at an intersection, signal 100 feet before the turn."
+      ],
+      "200": [
+        "If the driver in front of you is signaling for a turn, do not signal unless you are also going to turn."
+      ],
+      "201": [
+        "Avoid swinging wide to the left before making the turn.",
+        "Always turn right from the right-most portion of your lane."
+      ],
+      "202": [
+        "Make sure your car can be seen for 500 feet in either direction."
+      ],
+      "203": [
+        "Look left and then right and left again before entering the intersection."
+      ],
+      "204": [
+        "The driver with an active turn signal may plan to turn after they go past your vehicle or may have forgotten to turn the signal off from a prior turn."
+      ],
+      "205": [
+        "Vehicles travel counterclockwise around a raised center island",
+        "Enter a roundabout or traffic circle in a counterclockwise direction."
+      ],
+      "206": [
+        "By law you must remain stopped until all people are clear of the roadway and the bus is in motion."
+      ],
+      "207": [
+        "A stop is not required when approaching a stopped bus from the opposite direction upon a highway of four or more lanes."
+      ],
+      "208": [
+        "If there is a curb, park as close to it as possible."
+      ],
+      "209": [
+        "It is safest to get out of your vehicle on the curb side."
+      ],
+      "210": [
+        "The law requires you to turn off the engine and remove the key when you leave a vehicle."
+      ],
+      "211": [
+        "If there is no curb, turn the wheels so the vehicle will go off the road should it roll."
+      ],
+      "212": [
+        "Handicapped Parking is only for vehicles displaying an official permit and transporting a disabled person."
+      ],
+      "213": [
+        "Remaining in the left lane on a limited access highway is illegal."
+      ],
+      "214": [
+        "If you miss your turn, go on to the next intersection and work your way back to where you want to go."
+      ],
+      "215": [
+        "If you have already started through an intersection when the light changes, keep going."
+      ],
+      "216": [
+        "Check your “blind spots,” or areas around your vehicle that cannot be seen by other vehicles, by turning your head and looking over your shoulder"
+      ],
+      "217": [
+        "The existing traffic has the right of way, so make sure it is clear before you merge."
+      ],
+      "218": [
+        "Signal your intention, move to the deceleration lane, and slow to your existing speed."
+      ],
+      "219": [
+        "a pass be completed before coming within two hundred (200) feet of an oncoming vehicle."
+      ],
+      "220": [
+        "Continue to pass until the complete front of the passed vehicle is visible in your rearview mirror."
+      ],
+      "221": [
+        "Treat a curve or a hill as an oncoming vehicle. Do not start to pass when approaching a hill or a curve."
+      ],
+      "222": [
+        "pass to the left keeping at least three (3) feet between your vehicle and the bicycle or electric low-speed scooter."
+      ],
+      "223": [
+        "Kentucky law requires that a pass be completed before reaching the beginning of a “no passing zone”",
+        "If you are still in the left lane when you reach the “no passing zone”, you are violating the law."
+      ],
+      "224": [
+        "have a minimum distance of three (3) feet between your vehicle and the bicycle or electric low-speed scooter."
+      ],
+      "225": [
+        "You may drive to the left of the center line, including when there is a no-passing zone, to pass a person operating a bicycle or electric low-speed scooter only if the roadway to the left of the center is clear"
+      ],
+      "226": [
+        "Ideally, you should try to look at what is occurring 20 to 30 seconds in front of your car."
+      ],
+      "227": [
+        "65 MPH – Sixty-five miles per hour is the speed limit on interstate highways and parkways."
+      ],
+      "228": [
+        "35 MPH – Thirty-five miles per hour is the speed limit in a business/residential district."
+      ],
+      "229": [
+        "15 MPH – The speed limit in an off-street parking facility offered for public use, whether publicly or privately owned, shall be fifteen miles per hour."
+      ],
+      "230": [
+        "When you cannot see any farther than that, you cannot safely drive faster than 25 miles per hour."
+      ],
+      "231": [
+        "Always reduce speed before entering the curve to a safe speed",
+        "Hard braking after entry to a curve could cause the vehicle tires to lose traction."
+      ],
+      "232": [
+        "Pump your brakes gently, unless your vehicle is equipped with anti-lock brakes, in which case you should apply steady pressure to the brakes."
+      ],
+      "233": [
+        "Hydroplaning occurs when the steering tires start to ride up on any pooled water, similar to the action of water skis.",
+        "The tires are not contacting the actual roadway surface."
+      ],
+      "234": [
+        "The average perception time for an alert driver is ¾ second to 1 second."
+      ],
+      "235": [
+        "At 50 mph on dry pavement with good brakes, it can take about 158 feet."
+      ],
+      "236": [
+        "You should always try to keep a minimum following distance of 4 seconds between your car and the vehicle in front."
+      ],
+      "237": [
+        "Increase your following distance:",
+        "Following motorcycles. Motorcyclists can turn and change lanes much quicker than other vehicles."
+      ],
+      "238": [
+        "Kentucky law requires the operator of a vehicle about to be overtaken and passed shall give way to the right in favor of the overtaking vehicle."
+      ],
+      "239": [
+        "Motorcyclists can turn and change lanes much quicker than other vehicles. Allow extra space to react to motorcycles."
+      ],
+      "240": [
+        "Either speed up or drop back, but do not remain in another driver’s blind spot."
+      ],
+      "241": [
+        "When a passing vehicle is a tractor trailer, leave a little more space between you and that vehicle by moving to the outside portion of your lane."
+      ],
+      "242": [
+        "When approaching these vehicles, move to the left lane safely before passing them and then back to the right lane after passing."
+      ],
+      "243": [
+        "If you have passed your exit on an interstate or freeway, never back up or try to turn around. Proceed to the next exit and work your way back to where you want to go."
+      ],
+      "244": [
+        "Headlights must be illuminated during the period from one-half (1/2) hour after sunset to one-half (1/2) hour before sunrise."
+      ],
+      "245": [
+        "Your vehicle must have mechanical signals. Hand signals cannot be used."
+      ],
+      "246": [
+        "Signal every time you change direction, even when you do not see anyone else around. The vehicle you do not see is the most dangerous."
+      ],
+      "247": [
+        "You have three options to avoid the crash or to reduce its impact. These options are braking, steering, or accelerating."
+      ],
+      "248": [
+        "Press on the brake pedal as hard as you can and keep applying pressure.",
+        "ABS will work only if you keep the pressure on the brake pedal."
+      ],
+      "249": [
+        "When you have cleared the problem, steer in the opposite direction to straighten out your vehicle, gain control, and start slowing."
+      ],
+      "250": [
+        "If you begin to skid sideways, you need to turn the wheel in the direction the back of the vehicle is skidding."
+      ],
+      "251": [
+        "If you do not have anti-lock, do not brake hard. This will only lock your wheels and make the skid worse. Instead, slow the vehicle by pumping the brakes gently."
+      ],
+      "252": [
+        "You can help keep the driver, behind you, at a safe distance by keeping a steady speed, signaling in advance, and keeping more space to the front of your vehicle before reducing speed or turning."
+      ],
+      "253": [
+        "The most important vehicle control to use during a skid is the steering wheel."
+      ],
+      "254": [
+        "If you do not have anti-lock, do not brake hard. This will only lock your wheels and make the skid worse. Instead, slow the vehicle by pumping the brakes gently."
+      ],
+      "255": [
+        "If your vehicle leaves the paved road, slow down gradually, when safe to do so, and turn quickly back onto the pavement."
+      ],
+      "256": [
+        "In accordance with Kentucky law, when involved in a non-injury accident move the damaged vehicles to the shoulder of the roadway. KRS 189.580 (1)(b) ."
+      ],
+      "257": [
+        "shall file a written report of the accident with the Kentucky State Police within ten (10) days of the collision."
+      ],
+      "258": [
+        "leave a note where it can be seen and include in the note your name, your address, your driver license number, your license plate number, along with the date and time of the collision."
+      ],
+      "259": [
+        "Only in life-threatening emergencies should you attempt to remove an individual from a collision."
+      ],
+      "260": [
+        "if your brakes stop working while driving: Use the parking brake. Pull on the parking brake handle in the center console or push the parking brake foot pedal slowly"
+      ],
+      "261": [
+        "Grip the steering wheel firmly and keep the vehicle going straight.",
+        "Slow down gradually. Take your foot off the accelerator pedal.",
+        "Do not brake. Allow the vehicle to slow by itself or brake gently if necessary."
+      ],
+      "262": [
+        "Keep a strong grip on the steering wheel. Be aware that the steering wheel may be difficult to turn, but you can turn it."
+      ],
+      "263": [
+        "Turn off the engine.",
+        "Shift to neutral and search for an escape path.",
+        "Steer smoothly, brake gently, and pull off the roadway."
+      ],
+      "264": [
+        "Place emergency flares about 200 to 300 feet behind the vehicle, giving other drivers some time to change lanes if necessary."
+      ],
+      "265": [
+        "When making a right or left turn on red, you must be prepared to yield the right of way to pedestrians."
+      ],
+      "266": [
+        "Failure to yield the right-of-way to a blind pedestrian is a violation that could result in a fine up to two hundred fifty dollars ($250)."
+      ],
+      "267": [
+        "Every pedestrian crossing a roadway at a point other than within a marked crosswalk or within an unmarked crosswalk at an intersection shall yield the right-of-way to all vehicles."
+      ],
+      "268": [
+        "Failure to yield the right-of-way to a blind pedestrian is a violation that could result in a fine up to two hundred fifty dollars ($250)."
+      ],
+      "269": [
+        "At a stop light or sign, do not stop your vehicle more than five (5) feet from the crosswalk, unless there is an advanced stop bar (line)."
+      ],
+      "270": [
+        "Drivers of electric and hybrid vehicles must be extra alert to blind pedestrians, as they may be unaware of your presence due to the silent nature of these vehicles."
+      ],
+      "271": [
+        "At least three feet of space is recommended when passing bicyclists and the passing vehicles should move back into the right lane only when well clear of the bicyclist."
+      ],
+      "272": [
+        "The signal shall be given intermittently for the last fifty (50) feet traveled by the vehicle before the turn."
+      ],
+      "273": [
+        "Never ride on interstates and parkways.",
+        "DO NOT RIDE ON THE SIDEWALK.",
+        "Ride a bicycle on the right side of the road with traffic."
+      ],
+      "274": [
+        "When riding at night, operate the bicycle with a white light visible from the front and a red reflector or light visible from the rear."
+      ],
+      "275": [
+        "an electric low-speed scooter is designed to operate at a maximum speed of twenty (20) miles per hour on a paved level surface."
+      ],
+      "276": [
+        "A person sixteen (16) years of age or older, may operate an electric low-speed scooter on a highway, bicycle lane, or bicycle path."
+      ],
+      "277": [
+        "These lights shall be illuminated from one-half (1/2) hour after sunset to one-half (1/2) hour before sunrise or at other times when there is low visibility."
+      ],
+      "278": [
+        "Allow a motorcyclist a full lane width. Do not share the lane."
+      ],
+      "279": [
+        "Motorcycle turn signals may not self-cancel, and the motorcyclist may have forgotten to turn them off."
+      ],
+      "280": [
+        "When following a motorcyclist, allow for a minimum 4-second following distance or more in wet conditions"
+      ],
+      "281": [
+        "Avoid slowing down or stopping quickly. A motor vehicle’s brakes are more powerful than a bicycle’s and you could cause a crash."
+      ],
+      "282": [
+        "If the person takes a step back and pulls in the cane that is a definite sign you should go."
+      ],
+      "283": [
+        "traveling at 55 mph requires at least 335 feet before coming to a complete stop, or greater than 1½ times the stopping distance of a car."
+      ],
+      "284": [
+        "If you cannot see the driver’s face in the side view mirror, he or she cannot see you."
+      ],
+      "285": [
+        "large vehicles have huge blind spots directly behind them that extend up to 200 feet."
+      ],
+      "286": [
+        "look for the whole front of the vehicle in your rear-view mirror before pulling in front and maintaining speed."
+      ],
+      "287": [
+        "the driver will sometimes swing the vehicle wide to the left to safely turn right and clear the corner of a curb or other obstruction."
+      ],
+      "288": [
+        "These stop lines help to set you farther back at an intersection to give larger vehicles more turning space."
+      ],
+      "289": [
+        "When stopped behind a truck on an upgrade, stay to the left of your lane where the driver can see you."
+      ],
+      "290": [
+        "Vehicles carrying hazardous materials must stop at all railroad crossings."
+      ],
+      "291": [
+        "you must immediately drive to the right side of the road or to the curb, clear of any intersection, and stop."
+      ],
+      "292": [
+        "It is also unlawful to follow any emergency vehicle closer than 500 feet."
+      ],
+      "293": [
+        "keep your hands on the steering wheel and limit movements so the officer does not think you are hiding or searching for something."
+      ],
+      "294": [
+        "if at night, your interior lights to help the officer see that everything is in order inside the vehicle."
+      ],
+      "295": [
+        "Before reaching for these documents, first tell the officer where they are located. Then reach for them slowly with one hand on the wheel."
+      ],
+      "296": [
+        "move-over laws have been enacted, which require drivers to slow and change lanes when approaching a roadside incident."
+      ],
+      "297": [
+        "Approach slowly and move into the left lane on four-lane highways if it is safe to do so."
+      ],
+      "298": [
+        "orange and red triangle displayed on the rear of vehicles... means the vehicle is traveling less than 25 mph."
+      ],
+      "299": [
+        "do not use your horn or “rev” the engine because this may scare the horse and cause a crash."
+      ],
+      "300": [
+        "shall not travel on the highway for more than two-tenths (2/10) of a mile."
+      ],
+      "301": [
+        "If under sixteen (16) years of age shall not operate an ATV except under direct parental supervision, and not without approved protective headgear at all times the vehicle is in motion."
+      ],
+      "302": [
+        "Use your low beams when following another vehicle, and in fog, rain, or snow. Light from your high beams may cause glare, making it more difficult to see ahead."
+      ],
+      "303": [
+        "Dim your lights whenever you come within 500 feet of oncoming vehicles, and within 300 feet of any vehicle you are following."
+      ],
+      "304": [
+        "Increase your following distance by adding at least one additional second for night driving conditions and at least two additional seconds for driving on unfamiliar roadways at night."
+      ],
+      "305": [
+        "The only exceptions are when the right-of-way is required by an emergency vehicle, when vehicles in the procession are directed otherwise by a police or safety officer, or when the vehicle is a train or locomotive."
+      ],
+      "306": [
+        "If you violate this law, you may receive a $250 fine or 90 days in jail."
+      ],
+      "307": [
+        "Kentucky law allows for fines to be doubled in a highway work zone when signs are displayed informing drivers of the existence of a highway work zone and that fines are double in it.",
+        "Additionally, at least one (1) bona fide worker must by present."
+      ],
+      "308": [
+        "Work zone signs have an orange background and black letters or symbols."
+      ],
+      "309": [
+        "If a vehicle comes toward you with their high beams on, look toward the right side of the road to keep from being distracted or momentarily blinded by their headlights."
+      ],
+      "310": [
+        "Must have at least one headlight and two taillights illuminated at all times;"
+      ],
+      "311": [
+        "During night driving, you will see the reflective red boarder of the symbol."
+      ],
+      "312": [
+        "You should reduce your speed, increase your following distance and realize you may skid when trying to stop your vehicle."
+      ],
+      "313": [
+        "Take turns crossing the bridge; generally, the first driver to the bridge has right of way."
+      ],
+      "314": [
+        "Reduce your speed, increase your following distance, and maintain a firm grip on the steering wheel."
+      ],
+      "315": [
+        "an operator of an autocycle is not required to obtain a motorcycle license or endorsement, and may operate the vehicle if the operator is in possession of a valid operator’s license."
+      ],
+      "316": [
+        "An operator of an autocycle is also exempt from any headgear requirements."
+      ],
+      "317": [
+        "Sixty percent of the cargo weight of a trailer should go in the front (nearest the towing vehicle) and 40 percent in the back."
+      ],
+      "318": [
+        "If the trailer begins to sway or whip, steer straight and reduce speed gradually, do not apply the brakes."
+      ],
+      "319": [
+        "The maximum recommend speed for most vehicle-trailer combinations is 55 mph."
+      ],
+      "320": [
+        "When backing up a trailer, go slowly. Keep your hand at the bottom of the steering wheel."
+      ],
+      "321": [
+        "If the trailer starts to jackknife – STOP – and pull ahead to straighten out; then start again."
+      ],
+      "322": [
+        "When going down a grade, slow down BEFORE starting down the hill."
+      ],
+      "323": [
+        "If a pedestrian is crossing in the middle of the street, not at a crosswalk (also known as jaywalking), even if it is illegal, you must stop for them."
+      ],
+      "324": [
+        "Allow a motorcyclist a full lane width. Do not share the lane.",
+        "Motorcycle operators have the right to use a complete traffic lane."
+      ],
+      "325": [
+        "Use your high beams whenever there are no oncoming vehicles.",
+        "When driving at night use your high beams when there is no oncoming traffic approaching."
+      ],
+      "326": [
+        "2022 © Copyright All Rights Reserved American Association of Motor Vehicle Administrators"
+      ],
+      "327": [
+        "This manual is a supplement to the state’s driver manual"
+      ],
+      "328": [
+        "covers rules of the road, signs, signals, roadway markings and safe driving practices."
+      ],
+      "329": [
+        "Graphics and pictures contained within this manual are provided courtesy of Motorcycle Safety Foundation and Highway Safety Services, LLC"
+      ],
+      "330": [
+        "National Highway Traffic Safety Administration (NHTSA), Department of Transportation (DOT). (2016, December). Visual-manual nhtsa driver distraction guidelines"
+      ],
+      "331": [
+        "National Highway Traffic Safety Administration (NHTSA)"
+      ],
+      "332": [
+        "National Highway Traffic Safety Administration (NHTSA), Department of Transportation (DOT)."
+      ],
+      "333": [
+        "Virginia Tech Transportation Institute. (2013, May, 2nd edition). New vtti study results continue to highlight the dangers of distracted driving."
+      ],
+      "334": [
+        "Visual-manual nhtsa driver distraction guidelines for portable and aftermarket devices."
+      ],
+      "335": [
+        "augmenting safe testing and deployment of vehicles equipped with automated driving systems guidelines."
+      ],
+      "336": [
+        "American Association of Motor Vehicle Administrators 4401 Wilson Blvd, Suite 700 Arlington, Virginia 22203"
+      ],
+      "337": [
+        "703.522.4200 I aamva.org"
+      ],
+      "338": [
+        "Strengthening distracted driving education, legislations, and enforcement: A whitepaper"
+      ],
+      "339": [
+        "Virginia Tech Transportation Institute. (2013, May, 2nd edition)"
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
@@ -63,6 +1128,20 @@
     "sign_ratio_pct": 5.0,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 339,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 99.7,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

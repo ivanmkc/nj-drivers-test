@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "ms",
   "name": "Mississippi",
-  "verified_at": "2026-05-26T02:30:56Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:05:24Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.driverservicebureau.dps.ms.gov/sites/default/files/2025-02/1.15.2025%20Revised%20MDPS%20Driver's%20Manual.pdf",
     "manual_pdf_sha256": "6fd2b3dda657c340fd6a0a571ec5f91e33cb54d529eaef531774007620b4f3e0",
@@ -23,29 +23,694 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 218,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "Make certain that you and your passengers buckle up your seat belts every time you travel in a motor vehicle.",
+        "Buckle up; it is the law."
+      ],
+      "2": [
+        "Distracted driving is one of the leading causes of accidents."
+      ],
+      "3": [
+        "Also, take special care in school zones and when sharing the road with bicyclists."
+      ],
+      "4": [
+        "However, driving is a privilege and should be taken very seriously."
+      ],
+      "5": [
+        "Any person found guilty of littering on Mississippi’s roads, highways, interstates, or within their rights-of-way shall be fined."
+      ],
+      "6": [
+        "This offense is easily preventable: Keep a trash bag in your vehicle and dispose of your trash responsibly."
+      ],
+      "7": [
+        "All offices accept cash, credit cards, and debit cards. Credit/debit cards must be Visa/ MasterCard. NO CHECKS."
+      ],
+      "8": [
+        "Learner’s Permit $7.00"
+      ],
+      "9": [
+        "Regular License, Class R — 4 year — $24.00"
+      ],
+      "10": [
+        "Regular License, Class R — 8 year — $47.00"
+      ],
+      "11": [
+        "Duplicate License $11.00"
+      ],
+      "12": [
+        "Late Fee $1.00"
+      ],
+      "13": [
+        "Motorcycle Endorsement — 4 year — $5.00"
+      ],
+      "14": [
+        "Identification Card — 8 year — $33.00"
+      ],
+      "15": [
+        "Commercial License, Class D — 4 year — $29.00"
+      ],
+      "16": [
+        "You are operating any road machine, farm tractor, or farm equipment on streets or highways."
+      ],
+      "17": [
+        "You are under eighteen years old and do not provide proper documentation of your enrollment in school."
+      ],
+      "18": [
+        "witnessed you operate a motor vehicle for at least fifty hours."
+      ],
+      "19": [
+        "If you move to Mississippi, you must obtain a Mississippi driver’s license within sixty days."
+      ],
+      "20": [
+        "You must obtain a Mississippi license plate/tag within thirty days."
+      ],
+      "21": [
+        "If you have a valid driver’s license from another state, the Computerized Exam will be waived."
+      ],
+      "22": [
+        "If your out-of-state license has been expired over thirty days, you must take the Computerized Exam."
+      ],
+      "23": [
+        "If your out-of-state license has been lost, you must obtain an Affidavit of Inability to Surrender form from the Driver’s License office. Your signature must be notarized on this form."
+      ],
+      "24": [
+        "you may renew the license at any time within ninety days of being discharged from military service or upon returning to the state."
+      ],
+      "25": [
+        "the license may be renewed UP TO SIX MONTHS prior to the expiration date."
+      ],
+      "26": [
+        "out-of-state college students are allowed to drive in Mississippi with their out-of-state license."
+      ],
+      "27": [
+        "If you are a non-citizen, you must meet all requirements for a driver’s license or identification card except for providing a social security card."
+      ],
+      "28": [
+        "For non-citizens, their regular license or identification card will be valid for four years or until your legal status expiration date [if less than four years away]."
+      ],
+      "29": [
+        "You have not completed a certified Driver's Education course (beginning July 1, 2027)"
+      ],
+      "30": [
+        "Driving without a valid Driver’s License or Learner's Permit is illegal, even if you are accompanied by a parent or licensed driver."
+      ],
+      "31": [
+        "The Regular Learner’s Permit is valid for two years."
+      ],
+      "32": [
+        "accompanied by a licensed driver aged twenty-one years or older who is physically occupying the seat next to you."
+      ],
+      "33": [
+        "A Class D license is required when you are operating a vehicle commercially and the vehicle is under 26,000 pounds gross vehicle weight rating."
+      ],
+      "34": [
+        "You must be at least twenty-one years old before you are eligible for a license to drive a school bus per the Mississippi Department of Education."
+      ],
+      "35": [
+        "A crash helmet must be worn if operating or riding any motorcycle or motor scooter upon the public roads or highways of this state."
+      ],
+      "36": [
+        "If you are issued a Learner’s Permit at age fifteen and one-half, you will be eligible for your Regular Driver’s License at age sixteen and one-half."
+      ],
+      "37": [
+        "If you first apply at age seventeen or older, you may apply directly for a Regular Driver’s License."
+      ],
+      "38": [
+        "Each proof of residency must contain a physical address. No post office box numbers will be accepted."
+      ],
+      "39": [
+        "If you make a false statement on the application, your driving privileges may be suspended."
+      ],
+      "40": [
+        "Whomever signs your application will be liable for your negligence or willful misconduct and must have their signature NOTARIZED."
+      ],
+      "41": [
+        "Two proofs of identification are required before a license or permit can be issued:",
+        "• SOCIAL SECURITY CARD",
+        "• CERTIFIED BIRTH CERTIFICATE"
+      ],
+      "42": [
+        "Request a Certification of Attendance form from your school. This form must not be over thirty days old."
+      ],
+      "43": [
+        "if you are under 17 you must provide an affidavit for Road Test Waiver whereby a parent, teacher, or guardian has certified that he or she has witnessed you operate a motor vehicle for at least fifty hours"
+      ],
+      "44": [
+        "Beginning July 1, 2027, you must provide signed documentation showing the completion of a Driver’s Education and Training Program certified the State Board of Education"
+      ],
+      "45": [
+        "The foot brake must be strong enough to stop the vehicle within thirty feet at a speed of twenty miles per hour."
+      ],
+      "46": [
+        "Your vehicle must have a horn which can be heard two hundred feet away."
+      ],
+      "47": [
+        "In addition to two headlights, your vehicle may have no more than one spotlight and no more than three auxiliary lights."
+      ],
+      "48": [
+        "Mississippi law does not require you to have a rearview mirror, but it is recommended for you to have one."
+      ],
+      "49": [
+        "unlawful for any person to drive a passenger motor vehicle... if... the height of the front fender is raised four or more inches greater than the height of the rear fender."
+      ],
+      "50": [
+        "If any part of Lincoln's head is covered by the tread, you are driving with a safe amount of tread."
+      ],
+      "51": [
+        "Both hands should be placed on the outside of the steering wheel on opposite sides, at the 3 and 9 o’clock positions, to maintain control of the vehicle."
+      ],
+      "52": [
+        "Placing your hands at 2 and 10 o’clock positions is no longer recommended because it can be dangerous in a vehicle equipped with airbags."
+      ],
+      "53": [
+        "Plan to stop about every 100 miles or 2 hours during long trips."
+      ],
+      "54": [
+        "intersection- the place where roads come together or cross (crosswalks are counted as part of the intersection)"
+      ],
+      "55": [
+        "motor vehicle- an automobile, motorcycle, or other kind of vehicle which is run by an engine or motor in the vehicle itself (except vehicles on rails, electric bicycles, golf carts, and low-speed vehicles)"
+      ],
+      "56": [
+        "The taillight on your vehicle must be red and must be visible five hundred feet behind you."
+      ],
+      "57": [
+        "If your eye test indicates that you may need glasses, you must have your eyes tested by an eye specialist or optometrist."
+      ],
+      "58": [
+        "Do not follow the same vehicle or group of vehicles for long periods. You may become too relaxed and lose your concentration."
+      ],
+      "59": [
+        "The parking brake must be strong enough to stop the vehicle within fifty-five feet at twenty miles per hour."
+      ],
+      "60": [
+        "Take a break every one hundred miles."
+      ],
+      "61": [
+        "The term \"hand-held mobile telephone\" shall not include a voice-operated or hands-free device.",
+        "If you must make a phone call while driving. A hands-free device is recommended."
+      ],
+      "62": [
+        "Never wear stereo headphones while you drive, and never play your car stereo or radio loudly while driving. You may be unable to hear warning signals such as whistles and sirens."
+      ],
+      "63": [
+        "A broken yellow line separates traffic lanes that move in the opposite directions. Crossing into the oncoming lane is permissible ONLY for passing and only when it is safe to pass."
+      ],
+      "64": [
+        "A double, solid white line means travel in the same direction is permitted on both sides of the line. Crossing a double white line is PROHIBITED."
+      ],
+      "65": [
+        "The center lane above is painted to indicate TURN LANE ONLY. A vehicle may use this lane ONLY in preparation to turn left or right across the opposite lanes."
+      ],
+      "66": [
+        "drivers must always yield to pedestrians in crosswalks—even if the crosswalk is not marked."
+      ],
+      "67": [
+        "EQUILATERAL TRIANGLE: Exclusively for YIELD signs."
+      ],
+      "68": [
+        "ORANGE: Construction or maintenance warning."
+      ],
+      "69": [
+        "PENNANT: Warning of NO PASSING ZONE ahead."
+      ],
+      "70": [
+        "The WRONG WAY sign tells you that you are traveling in the opposite direction from the other cars in your lane. You must leave the roadway and turn around as soon as possible."
+      ],
+      "71": [
+        "Vehicles may not have signs, posters, stickers, or glass material that cause a mirrored effect on the windows."
+      ],
+      "72": [
+        "PENTAGON: School crossing signs and warning of school zones ahead."
+      ],
+      "73": [
+        "A single, solid white line means travel in the same direction is permitted on both sides of the line. Crossing a single white line is discouraged."
+      ],
+      "74": [
+        "For information on obtaining a handicap tag, contact your County Tax Collector's Office."
+      ],
+      "75": [
+        "This sign means you may ONLY use the center lane TO MAKE TURNS. The center lane is not available for normal travel or passing."
+      ],
+      "76": [
+        "SCHOOL ZONE: Fifteen miles per hour when passing a school during recess or while children are arriving at or leaving school"
+      ],
+      "77": [
+        "Remember that pedestrians have the right of way at intersections, whether the crosswalk is marked or not."
+      ],
+      "78": [
+        "Reduce your speed in work zones and be prepared to stop suddenly. Do not tailgate in work zones."
+      ],
+      "79": [
+        "This emblem identifies SLOW-MOVING VEHICLES (vehicles that travel twenty-five miles per hour or less)."
+      ],
+      "80": [
+        "Do not use your horn or “rev” the engine because this may scare the horse and cause a crash."
+      ],
+      "81": [
+        "These vehicles MUST STOP within fifty to ten feet of the outer rail of any crossing.",
+        "ALL drivers must ALWAYS STOP WITHIN fifty to ten feet of the outer rail of any railroad crossing"
+      ],
+      "82": [
+        "the following MUST STOP at ALL RAILROAD CROSSINGS: a SCHOOL BUS carrying even one child"
+      ],
+      "83": [
+        "Once outside, run in a 45-degree angle away from the tracks in the direction that the train is coming, then immediately dial 911."
+      ],
+      "84": [
+        "Do not shift gears as you drive across tracks."
+      ],
+      "85": [
+        "The toll-free number is answered by railroad dispatchers who can attempt to stop all train traffic at the crossing during an emergency.",
+        "By following the information on the sign, you can report unsafe conditions"
+      ],
+      "86": [
+        "For information on obtaining a handicap tag, contact your County Tax Collector's Office."
+      ],
+      "87": [
+        "In rural areas, this sign is normally posted 500 to 900 feet in front of the tracks."
+      ],
+      "88": [
+        "If a traffic officer directs you to proceed over a railroad crossing, follow the order immediately."
+      ],
+      "89": [
+        "Barriers, such as drums, cones, and tubes (panels), are used to keep traffic out of hazardous work zones."
+      ],
+      "90": [
+        "EXCEPTION: You may turn right while the light is red. But first, you must STOP COMPLETELY and yield to other traffic and pedestrians. You may NOT turn on red if a sign prohibits you."
+      ],
+      "91": [
+        "EXCEPTION: If you are turning left, the solid green light means you must YIELD TO ONCOMING TRAFFIC."
+      ],
+      "92": [
+        "A YELLOW FLASHING ARROW means you may turn in the direction of the arrow if you are in the proper lane. You must YIELD TO ONCOMING TRAFFIC."
+      ],
+      "93": [
+        "If you approach a malfunctioning traffic light with a NO FUNCTIONING LIGHTS, you must STOP completely and proceed with caution"
+      ],
+      "94": [
+        "An officer will usually signal you to stop by holding up one hand, palm toward you, and then giving a long blast on the whistle."
+      ],
+      "95": [
+        "The maximum speed for any vehicle in a SCHOOL ZONE is 15 mph."
+      ],
+      "96": [
+        "Interstates 70 mph 40 mph"
+      ],
+      "97": [
+        "Do not use your left signal to let a vehicle behind you know it is safe to pass."
+      ],
+      "98": [
+        "RIGHT TURN: Extend your arm and hand upward, with your arm bent at the elbow."
+      ],
+      "99": [
+        "signal continuously for at least one hundred feet before you slow down, turn, stop, or change lanes."
+      ],
+      "100": [
+        "When you are following another vehicle, allow at least one car length between you for every ten miles per hour of speed."
+      ],
+      "101": [
+        "If you are taking part in a motorcade, such as a funeral procession, allow enough space between you and the next car so that other vehicles may safely pull into those spaces."
+      ],
+      "102": [
+        "Pedestrians should continue crossing if they began to cross the intersection before the sign changed to flashing."
+      ],
+      "103": [
+        "When signals like these are in use, you may travel ONLY in a lane marked by a green light. NEVER travel in a lane marked with a red light."
+      ],
+      "104": [
+        "The maximum speed for a SCHOOL BUS while transporting children to and from school on regular routes is 45 mph."
+      ],
+      "105": [
+        "The braking distances shown here assume ideal conditions: good tires, good brakes, and dry pavement."
+      ],
+      "106": [
+        "If you drive on a street or highway with more than one lane for your direction, drive in the extreme RIGHT lane except to pass or turn left."
+      ],
+      "107": [
+        "you may cross the lines for passing ONLY if the broken yellow line is closest to your travel lane (and if the oncoming lane is clear, and it is safe to pass)."
+      ],
+      "108": [
+        "You may overtake and pass another vehicle on the right in the following situations: • When the vehicle you are passing is making or is about to make a left turn."
+      ],
+      "109": [
+        "Do not pass on hills, curves, or within one hundred feet of bridges, viaducts, overpasses, railroad crossings, crosswalks, intersections"
+      ],
+      "110": [
+        "When being passed on a two–lane or three-lane highway, keep to the right. Do not increase your speed until the other car has completely passed you."
+      ],
+      "111": [
+        "Start from the extreme right side of the road, give the correct signal, and turn the steering wheel sharply to the left while inching forward."
+      ],
+      "112": [
+        "When approaching an intersection and traffic is blocked ahead of you, you should stop before reaching the crosswalk and wait for traffic to move."
+      ],
+      "113": [
+        "Keep the wheels of your vehicle straight until the turn has started."
+      ],
+      "114": [
+        "Do not shift gears while entering the intersection."
+      ],
+      "115": [
+        "At least one hundred feet from the intersection, turn on your left signal and slow down.",
+        "At least one hundred feet from the intersection, turn on your right signal and slow down."
+      ],
+      "116": [
+        "Before moving back into the right lane, make sure that you can see the vehicle you passed in your rearview mirror."
+      ],
+      "117": [
+        "Under no circumstances are you allowed to drive off the pavement or on the shoulder to pass."
+      ],
+      "118": [
+        "Then enter just to the right of center."
+      ],
+      "119": [
+        "Green arrows indicate the direction of travel and are not pavement markings."
+      ],
+      "120": [
+        "A good rule to remember when traveling on a one-way street is to always turn from the lane nearest the curb."
+      ],
+      "121": [
+        "When two drivers approach an intersection and both drivers want to turn left, each driver should turn to the left of the other."
+      ],
+      "122": [
+        "If traffic is blocked when you approach an intersection, stop before you reach the crosswalk and wait for traffic to move."
+      ],
+      "123": [
+        "If multiple vehicles arrive at the same time, the vehicle on the right has right of way."
+      ],
+      "124": [
+        "Vehicles travel counterclockwise around a raised center island",
+        "Enter the roundabout or traffic circle in a counterclockwise direction."
+      ],
+      "125": [
+        "COME TO A COMPLETE STOP at least ten feet away from the bus."
+      ],
+      "126": [
+        "If you are traveling in the OPPOSITE direction as the stopped school bus, you may continue to travel on your side of the divided highway without stopping."
+      ],
+      "127": [
+        "Be on the lookout for pedestrians carrying a white cane, which may have a red tip."
+      ],
+      "128": [
+        "Although not required by law, common courtesy is to yield the right of way to funeral processions."
+      ],
+      "129": [
+        "Within ten feet of a fire hydrant"
+      ],
+      "130": [
+        "Within fifteen feet of the nearest rail of any railroad crossing"
+      ],
+      "131": [
+        "Park so you can be seen from at least two hundred feet in both directions."
+      ],
+      "132": [
+        "You must yield to BICYCLES exactly as you would to any other vehicle."
+      ],
+      "133": [
+        "Put the gear in park (automatic transmission) or low (standard transmission)"
+      ],
+      "134": [
+        "For vehicles parked parallel, tires should be within twelve inches of the curb."
+      ],
+      "135": [
+        "The driver leaving a parking space does not have the right of way.",
+        "You must YIELD to any oncoming traffic."
+      ],
+      "136": [
+        "In an uphill position with a curb, turn your wheels sharply to the left."
+      ],
+      "137": [
+        "the safest thing to do is to dim your lights and keep your eyes on the right side of the road."
+      ],
+      "138": [
+        "required by law to use your low beams when you approach within five hundred feet of an oncoming vehicle"
+      ],
+      "139": [
+        "Always use the lower beam... when driving in fog during the night or day."
+      ],
+      "140": [
+        "Children at least four years old but under seven years old who are less than 4 feet 9 inches in height or who weigh less than sixty-five pounds must be properly secured in a belt-positioning booster seat"
+      ],
+      "141": [
+        "the opening minutes of rain or drizzle are actually the slickest and most dangerous.",
+        "The first water to hit the road loosens accumulated dirt and grease."
+      ],
+      "142": [
+        "If your vehicle starts to skid, turn the wheel in the direction of the skid"
+      ],
+      "143": [
+        "If you have a flat tire or blowout, do not apply your brakes suddenly. Take your foot off the accelerator."
+      ],
+      "144": [
+        "If you must walk to seek help, always walk on the left side of the highway, facing oncoming traffic."
+      ],
+      "145": [
+        "dial *HP (*47) on a cellular phone to be connected toll free to a Mississippi Highway Patrol dispatcher."
+      ],
+      "146": [
+        "Report immediately... if the accident involves injury, death, or apparent property damage exceeding $500.00."
+      ],
+      "147": [
+        "If you do not have proof of insurance, you may be cited for a violation even if you are not at fault for the accident."
+      ],
+      "148": [
+        "you must report it unless there are no injuries and the property damage amounts to less than $500."
+      ],
+      "149": [
+        "If you are at an intersection, proceed through the intersection, and pull over to the extreme right shoulder."
+      ],
+      "150": [
+        "merge into the lane away from the emergency vehicle if it is safe to do so.",
+        "If merging into an adjacent lane is not safe, slow down and prepare to stop if necessary."
+      ],
+      "151": [
+        "Turn on your interior lights if you are pulled over at night to assist with visibility."
+      ],
+      "152": [
+        "Wait for the officer’s instructions before reaching for your driver’s license or vehicle documents."
+      ],
+      "153": [
+        "Your acceptance and signature on a traffic ticket is not an admission of guilt."
+      ],
+      "154": [
+        "As you reach the end of the ramp, increase your speed in the acceleration lane until you reach the speed of the interstate highway traffic."
+      ],
+      "155": [
+        "Do not slow down until you have safely moved into the deceleration lane. Then reduce your speed to the posted limit"
+      ],
+      "156": [
+        "If you miss your exit, do not stop and back up. Continue to the next exit."
+      ],
+      "157": [
+        "The right lane is intended for through travel while the left lane is intended for passing."
+      ],
+      "158": [
+        "If you are driving at seventy mph, stay at least seven car lengths from the vehicle ahead."
+      ],
+      "159": [
+        "Stay inside your vehicle, lock the doors, and wait for reliable help."
+      ],
+      "160": [
+        "If you cannot see the side mirrors on a large truck, the driver cannot see you!"
+      ],
+      "161": [
+        "Let the officer know if you have a weapon in the vehicle upon first contact."
+      ],
+      "162": [
+        "If you are injured so badly that you cannot make an immediate report, any one of your passengers may do so."
+      ],
+      "163": [
+        "bright lights from the vehicle behind can blind the driver when they reflect off the vehicle's large side mirrors."
+      ],
+      "164": [
+        "On a level highway, it takes 3 to 5 seconds longer to pass a large vehicle than to pass a car."
+      ],
+      "165": [
+        "move back only when you can see the front wheels of the truck meeting the pavement in your rearview mirror."
+      ],
+      "166": [
+        "Remember that wind turbulence pushes vehicles apart; it does not pull them together."
+      ],
+      "167": [
+        "Large vehicles require more space to make a turn and need to swing to the left of the lane when preparing to make a right turn."
+      ],
+      "168": [
+        "Leave a safe distance of at least three feet between the vehicle and bicycle when passing the bicycle."
+      ],
+      "169": [
+        "unsafe conditions are present on the right side of the lane, such as broken or missing pavement, pedestrians, animals, parked cars, or road hazards"
+      ],
+      "170": [
+        "TRAVEL WITH THE DIRECTION OF TRAFFIC. Never ride a bicycle facing oncoming traffic."
+      ],
+      "171": [
+        "An experienced bicyclist can ride 20- 25 miles per hour and may be closer than you think."
+      ],
+      "172": [
+        "You must also have a tag light which makes the letter, numeral or any combinations of letter/numerals on your license plate (tag) visible at sixty feet at night."
+      ],
+      "173": [
+        "The window tint decal must be affixed to the lower left corner of the windshield."
+      ],
+      "174": [
+        "The windshield of the vehicle must have affixed to it a label certifying that all the windows of the vehicle have a light transmittance of 28% or more."
+      ],
+      "175": [
+        "If you are stopped behind a large vehicle on an upgrade, leave additional space in case the vehicle drifts backwards slightly when it starts to move."
+      ],
+      "176": [
+        "$25,000 property damage of others in any single accident"
+      ],
+      "177": [
+        "You may provide proof of insurance in electronic format by displaying the electronic image on a cellular phone or any other type of electronic device."
+      ],
+      "178": [
+        "remain in effect for a period of three years from the date of the accident."
+      ],
+      "179": [
+        "If your reactions slow down only a half-second, and you need to hit the brakes while traveling fifty- five miles per hour, your vehicle will travel an extra forty-four feet before stopping."
+      ],
+      "180": [
+        "Smoking medical cannabis in a motor vehicle or operating or being in actual physical control of any motor vehicle while under the influence is a violation of Mississippi’s laws and can result in arrest."
+      ],
+      "181": [
+        "Your license will be administratively suspended for ninety days for refusing the breath or chemical test."
+      ],
+      "182": [
+        "The officer will give you an official receipt for your license, which will serve as your temporary permit to drive, valid for only forty-five days."
+      ],
+      "183": [
+        "21 years old or older BAC registers .08% or more"
+      ],
+      "184": [
+        "DUI—First Offense (Misdemeanor) $250 - $1,000 Up to 48 hours 120 days"
+      ],
+      "185": [
+        "If a driver is under twenty-one and has a Blood Alcohol Content of .08% or higher, the offense is classified as a regular DUI—not as a Zero Tolerance DUI."
+      ],
+      "186": [
+        "Zero Tolerance DUI—Third Offense within five years Not more than $1,000 2 years or until the person reaches the age of 21, whichever is longer."
+      ],
+      "187": [
+        "The Commissioner of Public Safety is authorized to suspend your license without a preliminary hearing if public records or other sufficient evidence indicate that: ... You have failed to pay child support."
+      ],
+      "188": [
+        "The Commissioner of Public Safety must take away your license for a period of one year if you are convicted of any of the following: ... three reckless driving convictions within a twelve-month period"
+      ],
+      "189": [
+        "The Commissioner of Public Safety must take away your license for a period of one year if you are convicted of any of the following: ... three reckless driving convictions within a twelve-month period"
+      ],
+      "190": [
+        "You must pay by CASHIER'S check. DO NOT SEND CASH, MONEY ORDER OR A PERSONAL CHECK."
+      ],
+      "191": [
+        "Conviction under Mississippi Implied Consent Law / DUI or Uniform Controlled Substances Act $175"
+      ],
+      "192": [
+        "Failure to pay Child Support $25"
+      ],
+      "193": [
+        "When solid waste is thrown or discarded from a motor vehicle, the operator or owner of the motor vehicle, or both, shall be deemed in violation."
+      ],
+      "194": [
+        "All lights and reflectors must be clean and in working order and be visible five hundred feet from the rear of your truck-trailer."
+      ],
+      "195": [
+        "All reflectors on the front and sides near the front must show an amber color."
+      ],
+      "196": [
+        "Any vehicle which is designed or loaded so that the driver's rear view is obstructed must have a side mirror located so that the driver can see at least two hundred feet to the rear."
+      ],
+      "197": [
+        "place one of these warning devices approximately one hundred feet ahead of your location, a second one hundred feet to the rear, and a third at the roadway side of the vehicle."
+      ],
+      "198": [
+        "The total outside width of any vehicle, including the load being carried on that vehicle, cannot exceed eight and one-half feet."
+      ],
+      "199": [
+        "Under no conditions may any vehicle, loaded or unloaded, exceed a total height of thirteen and one-half feet."
+      ],
+      "200": [
+        "No single vehicle, loaded or unloaded, may have an overall length in excess of forty feet, including both front and rear bumpers."
+      ],
+      "201": [
+        "The load on any vehicle operated alone or with the load on the front unit of any combination of vehicles must not extend more than three feet beyond the front wheels of the vehicle or the front bumper."
+      ],
+      "202": [
+        "Farm machinery is exempt from size, weight, and height limitations when operated during daylight hours on any state highway within fifty miles of the point of origin."
+      ],
+      "203": [
+        "EXCEPTIONS: Dropping sand onto the roadway to secure traction is permitted."
+      ],
+      "204": [
+        "your load reaches within six inches or fewer of the top of the bed, then you must: • use a tarpaulin, canvas, or other cover to contain the load, AND • use four, six-inch sideboards"
+      ],
+      "205": [
+        "you must not follow within three hundred feet of other trucks except when you are attempting to pass."
+      ],
+      "206": [
+        "If your vehicle is carrying explosives or flammable liquids, you must stop at all railroad crossings— even if no signals warn that a train is approaching."
+      ],
+      "207": [
+        "Never back into an intersection to turn around."
+      ],
+      "208": [
+        "Never disengage the clutch while driving your truck on a downgrade. This \"coasting\" is illegal and very risky."
+      ],
+      "209": [
+        "A vehicle designed to transport more than fifteen persons (including the driver)."
+      ],
+      "210": [
+        "A single vehicle with a GVWR of more than 26,000 pounds."
+      ],
+      "211": [
+        "One organ donor can save up to eight lives."
+      ],
+      "212": [
+        "Consent from legal next of kin is required at the time of donation for anyone still under the age of 18."
+      ],
+      "213": [
+        "However, you are responsible for hospital expenses up until the time of death, even when consent is given for donation."
+      ],
+      "214": [
+        "Commercial vehicles are excluded from the Parkway, and access is limited."
+      ],
+      "215": [
+        "The maximum speed for travel on the Parkway is fifty MPH, except where lower speeds are posted."
+      ],
+      "216": [
+        "Remember that if you violate any laws while on the roadway or while using any of the Parkway's facilities, you will be tried in a federal court."
+      ],
+      "217": [
+        "The program's goal is to reach as many people as possible and change driving behavior so that we can save lives."
+      ],
+      "218": [
+        "Turn off the ignition when you put gasoline in the tank or unload the truck."
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 28,
-    "topics_covered": 25,
-    "coverage_pct": 89.3,
+    "topics_total": 25,
+    "topics_covered": 24,
+    "coverage_pct": 96.0,
     "uncovered_topics": [
-      "Actions required when approaching a red stop sign",
-      "Meaning of divided highway warning signs on the road",
-      "Recognizing interstate and highway route guide markers"
+      "Visibility distance requirements for vehicle headlights"
     ],
     "verdict": "PASS",
-    "grade": "B"
+    "grade": "A"
   },
   "coverage": {
     "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
@@ -67,6 +732,20 @@
     "sign_ratio_pct": 13.5,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 218,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 99.5,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

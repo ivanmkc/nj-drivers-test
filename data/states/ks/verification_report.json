@@ -1,16 +1,16 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "ks",
   "name": "Kansas",
-  "verified_at": "2026-05-26T02:29:12Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-27T01:19:45Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.ksrevenue.gov/pdf/dlhb.pdf",
     "manual_pdf_sha256": "1450c8b59b1c5f6247d20c1d00b3a759314df966a744c5ad20fe2d9c091fb4a5",
     "manual_text_sha256": "91681eed8b12891efcb14c69fb8f1fb4821264053c0493d98f9cf3424aad8c3f",
     "manual_text_chars": 291209,
     "manual_pages": 112,
-    "edition": ""
+    "edition": "Rev February 2022"
   },
   "bank": {
     "total_questions": 468,
@@ -24,27 +24,1432 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 450,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "the Kansas Legislature updated our driving laws to prohibit this activity that can dangerously distract us from the road."
+      ],
+      "2": [
+        "Kansas’ approximately 141,000 miles of roads keep our state’s economy moving between cities and towns"
+      ],
+      "3": [
+        "I invite you to visit our website, ksrevenue.gov, for answers to other questions you may have."
+      ],
+      "4": [
+        "The Kansas Department of Revenue strives to make your experience with the Division of Vehicles quicker, more user-friendly, and convenient."
+      ],
+      "5": [
+        "Non-Commercial Driver’s Manual"
+      ],
+      "6": [
+        "SECTION 3- Be in Shape to Drive",
+        "Fatigue ........................................................................................................................................... 20"
+      ],
+      "7": [
+        "SECTION 4- Before You Drive",
+        "Child Passenger Safety Laws ......................................................................................................... 28"
+      ],
+      "8": [
+        "SECTION 5- Basic Driving",
+        "Steering .......................................................................................................................................... 30"
+      ],
+      "9": [
+        "SECTION 6- Rules of the Road",
+        "Traffic Control Devices .................................................................................................................. 34",
+        "Pavement Markings: ....................................................................................................................... 43"
+      ],
+      "10": [
+        "SECTION 1- The Driver’s License",
+        "Loss of Driving Privileges.............................................................................................................. 14"
+      ],
+      "11": [
+        "SECTION 3- Be in Shape to Drive",
+        "Vision ........................................................................................................................................... 20",
+        "Hearing ........................................................................................................................................... 20"
+      ],
+      "12": [
+        "SECTION 6- Rules of the Road",
+        "Rules for School Buses .................................................................................................................. 50"
+      ],
+      "13": [
+        "Because a growing number of traffic accidents and deaths have been caused by people sending text messages while driving, the Kansas Legislature updated our driving laws to prohibit this activity"
+      ],
+      "14": [
+        "it will help prepare you to successfully complete your driving test, which focuses on shared “rules of the road” that help us all drive safely."
+      ],
+      "15": [
+        "Required Documents List ..................................................................................................................................... 6",
+        "Real ID ................................................................................................................................................................. 8"
+      ],
+      "16": [
+        "If you want a \"VETERAN\" indicator, bring your DD-214, NGB-22, Veterans Affairs ID, or a retired military ID."
+      ],
+      "17": [
+        "DD-214 or NGB-22 Must state Honorable Discharge."
+      ],
+      "18": [
+        "Commercial Class A, B or C (Interstate): 21 years of age or older"
+      ],
+      "19": [
+        "Commercial Class A, B or C (Intrastate): 18 years of age or older"
+      ],
+      "20": [
+        "Non-Commercial Class A or B: 18 years of age or older"
+      ],
+      "21": [
+        "Non-Commercial Class C: 17 years of age or older"
+      ],
+      "22": [
+        "Non-Commercial Class C (Restricted): 15 years of age"
+      ],
+      "23": [
+        "completed (25 of the) 50 hours of practice driving while accompanied by an adult"
+      ],
+      "24": [
+        "accompanied by an adult, 21 years of age or older"
+      ],
+      "25": [
+        "completed 50 hours of practice driving while accompanied by an adult, 21 years of age or older; 10 of those at night"
+      ],
+      "26": [
+        "Non-Commercial Class C (Farm Permit): 14 or 15 years of age"
+      ],
+      "27": [
+        "Commercial Instruction Permit (any class) 18 years of age or older"
+      ],
+      "28": [
+        "Internet courses do not meet requirements for a Driver's License in Kansas."
+      ],
+      "29": [
+        "Class C or M Instruction Permit: 14 years of age or older"
+      ],
+      "30": [
+        "A certificate of completion from an Internet Driver Education course will not be accepted for licensure."
+      ],
+      "31": [
+        "approved private driver’s education schools offering 8 hours of classroom instruction and 6 hours of behind-the-wheel instruction."
+      ],
+      "32": [
+        "You are required to have a Kansas Driver’s License within 90 days of moving to Kansas."
+      ],
+      "33": [
+        "A farm is at least 20 acres used in agricultural operations"
+      ],
+      "34": [
+        "Directly to and from home and school, over the most direct route, for the purpose of attendance (Not school activities)"
+      ],
+      "35": [
+        "Parent/Guardian must sign an affidavit attesting to at least 50 hours of driving time with at least 10 at night"
+      ],
+      "36": [
+        "Licensed adult must be at least 21 years old and have at least one-year driving experience"
+      ],
+      "37": [
+        "Expires in 1 year - may be renewed with testing"
+      ],
+      "38": [
+        "15-year-old applicants must have completed 25 hours of supervised driving."
+      ],
+      "39": [
+        "Only one, non-sibling, minor passenger allowed in the vehicle"
+      ],
+      "40": [
+        "NO wireless communication devices while driving except to report illegal activity or summon emergency help"
+      ],
+      "41": [
+        "Have no unpaid fines for moving traffic violations"
+      ],
+      "42": [
+        "May drive at any time: From 5 a.m. to 9 p.m."
+      ],
+      "43": [
+        "Driver Services maintain driving records and processes changes to driving privileges",
+        "They also coordinate administrative hearings on chemical test failures and test refusals"
+      ],
+      "44": [
+        "Unrestricted Driver’s License — K.S.A. 8-235d Minimum age 17"
+      ],
+      "45": [
+        "Parent/Guardian must sign affidavit attesting to at least 50 hours of driving time with at least 10 at night (only for applicants who are less than 18 years old)"
+      ],
+      "46": [
+        "Vision must be at least 20/40 in one eye when screened at the Driver License Station."
+      ],
+      "47": [
+        "You will be required to answer 25 questions about traffic laws and identify certain signs"
+      ],
+      "48": [
+        "After the fourth failure of either test, you must wait a minimum of six (6) months from the most recent failed exam before retesting."
+      ],
+      "49": [
+        "If the driver license has been expired for more than 1-year full testing will be required. Full testing includes the vision, written, and driving examinations."
+      ],
+      "50": [
+        "Conviction of three (3) moving violations within a twelve-month period. (K.S.A. 8-255)"
+      ],
+      "51": [
+        "Refusing to submit to a chemical test... is a mandatory 1-year suspension for the 1st refusal"
+      ],
+      "52": [
+        "Failing to maintain continuous liability insurance on your vehicle is a mandatory indefinite suspension."
+      ],
+      "53": [
+        "Your driving privileges may be revoked if you are convicted of:",
+        "Attempting to elude a police officer."
+      ],
+      "54": [
+        "A fifth test result of .08 or greater or refusal to submit to chemical testing... will result in a permanent license revocation"
+      ],
+      "55": [
+        "Aliens - Foreign tourists, teachers or businesspeople who are here for up to one year and who hold valid Immigration Documents."
+      ],
+      "56": [
+        "Operate vehicles with a gross vehicle weight rating of less than 26,001 pounds"
+      ],
+      "57": [
+        "Thirty (30) miles per hour in any urban district"
+      ],
+      "58": [
+        "Fifty-five (55) miles per hour on any County or Township road"
+      ],
+      "59": [
+        "Seatbelt use is now a “Primary Violation” in Kansas as well.",
+        "If a law enforcement officer sees an unrestrained adult in a front seat... then that vehicle can be stopped solely for that violation."
+      ],
+      "60": [
+        "All children 4 to 8 years of age must be restrained in a federally approved child safety seat or booster seat unless the child is taller than 4’9” OR weighs more than 80 pounds."
+      ],
+      "61": [
+        "All signals must be given at least 100 feet before making the actual move or turn."
+      ],
+      "62": [
+        "Do not make a “U” turn on a curve, near the top of a hill or anywhere you cannot be seen by other drivers for at least 500 feet."
+      ],
+      "63": [
+        "wait until you can see the entire front of the vehicle you have just passed in your rearview mirror."
+      ],
+      "64": [
+        "Within 100 feet of crossing any intersection or railroad grade crossing."
+      ],
+      "65": [
+        "The “No Passing Zone” is the only pennant-shaped warning sign."
+      ],
+      "66": [
+        "Under adverse conditions use a four-second following rule."
+      ],
+      "67": [
+        "Immediately drive to the right and stop without blocking any intersection."
+      ],
+      "68": [
+        "Traffic approaching a school bus in the opposing roadway of a divided highway is not required to stop."
+      ],
+      "69": [
+        "the driver on the left shall yield the right-of-way to the vehicle on the right."
+      ],
+      "70": [
+        "Kansas’ basic speed law requires that you never drive a vehicle at a speed greater than is reasonable and prudent under the conditions then existing."
+      ],
+      "71": [
+        "When approaching a stationary emergency vehicle from the rear... move to a lane that is not next to the stopped emergency vehicle."
+      ],
+      "72": [
+        "The driver of a vehicle turning left must yield the right-of-way to vehicles approaching from the opposite direction.",
+        "If both cars enter the intersection at the same time, the car going straight through has the right-of-way."
+      ],
+      "73": [
+        "Do not enter an intersection, crosswalk, or RR crossing unless there is sufficient space on the other side for your vehicle.",
+        "Even though you may have a green light, you may not enter an intersection if there isn’t room to get all the way across."
+      ],
+      "74": [
+        "Within 15 feet of a fire hydrant."
+      ],
+      "75": [
+        "Within 50 feet of the nearest rail at railroad crossings."
+      ],
+      "76": [
+        "More than 12” from a curb."
+      ],
+      "77": [
+        "Kansas law prohibits the use of any electronic device to “write, send, or read” a written communication while driving.",
+        "It does not include GPS devices or weather reports."
+      ],
+      "78": [
+        "Avoid eye contact. Eye contact can sometimes anger an aggressive driver."
+      ],
+      "79": [
+        "Vision must be at least 20/40 in one eye when screened at the Driver License Station."
+      ],
+      "80": [
+        "Tinted lenses cut down the light that you need to see clearly under night driving conditions."
+      ],
+      "81": [
+        "A sudden change in the hum of tires on pavement can tell you the road surface or the tires have changed."
+      ],
+      "82": [
+        "Schedule proper breaks—about every 100 miles or 2 hours during long trips"
+      ],
+      "83": [
+        "Take a nap—find a safe parking area to take a 15 to 20-minute nap."
+      ],
+      "84": [
+        "The best way to prevent fatigue is sleep."
+      ],
+      "85": [
+        "Reading billboards or other road advertisements"
+      ],
+      "86": [
+        "If you need to look at a map while driving, stop in a safe parking area."
+      ],
+      "87": [
+        "To prevent yourself from becoming an aggressive driver relax and concentrate on driving. Be sure to drive the posted speed limit, be realistic about your travel time and be courteous"
+      ],
+      "88": [
+        "Alcohol and other impairing drugs are involved in approximately 40% of all fatal crashes."
+      ],
+      "89": [
+        "Vision is impacted at .02 BAC for all drivers."
+      ],
+      "90": [
+        "Time is the only medically proven method to remove alcohol or other drug combinations from the circulatory system."
+      ],
+      "91": [
+        "It takes about an hour for the body to get rid of one normal drink from the circulatory system."
+      ],
+      "92": [
+        "In Kansas, if you are under (21), you can also be arrested for alcohol impairment at [.02%]."
+      ],
+      "93": [
+        "You can lose your Driver’s License for one year if you refuse to take a BAC test."
+      ],
+      "94": [
+        "You could be sentenced to a minimum of 48 hours in jail or 100 hours of community service and your license will be suspended."
+      ],
+      "95": [
+        "You are completely and solely responsible for operating your vehicle in a safe manner. This includes the responsibility for controlling everything that occurs within the vehicle as well."
+      ],
+      "96": [
+        "Driving at night – Try not to drive late at night between the hours of midnight and 6 a.m."
+      ],
+      "97": [
+        "Alcohol and other impairing drugs reduce your ability to distinguish colors, which can be very dangerous."
+      ],
+      "98": [
+        "If you have a BAC of .08 or more, your driver’s license and driving privileges may be suspended for 30 days"
+      ],
+      "99": [
+        "Pep pills, “uppers” and diet pills can make you feel nervous, dizzy, unable to concentrate, and they can affect your vision."
+      ],
+      "100": [
+        "you may be fined $750 - $1000 plus court costs. You could be sentenced to a minimum of 48 hours in jail or 100 hours of community service and your license will be suspended."
+      ],
+      "101": [
+        "Never drink alcohol while you are taking other drugs. These drugs could multiply the effects of alcohol or have additional effects of their own."
+      ],
+      "102": [
+        "If you are angry or excited, give yourself time to cool off. If necessary, take a short walk or nap, but stay off the road until you have calmed down."
+      ],
+      "103": [
+        "There should be 10 inches between your body and the bottom of the steering wheel."
+      ],
+      "104": [
+        "the head restraints should be adjusted so the head restraint contacts the back of your head and not below the level of your ears."
+      ],
+      "105": [
+        "this adjustment adds 12 to 16 degrees additional viewing area to each side of the vehicle."
+      ],
+      "106": [
+        "In Kansas, it is illegal to drive or to be a front-seat passenger without wearing safety belts. (K.S.A. 8-2503)"
+      ],
+      "107": [
+        "More than half of the crashes that cause injury or death happen at speeds less than 40 mph and within 25 miles from home."
+      ],
+      "108": [
+        "A shoulder harness is worn across the shoulder and chest with minimal if any slack. The shoulder harness should not be worn under the arm or behind the back."
+      ],
+      "109": [
+        "studies have shown that people who use marijuana make more mistakes, have more trouble adjusting to glare and get arrested for traffic violations more than other drivers."
+      ],
+      "110": [
+        "If you are driving and you need to use your cell phone, it is best to: ... Stop in a safe parking area and then make the call"
+      ],
+      "111": [
+        "The top of the steering wheel should be no higher than the top of your shoulders and below the chin level."
+      ],
+      "112": [
+        "Adjust your rearview mirror so that it frames the rear window. You should be able to see traffic flow to the rear of the vehicle with the rearview mirror."
+      ],
+      "113": [
+        "A shoulder harness is worn across the shoulder and chest with minimal if any slack. The shoulder harness should not be worn under the arm or behind the back."
+      ],
+      "114": [
+        "If you have an automatic shoulder belt, be sure to buckle your lap belt as well. Otherwise, in a collision you could slide out of the belt and be hurt or killed."
+      ],
+      "115": [
+        "While air bags are good protection against hitting the steering wheel, dashboard, or windshield, they do not protect you if you are hit from the side or rear or if the vehicle rolls over."
+      ],
+      "116": [
+        "The law requires that all children under the age of 14 must be secured in the rear seat and wear appropriate safety restraints while the vehicle is in motion."
+      ],
+      "117": [
+        "In most vehicles, you should adjust your seat so at least 10 inches is between the center of your chest and the center of the steering wheel."
+      ],
+      "118": [
+        "Infants from birth to at least age one, and until they are at least 20 pounds should ride in the back seat in a properly installed, rear-facing infant seat."
+      ],
+      "119": [
+        "Children between the ages of 4 and 8, who are no more than 4 feet 9 inches tall, should ride in the back seat in a properly installed booster seat."
+      ],
+      "120": [
+        "Children age 12 and under should sit in the rear seat of the vehicle to avoid injury from an air bag in the event of a crash."
+      ],
+      "121": [
+        "If you release the clutch suddenly, the vehicle will jerk forward, and the engine may stall."
+      ],
+      "122": [
+        "If the drive wheels begin to spin, take your foot off the accelerator."
+      ],
+      "123": [
+        "The steering wheel is always turned in the direction you want the vehicle to move, whether moving forward or in reverse."
+      ],
+      "124": [
+        "Both hands should be placed on the outside of the steering wheel on opposite sides.",
+        "Use your fingers instead of the palms of your hands and keep your thumbs up along the face of the steering wheel."
+      ],
+      "125": [
+        "Since air bags deploy only once and deflate quickly after impact, they will not be helpful during a secondary collision."
+      ],
+      "126": [
+        "To direct the air bag at your chest instead of your face, raise your seat or use a cushion and/or adjust the steering wheel downward."
+      ],
+      "127": [
+        "Use your fingers instead of the palms of your hands and keep your thumbs up along the face of the steering wheel."
+      ],
+      "128": [
+        "When using hand-to-hand steering your left hand grasps the wheel between 7 and 8 o’clock and your right hand grasps the wheel between 4 and 5 o’clock."
+      ],
+      "129": [
+        "2 and 10 o’clock is not recommended because it can be dangerous in vehicles equipped with air bags."
+      ],
+      "130": [
+        "Use hand-over-hand steering when turning the wheel at low speeds, such as at an intersection or when parking the vehicle."
+      ],
+      "131": [
+        "It is critical to limit the steering to not more than 180 degrees when trying to evade a problem on the roadway.",
+        "When more than 180 degrees of input is used, traction loss occurs and often the vehicle moves across the roadway in the approach of oncoming vehicles."
+      ],
+      "132": [
+        "The only time that 12 o’clock is recommended is when backing a vehicle to the left or right and the driver must turn in the seat in order to see the path of travel to the rear."
+      ],
+      "133": [
+        "Check behind your vehicle before you get in. Children or small objects cannot be seen from the driver’s seat."
+      ],
+      "134": [
+        "The law says who must yield the right-of-way to another roadway user; it does not give anyone the right-of-way."
+      ],
+      "135": [
+        "When crossing a sidewalk to enter or exit a driveway, alley, or parking lot you must yield to pedestrians."
+      ],
+      "136": [
+        "Do not use your horn as it could confuse or frighten the visually impaired pedestrian or guide dog."
+      ],
+      "137": [
+        "At an uncontrolled intersection... you must yield to vehicles in the intersection and those coming from the right."
+      ],
+      "138": [
+        "If more than one vehicle arrives at the same time, the vehicle on the right goes first."
+      ],
+      "139": [
+        "You may not enter an intersection unless you can get through it without blocking traffic flow."
+      ],
+      "140": [
+        "traffic lights are horizontal, instead of vertical, where the red light is on the left, the yellow light is in the middle and the green light is on the right."
+      ],
+      "141": [
+        "Turning left at a steady green traffic light means you may turn but only when the intersection is clear to do so. You should always yield to the oncoming traffic flow and pedestrians."
+      ],
+      "142": [
+        "Steady YELLOW Traffic Light – This means the traffic light is about to change to red. You should slow down and come to a complete stop if traffic flow to the rear allows."
+      ],
+      "143": [
+        "Flashing YELLOW Traffic Light – This means slow down and proceed with caution. You should be prepared to stop for any traffic flow that may be entering the intersection."
+      ],
+      "144": [
+        "Some left turns may be permitted on red when moving from a one-way street onto another one-way street or from a two-way street onto a one-way street."
+      ],
+      "145": [
+        "Flashing RED Traffic Light – This means you must stop... and use the same procedure as you would at a stop sign"
+      ],
+      "146": [
+        "These signs are usually yellow with black lettering or symbols and are diamond shaped."
+      ],
+      "147": [
+        "A round yellow warning sign with an “X” symbol and black “RR” letters is placed along the road prior to a highway-railroad grade crossing."
+      ],
+      "148": [
+        "A 100-car freight train traveling at 55 mph will need more than a mile to stop, which is about 18 football fields, once the train is set into emergency braking."
+      ],
+      "149": [
+        "If you do stall your vehicle when crossing railroad tracks, get everyone out of the vehicle and far away from the tracks, run in the direction from which the train is approaching."
+      ],
+      "150": [
+        "It is wise not to shift gears when crossing railroad tracks just in case you might stall."
+      ],
+      "151": [
+        "Information provided on the ENS sign is a toll-free dispatch number for each railroad, and directly below the dispatch number is a Department of Transportation number that identifies the exact location"
+      ],
+      "152": [
+        "They are generally diamond or rectangular shaped and orange with black letters or symbols."
+      ],
+      "153": [
+        "RED Arrow – This means you must stop, and you may not go in the direction of the arrow until the green arrow or light returns on the signal."
+      ],
+      "154": [
+        "At highway-railroad grade crossings with more than one train track, the number of tracks will be posted. These signs warn you that there is more than one track and there may be more than one train"
+      ],
+      "155": [
+        "Some warning signs may be fluorescent yellow, such as school zones, school crossing and pedestrian crossing."
+      ],
+      "156": [
+        "If you are stopped at the intersection and the light turns green, you must allow crossing traffic to clear the intersection before you go ahead."
+      ],
+      "157": [
+        "[Fines for speeding in a work zone are doubled.]"
+      ],
+      "158": [
+        "Some regulatory signs have a red circle with a red slash over a symbol. These signs prohibit certain actions."
+      ],
+      "159": [
+        "The maximum limit should be driven only in ideal driving conditions, and you must reduce your speed when weather or traffic conditions require it."
+      ],
+      "160": [
+        "The speed limit is required only when flashing; otherwise obey the roadway’s speed limit."
+      ],
+      "161": [
+        "Yield Sign - A yield sign is a red and white downward pointing triangle with red letters."
+      ],
+      "162": [
+        "Shared Center Lane Left Turn Only – This sign tells you where a lane is reserved for the use of left turning vehicles from either direction and is not to be used for through traffic or passing"
+      ],
+      "163": [
+        "Do Not Block Intersection – This sign tells you not to stop, stand or park at any time in the intersection. You must not enter an intersection if traffic conditions do not permit you to clear"
+      ],
+      "164": [
+        "Do Not Enter – A square sign with a white horizontal line inside a red circle means you cannot enter."
+      ],
+      "165": [
+        "If the word “Exit” is written on the left side of an exit sign, the exit lane or ramp is to the left"
+      ],
+      "166": [
+        "Service Signs - These blue signs are square or rectangular shaped with white lettering or symbols. They show the location of various services such as rest areas, gas stations, hotels or hospitals."
+      ],
+      "167": [
+        "Incident Signs - These signs are temporary and let you know when you should be prepared to stop... These signs are fluorescent pink with black lettering."
+      ],
+      "168": [
+        "If the dashed line is on your side, you may pass if a safe gap in traffic is available."
+      ],
+      "169": [
+        "Two solid yellow lines between lanes of traffic means neither side may pass. You may cross a solid yellow line to turn when gaps in traffic flow exist."
+      ],
+      "170": [
+        "A solid white line between lanes of traffic means that you must stay within the lane unless a special situation requires a lane change."
+      ],
+      "171": [
+        "If there is not a NO TURN ON RED sign at the traffic light, after stopping at the stop line and checking for traffic and pedestrians, you may turn right on red."
+      ],
+      "172": [
+        "If you are leaving a driveway, alley or building area... You should stop behind the sidewalk, and you must yield the right-of-way to all pedestrians and traffic."
+      ],
+      "173": [
+        "A flashing yellow “X” means the lane is for turning only."
+      ],
+      "174": [
+        "A steady yellow “X” means that the use of the lane is changing, and you should move out of it as soon as it is safe to do so."
+      ],
+      "175": [
+        "Reserved lanes... often have a white diamond posted at the side of the road or painted on the road surface."
+      ],
+      "176": [
+        "“HOV 3” means there must be at least three people in the vehicle to use that lane."
+      ],
+      "177": [
+        "If you miss a turn or exit, do not back up. A driver should go on to where it is safe to turn around."
+      ],
+      "178": [
+        "On a road with three or more lanes traveling in the same direction, use the center travel lane"
+      ],
+      "179": [
+        "On multi-lane roads, the left-most lane is intended to be used for passing slower vehicles."
+      ],
+      "180": [
+        "As a safety precaution, turn into the closest lane to you that is going in the direction you want to go."
+      ],
+      "181": [
+        "On right turns, avoid swinging wide to the left before making the turn.",
+        "the driver behind you may think you are changing lanes or going to turn left and may try to pass you on the right."
+      ],
+      "182": [
+        "The safest way to change direction is to turn right and go around the block. This avoids most left turns across traffic."
+      ],
+      "183": [
+        "If you are on the interstate system, go to the next exit and turn around. It is illegal to cross the median strip or to use the crossover areas reserved for emergency vehicles."
+      ],
+      "184": [
+        "The safest way to perform a two-point turnabout is to back the vehicle into the driveway. This allows you to see traffic better when leaving the driveway."
+      ],
+      "185": [
+        "Three-Point Turnabout – This is the most difficult and dangerous way to perform a turnabout."
+      ],
+      "186": [
+        "If you must make a U-turn, move as far to the right as you can."
+      ],
+      "187": [
+        "Slow your speed to about 15 to 20 mph."
+      ],
+      "188": [
+        "with entering traffic yielding the right-of-way to circulating traffic."
+      ],
+      "189": [
+        "If you are going straight through, no signal is needed while approaching. However, signal “right” before the exit you want to take."
+      ],
+      "190": [
+        "Do not drive alongside large vehicles, such as trucks and buses in a traffic circle or roundabout."
+      ],
+      "191": [
+        "You must stop for a school bus that is stopped with its red lights flashing and/or stop arm extended."
+      ],
+      "192": [
+        "When entering your vehicle on the street, approach the driver’s door with your key in hand from the front of the vehicle to increase awareness of oncoming traffic."
+      ],
+      "193": [
+        "Turn the steering wheel sharply toward the edge or curb side of the roadway while moving slowly forward."
+      ],
+      "194": [
+        "Move slowly forward turning the steering wheel sharply toward the edge of the road."
+      ],
+      "195": [
+        "move straight back until your front bumper clears the vehicle parked beside you, opposite of the way you are turning."
+      ],
+      "196": [
+        "Vehicles travel counterclockwise around a raised center island, with entering traffic yielding the right-of-way to circulating traffic."
+      ],
+      "197": [
+        "You must stop for a school bus when there is a center turning lane between the roadways, whether the school bus is on your side of the road or on the opposite side of the road."
+      ],
+      "198": [
+        "Within 15 feet of a fire hydrant.",
+        "Within 15 ft. of a fire hydrant"
+      ],
+      "199": [
+        "Within 30 ft. of a traffic signal, stop sign or yield sign"
+      ],
+      "200": [
+        "Red – indicates fire zone restrictions"
+      ],
+      "201": [
+        "White – indicates that only short stops are permitted"
+      ],
+      "202": [
+        "More than 1 ft. from the curb",
+        "bring the vehicle to a stop parallel to and within 12 inches of the curb"
+      ],
+      "203": [
+        "In the city, you should look at least two blocks or two traffic signals ahead."
+      ],
+      "204": [
+        "A visual lead is an area 20 to 30 seconds ahead from the front of the vehicle."
+      ],
+      "205": [
+        "At 60 mph, it can take about 4 to 5 seconds or 359 feet to react to a problem and bring the vehicle to a stop."
+      ],
+      "206": [
+        "If stopped, look left, right and left again before entering the intersection."
+      ],
+      "207": [
+        "Straighten wheels and move forward into the appropriate lane of traffic when the door post of the vehicle clears the rear bumper of the vehicle parked ahead of you."
+      ],
+      "208": [
+        "Regulatory signs are: a. Green b. Yellow c. White",
+        "These signs are square, rectangular, or have a special shape and are white with black, red or green letters or symbols."
+      ],
+      "209": [
+        "When parking your vehicle facing uphill with a curb: ... b. Your wheels should be turned away from the curb",
+        "Move slowly forward turning the steering wheel sharply away from the curb."
+      ],
+      "210": [
+        "When turning left at an intersection, pull into the intersection to be ready to turn left."
+      ],
+      "211": [
+        "Approach any highway-railroad grade crossing by slowing down at the round warning sign and looking each direction prior to the tracks"
+      ],
+      "212": [
+        "Identify a 4 to 5 second gap in traffic, signal and look again in the direction of the lane change."
+      ],
+      "213": [
+        "Check your “blind spots” by turning your head and looking over your shoulder in the direction you plan to move."
+      ],
+      "214": [
+        "Use your mirrors to check behind your vehicle whenever you slow down. This is very important to check when you slow down quickly or at points where a following would not expect you to slow down"
+      ],
+      "215": [
+        "The average perception time for an alert driver is ¾ second to 1 second."
+      ],
+      "216": [
+        "At 50 mph, your vehicle will travel a minimum of 268 feet."
+      ],
+      "217": [
+        "When you double your speed from 20 to 40 mph the impact is 4 times greater. The braking distance is also 4 times longer."
+      ],
+      "218": [
+        "Look at least ten seconds ahead of your vehicle to avoid panic stops by seeing events and problems well ahead of time."
+      ],
+      "219": [
+        "Always reduce speed prior to entering the curve to a safe speed",
+        "Hard braking after the entry to a curve could cause the vehicle tires to lose traction."
+      ],
+      "220": [
+        "Roadways are more slippery when it first starts to rain, snow or sleet as the water will mix with dirt, oil and other substances on the roadway."
+      ],
+      "221": [
+        "On wet roadways you should reduce speed about 10 mph below recommended speeds to allow for additional stopping distance and potential traction loss while steering."
+      ],
+      "222": [
+        "If there is packed snow on the road, reduce your speed by half or more."
+      ],
+      "223": [
+        "Vehicles in Kansas may be equipped with studded snow tires from November 1st to April 1st each year."
+      ],
+      "224": [
+        "Roadways are higher in the center and sloped to the side, causing a skidding vehicle to slide off the roadway into a guardrail or drainage ditch."
+      ],
+      "225": [
+        "Bridges do not have earth underneath them to help insulate them against the cold and can be colder and more ice-covered than other roadways."
+      ],
+      "226": [
+        "In a heavy rain, your tires can lose all traction with the road at 45-50 mph due to the water pushing against the tires as the vehicle is moving forward."
+      ],
+      "227": [
+        "Badly worn tires will lose traction at much lower speeds (25-30 mph)."
+      ],
+      "228": [
+        "Driving more than 15 mph slower than the traffic flow pattern can be just as dangerous as excessive speed."
+      ],
+      "229": [
+        "Use the acceleration lane to reach the speed of other vehicles before pulling onto the roadway. Do not drive to the end of the acceleration lane and stop."
+      ],
+      "230": [
+        "When using a deceleration lane (exit ramp), do not slow down until the vehicle has moved onto the deceleration lane."
+      ],
+      "231": [
+        "Driving 55 mph in a snowstorm is not recognized as an acceptable speed for a snowy roadway, even if the posted speed limit allows for 55 mph.",
+        "You may be cited for traveling too fast for conditions when above the legal limitations."
+      ],
+      "232": [
+        "The best way to avoid speeding is to check your speedometer frequently.",
+        "You may not be very good at judging how fast you are going without checking the speedometer, so it is easy to be traveling much faster than perceived."
+      ],
+      "233": [
+        "Larger vehicles with a higher center of gravity have special handling characteristics and are more prone to rollovers."
+      ],
+      "234": [
+        "ABS is designed to allow steering and braking at the same time without losing vehicle balance."
+      ],
+      "235": [
+        "The basics for ABS usage are Search (for open space), Stomp (on the brake pedal firmly), Steer (to the open space)."
+      ],
+      "236": [
+        "The basics for ABS usage are Search (for open space), Stomp (on the brake pedal firmly), Steer (to the open space)."
+      ],
+      "237": [
+        "If the light stays lit the ABS is not working correctly."
+      ],
+      "238": [
+        "In traction loss, with ESP you should steer the vehicle toward the direction you are looking and avoid abrupt steering."
+      ],
+      "239": [
+        "Keep a minimum following distance of two seconds with an additional second for any unusual weather or traffic conditions."
+      ],
+      "240": [
+        "Keep a minimum following distance of two seconds with an additional second for any unusual weather or traffic conditions."
+      ],
+      "241": [
+        "Motorcycles are different sizes and have different braking capabilities than other motor vehicles.",
+        "If the motorcycle should fall, your vehicle needs extra stopping or steering distance to avoid the rider."
+      ],
+      "242": [
+        "Add more space in front of your vehicle when carrying a heavy load or pulling a trailer.",
+        "The extra weight increases your vehicle’s stopping time and decreases steering ability."
+      ],
+      "243": [
+        "Many states require other vehicles to stay at least 500 feet to the rear of emergency equipment"
+      ],
+      "244": [
+        "wait until the roadway ahead is clear, then reduce speed slowly to encourage the tailgater to drive around your vehicle.",
+        "Never slow down quickly to discourage a tailgater"
+      ],
+      "245": [
+        "If your vehicle is being followed too closely increase your following distance by 2 to 3 seconds to allow for more time and space to stop."
+      ],
+      "246": [
+        "In general, it is safest to drive in the center of your lane, so your vehicle can move left or right to avoid a potential problem."
+      ],
+      "247": [
+        "When merging with other traffic flow, select a gap in the traffic flow of 4 to 6 seconds."
+      ],
+      "248": [
+        "When going straight after stopping at an intersection, under normal circumstances, a vehicle can get through an intersection within 3 to 5 seconds."
+      ],
+      "249": [
+        "it may take 15 to 18 seconds to complete a left turn and get up to speed."
+      ],
+      "250": [
+        "Even if you have the green traffic signal light, do not start across the intersection when vehicles are blocking the way."
+      ],
+      "251": [
+        "The driver with an active turn signal may plan to turn after they go past your vehicle or may have forgotten to turn the signal off from a prior turn."
+      ],
+      "252": [
+        "Continue to pass until the complete front of the passed vehicle is visible in your rearview mirror."
+      ],
+      "253": [
+        "Keep right. Once aware that a vehicle wants to pass, move to the right side of the lane. Maintain a constant speed to allow the driver to pass you."
+      ],
+      "254": [
+        "As a rule, only pass one vehicle at a time since it is difficult to determine the amount of time needed to pass, which may be as many as 20 to 30 seconds."
+      ],
+      "255": [
+        "An oncoming vehicle that is more than 25 seconds from your vehicle generally appears to be standing still."
+      ],
+      "256": [
+        "You must be able to see at least 1/3 of a mile or about 20 to 25 seconds ahead when driving at 55 to 60 mph."
+      ],
+      "257": [
+        "slow down and let the vehicle pass first so that your vehicle can pass only one roadway user at a time."
+      ],
+      "258": [
+        "Many states including Kansas require you to turn on your headlights whenever the wipers are used on the vehicle."
+      ],
+      "259": [
+        "When driving away from a rising or setting sun, turn on your headlights. Drivers coming towards you may have trouble seeing your vehicle."
+      ],
+      "260": [
+        "give your horn a light tap: ... When visibility ahead is limited — like a steep hill, a sharp curve or exiting a narrow alley."
+      ],
+      "261": [
+        "If there is danger, do not be afraid to use the horn with a SHARP BLAST. For example: When a pedestrian or bicyclist is about to walk, run or ride into the street"
+      ],
+      "262": [
+        "There are several occasions when you should not use your horn. They include: When near blind pedestrians"
+      ],
+      "263": [
+        "Get your vehicle off the road and away from traffic, if possible.",
+        "Stop where other roadway users have a clear view of your vehicle. Do not stop just over a hill or just around a curve where visibility is limited."
+      ],
+      "264": [
+        "You should not pass if there is a railroad grade crossing within the 20 to 25 second area ahead."
+      ],
+      "265": [
+        "A white cloth attached to a vehicle indicates a disabled vehicle is present, so tie a white cloth to the antenna, side mirror or door handle to signal an emergency."
+      ],
+      "266": [
+        "Place emergency flares about 200 to 300 feet behind the vehicle, giving other drivers some time to change lanes if necessary."
+      ],
+      "267": [
+        "In urban areas signal 100 feet or 3 to 5 seconds before making a turn or a lane change."
+      ],
+      "268": [
+        "At speeds above 40 mph, signal 200 feet or 3 to 5 seconds before making a turn or a lane change."
+      ],
+      "269": [
+        "If Driver A is turning at the intersection they should wait until they have passed the side street before signaling their intentions"
+      ],
+      "270": [
+        "When stopping or reducing speed at a place where another driver may not expect it, tap the brake pedal three or four times lightly to warn other roadway users."
+      ],
+      "271": [
+        "Having a Driver’s License is a privilege, not a right.",
+        "Remember, getting a Driver’s License is not a right; it is a privilege that must be earned and maintained."
+      ],
+      "272": [
+        "If you are a minor, you and your parent(s) or guardian(s) will be responsible for the financial consequences of your driving."
+      ],
+      "273": [
+        "Larger vehicles can be less stable and have reduced visibility around the vehicle."
+      ],
+      "274": [
+        "Good decision making starts with good visual search.",
+        "To prepare for the decision-making process it is very important to search actively in the area around your vehicle"
+      ],
+      "275": [
+        "Generally, you are limited to changing your direction (moving left or right), changing your speed (slowing, stopping, or speeding up), or communicating"
+      ],
+      "276": [
+        "When overtaking a pedestrian who is walking along the roadway and an oncoming vehicle is approaching: a. Slow down and let the vehicle pass first"
+      ],
+      "277": [
+        "Drivers must cancel the signal if it has not cancelled by itself, so other roadway users do not become confused by an incorrect signal."
+      ],
+      "278": [
+        "In avoiding a collision, you have three options: brake, steer or accelerate."
+      ],
+      "279": [
+        "Press on the brake pedal as hard as you can and keep pressing on it.",
+        "The ABS will only work with the brake pedal pushed down fully."
+      ],
+      "280": [
+        "If the brakes lock-up, you will feel the vehicle start to skid. Ease up on the brake pedal and then reapply with control."
+      ],
+      "281": [
+        "In most cases, you can steer the vehicle quicker than you can stop it. You should consider steering in order to avoid a collision."
+      ],
+      "282": [
+        "This may happen when another vehicle is about to hit you from the side or from behind and there is room to the front of your vehicle to get out of danger."
+      ],
+      "283": [
+        "Visually look for open space – You must pay attention to where your vehicle can go on the roadway. Do not fixate on the hazard you are trying to avoid."
+      ],
+      "284": [
+        "If the vehicle continues straight while steering, traction is lost to the front tires."
+      ],
+      "285": [
+        "If rear traction is lost, turn the steering wheel in the direction of the intended path of travel (the direction you want to go)"
+      ],
+      "286": [
+        "Press yourself against the back of your seat and put your head against the head restraint. Be ready to apply your brakes"
+      ],
+      "287": [
+        "If your vehicle is about to be hit from the front it is important to try to have a “glancing blow” rather than being struck head on."
+      ],
+      "288": [
+        "Rapidly pump the brake pedal several times. This will often build up enough brake pressure to allow you to stop."
+      ],
+      "289": [
+        "Grip the steering wheel firmly and keep the vehicle going straight. Slow down gradually. Take your foot off the accelerator pedal. Do not brake."
+      ],
+      "290": [
+        "Shift to neutral and look for an escape path. Do not brake hard, brake with steady pressure on the pedal, slow down then pull off the roadway."
+      ],
+      "291": [
+        "Shift to neutral and search for an escape path.",
+        "Steer smoothly, brake gently and pull off the roadway."
+      ],
+      "292": [
+        "Do not brake hard, as this can put your vehicle into a skid and make it difficult to steer. Instead, gently apply the brakes"
+      ],
+      "293": [
+        "Steer straight ahead and slow to 25 mph or less."
+      ],
+      "294": [
+        "turn the steering wheel about one quarter-turn to return to the pavement. DO NOT OVERSTEER."
+      ],
+      "295": [
+        "Rollovers are much more likely than most other types of crashes to result in serious injury or death.",
+        "one of every three passenger vehicle occupant deaths occur in rollovers."
+      ],
+      "296": [
+        "More than 80% of all rollovers involve no other vehicle besides the one that rolls over."
+      ],
+      "297": [
+        "due to their higher centers of gravity, which makes them top heavy and more likely to tip over."
+      ],
+      "298": [
+        "The most effective way to reduce the risk of injury or death in a rollover is to use your safety belt."
+      ],
+      "299": [
+        "Your lower beam headlights will let you see clearly about 150 to 200 feet ahead."
+      ],
+      "300": [
+        "Your high beam headlights will let you see clearly about 350 to 400 feet ahead. Driving at a speed that allows you to stop within this distance is about 65 mph."
+      ],
+      "301": [
+        "You need to increase your following distance by adding at least one additional second for night driving conditions and at least two additional seconds for driving on unfamiliar roadways at night."
+      ],
+      "302": [
+        "When you cannot see any farther than 100 feet ahead due to rain, snow, blowing dust, smoke, or thick fog, you cannot safely drive faster than 30 mph."
+      ],
+      "303": [
+        "When driving in fog, snow or heavy rain use your low beams and fog lights for best visibility, even during the day"
+      ],
+      "304": [
+        "If the sun is behind you, be aware that oncoming drivers may not be able to see your turn signals or your vehicle because of glare."
+      ],
+      "305": [
+        "Use the minimum 3 second following interval, increasing the following interval by an additional second for any unusual weather or traffic conditions."
+      ],
+      "306": [
+        "Slow down gradually. Take your foot off the accelerator pedal.",
+        "Do not brake. Allow the vehicle to slow by itself or brake gently if necessary."
+      ],
+      "307": [
+        "If there is no sidewalk, you should walk on the left side of the street facing the oncoming traffic."
+      ],
+      "308": [
+        "If the flashing “DON’T WALK” signal appears when you are crossing the street, you may finish crossing the street."
+      ],
+      "309": [
+        "You must yield to pedestrians always. Even if they are not in a crosswalk and crossing the street where they should not be (also known as jaywalking), you must stop for them."
+      ],
+      "310": [
+        "When a pedestrian is crossing a street guided by a dog or carrying a white cane, you must come to a complete stop."
+      ],
+      "311": [
+        "When approaching a stopped vehicle from behind, slow down and do not pass until you are sure that there are no pedestrians crossing in front of it. This is true even on multi-lane roads."
+      ],
+      "312": [
+        "Bicyclists are considered vehicles when used on roadways. They are expected to follow the same rules of the road as motorized vehicles."
+      ],
+      "313": [
+        "You are required to ride on the right side of the roadway."
+      ],
+      "314": [
+        "You are allowed to ride two abreast or two wide in a lane. Doing this creates a tight vehicular density so that cars may pass you more efficiently"
+      ],
+      "315": [
+        "Under the Dead Red Law, if you reach an intersection and the traffic signal will not respond to your bicycle, after waiting what you determine is a reasonable amount of time, you may cross"
+      ],
+      "316": [
+        "Use of a headlight at dusk is required, but a taillight is highly recommended to give you further visibility."
+      ],
+      "317": [
+        "If you are about to make a right turn, you must not pass a bicyclist immediately before the turn. To avoid a collision, you should slow down and let the cyclist clear the intersection"
+      ],
+      "318": [
+        "Do not sound your horn close to bicyclists unless there is a chance of a collision. Sounding your horn to alert your presence may startle them and cause them to steer into your path"
+      ],
+      "319": [
+        "Like motor vehicles, bicycles cannot brake as quickly or turn as sharply under these conditions. These conditions affect bicycles much more than vehicles."
+      ],
+      "320": [
+        "The “Dutch Reach” method can be performed to safely help you achieve exiting your vehicle. It entails that the motorist uses their right hand to pull the handle to open the door"
+      ],
+      "321": [
+        "Sharrows - are road markers on the pavement that provide a recommendation of where in a lane a bicyclist should ride to flow easiest with other traffic."
+      ],
+      "322": [
+        "Keep in mind that a bicyclist may be unable to signal if road or traffic conditions require them to keep both hands on the handlebars."
+      ],
+      "323": [
+        "Motorcycle/scooter/moped operators have the right to use a complete traffic lane, and two motorcycles/scooters/mopeds may share a lane."
+      ],
+      "324": [
+        "The capability of a maximum design speed of no more than 30 miles mph."
+      ],
+      "325": [
+        "Nearly 40 percent were caused by the other vehicle turning left in front of the motorcyclist/scooter/moped."
+      ],
+      "326": [
+        "Do not pull out in front of a motorcycle/scooter/moped until you see that it is beginning to turn."
+      ],
+      "327": [
+        "When following a motorcyclist/scooter/moped, allow for a 3 to 4 second following distance or more in wet conditions"
+      ],
+      "328": [
+        "Because of their vulnerability, the blinding effect of your high beams can be far more dangerous to them than to drivers of motor vehicles."
+      ],
+      "329": [
+        "When you hear a siren, or see a vehicle approaching with flashing lights, move to the right and pull over to the curb or edge of the road and stop."
+      ],
+      "330": [
+        "You must stay at least 500 feet away from the emergency vehicle."
+      ],
+      "331": [
+        "Turn on your hazard flashers and if at night your interior lights to help the officer see that everything is in order inside the vehicle."
+      ],
+      "332": [
+        "tell the officer where they are located and reach for them slowly with one hand on the wheel."
+      ],
+      "333": [
+        "vacate the lane closest if safe and possible to do so, or slow to a speed safe for road, weather, and traffic conditions."
+      ],
+      "334": [
+        "When a motorcycle/scooter/moped is passing your vehicle, you should maintain your lane position and speed."
+      ],
+      "335": [
+        "vacate the lane closest if safe and possible to do so, or slow to a speed safe for road, weather, and traffic conditions."
+      ],
+      "336": [
+        "In more than 70% of all fatal crashes involving cars and commercial vehicles, police report that the car driver contributed to the cause of the crash."
+      ],
+      "337": [
+        "If you cannot see the driver’s face in the side view mirror, they cannot see you."
+      ],
+      "338": [
+        "look for the whole front of the vehicle in your rear-view mirror before pulling in front and maintaining speed."
+      ],
+      "339": [
+        "large vehicles have huge blind spots directly behind them that extend up to 200 feet."
+      ],
+      "340": [
+        "swing wide to the left in order to safely turn right and clear the corner of a curb or other obstruction."
+      ],
+      "341": [
+        "keep as far as possible to the right side of the roadway to avoid a side swept crash and to reduce the wind turbulence between the two vehicles, which pushes the vehicles apart."
+      ],
+      "342": [
+        "These stop lines help to set you farther back at an intersection to give larger vehicles more turning space. Always stop behind stop lines."
+      ],
+      "343": [
+        "These ramps are to be used only by large vehicles that are out of control or cannot stop because of brake failure. Never stop or park in the area of these ramps."
+      ],
+      "344": [
+        "You may pass the zone as soon as it is safe to do so and at no faster than 10 mph."
+      ],
+      "345": [
+        "Do not overtake and pass on the left of a trolley or light rail vehicle... except when you are on a one-way street.",
+        "When the tracks are so close to the right side of the road that you cannot pass on the right, or when a traffic officer directs you, pass on the left."
+      ],
+      "346": [
+        "A fluorescent or reflective orange and red triangle displayed on the rear of vehicles drawn by animals, farm equipment or construction equipment means the vehicle is traveling less than 25 mph."
+      ],
+      "347": [
+        "Normal speeds for animal drawn vehicles range between 5 and 8 miles per hour."
+      ],
+      "348": [
+        "do not use your horn or “rev” the engine because this may scare the horse and cause a crash."
+      ],
+      "349": [
+        "If you are driving a slow-moving vehicle and you must drive so slowly that other vehicles have to reduce speed to the rear, pull to the side of the roadway when safe to do so and let the other vehicles pass."
+      ],
+      "350": [
+        "To avoid a crash, do not turn until the truck or bus has completed its turn."
+      ],
+      "351": [
+        "You must yield to pedestrians always. Even if they are not in a crosswalk and crossing the street where they should not be (also known as jaywalking), you must stop for them."
+      ],
+      "352": [
+        "Motorcycle/scooter/moped operators have the right to use a complete traffic lane, and two motorcycles/scooters/mopeds may share a lane."
+      ],
+      "353": [
+        "When driving on gravel or dirt, you must reduce your speed and increase your following distance, since it will take much longer to stop due to loss of traction."
+      ],
+      "354": [
+        "It is recommended that you use low beam headlights to make your vehicle more visible to others, slow down and increase your following distance."
+      ],
+      "355": [
+        "Open Bridge Gratings or Steel Bridges – Reduce speed as traction for braking and steering is reduced. Due to the reduced traction, keep a firm grip on the steering wheel"
+      ],
+      "356": [
+        "typically do not have lights or crossing gates; therefore, you should always slow down, look both ways and be prepared to stop for a train before crossing the tracks."
+      ],
+      "357": [
+        "Dim your high beams whenever you come within about a one-block distance of an oncoming vehicle."
+      ],
+      "358": [
+        "If the driver fails to dim their lights, look toward the right side of the road to keep from being blinded by their headlights."
+      ],
+      "359": [
+        "Use your low beams when following another vehicle, in heavy traffic, in fog, or when it is snowing or raining hard."
+      ],
+      "360": [
+        "Remember, 6 inches of water will reach the bottom of most passenger cars, causing loss of control or possible stalling"
+      ],
+      "361": [
+        "2 feet of rushing water can carry away most vehicles."
+      ],
+      "362": [
+        "All temporary signs in work zones have an orange background and black letters or symbols and tell you what to do"
+      ],
+      "363": [
+        "Merge as soon as possible. Motorists can help maintain traffic flow and posted speeds by moving to the appropriate lane at first notice of an approaching work zone."
+      ],
+      "364": [
+        "Motorists can help maintain traffic flow and posted speeds by moving to the appropriate lane at first notice of an approaching work zone."
+      ],
+      "365": [
+        "Observe the posted signs until you see the one that says, “End Road Work.”"
+      ],
+      "366": [
+        "If a collision is inevitable, do not swerve to avoid the animal.",
+        "Concentrate on retaining control of the vehicle before, during, and after the collision with the animal."
+      ],
+      "367": [
+        "Use caution when driving at dawn and dusk and between the months of October through December, when animals are most active."
+      ],
+      "368": [
+        "Slow down until the dog is near your vehicle, then accelerate away from the dog as it approaches."
+      ],
+      "369": [
+        "Deer tend to fixate on headlights so flashing them may cause the animal to freeze in the road."
+      ],
+      "370": [
+        "You must score an 80% to pass the knowledge test."
+      ],
+      "371": [
+        "After the fourth failure of either test, you must wait a minimum of six (6) months from the most recent failed exam before retesting.",
+        "If you fail to pass the 4th time, you will be required to wait 6 months from the most recent failed exam before starting the process again."
+      ],
+      "372": [
+        "If you are under 17 years old, you must hold your Instruction Permit for one full year or until reaching age 17 whichever comes first, before you are eligible to take the Driver’s License Test."
+      ],
+      "373": [
+        "Move slowly forward turning the steering wheel sharply away from the curb. Stop then allow the vehicle to roll slowly back until the tire touches the curb and stop.",
+        "1. Which way should your wheels face when parking uphill with a curb? ... c. away from the curb"
+      ],
+      "374": [
+        "Continue to pass until the complete front of the passed vehicle is visible in your rearview mirror.",
+        "2. Continue to pass another vehicle until: ... b. the complete front of the passed vehicle is visible in your rearview mirror"
+      ],
+      "375": [
+        "These stop lines help to set you farther back at an intersection to give larger vehicles more turning space.",
+        "10. Why is it important to stop at stop lines? a. to give larger vehicles more turning space"
+      ],
+      "376": [
+        "Roadways are more slippery when it first starts to rain, snow or sleet as the water will mix with dirt, oil and other substances on the roadway.",
+        "11. Roadways are more slippery when: a. it first starts to rain, snow or sleet"
+      ],
+      "377": [
+        "If you do stall your vehicle when crossing railroad tracks, get everyone out of the vehicle and far away from the tracks, run in the direction from which the train is approaching.",
+        "13. What should you do if your vehicle stalls when crossing railroad tracks: ... b. run in the direction from which the train is approaching"
+      ],
+      "378": [
+        "You will NOT have to open the hood or crawl under the vehicle."
+      ],
+      "379": [
+        "To check tire pressure, use the recommended psi (pounds per square inch) located in the vehicle owner’s manual or the driver’s side door jamb of the vehicle."
+      ],
+      "380": [
+        "Select a point on your tire where the tread appears to be lowest and place Lincoln’s head into one of the grooves."
+      ],
+      "381": [
+        "Over inflation increases the chance of tread separation and tire failure."
+      ],
+      "382": [
+        "fluid loss could indicate component failure in areas where levels might not be readily checked, such as the transmission or fuel systems."
+      ],
+      "383": [
+        "**Warning: Never open the radiator cap on a hot car! Wait until the car has cooled down first."
+      ],
+      "384": [
+        "If outside temperature is over 85°F, air conditioner must work properly"
+      ],
+      "385": [
+        "properly place the safety belt across your hips and shoulder."
+      ],
+      "386": [
+        "make sure your defroster is working properly because it improves visibility, especially during cold weather."
+      ],
+      "387": [
+        "Test the defroster by activating the fan and placing your hand over the dashboard’s vent to ensure it is working properly."
+      ],
+      "388": [
+        "they help to warn you if external lights, such as turn signals and high beams are still active when not appropriate."
+      ],
+      "389": [
+        "If your tread gets below that, your car’s ability to grip the road in adverse conditions is greatly reduced."
+      ],
+      "390": [
+        "With a parent/guardian or friend, who is properly licensed and over the age of 21, practice inspecting various types of vehicles"
+      ],
+      "391": [
+        "low inflation or lack of tread increases the effect of hydroplaning, reduces cornering ability, and increases the chance of blowout"
+      ],
+      "392": [
+        "If your friend does not see both lights? If not, you should replace the bulb or fuse. If you don’t know how, get a professional to do it."
+      ],
+      "393": [
+        "With a parent/guardian or friend, who is properly licensed and over the age of 21, practice these exercises"
+      ],
+      "394": [
+        "A reversal is when you stop and reverse direction to get a better position. Stopping without changing direction does not count as a reversal."
+      ],
+      "395": [
+        "Touching or crossing over an exercise boundary line or cone with any part of your vehicle, other than the vehicle’s mirrors is considered an encroachment."
+      ],
+      "396": [
+        "If your turn signal cancels automatically, make sure to reactivate it when necessary."
+      ],
+      "397": [
+        "Bring the vehicle within 12 inches of the curb side of the space without crossing side or rear boundaries marked by lines or cones."
+      ],
+      "398": [
+        "A safe gap when stopping behind another vehicle is to stop where you can see the rear tires of the vehicle ahead of you."
+      ],
+      "399": [
+        "Keep the front wheels aimed straight ahead."
+      ],
+      "400": [
+        "Do not change lanes while proceeding through the intersection."
+      ],
+      "401": [
+        "move into the right-most lane when it is safe to do so (if not already there).",
+        "Your vehicle should be centered in the proper lane (right-most lane)"
+      ],
+      "402": [
+        "You will then back the vehicle to the right into the street and drive forward out of the exercise area"
+      ],
+      "403": [
+        "You may be asked to drive past the entrance to a driveway or alley"
+      ],
+      "404": [
+        "Directions will be given to you so you will have plenty of time to do what the examiner has asked. You will not be asked to drive in an unsafe manner."
+      ],
+      "405": [
+        "it is important to check traffic prior to entering or exiting a roadway.",
+        "make sure that it is safe to perform the exercise and that the roadway is clear in both directions before entering back into traffic or leaving the exercise area."
+      ],
+      "406": [
+        "If you do not maneuver the vehicle into its final position as described by the examiner, points will be added to your score."
+      ],
+      "407": [
+        "Do not change lanes while proceeding through the intersection.",
+        "Do not attempt lane changes at intersections."
+      ],
+      "408": [
+        "smoothly merge into the proper lane of traffic without stopping or crossing over any solid painted lines."
+      ],
+      "409": [
+        "Before entering the curve, reduce your speed so further braking is not required in the curve."
+      ],
+      "410": [
+        "Keep both hands on the outside of the steering wheel at all times unless using other controls."
+      ],
+      "411": [
+        "Finish a right turn in the right-most (curb) lane."
+      ],
+      "412": [
+        "A safe gap when stopping behind another vehicle is to stop where you can see the rear tires of the vehicle ahead of you."
+      ],
+      "413": [
+        "Doing any of the following during your road exam will result in an automatic failure:",
+        "If you do not check your blind spots"
+      ],
+      "414": [
+        "If you put the vehicle over sidewalks or curbs unnecessarily."
+      ],
+      "415": [
+        "If one person will be doing all the driving, 6 to 8 hours of driving in any one day should be considered the limit."
+      ],
+      "416": [
+        "When two or more persons can share the driving, total driving time should not exceed 10 to 11 hours."
+      ],
+      "417": [
+        "10 to 15-minute breaks every 2 to 3 hours"
+      ],
+      "418": [
+        "When stopping at a stop sign or traffic signal do not stop over marked stop line, pedestrian crosswalk, sidewalk, or other marker"
+      ],
+      "419": [
+        "Avoid driving after dark when visibility is limited and particularly after 11 p.m. when you are more apt to fall asleep while driving."
+      ],
+      "420": [
+        "check your blind spots by looking over your shoulder (head check)"
+      ],
+      "421": [
+        "Studded snow tires are only legal from November 1 through April 1."
+      ],
+      "422": [
+        "On front-wheel drive vehicles, it is best to put snow tires or “all-season” tires on all four wheels, not just the front."
+      ],
+      "423": [
+        "When sleet, freezing rain or snow starts to fall, remember that bridges, ramps, and overpasses are likely to freeze first."
+      ],
+      "424": [
+        "Running the engine for approximately 10 minutes each hour, in order to charge the battery and warm the interior, is recommended."
+      ],
+      "425": [
+        "Keep the exhaust pipe clear of snow and debris. Fumes from the exhaust can leak into the vehicle and can cause you to black out or even cause death."
+      ],
+      "426": [
+        "Inspect the tires every two hours or every 100 miles when driving in hot weather."
+      ],
+      "427": [
+        "Air pressure increases with temperature. Do not let air out or the pressure will be too low when the tires cool off."
+      ],
+      "428": [
+        "Tar in the road pavement frequently rises to the surface in very hot weather. Spots where tar “bleeds” to the surface can be very slippery"
+      ],
+      "429": [
+        "If you spot a tornado either leave the vehicle for sturdy shelter or drive out of the tornado's path."
+      ],
+      "430": [
+        "If a tornado moves through, winds will be stronger beneath the overpass due to a \"wind tunnel effect.\""
+      ],
+      "431": [
+        "Only a hard-topped vehicle will protect you in a lightning storm. Make sure all doors are closed and windows are up. Do not touch any metal surfaces."
+      ],
+      "432": [
+        "If you can’t get a side window open, take a breath and kick the window out. Go to the air pocket for one more breath and then escape."
+      ],
+      "433": [
+        "If you are a commercial license holder, you will need to visit any full-service Kansas Driver licensing office."
+      ],
+      "434": [
+        "The change to first-person consent means that an individual’s decision to donate (also referred to as authorization) is legally binding, and no one else may reverse that decision"
+      ],
+      "435": [
+        "People of all ages and medical histories are considered for potential donation.",
+        "An open casket funeral is possible for organ and tissue donors.",
+        "All major religions approve of organ and tissue donation and consider donation the greatest gift."
+      ],
+      "436": [
+        "There is no cost to the donor’s family or estate for organ and tissue donation."
+      ],
+      "437": [
+        "Funeral costs remain the responsibility of the family."
+      ],
+      "438": [
+        "Living donation is possible."
+      ],
+      "439": [
+        "To sign up in the state registry directly please visit https://www.donatelifekansas.com/"
+      ],
+      "440": [
+        "There is no cost to the donor’s family or estate for organ and tissue donation."
+      ],
+      "441": [
+        "For more information, please visit our website at https://www.mwtn.org/"
+      ],
+      "442": [
+        "SHARE YOUR LIFE. \nSHARE YOUR DECISION."
+      ],
+      "443": [
+        "There is no cost to the donor’s family or estate for organ and tissue donation."
+      ],
+      "444": [
+        "LIVE IT. GIVE IT. LIFE."
+      ],
+      "445": [
+        "Funeral costs remain the responsibility of the family."
+      ],
+      "446": [
+        "There is no cost to the donor’s family or estate for organ and tissue donation."
+      ],
+      "447": [
+        "Living donation is possible."
+      ],
+      "448": [
+        "SHARE YOUR LIFE. \nSHARE YOUR DECISION."
+      ],
+      "449": [
+        "Funeral costs remain the responsibility of the family."
+      ],
+      "450": [
+        "To sign up in the state registry directly please visit https://www.donatelifekansas.com/"
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 27,
-    "topics_covered": 26,
-    "coverage_pct": 96.3,
+    "topics_total": 28,
+    "topics_covered": 24,
+    "coverage_pct": 85.7,
     "uncovered_topics": [
-      "Maximum speed limit in school zones"
+      "Maximum speed limits on separated multilane state highways",
+      "Restrictions on passing near bridges, viaducts, or tunnels",
+      "Transporting open containers of liquor or cereal malt beverage",
+      "Yielding right-of-way to construction vehicles and road workers"
     ],
     "verdict": "PASS",
-    "grade": "A"
+    "grade": "B"
   },
   "coverage": {
     "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
@@ -66,6 +1471,34 @@
     "sign_ratio_pct": 3.8,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 450,
+      "avg_fidelity": 9.99,
+      "pct_at_10": 99.8,
+      "pct_above_9": 99.8,
+      "pct_above_7": 99.8,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [
+        444
+      ],
+      "verdict": "PASS",
+      "grade": "A"
+    },
+    "ja": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 450,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

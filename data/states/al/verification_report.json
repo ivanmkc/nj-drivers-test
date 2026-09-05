@@ -1,16 +1,16 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "al",
   "name": "Alabama",
-  "verified_at": "2026-05-26T02:23:40Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-27T01:15:46Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.alea.gov/sites/default/files/inline-files/driverlicensemanual.pdf",
     "manual_pdf_sha256": "72419ad17d946d2754185e084780b106de98d6226b10470f8fbd8a541f6b4b5e",
     "manual_text_sha256": "85742e3f126a704faf2499251551d960d1c4e2700069d39be304c8055b2a205f",
     "manual_text_chars": 173549,
     "manual_pages": 88,
-    "edition": ""
+    "edition": "June 2016"
   },
   "bank": {
     "total_questions": 292,
@@ -23,25 +23,894 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 10,
-    "judged_count": 10,
+    "sample_size": 0,
+    "judged_count": 274,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "Fact: If you are admitted to a hospital, the number one priority is to save your life."
+      ],
+      "2": [
+        "The title “organ donor” with a red heart will appear on your license."
+      ],
+      "3": [
+        "Someone is added to the list every ten minutes, and approximately 18 people will die each day while waiting for an organ."
+      ],
+      "4": [
+        "Fact: There is no financial cost to the donor’s family or estate for organ or tissue donation."
+      ],
+      "5": [
+        "The Alabama Law Enforcement Agency, Driver License Services, issues driver licenses."
+      ],
+      "6": [
+        "All applicants who have not been licensed in Alabama or whose Alabama license has been expired for over three years must pass the required driver examination."
+      ],
+      "7": [
+        "A holder of an out of state license which has not been expired over one year does not have to pass a driver examination."
+      ],
+      "8": [
+        "Any person while driving any farm tractor or implement of husbandry temporarily operated or moved on the highway."
+      ],
+      "9": [
+        "This includes military personnel from other states and their families stationed in Alabama, even though their assignment in Alabama may be of long duration."
+      ],
+      "10": [
+        "A non-resident who has a valid driver license from the state of previous residence may drive without an Alabama license for 30 days after becoming a resident of the state."
+      ],
+      "11": [
+        "A non-resident at least 16 years old whose home country does not require licensing of drivers may operate a motor vehicle as a driver of not more than 90 days in any calendar year"
+      ],
+      "12": [
+        "Any non-resident full time student properly enrolled and registered in a school, college, university, or trade school in this state, who holds a valid license from his home state or country."
+      ],
+      "13": [
+        "An Alabama driver license shall not be issued to: • Persons under 16 years of age."
+      ],
+      "14": [
+        "An Alabama driver license shall not be issued to: ... Any person whose driving rights or privilege is suspended or revoked in any state."
+      ],
+      "15": [
+        "Any person afflicted with or suffering from a physical or mental impairment which, in the opinion of the ALEA or examining officer, will prevent such person from exercising reasonable and ordinary control"
+      ],
+      "16": [
+        "Any person who is under the age of 19 that is not in compliance with Alabama Act 93-368, which requires secondary school graduation or current attendance"
+      ],
+      "17": [
+        "Present two (2) forms of identification, at least one of which contains a photograph, (one form must be from the “Primary Listing”)."
+      ],
+      "18": [
+        "Applicants transferring an Out of State driver license must present their Out of State driver license, Social Security card ... AND one other form from the “Primary Listing”."
+      ],
+      "19": [
+        "A document would be unacceptable if: (a) Correction fluid (white-out) has been used on pertinent information."
+      ],
+      "20": [
+        "(f ) W2 Tax Form."
+      ],
+      "21": [
+        "The complete date that the notary’s commission expires must be legible and must have been current on the date the document was notarized."
+      ],
+      "22": [
+        "Immigration documents must reflect at least 160 days allowable time remaining in the United States."
+      ],
+      "23": [
+        "All applicants under the age of 19 must present a current Student Enrollment/ Exclusion Form (DL-1-93)."
+      ],
+      "24": [
+        "Certified U.S. Birth Certificate issued by an agency designated by state or federal authority**",
+        "** Required for all 15-year-old applicants under Title 36-6-8(b)."
+      ],
+      "25": [
+        "driver license written examinations to be administered to the hearing impaired in American Sign Language. This is administered using our automated testing equipment"
+      ],
+      "26": [
+        "Examinations are available for applicants that are unable to read and comprehend the knowledge tests. Oral Examinations may be administered using our automated testing equipment."
+      ],
+      "27": [
+        "Any person 15 years of age may obtain a restricted Learner License for the purpose of learning to safely and effectively operate a motor vehicle."
+      ],
+      "28": [
+        "The “Y” restriction indicates that the holder may operate a motor vehicle while accompanied by a person who is 21 years of age or older"
+      ],
+      "29": [
+        "PRIMARY DOCUMENTS",
+        "US Passport* (current)"
+      ],
+      "30": [
+        "an applicant who has been deported from the United States must present proof from the Immigration and Customs Enforcement (ICE) that their legal presence status has been restored."
+      ],
+      "31": [
+        "The “Y” restriction indicates that the holder may operate a motor vehicle with a licensed driver occupying the seat beside the driver."
+      ],
+      "32": [
+        "Any person 16 years of age but under 18 years of age who has held a Learner License... for six months or until their 18th birthday"
+      ],
+      "33": [
+        "operate a motor driven cycle weighing not more than 200 pounds, nor exceeding 150cc engine displacement."
+      ],
+      "34": [
+        "applicant will be issued a Class M Alabama driver license with a “B” restriction. The “B” restriction indicates that the holder may operate a motor driven cycle only."
+      ],
+      "35": [
+        "Vessel License–Any person 12 years of age or older may obtain a vessel license upon passing the required vessel examination"
+      ],
+      "36": [
+        "The fee for each knowledge test is $5.00, no checks accepted."
+      ],
+      "37": [
+        "Sixteen year old applicants must be accompanied by a parent or guardian."
+      ],
+      "38": [
+        "A seventeen year old applicant doesn’t have to be accompanied by a parent or guardian."
+      ],
+      "39": [
+        "Causes for immediate failure and termination of the road test are:",
+        "• A dangerous action."
+      ],
+      "40": [
+        "No passengers or pets are permitted in the vehicle during the road test."
+      ],
+      "41": [
+        "Operation of a motor vehicle in violation of restrictions may result in the loss of your license."
+      ],
+      "42": [
+        "The equipment required for the examination includes rear view mirror, horn, windshield wipers, two separate methods of applying brakes"
+      ],
+      "43": [
+        "A motorcycle is defined as a motor vehicle having a seat or saddle for the use of the rider and designed to travel on not more than three wheels in contact with the ground but excluding a tractor."
+      ],
+      "44": [
+        "If you don’t pass your vision examination, you will be required to have your eyes examined by a licensed eye specialist and return the report to the examiner."
+      ],
+      "45": [
+        "look over your right shoulder while backing to indicate to the examiner you are aware of conditions around you."
+      ],
+      "46": [
+        "Vessel License 12 years old"
+      ],
+      "47": [
+        "Unless you already have a legal right to drive in Alabama, you must come for the road test in a vehicle driven by a licensed driver."
+      ],
+      "48": [
+        "Alabama law provides a grace period of 60 days after expiration date of a driver license for the purpose of driver license renewal and the driver license shall be valid for this time period."
+      ],
+      "49": [
+        "After changing your address within Alabama, you have 30 days in which to notify the License Services Division of the new address."
+      ],
+      "50": [
+        "Generally, all passenger vehicles, except vehicle in Classes A, B, C, or M",
+        "D"
+      ],
+      "51": [
+        "Any person making a false affidavit in obtaining a duplicate driver license may be charged with Forgery (Title 13A-9-3), Perjury (Title 13A-10-102) or both"
+      ],
+      "52": [
+        "Your driver license expires four years after it is issued and the expiration date is shown on the license."
+      ],
+      "53": [
+        "Class D Operator $5.00",
+        "The fee for each knowledge test is $5.00, no checks accepted."
+      ],
+      "54": [
+        "CLASS A - This classification applies only to “combination” vehicles with a Gross Combination Weight Rating (GCWR) exceeding 26,000 pounds, provided the Gross Vehicle Weight Rating (GVWR) of the vehicle being towed exceeds 10,000 pounds."
+      ],
+      "55": [
+        "Designed to seat more than 15 people including driver",
+        "CLASS C - Vehicles designed to transport 16 or more passengers, including the driver"
+      ],
+      "56": [
+        "you may be required to furnish a statement from a doctor showing your medical history and present condition as it pertains to your driving ability."
+      ],
+      "57": [
+        "An Alabama driver license may be renewed without examination within a 3-year period after expiration."
+      ],
+      "58": [
+        "Identification Card No Age Requirement"
+      ],
+      "59": [
+        "To change your address or to add or remove license classes, restrictions and endorsements must see a driver license examiner."
+      ],
+      "60": [
+        "CLASS B - This class includes single or combination vehicles where the GVWR of the single vehicle exceeds 26,000 pounds."
+      ],
+      "61": [
+        "T – Double/triple trailers"
+      ],
+      "62": [
+        "A licensed operator, 14 years old or older, may operate alone."
+      ],
+      "63": [
+        "be prepared to present that driver license to any law enforcement officer upon his or her request."
+      ],
+      "64": [
+        "must pay a reinstatement fee of not less than $100 in addition to meeting other requirements"
+      ],
+      "65": [
+        "Reinstatement resulting from drug related convictions require an additional $25 fee."
+      ],
+      "66": [
+        "The Director must revoke your license upon receiving a record of your conviction for:",
+        "Three reckless driving convictions within 12 months."
+      ],
+      "67": [
+        "Are ages 15 through 18 and withdraw from school under certain conditions prior to graduation."
+      ],
+      "68": [
+        "Reckless Driving or Reckless Endangerment involving operating a motor vehicle 6 Points"
+      ],
+      "69": [
+        "Passing Stopped School Bus 5 Points"
+      ],
+      "70": [
+        "Speeding 26 mph or More Over Speed Limit 5 Points"
+      ],
+      "71": [
+        "Improper Lane Violation 2 Points",
+        "Following Too Closely 3 Points",
+        "Failure to Yield Right of Way 5 Points",
+        "Wrong Side of Road/Illegal Passing 4 Points"
+      ],
+      "72": [
+        "15-17 Points in a 2-year period 90 days"
+      ],
+      "73": [
+        "24 and above points in a 2-year period 365 days"
+      ],
+      "74": [
+        "Persons born before April 28, 1954 are exempt from examination but are required to go to their driver license office to have vessel class issued."
+      ],
+      "75": [
+        "Making Improper Turn 2 Points"
+      ],
+      "76": [
+        "18-20 Points in a 2-year period 120 days"
+      ],
+      "77": [
+        "If you are driving a hand-shift vehicle equipped with a manual transmission, push in the clutch before turning the ignition key."
+      ],
+      "78": [
+        "In preparing to leave a parallel parking spot, look over your shoulder as well as in rear view mirrors and wait until the way is clear before pulling into traffic."
+      ],
+      "79": [
+        "At least 100 feet before making the turn, signal your intentions."
+      ],
+      "80": [
+        "Reflection of bright sunlight may make it difficult for other motorists to see your flashing signal light."
+      ],
+      "81": [
+        "For a left turn, move to the lane nearest the center line or traffic divider and turn from the inside lane."
+      ],
+      "82": [
+        "Three-point turns are not permitted on interstate freeways, on curves, or near the top of hills where you cannot be seen by drivers of other vehicles approaching from either direction within 500 feet."
+      ],
+      "83": [
+        "A driver should enter a curve slow enough to enable him to accelerate slightly when actually rounding the curve."
+      ],
+      "84": [
+        "Alabama state law requires that you pass a person on a bicycle with a distance of not less than three feet between your motor vehicle and the person on a bicycle."
+      ],
+      "85": [
+        "When reasonably necessary to avoid road or traffic conditions such as debris, opening of car doors, pedestrians, etc."
+      ],
+      "86": [
+        "In Alabama, it is illegal for people on bicycles to ride on the sidewalk."
+      ],
+      "87": [
+        "People on bicycles who are under the age of 16 years are required to wear a securely fastened protective helmet when riding on public roadways"
+      ],
+      "88": [
+        "When turning across a bicycle lane, the driver shall drive the motor vehicle into the bicycle lane prior to making the turn"
+      ],
+      "89": [
+        "24 and above points in a 2-year period 365 days"
+      ],
+      "90": [
+        "If the road is narrow and you are unable to safely pass a person on a bicycle, do not follow too closely and do not blast the person on the bicycle with your horn. Remain behind the person on the bicycle at a safe interval until you are able to pass."
+      ],
+      "91": [
+        "During wet weather, the braking ability of a bicycle is greatly reduced.",
+        "Motorists should be prepared to compensate for the person on a bicycle’s decreased ability to slow or stop."
+      ],
+      "92": [
+        "Left turns in front of an oncoming motorcyclist account for a large percentage of car/cycle injury producing accidents.",
+        "car drivers may fail to pick the cyclist out of the traffic scene, or drivers may fail to judge the speed of the oncoming motorcycle."
+      ],
+      "93": [
+        "Turn signals are not automatically self-canceling on most motorcycles. At times, the rider may forget to turn the signal off.",
+        "BE SURE THE VEHICLE IS TURNING and not continuing straight with a forgotten turn signal still blinking."
+      ],
+      "94": [
+        "Following distance behind the motorcyclist should be the same 2-second following distance given any other vehicle."
+      ],
+      "95": [
+        "Drivers should never move into the same lane alongside a motorcycle even if the lane is wide and cyclist is riding far to one side. It is not only illegal, but extremely hazardous."
+      ],
+      "96": [
+        "Metal or grated bridges create a wobbling sensation in the front tire of the motorcycle",
+        "This wobbling sensation may cause the inexperienced motorcyclist to quickly change direction or slow down."
+      ],
+      "97": [
+        "If you can’t see the driver’s face in the side-view mirror, the driver can’t see you."
+      ],
+      "98": [
+        "Unlike cars, trucks and buses have huge no-zones directly behind them that may extend as far as 200 feet."
+      ],
+      "99": [
+        "When following a large vehicle at night, always dim your headlights.",
+        "Bright lights will blind the driver when they reflect off the side mirrors of the bus or truck."
+      ],
+      "100": [
+        "Look for the entire front of the vehicle in your rear-view mirror before pulling in front and don’t slow down."
+      ],
+      "101": [
+        "at speeds of 55 miles per hour, a passenger car needs 193 feet to stop safely and a loaded truck needs 430 feet."
+      ],
+      "102": [
+        "The cyclist may rise off the seat to help cushion the shock of a rough crossing."
+      ],
+      "103": [
+        "Fast-moving, large trucks have been known to create windblasts, which can startle a motorcyclist, and under certain conditions, actually move the motorcyclist out of the path of travel."
+      ],
+      "104": [
+        "Truck and bus drivers need to swing wide to the left to safely make a right turn.",
+        "When the right turn signal is blinking, do not attempt to pass on the right. The driver will not be able to see you and you will become trapped."
+      ],
+      "105": [
+        "Facing uphill turn your wheels away from the curb and shift into low gear or PARK."
+      ],
+      "106": [
+        "Facing downhill, turn your wheels toward the curb and shift into reverse gear or PARK.",
+        "Downhill with or without a curb, turn wheels toward curb."
+      ],
+      "107": [
+        "Within 15 feet of a fire hydrant."
+      ],
+      "108": [
+        "Within 50 feet of the nearest rail of a railroad crossing."
+      ],
+      "109": [
+        "Alabama’s child restraint law requires that children through age 15 must be restrained when riding in motor vehicles in Alabama."
+      ],
+      "110": [
+        "Violators will have points assessed against their driver record, in addition to incurring a fine of $25."
+      ],
+      "111": [
+        "Infant-only seat or convertible seat used in the rear-facing position until an infant is at least 1 year of age or 20 pounds."
+      ],
+      "112": [
+        "Accident records show that over 90 percent of the highway crashes are caused by driver error, lack of knowledge, inattention, physical or mental condition, improper attitude or faulty judgment."
+      ],
+      "113": [
+        "Expressway drivers are subject to “highway hypnosis”- a condition of drowsiness or unawareness brought on by monotony"
+      ],
+      "114": [
+        "It is advisable to take regular rest stops - every 100 miles or every two hours."
+      ],
+      "115": [
+        "The ﬁne for violating the law is $25 for a ﬁrst-time oﬀense, $50 for a second oﬀense and $75 for a third or subsequent oﬀense."
+      ],
+      "116": [
+        "Within 20 feet of a crosswalk at an uncontrolled intersection."
+      ],
+      "117": [
+        "Use speaker phone/hands-free device."
+      ],
+      "118": [
+        "Also, for each oﬀense, a two-point violation will be placed on the oﬀender’s driving record."
+      ],
+      "119": [
+        "Keep shifting your eyes from one area of the roadway to another and focus them on various objects - near and far, left and right."
+      ],
+      "120": [
+        "The amount of alcohol in one bottle of beer is about equal to that in an average “shot of whiskey or a glass of wine.”"
+      ],
+      "121": [
+        "Alcohol is a depressant, not a stimulant.",
+        "Consuming alcohol causes drowsiness, blurred vision, and slowed reflexes.",
+        "Impairment can occur before legal intoxication is attained."
+      ],
+      "122": [
+        "Persons under 21 years of age whose blood alcohol content is .02% or more."
+      ],
+      "123": [
+        "Commercial vehicle operators whose blood alcohol content is .04% or more."
+      ],
+      "124": [
+        "In addition, the driver license will be suspended for 90 days."
+      ],
+      "125": [
+        "A driver under arrest for Driving Under the Influence, who refuses to submit to chemical breath tests when directed by an officer, shall have his driver license suspended."
+      ],
+      "126": [
+        "Black coffee, food, or a cold shower might wake you, but they will not sober you.",
+        "Once alcohol is in the blood stream, it must be broken down by the liver and oxidized",
+        "This process takes time."
+      ],
+      "127": [
+        "It doesn’t just double the effect; it multiplies and, when overdone, has caused death."
+      ],
+      "128": [
+        "Most rear-end collisions are caused by following too closely."
+      ],
+      "129": [
+        "A fourth conviction or subsequent conviction is a Class C felony."
+      ],
+      "130": [
+        "Recently, a new formula was introduced which is even more positive and easier to apply, the “two-second rule.”"
+      ],
+      "131": [
+        "If the road and weather conditions are not good, increase your following distance to a four or five second count."
+      ],
+      "132": [
+        "Mental and physical reaction time of the driver."
+      ],
+      "133": [
+        "Drivers may not realize the difference a strong tail wind can make when trying to stop suddenly at high speed."
+      ],
+      "134": [
+        "You should avoid moving the injured unless it is absolutely necessary to remove them from areas threatened by fire or other dangers common to a crash scene."
+      ],
+      "135": [
+        "Give your name, address, and registration number and show your driver license to other persons involved."
+      ],
+      "136": [
+        "In case of injury, a fatality, or if damage to any vehicle or property in the crash amount to $500 or more, a written (Form SR-31) must be sent within 30 days, by the driver involved if the “at fault’’ party was not insured"
+      ],
+      "137": [
+        "If your vehicle hits an unattended vehicle, either notify the police, make an attempt to locate the owner of the parked vehicle, or leave a written notice"
+      ],
+      "138": [
+        "The round railroad warning sign: It is yellow with a black X and the letters RR. It means a highway railroad crossing is ahead and is placed 750 feet before the track."
+      ],
+      "139": [
+        "The vehicles listed below are required to stop before crossing any railroad crossing: • School bus, church bus, or any passenger bus."
+      ],
+      "140": [
+        "When approaching a railroad crossing. You must stop within 15 to 50 ft."
+      ],
+      "141": [
+        "To avoid stalling, a driver should not change gears while crossing the track.",
+        "If your vehicle has a manual transmission, shift down and do not change gears while crossing the tracks."
+      ],
+      "142": [
+        "Remain stopped until the gates are raised and lights are no longer flashing.",
+        "It is against the law to go around gates."
+      ],
+      "143": [
+        "large, wide tires may help stop quicker on smooth, dry surfaces, but will skid or hydroplane easier on slippery or wet surfaces."
+      ],
+      "144": [
+        "Any injury of fatal crash must, by the quickest means of communication, be reported to the local police if it occurs within a municipality"
+      ],
+      "145": [
+        "If your vehicle has a manual transmission, shift down and do not change gears while crossing the tracks."
+      ],
+      "146": [
+        "A freight train travelling at 55 mph takes a mile or more to stop."
+      ],
+      "147": [
+        "If your vehicle stalls on a crossing, get everyone out of the vehicle immediately and away from the tracks."
+      ],
+      "148": [
+        "The three types of traffic signs are classified according to function. They are regulatory, warning, and information or guide signs."
+      ],
+      "149": [
+        "When more than one vehicle arrives at the same time at the 4-way stop, the vehicle furthest to the right is allowed to leave first."
+      ],
+      "150": [
+        "Warning signs are black and yellow, except those used in construction areas which are black and orange."
+      ],
+      "151": [
+        "Fluorescent yellow indicates pedestrian crossings and school zones."
+      ],
+      "152": [
+        "“Minimum” limits are usually posted on freeways and other controlled access highways."
+      ],
+      "153": [
+        "This sign is placed on the left side of a two-lane road to warn of the beginning of a NO PASSING ZONE."
+      ],
+      "154": [
+        "Alabama state law requires that you pass a person on a bicycle with a distance of not less than three feet",
+        "3 foot minimum clearance required when passing."
+      ],
+      "155": [
+        "Shared Lane Markings (Sharrow) inform road users that people on bicycles might occupy the travel lane."
+      ],
+      "156": [
+        "A motorist is 40 times more likely to die in a crash involving a train."
+      ],
+      "157": [
+        "the vehicle visibly displays the handicapped sticker."
+      ],
+      "158": [
+        "Double right turns are only permitted at intersections that are properly signed."
+      ],
+      "159": [
+        "The YIELD sign means slow down so you can yield the right of way to pedestrians crossing the roadway and to vehicles on the intersecting street or highway."
+      ],
+      "160": [
+        "flows in a counter-clockwise direction around a central island."
+      ],
+      "161": [
+        "yielding to traffic already in the roundabout",
+        "Motorists must enter from the right -- yielding to traffic already in the roundabout"
+      ],
+      "162": [
+        "blue and white for services"
+      ],
+      "163": [
+        "Zero mileage should begin at the south and west state lines or at junctions where routes begin."
+      ],
+      "164": [
+        "centerlines are to be painted yellow on two lane highways"
+      ],
+      "165": [
+        "double solid white line is used to delineate a travel lane where travel is the same direction... but crossing the double lines is prohibited."
+      ],
+      "166": [
+        "Occasionally yellow lines are used for left edgelines on divided roadways where traffic cannot pull entirely off the roadway"
+      ],
+      "167": [
+        "YELLOW…A circular steady yellow means clear the intersection."
+      ],
+      "168": [
+        "Always stop when the lights begin to flash because a train is near. Do not proceed until you can do so safely."
+      ],
+      "169": [
+        "GREEN ARROWS permit you to proceed in the direction of the arrow while opposing traffic must stop."
+      ],
+      "170": [
+        "“STEADY RED X”… A driver facing this indication shall not drive in the lane over which the signal is located"
+      ],
+      "171": [
+        "Traffic laws apply to all who use the streets and roads - drivers of vehicles, operators of motorcycles and bicycles, and pedestrians."
+      ],
+      "172": [
+        "35 miles per hour unpaved road"
+      ],
+      "173": [
+        "30 miles per hour in an urban district"
+      ],
+      "174": [
+        "Alabama’s basic speed law provides that you must never drive a vehicle at a speed that is faster than reasonable under existing conditions."
+      ],
+      "175": [
+        "If no stop line is marked, the vehicle must stop before entering the crosswalk on the near side of the intersection."
+      ],
+      "176": [
+        "You may make a left turn after stopping if you are driving on a one-way street and the street you turn left onto is a one-way street with traffic moving from right to left."
+      ],
+      "177": [
+        "If the traffic light is inoperative, treat the intersection as you would a four-way stop."
+      ],
+      "178": [
+        "stop at least 20 feet from the bus."
+      ],
+      "179": [
+        "A stop is not required on a divided highway having four or more lanes which permits at least two lanes of traffic to travel in opposite directions when meeting a school or church bus"
+      ],
+      "180": [
+        "In rural areas, the light are used at least 300 feet before stopping"
+      ],
+      "181": [
+        "If two vehicles enter an intersection not controlled by signs or signals... the driver of the vehicle on the left shall yield to the vehicle on the right."
+      ],
+      "182": [
+        "If you enter an uncontrolled intersection at an unlawful speed, you lose any right of way which you might otherwise have."
+      ],
+      "183": [
+        "stop and give right of way at any intersection to a blind person carrying a white cane tipped with red and holding the cane with arm extended"
+      ],
+      "184": [
+        "In an intersection, clear it before stopping. Don’t proceed until the emergency vehicle has passed."
+      ],
+      "185": [
+        "Do not return to the right lane too soon - not until you can see the entire front of the vehicle you have just passed in your interior rear view mirror."
+      ],
+      "186": [
+        "When coming from an alley, private driveway, or building... Always stop before crossing the sidewalk or crosswalk area."
+      ],
+      "187": [
+        "On a curve or hill where you cannot see a clear passing distance of at least 500 feet."
+      ],
+      "188": [
+        "Yield to blind pedestrians carrying a white or metallic cane, with or without a red tip, or using a guide dog"
+      ],
+      "189": [
+        "Walk on the left side of the roadway giving way to oncoming traffic."
+      ],
+      "190": [
+        "Only vehicles on necessary official business are permitted to follow within 500 feet of emergency vehicles on an emergency run."
+      ],
+      "191": [
+        "Backing is prohibited on controlled access highways (freeways and expressways) except for emergency vehicles in performance of their duties."
+      ],
+      "192": [
+        "STOP OR DECREASE SPEED…..hand and arm extended downward."
+      ],
+      "193": [
+        "It is unlawful to drive any vehicle so loaded or when there are such numbers of persons in excess of three in the front seat as to obstruct the driver’s view"
+      ],
+      "194": [
+        "If a load projects 4 feet or more from the rear of a vehicle, a red flag at least 12 inches square must be attached at its end in daytime"
+      ],
+      "195": [
+        "the following three documents must be produced by the driver. • Driver License • Proof of Insurance • Vehicle Registration"
+      ],
+      "196": [
+        "$25,000 for death or bodily injury to one person;"
+      ],
+      "197": [
+        "An owner or operator convicted of a mandatory liability insurance violation may be fined up to $500 for the first violation"
+      ],
+      "198": [
+        "On passenger cars such as sedans, coupes and station wagons, all windows (side and rear) may have tinting that allows at least 32 percent light transmission."
+      ],
+      "199": [
+        "Under Alabama law if you don’t pay for gas you can lose your driver license."
+      ],
+      "200": [
+        "Glance over your shoulder to check the “blind spot” your mirror does not cover."
+      ],
+      "201": [
+        "On a second conviction the driver license of the person shall be suspended for a period of six months."
+      ],
+      "202": [
+        "A person who does so shall be guilty of a Class A misdemeanor."
+      ],
+      "203": [
+        "When changing lanes is unsafe or not possible, the driver must slow to a speed that is at least 15 miles per hour less then the posted speed limit."
+      ],
+      "204": [
+        "travel 10 miles per hour when the posted speed limit is 20 miles per hour or less."
+      ],
+      "205": [
+        "Headlights on high beam normally illuminate the roadway about 350 feet UNDER NORMAL CONDITIONS."
+      ],
+      "206": [
+        "You must dim your headlights when within 500 feet of an oncoming vehicle"
+      ],
+      "207": [
+        "within 200 feet when following another vehicle."
+      ],
+      "208": [
+        "This is done by looking to the right-hand edge of the pavement and concentrating on the white striped line."
+      ],
+      "209": [
+        "walk on the left edge of the road or shoulder FACING the traffic."
+      ],
+      "210": [
+        "place them from 100 to 500 feet to the rear of your vehicle on the right hand edge of the highway"
+      ],
+      "211": [
+        "headlights (not parking lights only) must be turned on from a half-hour after sunset to a half-hour before sunrise"
+      ],
+      "212": [
+        "Alabama law requires that headlights be turned on when the windshield wipers of the vehicle are in use because of rain, sleet, or snow.",
+        "Intermittent use of windshield wipers does not require headlight usage."
+      ],
+      "213": [
+        "Remember that on snow or ice it takes three to twelve times as much distance to stop your car as on dry pavement."
+      ],
+      "214": [
+        "If your wheels spin, start in second or high gear. This permits a smoother acceleration and should aid you in avoiding spinning or sliding the wheels."
+      ],
+      "215": [
+        "For other vehicles such as SUVs, trucks, vans and RVs, front-seat side windows are subject to the same 32 percent restriction."
+      ],
+      "216": [
+        "With a conventional rear-wheel drive vehicle, when you ease off the gas, the engine acts as a brake to slow the rear wheels slightly."
+      ],
+      "217": [
+        "STEPPING LIGHTLY ON THE GAS WILL INCREASE FRONT WHEEL SPEED, so the front end can catch up with the sliding rear end and straighten out the skid."
+      ],
+      "218": [
+        "In a standard passenger car, partial hydroplaning starts at about 35 mph and increases with speed to about 55 mph"
+      ],
+      "219": [
+        "If you're totally hydroplaning, about all you can do is release the accelerator and ride out the skid."
+      ],
+      "220": [
+        "Keep headlights on low beam to reduce the glaring reflection of your lights on the thick fog blanket or blinding snow."
+      ],
+      "221": [
+        "The law also forbids you to coast downhill with the transmission in neutral."
+      ],
+      "222": [
+        "Symptoms of carbon monoxide poisoning are sudden weariness, yawning, dizziness and nausea."
+      ],
+      "223": [
+        "Under-inflation is one of the most common reasons for blowouts."
+      ],
+      "224": [
+        "To regain control, hold tightly to the steering wheel, steer straight and ease up on the accelerator."
+      ],
+      "225": [
+        "If you brake or try to shift gears, this sudden change in speed may throw the vehicle off balance and out of control."
+      ],
+      "226": [
+        "If your brake pedal suddenly sinks all the way to the floor, try pumping the pedal to build up the pressure."
+      ],
+      "227": [
+        "Instead, stay on the shoulder and reduce speed. After you’ve slowed down, turn gently back onto the pavement."
+      ],
+      "228": [
+        "Do not turn into the left lane because the driver of the oncoming vehicle might wake up and swing back into the path of your car."
+      ],
+      "229": [
+        "If the right shoulder is adequate and a crash is almost certain, move quickly onto the shoulder to allow the passing car to move into your lane."
+      ],
+      "230": [
+        "If your car stalls on railroad tracks and it has a manual transmission, you may be able to move it off the tracks by running the starter while the car is in low or second gear."
+      ],
+      "231": [
+        "If your car plunges into deep water BUT DOES NOT SINK, immediately escape through a window.",
+        "Opening a door, even if possible, will permit the water to enter the car more rapidly."
+      ],
+      "232": [
+        "Do not use water, for burning gasoline will float on it and spread the blaze."
+      ],
+      "233": [
+        "You can help prevent overheating in slow-moving traffic by shifting into neutral and racing the engine briefly during stops.",
+        "This will speed up the fan and the water pump."
+      ],
+      "234": [
+        "If you have power steering or power brakes, you will lose this assistance when you cut the engine."
+      ],
+      "235": [
+        "Slower moving vehicles, those traveling at less than the normal speed of traffic at that time, MUST KEEP TO THE RIGHT."
+      ],
+      "236": [
+        "Open the trunk, raise the hood if weather permits and tie a white cloth to a door handle or antenna, where it can best be seen.",
+        "These are distress signals, and any law enforcement officer seeing them will give you assistance."
+      ],
+      "237": [
+        "As you approach and enter the acceleration lane, increase speed to match that of vehicles in the through lanes, if possible.",
+        "Watch for an opening, activate your turn signal, and merge smoothly with the other traffic."
+      ],
+      "238": [
+        "DIAMOND INTERCHANGE: Characterized by four ramps, allowing vehicles to enter or leave the main highway while flowing with the traffic.",
+        "Left turns are made AFTER leaving the freeway."
+      ],
+      "239": [
+        "If you miss your exit you must not stop, back up, or attempt to turnaround; proceed to the next exit and come back to the one you missed."
+      ],
+      "240": [
+        "REAR VIEW MIRRORS: To enable the driver to see 200 feet to the rear are required on all vehicles."
+      ],
+      "241": [
+        "All lights must be visible from a distance of at least 500 feet."
+      ],
+      "242": [
+        "The high beam of the headlight must illuminate objects at a minimum of 350 feet and be in adjustment and alignment."
+      ],
+      "243": [
+        "another 40 percent of deaths are caused by striking the windshield, windshield frame or instrument panel."
+      ],
+      "244": [
+        "Designed to allow turning movements off or onto the freeway from four directions, using loop type connections. It eliminates left turn and cross traffic conflicts for all movements."
+      ],
+      "245": [
+        "a tire is illegal if your tread is less than 1/16 inch deep."
+      ],
+      "246": [
+        "For children under six years old, special child and infant restraints are needed to protect them from serious injury or death."
+      ],
+      "247": [
+        "It is unlawful to use a motor vehicle horn for any purpose except in giving warning when reasonably necessary to insure safe operation."
+      ],
+      "248": [
+        "The area around the stopped school bus is referred to as the “DEATH ZONE.”"
+      ],
+      "249": [
+        "accompanied by a parent, legal guardian or a person who is 21 years of age or older who is a licensed driver and occupies the front seat next to the driver"
+      ],
+      "250": [
+        "May not have more than 1 nonfamily passenger other than the parent, guardian or supervising licensed driver at least 21 years of age."
+      ],
+      "251": [
+        "The student may not operate a vehicle between 12 midnight and 6 a.m. unless accompanied by a parent or legal guardian"
+      ],
+      "252": [
+        "Going to or from a school sponsored event.",
+        "Going to or from their regular workplace.",
+        "Going to or from a religious sponsored event."
+      ],
+      "253": [
+        "No points will be assessed for violation of the above restrictions."
+      ],
+      "254": [
+        "Violation of any of the above restrictions will result in the restrictive period being extended by 6 months or until the driver reaches 18 years of age."
+      ],
+      "255": [
+        "If a licensee is convicted of a second moving traffic violation... their license will automatically be suspended for 60 days or until age 18"
+      ],
+      "256": [
+        "Does not apply to individuals who are 16 years of age or older who are married or the head of household."
+      ],
+      "257": [
+        "CHECK YOUR CAR’S GASOLINE GAUGE... There are no service stations located directly on freeways."
+      ],
+      "258": [
+        "if I do break the law by drinking anything alcoholic I will not drive for 24 hours."
+      ],
+      "259": [
+        "A horn (in good working order) is required on all motor vehicles.",
+        "Bells, sirens or exhaust whistles may not be used except for emergency vehicles."
+      ],
+      "260": [
+        "any other offense where four or more points are assessed, their license will automatically be suspended for 60 days or until age 18"
+      ],
+      "261": [
+        "If a licensee is convicted of a second moving traffic violation or is convicted of failure to give information, render aid, racing, fleeing, or attempting to elude a law enforcement officer, reckless driving, illegal passing, driving on the wrong side of the road, or any other offense where four or more points are assessed, their license will automatically be suspended for 60 days or until age 18, whichever comes first."
+      ],
+      "262": [
+        "GDL (Graduated Drivers License)—Act #02-408"
+      ],
+      "263": [
+        "Alabama driver license holders have 30 days in which to inform the Driver License Services of a change of address."
+      ],
+      "264": [
+        "All request must be made 48 hours prior to the preferred date of test."
+      ],
+      "265": [
+        "at any Driver License examining office operated by the Alabama Law Enforcement Agency."
+      ],
+      "266": [
+        "Renew or replace your driver license or state ID online at: www.alea.gov"
+      ],
+      "267": [
+        "If a licensee is convicted of... driving on the wrong side of the road... their license will automatically be suspended for 60 days or until age 18, whichever comes first."
+      ],
+      "268": [
+        "Appointments may also be requested by phone during regular business hours."
+      ],
+      "269": [
+        "Change of address forms are available on our website at www.alea.gov/driver license/change of address."
+      ],
+      "270": [
+        "If a licensee is convicted of... attempting to elude a law enforcement officer... their license will automatically be suspended for 60 days or until age 18, whichever comes first."
+      ],
+      "271": [
+        "ALEA WEBSITE:  www.alea.gov",
+        "Visit Our Web Site At www.alea.gov"
+      ],
+      "272": [
+        "Phone: 334-242-4400  (menu selection)"
+      ],
+      "273": [
+        "ATTENTION 15, 16 & 17  YEAR OLD DRIVERS!!",
+        "their license will automatically be suspended for 60 days or until age 18, whichever comes first."
+      ],
+      "274": [
+        "PO Box 1471 Montgomery AL 36102-1471",
+        "P. O. BOX 1471 MONTGOMERY, AL 36102-1471"
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 20,
-    "topics_covered": 20,
-    "coverage_pct": 100.0,
-    "uncovered_topics": [],
+    "topics_total": 30,
+    "topics_covered": 23,
+    "coverage_pct": 76.7,
+    "uncovered_topics": [
+      "Point assessment for ignoring construction zone markers",
+      "Point assessment for failure to yield right of way",
+      "Administrative hearing requests for driver license suspension actions",
+      "Point assessment for improper operation of a motorcycle",
+      "Point assessment for drinking alcohol while operating a vehicle",
+      "Point assessment for wrong side of road or illegal passing",
+      "Point assessment for following another vehicle too closely"
+    ],
     "verdict": "PASS",
-    "grade": "A"
+    "grade": "C"
   },
   "coverage": {
     "method": "Category distribution + density (Qs/1000 manual chars) + sign ratio",
@@ -64,7 +933,21 @@
     "verdict": "PASS",
     "grade": "A"
   },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 274,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
+  },
   "overall_verdict": "PASS",
-  "overall_grade": "A",
+  "overall_grade": "B",
   "notes": ""
 }

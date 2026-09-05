@@ -12,12 +12,13 @@ Usage:
     python audit_questions.py --llm nj           # Run LLM accuracy check
 """
 
+import hashlib
 import json
 import os
 import sys
 
 import yaml
-from _util import STATES_DIR, resolve_state_paths, strip_code_fences
+from _util import STATES_DIR, questions_path, resolve_state_paths, strip_code_fences
 
 DUPLICATE_OVERLAP_THRESHOLD = 0.7
 MIN_QUESTION_LENGTH = 10
@@ -92,6 +93,88 @@ def structural_audit(_state_code: str, questions: list[dict]) -> list[str]:
         if cat and cat not in valid_cats:
             issues.append(f"Q{qid}: unknown category '{cat}'")
 
+    return issues
+
+
+def translation_alignment_audit(state_code: str) -> list[str]:
+    """Verify target-language banks are derived 1:1 from the English bank.
+
+    Invariants (per #59 follow-up — the EN bank is the source of truth):
+    - target IDs must equal EN IDs (same set, same count)
+    - no orphan IDs in target that don't exist in EN
+    - no missing IDs that exist in EN but not target
+
+    If the invariant fails, the target bank is in an inconsistent state and
+    must be regenerated from the current EN bank via translate.py.
+    """
+    issues: list[str] = []
+    paths = resolve_state_paths(state_code)
+    en_path = paths["questions_en_path"]
+    if not os.path.exists(en_path):
+        return issues
+    with open(en_path) as f:
+        en_questions = (yaml.safe_load(f) or {}).get("questions", [])
+    en_ids = {q.get("id") for q in en_questions if "id" in q}
+    for lang in ("es", "ja"):
+        lang_path = questions_path(state_code, lang)
+        if not os.path.exists(lang_path):
+            continue
+        with open(lang_path) as f:
+            tgt_questions = (yaml.safe_load(f) or {}).get("questions", [])
+        tgt_ids = {q.get("id") for q in tgt_questions if "id" in q}
+        orphans = sorted(tgt_ids - en_ids)
+        missing = sorted(en_ids - tgt_ids)
+        if orphans:
+            sample = ", ".join(str(o) for o in orphans[:5])
+            more = f" (+{len(orphans) - 5} more)" if len(orphans) > 5 else ""
+            issues.append(
+                f"{lang.upper()} bank has {len(orphans)} orphan IDs not in EN: {sample}{more}. "
+                f"Drop them or regenerate via `python3 tools/translate.py {state_code} {lang}`."
+            )
+        if missing:
+            sample = ", ".join(str(m) for m in missing[:5])
+            more = f" (+{len(missing) - 5} more)" if len(missing) > 5 else ""
+            issues.append(
+                f"{lang.upper()} bank is missing {len(missing)} IDs that exist in EN: {sample}{more}. "
+                f"Re-run `python3 tools/translate.py {state_code} {lang}`."
+            )
+    return issues
+
+
+def translation_staleness_audit(state_code: str) -> list[str]:
+    """Flag translated banks whose en_source_sha256 doesn't match current questions_en.yaml.
+
+    Per #59 item 6: if a maintainer regenerates EN questions but forgets to re-run
+    translate.py, the ES/JA bank silently references stale EN content. Compare the
+    hash recorded in the translated YAML against the current EN bytes.
+    """
+    issues: list[str] = []
+    paths = resolve_state_paths(state_code)
+    en_path = paths["questions_en_path"]
+    if not os.path.exists(en_path):
+        return issues
+    with open(en_path, "rb") as f:
+        current_en_sha = hashlib.sha256(f.read()).hexdigest()
+    for lang in ("es", "ja"):
+        lang_path = questions_path(state_code, lang)
+        if not os.path.exists(lang_path):
+            continue
+        with open(lang_path) as f:
+            tgt = yaml.safe_load(f) or {}
+        recorded = (tgt.get("metadata") or {}).get("translation", {}).get("en_source_sha256")
+        if recorded is None:
+            # Pre-#59 translations have no provenance — informational, not a failure.
+            issues.append(
+                f"{lang.upper()} bank has no translation provenance "
+                f"(generated before #59 item 6). Re-translate to record en_source_sha256."
+            )
+            continue
+        if recorded != current_en_sha:
+            issues.append(
+                f"{lang.upper()} bank is stale: en_source_sha256={recorded[:12]}… "
+                f"but current EN is {current_en_sha[:12]}…. Re-run "
+                f"`python3 tools/translate.py {state_code} {lang}`."
+            )
     return issues
 
 
@@ -238,6 +321,20 @@ def main() -> None:
             if len(dup_issues) > 10:
                 print(f"    ... and {len(dup_issues) - 10} more")
 
+        # Translation alignment audit (EN is the source of truth — target derived from it)
+        alignment_issues = translation_alignment_audit(code)
+        if alignment_issues:
+            print(f"  TRANSLATION ALIGNMENT ({len(alignment_issues)} issues):")
+            for issue in alignment_issues:
+                print(f"    - {issue}")
+
+        # Translation staleness audit
+        translation_issues = translation_staleness_audit(code)
+        if translation_issues:
+            print(f"  TRANSLATION STALENESS ({len(translation_issues)} issues):")
+            for issue in translation_issues:
+                print(f"    - {issue}")
+
         # Content audit
         content_issues = content_audit(code, questions, config)
         if content_issues:
@@ -257,7 +354,14 @@ def main() -> None:
                 for issue in llm_issues:
                     print(f"    - {issue}")
 
-        state_issues = len(struct_issues) + len(dup_issues) + len(content_issues) + len(llm_issues)
+        state_issues = (
+            len(struct_issues)
+            + len(dup_issues)
+            + len(alignment_issues)
+            + len(translation_issues)
+            + len(content_issues)
+            + len(llm_issues)
+        )
         total_issues += state_issues
         if state_issues == 0:
             print("  ✓ All checks passed")

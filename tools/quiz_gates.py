@@ -35,6 +35,7 @@ import argparse
 import json
 import os
 import random
+import re
 import sys
 from typing import Any
 
@@ -50,7 +51,7 @@ MODEL_TOPICS = "gemini-3.1-pro-preview"  # one-shot critical-topic extraction
 CLIENT = genai.Client(vertexai=True, project="adk-coding-agents", location="global")
 
 FAITHFULNESS_BATCH = 10  # questions per Gemini call (keeps responses bounded)
-DEFAULT_SAMPLE_SIZE = 60  # if questions > this, random-sample for cost control
+DEFAULT_SAMPLE_SIZE = 0  # 0 = judge every non-sign question (#59 item 2). >0 dev override only.
 SOFT_FAIL_FIDELITY = 9  # below = soft warn
 HARD_FAIL_FIDELITY = 7  # below = hard fail
 # Coverage uses keyword matching (cheap but imprecise — ~25% false-negative rate
@@ -192,8 +193,54 @@ class PrecisionMetric(BaseModel):
     pct_above_7: float
     pct_zero: float
     flagged_question_ids: list[int]
+    # Verbatim manual excerpts (≤3 each, 20-200 chars) keyed by question id (as str).
+    # Per #59 item 1: persisted so reviewers can audit the per-question source trail.
+    evidence_by_question_id: dict[str, list[str]] = Field(default_factory=dict)
     verdict: str  # PASS | SOFT_WARN | HARD_FAIL
     grade: str  # A-F
+
+
+class TranslationAnchor(BaseModel):
+    """One translation pair (EN ↔ target) scored for faithfulness."""
+
+    question_id: int = Field(description="Numeric id of the question pair being judged")
+    fidelity: int = Field(
+        ge=0,
+        le=10,
+        description=(
+            "0-10. 10 = translation preserves meaning, answer letter, and explanation facts "
+            "exactly. 7-9 = natural rendering with negligible drift. 4-6 = adds or drops a fact, "
+            "softens a directive, or changes nuance. 1-3 = wrong answer or substantive drift. "
+            "0 = mistranslated or fabricated."
+        ),
+    )
+    issue: str = Field(
+        default="",
+        description="One-sentence description of the drift when fidelity < 7. Empty otherwise.",
+    )
+
+
+class TranslationFaithfulnessReport(BaseModel):
+    """Per-batch translation-judge result."""
+
+    anchors: list[TranslationAnchor] = Field(
+        description="One TranslationAnchor per input pair, in input order"
+    )
+
+
+class TranslationMetric(BaseModel):
+    """Translation-faithfulness gate output for one target language."""
+
+    method: str = "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage"
+    judged_count: int
+    avg_fidelity: float
+    pct_at_10: float
+    pct_above_9: float
+    pct_above_7: float
+    pct_zero: float
+    drift_flagged_ids: list[int]
+    verdict: str
+    grade: str
 
 
 class RecallMetric(BaseModel):
@@ -231,16 +278,19 @@ class VerificationReport(BaseModel):
     manual as ground truth.
     """
 
-    schema_version: int = 1
+    schema_version: int = 2
     code: str
     name: str
     verified_at: str  # ISO-8601 UTC
-    quiz_gates_version: str = "v1"
+    quiz_gates_version: str = "v2"
     source: SourceInfo
     bank: BankInfo
     precision: PrecisionMetric
     recall: RecallMetric
     coverage: CoverageMetric
+    # Per-language translation faithfulness (#59 item 3). Keyed by ISO 639-1 code.
+    # Absent when the state ships only EN.
+    translation: dict[str, TranslationMetric] = Field(default_factory=dict)
     overall_verdict: str  # PASS | SOFT_WARN | HARD_FAIL | INCOMPLETE
     overall_grade: str  # A | B | C | D | F | INCOMPLETE
     notes: str = ""
@@ -296,7 +346,16 @@ QUESTIONS TO JUDGE:
     )
     if response.text is None:
         raise RuntimeError(f"Empty judge response for batch starting Q{batch[0]['id']}")
-    return FaithfulnessReport.model_validate_json(response.text)
+    return FaithfulnessReport.model_validate_json(_sanitize_json(response.text))
+
+
+def _sanitize_json(text: str) -> str:
+    """Strip ASCII control chars (0x00-0x1F except \\t\\n\\r) that Gemini
+    occasionally echoes back from source-manual quotes into string values.
+    Pydantic's strict JSON parser rejects raw control chars inside strings
+    (RFC 8259 §7); the fix is to escape them at the boundary.
+    """
+    return re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", text)
 
 
 def run_faithfulness_gate(
@@ -305,12 +364,21 @@ def run_faithfulness_gate(
     state_name: str,
     sample_size: int | None = None,
 ) -> tuple[list[QuestionAnchor], dict[str, Any]]:
-    """Run the faithfulness gate. Returns (per-question anchors, summary stats)."""
+    """Run the faithfulness gate over every non-sign question (or a dev sample).
+
+    Per #59 item 2: default behavior judges 100% of non-sign questions. A non-zero
+    ``sample_size`` is a developer escape hatch for local iteration and should NOT
+    be used by the bulk verification batch — the committed reports must show
+    ``judged_count == non_sign_questions``.
+    """
     non_sign = [q for q in questions if "image" not in q]
-    if sample_size and len(non_sign) > sample_size:
+    total_non_sign = len(non_sign)
+    if sample_size and total_non_sign > sample_size:
         rng = random.Random(42)
         non_sign = rng.sample(non_sign, sample_size)
-        print(f"  Sampled {sample_size} non-sign questions for faithfulness")
+        print(f"  DEV ESCAPE: sampled {sample_size} of {total_non_sign} non-sign questions")
+    else:
+        print(f"  Judging all {total_non_sign} non-sign questions (100% coverage)")
 
     anchors: list[QuestionAnchor] = []
     for i in range(0, len(non_sign), FAITHFULNESS_BATCH):
@@ -548,6 +616,131 @@ def run_structural_coverage_gate(
 
 
 # ---------------------------------------------------------------------------
+# Gate 4: translation faithfulness (per #59 item 3)
+# ---------------------------------------------------------------------------
+
+
+def _format_pair_for_judge(en_q: dict[str, Any], tgt_q: dict[str, Any], tgt_lang: str) -> str:
+    en_choices = en_q.get("choices", {})
+    tgt_choices = tgt_q.get("choices", {})
+    return (
+        f"Q{en_q['id']}\n"
+        f"  EN question:  {en_q.get('question', '')}\n"
+        f"  EN A: {en_choices.get('A', '')}\n"
+        f"  EN B: {en_choices.get('B', '')}\n"
+        f"  EN C: {en_choices.get('C', '')}\n"
+        f"  EN D: {en_choices.get('D', '')}\n"
+        f"  EN answer: {en_q.get('answer', '')}\n"
+        f"  EN explanation: {en_q.get('explanation', '')}\n"
+        f"  {tgt_lang} question:  {tgt_q.get('question', '')}\n"
+        f"  {tgt_lang} A: {tgt_choices.get('A', '')}\n"
+        f"  {tgt_lang} B: {tgt_choices.get('B', '')}\n"
+        f"  {tgt_lang} C: {tgt_choices.get('C', '')}\n"
+        f"  {tgt_lang} D: {tgt_choices.get('D', '')}\n"
+        f"  {tgt_lang} answer: {tgt_q.get('answer', '')}\n"
+        f"  {tgt_lang} explanation: {tgt_q.get('explanation', '')}"
+    )
+
+
+TRANSLATION_BATCH = 10
+
+
+def check_translation_batch(
+    en_batch: list[dict[str, Any]],
+    tgt_batch: list[dict[str, Any]],
+    tgt_lang_name: str,
+) -> TranslationFaithfulnessReport:
+    """Judge a batch of EN/target pairs for translation faithfulness."""
+    pairs_block = "\n\n".join(
+        _format_pair_for_judge(en, tgt, tgt_lang_name)
+        for en, tgt in zip(en_batch, tgt_batch, strict=True)
+    )
+    prompt = f"""You are auditing {tgt_lang_name} translations of US driver's-test questions for faithfulness to the English original.
+
+For each pair, score 0-10. 10 = answer letter unchanged AND meaning preserved AND no facts added or dropped. Penalize: changed answer letter, softened directives ("must" → "should"), introduced facts not in EN, dropped legal references (BAC limits, fines, ages), drift in numbers.
+
+If fidelity < 7, give a one-sentence drift description.
+
+PAIRS TO JUDGE:
+{pairs_block}
+"""
+    response = CLIENT.models.generate_content(
+        model=MODEL_JUDGE,
+        contents=prompt,
+        config=types.GenerateContentConfig(
+            temperature=0.0,
+            response_mime_type="application/json",
+            response_schema=TranslationFaithfulnessReport,
+            thinking_config=types.ThinkingConfig(thinking_budget=0),
+            max_output_tokens=32768,
+        ),
+    )
+    if response.text is None:
+        raise RuntimeError(
+            f"Empty translation-judge response for batch starting Q{en_batch[0]['id']}"
+        )
+    return TranslationFaithfulnessReport.model_validate_json(_sanitize_json(response.text))
+
+
+def run_translation_faithfulness_gate(
+    en_questions: list[dict[str, Any]],
+    tgt_questions: list[dict[str, Any]],
+    tgt_lang_code: str,
+    tgt_lang_name: str,
+) -> tuple[list[TranslationAnchor], dict[str, Any]]:
+    """Judge every translated pair for faithfulness. 100% coverage (#59 items 2+3).
+
+    Pairs EN and target questions by ``id``. Skips IDs missing in either side and
+    skips sign questions (they only translate the prompt, which is constant across
+    states and not test-language-sensitive).
+    """
+    en_by_id = {q["id"]: q for q in en_questions if "image" not in q}
+    pairs: list[tuple[dict[str, Any], dict[str, Any]]] = []
+    for tgt_q in tgt_questions:
+        if "image" in tgt_q:
+            continue
+        en_q = en_by_id.get(tgt_q.get("id"))
+        if en_q is None:
+            continue
+        pairs.append((en_q, tgt_q))
+
+    print(f"  Judging {len(pairs)} {tgt_lang_code.upper()} translation pairs (100% coverage)")
+
+    anchors: list[TranslationAnchor] = []
+    for i in range(0, len(pairs), TRANSLATION_BATCH):
+        batch = pairs[i : i + TRANSLATION_BATCH]
+        en_batch = [en for en, _ in batch]
+        tgt_batch = [tgt for _, tgt in batch]
+        print(
+            f"  Translation batch {i // TRANSLATION_BATCH + 1}/"
+            f"{(len(pairs) - 1) // TRANSLATION_BATCH + 1} "
+            f"(Q{en_batch[0]['id']}-Q{en_batch[-1]['id']})..."
+        )
+        report = check_translation_batch(en_batch, tgt_batch, tgt_lang_name)
+        anchors.extend(report.anchors)
+
+    n = len(anchors)
+    n_zero = sum(1 for a in anchors if a.fidelity == 0)
+    avg_fidelity = sum(a.fidelity for a in anchors) / n if n else 0.0
+    pct_zero = (n_zero / n * 100.0) if n else 0.0
+    summary = {
+        "total_judged": n,
+        "zero_fidelity": n_zero,
+        "avg_fidelity": round(avg_fidelity, 2),
+        "verdict": _faithfulness_verdict(avg_fidelity, pct_zero),
+    }
+    return anchors, summary
+
+
+LANG_NAMES_FOR_JUDGE = {
+    "es": "Spanish",
+    "ja": "Japanese",
+    "zh": "Simplified Chinese",
+    "ko": "Korean",
+}
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 
@@ -667,6 +860,7 @@ def build_verification_report(
     pct_above_9 = (sum(1 for a in anchors if a.fidelity >= 9) / n * 100.0) if n else 0.0
     pct_above_7 = (sum(1 for a in anchors if a.fidelity >= 7) / n * 100.0) if n else 0.0
     pct_zero = (faith_summary["zero_fidelity"] / n * 100.0) if n else 0.0
+    evidence_by_id = {str(a.question_id): a.manual_evidence for a in anchors if a.manual_evidence}
     precision = PrecisionMetric(
         sample_size=sample_size if sample_size else 0,
         judged_count=n,
@@ -676,6 +870,7 @@ def build_verification_report(
         pct_above_7=round(pct_above_7, 1),
         pct_zero=round(pct_zero, 1),
         flagged_question_ids=[a.question_id for a in anchors if a.fidelity < HARD_FAIL_FIDELITY],
+        evidence_by_question_id=evidence_by_id,
         verdict=faith_summary["verdict"],
         grade=_grade_precision(faith_summary["avg_fidelity"], pct_zero),
     )
@@ -696,11 +891,52 @@ def build_verification_report(
     print("\n[Coverage: structural distribution]")
     coverage = run_structural_coverage_gate(questions, manual_text)
 
+    # --- Translation faithfulness, per shipped non-English bank ---
+    translation: dict[str, TranslationMetric] = {}
+    for lang_code in ("es", "ja"):
+        lang_path = os.path.join(state_dir, f"questions_{lang_code}.yaml")
+        if not os.path.exists(lang_path):
+            continue
+        lang_name = LANG_NAMES_FOR_JUDGE.get(lang_code)
+        if lang_name is None:
+            continue
+        print(f"\n[Translation: {lang_code.upper()} faithfulness, LLM-judged]")
+        with open(lang_path) as f:
+            tgt_questions = (yaml.safe_load(f) or {}).get("questions", [])
+        if not tgt_questions:
+            continue
+        t_anchors, t_summary = run_translation_faithfulness_gate(
+            questions, tgt_questions, lang_code, lang_name
+        )
+        t_n = t_summary["total_judged"]
+        t_pct_at_10 = (sum(1 for a in t_anchors if a.fidelity == 10) / t_n * 100.0) if t_n else 0.0
+        t_pct_above_9 = (
+            (sum(1 for a in t_anchors if a.fidelity >= 9) / t_n * 100.0) if t_n else 0.0
+        )
+        t_pct_above_7 = (
+            (sum(1 for a in t_anchors if a.fidelity >= 7) / t_n * 100.0) if t_n else 0.0
+        )
+        t_pct_zero = (t_summary["zero_fidelity"] / t_n * 100.0) if t_n else 0.0
+        translation[lang_code] = TranslationMetric(
+            judged_count=t_n,
+            avg_fidelity=t_summary["avg_fidelity"],
+            pct_at_10=round(t_pct_at_10, 1),
+            pct_above_9=round(t_pct_above_9, 1),
+            pct_above_7=round(t_pct_above_7, 1),
+            pct_zero=round(t_pct_zero, 1),
+            drift_flagged_ids=[
+                a.question_id for a in t_anchors if a.fidelity < HARD_FAIL_FIDELITY
+            ],
+            verdict=t_summary["verdict"],
+            grade=_grade_precision(t_summary["avg_fidelity"], t_pct_zero),
+        )
+
     # --- Overall ---
     rank = {"PASS": 0, "SOFT_WARN": 1, "HARD_FAIL": 2}
-    overall_verdict = max(
-        precision.verdict, recall.verdict, coverage.verdict, key=lambda v: rank[v]
-    )
+    verdicts = [precision.verdict, recall.verdict, coverage.verdict] + [
+        m.verdict for m in translation.values()
+    ]
+    overall_verdict = max(verdicts, key=lambda v: rank[v])
     overall_grade = _overall_grade(precision.grade, recall.grade, coverage.grade)
 
     return VerificationReport(
@@ -712,6 +948,7 @@ def build_verification_report(
         precision=precision,
         recall=recall,
         coverage=coverage,
+        translation=translation,
         overall_verdict=overall_verdict,
         overall_grade=overall_grade,
     )
@@ -734,7 +971,12 @@ def main(argv: list[str] | None = None) -> int:
         "--sample",
         type=int,
         default=DEFAULT_SAMPLE_SIZE,
-        help=f"Random sample size for precision gate (default {DEFAULT_SAMPLE_SIZE}, 0 = all)",
+        help=(
+            f"DEV ONLY: random sample size for precision gate. Default {DEFAULT_SAMPLE_SIZE} "
+            "(0 = judge all non-sign questions, the production default). "
+            "Non-zero values are for local iteration and must NOT be used by the bulk "
+            "verification batch — committed reports must judge 100% of every state's bank."
+        ),
     )
     parser.add_argument(
         "--block-on-fail",
@@ -779,6 +1021,12 @@ def main(argv: list[str] | None = None) -> int:
     if report.coverage.over_concentrated_categories:
         print(
             f"             over-concentrated:  {', '.join(report.coverage.over_concentrated_categories)}"
+        )
+    for lang_code, tmetric in report.translation.items():
+        print(
+            f"  Translation ({lang_code.upper()}): avg={tmetric.avg_fidelity}/10  "
+            f"pct@10={tmetric.pct_at_10}%  drift_flagged={len(tmetric.drift_flagged_ids)}  "
+            f"verdict={tmetric.verdict}  grade={tmetric.grade}"
         )
     if report.recall.uncovered_topics:
         print(f"  Uncovered topics ({len(report.recall.uncovered_topics)}):")

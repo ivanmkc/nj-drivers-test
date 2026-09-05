@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "in",
   "name": "Indiana",
-  "verified_at": "2026-05-26T02:29:46Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-27T01:17:12Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.in.gov/bmv/licenses-permits-ids/files/drivers-manual.pdf",
     "manual_pdf_sha256": "f5fdfcc4f845563c9bd203f75744c574576aac94d78c5d398a0fb366cc0e9e77",
@@ -24,14 +24,1032 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
-    "avg_fidelity": 10.0,
-    "pct_at_10": 100.0,
-    "pct_above_9": 100.0,
-    "pct_above_7": 100.0,
-    "pct_zero": 0.0,
-    "flagged_question_ids": [],
+    "sample_size": 0,
+    "judged_count": 328,
+    "avg_fidelity": 9.97,
+    "pct_at_10": 99.4,
+    "pct_above_9": 99.7,
+    "pct_above_7": 99.7,
+    "pct_zero": 0.3,
+    "flagged_question_ids": [
+      24
+    ],
+    "evidence_by_question_id": {
+      "1": [
+        "A Real ID is indicated by a star in the upper right hand corner of licenses, IDs, and permits."
+      ],
+      "2": [
+        "With a Real ID you can board commercial flights within the United States"
+      ],
+      "3": [
+        "With a Real ID you can board commercial flights within the United States, visit military bases, and enter certain federal facilities."
+      ],
+      "4": [
+        "Visit RealID.IN.gov to learn what documents are needed to upgrade to a Real ID."
+      ],
+      "5": [
+        "providing best-in-class driver and vehicle services in a timely and accurate manner while ensuring security and transparency."
+      ],
+      "6": [
+        "Vision Screening.......................................................................................................................4"
+      ],
+      "7": [
+        "Financial Liability for Injury or Damage.............................................................................................7"
+      ],
+      "8": [
+        "For-Hire Endorsement.......................................................................................................................15"
+      ],
+      "9": [
+        "Active Duty and Veteran Military Indicator........................................................................................17"
+      ],
+      "10": [
+        "Driver Safety Program ......................................................................................................................21"
+      ],
+      "11": [
+        "The BMV uses the criteria in statute, which are summarized in the following sections to determine whether a driver qualifies as a Habitual Traffic Violator (HTV)."
+      ],
+      "12": [
+        "TRAFFIC GUIDANCE SIGNS",
+        "Traffic guidance signs provide drivers with information about the type of road they are traveling on"
+      ],
+      "13": [
+        "TIRE PRESSURE AND TREAD DEPTH",
+        "Tread Depth. Once every month, or before you embark upon a long road trip, check your tires for wear and damage."
+      ],
+      "14": [
+        "Distracted Driving",
+        "Aggressive Driving"
+      ],
+      "15": [
+        "Motor Driven Cycle (MDC)",
+        "Indiana law defines a vehicle as an MDC if: It has a seat or saddle for the use of the rider"
+      ],
+      "16": [
+        "All credentials issued to Indiana residents who are under 21 years of age have a vertical format"
+      ],
+      "17": [
+        "A star marker appears in the upper right-hand corner to indicate that a credential is Real ID-compliant"
+      ],
+      "18": [
+        "When you become an Indiana resident, you have 60 days to obtain a new Indiana driver’s license."
+      ],
+      "19": [
+        "you must hold an Indiana learner’s permit for 180 days before you can apply for an Indiana driver’s license."
+      ],
+      "20": [
+        "If your out-of-state driver’s license has been expired for more than five years, you must pass a knowledge exam and a driving skills test"
+      ],
+      "21": [
+        "If your out-of-state driver’s license has been expired for less than five years... you must pass a knowledge exam to obtain an Indiana driver’s license."
+      ],
+      "22": [
+        "Evidence of Indiana residency includes:",
+        "Being a registered voter in Indiana"
+      ],
+      "23": [
+        "Identification cards are issued at no cost to individuals who are or will be 18 years of age on or before the next General or Municipal Election."
+      ],
+      "25": [
+        "you must provide original versions or certified copies of your identity, lawful status, Social Security number, and proof of Indiana residency"
+      ],
+      "26": [
+        "the applicant will be required to surrender the out-of-state credential before the BMV will process an application for an Indiana credential."
+      ],
+      "27": [
+        "All credentials issued to Indiana residents who are under 21 years of age... display the dates the cardholder turns 18 and 21 years of age."
+      ],
+      "28": [
+        "You are also required to pass a standard vision screening."
+      ],
+      "29": [
+        "Active-duty military personnel in the armed forces who do not claim Indiana as their state of residence"
+      ],
+      "30": [
+        "a copy of your official driving record"
+      ],
+      "31": [
+        "An identification card and an MDC endorsement are valid for six years"
+      ],
+      "32": [
+        "Indiana residents cannot hold more than one credential at the same time",
+        "Therefore, you must surrender any other credential to the Indiana BMV to complete an application for an identification card."
+      ],
+      "33": [
+        "Identification cards may also provide privileges to operate a Motor Driven Cycle (MDC) as long as you are at least 15 years of age"
+      ],
+      "34": [
+        "The online course certificate of completion for theoretical training is not an acceptable document."
+      ],
+      "35": [
+        "Learner’s permits are valid for two years from the date of issuance."
+      ],
+      "36": [
+        "If you are visiting a BMV branch to renew your learner’s permit and it has been expired more than 180 days, you are required to retest."
+      ],
+      "37": [
+        "You may also practice driving with a licensed driver who has valid (not expired, suspended, or revoked) driving privileges and is 25 years of age or older."
+      ],
+      "38": [
+        "You must arrive at the branch at least 30 minutes before the branch closes to take the computer-based knowledge exam that day."
+      ],
+      "39": [
+        "If you fail the knowledge exam, you must wait until the next business day to retake it."
+      ],
+      "40": [
+        "A driver who has six or more active points on an Indiana driving record and is renewing their driver’s license"
+      ],
+      "41": [
+        "If you normally wear glasses or contacts while driving, you should inform the BMV branch personnel and wear them during the vision screening."
+      ],
+      "42": [
+        "An individual less than 18 years old applying for a learner’s permit is required to provide an emergency contact that is at least 18 years of age or older."
+      ],
+      "43": [
+        "You may also choose to practice driving with a licensed driver who is 25 years of age or older and approved by the Department of Child Services."
+      ],
+      "44": [
+        "If you fail the knowledge exam, you must wait until the next business day to retake it."
+      ],
+      "45": [
+        "A driving skills exam may be scheduled no more than three weeks, and no less than 48 business hours, ahead of time."
+      ],
+      "46": [
+        "Examples of reasons vehicles may be rejected for the driving skills exam include but are not limited to:",
+        "Door inoperative"
+      ],
+      "47": [
+        "Any of the following actions shall result in the automatic failure of the driving skills exam:",
+        "Backing over a curb"
+      ],
+      "48": [
+        "No one other than the BMV examiner(s) conducting the skills exam or other authorized BMV personnel is allowed in your vehicle when you take the driving skills exam."
+      ],
+      "49": [
+        "Upon failure of a third driving skills exam while holding a learner’s permit, you must wait for two months from the date of the last failed driving skills exam before taking the exam again."
+      ],
+      "50": [
+        "The parent having custody of the minor applicant or a designee of the custodial parent specified by the custodial parent"
+      ],
+      "51": [
+        "A written request to withdraw financial liability will cancel the minor’s learner’s permit or driver’s license [IC 9-24-9-4(b)]."
+      ],
+      "52": [
+        "the applicant must also provide proof of a motor vehicle insurance policy that meets the minimum liability standards set forth in Indiana law."
+      ],
+      "53": [
+        "If you are under the age of 21, your driver’s license is considered a “probationary” driver’s license."
+      ],
+      "54": [
+        "Any of the following actions shall result in the automatic failure of the driving skills exam:",
+        "Failure to use a seat belt"
+      ],
+      "55": [
+        "There is no charge for the driving skills exam administered by the BMV."
+      ],
+      "56": [
+        "You must be at least 16 years and 270 days of age without completion of a BMV licensed driver education program"
+      ],
+      "57": [
+        "Three years if you are aged 75 through 84"
+      ],
+      "58": [
+        "However, you may drive with your child, stepchild, sibling, step or half-sibling, or spouse without another accompanying individual"
+      ],
+      "59": [
+        "For the first 180 days after obtaining your probationary driver’s license, you may not drive between 10 p.m. and 5 a.m."
+      ],
+      "60": [
+        "unless the device is being used to make a 911 emergency call."
+      ],
+      "61": [
+        "The juvenile has been determined to be a habitual truant"
+      ],
+      "62": [
+        "You must be at least 18 years of age to apply for a CDL and 21 years of age to apply for a CDL with school bus endorsement."
+      ],
+      "63": [
+        "you must complete at least 50 hours of supervised driving practice"
+      ],
+      "64": [
+        "At least 10 hours of supervised driving practice must be completed at night"
+      ],
+      "65": [
+        "Your probationary driver’s license is valid until you are 21 years and 30 days of age."
+      ],
+      "66": [
+        "Your permanent credential will be mailed to you from a secure central location, within 14 calendar days"
+      ],
+      "67": [
+        "Photo-exempt identification cards are available for religious reasons only."
+      ],
+      "68": [
+        "Pass a knowledge exam for the driver’s license you want to obtain (must be complete prior to skills exam)"
+      ],
+      "69": [
+        "A school-sanctioned activity"
+      ],
+      "70": [
+        "gross vehicle weight ratings in excess of 26,000 pounds"
+      ],
+      "71": [
+        "credentials will only be mailed to the mailing address on file with the BMV and will not be forwarded.",
+        "Failure to do so will prevent delivery of your credential."
+      ],
+      "72": [
+        "Indiana law requires all occupants of a motor vehicle equipped with a seat belt that is standard equipment installed by the manufacturer to wear the seat belt any time the motor vehicle is in motion."
+      ],
+      "73": [
+        "unless the device is used in conjunction with hands-free or voice-operated technology, or unless the device is used to make a 911 emergency call."
+      ],
+      "74": [
+        "This definition does not include citizen band (CB) radio equipment that is being operated by a person licensed as a CB radio operator"
+      ],
+      "75": [
+        "Restriction G: Daylight driving only",
+        "G Daylight Driving Only"
+      ],
+      "76": [
+        "may only ride without passengers during the period of one-half hour before sunrise and one-half hour after sunset."
+      ],
+      "77": [
+        "provided you are 16 years and 90 days of age or older and have completed a motorcycle safety course."
+      ],
+      "78": [
+        "It has a cylinder capacity not exceeding 50 cubic centimeters"
+      ],
+      "79": [
+        "Must operate at no more than 35 miles per hour",
+        "Must not carry passengers",
+        "Must not operate on an interstate highway or sidewalk"
+      ],
+      "80": [
+        "Anti-lock brakes, and",
+        "Is designed to be controlled with a steering wheel and pedals"
+      ],
+      "81": [
+        "You may operate an autocycle on Indiana roadways if you possess a valid (not expired, suspended, or revoked) Indiana driver’s license."
+      ],
+      "82": [
+        "May not be used for the purpose of a driving skills exam for a driver’s license"
+      ],
+      "83": [
+        "Designed to transport fewer than 16 passengers, including the driver, and operated for the purpose of transporting passengers for hire."
+      ],
+      "84": [
+        "A for-hire endorsement may be issued to Indiana residents who are at least 18 years of age and who have held a valid Indiana driver’s license for at least one year."
+      ],
+      "85": [
+        "The BMV does not require a medical examination report in order to issue a driver’s license with the for-hire endorsement."
+      ],
+      "86": [
+        "The following are not considered transporting for hire: • Operating a medical services vehicle"
+      ],
+      "87": [
+        "individuals 18 years of age and older may declare their intention to be organ donors and their family members cannot override their intention at the time of death."
+      ],
+      "88": [
+        "To obtain the indicator, you must provide a DD 214 issued by the United States Department of Defense verifying your discharge."
+      ],
+      "89": [
+        "Indiana law requires the operator of a watercraft with an engine that produces more than 10 horsepower to carry a valid driver’s license."
+      ],
+      "90": [
+        "If you are 15 years of age or older and do not have a driver’s license, you may operate a watercraft only after successfully completing a boater education course",
+        "You must have a valid Indiana identification card in your possession at all times while operating a watercraft."
+      ],
+      "91": [
+        "If your driver’s license is suspended, you may not operate a watercraft."
+      ],
+      "92": [
+        "If you have a temporary disability, your parking placard expires on the date indicated by the health care provider or one year after the date of issuance, whichever occurs first."
+      ],
+      "93": [
+        "There is no fee for a permanent parking placard."
+      ],
+      "94": [
+        "Parking in the diagonally striped space next to a reserved parking space is prohibited at all times, even with a valid placard."
+      ],
+      "95": [
+        "A probationary driver’s license expires when the card holder is 21 years and 30 days of age."
+      ],
+      "96": [
+        "If your birthday falls on a day when BMV branches are closed, your credential expires at midnight on the next business day."
+      ],
+      "97": [
+        "If you operate your watercraft recklessly, while intoxicated, or break private watercraft laws, you may have points assessed against your driver record."
+      ],
+      "98": [
+        "You may renew your driver’s license with a for-hire endorsement at any Indiana BMV branch or online up to one year before the license expires."
+      ],
+      "99": [
+        "All other credentials expire at midnight on your birthday."
+      ],
+      "100": [
+        "If you are renewing a driver’s license that has been expired for at least 180 days but not more than five years, you must pay an administrative penalty, pass a knowledge exam, and pass a standard vision screening."
+      ],
+      "101": [
+        "A driver’s license or identification card may be renewed by U.S. citizens or individuals with permanent lawful status up to 24 months before the credential expiration."
+      ],
+      "102": [
+        "If you are at least 21 years of age and have six or more active points on your driving record, you must take the knowledge exam to renew your driver’s license."
+      ],
+      "103": [
+        "your driver’s license remains valid for 90 days following your discharge from service, post-deployment, or after you are no longer temporarily residing outside Indiana"
+      ],
+      "104": [
+        "you must notify the BMV of a change of your principal (legal) address and apply for an amended credential within 30 days of the address change."
+      ],
+      "105": [
+        "You must visit a Social Security Administration office to officially change your name on Social Security documentation and allow at least one business day"
+      ],
+      "106": [
+        "16 – 25 miles per hour over the speed limit 4 points"
+      ],
+      "107": [
+        "Points stay active on your driver record for two years from the conviction date."
+      ],
+      "108": [
+        "Any Indiana driver may complete a DSP course from a BMV-approved provider and receive a four-point credit."
+      ],
+      "109": [
+        "The BMV may require drivers 21 years of age and older who are convicted of two or more traffic offenses within a 12-month period to complete a BMV-approved DSP course."
+      ],
+      "110": [
+        "the state minimum insurance standard is... $25,000 for property damages in any one accident. This is commonly referred to as 25/50/25 liability insurance."
+      ],
+      "111": [
+        "The COC must be received electronically from your insurer and processed by the BMV within 90 days of the BMV’s mailing of a request to verify financial responsibility"
+      ],
+      "112": [
+        "Driving while suspended 8 points",
+        "Speed contest on road 8 points"
+      ],
+      "113": [
+        "You may replace your credential online a maximum of 10 times before you are required to visit a BMV branch for a replacement."
+      ],
+      "114": [
+        "This is commonly referred to as 25/50/25 liability insurance."
+      ],
+      "115": [
+        "The COC must be received electronically from your insurer and processed by the BMV within 90 days of the BMV’s mailing of a request to verify financial responsibility"
+      ],
+      "116": [
+        "Indiana law requires that you have your insurance provider electronically file proof of future financial responsibility with an SR22 form"
+      ],
+      "117": [
+        "Indiana law requires the BMV to suspend your driving privileges until it receives an effective SR22 policy, or until the SR22 requirement period expires."
+      ],
+      "118": [
+        "Reinstatement fees are $250 for a first no-insurance suspension"
+      ],
+      "119": [
+        "A driver may reinstate their driving privileges without having to pay a no-insurance reinstatement fee by having their insurance provider electronically submit proof of future financial responsibility (SR22 form) and maintain SR22 continuously for 180-days."
+      ],
+      "120": [
+        "Operating a vehicle while intoxicated or with a blood alcohol concentration (BAC) in excess of the legal limit (.08) is a criminal offense"
+      ],
+      "121": [
+        "The primary factors in determining an individual’s BAC are the amount of alcohol consumed, how quickly the alcohol is consumed, and the individual’s body weight."
+      ],
+      "122": [
+        "A motorist who fails a chemical test will face a suspension of driving privileges for 180 days."
+      ],
+      "123": [
+        "A motorist who refuses to submit to a chemical test will face a suspension of driving privileges for one year."
+      ],
+      "124": [
+        "The court may also require the installation of an ignition interlock device, which mechanically tests the driver’s blood alcohol level before his or her car can be started."
+      ],
+      "125": [
+        "A conviction of operating a watercraft while intoxicated is forwarded to the BMV and the conviction becomes part of your driver record."
+      ],
+      "126": [
+        "A court that has determined a parent is delinquent in paying child support may order the BMV to immediately suspend the delinquent parent’s driving privileges"
+      ],
+      "127": [
+        "The BMV will indefinitely suspend your driving privileges if you submit payment to the BMV for any services or fees and that payment was not honored."
+      ],
+      "128": [
+        "check your driver record, which you may view anytime at no charge at myBMV.com."
+      ],
+      "129": [
+        "There is also an “Official Driver Record” that may be purchased for $4."
+      ],
+      "130": [
+        "Processing by the BMV may take up to 10 business days once the information is received from the court."
+      ],
+      "131": [
+        "The Viewable Driver Record cannot be printed and should not be used as an official transcript of your driver record."
+      ],
+      "132": [
+        "Drivers who accumulate two judgments within a 10-year period for operating a motor vehicle while intoxicated resulting in death... will have their driving privileges suspended for life."
+      ],
+      "133": [
+        "Drivers who, within a 10-year period, accumulate three judgments from the below list will have their driving privileges suspended for 10 years."
+      ],
+      "134": [
+        "An HTV under this section is subject to a five-year driving privilege suspension for a person who has accumulated 10 or more traffic violations in a 10-year period"
+      ],
+      "135": [
+        "A “Restriction 5” is placed on the driver’s license of a person who has been granted hardship, probationary, conditional, or specialized driving privileges by court order."
+      ],
+      "136": [
+        "Maintain an effective SR22 on file with the BMV for the duration of specialized driving privileges"
+      ],
+      "137": [
+        "Brown traffic signs indicate nearby recreational and cultural interest sites."
+      ],
+      "138": [
+        "Blue traffic signs display road services and information. A sign showing information about amenities at an upcoming exit is an example"
+      ],
+      "139": [
+        "Orange traffic signs warn drivers of temporary traffic conditions. These signs are often used to warn drivers of conditions ahead due to highway constructions"
+      ],
+      "140": [
+        "White Traffic signs display traffic regulations, such as speed limits, that drivers must obey"
+      ],
+      "141": [
+        "A 'Slippery When Wet' sign is one example of a traffic sign with a yellow background."
+      ],
+      "142": [
+        "Red traffic signs convey traffic regulations that require drivers to take immediate action to avoid threats to traffic safety."
+      ],
+      "143": [
+        "Reckless homicide resulting from operation of a motor vehicle",
+        "Drivers who accumulate two judgments from the above list within a 10-year period will have their driving privileges suspended for 10 years."
+      ],
+      "144": [
+        "Fluorescent yellow-green signs warn drivers of nearby schools, pedestrians, bicycles, playgrounds, and school bus routes."
+      ],
+      "145": [
+        "Pennant-shaped traffic signs are posted on the left-hand side of two-way roads to warn drivers not to pass other vehicles on the left."
+      ],
+      "146": [
+        "Circular traffic signs alert drivers to upcoming railroad crossings."
+      ],
+      "147": [
+        "Five-sided traffic signs warn drivers that they are entering an area near a school in which children may be crossing the road."
+      ],
+      "148": [
+        "indicates a slow-moving vehicle which cannot exceed 25 miles per hour."
+      ],
+      "149": [
+        "A slow-moving vehicle emblem has an orange, fluorescent center and red reflective borders"
+      ],
+      "150": [
+        "Orange highway construction traffic signs warn drivers to be careful when approaching construction zones."
+      ],
+      "151": [
+        "If you are approaching the intersection and are too close to stop safely, you may complete your movement."
+      ],
+      "152": [
+        "Only one vehicle at a time may move into an intersection to turn left."
+      ],
+      "153": [
+        "A yellow flashing arrow for a turning movement means that you may proceed with the turn only after you have yielded the right of way to pedestrians and oncoming traffic."
+      ],
+      "154": [
+        "You may turn left through an intersection with a red light or arrow if you are turning from a one-way street onto a one-way street."
+      ],
+      "155": [
+        "To turn right through an intersection with a red light or arrow, when permissible, you must come to a full stop, check to make sure that there are no vehicles and pedestrians"
+      ],
+      "156": [
+        "A yellow flashing light displayed without an arrow at an intersection means that you should slow down and use caution when traveling through an intersection."
+      ],
+      "157": [
+        "Traffic signs with three sides of equal length warn drivers to slow down when approaching an intersection, and to be prepared to come to a complete stop in order to yield"
+      ],
+      "158": [
+        "Supplemental plaques are sometimes added to the bottom of stop signs to indicate directions in which the intersection must stop."
+      ],
+      "159": [
+        "A yellow flashing light displayed without an arrow at an intersection means that you should slow down and use caution when traveling through an intersection."
+      ],
+      "160": [
+        "If you arrive at the same time as another driver, the vehicle on the left shall yield the right-of-way."
+      ],
+      "161": [
+        "An operator approaching an intersection controlled by a traffic signal may proceed through a steady red light if the operator comes to a complete stop for at least two minutes and exercises due caution."
+      ],
+      "162": [
+        "This rule does not apply to autocycles"
+      ],
+      "163": [
+        "After stopping, you may proceed with caution only after you have yielded the right of way to:",
+        "Cross-traffic that has already entered the intersection",
+        "Any vehicle that stopped before you and is entering the intersection"
+      ],
+      "164": [
+        "Once activated by a pedestrian, the pedestrian hybrid beacon will display a flashing yellow light to allow drivers to clear the crossing."
+      ],
+      "165": [
+        "Yellow lane markings separate multiple lanes of traffic going in opposite directions."
+      ],
+      "166": [
+        "you must return to the right side of the road no less than 100 feet before any oncoming vehicle"
+      ],
+      "167": [
+        "Briefly turn your head toward the lane that you are entering to make sure that there is no vehicle in your blind spot"
+      ],
+      "168": [
+        "Within 100 feet of an intersection, railroad crossing, bridge, viaduct, or tunnel."
+      ],
+      "169": [
+        "If another vehicle is passing you on the left-hand side of the road, allow the other vehicle to pass safely and do not increase your speed."
+      ],
+      "170": [
+        "To turn right, be in the far-right lane for your direction of travel."
+      ],
+      "171": [
+        "As with vehicular signals, red means stop, yellow means the right-of-way is ending, and green means go."
+      ],
+      "172": [
+        "A signal that displays white rectangular bars control a bus or transit lane and are only applicable to bus or transit operators."
+      ],
+      "173": [
+        "If there is no crosswalk, you should come to a complete stop before entering the intersection."
+      ],
+      "174": [
+        "You may not use hand signals on a driving skills exam."
+      ],
+      "175": [
+        "Busy roads on which there are many places a vehicle may make a left turn often have a center lane designated solely for the left-turning vehicles.",
+        "Never use this type of center lane for passing other vehicles."
+      ],
+      "176": [
+        "Never make a U-turn on an interstate highway."
+      ],
+      "177": [
+        "The vehicle on the left shall yield the right-of-way."
+      ],
+      "178": [
+        "A roundabout is a circular intersection in which traffic enters or exits only through right turns and proceeds in a counterclockwise direction."
+      ],
+      "179": [
+        "the driver in the right lane must yield the right of way to the driver in the left lane."
+      ],
+      "180": [
+        "Passenger vehicles may not exceed 70 miles per hour or the posted speed limit"
+      ],
+      "181": [
+        "In alleys, vehicles may not exceed 15 miles per hour or the posted speed limit"
+      ],
+      "182": [
+        "A good rule for drivers to follow is to stay at least two to three seconds behind the vehicle ahead."
+      ],
+      "183": [
+        "Work site speed limits are always at least 10 miles per hour below the maximum established speed limit for the area."
+      ],
+      "184": [
+        "A traffic circle differs from a roundabout in that it may have clockwise and counterclockwise traffic.",
+        "The approaches to the circulatory roadway of a traffic circle may also be controlled by stop signs instead of yield signs."
+      ],
+      "185": [
+        "Many factors affect a vehicle’s ability to stop:",
+        "Type and condition of tires"
+      ],
+      "186": [
+        "Trucks that have a declared gross vehicle weight greater than 26,000 pounds may not exceed 65 miles per hour or the posted speed limit"
+      ],
+      "187": [
+        "If your vehicle has an anti-lock brake system (ABS), keep your foot on the brake pedal, maintaining firm and continuous pressure, while steering normally."
+      ],
+      "188": [
+        "If your vehicle leaves the roadway, do not turn back onto the pavement right away. Ease up on the gas pedal. When it’s safe to do so, gradually turn back onto the road."
+      ],
+      "189": [
+        "passenger cars and light trucks using approximately 50 percent more fuel traveling at 75 miles per hour than at 55 miles per hour."
+      ],
+      "190": [
+        "Compare the measured psi to the psi found on the sticker inside the driver’s door of your vehicle or in owner’s manual–DO NOT compare to the psi on your tire’s sidewall."
+      ],
+      "191": [
+        "If any part of Lincoln’s head is covered by the tread, you’re driving with the legal and safe amount of tread."
+      ],
+      "192": [
+        "Be aware that moisture on ramps, bridges, and overpasses may occasionally freeze before other sections of the driving roadway."
+      ],
+      "193": [
+        "When you are driving on wet roads, your vehicle is actually traveling on a thin layer of oil, dirt, and water which can lead to hydroplaning."
+      ],
+      "194": [
+        "After driving through water puddles, test your brakes by pumping them. Doing so will help to dry them."
+      ],
+      "195": [
+        "Do not use high headlight beams. Low headlight beams better illuminate the road and objects ahead."
+      ],
+      "196": [
+        "If your car stalls in a flooded area, abandon it as soon as possible, because flood waters can rise rapidly and sweep a car and its occupants away"
+      ],
+      "197": [
+        "To avoid glare, do not look directly into the lights of an approaching vehicle, and instead focus on the right side of the road."
+      ],
+      "198": [
+        "Drivers must use headlights between sunset and sunrise as well as at any other time in which visibility is less than 500 feet."
+      ],
+      "199": [
+        "lower headlight beams must be used when approaching within 500 feet of an oncoming vehicle or when following within 200 feet of the rear of another vehicle."
+      ],
+      "200": [
+        "Improperly inflated and worn tires inhibit your ability to maintain vehicle control, which is the most important factor in reducing the chance of rollover."
+      ],
+      "201": [
+        "Drivers must use headlights between sunset and sunrise as well as at any other time in which visibility is less than 500 feet."
+      ],
+      "202": [
+        "lower headlight beams must be used when approaching within 500 feet of an oncoming vehicle or when following within 200 feet of the rear of another vehicle."
+      ],
+      "203": [
+        "Studies have shown that going 18 hours without sleep leaves a driver equally impaired to a driver with a .08 Blood Alcohol Content (BAC)"
+      ],
+      "204": [
+        "young adults ages 16-29 are at the highest risk, accounting for 64 percent of fatigue-related accidents."
+      ],
+      "205": [
+        "The only exceptions to this prohibition are when hands-free communication is enabled or if the telecommunications device is being used to contact 911 for a bona fide emergency."
+      ],
+      "206": [
+        "Sending or reading a text takes your eyes off the road for five seconds. At 55 mph, that’s like driving the length of an entire football field with your eyes closed."
+      ],
+      "207": [
+        "a person engages in aggressive driving if, during one episode of continuous driving of a vehicle, the person does or commits at least three of the following"
+      ],
+      "208": [
+        "Stopping and turning is more difficult on loose gravel because your traction is reduced. When traction is reduced, skidding can occur."
+      ],
+      "209": [
+        "Before approaching the crest of a steep hill, slow down, move to the right side of the road, and watch for oncoming vehicles."
+      ],
+      "210": [
+        "It is unsafe to back up on an interstate highway to reach a missed exit. If you miss an exit, you must drive to the next exit."
+      ],
+      "211": [
+        "Trucks are restricted to the right lane on sections of interstate with two lanes in one direction and restricted to the right two lanes of interstate with three lanes or more in one direction."
+      ],
+      "212": [
+        "A flashing arrow board not indicating a direction either way is a signal to use caution but does not require a driver to move to another lane."
+      ],
+      "213": [
+        "You must stop when a flagger extends a fluorescent orange/red flag in a horizontal position into the line of traffic."
+      ],
+      "214": [
+        "Some vehicles are required by law to always stop at railroad crossings not closer than 15 feet or farther than 50 feet from the nearest rail."
+      ],
+      "215": [
+        "When displayed alone, you should treat a crossbuck as a yield sign and the decision to stop or cross the tracks is yours."
+      ],
+      "216": [
+        "When displayed alone, you should treat a crossbuck as a yield sign and the decision to stop or cross the tracks is yours. You must stop if there is a train approaching."
+      ],
+      "217": [
+        "Vehicles that must stop at railroad crossings include: • All vehicles carrying passengers for hire • All school buses • All vehicles carrying explosives or flammable liquids"
+      ],
+      "218": [
+        "Do not pass another vehicle within 100 feet of a railroad crossing."
+      ],
+      "219": [
+        "run at a 45-degree angle away from the tracks in the direction of the oncoming train."
+      ],
+      "220": [
+        "Once the track crossing lights begin to flash and the gate begins to lower, you have approximately 20 seconds to escape from the crossing."
+      ],
+      "221": [
+        "The maximum height of any vehicle that may be operated without a special permit is 13 feet, 6 inches."
+      ],
+      "222": [
+        "A fully loaded tractor-trailer with hot brakes may take more than 400 feet to come to a complete stop, or more than the length of a football field."
+      ],
+      "223": [
+        "Blind spots for the tractor-trailer driver will be up to 20 feet in front of the cab, on either side of the trailer, alongside the cab, and up to 200 feet behind the vehicle."
+      ],
+      "224": [
+        "On multi-lane highways, tractor-trailers stay in the center lane to help the flow of local traffic on and off the highway.",
+        "Staying in the middle lane also increases the tractor-trailer driver’s options if he or she has to switch lanes in order to avoid a dangerous situation or an accident."
+      ],
+      "225": [
+        "Always pass a tractor-trailer completely and always on the left side."
+      ],
+      "226": [
+        "If you cannot move over, the motorists shall reduce their speed to 10 mph under the posted limit and proceed with caution."
+      ],
+      "227": [
+        "Failure to comply is a Class A Infraction."
+      ],
+      "228": [
+        "Immediately call the Emergency Notification System (ENS). The phone number is located on the blue sign attached to the railroad track crossing gate"
+      ],
+      "229": [
+        "Tractor-trailer drivers often swing out as the first step in making a tight turn."
+      ],
+      "230": [
+        "Avoid stopping or shifting gears while crossing railroad tracks."
+      ],
+      "231": [
+        "Failure to comply is a Class A Infraction.",
+        "the motorists shall reduce their speed to 10 mph under the posted limit and proceed with caution."
+      ],
+      "232": [
+        "the motorists shall reduce their speed to 10 mph under the posted limit and proceed with caution."
+      ],
+      "233": [
+        "If you are driving on a roadway divided by a barrier or unimproved median, you are required to stop only if you are traveling in the same direction as the school bus."
+      ],
+      "234": [
+        "Disregarding a school bus stop arm can result in a Class A misdemeanor, a Level 6 felony if the offense results in bodily injury"
+      ],
+      "235": [
+        "Allow at least three or four seconds when following a motorcycle so the motorcyclist has enough time to maneuver or stop in an emergency."
+      ],
+      "236": [
+        "These vehicles have signals that are usually not self-canceling, and riders sometimes forget to turn them off."
+      ],
+      "237": [
+        "Drivers may pass a bicyclist when there is a safe amount of room beside the bicyclist (minimum three feet)"
+      ],
+      "238": [
+        "Bicyclists may not ride more than two (2) abreast except on paths or parts of roadways set aside for the exclusive use of bicycles"
+      ],
+      "239": [
+        "Cross a bicycle path or lane only when turning or when entering or leaving an alley, driveway, or private road"
+      ],
+      "240": [
+        "intended to help cyclists position themselves away from parked cars and to alert other road users to expect cyclists to occupy travel lanes."
+      ],
+      "241": [
+        "Red colored pavement may be used to enhance the visibility of bus or transit lanes that are designated for buses, taxis, or other modes of public transit."
+      ],
+      "242": [
+        "In such a case, the law enforcement officer’s command is the one that must be obeyed."
+      ],
+      "243": [
+        "Position your vehicle parallel with the vehicle parked in front of the empty space and maintain at least two feet from this vehicle."
+      ],
+      "244": [
+        "Failure to do so is a Class B Infraction."
+      ],
+      "245": [
+        "A bicyclist is not required to ride in a designated bike lane because the bicyclist has the right to use either the bike lane or the travel lane"
+      ],
+      "246": [
+        "When you park facing downhill, turn your vehicle’s wheels toward the curb."
+      ],
+      "247": [
+        "If there is no curb, turn your vehicle’s wheels away from the street."
+      ],
+      "248": [
+        "To reverse, turn your body to the right to look through the back window. Never use only the rearview mirror for reversing."
+      ],
+      "249": [
+        "Within 15 feet of a fire hydrant or in fire lanes"
+      ],
+      "250": [
+        "Traveling aids for a person who is visually impaired are often a white cane or a trained guide dog."
+      ],
+      "251": [
+        "seat belts for drivers and front-seat passengers increase the chance of survival by 45 percent"
+      ],
+      "252": [
+        "Driver should sit at least 12 inches away from the steering wheel."
+      ],
+      "253": [
+        "A newspaper motor route carrier or newspaper bundle hauler who stops to make deliveries from a vehicle"
+      ],
+      "254": [
+        "Passengers younger than eight years of age are required by law to be properly secured in a child restraint system"
+      ],
+      "255": [
+        "National Safety Council recommends putting children younger than 12 years of age in the back seat."
+      ],
+      "256": [
+        "One red flag must be mounted at the extreme rear end of vehicle’s load between sunrise and sunset.",
+        "The red flag must be mounted, must be not less than 12 square inches"
+      ],
+      "257": [
+        "In the daytime, drivers of disabled cars must display two red flags: one approximately 100 feet in front of the car and the other approximately 100 feet behind it."
+      ],
+      "258": [
+        "If your car is stopped within 500 feet of a curve, hilltop, or other obstruction, a warning device must be displayed at least 500 feet from your car."
+      ],
+      "259": [
+        "Everyone should wear their seat belts low on the hips and flat across the collar bone."
+      ],
+      "260": [
+        "If your vehicle is disabled on a divided highway, the device must be 200 feet from your vehicle."
+      ],
+      "261": [
+        "Among all collisions in Indiana, failure to yield the right of way is the most common factor."
+      ],
+      "262": [
+        "the driver should not move the motor vehicle if the accident involves the transportation of hazardous materials or results in injury, death, or entrapment."
+      ],
+      "263": [
+        "If the collision was with an unattended vehicle or other property, the driver must stop and remain at the scene of the accident, take reasonable steps to notify the owner of the damaged property, and if the owner cannot be located, call a law enforcement agency in order to provide information."
+      ],
+      "264": [
+        "Your insurance provider must electronically file proof of financial responsibility in the form of a Certificate of Compliance (COC)."
+      ],
+      "265": [
+        "Hit something moving in the same direction as you rather than something that is not moving."
+      ],
+      "266": [
+        "Instead, drive along the shoulder and ease up on the gas pedal. After slowing down, turn back onto the road gradually."
+      ],
+      "267": [
+        "The weight of the water will make it nearly impossible to open a door and water will flood the passenger compartment through an open door."
+      ],
+      "268": [
+        "Makes wide turns",
+        "Straddles the center line or weaves back and forth"
+      ],
+      "269": [
+        "If you must exit the vehicle while on a roadside shoulder, exit the vehicle on the passenger side and only after checking your immediate vicinity"
+      ],
+      "270": [
+        "hold the steering wheel firmly and keep the car going straight. Slow down gradually. Take your foot off the gas pedal, but do not apply the brakes."
+      ],
+      "271": [
+        "shift to a lower gear, if possible, and pump the brake pedal fast and hard several times. This may build up enough brake pressure to stop your vehicle."
+      ],
+      "272": [
+        "If your vehicle is disabled within 500 feet of a curve, hill crest, or other area where a driver’s view of your vehicle may be blocked, place the device at least 500 feet from your vehicle."
+      ],
+      "273": [
+        "Remove your seat belt.",
+        "Open a window.",
+        "Exit the vehicle and move to the roof."
+      ],
+      "274": [
+        "never turn the ignition to the lock position while the vehicle is in motion. The steering will lock as the steering wheel is turned, causing a loss of control of the vehicle."
+      ],
+      "275": [
+        "Park with front wheels turned sharply to the right and apply the emergency brake"
+      ],
+      "276": [
+        "Acknowledge the officer’s presence by turning on your right turn signal. Activating your signal lets the officer know that you recognize their presence."
+      ],
+      "277": [
+        "Move your vehicle to the right-side shoulder of the road.",
+        "Do not move onto the center median. Do not stop in the center median of a freeway"
+      ],
+      "278": [
+        "If you are being stopped at night, you are encouraged to turn on the interior light of the vehicle."
+      ],
+      "279": [
+        "If you cannot find a safe place immediately, slow down and turn on hazard lights."
+      ],
+      "280": [
+        "The driver should keep their hands on the steering wheel and passenger hands should be visible on their laps."
+      ],
+      "281": [
+        "If the proof of insurance is stored for display on a cellphone, you should first inform the police officer of that fact and then follow the officer’s directions before reaching to retrieve"
+      ],
+      "282": [
+        "Signing a ticket is not an admission of the driver’s guilt, but only an acknowledgment of receiving the ticket."
+      ],
+      "283": [
+        "Symptoms of carbon monoxide poisoning can include drowsiness or dizziness, a bluish tinge to your skin or lips, a headache, and increased sensitivity to light."
+      ],
+      "284": [
+        "In congested traffic, close the fresh-air vent"
+      ],
+      "285": [
+        "You may turn left through an intersection with a red light or arrow if you are turning from a one-way street onto a one-way street."
+      ],
+      "286": [
+        "A fully loaded tractor-trailer with hot brakes may take more than 400 feet to come to a complete stop"
+      ],
+      "287": [
+        "Drivers must use headlights between sunset and sunrise as well as at any other time in which visibility is less than 500 feet."
+      ],
+      "288": [
+        "To turn left, be in the far-left lane for your direction of travel. To turn right, be in the far-right lane for your direction of travel."
+      ],
+      "289": [
+        "On a rural state divided highway, vehicles may not exceed 60 miles per hour or the posted speed limit."
+      ],
+      "290": [
+        "Passenger vehicles may not exceed 70 miles per hour or the posted speed limit"
+      ],
+      "291": [
+        "lower headlight beams must be used when approaching within 500 feet of an oncoming vehicle or when following within 200 feet of the rear of another vehicle."
+      ],
+      "292": [
+        "lower headlight beams must be used when approaching within 500 feet of an oncoming vehicle"
+      ],
+      "293": [
+        "In a situation with a flat tire or blowout, you should hold the steering wheel firmly and keep the car going straight."
+      ],
+      "294": [
+        "Registered as having a gross weight of at least 16,000 pounds, but not more than 26,000 pounds and operated for the purpose of transporting property for hire"
+      ],
+      "295": [
+        "Some vehicles are required by law to always stop at railroad crossings not closer than 15 feet or farther than 50 feet from the nearest rail.",
+        "Vehicles that must stop at railroad crossings include: • All vehicles carrying passengers for hire"
+      ],
+      "296": [
+        "display three bi-directional emergency reflective triangles which conform to the requirements of Federal Motor Vehicle Safety Standard No. 125, or at least six fuses or three liquid-burning flares."
+      ],
+      "297": [
+        "In such a case, the law enforcement officer’s command is the one that must be obeyed."
+      ],
+      "298": [
+        "Two documents proving your Indiana residency"
+      ],
+      "299": [
+        "Documents containing your name and full Social Security number which qualify to prove your Social Security number include: • Social Security card. • W-2 Form."
+      ],
+      "300": [
+        "Computer-generated bill from a utility company... issued within 60 days of the application date and containing your name and residential address."
+      ],
+      "301": [
+        "Post office boxes may not be used as a residential address, unless the applicant is enrolled in the Indiana Attorney General’s Address Confidentiality Program."
+      ],
+      "302": [
+        "An Indiana Residency Affidavit must be signed at a BMV branch by the relative or friend with whom you live."
+      ],
+      "303": [
+        "The translation must be typed on a separate page on the letterhead of a government entity, accredited educational institution, or translation agency."
+      ],
+      "304": [
+        "the translator... must state that the document has not been translated for a family member, friend, or business associate."
+      ],
+      "305": [
+        "Errant and risky driving and distraction is the most common contributing factor in teen crashes."
+      ],
+      "306": [
+        "The chance of a crash doubles with each passenger present in the vehicle."
+      ],
+      "307": [
+        "Most multi-vehicle crashes involving teens occur at intersections."
+      ],
+      "308": [
+        "Do not play music loudly. You might miss hearing a siren or a horn that could warn you of possible trouble."
+      ],
+      "309": [
+        "Excessive speed. Illegal or unsafe speed is a common contributing factor in single vehicle crashes."
+      ],
+      "310": [
+        "if you are not authorized to work in the United States, you may be asked to provide a valid I-94 in lieu of a Social Security number."
+      ],
+      "311": [
+        "Current valid homeowner’s, renter’s, or motor vehicle insurance policy showing your name and residential address. Policy must be dated within one year of the application date."
+      ],
+      "312": [
+        "You must also provide a letter from the government entity or not-for-profit organization on its letterhead showing its name, address, and telephone number"
+      ],
+      "313": [
+        "Always adjust your seats and mirrors for the best visibility before starting each drive."
+      ],
+      "314": [
+        "Do not adjust your radio while you are driving. It is better to wait until you are stopped because taking your focus off the road for even a few seconds could lead to a collision."
+      ],
+      "315": [
+        "Do not play music loudly. You might miss hearing a siren or a horn that could warn you of possible trouble."
+      ],
+      "316": [
+        "Do not talk on the phone or text while driving, it’s against the law."
+      ],
+      "317": [
+        "Even some over-the-counter drugs can make you drowsy."
+      ],
+      "318": [
+        "Unless you are already in an intersection when the light turns yellow, you should not enter the intersection after the light turns yellow."
+      ],
+      "319": [
+        "Obey the speed limit. Going too fast gives you less time to stop or react."
+      ],
+      "320": [
+        "Choose vehicles for safety, not image."
+      ],
+      "321": [
+        "Develop a strategy for progressive privileges. As the teen driver gains experience and demonstrates appropriate decisions, allow your teen to move up to a higher level of driving responsibility."
+      ],
+      "322": [
+        "Anyone under 18 years of age who is operating or riding an ORV shall wear a helmet that meets the standards established by the United States Department of Transportation"
+      ],
+      "323": [
+        "may not knowingly authorize or permit an individual under 18 years of age to operate the ORV without wearing a helmet that meets the standards established by United States Department of Transportation."
+      ],
+      "324": [
+        "Any individual obtaining a new, renewed, replacement, or amended credential may also apply to register to vote if that individual is eligible to vote."
+      ],
+      "325": [
+        "Indiana law requires the BMV, when authorized by a male younger than 26 years of age who is getting a new or renewed driver’s license, to submit the necessary information"
+      ],
+      "326": [
+        "Failure to register is a felony and is punishable by up to five years imprisonment and a $250,000 fine."
+      ],
+      "327": [
+        "Plates and stickers arrive in approximately 21 days."
+      ],
+      "328": [
+        "The BMV offers four convenient ways to renew your vehicle registration from the comfort of your home.",
+        "Visit myBMV.com",
+        "Renew by phone",
+        "Visit a BMV Connect kiosk"
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
@@ -64,6 +1082,32 @@
     "sign_ratio_pct": 5.2,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 328,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    },
+    "ja": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 328,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 99.7,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

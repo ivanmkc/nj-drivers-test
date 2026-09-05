@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "hi",
   "name": "Hawaii",
-  "verified_at": "2026-05-26T02:25:35Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T22:59:41Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://hidot.hawaii.gov/highways/files/2021/11/ENGLISH-Original-Hawaii-Drivers-Manual.pdf",
     "manual_pdf_sha256": "c83bc1fd3de6d37a5b17afe5ca7762eedfaadeac8de797290e7978e589a0dafc",
@@ -23,26 +23,1083 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
-    "avg_fidelity": 10.0,
-    "pct_at_10": 100.0,
-    "pct_above_9": 100.0,
-    "pct_above_7": 100.0,
-    "pct_zero": 0.0,
-    "flagged_question_ids": [],
+    "sample_size": 0,
+    "judged_count": 342,
+    "avg_fidelity": 9.94,
+    "pct_at_10": 99.4,
+    "pct_above_9": 99.4,
+    "pct_above_7": 99.4,
+    "pct_zero": 0.6,
+    "flagged_question_ids": [
+      329,
+      330
+    ],
+    "evidence_by_question_id": {
+      "1": [
+        "Abandoned Vehicle Any vehicle left unattended on the highway for more than 24 hours."
+      ],
+      "2": [
+        "properly equipped with a blue or red flashing light and warning sound system."
+      ],
+      "3": [
+        "A device with two or three wheels having a diameter of 16\" or greater propelled by human power."
+      ],
+      "4": [
+        "Bus Every motor vehicle designed for carrying more than ten passengers"
+      ],
+      "5": [
+        "occupy at least three hundred feet of frontage on one side or three hundred feet collectively on both sides"
+      ],
+      "6": [
+        "If a single vehicle has a gross vehicle weight rating of 26,001 or more pounds;"
+      ],
+      "7": [
+        "If the vehicle (any GVWR), is designed to transport sixteen or more occupants including the driver;"
+      ],
+      "8": [
+        "If the vehicle, (any GVWR), is used in the transportation of hazardous materials requiring placarding."
+      ],
+      "9": [
+        "Two documents are required to prove principal residence."
+      ],
+      "10": [
+        "a birth certificate can document a person’s legal name, date of birth and legal presence."
+      ],
+      "11": [
+        "A separate Motorcycle Operator Manual, DOTH2053, is available to provide more comprehensive coverage of laws and operating techniques concerning motorcycles."
+      ],
+      "12": [
+        "A separate Driver’s Manual for Commercial Vehicle Driver Licensing, DOTH2044, is available to prepare drivers to pass the knowledge and skill tests"
+      ],
+      "13": [
+        "Bicycle: A device with two or three wheels having a diameter of 16\" or greater propelled by human power."
+      ],
+      "14": [
+        "If the vehicle has a gross combination weight rating of 26,001 or more pounds inclusive of a towed unit(s) with a gross vehicle weight rating of more than 10,000 pounds"
+      ],
+      "15": [
+        "Testing Hours 8:00 a.m. to 3:30 p.m.",
+        "http://www.honolulu.gov/csd/dllicense.html"
+      ],
+      "16": [
+        "That part of a roadway at an intersection included within the connections of the lateral lines of the sidewalks on opposite sides of the highway"
+      ],
+      "17": [
+        "When you are thirteen years of age or older and operating any road machine, farm tractor or implement of husbandry temporarily on a highway."
+      ],
+      "18": [
+        "For a period of two years after you have been convicted of drunk driving while unlicensed."
+      ],
+      "19": [
+        "When you have outstanding traffic citations."
+      ],
+      "20": [
+        "Drivers who choose not to provide a social security number or unable to provide one may obtain a limited purpose driver's license."
+      ],
+      "21": [
+        "You must be at least 15 years to be eligible for an instruction permit."
+      ],
+      "22": [
+        "In all vehicles except motorcycles, the licensed driver must sit in the right front seat."
+      ],
+      "23": [
+        "If you are under the age of 18, you must operate on a provisional license for at least 6 months before being eligible for a class 3 driver’s license."
+      ],
+      "24": [
+        "Moped license (class 1) – You must have a class 1 license to operate a moped in Hawaii highways."
+      ],
+      "25": [
+        "Driver’s License (class 3) – To get a class 3 license, you must be at least 17 years old."
+      ],
+      "26": [
+        "The license also indicates if the driver... has consented to be an organ donor or has an advance healthcare directive."
+      ],
+      "27": [
+        "The knowledge and road tests may be waived for class 1 through 3 license applicants if the applicant is at least 18 years old and possesses a valid driver’s license that was issued by another state"
+      ],
+      "28": [
+        "Compact foreign drivers’ licenses accompanied by an International Driving Permit issued in the foreign jurisdiction are valid for one year after the date of entry into the USA."
+      ],
+      "29": [
+        "Neither does it establish eligibility for employment, voter registration or public benefits. It is only a license to drive a motor vehicle."
+      ],
+      "30": [
+        "Passengers are not permitted during the tests."
+      ],
+      "31": [
+        "You must hold a valid instruction permit for a period of 180 days before applying for a provisional license."
+      ],
+      "32": [
+        "If between the hours of 11:00 p.m. and 5:00 a.m., you must be accompanied by your parent or guardian."
+      ],
+      "33": [
+        "The minimum age to obtain a provisional license is 16 years."
+      ],
+      "34": [
+        "Your provisional license allows you to transport only one person under age 18 who is not a household member."
+      ],
+      "35": [
+        "vehicles designed to transport 15 or fewer passengers, including the driver, and autocycles."
+      ],
+      "36": [
+        "you are not allowed to use an autocycle for the category 3 performance test."
+      ],
+      "37": [
+        "Whenever you change your residence address you must, within 30 days, notify the county examiner of drivers in writing"
+      ],
+      "38": [
+        "EVERY HAWAII STATE DRIVER’S LICENSE IS VOID AFTER THE EXPIRATION DATE. THERE IS NO GRACE PERIOD."
+      ],
+      "39": [
+        "be able to put your vehicle in motion on a slight grade without rolling backwards"
+      ],
+      "40": [
+        "You may renew your license once by mail but must present yourself before the examiner of drivers every other renewal."
+      ],
+      "41": [
+        "G LIMIT TO DAYLIGHT ONLY"
+      ],
+      "42": [
+        "If the records of the NDR show that you have had a license suspended or revoked in another state or D.C., a Hawaii driver’s license will not be issued."
+      ],
+      "43": [
+        "Putting “AHCD” on your license will alert medical personnel that you have special instructions."
+      ],
+      "44": [
+        "You must have a valid driver’s license with you at all times while operating a motor vehicle or moped and must show it on demand to a Police Officer."
+      ],
+      "45": [
+        "a person receiving traffic crime citations may face the possibility of jail and, therefore, court appearances are required."
+      ],
+      "46": [
+        "A moped is a two- or three-wheeled device with a motor no larger than two horse-power."
+      ],
+      "47": [
+        "You are required to have a driver’s license (any category) to operate a moped on the public streets and highways."
+      ],
+      "48": [
+        "a blue light visible outside of the vehicle, except on authorized emergency vehicles;"
+      ],
+      "49": [
+        "A muffler cut-out or by-pass, or a muffler that makes more noise than an original equipment manufacturer muffler."
+      ],
+      "50": [
+        "All motor vehicles operated on the public highways must have an official Periodic Motor Vehicle Inspection (PMVI), at least once a year"
+      ],
+      "51": [
+        "new vehicles do not need to be inspected until two years after their initial inspection on the date that they are first sold."
+      ],
+      "52": [
+        "A Hawaii state automobile insurance identification card is required to pass the inspection."
+      ],
+      "53": [
+        "A common brake test is to apply the brakes rather hard at a speed of 4 to 8 mph. The vehicle should not pull to either side."
+      ],
+      "54": [
+        "If the directional signals fail, use hand signals until you can have them repaired."
+      ],
+      "55": [
+        "All front seat occupants are required by law (291-11.6, HRS) to use seat belts."
+      ],
+      "56": [
+        "persons age 4 through 17 must be belted in the rear seats."
+      ],
+      "57": [
+        "Air bags are supplemental occupant protection for a first impact."
+      ],
+      "58": [
+        "There should be no more than two inches of free play in the steering wheel, if you have power steering"
+      ],
+      "59": [
+        "Place the penny upside down within the tread. If the top of Lincoln’s head is visible, the tire needs to be replaced."
+      ],
+      "60": [
+        "Hawaii law requires that the motor vehicle you operate on the public highways in the State be REGISTERED IN THE COUNTY IN WHICH YOU OPERATE THE VEHICLE."
+      ],
+      "61": [
+        "Your vehicle must have a current and valid safety inspection certificate before it can be registered."
+      ],
+      "62": [
+        "The Hawaii certificate of ownership of title is held by the legal owner or the lien holder until the lien is satisfied"
+      ],
+      "63": [
+        "Motor vehicle registrations are staggered and expire annually at the end of the 12th month."
+      ],
+      "64": [
+        "the registered owner must, within thirty (30) days after the change, notify the appropriate county agency"
+      ],
+      "65": [
+        "the registered owner, shall, within thirty (30) days after the change, appear in person at the appropriate county agency with proof of change of name"
+      ],
+      "66": [
+        "A 100% medically disabled veteran with accompanying paperwork is exempt from paying registration fees."
+      ],
+      "67": [
+        "The vehicle must have manufacturer certification label indicating compliance with USA standards and a 17-character Vehicle Identification Number"
+      ],
+      "68": [
+        "under no circumstances will a permit be issued to exceed a twelve-month period."
+      ],
+      "69": [
+        "Motorcycles, trailers and semi-trailers must display a license plate on the rear; all other vehicles must display a license plate on both the front and rear."
+      ],
+      "70": [
+        "The license plate and inspection sticker must be displayed on the rear of the moped."
+      ],
+      "71": [
+        "Persons who have just had violent arguments, or who are angry or in grief, need some time for “cooling off” or for making an adjustment before they drive a car."
+      ],
+      "72": [
+        "As driver age increases they continue to have fewer accidents until about 50 to 54 years of age. These drivers have the least number of accidents of any age group."
+      ],
+      "73": [
+        "Persons who have just had violent arguments, or who are angry or in grief, need some time for “cooling off”",
+        "If worried, ill, nervous, frightened, angry or depressed, let someone else drive."
+      ],
+      "74": [
+        "3. Increased decision time in driving situations;"
+      ],
+      "75": [
+        "Approaching within 100 feet (30.5m) of or passing through an intersection or railroad crossing."
+      ],
+      "76": [
+        "When the vehicle you are passing is about to make a left turn, but you may not drive your vehicle off the pavement or main traveled portion of the roadway to pass."
+      ],
+      "77": [
+        "When moving slower than other traffic you should drive in the extreme right lane."
+      ],
+      "78": [
+        "Signals must be given for at least 100 feet (30.5m) before you change lanes, turn or stop."
+      ],
+      "79": [
+        "You must signal every time, even when there are no other vehicles in sight."
+      ],
+      "80": [
+        "You must stop your vehicle not less than 15 feet (4.6m) from the nearest rail"
+      ],
+      "81": [
+        "A train approaching within 1,500 feet (460m) gives audible warning of its approach"
+      ],
+      "82": [
+        "Basic Law: You must not drive at a speed that is greater than is reasonable and prudent."
+      ],
+      "83": [
+        "If you cannot keep up with traffic, pull off the roadway and let other traffic pass or change to another route."
+      ],
+      "84": [
+        "On a sidewalk or sidewalk area."
+      ],
+      "85": [
+        "When towing another vehicle, leave enough space ahead of your vehicle to allow an overtaking vehicle to occupy the space safely."
+      ],
+      "86": [
+        "There is an obstruction in the roadway and oncoming vehicles are not using the left half of the road."
+      ],
+      "87": [
+        "More than 12 inches (30cm) from the curb."
+      ],
+      "88": [
+        "When the vehicle is on a grade, turn the wheels toward the curb."
+      ],
+      "89": [
+        "Driving with more than three persons in the front seat of your vehicle may constitute interference with the driver."
+      ],
+      "90": [
+        "If the emergency vehicle is directly behind your vehicle when you are in heavy traffic, keep moving slowly until you can get out of the way."
+      ],
+      "91": [
+        "Funeral processions and convoys have the right of way at intersections.",
+        "You should not drive your vehicle between the vehicles in a funeral procession."
+      ],
+      "92": [
+        "This highly reflective 18 inch (46cm) triangular emblem is required to be displayed on the rear of vehicles designed to operate at speeds of 25 mph (40 km/h) or less."
+      ],
+      "93": [
+        "Note: When you are being passed, it is unlawful to increase your speed."
+      ],
+      "94": [
+        "When approaching within 100 feet (30m) of or when traversing any intersection or railroad crossing"
+      ],
+      "95": [
+        "Stop and yield when entering any public street or road from alley, driveway or farmyard."
+      ],
+      "96": [
+        "Warning Devices advise you of hazardous conditions or the possibility of hazardous conditions."
+      ],
+      "97": [
+        "You may cross these lines ONLY TO MAKE A LEFT TURN INTO OR FROM AN ALLEY, PRIVATE ROAD OR DRIVEWAY."
+      ],
+      "98": [
+        "Double Solid White Lines indicate that movement from lane to lane is prohibited. You MUST NOT CROSS A DOUBLE SOLID WHITE LINE."
+      ],
+      "99": [
+        "mark a lane in the center of the roadway which may be used by vehicles travelling in either direction for left turn maneuvers ONLY."
+      ],
+      "100": [
+        "you must pass only to the right of the yellow markings."
+      ],
+      "101": [
+        "On a public street or highway for a continuous period of more than 24 hours."
+      ],
+      "102": [
+        "but you must pass only to the right of the yellow markings."
+      ],
+      "103": [
+        "Traffic islands are called “Safety Islands” when they are used to protect pedestrians who may have to stand in the roadway."
+      ],
+      "104": [
+        "After stopping, you may turn right except when a sign prohibits such movement. You must yield to all pedestrians and all vehicles when making such a turn."
+      ],
+      "105": [
+        "After stopping you may also turn left on a red light from a one-way street into a one-way street where traffic is moving to the left"
+      ],
+      "106": [
+        "A Red Flashing Signal has the same meaning as a stop sign."
+      ],
+      "107": [
+        "The Yellow “X” means that you must move out of that lane of traffic because it is going to be used for traffic moving in the opposite direction."
+      ],
+      "108": [
+        "flashing “DON’T WALK” or upraised palm signal means that pedestrians may not start to cross the roadway but those already crossing may continue to the nearest sidewalk"
+      ],
+      "109": [
+        "The Color Orange indicates a warning concerning road work."
+      ],
+      "110": [
+        "NO PASSING ZONE SIGNS are pennant-shaped yellow and black signs that supplement the “Do Not Pass” signs. The pennant is located at the left side of the road"
+      ],
+      "111": [
+        "A YIELD SIGN is a triangular red and white sign indicating that other traffic has the right-of-way."
+      ],
+      "112": [
+        "The new speed limit begins at the next speed limit sign."
+      ],
+      "113": [
+        "The pavement is marked with a large “X” and two “R’s”."
+      ],
+      "114": [
+        "Warning signs are usually diamond-shaped with a black legend and border on a yellow background."
+      ],
+      "115": [
+        "These signs restrict or prohibit vehicles or vehicle movements or prohibit some other activity."
+      ],
+      "116": [
+        "Orange is the basic color for these devices."
+      ],
+      "117": [
+        "Stripes sloping downward to the right mean the driver should bear to the right."
+      ],
+      "118": [
+        "personal injury to any extent, or death, or property damage of $3,000 or more must be reported to the police immediately"
+      ],
+      "119": [
+        "stop and locate the owner, or leave a written notice containing your name and address and circumstances of the accident."
+      ],
+      "120": [
+        "If there is severe bleeding, attempt to stop the flow of blood with direct pressure."
+      ],
+      "121": [
+        "WHAT IS THE PENALTY FOR NON-COMPLIANCE? Driver’s license will be suspended."
+      ],
+      "122": [
+        "and $10,000 for property damage per accident."
+      ],
+      "123": [
+        "Medical bills exceed $5,000; or Injury is such that the use of a part or function of the body is lost or permanent and serious disfigurement results; or Injury results in death."
+      ],
+      "124": [
+        "Alcohol is a depressant, not a stimulant. It slows normal reflexes, interferes with judgment, reduces alertness and impairs vision.",
+        "Black coffee, food or a cold shower might wake you up, but they will not sober you up."
+      ],
+      "125": [
+        "Implied Consent. Any person who operates a motor vehicle on the public highways in Hawaii is deemed to have given his or her consent to be tested to determine the amount of alcohol in his or her blood."
+      ],
+      "126": [
+        "Zero Tolerance. Drivers under 21 are prohibited from operating a motor vehicle with a blood alcohol content level of .02 or more."
+      ],
+      "127": [
+        "Refusal to take the test may result in the revocation of your license for one year, two years or four years depending upon the driver’s prior alcohol enforcement contacts."
+      ],
+      "128": [
+        "Under the influence of alcohol if the blood alcohol content is .08 percent or more."
+      ],
+      "129": [
+        "Storing an opened alcoholic beverage container in the area of a motor vehicle normally occupied by the driver or passengers is prohibited on any public road."
+      ],
+      "130": [
+        "subject to a fine not to exceed $5,000 or thirty (30) days imprisonment, or suspension of motor vehicle operator’s license"
+      ],
+      "131": [
+        "The combination of alcohol and drugs, in some cases, can have a much more pronounced effect than either taken separately."
+      ],
+      "132": [
+        "Some allergy remedies and cold pills which you can buy without a prescription may contain ingredients which can affect your driving ability."
+      ],
+      "133": [
+        "“Bad” driving habits are caused by: (1) Laziness, (2) Impatience, (3) Inattention, (4) Arrogance, and (5) Ignorance."
+      ],
+      "134": [
+        "LAZINESS... The procedure always required you to turn your head and look behind you for oncoming traffic before taking any action."
+      ],
+      "135": [
+        "IMPATIENCE... He’s the one who speeds from stop to stop, weaving in and out of traffic, and when he can’t, he tailgates other drivers."
+      ],
+      "136": [
+        "ARROGANCE... the arrogant driver is purposely in a hurry. He competes with his vehicle. His vehicle is an extension of his ego."
+      ],
+      "137": [
+        "IGNORANCE... You may notice this person turning from the wrong lane, driving too slowly because he is unsure, stopped at the end of a freeway on-ramp"
+      ],
+      "138": [
+        "Do not drive with headsets or earphones that cover or go in both ears. They make it too hard to hear emergency horns or sirens."
+      ],
+      "139": [
+        "Even with “hands free” equipment, talking on a phone or radio take your attention away from driving and can cause you to be less likely to notice a dangerous situation."
+      ],
+      "140": [
+        "Pets can be distracting and should not ride in the driver's lap. A carrier is the safest place."
+      ],
+      "141": [
+        "The basic idea of defensive driving is to recognize possible hazards associated with various driving situations and to adjust your driving to allow you to avoid hazards when they develop."
+      ],
+      "142": [
+        "Have an alternate plan of action ready in case an unexpected event develops. (Always leave yourself a way out.)"
+      ],
+      "143": [
+        "SPEED REDUCES YOUR FIELD OF VISION"
+      ],
+      "144": [
+        "All types of drugs on the “illegal” market are dangerous because there is no way to be certain of their strength or purity."
+      ],
+      "145": [
+        "All you have to do is to deliberately accomplish the proper action over and over again until the good habit is formed."
+      ],
+      "146": [
+        "Develop a scanning pattern with most of your attention devoted to the situation ahead but with glances to either side, in the rear view mirror, and at the instrument panel"
+      ],
+      "147": [
+        "If you are taking medication, you should obtain and follow your physician’s advice about driving."
+      ],
+      "148": [
+        "A red light indicates danger and should be checked immediately."
+      ],
+      "149": [
+        "If it illuminates when the foot brake pedal is pressed, the brake system is defective and the vehicle should not be driven."
+      ],
+      "150": [
+        "Your chances of being killed are five times greater if you are thrown from your car."
+      ],
+      "151": [
+        "If not buckled up, it is possible to be killed in a crash at speeds as low as 12 miles per hour (19 km/h)."
+      ],
+      "152": [
+        "The shoulder belt should be not quite so tight—so that you can insert your fist between the belt and your chest."
+      ],
+      "153": [
+        "Hawaii law prohibits you or any adult passenger from leaving a child, under nine years of age, unattended in a motor vehicle for five minutes or longer."
+      ],
+      "154": [
+        "Turn around and look to the rear; do not rely on rear-view mirrors. The view through rear-view mirrors is too small to use for this purpose."
+      ],
+      "155": [
+        "The chief responsibility for avoiding a collision lies with the driver who is leaving a parking space."
+      ],
+      "156": [
+        "Always stop before entering the roadway. The stop should be made before crossing the sidewalk area."
+      ],
+      "157": [
+        "Drive to the right of the central island and proceed in a counterclockwise direction."
+      ],
+      "158": [
+        "Look to the left for traffic and yield to traffic, including bicyclists, already in the roundabout."
+      ],
+      "159": [
+        "If you are doubtful as to whether you are able to comfortably cope with any undesirable conditions, POSTPONE OR CANCEL THE TRIP."
+      ],
+      "160": [
+        "Take a few minutes to familiarize yourself with the location and operation of the turn and hazard warning signals, head lamps and beam selector"
+      ],
+      "161": [
+        "If you miss your exit, drive through the roundabout again until you reach your exit."
+      ],
+      "162": [
+        "Choose the center lanes as there will be fewer traffic conflicts."
+      ],
+      "163": [
+        "The law requires that you signal for at least 100 feet (30m) before you start the lane change."
+      ],
+      "164": [
+        "NEVER CHANGE LANES WHEN APPROACHING OR MOVING THROUGH INTERSECTIONS AND CROSSWALKS."
+      ],
+      "165": [
+        "If you get to the word two before your vehicle reaches the marker, you have at least a two second interval. You should never have less."
+      ],
+      "166": [
+        "Slow to a proper speed before you enter a curve or begin a turn."
+      ],
+      "167": [
+        "move slowly into the intersection, keep the wheels pointing straight ahead and turn when the intersection is clear"
+      ],
+      "168": [
+        "NEVER DRIVE ONTO THE ROAD SHOULDER TO PASS A VEHICLE MAKING A LEFT TURN."
+      ],
+      "169": [
+        "If a conflict appears before you have completed passing, brake sharply and return to the lane behind the overtaken vehicle."
+      ],
+      "170": [
+        "Move back into the proper traffic lane when you can see the overtaken vehicle in your interior rear-view mirror."
+      ],
+      "171": [
+        "Smoke or visible vapor from the exhaust pipe.",
+        "A turning movement of the front wheels.",
+        "Movement within the vehicle or within the vicinity of the vehicle."
+      ],
+      "172": [
+        "Two Lanes in the Direction of Travel. In open area when traffic is free-flowing, use the right lane; use the left lane for passing"
+      ],
+      "173": [
+        "When making a right turn at an intersection, do not drive in a bike lane."
+      ],
+      "174": [
+        "don’t just jam on the brakes and slide the wheels",
+        "apply and release the brakes rapidly and STEER the vehicle toward a clear area."
+      ],
+      "175": [
+        "NEVER DRIVE YOUR VEHICLE INTO AN INTERSECTION OR A CROSSWALK UNLESS THERE IS SPACE FOR YOUR ENTIRE VEHICLE ON THE OPPOSITE SIDE"
+      ],
+      "176": [
+        "Always test the action of the brakes after driving through water."
+      ],
+      "177": [
+        "stop far enough behind the vehicle ahead so that you can see the point where the rear tires of the vehicle ahead rest on the road."
+      ],
+      "178": [
+        "The practice of downshifting as a regular routine IS NOT RECOMMENDED because it causes a rapid deceleration of the vehicle without a warning (stop lamp) signal"
+      ],
+      "179": [
+        "The down shift should be made before starting the downgrade because it is more difficult to downshift at higher speeds."
+      ],
+      "180": [
+        "If the brake warning lamp on the instrument panel lights up when you apply the brakes, the brake system has partially failed and immediate repair is required."
+      ],
+      "181": [
+        "Whether you park uphill or downhill turn the wheels to the right. This will ensure that the vehicle will roll away from traffic if something causes it to roll free."
+      ],
+      "182": [
+        "When parallel parked, the vehicle’s curbside wheels shall be within 12 inches of the curb (30cm), or completely within the marked parking stall."
+      ],
+      "183": [
+        "Failure to cancel is usually caused by making a turn or lane change which is too small to cause operation of the self-cancelling mechanism"
+      ],
+      "184": [
+        "Front and rear bumpers should not be closer than two feet from the other vehicles when in parked position unless the street is otherwise marked."
+      ],
+      "185": [
+        "Avoid resting your foot on the brake pedal while you drive. This causes the brake (stop) lamps to be activated and gives the following drivers an improper signal."
+      ],
+      "186": [
+        "Usually prolonged brake use can be avoided by shifting to a lower gear and allowing the engine to assist in holding the vehicle speed down."
+      ],
+      "187": [
+        "Avoid locations that are hidden, such as just beyond a curve or the crest of a hill."
+      ],
+      "188": [
+        "Are not readily visible to drivers on the right of the signaling vehicle."
+      ],
+      "189": [
+        "Hazard warning signals (4-way flash) are intended to warn other drivers that a vehicle is in a hazardous position on the roadway. THIS SIGNAL SHOULD NEVER BE USED WHEN THE VEHICLE IS MOVING."
+      ],
+      "190": [
+        "If you must slow your vehicle before you can make the intended turn or lane change, it is important that you begin signaling before slowing your vehicle."
+      ],
+      "191": [
+        "A MOTORCYCLIST IS ENTITLED TO THE ENTIRE WIDTH OF HIS TRAFFIC LANE."
+      ],
+      "192": [
+        "Roads are most slippery at this time because the oil dropped from passing cars has not been washed away."
+      ],
+      "193": [
+        "Partial hydroplaning may start at 35 miles per hour (56 km/h)."
+      ],
+      "194": [
+        "At 55 miles per hour (89 km/h) in a heavy rain the tires may lose all contact with the pavement.",
+        "YOU HAVE NO CONTROL OVER YOUR VEHICLE."
+      ],
+      "195": [
+        "Insure that the tires on the vehicle have good tread depth. Worn or bald tires will hydroplane at lower speeds."
+      ],
+      "196": [
+        "Reduce speed and apply gentle pressure on the brake pedal until your brakes work properly again."
+      ],
+      "197": [
+        "When heavy rain reduces your visibility, reduce your speed; turn on your head lamps (low beam) so that others may see you."
+      ],
+      "198": [
+        "Never use the high beam because the reflection especially at night will reduce your ability to see and the light will reduce the approaching driver’s ability to see."
+      ],
+      "199": [
+        "If you are unable to see at least two car lengths (40 feet or 12 meters), pull completely off the pavement and stop. Turn on the hazard warning signals."
+      ],
+      "200": [
+        "Ice may accumulate on or under bridges even when the rest of the road is clear."
+      ],
+      "201": [
+        "During this time of the day you should turn the head lamps on low beam so others can see you."
+      ],
+      "202": [
+        "If the lights of an approaching vehicle are too bright, flash your high beams once and look at the right edge of the road and use lane markings or reflectors as a guide."
+      ],
+      "203": [
+        "Recognize that red lane marking reflectors mean you are going the wrong direction in the traffic lane."
+      ],
+      "204": [
+        "DO NOT MOVE SLOWLY TO THE END OF THE ENTRANCE LANE AND STOP. It is very difficult and dangerous to attempt to enter freeway traffic when you are stopped at the end of the entrance lane."
+      ],
+      "205": [
+        "Through traffic should use the left or center lanes and move at or near the posted speed limit."
+      ],
+      "206": [
+        "If you pass the place where you intended to exit, DO NOT STOP; DO NOT BACK UP! Continue on to the next exit."
+      ],
+      "207": [
+        "Do not stop to assist other drivers in trouble but report the situation to the proper authorities."
+      ],
+      "208": [
+        "DO NOT APPLY THE BRAKES. This may cause your vehicle to become uncontrollable. Grip the steering wheel firmly and steer to remain in your traffic lane."
+      ],
+      "209": [
+        "Pump the brake pedal quickly; then Shift to a lower gear."
+      ],
+      "210": [
+        "DO NOT ATTEMPT TO FORCE THE VEHICLE BACK ONTO THE PAVEMENT BY JERKING THE STEERING WHEEL."
+      ],
+      "211": [
+        "Steering your vehicle as far to the right as you can with safety, even onto the shoulder if possible."
+      ],
+      "212": [
+        "Flash your lights and honk the horn.",
+        "Quickly slow your vehicle and steer to the right out of the lane into any available clear area. DO NOT ENTER THE ONCOMING TRAFFIC LANE."
+      ],
+      "213": [
+        "Slap the accelerator pedal hard with your foot."
+      ],
+      "214": [
+        "Maintain your speed until you are completely into the exit ramp, then slow down smoothly."
+      ],
+      "215": [
+        "During this time of the day you should turn the head lamps on low beam so others can see you."
+      ],
+      "216": [
+        "Avoid slamming on the brakes and sliding the wheels. You cannot control a vehicle when the wheels are sliding."
+      ],
+      "217": [
+        "In any case additional effort will be required to maintain steering control."
+      ],
+      "218": [
+        "Excessive speed for existing road and traffic conditions is the most common cause."
+      ],
+      "219": [
+        "Turn the steering wheel in the direction that the rear of the vehicle is skidding.",
+        "If skidding to the right, turn the wheel to the right."
+      ],
+      "220": [
+        "DO NOT USE WATER ON GASOLINE, OIL, OR ELECTRICAL FIRES."
+      ],
+      "221": [
+        "Indicate the need for assistance by raising the hood of your vehicle. Tie a white cloth to the radio antenna or the door handle"
+      ],
+      "222": [
+        "If you must walk along the highway, walk facing traffic and well clear of the roadway."
+      ],
+      "223": [
+        "Do not walk on freeways; stay with your vehicle until help arrives."
+      ],
+      "224": [
+        "Larger vehicles generally provide better forward visibility than other vehicles because the driver’s position is above most other vehicles."
+      ],
+      "225": [
+        "When changing lanes or at intersections other drivers and highway users must make allowances for the increased stopping distance required by the large vehicles."
+      ],
+      "226": [
+        "Drivers of large vehicles should shift to an appropriate lower gear before descending a steep hill to minimize the possibility of overheating the brakes."
+      ],
+      "227": [
+        "Large fast-moving vehicles cause wind gusts with a force great enough to cause direction changes in smaller vehicles."
+      ],
+      "228": [
+        "If your trailer is large enough to obstruct your view through your inside rear-view mirror, you must have outside rear-view mirrors of proper size on both sides of your car."
+      ],
+      "229": [
+        "If your loaded trailer weighs more than half the weight of the towing vehicle or is 3,000 pounds or more, the trailer must be equipped with brakes"
+      ],
+      "230": [
+        "Avoid using the brakes. If the skid started when you applied the brakes, release the brakes."
+      ],
+      "231": [
+        "you must have outside rear-view mirrors of proper size on both sides of your car."
+      ],
+      "232": [
+        "If your loaded trailer weighs more than half the weight of the towing vehicle or is 3,000 pounds or more, the trailer must be equipped with brakes, and breakaway protection."
+      ],
+      "233": [
+        "You should not permit passengers to ride in trailers. Riding in house trailers is prohibited."
+      ],
+      "234": [
+        "Safety chains must be attached to the frame of the towing vehicle and the trailer and not connected to a part of the trailer hitch."
+      ],
+      "235": [
+        "If the weight is too small, the trailer will “fishtail.”"
+      ],
+      "236": [
+        "research shows that over two-thirds of the car/motorcycle accidents are the result of a car driver turning in front of the motorcyclist."
+      ],
+      "237": [
+        "The small profile of the motorcycle may make it appear farther away and travelling slower than it actually is."
+      ],
+      "238": [
+        "Motorcycles are allowed the full width of a lane in which to maneuver. Refrain from sharing a lane with a motorcyclist."
+      ],
+      "239": [
+        "Intersections are the most likely places for car/motorcycle collisions to occur."
+      ],
+      "240": [
+        "When driving behind a motorcycle, allow at least a 2-second following distance."
+      ],
+      "241": [
+        "In Hawaii 20% of all traffic fatalities are pedestrians."
+      ],
+      "242": [
+        "Stop for all blind persons in the roadway (identified by a white cane or guide dog) regardless of the traffic signal indication or traffic situation."
+      ],
+      "243": [
+        "Never pass a vehicle stopped to allow a pedestrian to cross the street. (Prohibited by law)"
+      ],
+      "244": [
+        "Never drive through a pedestrian safety zone. (Prohibited by law)"
+      ],
+      "245": [
+        "Never start across the street on a green light that has been showing for some time. Wait for the green signal on the next cycle."
+      ],
+      "246": [
+        "Walk on the left side of the street facing oncoming traffic."
+      ],
+      "247": [
+        "the driver of any motor vehicle on the same highway in the lane occupied by the school bus and all lanes adjacent to the lane occupied by the school bus shall stop"
+      ],
+      "248": [
+        "Failure to comply with this law (291C-95, HRS) can cost you $1,000."
+      ],
+      "249": [
+        "However, vehicles proceeding in the opposite direction on a divided highway are not required to stop."
+      ],
+      "250": [
+        "Motorists should maintain at least 3 feet of space between the bicyclist and their vehicle until they have safely passed."
+      ],
+      "251": [
+        "This behavior leads to approximately 25% of all bicycle-car crashes."
+      ],
+      "252": [
+        "These include preparing to make a left turn, passing another bicycle or avoiding an obstacle in the edge of the road."
+      ],
+      "253": [
+        "They may ride two abreast on a bicycle lane or path if it is wide enough not to impede traffic."
+      ],
+      "254": [
+        "If you ride at night you must have a headlight and rear reflector."
+      ],
+      "255": [
+        "bicyclists may ride on the sidewalks provided they stay at 10 MPH or less and always yield the right-of-way to pedestrians."
+      ],
+      "256": [
+        "You may not drive but you may renew your driver’s license within a year after the expiration following normal license renewal steps."
+      ],
+      "257": [
+        "Do not walk or stand upon the travelled portion of the roadway to solicit for any reason or to guard a vehicle or parking place."
+      ],
+      "258": [
+        "A copy of the vehicle inspection certificate: 1. Should be kept in the vehicle."
+      ],
+      "259": [
+        "The mechanical condition of the vehicle is the responsibility of: 3. The vehicle driver and registered owner of the vehicle."
+      ],
+      "260": [
+        "To prevent carbon monoxide poisoning, keep your exhaust system free of leaks."
+      ],
+      "261": [
+        "the registered owner must, within thirty (30) days after the change, notify the appropriate county agency, in writing"
+      ],
+      "262": [
+        "Persons who have just had violent arguments, or who are angry or in grief, need some time for “cooling off” or for making an adjustment before they drive a car."
+      ],
+      "263": [
+        "You must obey all lawful orders and directions of a police officer."
+      ],
+      "264": [
+        "On narrow roads you must allow vehicles going in the opposite direction at least one-half of the main traveled portion of the road."
+      ],
+      "265": [
+        "You must signal every time, even when there are no other vehicles in sight."
+      ],
+      "266": [
+        "You must stop your vehicle not less than 15 feet (4.6m) from the nearest rail when: An installed electric or mechanical signal is giving warning of an approaching train"
+      ],
+      "267": [
+        "When you leave your vehicle unattended, you must: Stop the engine; Lock the ignition and remove the ignition key; Set the parking brake"
+      ],
+      "268": [
+        "When you hear the warning signal (siren, bell or horn) ... of an emergency vehicle, you must provide a clear path for the emergency vehicle and STOP."
+      ],
+      "269": [
+        "Whenever a school bus is stopped on a highway with alternating red signal lamps flashing... shall stop... and shall not proceed until... the flashing red signal lamps are turned off."
+      ],
+      "270": [
+        "You must yield to all pedestrians and vehicles already in the intersection.",
+        "Slow down and be prepared to stop whenever you see persons walking on or crossing the roadway"
+      ],
+      "271": [
+        "Always stop before entering the roadway. The stop should be made before crossing the sidewalk area.",
+        "Must stop and proceed only when there are no pedestrians or vehicles approaching."
+      ],
+      "272": [
+        "You are stopped behind other vehicles waiting at a stop sign. When the intersection is clear: ... You must stop again at the stop sign or stop line."
+      ],
+      "273": [
+        "Regulatory Devices instruct you to stop, proceed in a certain direction, or limit your speed. All regulatory devices indicate action required by you."
+      ],
+      "274": [
+        "Warning Devices advise you of hazardous conditions or the possibility of hazardous conditions."
+      ],
+      "275": [
+        "Yellow centerlines are used to separate traffic moving in opposite directions.",
+        "Single Broken Yellow Lines are used to mark the centerline when there are only two lanes of traffic."
+      ],
+      "276": [
+        "Double Solid Yellow Lines ... You may cross these lines ONLY TO MAKE A LEFT TURN INTO OR FROM AN ALLEY, PRIVATE ROAD OR DRIVEWAY."
+      ],
+      "277": [
+        "White lines separate lanes of traffic moving in the same direction."
+      ],
+      "278": [
+        "Single Solid White Lines indicate that movement from lane to lane is hazardous. ... You may cross a solid white line ONLY IN UNUSUAL CIRCUMSTANCES AND THEN ONLY WITH GREAT CARE."
+      ],
+      "279": [
+        "Stop Lines are solid white lines painted across the traffic lanes at intersections and pedestrian crosswalks indicating the exact place at which to stop."
+      ],
+      "280": [
+        "YOU MUST STOP FOR PEDESTRIANS IN CROSSWALKS.",
+        "When pedestrians are in these crosswalks, they have the right of way over motor vehicles."
+      ],
+      "281": [
+        "A Red Light means that you must stop: 1. At the stop line; or 2. When there is no stop line, before entering any crosswalk, or 3. When there is no stop line or crosswalk before entering the intersection"
+      ],
+      "282": [
+        "After stopping, you may turn right except when a sign prohibits such movement. You must yield to all pedestrians and all vehicles when making such a turn."
+      ],
+      "283": [
+        "After stopping you may also turn left on a red light from a one-way street into a one-way street where traffic is moving to the left, except when a sign prohibits such movement."
+      ],
+      "284": [
+        "A Yellow Light means that the red light is going to be shown immediately thereafter. You should avoid entering the intersection when the yellow light is shown."
+      ],
+      "285": [
+        "The Yellow “X” means that you must move out of that lane of traffic because it is going to be used for traffic moving in the opposite direction."
+      ],
+      "286": [
+        "One of the most significant problems in driving is the great number of drivers who are under the influence of alcohol... This is your problem as a driver, whether you drink or not."
+      ],
+      "287": [
+        "A few drinks after work before driving home... Should be avoided because they may make you a dangerous driver."
+      ],
+      "288": [
+        "A small amount on an empty stomach will affect you more rapidly than it would if you had recently eaten a meal."
+      ],
+      "289": [
+        "Once the alcohol enters your blood there is nothing you can do to lessen the effect. Black coffee, food or a cold shower might wake you up, but they will not sober you up."
+      ],
+      "290": [
+        "Any person who operates a motor vehicle on the public highways in Hawaii is deemed to have given his or her consent to be tested",
+        "Refusal to take the test may result in the revocation of your license for one year, two years or four years"
+      ],
+      "291": [
+        "Refusal to take the test may result in the revocation of your license for one year, two years or four years",
+        "You may lose your driver’s license for twelve months: ... Because you have refused to take the test."
+      ],
+      "292": [
+        "IT IS AGAINST THE LAW TO CONSUME OR POSSESS ANY ALCOHOLIC BEVERAGE ON ANY PUBLIC HIGHWAY OR ANY PUBLIC SIDEWALK."
+      ],
+      "293": [
+        "The combination of alcohol and drugs, in some cases, can have a much more pronounced effect than either taken separately."
+      ],
+      "294": [
+        "The effect that alcohol has on your reflexes and judgment: ... Depends on the amount of alcohol in your blood stream."
+      ],
+      "295": [
+        "failing to turn your head to check for traffic before changing lanes, driving away from a curb or exiting your vehicle in traffic is: ... Many times the cause of a traffic accident."
+      ],
+      "296": [
+        "signaling your intentions before turning, changing lanes or driving away from a curb: ... Is a good driving habit and is required by law."
+      ],
+      "297": [
+        "Keep at least a two-second interval behind the vehicle ahead."
+      ],
+      "298": [
+        "An inattentive driver is a driver who: ... Daydreams or gazes at objects off the roadway while driving.",
+        "Carries on an eye-contact conversation with a passenger while driving.",
+        "Restricts his attention to only watching the vehicle ahead."
+      ],
+      "299": [
+        "SPEED REDUCES YOUR FIELD OF VISION",
+        "Increasing your vehicle’s speed: ... Decreases your field of vision."
+      ],
+      "300": [
+        "Safety belts are life belts. They: ... Must be worn at all times when driving or riding in a vehicle."
+      ],
+      "301": [
+        "Lap belts should fit snugly across your hip bones and the lower part of your abdomen."
+      ],
+      "302": [
+        "Check for children and other objects around your car.",
+        "Visually check the area to the rear of the vehicle before entering."
+      ],
+      "303": [
+        "Always stop before entering the roadway. The stop should be made before crossing the sidewalk area. Failure to stop is unlawful."
+      ],
+      "304": [
+        "Signals must be given for at least 100 feet (30.5m) before you change lanes, turn or stop."
+      ],
+      "305": [
+        "If you get to the word two before your vehicle reaches the marker, you have at least a two second interval. You should never have less."
+      ],
+      "306": [
+        "Reduce your speed when you encounter poor road or weather conditions.",
+        "The first few drops of rain are a danger signal to a defensive driver... You should reduce speed"
+      ],
+      "307": [
+        "NEVER DRIVE YOUR VEHICLE INTO AN INTERSECTION OR A CROSSWALK UNLESS THERE IS SPACE FOR YOUR ENTIRE VEHICLE ON THE OPPOSITE SIDE"
+      ],
+      "308": [
+        "A MOTORCYCLIST IS ENTITLED TO THE ENTIRE WIDTH OF HIS TRAFFIC LANE.",
+        "When passing a motorcycle, allow a full lane to the motorcycle."
+      ],
+      "309": [
+        "Do not use your high beam head lamps when approaching or following other vehicles."
+      ],
+      "310": [
+        "increase the speed of your vehicle to match that of the freeway traffic.",
+        "Look to see if there are any oncoming vehicles in the freeway near lane... move into the freeway near lane"
+      ],
+      "311": [
+        "If you pass the place where you intended to exit, DO NOT STOP; DO NOT BACK UP! Continue on to the next exit."
+      ],
+      "312": [
+        "DO NOT APPLY THE BRAKES. This may cause your vehicle to become uncontrollable.",
+        "Grip the steering wheel firmly and steer to remain in your traffic lane.",
+        "Apply the brakes lightly and pull off the road into a safe area."
+      ],
+      "313": [
+        "Slow down using the brakes gently, when at a safe speed, turn the steering wheel to return to the pavement."
+      ],
+      "314": [
+        "Large vehicles require more space for turning movements.",
+        "Large vehicles require greater stopping distances than other vehicles."
+      ],
+      "315": [
+        "The heavy truck or bus driver may not be able to see you.",
+        "Your forward visibility is blocked by the truck or bus."
+      ],
+      "316": [
+        "Large fast-moving vehicles cause wind gusts with a force great enough to cause direction changes in smaller vehicles."
+      ],
+      "317": [
+        "If your trailer is large enough to obstruct your view through your inside rear-view mirror, you must have outside rear-view mirrors of proper size on both sides of your car."
+      ],
+      "318": [
+        "If your loaded trailer weighs more than half the weight of the towing vehicle or is 3,000 pounds or more, the trailer must be equipped with brakes, and breakaway protection."
+      ],
+      "319": [
+        "You should not permit passengers to ride in trailers. Riding in house trailers is prohibited."
+      ],
+      "320": [
+        "Safety chains must be attached to the frame of the towing vehicle and the trailer and not connected to a part of the trailer hitch."
+      ],
+      "321": [
+        "If possible move your vehicle off the travelled portion of the roadway."
+      ],
+      "322": [
+        "Upon striking an unattended vehicle, stop and locate the owner, or leave a written notice containing your name and address and circumstances of the accident."
+      ],
+      "323": [
+        "Never enter the street or crosswalk when there are vehicles approaching close by. They may not be able to stop. (Prohibited by law)"
+      ],
+      "324": [
+        "Bicycles are legally considered vehicles, and as such have all of the rights and responsibilities that other vehicles have.",
+        "Look for and yield to bicyclists when crossing bike lanes.",
+        "As a driver you should give a bicyclist: ... All of the above."
+      ],
+      "325": [
+        "You must stop and yield to all traffic within the intersection."
+      ],
+      "326": [
+        "Hawaii law prohibits you or any adult passenger from leaving a child, under nine years of age, unattended in a motor vehicle for five minutes or longer."
+      ],
+      "327": [
+        "Safety belts are life belts. They must be worn at all times when driving or riding in a vehicle."
+      ],
+      "328": [
+        "The access aisle must be kept clear to allow for the deployment of a wheelchair lift/ramp and other mobility assistance devices."
+      ],
+      "331": [
+        "Hours of operation:Monday-Friday except holidays 7:45 a.m. to 4:00 p.m."
+      ],
+      "332": [
+        "Pearlridge Shopping Center, 98-1005 Moanalua Road (9:00 am - 5:00pm)"
+      ],
+      "333": [
+        "Kapahulu Station, 1112 Kapahulu Avenue",
+        "Last car at 3:30 p.m."
+      ],
+      "334": [
+        "Hilo, 101 Pauahi Street, Suite #5"
+      ],
+      "335": [
+        "Pukalani, Hannibal Tavares Community Center, 91 Pukalani Street"
+      ],
+      "336": [
+        "Hana Office, County Public Works Office, Hana Hwy & Uakea Road",
+        "8:00 a.m. to 10:45 a.m. & 12:00 p.m. to 3:30 p.m."
+      ],
+      "337": [
+        "Lanai Office, 309 Seventh Street #101",
+        "8:00 a.m. to 11:00 a.m. & 1:00 p.m. to 4:00 p.m."
+      ],
+      "338": [
+        "Lihue Civic Center, Kapule Building, 4444 Rice Street, Suite 466",
+        "Hours of Operation: 7:45 a.m. to 4:15 p.m."
+      ],
+      "339": [
+        "City and County of Honolulu Kapahlu Station: 1112 Kapahlu Avenue"
+      ],
+      "340": [
+        "The last inspection starts at 3:30 p.m."
+      ],
+      "341": [
+        "Printed and published by Hagadone Printing Company, Inc.",
+        "Hawaii Drivers’ Manual is printed and published by Hagadone Printing Company in conjuction with the State Department of Transportation."
+      ],
+      "342": [
+        "Visit https://www.mauicounty.gov/1328/Motor-Vehicle-Licensing or call 808-270-7363",
+        "Visit Web Site: https://www.mauicounty.gov/1328/Motor-vehicle-Licensing"
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 30,
-    "topics_covered": 28,
-    "coverage_pct": 93.3,
-    "uncovered_topics": [
-      "Speed limits in business and residential districts",
-      "Legal parking distances from fire hydrants and intersections"
-    ],
+    "topics_total": 27,
+    "topics_covered": 27,
+    "coverage_pct": 100.0,
+    "uncovered_topics": [],
     "verdict": "PASS",
     "grade": "A"
   },
@@ -66,6 +1123,20 @@
     "sign_ratio_pct": 9.0,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 342,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 100.0,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

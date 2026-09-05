@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "nh",
   "name": "New Hampshire",
-  "verified_at": "2026-05-26T02:32:47Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:09:28Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.dmv.nh.gov/sites/g/files/ehbemt416/files/inline-documents/nhdm.pdf",
     "manual_pdf_sha256": "4af2af2ac8115a1a8c4a3a8dab50739998b3e159a37fc280addd10d05e737902",
@@ -23,23 +23,770 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 234,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "I encourage you to do your part – slow down, avoid distractions while driving, and look out for your fellow travelers."
+      ],
+      "2": [
+        "dangers and penalties associated with such illegal activities as impaired driving, failure to yield to emergency vehicles, and the laws relating to the proper clearing of snow and ice"
+      ],
+      "3": [
+        "please challenge yourself to be the best driver you can be each day and always - “Be a Leader on the Roadway!”"
+      ],
+      "4": [
+        "Organ Donation Giving the Gift of LIfe ................................................................................ 3"
+      ],
+      "5": [
+        "Youth Operator “Under 20” Law ...................................................................................... 5"
+      ],
+      "6": [
+        "SECTION 3  DANGEROUS DRIVING ........................................................................................... 7",
+        "Fatigue ........................................................................................................................................... 7"
+      ],
+      "7": [
+        "Snow and Ice Removal .............................................................................................. 133"
+      ],
+      "8": [
+        "SECTION 5 BASIC DRIVING ...................................................................................................... 14",
+        "Communicating and Signaling ...................................................................................................... 15"
+      ],
+      "9": [
+        "This manual offers important guidance relating to what to expect and what you should do if you are stopped by a police officer while driving"
+      ],
+      "10": [
+        "SECTION 2 DRIVER’S LICENSE AND NON-DRIVER ID INFORMATION ..................................... 4",
+        "REAL ID .......................................................................................................................................... 4"
+      ],
+      "11": [
+        "Motorcycle Helmet Use .............................................................................................. 122"
+      ],
+      "12": [
+        "Emotions ......................................................................................................................... 9"
+      ],
+      "13": [
+        "Habitual offenders ........................................................................................................... 6"
+      ],
+      "14": [
+        "just one moment of inattention, distraction, or dangerous driving can lead to an unintended tragedy"
+      ],
+      "15": [
+        "Child Passenger Safety Laws ...................................................................................... 122"
+      ],
+      "16": [
+        "licensed, responsible adult age 25 years or older."
+      ],
+      "17": [
+        "RSA 263:19 requires that all individuals 16 or 17 years of age wishing to apply for a driver’s license, to have first completed an approved driver education program."
+      ],
+      "18": [
+        "30 hours of classroom instruction with a certified driver education instructor."
+      ],
+      "19": [
+        "10 hours of practice driving with a certified driver education instructor."
+      ],
+      "20": [
+        "Refer to the Revised Statutes Annotated (RSAs) sections 259 through 269 under Title 21 (Motor Vehicles)."
+      ],
+      "21": [
+        "Over 13,000 students participate in driver education every year through State approved driving schools."
+      ],
+      "22": [
+        "SECTION 11 SHARING THE ROAD ............................................................................ 36",
+        "Interacting with Large Trucks and Commercial Vehicles ............................................... 38"
+      ],
+      "23": [
+        "SECTION 10 DRIVING EMERGENCIES ..................................................................... 34",
+        "Uneven Surface Drop-Offs ............................................................................ 34"
+      ],
+      "24": [
+        "SECTION 7 GENERAL DRIVING AND PARKING ....................................................... 25",
+        "Multi-lane Roundabouts (Traffic Circles) ....................................................... 27"
+      ],
+      "25": [
+        "SECTION 9 ACCIDENTS AND FINANCIAL RESPONSIBILITY ................................................. 32",
+        "Accident procedures...................................................................................... 32"
+      ],
+      "26": [
+        "SECTION 6 RULES OF THE ROAD ............................................................................. 20",
+        "Traffic Control Devices .................................................................................. 20",
+        "Warning Signs ............................................................................................... 21"
+      ],
+      "27": [
+        "This manual may also be used as a resource to review everyday driving habits."
+      ],
+      "28": [
+        "SECTION 8 DRIVING SAFELY ................................................................................... 30",
+        "Visual Search ................................................................................................ 30",
+        "Space Management ...................................................................................... 30"
+      ],
+      "29": [
+        "40 hours of additional supervised driving time with a parent, guardian or other responsible adult, in which 10 hours must be completed at night."
+      ],
+      "30": [
+        "New residents to New Hampshire have up to 60 days to obtain a driver’s license after moving into the State."
+      ],
+      "31": [
+        "New Hampshire law allows a person at least 15 ½ years of age, who does not possess a driver’s license, to drive a motor vehicle while being taught to drive"
+      ],
+      "32": [
+        "Applicants must have a visual acuity of 20/40 vision in both eyes."
+      ],
+      "33": [
+        "If more than 8 questions are answered incorrectly, the test will automatically end."
+      ],
+      "34": [
+        "No person except the applicant and the authorized Division of Motor Vehicles Licensing Examiner may be present in the vehicle during the road test."
+      ],
+      "35": [
+        "the applicant will be provided with an appointment to retest not sooner than ten days from the failed test."
+      ],
+      "36": [
+        "Class D: Allows a driver to drive a vehicle with a gross vehicle weight of 26,000 pounds or less if not towing a trailer of over 10,000 pounds"
+      ],
+      "37": [
+        "Youth Operator’s licenses are printed vertically, and they expire on the holder’s 21st birthday."
+      ],
+      "38": [
+        "the “B” restriction for corrective lenses will be placed on the applicant’s license.",
+        "B Corrective Lenses"
+      ],
+      "39": [
+        "RSA 263:4 requires that new residents to NH surrender all valid driver licenses issued by any other jurisdiction when applying for a New Hampshire driver’s license."
+      ],
+      "40": [
+        "Drivers do not need a moped license if they already possess a Class A, B, C, D or motorcycle license."
+      ],
+      "41": [
+        "A licensed driver to drive the test vehicle to and from the testing site. That person is required to remain at the test site until the road test has been completed."
+      ],
+      "42": [
+        "no person under the age of 18 years shall be issued a driver’s license unless the person’s father, mother, or guardian... gives written permission... or the person under 18 is emancipated by marriage."
+      ],
+      "43": [
+        "Applicants will be issued a 60-day paper temporary driver’s license. The permanent license will be mailed within 45-days."
+      ],
+      "44": [
+        "the holder of a Youth Operator License, who is under the age of 18 years of age shall NOT operate a motor vehicle: Between the hours of 1:00 am and 4:00 am;"
+      ],
+      "45": [
+        "Drivers under the age of 18 years of age shall not use a cellular or mobile telephone... except to report an emergency to the enhanced 911 system or any public safety agency"
+      ],
+      "46": [
+        "Non-Driver Identification Cards may be issued to New Hampshire residents who do not hold a valid driver’s license, and who are at least 12 years of age."
+      ],
+      "47": [
+        "Only a vision test is required for drivers new to New Hampshire holding a valid out-of-state driver’s license."
+      ],
+      "48": [
+        "If the out-of-state driver’s license has been expired for more than one year, the applicant will be required to successfully pass the vision, knowledge and road tests."
+      ],
+      "49": [
+        "NH Driver’s licenses expire on the applicant’s birthday every 5 years."
+      ],
+      "50": [
+        "Any person who is a member of the armed forces... was a resident of this state and was a holder of a valid New Hampshire license is entitled to renewal of a driver’s license at no cost"
+      ],
+      "51": [
+        "A minimum of 20 days, but not more than 40 days for a first offense"
+      ],
+      "52": [
+        "a condition of license reinstatement will also be to complete an approved in-person driver attitude program."
+      ],
+      "53": [
+        "It is considered legally intoxicated if a driver’s blood alcohol concentration is .08% or higher, .02% or higher if the driver is under 21 years old."
+      ],
+      "54": [
+        "Any person who operates a motor vehicle in New Hampshire is considered to have given consent to having their blood, breath, urine, or any combination tested if arrested for an alcohol or drug offense."
+      ],
+      "55": [
+        "the Director shall revoke the person’s driving privileges for 1 to 4 years."
+      ],
+      "56": [
+        "that person may be subject to imprisonment for not less than one year, and up to five (5) years."
+      ],
+      "57": [
+        "unless accompanied by a licensed, responsible adult who is at least 25 years of age during the first six (6) months holding the license"
+      ],
+      "58": [
+        "Avoid using dark or tinted corrective lenses at night."
+      ],
+      "59": [
+        "After 21 and 24 hours without sleep, performance mimics a BAC of 0.08% and 0.10%, respectively."
+      ],
+      "60": [
+        "During long trips, plan to stop at least every 2 hours to stretch or get a cup of coffee or soft drink."
+      ],
+      "61": [
+        "An operator of a motor vehicle who holds a cellular telephone... in the immediate proximity of his or her ear while such vehicle is in motion is presumed to be engaging in a call."
+      ],
+      "62": [
+        "Drivers under the age of 18 years of age shall not use a cellular or mobile telephone... except to report an emergency to the enhanced 911 system or any public safety agency."
+      ],
+      "63": [
+        "Only drivers over the age of 18 years of age may: • Use one hand to transmit or receive messages on any non-cellular 2-way radio."
+      ],
+      "64": [
+        "Some behaviors typically associated with aggressive driving include: speeding, following too closely, unsafe lane changes"
+      ],
+      "65": [
+        "Vision is impacted at .02 BAC for all drivers."
+      ],
+      "66": [
+        "no driver under the age of 21 shall, except when accompanied by a parent, legal guardian or legal age spouse transport any liquor or alcoholic beverage"
+      ],
+      "67": [
+        "After drinking there is nothing that will reduce the effects of alcohol except TIME."
+      ],
+      "68": [
+        "Each ounce of alcohol consumed takes about an hour to go through the body."
+      ],
+      "69": [
+        "Any person who is convicted of a first offense... shall be guilty of a Class B misdemeanor, fined not less than $500"
+      ],
+      "70": [
+        "may face a loss of driving privileges for a period of 9 months to 2 years"
+      ],
+      "71": [
+        "Over-the-counter drugs taken for headaches, colds, hay fever or other allergies or those to calm nerves can make a driver drowsy and affect a person’s ability to drive."
+      ],
+      "72": [
+        "Get adequate sleep – the average person needs 7 to 9 hours of sleep to maintain proper alertness during the day."
+      ],
+      "73": [
+        "If a driver is unsure whether it is safe to take the drug and drive, a driver should ask their doctor or pharmacist about any side effects."
+      ],
+      "74": [
+        "These drugs could multiply the effects of alcohol or have additional effects of their own which could severely impact a driver’s ability to drive safely."
+      ],
+      "75": [
+        "A driver should take time to calm down before getting behind the wheel. Taking a short walk or nap prior to getting behind the wheel may help."
+      ],
+      "76": [
+        "Place a personal item like a purse or briefcase in the back seat, as another reminder to look before you lock."
+      ],
+      "77": [
+        "It is recommended that drivers have the tire pressure checked once a month."
+      ],
+      "78": [
+        "There should be 10 inches between the driver’s chest and the steering wheel."
+      ],
+      "79": [
+        "Head rests should be adjusted so the head rest comes in contact with the back of the driver’s head, but not below the ears."
+      ],
+      "80": [
+        "Remember, even properly adjusted mirrors will not eliminate all blind spots. Proper head checks should be incorporated whenever possible."
+      ],
+      "81": [
+        "In New Hampshire, safety restraints are required for anyone under the age of 18"
+      ],
+      "82": [
+        "The lap belt should be adjusted so that it is snug and lies low across the driver’s hips after fastening."
+      ],
+      "83": [
+        "A child less than 7 years old and less than 57 inches in height must be properly fastened and secured in a child passenger restraint"
+      ],
+      "84": [
+        "New Hampshire law requires all riders and passengers under the age of 18 to wear helmets approved by the United States Department of Transportation."
+      ],
+      "85": [
+        "Safety belts help to properly position a person’s body to maximize the air bag’s benefits"
+      ],
+      "86": [
+        "A load must be securely fastened and is only considered secure when nothing can slide, shift, fall or sift onto the roadway, or become airborne."
+      ],
+      "87": [
+        "Penalties for this offense can be $250.00 to $500.00 for the first offense with increased penalties for subsequent offenses."
+      ],
+      "88": [
+        "Penalties for this offense can be $250.00 to $500.00 for the first offense"
+      ],
+      "89": [
+        "Drivers’ hands should be in the 9 o’clock and 3 o’clock, or the 8 o’clock and 4 o’clock positions."
+      ],
+      "90": [
+        "the driver of a vehicle approaching or entering an intersection on the left shall yield the right of way to the vehicle on the right"
+      ],
+      "91": [
+        "Drivers should drive immediately to the right side of the road and stop the vehicle until the emergency has passed.",
+        "Drivers should avoid blocking an intersection when stopping."
+      ],
+      "92": [
+        "30 miles per hour in any business or urban residence district as defined in RSA 259:118;"
+      ],
+      "93": [
+        "The minimum speed you may drive on an interstate highway is 45 mph, unless road and weather conditions are so bad that this speed is unsafe."
+      ],
+      "94": [
+        "Posted School Zone – the speed limit is 10 miles per hour (mph) below the usual posted speed limit"
+      ],
+      "95": [
+        "on the highway, drivers should signal at least 500 feet before changing lanes or exiting the roadway."
+      ],
+      "96": [
+        "New Hampshire law requires every motor vehicle driven during the period from 1/2 hour after sunset to 1/2 hour before sunrise"
+      ],
+      "97": [
+        "whenever rain, snow, or fog shall interfere with the proper view of the road so that persons and vehicles on the way are not clearly discernible at a distance of 1000 feet ahead"
+      ],
+      "98": [
+        "Drivers should not use the horn when near blind pedestrians or when approaching or near a horse as this may frighten the horse and cause a crash."
+      ],
+      "99": [
+        "The stopping distance of a vehicle increases 4 times when the speed of the vehicle is doubled."
+      ],
+      "100": [
+        "The average perception time for an alert driver is ¾ second to 1 second."
+      ],
+      "101": [
+        "drivers should avoid travelling closer to a vehicle with less than a four-second following distance.",
+        "Drivers should always try to keep a minimum following distance of at least four seconds"
+      ],
+      "102": [
+        "Funeral processions. Drivers should allow vehicles that have their headlights on while following a hearse to pass as a group."
+      ],
+      "103": [
+        "Continue to pass until the complete front of the passed vehicle is visible in the rearview mirror."
+      ],
+      "104": [
+        "Stay in the lane they are travelling.",
+        "Maintain a constant speed to allow the driver to pass.",
+        "Never increase speed to prevent someone from passing."
+      ],
+      "105": [
+        "Back-up cameras should never be used as the primary tool for backing safely.",
+        "technology can help drivers back-up safely when used in conjunction with the mirrors and proper head checks."
+      ],
+      "106": [
+        "Always reduce speed prior to entering the curve to a safe speed"
+      ],
+      "107": [
+        "The best way to avoid traction loss from hydroplaning is to slow down in the rain or when the road is wet"
+      ],
+      "108": [
+        "Take turns crossing the bridge; generally the first driver to the bridge has right-of-way."
+      ],
+      "109": [
+        "Drivers should reduce speed, increase the following distance, and maintain a firm grip on the steering wheel."
+      ],
+      "110": [
+        "look toward the right side of the road to keep from being distracted or momentarily blinded by their headlights."
+      ],
+      "111": [
+        "In fog, rain, or snow, use the low beams. Light from the high beams may cause glare and make it more difficult to see ahead."
+      ],
+      "112": [
+        "Increase the following distance by adding at least one additional second for night driving conditions and at least two additional seconds for driving on unfamiliar roadways at night."
+      ],
+      "113": [
+        "Most of these technologies are passive, meaning they warn the driver of a potential issue, but do not automatically prevent a problem or collision."
+      ],
+      "114": [
+        "Do not attempt to pass when an oncoming vehicle is approaching, when the view is blocked by a curve or a hill, at intersections, or before a highway-railroad crossing or bridge."
+      ],
+      "115": [
+        "When approaching an uncontrolled rural intersection slow down and be prepared to stop for crossing or oncoming traffic."
+      ],
+      "116": [
+        "Use the low beams when following another vehicle."
+      ],
+      "117": [
+        "The warning alone will not automatically brake for the driver. Forward collision warning scans the road ahead while driving."
+      ],
+      "118": [
+        "A police officer directing traffic overrules any traffic light or sign and must be obeyed."
+      ],
+      "119": [
+        "EXCEPTION: Drivers may make a right turn on a red signal ONLY IF there is no sign prohibiting a right turn on red."
+      ],
+      "120": [
+        "Flashing RED Traffic Light – Drivers must come to a complete stop behind a stop line, crosswalk, or intersection before proceeding though the intersection, yielding any right-of-way."
+      ],
+      "121": [
+        "Brown Tourist and recreation guidance"
+      ],
+      "122": [
+        "Pennant (sideways triangle) No passing (this sign, found on the left side of the road, gives the driver warning of no passing zones ahead.)"
+      ],
+      "123": [
+        "Pink Incident management"
+      ],
+      "124": [
+        "Pentagon (5 sides) School zone and school crossing."
+      ],
+      "125": [
+        "a driver must stop behind the stop line or not less than 15 feet, nor more than 50 feet from the nearest rail of the track."
+      ],
+      "126": [
+        "The law requires buses that carry passengers and trucks carrying flammable or hazardous material to stop before any railroad crossing"
+      ],
+      "127": [
+        "Three numbered routes with an even first number go through or around a city."
+      ],
+      "128": [
+        "Speed Limit Signs - These black and white signs indicate the maximum legal speed allowed in ideal conditions."
+      ],
+      "129": [
+        "tells a driver where a lane is reserved for the use of left turning vehicles from either direction and is not to be used for through traffic"
+      ],
+      "130": [
+        "When the intersection is clear, drivers should look both ways and cross the tracks quickly, without stopping."
+      ],
+      "131": [
+        "They are generally diamond or rectangular shaped and orange with black letters or symbols."
+      ],
+      "132": [
+        "Fines may be doubled in a work zone; however, this will be clearly marked before entering the work zone."
+      ],
+      "133": [
+        "White lines mean these lanes of traffic are moving in the same direction.",
+        "Driver may pass other vehicles over broken (dotted) lines when it is safe to do so."
+      ],
+      "134": [
+        "The line is yellow on the left edges of one-way roads."
+      ],
+      "135": [
+        "If there is no white stop line but only a crosswalk present, then drivers must stop before the crosswalk."
+      ],
+      "136": [
+        "Drivers are required to yield to pedestrians crossing the road in marked crosswalks or at intersections even if no crosswalk lines exist at the intersection."
+      ],
+      "137": [
+        "Shared center lanes are for left turns only.",
+        "This sign tells a driver where a lane is reserved for the use of left turning vehicles from either direction and is not to be used for through traffic or passing other vehicles."
+      ],
+      "138": [
+        "Obey posted speed limits in the toll lanes, but do not come to a stop."
+      ],
+      "139": [
+        "Avoid swinging wide to the left before making the turn.",
+        "Always turn right from the right-most portion of the lane."
+      ],
+      "140": [
+        "If a driver misses an exit on a divided highway, they should drive to the next exit to reverse direction.",
+        "Drivers should never stop, back up or try to turn around."
+      ],
+      "141": [
+        "Drivers should use this type of turn only when the road or street is too narrow to make a U-turn. This type of turn should only be used on a two-lane roadway."
+      ],
+      "142": [
+        "It is recommended that drivers look left, then right and left again before entering the intersection."
+      ],
+      "143": [
+        "The driver with an active turn signal may plan to turn after they go past the intersection a driver is at or may have forgotten to turn the signal off from a prior turn."
+      ],
+      "144": [
+        "Solid White Lines: Drivers are prohibited from changing lanes or to pass another vehicle."
+      ],
+      "145": [
+        "Never back up or reverse direction at a toll plaza.",
+        "Come to a complete stop at staffed lanes.",
+        "Do not get out of your vehicle."
+      ],
+      "146": [
+        "While backing slowly, steer rapidly all the way to the right."
+      ],
+      "147": [
+        "Never stop while inside the roundabout. Instead, move through and exit the roundabout, pull over to the right and allow emergency vehicles to pass."
+      ],
+      "148": [
+        "Do not drive beside or attempt to overtake or pass any vehicles. Large trucks and trailers within the roundabout may need to straddle both lanes."
+      ],
+      "149": [
+        "Drivers must stop at least 25-feet in any direction for a school bus that is stopped with its red lights flashing and/or the stop arm extended"
+      ],
+      "150": [
+        "Drivers must stop at least 25-feet in any direction... unless the roadway is separated by a physical barrier."
+      ],
+      "151": [
+        "as long as there is a clear view for a distance of 200 feet in each direction and if there is enough space for other vehicles to pass."
+      ],
+      "152": [
+        "The law requires drivers to turn off the engine and remove the key when leaving a vehicle unattended."
+      ],
+      "153": [
+        "Set the parking brake and turn the wheels into the curb if the vehicle is parked on a hill."
+      ],
+      "154": [
+        "This area, marked with yellow or white diagonally striped lines is the space needed by individuals with walking disabilities to be able to fully open the door"
+      ],
+      "155": [
+        "Within 15 feet of a fire hydrant"
+      ],
+      "156": [
+        "Within 30 feet of a stop sign, yield sign or traffic control signal"
+      ],
+      "157": [
+        "Within 50 feet of the nearest rail of a railroad crossing"
+      ],
+      "158": [
+        "The driver with an active turn signal may plan to turn after they go past the intersection a driver is at or may have forgotten to turn the signal off"
+      ],
+      "159": [
+        "Something for drivers to remember: turn your head before you turn the wheel."
+      ],
+      "160": [
+        "Drivers should check their mirrors continually before slowing down, stopping, turning or changing lanes."
+      ],
+      "161": [
+        "Drivers should always try to keep a minimum following distance of at least four seconds between their car and the vehicle in front."
+      ],
+      "162": [
+        "Avoid driving next to other vehicles for long periods of time. The vehicle may be in their blind-spot, and it reduces the space needed to avoid a collision."
+      ],
+      "163": [
+        "Give aid to any injured people, but do not move them unless it is necessary, and be sure an ambulance has been called."
+      ],
+      "164": [
+        "New Hampshire law requires that an accident report be filed with the Division of Motor Vehicles within fifteen (15) days"
+      ],
+      "165": [
+        "if the combined property damage totals more than $1,000 as a result of the accident."
+      ],
+      "166": [
+        "If the crash is investigated by a police officer, drivers are not required to file a separate report to the Division of Motor Vehicles."
+      ],
+      "167": [
+        "New Hampshire law requires the Division of Motor Vehicles to suspend the driver’s driving privileges until a settlement has been reached."
+      ],
+      "168": [
+        "Driving under the influence of alcohol or drugs",
+        "require a driver to show the DMV proof of insurance (SR-22) in order to have their driving and registration privileges reinstated"
+      ],
+      "169": [
+        "Drivers should press on the brake pedal and keep applying pressure. ABS will work only if the driver keeps the pressure on the brake pedal."
+      ],
+      "170": [
+        "Steer in the direction they want to go, but try to avoid other traffic – never swerve to the left to avoid a crash."
+      ],
+      "171": [
+        "Ease up on the accelerator.",
+        "If the vehicle begins to skid, drivers should: Ease up on the accelerator."
+      ],
+      "172": [
+        "Steer in the direction that the rear of the vehicle is sliding."
+      ],
+      "173": [
+        "drivers should drive at a steady speed, signal in advance and increase the following distance in front to allow for a safe stopping distance."
+      ],
+      "174": [
+        "If possible, move the vehicle off the road so that traffic is not blocked from passing the site of the crash."
+      ],
+      "175": [
+        "Ease up on the accelerator."
+      ],
+      "176": [
+        "If the vehicle leaves the paved road surface, drivers should slow down gradually and turn back onto the pavement when it is safe to do so."
+      ],
+      "177": [
+        "push the parking brake foot pedal slowly to avoid locking the rear wheels and causing a skid."
+      ],
+      "178": [
+        "If a front tire blows out, the vehicle will pull sharply in the direction of the blowout."
+      ],
+      "179": [
+        "Be aware that the steering wheel may be difficult to turn."
+      ],
+      "180": [
+        "Shift the vehicle into the neutral gear.",
+        "Brake firmly to counteract the effects of the acceleration.",
+        "When safe to do so, pull the vehicle off the road."
+      ],
+      "181": [
+        "raise the hood of the vehicle and tie a white cloth (red in a snowstorm) to the driver’s door handle or the vehicle’s antenna"
+      ],
+      "182": [
+        "placing emergency flares or reflectors 200 feet in front of and behind the vehicle."
+      ],
+      "183": [
+        "Walk on the left side of the roadway facing oncoming traffic when walking on the side of the road where there is no sidewalk."
+      ],
+      "184": [
+        "drivers to come to a complete stop whenever a person who is carrying a white cane (the international symbol of blindness) or using a harnessed guide dog is attempting to cross a roadway."
+      ],
+      "185": [
+        "The distance shall be presumed to be reasonable and prudent if it is at least 3 feet when the vehicle is traveling at 30 miles per hour or less"
+      ],
+      "186": [
+        "one additional foot of clearance required for every 10 miles per hour above 30 miles per hour."
+      ],
+      "187": [
+        "Sounding your horn to alert your presence may startle bicyclists and cause them to steer into your path and crash."
+      ],
+      "188": [
+        "bicyclists may be unable to signal if road or traffic conditions require them to keep both hands on the handlebars."
+      ],
+      "189": [
+        "tie a white cloth (red in a snowstorm) to the driver’s door handle or the vehicle’s antenna"
+      ],
+      "190": [
+        "Be sure to allow at least four seconds following distance when behind a motorcycle."
+      ],
+      "191": [
+        "Be aware that most motorcycles do not have automatic cancel for turn signals."
+      ],
+      "192": [
+        "Never attempt to share a lane with a motorcycle. Motorcycles are entitled to the same full lane width as all other vehicles."
+      ],
+      "193": [
+        "A fluorescent or reflective orange and red triangle displayed on the rear of vehicles... means the vehicle is traveling less than 25 mph."
+      ],
+      "194": [
+        "Drivers approaching any horse shall take every precaution to prevent frightening the horse.",
+        "pass with caution, and never use the horn or “rev” the engine."
+      ],
+      "195": [
+        "if the truck driver’s face cannot be seen in the side view mirror, then the truck driver cannot see the other vehicle."
+      ],
+      "196": [
+        "traveling at 55 mph requires a minimum of 335 feet before coming to a complete stop"
+      ],
+      "197": [
+        "large vehicles have huge blind spots directly behind them that extend up to 200 feet."
+      ],
+      "198": [
+        "look for the whole front of the vehicle in the rear-view mirror before pulling in front"
+      ],
+      "199": [
+        "they may need to swing wide to the left in order to safely turn right and clear the corner of a curb or other obstruction."
+      ],
+      "200": [
+        "These stop lines help to set a vehicle farther back at an intersection to give larger vehicles more turning space."
+      ],
+      "201": [
+        "Drivers must not follow a fire truck closer than 500 feet when it is sounding a siren or operating flashing lights."
+      ],
+      "202": [
+        "Drivers should drive immediately to the right side of the road and stop the vehicle until the emergency has passed.",
+        "Drivers should avoid blocking an intersection when stopping."
+      ],
+      "203": [
+        "Maintain a reduced speed and if practical give a wide berth, without endangering oncoming traffic",
+        "vacate any lane wholly or partially blocked, as soon as possible."
+      ],
+      "204": [
+        "Motorcyclists may experience a wobbling sensation when traveling over metal or grated bridges."
+      ],
+      "205": [
+        "Maintain a reduced speed and if practical give a wide berth, without endangering oncoming traffic, to public safety personnel, any persons in the roadway, and vehicles displaying blue, red, or amber emergency"
+      ],
+      "206": [
+        "Any person violating this law shall be fined plus penalty assessment for a first offense"
+      ],
+      "207": [
+        "an increased fine plus penalty assessment for a subsequent offense in a 12-month period."
+      ],
+      "208": [
+        "Come to a complete stop and place the vehicle in park."
+      ],
+      "209": [
+        "if at night, the interior lights to help the officer see that everything is in order inside the vehicle."
+      ],
+      "210": [
+        "Place hands on the steering wheel and limit movements."
+      ],
+      "211": [
+        "tell the officer where they are located and reach for them slowly with one hand on the wheel."
+      ],
+      "212": [
+        "If the police officer is in plain clothes (no uniform), ask for identification such as a badge or department identification card."
+      ],
+      "213": [
+        "Work zone signs have an orange background and black letters or symbols."
+      ],
+      "214": [
+        "Always reduce speed in a work zone, even if there are no signs indicating a change in speed limit within the work zone."
+      ],
+      "215": [
+        "Use extreme caution when driving through a work zone at night whether workers are present or not."
+      ],
+      "216": [
+        "do not resume normal speed until the “End Road Work” sign is visible."
+      ],
+      "217": [
+        "The narrower lanes and rough pavement can create hazardous conditions."
+      ],
+      "218": [
+        "Turn off the engine and turn on the hazard flashers"
+      ],
+      "219": [
+        "While driving in a work zone, drivers should: Reduce speed, increase the following distance"
+      ],
+      "220": [
+        "With more passengers than seat belts or safety restraints in the vehicle.",
+        "Youth operators must not drive a vehicle with more people than there are seat belts"
+      ],
+      "221": [
+        "Drivers should yield to traffic already traveling in a roundabout.",
+        "Yield - Yield to the traffic in both lanes in the roundabout."
+      ],
+      "222": [
+        "What does BAC stand for? Blood Alcohol Concentration",
+        "performance traits similar to that of someone who has been drinking. For example, a driver who is up for a continuous 18 hours will typically exhibit performance levels similar to that of a person with a Blood Alcohol Concentration (BAC) level of 0.05%."
+      ],
+      "223": [
+        "A pennant-shaped sign located on the left-hand side of the road points to the beginning of a no passing zone.",
+        "Pennant (sideways triangle) No passing (this sign, found on the left side of the road, gives the driver warning of no passing zones ahead.)"
+      ],
+      "224": [
+        "The No-Zone is the area around large trucks or buses where vehicles disappear from the commercial driver’s view into blind spots."
+      ],
+      "225": [
+        "Youth operators may not operate a vehicle between the hours of 1:00 am and 4:00 am before their 18th birthday.",
+        "Between the hours of 1:00 am and 4:00 am;"
+      ],
+      "226": [
+        "The distance you travel from when you see danger until you step on the brake pedal is called reaction distance."
+      ],
+      "227": [
+        "A cross buck sign means a railroad crossing.",
+        "Crossbuck (X) Indicates where a railroad crossing is."
+      ],
+      "228": [
+        "The distance you travel while operating your brakes to bring your vehicle to a stop is called braking distance.",
+        "Braking distance – the time and distance it takes for a vehicle’s brakes to slow and come to a stop."
+      ],
+      "229": [
+        "Are bicyclists subject to the same laws and rules as automobile drivers? Yes",
+        "Bicyclists are required and expected to obey all traffic laws and regulations as motorized vehicles"
+      ],
+      "230": [
+        "New Hampshire law requires people to wear a safety belt or be restrained in a safety seat until 18 years of age.",
+        "New Hampshire law requires anyone less than 18 years of age to be properly restrained by a safety belt or secured in a child safety seat"
+      ],
+      "231": [
+        "A police officer directing traffic overrules any traffic light or sign and must be obeyed."
+      ],
+      "232": [
+        "Pedestrians have the right of way when they are: In a crosswalk",
+        "Drivers are required to yield to pedestrians crossing the road in marked crosswalks or at intersections"
+      ],
+      "233": [
+        "Enter and maintain proper position in the lane that is closest to the direction they want to go."
+      ],
+      "234": [
+        "Flashing RED Traffic Light – Drivers must come to a complete stop behind a stop line, crosswalk, or intersection"
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 30,
-    "topics_covered": 30,
-    "coverage_pct": 100.0,
-    "uncovered_topics": [],
+    "topics_total": 27,
+    "topics_covered": 25,
+    "coverage_pct": 92.6,
+    "uncovered_topics": [
+      "Accrual of demerit points for moving traffic violations",
+      "Procedures for parallel, perpendicular, and angle parking"
+    ],
     "verdict": "PASS",
     "grade": "A"
   },
@@ -63,6 +810,20 @@
     "sign_ratio_pct": 12.7,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 234,
+      "avg_fidelity": 10.0,
+      "pct_at_10": 99.6,
+      "pct_above_9": 100.0,
+      "pct_above_7": 100.0,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",

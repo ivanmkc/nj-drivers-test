@@ -17,6 +17,7 @@ clients).
 from __future__ import annotations
 
 import os
+import re
 import shutil
 import sys
 from typing import Any
@@ -66,6 +67,153 @@ def extract_pdf_text(pdf_path: str) -> str:
         return "".join(out)
     finally:
         doc.close()
+
+
+# Edition-detection patterns. Ordered most-specific to least-specific; the first
+# match wins. Each entry is (compiled regex, formatter); the formatter turns the
+# regex match into a normalized string. Patterns are case-insensitive.
+#
+# Real-world examples observed across the 48 shipped state manuals:
+#   AL: "June 2016 Edition"          MD: "December 2025 Edition"
+#   TX: "Revised January 2026"       MO: "Revised August 2025"
+#   ME: "Rev 11/23"                  FL: "rev. 08/2023"
+#   NV: "March 2024"                 NJ: "2025"  (cover year)
+#   OR: "2026 - 2027"                WI: "2025"
+#   TN: "as of July 1, 2022"         AZ: "© 2025"  (copyright fallback)
+_MONTH = (
+    r"(?:January|February|March|April|May|June|July|August|September|October|November|December)"
+)
+# Year range in the plausible publication window. 1990 < year < 2100 is a
+# reasonable guard against false positives like phone numbers or zip codes.
+_YEAR = r"(?:19[9]\d|20\d{2})"
+
+
+def _norm_month_year(m: re.Match[str]) -> str:
+    return f"{m.group(1).title()} {m.group(2)}"
+
+
+def _norm_rev_month_year(m: re.Match[str]) -> str:
+    return f"Rev {m.group(1).title()} {m.group(2)}"
+
+
+def _norm_rev_numeric(m: re.Match[str]) -> str:
+    """Normalize ``Rev 11/23`` or ``rev. 08/2023`` -> ``Rev 11/2023``."""
+    mm, yy = m.group(1), m.group(2)
+    if len(yy) == 2:
+        yy = "20" + yy
+    return f"Rev {int(mm):02d}/{yy}"
+
+
+def _norm_year_range(m: re.Match[str]) -> str:
+    return f"{m.group(1)}-{m.group(2)}"
+
+
+def _norm_year(m: re.Match[str]) -> str:
+    return m.group(1)
+
+
+def _norm_month_year_standalone(m: re.Match[str]) -> str:
+    return f"{m.group(1).title()} {m.group(2)}"
+
+
+_EditionFormatter = Any  # callable(re.Match[str]) -> str
+
+
+_EDITION_PATTERNS: list[tuple[re.Pattern[str], _EditionFormatter]] = [
+    # "Revised January 2026", "Revised: January 2026", "Updated August 2025"
+    (
+        re.compile(
+            rf"\b(?:Rev(?:ised)?|Updated|Effective)\b[\s:.]*({_MONTH})\s+({_YEAR})",
+            re.IGNORECASE,
+        ),
+        _norm_rev_month_year,
+    ),
+    # "Rev 11/23", "rev. 08/2023", "Revised 7/2022"
+    (
+        re.compile(
+            r"\b(?:Rev(?:ised)?|Updated|Effective)\b[\s:.]*(\d{1,2})[/-](\d{2,4})\b",
+            re.IGNORECASE,
+        ),
+        _norm_rev_numeric,
+    ),
+    # "June 2016 Edition", "December 2025 Edition"
+    (
+        re.compile(rf"\b({_MONTH})\s+({_YEAR})\s+Edition\b", re.IGNORECASE),
+        _norm_month_year,
+    ),
+    # "2025 Edition", "2024 Driver Handbook", "2026 Driver's Manual"
+    (
+        re.compile(
+            rf"\b({_YEAR})\s+(?:Edition|Driver(?:'s|’s|s’|s')?\s+"
+            r"(?:Handbook|Manual|Guide|License))\b",
+            re.IGNORECASE,
+        ),
+        _norm_year,
+    ),
+    # Year range, e.g. "2026 - 2027" (Oregon style cover), "2025-2026"
+    (
+        re.compile(rf"\b({_YEAR})\s*[-–]\s*({_YEAR})\b"),
+        _norm_year_range,
+    ),
+    # Standalone "Month YYYY" near the cover (Nevada style).
+    (
+        re.compile(rf"\b({_MONTH})\s+({_YEAR})\b", re.IGNORECASE),
+        _norm_month_year_standalone,
+    ),
+    # Copyright fallback: "© 2025" or "Copyright 2025".
+    (
+        re.compile(rf"(?:©|Copyright)\s*({_YEAR})", re.IGNORECASE),
+        _norm_year,
+    ),
+    # Bare publication year as a last resort (e.g. NJ "2025" on cover).
+    (
+        re.compile(rf"\b({_YEAR})\b"),
+        _norm_year,
+    ),
+]
+
+
+def extract_edition(pdf_path: str, *, max_pages: int = 5) -> str:
+    """Extract publication date / edition string from the cover of ``pdf_path``.
+
+    Reads up to ``max_pages`` of front matter (most state manuals print the
+    edition on the cover, inside-front, or the colophon page) and returns the
+    first pattern hit. Returns an empty string when nothing matches.
+
+    Normalized return formats include:
+        - ``"Rev January 2026"``       (TX, MO)
+        - ``"Rev 11/2023"``            (ME, FL)
+        - ``"December 2025 Edition"``  (returned as ``"December 2025"``)
+        - ``"2025-2026"``              (OR-style year range)
+        - ``"2025"``                   (year-only, last resort)
+
+    Read-only: opens the PDF in PyMuPDF and closes it; never writes.
+    """
+    try:
+        import fitz  # type: ignore[import-not-found]
+    except ImportError:
+        raise RuntimeError("PyMuPDF not installed. Run: pip install pymupdf") from None
+
+    doc = fitz.open(pdf_path)
+    try:
+        n = min(max_pages, len(doc))
+        text_parts: list[str] = []
+        for i in range(n):
+            text_parts.append(str(doc[i].get_text()))
+        text = "\n".join(text_parts)
+    finally:
+        doc.close()
+
+    return _extract_edition_from_text(text)
+
+
+def _extract_edition_from_text(text: str) -> str:
+    """Apply edition patterns to already-extracted page text. Exposed for tests."""
+    for pattern, formatter in _EDITION_PATTERNS:
+        m = pattern.search(text)
+        if m:
+            return formatter(m)
+    return ""
 
 
 def fetch_pdf_text(url: str, *, cache_path: str | None = None) -> str:

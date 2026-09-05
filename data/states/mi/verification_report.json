@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "code": "mi",
   "name": "Michigan",
-  "verified_at": "2026-05-26T02:29:31Z",
-  "quiz_gates_version": "v1",
+  "verified_at": "2026-05-26T23:04:22Z",
+  "quiz_gates_version": "v2",
   "source": {
     "manual_url": "https://www.michigan.gov/sos/resources/forms/what-every-driver-must-know",
     "manual_pdf_sha256": "d7afd04a7270cf908fa47ba68b56712856b7c313c4751a4f9cd1c575281a7c11",
@@ -23,21 +23,1022 @@
   },
   "precision": {
     "method": "Gemini-3-flash-as-judge with structured pydantic response, batched per 10 questions",
-    "sample_size": 30,
-    "judged_count": 30,
+    "sample_size": 0,
+    "judged_count": 316,
     "avg_fidelity": 10.0,
     "pct_at_10": 100.0,
     "pct_above_9": 100.0,
     "pct_above_7": 100.0,
     "pct_zero": 0.0,
     "flagged_question_ids": [],
+    "evidence_by_question_id": {
+      "1": [
+        "Cell phone use prohibited for all drivers – including teens",
+        "Michigan’s general cell phone law (MCL 257.602b) prohibits all drivers from using a cell phone while driving."
+      ],
+      "2": [
+        "Under 18 – Graduated Driver Licensing",
+        "If you are under age 18, you must successfully pass Graduated Driver Licensing."
+      ],
+      "3": [
+        "Buckle up, it’s the law!",
+        "make sure that you and your passengers are properly buckled up – it’s the law!"
+      ],
+      "4": [
+        "Chapter 2: Your Driving Record",
+        "Michigan’s point system................................................................................... 13"
+      ],
+      "5": [
+        "Restricted license due to a health condition",
+        "If a restricted driver’s license is issued because of a disability or illness, a periodic driver reexamination may be required."
+      ],
+      "6": [
+        "Trains and vehicles DO NOT MIX: Grade crossing safety tips"
+      ],
+      "7": [
+        "Right of way and funerals................................................................................ 31",
+        "Funeral processions have the right of way over all other vehicles, except for fire trucks, ambulances and police vehicles."
+      ],
+      "8": [
+        "Chapter 5: Signs, Pavement Markings and Signals",
+        "Traffic sign colors............................................................................................... 42"
+      ],
+      "9": [
+        "Providing proof of legal presence",
+        "To apply for a driver’s license or state ID card, valid proof of U.S. citizenship or legal presence in the United States must be presented."
+      ],
+      "10": [
+        "Chapter 3: Voter Registration and State IDs",
+        "Voter registration............................................................................................... 19"
+      ],
+      "11": [
+        "What is an Emergency Notification System sign?",
+        "An Emergency Notification System (ENS) sign, posted at or near a highway-rail grade crossing"
+      ],
+      "12": [
+        "Van-accessible disability parking",
+        "Van-accessible parking spaces are wider than standard parking spaces."
+      ],
+      "13": [
+        "Passive railroad crossing control systems",
+        "Active railroad crossing control systems"
+      ],
+      "14": [
+        "The motorcycle TIP",
+        "The motorcycle temporary instruction permit (TIP) gives new riders an opportunity to practice"
+      ],
+      "15": [
+        "18 and older – never been licensed",
+        "If you are age 18 or older and have never been licensed, you must apply for a temporary instruction permit"
+      ],
+      "16": [
+        "Flashing yellow arrow left-turn signal head",
+        "A flashing yellow arrow allows you to turn left when the oncoming traffic, which has a green light, is clear."
+      ],
+      "17": [
+        "White triangular symbols",
+        "White triangles painted across a traffic lane indicate you should be ready to stop and yield to pedestrians."
+      ],
+      "18": [
+        "Pedestrian Hybrid Beacon",
+        "A Pedestrian Hybrid Beacon is a crossing device that alerts drivers to the presence of pedestrians."
+      ],
+      "19": [
+        "The 5-section-head signal",
+        "The 5-section-head signal or “doghouse signal” controls left or right turns at intersections."
+      ],
+      "20": [
+        "Vehicle – deer crashes",
+        "About 60,000 vehicle-deer crashes happen in Michigan each year"
+      ],
+      "21": [
+        "Rain and fog",
+        "When it begins to rain, the roads are most slippery during the first half hour.",
+        "Drive slowly in fog."
+      ],
+      "22": [
+        "Freeway fatigue",
+        "One of the greatest dangers in freeway driving is fatigue."
+      ],
+      "23": [
+        "Yellow lines",
+        "Left turn only center lane"
+      ],
+      "24": [
+        "White lines",
+        "Broken white lines"
+      ],
+      "25": [
+        "Motorcycles, scooters, mopeds and bicycles"
+      ],
+      "26": [
+        "Autocycles",
+        "An autocycle is a motorcycle that has safety belts, a roll bar or roll hoops, a steering wheel"
+      ],
+      "27": [
+        "Steady green arrow",
+        "A steady green arrow means that traffic coming toward you is stopped"
+      ],
+      "28": [
+        "White lines",
+        "Crosswalk lines",
+        "Stop lines"
+      ],
+      "29": [
+        "Chapter 7: Emergencies and Special Situations",
+        "Aggressive driving"
+      ],
+      "30": [
+        "Driving is a privilege and not a right."
+      ],
+      "31": [
+        "A total of 2,284 crashes resulted from a driver, pedestrian, or bicyclist using a cell phone."
+      ],
+      "32": [
+        "272 (26.6%) were alcohol-involved, with at least one drinking operator, bicyclist, or pedestrian."
+      ],
+      "33": [
+        "The drivers in this age group represented 10.1 percent (49,041) of drivers in all crashes"
+      ],
+      "34": [
+        "you agree to become an organ, eye and tissue donor to save up to 8 lives"
+      ],
+      "35": [
+        "There is no age limit for organ and tissue donation."
+      ],
+      "36": [
+        "your out-of-state driver’s license will be invalidated and returned to you."
+      ],
+      "37": [
+        "you must contact your previous state to clear any outstanding issues before your application for a Michigan license will be accepted."
+      ],
+      "38": [
+        "You have two or more convictions for moving violations on your driving record within three years of the date that you apply for a license."
+      ],
+      "39": [
+        "Chauffeur’s license: You must be at least age 16."
+      ],
+      "40": [
+        "operating a motor vehicle with a Gross Vehicle Weight Rating (GVWR) of 10,000 pounds or more"
+      ],
+      "41": [
+        "You must be at least age 21 to drive a vehicle across state lines or to transport hazardous materials in amounts that require placarding."
+      ],
+      "42": [
+        "Drivers between ages 18 and 21 can operate a commercial vehicle only in Michigan."
+      ],
+      "43": [
+        "Before you can operate commercial motor vehicles, you must be at least age 18, have been suspension free for 36 months before the date of application"
+      ],
+      "44": [
+        "Michigan law allows drivers to hold only one valid driver’s license at a time."
+      ],
+      "45": [
+        "You must be at least age 21 to drive a vehicle across state lines or to transport hazardous materials in amounts that require placarding."
+      ],
+      "46": [
+        "Allows you to re-enter the United States by land or sea from Canada, Mexico, Bermuda and the Caribbean without the need to present any additional identity documents."
+      ],
+      "47": [
+        "Unlicensed teens age 15 or older with parental approval may apply for a moped license at a Secretary of State office."
+      ],
+      "48": [
+        "A motorcycle rider education course is required for teens ages 16-17 and for adults who fail the motorcycle skills test twice."
+      ],
+      "49": [
+        "Recreational Double ”R” endorsement: Required for a pickup truck pulling a fifth-wheel trailer designed for recreational living purposes, with a second trailer attached to the rear"
+      ],
+      "50": [
+        "Beginning May 7, 2025, Michigan residents boarding a plane for domestic travel in the United States... must present a REAL ID-compliant document."
+      ],
+      "51": [
+        "it has either a star in a gold circle or a star in an image of Michigan printed in the upper right-hand corner."
+      ],
+      "52": [
+        "your standard Michigan license or state ID card will have “Not for Federal Identification” printed on it."
+      ],
+      "53": [
+        "If you are from another U.S. state, Canada, Germany or the Republic of Korea (South Korea), you may convert your driver’s license to a Michigan license without the written knowledge test, TIP or driving skills test."
+      ],
+      "54": [
+        "To apply, you must be at least 14 years, 8 months and have your parent or guardian’s permission to start Segment 1."
+      ],
+      "55": [
+        "you may only drive with a licensed parent, guardian or designated, licensed adult age 21 or older seated in the front seat next to you."
+      ],
+      "56": [
+        "Kelsey’s Law prohibits you from using a cell phone while driving."
+      ],
+      "57": [
+        "you must present a driving log of at least 30 hours of supervised driving time (including a minimum of 2 hours at night)"
+      ],
+      "58": [
+        "To apply, you must be at least age 15 and have completed Segment 2, along with a minimum of 50 hours of supervised driving time"
+      ],
+      "59": [
+        "To apply, you must be at least age 16 and have held your Level 1 Learner’s License for at least 6 months."
+      ],
+      "60": [
+        "To apply, you must be at least age 16 and have held your Level 1 Learner’s License for at least 6 months."
+      ],
+      "61": [
+        "Level 2 Intermediate License restrictions prohibit you from driving between 10 p.m. and 5 a.m. unless one of the following applies"
+      ],
+      "62": [
+        "You may not have more than one passenger under the age of 21 in the vehicle with you at any time unless one of the following applies"
+      ],
+      "63": [
+        "Under Kelsey’s Law, you may not use a phone while driving, except for emergencies."
+      ],
+      "64": [
+        "You must have driven 12 consecutive months without a moving violation, an at-fault crash, a license suspension or a violation of any of the GDL restrictions."
+      ],
+      "65": [
+        "You must practice driving with a licensed adult for at least 30 days before taking a driving skills test."
+      ],
+      "66": [
+        "The letter can be no more than 60 days old. All Social Security information will be verified."
+      ],
+      "67": [
+        "Only original documents will be accepted. Photocopies or faxes cannot be used."
+      ],
+      "68": [
+        "Before your driver’s license or state ID card application can be processed, you must present proof that you are a Michigan resident. At least two documents are required."
+      ],
+      "69": [
+        "If you fail the vision test, your eye-care specialist must complete a vision statement documenting that you meet the vision standards."
+      ],
+      "70": [
+        "arrive at the Secretary of State office at least one hour before closing to allow enough time to complete the test."
+      ],
+      "71": [
+        "A temporary instruction permit (TIP) is valid for 180 days."
+      ],
+      "72": [
+        "taking an online version of the test at home on your own computer or laptop for a $6.50 convenience fee."
+      ],
+      "73": [
+        "Level 2 Intermediate License restrictions prohibit you from driving between 10 p.m. and 5 a.m. unless one of the following applies: ... you are operating the vehicle in the course of your employment"
+      ],
+      "74": [
+        "Out-of-state and Canadian applicants may use their out-of-state or Canadian driver’s license as proof of identity (licenses expired for less than four years will be accepted)."
+      ],
+      "75": [
+        "Practice driving. You must complete a minimum of 30 days of practice driving on a TIP before taking the driving skills test."
+      ],
+      "76": [
+        "Drivers licensed for the first time are placed on probation for a minimum of three years."
+      ],
+      "77": [
+        "You are not allowed to ride at night or carry passengers."
+      ],
+      "78": [
+        "Whenever you ride, you must be under the constant visual supervision of a licensed motorcycle operator who is at least age 18."
+      ],
+      "79": [
+        "You will need to take a driving skills test if: ... Your last driver’s license has been expired for more than four years."
+      ],
+      "80": [
+        "Your log showing that you have completed at least 50 hours of supervised driving, including 10 hours at night."
+      ],
+      "81": [
+        "Not had any convictions, civil infractions, license suspensions or at-fault crashes during the 90 days immediately preceding your driving skills test"
+      ],
+      "82": [
+        "The Secretary of State does not set driving skills test fees or pricing policies.",
+        "Be sure to ask the driver testing business you choose about its pricing policies before scheduling your test."
+      ],
+      "83": [
+        "Interpreters are not allowed during either the written knowledge tests or the driving skills test for a commercial driver’s license."
+      ],
+      "84": [
+        "The first part of the driving skills test requires you to pass a series of off-street, closed-course maneuvers followed by an on-road driving skills test."
+      ],
+      "85": [
+        "A physician’s statement also is required if the Secretary of State has reason to believe you have had a fainting spell, blackout, seizure or other loss of consciousness in the preceding six months."
+      ],
+      "86": [
+        "For a chauffeur’s license or a commercial driver’s license, you must not have had any blackouts, fainting spells or seizures within the last 12 months."
+      ],
+      "87": [
+        "If you need to change your name on your driver’s license, you must first change your name with the Social Security Administration."
+      ],
+      "88": [
+        "You may submit a change of address online at Michigan.gov/SOS, at a Secretary of State office or by mail. There is no charge for this service."
+      ],
+      "89": [
+        "You must renew your driver’s license every 12 years at a Secretary of State office."
+      ],
+      "90": [
+        "If you are under age 21, your driver’s license expires on your 21st birthday."
+      ],
+      "91": [
+        "Points placed on your driving record remain there for two years from the date of conviction."
+      ],
+      "92": [
+        "Four Points:",
+        "Drag racing."
+      ],
+      "93": [
+        "A conviction for a fatality or for impaired driving remains on your driving record permanently."
+      ],
+      "94": [
+        "Your driver’s license may be suspended or revoked if you fail to change your address with the Secretary of State."
+      ],
+      "95": [
+        "If you have six or more one-point violations, or 12 or more points on your driving record within a two-year period, you will be required to undergo a driver assessment reexamination."
+      ],
+      "96": [
+        "Six Points:",
+        "Fleeing or eluding a police officer."
+      ],
+      "97": [
+        "In most cases, if you do not take care of a traffic ticket, your driver’s license will be suspended."
+      ],
+      "98": [
+        "Free ID cards are provided to those who are legally blind, drivers 65 or older who voluntarily relinquish their driver’s license"
+      ],
+      "99": [
+        "Three Points:",
+        "Disobeying a traffic signal or stop sign or improper passing."
+      ],
+      "100": [
+        "Most convictions stay on your driving record for at least seven years."
+      ],
+      "101": [
+        "Two Points: • Open alcohol container in vehicle."
+      ],
+      "102": [
+        "You must renew your driver’s license every 12 years at a Secretary of State office. A vision screening will be given and a new photograph will be taken."
+      ],
+      "103": [
+        "Some examples of permissible uses include insurance rating, automobile recalls and driver verification for car rental companies."
+      ],
+      "104": [
+        "Two Points: • Open alcohol container in vehicle."
+      ],
+      "105": [
+        "A 12-ounce can of beer, a 5-ounce glass of wine and a 1.5-ounce shot of whiskey all contain the same amount of alcohol."
+      ],
+      "106": [
+        "The only thing that sobers you up is time."
+      ],
+      "107": [
+        "If there are no prior drug violations, your driver’s license is suspended for six months."
+      ],
+      "108": [
+        "The driver’s license reinstatement fee is $125."
+      ],
+      "109": [
+        "Transport 2.5 ounces or less of marijuana if you are age 21 or older."
+      ],
+      "110": [
+        "But it is illegal to: • Transport marijuana into Canada."
+      ],
+      "111": [
+        "These penalties can include up to 93 days in jail, up to a $500 fine, license suspension, six points on a person’s driving record, and more."
+      ],
+      "112": [
+        "Refusing to submit to a chemical test will result in a license suspension pursuant to Michigan’s implied consent law."
+      ],
+      "113": [
+        "You have accumulated 12 or more points within a two-year period."
+      ],
+      "114": [
+        "You have been in three or more traffic crashes resulting in personal injury or property damage over the past two years."
+      ],
+      "115": [
+        "A resident of Michigan (at the time you register) and of the city or township where you are applying to register to vote for at least 30 days (when you vote)."
+      ],
+      "116": [
+        "You must register to vote at your city or township clerk’s office up to and on Election Day"
+      ],
+      "117": [
+        "a restricted license will not be issued during the first 60 days of the suspension."
+      ],
+      "118": [
+        "If you move to another city or township, you must register to vote in that jurisdiction to remain eligible to vote."
+      ],
+      "119": [
+        "You may not have both a state ID card and a Michigan driver’s license unless your license has been restricted, suspended or revoked."
+      ],
+      "120": [
+        "Your state ID card expires four years from your last birthday."
+      ],
+      "121": [
+        "These cards have a star in a gold circle printed in the upper right-hand corner."
+      ],
+      "122": [
+        "minors (children under age 18) do not need a REAL ID-compliant document when flying with a companion in the United States."
+      ],
+      "123": [
+        "Drivers face a fine of $100 for a first offense and $250 for subsequent violations."
+      ],
+      "124": [
+        "In the estimated quarter of a second it takes the brain to shift attention between two tasks, a car moving at 65 mph covers 24 feet."
+      ],
+      "125": [
+        "Emergency exceptions: Drivers (including all teens) are allowed to use a mobile device while driving to text 9-1-1 or call a law enforcement agency"
+      ],
+      "126": [
+        "Kelsey’s Law (MCL 257.602c) prohibits teens with a GDL 1 or GDL 2 from making or receiving non-emergency phone calls."
+      ],
+      "127": [
+        "Pressing, tapping, or swiping a single button to activate or deactivate a function of the device or to select a name or phone number."
+      ],
+      "128": [
+        "Complete any personal grooming before you start driving or after you reach your destination."
+      ],
+      "129": [
+        "In 1945, the first chemical test to identify suspected drunken drivers was administered by the Detroit Police Department."
+      ],
+      "130": [
+        "All passengers younger than age 16 to be buckled up, in all seating positions"
+      ],
+      "131": [
+        "shoulder belt across the middle of the chest away from the neck, with the lap belt worn low across the hips below the stomach."
+      ],
+      "132": [
+        "Children are to be properly buckled up in a car seat or booster seat until they are 8 years old or 4 feet 9 inches tall."
+      ],
+      "133": [
+        "A child in a rear-facing child-restraint system may only be placed in the front seat if the front passenger air bag is deactivated."
+      ],
+      "134": [
+        "Anyone under 18 years old is prohibited from riding in the open bed of a pickup truck traveling more than 15 mph."
+      ],
+      "135": [
+        "it is illegal to leave children younger than 6 years old unattended in a vehicle"
+      ],
+      "136": [
+        "under the supervision of someone age 13 or older who is not legally incapacitated are not in violation of the law."
+      ],
+      "137": [
+        "It is recommended that drivers sit with at least 10 inches of space between the center of their breastbone and the center of the steering wheel."
+      ],
+      "138": [
+        "Parents or guardians are encouraged to seat all children ages 12 and younger in the rear seat of the vehicle"
+      ],
+      "139": [
+        "15 mph – In mobile home parks and some municipal parks."
+      ],
+      "140": [
+        "25 mph – In platted subdivisions... and condominium complexes."
+      ],
+      "141": [
+        "70 mph maximum/55 mph minimum – On all freeways unless posted otherwise. School buses and trucks are restricted to 65 mph."
+      ],
+      "142": [
+        "Five points for speeding more than 15 mph over the limit."
+      ],
+      "143": [
+        "If you cause the injury or death to any person in a work zone, you may face fines of up to $7,500, and imprisonment of up to 15 years."
+      ],
+      "144": [
+        "Warning signs in construction, maintenance or other designated work areas are diamond-shaped with black lettering on an orange or yellow background."
+      ],
+      "145": [
+        "Michigan law allows state and local road agencies to equip their maintenance vehicles with flashing or oscillating green lights"
+      ],
+      "146": [
+        "Private contractors are not allowed to display green lights on their vehicles."
+      ],
+      "147": [
+        "The law requires you to slow down at least 10 mph below the posted speed limit and move over a lane if traffic and conditions allow."
+      ],
+      "148": [
+        "Stay at least 500 feet behind any moving emergency vehicle displaying flashing warning lights and sounding a siren."
+      ],
+      "149": [
+        "Keep a foot on the brake so the brake lights let emergency vehicle drivers know you have stopped."
+      ],
+      "150": [
+        "Stop at least 20 feet from a school bus with its red overhead lights flashing"
+      ],
+      "151": [
+        "It is not necessary to stop for a school bus stopped on the other side of a highway divided by a barrier such as a concrete or grass median, island or other structures"
+      ],
+      "152": [
+        "When the YELLOW overhead lights are flashing, be prepared to stop."
+      ],
+      "153": [
+        "If two or more vehicles reached the intersection at the same time, the vehicle on the left should yield to the vehicle on its right."
+      ],
+      "154": [
+        "You reach an intersection with a malfunctioning traffic signal. Come to a complete stop and yield to vehicles already at the intersection."
+      ],
+      "155": [
+        "At a T-intersection without any signals or signs, yield the right of way to vehicles on the through road."
+      ],
+      "156": [
+        "Involving authorized emergency vehicles: A civil infraction, unless you injure or kill emergency personnel, then the charge is a felony."
+      ],
+      "157": [
+        "If you are still in the intersection when the light turns red, complete your turn as quickly and safely as possible."
+      ],
+      "158": [
+        "immediately drive to a position parallel to and as close as possible to the right-hand edge or curb of the roadway, clear of an intersection, and stop"
+      ],
+      "159": [
+        "Funeral processions have the right of way over all other vehicles, except for fire trucks, ambulances and police vehicles."
+      ],
+      "160": [
+        "You must return to your lane before you get within 200 feet of any oncoming vehicles."
+      ],
+      "161": [
+        "do not cut back into the right-hand lane until you can see the entire vehicle you are passing in your rearview mirror."
+      ],
+      "162": [
+        "You are within 100 feet of an intersection or railroad crossing."
+      ],
+      "163": [
+        "When there is enough room on a two-lane road and the vehicle you want to pass is turning left.",
+        "don’t drive on the shoulder or off the road to do so."
+      ],
+      "164": [
+        "Weather conditions make it necessary to drive in the left lane."
+      ],
+      "165": [
+        "Keep your front wheels pointed straight ahead until you start your turn."
+      ],
+      "166": [
+        "To a pedestrian in the crosswalk, even if your traffic light is green."
+      ],
+      "167": [
+        "It is a civil infraction to cut through a funeral procession."
+      ],
+      "168": [
+        "do not increase your speed or race the driver who is passing you. Allow the other driver to complete the passing maneuver safely."
+      ],
+      "169": [
+        "complete your turn by entering the lane that corresponds to your turn lane."
+      ],
+      "170": [
+        "It is illegal to drive across median strips and through barriers."
+      ],
+      "171": [
+        "A vehicle has stopped at a crosswalk or intersection to allow a pedestrian to cross."
+      ],
+      "172": [
+        "You also must proceed with caution and be ready to yield whenever you are approaching or passing a stopped waste collection, utility service or road maintenance vehicle with its lights flashing."
+      ],
+      "173": [
+        "Vehicles in the roundabout have the right of way."
+      ],
+      "174": [
+        "If an emergency vehicle is heard or seen approaching, do not stop. Leave the roundabout at the nearest exit, pull over to the right and stop, allowing the emergency vehicle to pass."
+      ],
+      "175": [
+        "If you miss your exit, drive around the roundabout to your exit again."
+      ],
+      "176": [
+        "If a train is coming, all vehicles must stop no more than 50 feet or less than 15 feet from the tracks."
+      ],
+      "177": [
+        "school buses, vehicles carrying passengers for hire, gasoline trucks and other vehicles carrying hazardous materials must stop and make sure no train is coming"
+      ],
+      "178": [
+        "never cross the tracks unless there is enough space for your vehicle to completely clear the far side of the tracks by at least 6 feet."
+      ],
+      "179": [
+        "If the crossing gates are activated, or a train is clearly approaching, IMMEDIATELY get everyone out of the vehicle and as far away from the tracks as possible. Call 911."
+      ],
+      "180": [
+        "An Emergency Notification System (ENS) sign, posted at or near a highway-rail grade crossing, lists a telephone number along with the crossing’s US DOT number"
+      ],
+      "181": [
+        "Use your right hand to open the door, so you will automatically look over your left shoulder for oncoming cyclists and pedestrians."
+      ],
+      "182": [
+        "Turn wheels toward the curb when parking downhill."
+      ],
+      "183": [
+        "Do not park more than 6-12 inches from the curb."
+      ],
+      "184": [
+        "Vehicles entering from each leg of the intersection must yield to traffic approaching from the left."
+      ],
+      "185": [
+        "Trains overhang the tracks by at least three feet on each side and may have cargo that extends even farther."
+      ],
+      "186": [
+        "When returning to your vehicle, face oncoming traffic as you approach the driver’s side."
+      ],
+      "187": [
+        "Avoid changing gears while crossing railroad tracks."
+      ],
+      "188": [
+        "Within 15 feet of a fire hydrant."
+      ],
+      "189": [
+        "Pentagon SCHOOL"
+      ],
+      "190": [
+        "Fluorescent pink: Incident, emergency, or unplanned event"
+      ],
+      "191": [
+        "This provides room for the van’s wheelchair lift and ramp, allowing the person with a disability to easily exit and enter the vehicle.",
+        "it is extremely important not to park on the blue-striped area of the van-accessible parking space."
+      ],
+      "192": [
+        "Within 50 feet of the nearest rail of a railroad crossing."
+      ],
+      "193": [
+        "The orange triangle is mounted on the back of vehicles that do not move faster than 25 mph, such as Amish buggies, farm combines"
+      ],
+      "194": [
+        "Pennant WARNING/NO PASSING"
+      ],
+      "195": [
+        "Within 30 feet of a stop sign, traffic light or flashing beacon, including a warning sign."
+      ],
+      "196": [
+        "If the vehicle is being leased, the person leasing it is responsible."
+      ],
+      "197": [
+        "Never drive across the median or emergency crossover of a freeway. To change directions, drive to the next exit, get off and re-enter the freeway in the other direction."
+      ],
+      "198": [
+        "Pass With Care. This sign follows the Do Not Pass sign. It is on the right side of the road and marks the end of a no-passing zone."
+      ],
+      "199": [
+        "Within 20 feet of a fire station driveway on the same side of the street"
+      ],
+      "200": [
+        "Brown: Recreation/cultural interest",
+        "Brown-colored signs Inform you about the location of a cultural or recreational place of interest."
+      ],
+      "201": [
+        "You must have a disability license plate or parking placard."
+      ],
+      "202": [
+        "Located on the left side of the roadway, this yellow pennant cautions you to refrain from passing"
+      ],
+      "203": [
+        "All vehicles, especially large trucks, should take precautions to make sure their brakes are working properly and gear down if necessary."
+      ],
+      "204": [
+        "Often called fog lines, these lines help you stay on the road at night or in bad weather."
+      ],
+      "205": [
+        "driving in the same direction is permitted on both sides of the line but crossing the line is prohibited."
+      ],
+      "206": [
+        "If there are no stop lines or crosswalks, stop the vehicle before entering the intersection."
+      ],
+      "207": [
+        "A green bicycle lane indicates a potential point of conflict between cars and bicycles, usually intersections and driveways."
+      ],
+      "208": [
+        "It is illegal to use these lanes for driving, passing, making right turns, parking, or as a pull-over to wait for someone or make a delivery."
+      ],
+      "209": [
+        "Yellow lines separate traffic lanes moving in opposite directions."
+      ],
+      "210": [
+        "situations in which crossing a double yellow line is permitted, such as when turning into a driveway, onto a crossroad, or accessing a parking spot."
+      ],
+      "211": [
+        "Each outside edge of the left turn only center lane is marked with a solid yellow line with broken yellow lines on the inside edges."
+      ],
+      "212": [
+        "Using this lane to pass other vehicles or as a merge lane is illegal and dangerous."
+      ],
+      "213": [
+        "to turn left, a person must drive straight through the intersection, or turn right, then make a U-turn at a median crossover."
+      ],
+      "214": [
+        "that extra room is actually there to accommodate larger vehicles, like tractor trailers and recreational vehicles, that need a wider turning radius."
+      ],
+      "215": [
+        "An unmarked median crossover should always be treated as a single-lane crossover."
+      ],
+      "216": [
+        "White triangles painted across a traffic lane indicate you should be ready to stop and yield to pedestrians."
+      ],
+      "217": [
+        "Dashed white lines painted across a traffic lane in a roundabout indicate the edge of the roundabout’s circular lane."
+      ],
+      "218": [
+        "It is illegal to drive across public or private property, such as a store parking lot, to avoid a traffic-control device."
+      ],
+      "219": [
+        "You are required to stop on a yellow light. If you cannot stop safely, do not speed up but drive cautiously through the intersection."
+      ],
+      "220": [
+        "come to a complete stop and yield to vehicles already at the intersection. Yield to vehicles on your right if you both reach the intersection at the same time."
+      ],
+      "221": [
+        "Yield to the vehicle on your right if you both reach the intersection at the same time.",
+        "come to a complete stop and yield to vehicles already at the intersection."
+      ],
+      "222": [
+        "When the green arrow is lit, turning drivers have a “protected turn,” meaning all oncoming or conflicting traffic is stopped."
+      ],
+      "223": [
+        "A flashing yellow arrow allows you to turn left when the oncoming traffic, which has a green light, is clear."
+      ],
+      "224": [
+        "A flashing red light means come to a full stop. Proceed when the road is clear."
+      ],
+      "225": [
+        "A commercial vehicle traveling at the same speed takes about 400 feet to stop."
+      ],
+      "226": [
+        "“No zones” are spaces in which motorists should not linger because they are not readily visible to the commercial driver."
+      ],
+      "227": [
+        "For visibility and safety when traveling at night, use your low beams when following a truck or bus."
+      ],
+      "228": [
+        "They may swing wide to the left to safely negotiate a right turn."
+      ],
+      "229": [
+        "Any pedestrians in the crosswalk at that time should complete their crossing."
+      ],
+      "230": [
+        "most trailers are eight-and-a-half feet wide and can hide a car from view, preventing the truck driver from seeing your vehicle."
+      ],
+      "231": [
+        "be sure you can see the entire cab of the truck in your rearview mirror before signaling and pulling back into the lane."
+      ],
+      "232": [
+        "Slow down if a truck or bus is passing you, especially during bad weather.",
+        "Start your wipers before the vehicle passes."
+      ],
+      "233": [
+        "“Four-wheelers” and golf carts are not considered slow-moving vehicles."
+      ],
+      "234": [
+        "Slow-moving vehicles are those that cannot travel faster than 25 mph."
+      ],
+      "235": [
+        "maintain a safe distance of at least 20 feet between your vehicle and the rider or buggy so as not to spook the horse."
+      ],
+      "236": [
+        "Never attempt to pass another vehicle that has stopped for a pedestrian."
+      ],
+      "237": [
+        "pedestrians should face oncoming traffic if they choose to walk along the road’s edge."
+      ],
+      "238": [
+        "these noises are distracting and cover important audible cues used by people with visual impairments."
+      ],
+      "239": [
+        "Leave at least 3 or 4 seconds of travel space between your vehicle and a motorcyclist, scooter operator or bicyclist."
+      ],
+      "240": [
+        "It is illegal for motorists to drive beside motorcyclists or pass them in the same lane."
+      ],
+      "241": [
+        "Motorcyclists operating vehicles with engine sizes of 125cc or greater are legally allowed to drive on freeways and limited-access highways."
+      ],
+      "242": [
+        "Motorcyclists frequently use engine braking and downshifting, techniques used with manual transmissions that slow down the vehicle without activating the brake lights."
+      ],
+      "243": [
+        "Left turns present a higher risk for crashes because it is easy for you to misjudge their speed and distance because of their smaller profile."
+      ],
+      "244": [
+        "Motorcyclists frequently use engine braking and downshifting... To be safe, keep extra space between you and a motorcyclist, especially on city streets."
+      ],
+      "245": [
+        "Cannot propel itself at a speed greater than 30 mph on a level surface",
+        "engine that does not exceed 100 cc piston displacement",
+        "power drive system that does not require the operator to shift gears."
+      ],
+      "246": [
+        "Michigan law requires that you leave at least 3 feet of space between your vehicle and a bicyclist when passing."
+      ],
+      "247": [
+        "Bicyclists are not required to use a bicycle lane and may leave a bicycle lane to turn left or to avoid hazards."
+      ],
+      "248": [
+        "An autocycle is a motorcycle that has safety belts, a roll bar or roll hoops, a steering wheel",
+        "It has three wheels and is not equipped with a straddle seat."
+      ],
+      "249": [
+        "the National Highway Traffic Safety Administration has estimated 66 percent of all traffic fatalities are caused by aggressive driving behaviors."
+      ],
+      "250": [
+        "If you are using the left-hand lane to pass slower traffic and someone tailgates you, move back into the right-hand lane when it is safe to do so"
+      ],
+      "251": [
+        "Edge forward slowly until you can see past whatever is blocking your view."
+      ],
+      "252": [
+        "Pedestrians, small motorcycles of 124 cc or less, mopeds, bicycles, all-terrain vehicles and slow-moving vehicles are not allowed on freeways."
+      ],
+      "253": [
+        "If confronted by an aggressive driver, attempt to get out of the way, avoid eye contact and ignore gestures or verbal attacks."
+      ],
+      "254": [
+        "You may pass a bicyclist in a no-passing zone as long as it is safe to do so."
+      ],
+      "255": [
+        "A motorcyclist’s single headlight and smaller profile in traffic can distort a motorist’s perception of the motorcyclist’s true speed and distance"
+      ],
+      "256": [
+        "driving on “autopilot” may actually leave you vulnerable on the road because you are not really attuned to your driving environment and its potential risks."
+      ],
+      "257": [
+        "Look for bicyclists riding from behind on the road shoulder or in a bike lane before turning right at an intersection, into a driveway or pulling off the road."
+      ],
+      "258": [
+        "In 1930, Fisher Body introduced the slanted windshield to reduce glare from the lights of oncoming traffic at night."
+      ],
+      "259": [
+        "Pedestrians, small motorcycles of 124 cc or less, mopeds, bicycles, all-terrain vehicles and slow-moving vehicles are not allowed on freeways."
+      ],
+      "260": [
+        "the vehicle shall yield right of way to a vehicle so close as to constitute an immediate hazard on the highway about to be entered"
+      ],
+      "261": [
+        "vehicles must have two or more occupants to use the HOV lane."
+      ],
+      "262": [
+        "Motorcycles may use them at any time."
+      ],
+      "263": [
+        "If you miss your exit ramp, never back up, turn around or use a median crossover. Instead, drive to the next exit."
+      ],
+      "264": [
+        "If you feel tired, stop and take a 10-minute break at least every two hours."
+      ],
+      "265": [
+        "Acceleration does not cancel the cruise control setting – depressing the brake pedal will."
+      ],
+      "266": [
+        "Using cruise control... when roads are slippery from rain, snow or ice is not recommended."
+      ],
+      "267": [
+        "Look for an escape route on the right edge of the road.",
+        "Try not to go to the left since the other driver may see you and return to his or her proper lane."
+      ],
+      "268": [
+        "When it begins to rain, the roads are most slippery during the first half hour. This is because oil dropped from passing vehicles has not been washed away."
+      ],
+      "269": [
+        "Slow down and gently push on the brake pedal until the brakes work properly again."
+      ],
+      "270": [
+        "Drive slowly in fog. Turn on the low-beam headlights and be prepared to stop quickly."
+      ],
+      "271": [
+        "If your vehicle begins skidding: Take your foot off the accelerator."
+      ],
+      "272": [
+        "Turn the front wheels only enough to keep them pointed in the direction you want to go and no farther."
+      ],
+      "273": [
+        "In cold weather, bridges and underpasses freeze before the road does."
+      ],
+      "274": [
+        "With anti-lock brakes, apply the brake with hard, firm pressure from the start and maintain this pressure until you have stopped."
+      ],
+      "275": [
+        "In a vehicle without anti-lock brakes, apply the brakes just hard enough to not lock the wheels. If the wheels do lock, release pressure and apply the brakes again."
+      ],
+      "276": [
+        "A 3- to 4-second following distance is required."
+      ],
+      "277": [
+        "Look down the road 20-30 seconds. This rule means always look ahead of the vehicle to spot potential hazards and avoid last-second reactions."
+      ],
+      "278": [
+        "Headlights must be turned on one half-hour after sunset until one half-hour before sunrise"
+      ],
+      "279": [
+        "It is illegal to use or even flash high-beam headlights within 500 feet of an oncoming vehicle."
+      ],
+      "280": [
+        "If oncoming drivers do not dim their headlights, keep your eyes on the right edge of the road ahead. Do not look directly into oncoming headlights."
+      ],
+      "281": [
+        "Generally, the safest thing to do if you are involved in a roadside emergency is to stay in your car, with your seat belt buckled, until help arrives."
+      ],
+      "282": [
+        "Vehicles involved in crashes that do not result in serious injury or death shall be moved from the main roadway by the driver or a passenger"
+      ],
+      "283": [
+        "Notify the police if there are injuries or property damage exceeding $1,000."
+      ],
+      "284": [
+        "Do not veer for deer; stay in your lane.",
+        "Brake firmly.",
+        "Hold onto the steering wheel with both hands."
+      ],
+      "285": [
+        "Do not rely on gimmicks. Deer whistles, flashing your high-beam headlights or honking your horn will not deter deer."
+      ],
+      "286": [
+        "Never turn the ignition to the “lock” position while your vehicle is in motion or the steering will lock.",
+        "Once the steering locks, if you try to turn the steering wheel, you will lose control of the vehicle."
+      ],
+      "287": [
+        "Do not get out to fix a flat tire. Try to drive slowly to a service station or store with a well-lighted parking lot and telephone for service."
+      ],
+      "288": [
+        "Pull as far off the traveled portion of the roadway as possible. Activate your four-way emergency lights and stay inside your vehicle with your seat belt securely fastened."
+      ],
+      "289": [
+        "If a carjacker wants the vehicle, give it up without a fight. A car can be replaced but personal safety is priceless."
+      ],
+      "290": [
+        "Keep both hands empty and in plain sight on the steering wheel."
+      ],
+      "291": [
+        "Take your license, registration and insurance card out only when the officer asks for them.",
+        "Let the officer know where these items are located before you retrieve them."
+      ],
+      "292": [
+        "If you feel the stop or the ticket is inappropriate, discuss the matter with the court, not the officer.",
+        "Do not argue about the reason for the stop or if you are issued a ticket."
+      ],
+      "293": [
+        "Always obey a law enforcement officer’s orders. An officer’s directions take priority over other traffic control devices."
+      ],
+      "294": [
+        "Use of a mobile phone while driving to report emergencies is allowed under Michigan law.",
+        "If you are in trouble, call for assistance on your mobile phone."
+      ],
+      "295": [
+        "1. City driving is more dangerous than expressway driving because of the: ... c. Cross traffic and pedestrians."
+      ],
+      "296": [
+        "A flashing red light means come to a full stop. Proceed when the road is clear.",
+        "2. You come to an intersection with a flashing red light. You must: ... d. Stop at the intersection, then proceed as traffic allows."
+      ],
+      "297": [
+        "3. You are driving in the right lane on an expressway. You should probably move into the left lane when: ... d. Traffic is light and cars are merging onto the expressway from the right."
+      ],
+      "298": [
+        "If oncoming drivers do not dim their headlights, keep your eyes on the right edge of the road ahead.",
+        "6. To reduce the effects of headlight glare at night, you should look: ... d. To the right edge of the road."
+      ],
+      "299": [
+        "8. When changing lanes, you can check your blind spot by: ... d. Turning your head and looking over your shoulder."
+      ],
+      "300": [
+        "9. When approaching a work zone with a “Where Workers Present 45” sign, drivers should: ... b. Drive at a safe speed for conditions... and slow down to 45 mph or lower where workers are present."
+      ],
+      "301": [
+        "Slow down and wait until there is no traffic approaching, then pass the bicyclist leaving him or her sufficient space."
+      ],
+      "302": [
+        "Avoid looking at any one thing for more than a few seconds."
+      ],
+      "303": [
+        "Replace a vehicle registration or title"
+      ],
+      "304": [
+        "The written driver’s license knowledge test is also available online (and is taken at home using a computer or laptop) for a $6.50 convenience fee."
+      ],
+      "305": [
+        "Original driver’s license tests are available in many foreign languages in electronic, paper, or audio formats."
+      ],
+      "306": [
+        "Hard-of-hearing and deaf customers should contact the Michigan Relay Center at 711."
+      ],
+      "307": [
+        "Pre-apply for an original driver’s license"
+      ],
+      "308": [
+        "call the Michigan Department of State Information Center at 888-SOS-MICH (767-6424)."
+      ],
+      "309": [
+        "Update your emergency contact information"
+      ],
+      "310": [
+        "The Michigan Voter Information Center is at Michigan.gov/Vote."
+      ],
+      "311": [
+        "Join the Michigan Organ Donor Registry",
+        "Replace your organ donor heart sticker"
+      ],
+      "312": [
+        "Pay licensing reinstatement fees"
+      ],
+      "313": [
+        "Michigan’s Guide for Aging Drivers and Their Families (SOS–194)"
+      ],
+      "314": [
+        "Renew your car, motorcycle or truck (And don’t forget your Recreation Passport)"
+      ],
+      "315": [
+        "Add a motorcycle endorsement (if eligible)"
+      ],
+      "316": [
+        "Request your driving record"
+      ]
+    },
     "verdict": "PASS",
     "grade": "A"
   },
   "recall": {
     "method": "Gemini-3.1-pro extracts 20-30 must-know topics; Gemini-3-flash judges coverage per topic",
-    "topics_total": 26,
-    "topics_covered": 26,
+    "topics_total": 30,
+    "topics_covered": 30,
     "coverage_pct": 100.0,
     "uncovered_topics": [],
     "verdict": "PASS",
@@ -63,6 +1064,22 @@
     "sign_ratio_pct": 9.7,
     "verdict": "PASS",
     "grade": "A"
+  },
+  "translation": {
+    "es": {
+      "method": "Gemini-3-flash bilingual judge, batched per 10 pairs, 100% coverage",
+      "judged_count": 316,
+      "avg_fidelity": 9.99,
+      "pct_at_10": 99.7,
+      "pct_above_9": 99.7,
+      "pct_above_7": 99.7,
+      "pct_zero": 0.0,
+      "drift_flagged_ids": [
+        104
+      ],
+      "verdict": "PASS",
+      "grade": "A"
+    }
   },
   "overall_verdict": "PASS",
   "overall_grade": "A",
