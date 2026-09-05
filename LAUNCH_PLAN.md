@@ -125,12 +125,14 @@ _Status 2026-09-05: icon, legal pages, and display name done (PR after #65). Bun
 - Add a `src/test` unit suite for `QuizViewModel` and `LocalStore`.
 
 **Track D: Web**
-- Split the bundle at build time: `bundle.py` emits `states/index.json` (metadata only, a few KB) plus `states/<code>/<lang>.json` per state and language. The frontend loads the index, then the selected state on demand. This is the single biggest user-facing fix and it also unblocks a PWA that can precache the chosen state.
-- Add a web manifest and a service worker (Vite PWA plugin) that precaches the shell and caches state files on first use.
-- Add `<meta name="description">`, Open Graph, `robots.txt`, `404.html`, remove `user-scalable=no`, add a React error boundary with a reload button.
-- Restrict the Pages artifact to built output only (build into `docs/site/` or move internal docs out of `docs/`).
-- Add Playwright smoke tests (load, pick state, answer 3 questions, see results, switch language) and run them in CI on PRs; this is what issue #52 asks for.
-- Decide the fate of `web/` and the Dockerfile: recommended to delete both and note the Pages deployment as canonical, or keep the Dockerfile but serve `frontend/dist`.
+
+_Status 2026-09-05: all engineering items done (PR after #66). Only the `web/` decision remains._
+- ~~Split the bundle at build time.~~ Done: `bundle.py` writes `data/index.json` (42 KB) plus `data/states/<code>/<lang>.json` into `frontend/public/`; `src/data.ts` loads the index at startup and a bank only when a quiz starts (prefetched on state selection, cached in memory). The 27 MB download is gone.
+- ~~Web manifest + service worker.~~ Done with a hand-written `public/sw.js` (no build plugin): shell precached, hashed assets cache-first, banks/signs/pages stale-while-revalidate, navigations network-first with offline fallback. Registered only in production builds.
+- ~~SEO meta, `robots.txt`, `404.html`, pinch-zoom, error boundary.~~ Done (meta in #66; `ErrorBoundary` wraps the app in `main.tsx`).
+- ~~Restrict the Pages artifact.~~ Done: Vite builds to `site/` (gitignored) and `deploy-pages.yml` uploads only that; `docs/` is documentation again. `i18n.json` now lives in `frontend/public/` (the committed source), and `docs/index.html` is gone.
+- ~~Playwright smoke tests in CI.~~ Done: `frontend/tests/smoke.spec.ts` (picker, 10-question quiz to results and stats, persistence across reload, Spanish bank, legal pages, data index) runs against `vite preview` of the production build in `frontend-e2e.yml` on every PR touching `frontend/`, `data/`, or the bundle tooling. Locally: `PW_CHROMIUM_PATH=<chromium> npm run test:e2e`.
+- Decide the fate of `web/` and the Dockerfile: recommended to delete both and note the Pages deployment as canonical, or keep the Dockerfile but serve `site/`. Owner decision (section 4, item 6); untouched so far.
 
 ### Phase 2 — Content and compliance (weeks 2–3, parallel with Phase 1)
 
@@ -193,10 +195,10 @@ Exit criterion: both apps in review with complete metadata; web launched.
 
 | Risk | Likelihood | Mitigation |
 |---|---|---|
-| #62/#63 stack is too large to review and rots further | High | Time-box the review to one week; rely on the green CI, the 100 pytest cases, and the fleet-wide gate reports rather than line-by-line review; merge, then fix forward. |
+| ~~#62/#63 stack is too large to review and rots further~~ | Resolved | Merged 2026-09-05. |
 | Apple rejects for "misleading" use of state agency names or DMV-like branding | Medium | Keep the unofficial disclaimer on the state picker and About screen, avoid state seals, mention it in review notes. |
 | Android SDK 35 upgrade breaks Compose code | Medium | Do the AGP/Kotlin/Compose bump in an isolated PR; CI builds and UI tests will catch it. |
-| 27 MB web bundle causes abandonment on mobile | High if unfixed | Phase 1 track D per-state split; measure before and after. |
+| ~~27 MB web bundle causes abandonment on mobile~~ | Resolved | Per-state split shipped; the startup payload is the 42 KB index plus the app shell. |
 | A manual changes between verification and launch | Low per state, high fleet-wide | Fixed cron plus quarterly re-verification; About-this-test already shows the edition and verified date. |
 | Play 14-day closed-testing requirement delays Android by two weeks | Medium | Start the closed test the day the first signed AAB exists, in Phase 1, not Phase 3. |
 | Spanish copy or UI strings read as machine-translated | Medium | Native proofread of PR #57 and of `docs/i18n.json` before submission. |

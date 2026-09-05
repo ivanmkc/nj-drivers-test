@@ -22,7 +22,8 @@ export interface StateVerification {
   translations?: Record<string, string>;
 }
 
-export interface StateConfig {
+/** One entry of data/index.json: state metadata plus question counts per language. */
+export interface StateIndexEntry {
   code: string;
   name: string;
   agency: string;
@@ -32,11 +33,11 @@ export interface StateConfig {
   categories?: Record<string, number>;
   verification?: StateVerification;
   official_test_languages?: string[] | null;
-  languages: Record<string, Question[]>;
+  languages: Record<string, number>;
 }
 
-export interface Bundle {
-  states: StateConfig[];
+export interface DataIndex {
+  states: StateIndexEntry[];
 }
 
 export interface StateSummary {

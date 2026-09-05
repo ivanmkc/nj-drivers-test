@@ -47,15 +47,11 @@ jobs:
         working-directory: frontend
         run: npm run build
 
-      - name: Copy data assets to docs
-        run: |
-          cp shared/questions_bundle.json docs/
-          cp -r data/signs docs/
-          cp docs/i18n.json docs/i18n.json 2>/dev/null || true
-
+      # bundle.py already placed data/ + signs/ in frontend/public, and Vite
+      # copied them (plus i18n.json, icons, manifest, legal pages) into site/.
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          path: site
 
   deploy:
     needs: build

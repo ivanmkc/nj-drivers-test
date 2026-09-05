@@ -116,7 +116,7 @@ Valid categories: `license_system`, `driver_testing`, `driver_responsibility`, `
 
 ## Gotchas
 
-- `shared/`, `ios/.../Resources/`, `android/.../assets/`, `frontend/public/questions_bundle.json` are all gitignored build artifacts. If they're missing, run `bundle.py`.
+- `shared/`, `ios/.../Resources/`, `android/.../assets/`, `frontend/public/data/`, `frontend/public/signs/`, and `site/` are all gitignored build artifacts. If they're missing, run `bundle.py` (the web app loads `data/index.json` plus one `data/states/<code>/<lang>.json` per selected state, never the full bundle).
 - iOS and Android apps have identical architecture (model/repository/viewmodel/view/theme). Changes to one platform usually need mirroring on the other.
 - Sign images live in `data/signs/` (shared MUTCD signs) and are copied to each platform by `bundle.py`.
 - The web Flask app (`web/app.py`) loads the bundle into memory once at import time. If the bundle file doesn't exist, the import crashes.
