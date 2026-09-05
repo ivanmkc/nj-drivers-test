@@ -4,10 +4,10 @@ _Repo review date: 2026-09-05. Reviewed `main` (6f03296), the open PR stack #62 
 
 ## 1. Verdict
 
-**The data layer is launch-quality; no platform is store-submittable yet, and `main` is three months behind the real trunk.**
+**The data layer is launch-quality; no platform is store-submittable yet.** (At review time `main` was three months behind the real trunk; that was resolved the same day, see Phase 0.)
 
 - 50 of 51 US jurisdictions have question banks (18,125 questions, EN + ES everywhere, legacy JA in 17 states). `audit_questions.py` reports 0 issues. On the #63 branch every state's verification report is grade A / PASS under the v2 gates, including the CA, WA, IL, MA and VA banks that were failing on `main`.
-- Almost all app-quality work since May lives in draft PR **#63** (`fix/audit-findings`, 38 commits, 244 files, CI fully green), stacked on **#62**. `main` still has the category-stats bug, synchronous 27 MB bundle decode on the main thread, no dark mode on web, no back handling on Android, and no "why trust this" UI. Nothing in the plan below should be built on `main`; land the stack first.
+- Almost all app-quality work since May lived in draft PR **#63** (`fix/audit-findings`, 38 commits, 244 files, CI fully green), stacked on **#62**. Before the merge, `main` still had the category-stats bug, synchronous 27 MB bundle decode on the main thread, no dark mode on web, no back handling on Android, and no "why trust this" UI. Both PRs are now on `main`; everything below builds on that.
 - Neither mobile app can be uploaded to a store today: no app icon on either platform, no iOS privacy manifest, no signing team, placeholder bundle ID, no Android release signing or AAB, Android targets SDK 34 (Play requires 35), and there is no privacy policy or support URL anywhere.
 - The web app is live at `ivanmkc.github.io/nj-drivers-test/` but eagerly fetches and parses the 27 MB uncompressed bundle on every load, has no PWA/offline support, no SEO metadata, no error boundary, and no attribution or privacy page.
 
@@ -30,9 +30,8 @@ Recommended shape: **web soft-launch first** (it is already public; fix the load
 
 ### 2.2 Branch and PR backlog
 
-- 45 remote branches, 21 open PRs. Only three carry live work: **#62** (verification rigor, base of the stack), **#63** (everything else), **#57** (app-store copy and imagery, base `main`, clean).
-- **#61** (URL liveness historization) is a sibling of #62 and still relevant.
-- PRs #34–#48 ("Quality report: <state>", CA/VA/WA re-extracts) are superseded by #63, which regenerated or fixed those banks under stricter gates. **#49** (CA regeneration) is likewise superseded.
+- At review time: 45 remote branches, 38 open PRs. Only four carried live work: **#62** (verification rigor, base of the stack), **#63** (everything else), **#61** (URL liveness historization), **#57** (app-store copy and imagery). All four are now merged.
+- PRs #16–#49 ("Quality report: <state>", CA/VA/WA re-extracts) were superseded by #63, which regenerated or fixed those banks under stricter gates. All 34 are now closed with a pointer to #63; 31 would have merged cleanly (one markdown report each), 3 conflicted.
 - Branch `data/dmv-test-languages` holds the 51-jurisdiction test-language matrix referenced by issue #58 and has never been merged. #63 ships a narrower, manual-evidence-only version (23 states) under `official_test_languages` in each `config.json`.
 
 ### 2.3 Store-submission gaps (present on both `main` and #63)
@@ -82,10 +81,12 @@ Recommended shape: **web soft-launch first** (it is already public; fix the load
 
 Exit criterion: `main` equals the #63 head, CI green on `main`, Pages redeployed from it, backlog pruned.
 
-1. Review and merge **#62**, then **#63** (retarget to `main` after #62 lands). These are large, but they are the only path to a coherent codebase; do not cherry-pick.
-2. Merge **#61** (URL liveness history) and **#57** (app-store copy) once rebased on the new `main`.
-3. Close PRs #34–#49 as superseded with a one-line comment pointing to #63. Delete the `quality-report-*`, `worktree-agent-*`, `verify-ct-quality`, `quality-tn`, and `add-*-linting` branches.
-4. Fix `verify-manuals.yml`: create the `infra`, `catalog`, `monthly` labels or drop the `--label` flag. Re-run it manually and triage the 10 stale URLs it reports.
+_Status 2026-09-05: items 1–3 done. #62, #63, #57 and #61 are merged to `main` (head `1b9edaa`), all workflows green, Pages redeployed. PRs #16–#49 closed as superseded with a comment pointing to #63. Stale branches are not yet deleted._
+
+1. ~~Review and merge **#62**, then **#63** (retarget to `main` after #62 lands).~~ Done.
+2. ~~Merge **#61** (URL liveness history) and **#57** (app-store copy) once rebased on the new `main`.~~ Done; #61 validated locally first (ruff, pyright, 115 pytest cases green on the merged tree).
+3. ~~Close PRs #16–#49 as superseded with a one-line comment pointing to #63.~~ Done. Still to do: delete the `quality-report-*`, `worktree-agent-*`, `verify-ct-quality`, `quality-tn`, `docs/polish-ui-mockups`, and `add-*-linting` branches (keep `data/dmv-test-languages` until Phase 2 merges it).
+4. Fix `verify-manuals.yml`: create the `infra`, `catalog`, `monthly` labels or drop the `--label` flag. Re-run it manually and triage the 10 stale URLs it reports. Note #61 added a second weekly `source-liveness.yml` cron that creates its own `stale-source` label; consider folding the monthly job into it.
 5. Update `README.md` numbers (bundle is 5.4 MB gz, not 1.3 MB; 51 jurisdictions) and remove the stale "Flask backend required" comment in `DriversTestUITests`.
 
 ### Phase 1 — Store-readiness engineering (weeks 1–3, parallel tracks)
