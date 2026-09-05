@@ -465,3 +465,264 @@ def test_save_catalog_preserves_sentinel(tmp_path: Any) -> None:
     raw = json.loads(catalog_file.read_text())
     assert raw[0] == sentinel
     assert raw[1]["last_verified"] == "2026-04-29"
+
+
+# ---- liveness log: result_to_log_entry + append_liveness_log --------------
+
+
+def _ok_result(code: str = "vt") -> vm.VerifyResult:
+    return vm.VerifyResult(
+        code=code,
+        url=f"https://dmv.{code}.gov/manual.pdf",
+        http=200,
+        content_type="application/pdf",
+        content_length=2_000_000,
+        expected_pdf=True,
+        host_official=True,
+    )
+
+
+def _stale_result(code: str = "ga") -> vm.VerifyResult:
+    return vm.VerifyResult(
+        code=code,
+        url=f"https://dmv.{code}.gov/dead.pdf",
+        http=404,
+        content_type="text/html",
+        content_length=512,
+        expected_pdf=True,
+        host_official=True,
+    )
+
+
+def _recovered_result(code: str = "sd") -> vm.VerifyResult:
+    return vm.VerifyResult(
+        code=code,
+        url=f"https://dps.{code}.gov/files/m.pdf",
+        http=200,
+        content_type="text/html",
+        content_length=2000,
+        expected_pdf=True,
+        host_official=True,
+        recovery_url="https://web.archive.org/web/2024/https://dps.sd.gov/files/m.pdf",
+        recovery_http=200,
+        recovery_content_type="application/pdf",
+        recovery_content_length=2_300_000,
+    )
+
+
+def test_result_to_log_entry_ok_uses_canonical_metadata() -> None:
+    r = _ok_result()
+    ts = _dt.datetime(2026, 5, 4, 12, 0, 0, tzinfo=_dt.timezone.utc)
+    entry = vm.result_to_log_entry(r, timestamp=ts)
+    assert entry["code"] == "vt"
+    assert entry["url"] == r.url
+    assert entry["verdict"] == "ok"
+    assert entry["http_status"] == 200
+    assert entry["content_type"] == "application/pdf"
+    assert entry["content_length"] == 2_000_000
+    assert entry["timestamp"] == "2026-05-04T12:00:00Z"
+    # sha256 is optional and absent unless provided.
+    assert "sha256" not in entry
+
+
+def test_result_to_log_entry_recovered_uses_recovery_metadata() -> None:
+    r = _recovered_result()
+    ts = _dt.datetime(2026, 5, 4, 12, 0, 0, tzinfo=_dt.timezone.utc)
+    entry = vm.result_to_log_entry(r, timestamp=ts)
+    assert entry["verdict"] == "recovered"
+    assert entry["url"] == r.recovery_url
+    assert entry["http_status"] == 200
+    assert entry["content_type"] == "application/pdf"
+    assert entry["content_length"] == 2_300_000
+
+
+def test_result_to_log_entry_includes_sha256_when_provided() -> None:
+    entry = vm.result_to_log_entry(_ok_result(), sha256="abc123")
+    assert entry["sha256"] == "abc123"
+
+
+def test_append_liveness_log_creates_file_and_appends(tmp_path: Any) -> None:
+    log_path = str(tmp_path / "subdir" / "source_liveness.jsonl")
+    ts = _dt.datetime(2026, 5, 4, 12, 0, 0, tzinfo=_dt.timezone.utc)
+    rows = vm.append_liveness_log(
+        [_ok_result("vt"), _stale_result("ga")], log_path=log_path, timestamp=ts
+    )
+    assert rows == 2
+    with open(log_path) as f:
+        lines = [line.strip() for line in f if line.strip()]
+    assert len(lines) == 2
+    first = json.loads(lines[0])
+    assert first["code"] == "vt"
+    assert first["verdict"] == "ok"
+    assert first["timestamp"] == "2026-05-04T12:00:00Z"
+    second = json.loads(lines[1])
+    assert second["code"] == "ga"
+    assert second["verdict"] == "stale"
+
+
+def test_append_liveness_log_is_append_only(tmp_path: Any) -> None:
+    log_path = str(tmp_path / "source_liveness.jsonl")
+    vm.append_liveness_log(
+        [_ok_result("vt")],
+        log_path=log_path,
+        timestamp=_dt.datetime(2026, 5, 4, tzinfo=_dt.timezone.utc),
+    )
+    vm.append_liveness_log(
+        [_ok_result("vt"), _stale_result("ga")],
+        log_path=log_path,
+        timestamp=_dt.datetime(2026, 5, 11, tzinfo=_dt.timezone.utc),
+    )
+    with open(log_path) as f:
+        lines = [line.strip() for line in f if line.strip()]
+    # 1 row from first call + 2 rows from second call.
+    assert len(lines) == 3
+    timestamps = [json.loads(line)["timestamp"] for line in lines]
+    assert timestamps == [
+        "2026-05-04T00:00:00Z",
+        "2026-05-11T00:00:00Z",
+        "2026-05-11T00:00:00Z",
+    ]
+
+
+def test_main_log_flag_appends_jsonl(tmp_path: Any, monkeypatch: pytest.MonkeyPatch) -> None:
+    catalog_file = tmp_path / "manual_urls.json"
+    catalog_file.write_text(
+        json.dumps([{"code": "vt", "manual_url": "https://dmv.vermont.gov/m.pdf"}])
+    )
+    log_file = tmp_path / "source_liveness.jsonl"
+
+    def fake_verify_all(entries, **kwargs):
+        del entries, kwargs
+        return [_ok_result("vt")]
+
+    monkeypatch.setattr(vm, "verify_all", fake_verify_all)
+    rc = vm.main(["--catalog", str(catalog_file), "--log", "--log-path", str(log_file)])
+    assert rc == 0
+    assert log_file.exists()
+    rows = [json.loads(line) for line in log_file.read_text().splitlines() if line.strip()]
+    assert len(rows) == 1
+    assert rows[0]["code"] == "vt"
+    assert rows[0]["verdict"] == "ok"
+
+
+def test_main_without_log_flag_does_not_write(
+    tmp_path: Any, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    catalog_file = tmp_path / "manual_urls.json"
+    catalog_file.write_text(
+        json.dumps([{"code": "vt", "manual_url": "https://dmv.vermont.gov/m.pdf"}])
+    )
+    log_file = tmp_path / "source_liveness.jsonl"
+
+    def fake_verify_all(entries, **kwargs):
+        del entries, kwargs
+        return [_ok_result("vt")]
+
+    monkeypatch.setattr(vm, "verify_all", fake_verify_all)
+    rc = vm.main(["--catalog", str(catalog_file), "--log-path", str(log_file)])
+    assert rc == 0
+    assert not log_file.exists()
+
+
+# ---- load_liveness_log -----------------------------------------------------
+
+
+def test_load_liveness_log_missing_file_returns_empty(tmp_path: Any) -> None:
+    assert vm.load_liveness_log(str(tmp_path / "nope.jsonl")) == []
+
+
+def test_load_liveness_log_skips_blank_and_invalid_lines(tmp_path: Any) -> None:
+    log_path = tmp_path / "source_liveness.jsonl"
+    log_path.write_text(
+        '{"code":"vt","verdict":"ok","timestamp":"2026-05-04T00:00:00Z"}\n'
+        "\n"
+        "not-json\n"
+        '{"code":"ga","verdict":"stale","timestamp":"2026-05-04T00:00:00Z"}\n'
+    )
+    entries = vm.load_liveness_log(str(log_path))
+    assert [e["code"] for e in entries] == ["vt", "ga"]
+
+
+# ---- find_stale_states -----------------------------------------------------
+
+
+def _entry(code: str, verdict: str, days_ago: int, now: _dt.datetime) -> dict[str, Any]:
+    ts = now - _dt.timedelta(days=days_ago)
+    return {
+        "code": code,
+        "url": f"https://dmv.{code}.gov/m.pdf",
+        "verdict": verdict,
+        "http_status": 200 if verdict in ("ok", "recovered") else 404,
+        "content_type": "application/pdf",
+        "content_length": 2_000_000,
+        "timestamp": ts.replace(microsecond=0).isoformat().replace("+00:00", "Z"),
+    }
+
+
+def test_find_stale_states_flags_only_old_failures() -> None:
+    now = _dt.datetime(2026, 5, 26, 12, 0, 0, tzinfo=_dt.timezone.utc)
+    entries = [
+        # vt is fresh — last success 5 days ago.
+        _entry("vt", "ok", 60, now),
+        _entry("vt", "ok", 5, now),
+        # ga has only-stale verdicts for the last 40 days but had a success
+        # 90 days ago — that's beyond the 30-day window, so flag it.
+        _entry("ga", "ok", 90, now),
+        _entry("ga", "stale", 40, now),
+        _entry("ga", "stale", 10, now),
+        # ca is fresh — recovered counts as success.
+        _entry("ca", "recovered", 3, now),
+    ]
+    stale = vm.find_stale_states(entries, now=now)
+    assert set(stale.keys()) == {"ga"}
+    assert stale["ga"]["days_since"] == 90
+    assert stale["ga"]["last_success"] == "2026-02-25T12:00:00Z"
+
+
+def test_find_stale_states_state_with_no_success_is_stale() -> None:
+    now = _dt.datetime(2026, 5, 26, 12, 0, 0, tzinfo=_dt.timezone.utc)
+    entries = [
+        _entry("xx", "stale", 1, now),
+        _entry("xx", "stale", 7, now),
+    ]
+    stale = vm.find_stale_states(entries, now=now)
+    assert "xx" in stale
+    assert stale["xx"]["last_success"] is None
+    assert stale["xx"]["days_since"] is None
+
+
+def test_find_stale_states_states_with_no_entries_omitted() -> None:
+    now = _dt.datetime(2026, 5, 26, 12, 0, 0, tzinfo=_dt.timezone.utc)
+    stale = vm.find_stale_states([], now=now)
+    assert stale == {}
+
+
+def test_find_stale_states_recovered_counts_as_success() -> None:
+    now = _dt.datetime(2026, 5, 26, 12, 0, 0, tzinfo=_dt.timezone.utc)
+    entries = [
+        # recovered 10 days ago — well within window.
+        _entry("sd", "recovered", 10, now),
+        _entry("sd", "stale", 1, now),
+    ]
+    stale = vm.find_stale_states(entries, now=now)
+    assert "sd" not in stale
+
+
+def test_find_stale_states_respects_custom_window() -> None:
+    now = _dt.datetime(2026, 5, 26, 12, 0, 0, tzinfo=_dt.timezone.utc)
+    entries = [_entry("vt", "ok", 45, now)]
+    # 30-day window: stale.
+    assert "vt" in vm.find_stale_states(entries, now=now, stale_days=30)
+    # 60-day window: fresh.
+    assert "vt" not in vm.find_stale_states(entries, now=now, stale_days=60)
+
+
+def test_find_stale_states_skips_malformed_entries() -> None:
+    now = _dt.datetime(2026, 5, 26, 12, 0, 0, tzinfo=_dt.timezone.utc)
+    entries: list[dict[str, Any]] = [
+        {"code": "vt", "verdict": "ok"},  # missing timestamp
+        {"verdict": "ok", "timestamp": "2026-05-04T00:00:00Z"},  # missing code
+        {"code": "ga", "verdict": "ok", "timestamp": "not-a-date"},  # unparseable
+    ]
+    # All three should be silently skipped; no entries with codes means no stale.
+    assert vm.find_stale_states(entries, now=now) == {}

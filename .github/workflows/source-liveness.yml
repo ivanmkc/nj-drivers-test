@@ -1,0 +1,68 @@
+name: Source Liveness Snapshot
+
+# Weekly HEAD-check of every catalog URL. Appends one JSONL row per state to
+# data/source_liveness.jsonl so we have a timeline of when each URL works /
+# breaks. Commits the new rows back to main, and opens a stale-source issue
+# for any state whose last successful fetch is older than 30 days.
+#
+# Only runs on the weekly schedule and manual dispatch — NEVER on PRs.
+
+on:
+  schedule:
+    # Mondays at 12:00 UTC.
+    - cron: "0 12 * * MON"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  liveness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # We push the appended log back to the branch, so we need full ref
+          # info, not a shallow clone.
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+
+      - name: Install verify dependencies
+        run: pip install requests
+
+      - name: Run verify_manuals.py --log
+        run: python3 tools/verify_manuals.py --log | tee verify_output.txt
+
+      - name: Commit liveness snapshot
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet data/source_liveness.jsonl; then
+            echo "No new liveness rows — nothing to commit."
+          else
+            git add data/source_liveness.jsonl
+            git commit -m "chore: weekly source liveness snapshot"
+            git push
+          fi
+
+      - name: Ensure stale-source label exists
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create stale-source \
+            --color B45309 \
+            --description "Manual URL has been stale for 30+ days" \
+            2>/dev/null || true
+
+      - name: Open stale-source issues
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 tools/open_stale_source_issues.py

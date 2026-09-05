@@ -15,6 +15,7 @@ clients), and validates:
 Usage:
     python3 tools/verify_manuals.py                    # report only
     python3 tools/verify_manuals.py --update-timestamps  # also write last_verified
+    python3 tools/verify_manuals.py --log               # append a JSONL liveness row
 
 Always exits 0 (so a scheduled CI job stays green and merely surfaces drift via
 its tracking issue). Prints a summary block with pass/fail counts.
@@ -35,6 +36,14 @@ from urllib.parse import urlparse
 import requests
 
 CATALOG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "manual_urls.json")
+LIVENESS_LOG_PATH = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    "data",
+    "source_liveness.jsonl",
+)
+# A state is "stale" for auto-issue purposes when no successful verification
+# (verdict in ok/recovered) has been observed in this many days.
+STALE_DAYS = 30
 
 # Full Chrome desktop UA. Bare "Mozilla/5.0" or Linux-suffixed UAs get 403/404
 # from several state CDNs (confirmed 2026-04-29 on michigan.gov, mass.gov,
@@ -410,6 +419,156 @@ def save_catalog(catalog: list[dict[str, Any]], path: str = CATALOG_PATH) -> Non
         f.write("\n")
 
 
+def result_to_log_entry(
+    result: VerifyResult,
+    *,
+    timestamp: _dt.datetime | None = None,
+    sha256: str | None = None,
+) -> dict[str, Any]:
+    """Serialize a ``VerifyResult`` into a JSONL log row.
+
+    When the result was upgraded to ``recovered``, the row reports the
+    ``recovery_url`` and its observed HTTP/content metadata — because those are
+    the bytes we actually fetched. Otherwise we report the canonical probe.
+    """
+    ts = timestamp or _dt.datetime.now(_dt.timezone.utc)
+    verdict = result.verdict
+    if verdict == "recovered":
+        url = result.recovery_url or result.url
+        http_status = result.recovery_http
+        content_type = result.recovery_content_type
+        content_length = result.recovery_content_length
+    else:
+        url = result.url
+        http_status = result.http
+        content_type = result.content_type
+        content_length = result.content_length
+    entry: dict[str, Any] = {
+        "timestamp": ts.replace(microsecond=0).isoformat().replace("+00:00", "Z"),
+        "code": result.code,
+        "url": url,
+        "verdict": verdict,
+        "http_status": http_status,
+        "content_type": content_type,
+        "content_length": content_length,
+    }
+    if sha256 is not None:
+        entry["sha256"] = sha256
+    return entry
+
+
+def append_liveness_log(
+    results: Iterable[VerifyResult],
+    *,
+    log_path: str = LIVENESS_LOG_PATH,
+    timestamp: _dt.datetime | None = None,
+) -> int:
+    """Append one JSONL row per result to the liveness log. Returns row count.
+
+    Append-only — never rewrites or truncates. Creates the parent directory and
+    file if missing. All rows in a single invocation share one timestamp so
+    weekly snapshots are easy to bucket.
+    """
+    ts = timestamp or _dt.datetime.now(_dt.timezone.utc)
+    os.makedirs(os.path.dirname(log_path), exist_ok=True)
+    rows = 0
+    with open(log_path, "a", encoding="utf-8") as f:
+        for r in results:
+            entry = result_to_log_entry(r, timestamp=ts)
+            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+            rows += 1
+    return rows
+
+
+def _parse_log_timestamp(raw: str) -> _dt.datetime:
+    """Parse an ISO8601 timestamp from the log (accepts ``Z`` suffix)."""
+    if raw.endswith("Z"):
+        raw = raw[:-1] + "+00:00"
+    return _dt.datetime.fromisoformat(raw)
+
+
+def find_stale_states(
+    log_entries: Iterable[dict[str, Any]],
+    *,
+    now: _dt.datetime | None = None,
+    stale_days: int = STALE_DAYS,
+) -> dict[str, dict[str, Any]]:
+    """Return states whose most recent successful (ok/recovered) entry is too old.
+
+    A state with NO successful entry on file is also stale (the operator hasn't
+    seen the URL work yet, or it broke before logging started). A state with no
+    entries at all is omitted — we can only judge what's been observed.
+
+    Return shape: ``{code: {"last_success": iso_string | None,
+    "days_since": int | None, "last_seen": iso_string}}``. ``days_since`` is
+    ``None`` for states that have entries but no successes.
+    """
+    now = now or _dt.datetime.now(_dt.timezone.utc)
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=_dt.timezone.utc)
+    cutoff = now - _dt.timedelta(days=stale_days)
+    # Per state: last_success ts, and most recent entry ts overall.
+    last_success: dict[str, _dt.datetime] = {}
+    last_seen: dict[str, _dt.datetime] = {}
+    for entry in log_entries:
+        code = entry.get("code")
+        ts_raw = entry.get("timestamp")
+        if not code or not ts_raw:
+            continue
+        try:
+            ts = _parse_log_timestamp(ts_raw)
+        except ValueError:
+            continue
+        if ts.tzinfo is None:
+            ts = ts.replace(tzinfo=_dt.timezone.utc)
+        prev_seen = last_seen.get(code)
+        if prev_seen is None or ts > prev_seen:
+            last_seen[code] = ts
+        verdict = entry.get("verdict")
+        if verdict in ("ok", "recovered"):
+            prev_success = last_success.get(code)
+            if prev_success is None or ts > prev_success:
+                last_success[code] = ts
+    stale: dict[str, dict[str, Any]] = {}
+    for code, seen_ts in last_seen.items():
+        success_ts = last_success.get(code)
+        if success_ts is None:
+            stale[code] = {
+                "last_success": None,
+                "days_since": None,
+                "last_seen": seen_ts.replace(microsecond=0).isoformat().replace("+00:00", "Z"),
+            }
+            continue
+        if success_ts < cutoff:
+            stale[code] = {
+                "last_success": success_ts.replace(microsecond=0)
+                .isoformat()
+                .replace("+00:00", "Z"),
+                "days_since": (now - success_ts).days,
+                "last_seen": seen_ts.replace(microsecond=0).isoformat().replace("+00:00", "Z"),
+            }
+    return stale
+
+
+def load_liveness_log(path: str = LIVENESS_LOG_PATH) -> list[dict[str, Any]]:
+    """Read the JSONL liveness log. Returns ``[]`` if the file is missing or empty."""
+    if not os.path.exists(path):
+        return []
+    entries: list[dict[str, Any]] = []
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                obj = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if isinstance(obj, dict):
+                entries.append(obj)
+    return entries
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -426,6 +585,19 @@ def main(argv: list[str] | None = None) -> int:
         "--codes",
         nargs="*",
         help="Optional state codes to verify (default: all entries).",
+    )
+    parser.add_argument(
+        "--log",
+        action="store_true",
+        help=(
+            "Append a JSONL row per result to data/source_liveness.jsonl "
+            "(append-only history of URL liveness over time)."
+        ),
+    )
+    parser.add_argument(
+        "--log-path",
+        default=LIVENESS_LOG_PATH,
+        help="Override liveness log path (default: data/source_liveness.jsonl).",
     )
     args = parser.parse_args(argv)
 
@@ -473,6 +645,10 @@ def main(argv: list[str] | None = None) -> int:
         save_catalog(updated, args.catalog)
         bumped = sum(1 for r in results if r.verdict in ("ok", "recovered"))
         print(f"\nUpdated last_verified on {bumped} entries -> {args.catalog}")
+
+    if args.log:
+        appended = append_liveness_log(results, log_path=args.log_path)
+        print(f"\nAppended {appended} liveness rows -> {args.log_path}")
 
     return 0
 
