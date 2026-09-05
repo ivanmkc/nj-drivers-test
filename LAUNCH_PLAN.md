@@ -81,13 +81,19 @@ Recommended shape: **web soft-launch first** (it is already public; fix the load
 
 Exit criterion: `main` equals the #63 head, CI green on `main`, Pages redeployed from it, backlog pruned.
 
-_Status 2026-09-05: items 1–3 done. #62, #63, #57 and #61 are merged to `main` (head `1b9edaa`), all workflows green, Pages redeployed. PRs #16–#49 closed as superseded with a comment pointing to #63. Stale branches are not yet deleted._
+_Status 2026-09-05: items 1, 2, 4 and 5 done on `main` or this branch. #62, #63, #57 and #61 are merged to `main` (head `1b9edaa`), all workflows green, Pages redeployed. PRs #16–#49 closed as superseded with a comment pointing to #63. The `verify-manuals.yml` label fix, README bundle-size fix, UI-test comment fix, and the `data/dmv_test_languages.json` matrix (Phase 2 item 1) are on branch `claude/repo-review-launch-plan-o0cq6n`. Stale branches are NOT deleted: the session's push proxy refuses deletes (HTTP 403), so run the command in item 3 locally._
 
 1. ~~Review and merge **#62**, then **#63** (retarget to `main` after #62 lands).~~ Done.
 2. ~~Merge **#61** (URL liveness history) and **#57** (app-store copy) once rebased on the new `main`.~~ Done; #61 validated locally first (ruff, pyright, 115 pytest cases green on the merged tree).
-3. ~~Close PRs #16–#49 as superseded with a one-line comment pointing to #63.~~ Done. Still to do: delete the `quality-report-*`, `worktree-agent-*`, `verify-ct-quality`, `quality-tn`, `docs/polish-ui-mockups`, and `add-*-linting` branches (keep `data/dmv-test-languages` until Phase 2 merges it).
-4. Fix `verify-manuals.yml`: create the `infra`, `catalog`, `monthly` labels or drop the `--label` flag. Re-run it manually and triage the 10 stale URLs it reports. Note #61 added a second weekly `source-liveness.yml` cron that creates its own `stale-source` label; consider folding the monthly job into it.
-5. Update `README.md` numbers (bundle is 5.4 MB gz, not 1.3 MB; 51 jurisdictions) and remove the stale "Flask backend required" comment in `DriversTestUITests`.
+3. ~~Close PRs #16–#49 as superseded with a one-line comment pointing to #63.~~ Done. Still to do locally (needs a token that can delete refs): the 4 merged heads, the 17 `quality-report-*`, `quality-tn`, `verify-ct-quality`, 15 `worktree-agent-*`, and the 4 `add-*-linting` branches (their PRs #12–#15 were closed unmerged; the lint setup landed on `main` by other commits). Keep `docs/polish-ui-mockups` (issue #56 links to its openspec proposal) and `data/dmv-test-languages` until this branch merges.
+
+   ```bash
+   git fetch --prune origin
+   git push origin --delete docs/app-store-copy feat/verification-rigor fix/audit-findings \
+     $(git branch -r | sed 's|origin/||' | grep -E '^(quality-report-|worktree-agent-|quality-tn|verify-ct-quality|add-.*-linting)')
+   ```
+4. ~~Fix `verify-manuals.yml`: create the `infra`, `catalog`, `monthly` labels.~~ Done on this branch (idempotent `gh label create` step before the issue step). Still to do: re-run it manually after merge and triage the 10 stale URLs it reports. Note #61 added a second weekly `source-liveness.yml` cron that creates its own `stale-source` label; consider folding the monthly job into it.
+5. ~~Update `README.md` bundle size and remove the stale "Flask backend required" comment in `DriversTestUITests`.~~ Done on this branch.
 
 ### Phase 1 — Store-readiness engineering (weeks 1–3, parallel tracks)
 
@@ -125,7 +131,7 @@ Exit criterion: a signed release build of each mobile app uploads cleanly to Tes
 
 Exit criterion: issue #58 has an explicit v1 decision recorded; no state promises a test language the manual does not support; JA policy is decided.
 
-1. Merge `data/dmv-test-languages` as `data/dmv_test_languages.json` so the sourced matrix is on `main` even if the UI keeps the narrower #63 behaviour. Re-verify the six low-confidence states (MS, MT, OK, SC, SD, WV).
+1. ~~Merge `data/dmv-test-languages` as `data/dmv_test_languages.json`.~~ Merged into this branch (51 states: 30 high, 15 medium, 6 low confidence). Nothing reads it yet. Still to do: re-verify the six low-confidence states (MS, MT, OK, SC, SD, WV) and reconcile with the `official_test_languages` fields #63 added to each `config.json`.
 2. Choose one: (a) ship #63's "official vs practice-only" chips as v1 and move the modal and per-language stats to v1.1, or (b) build the full #58 UX on all three platforms. Recommendation: (a), because #63 never claims a language is offered without manual evidence.
 3. JA: hide by default behind a "show legacy languages" toggle, or drop from the bundle for v1 and shrink the payload. Recommendation: hide, keep data.
 4. Edit PR #57 copy to describe the practice-only language labelling and the SD edition caveat, then get a native Spanish proofread.

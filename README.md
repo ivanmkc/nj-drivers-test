@@ -63,7 +63,7 @@ Questions live in `data/states/*/questions_*.yaml`. When you add or change quest
 python3 tools/bundle.py
 ```
 
-This reads all YAML/config files, builds a gzipped JSON bundle (~1.3 MB), and copies it plus sign images to both `ios/.../Resources/` and `android/.../assets/`.
+This reads all YAML/config files, builds a gzipped JSON bundle (~5.4 MB gzipped, ~27 MB decoded), and copies it plus sign images to both `ios/.../Resources/` and `android/.../assets/`.
 
 The bundle step also runs automatically at build time:
 - **iOS**: Xcode "Bundle Questions" run script phase (before compilation)

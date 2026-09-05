@@ -2,8 +2,8 @@ import XCTest
 
 /// UI tests for the Driver's Test app.
 /// These tests verify screen rendering and basic interactions
-/// using XCUITest framework. They require the Flask backend to be running
-/// for full functionality, but basic UI structure tests work without it.
+/// using XCUITest framework. The app is fully offline: it reads the bundled
+/// questions_bundle.json.gz produced by tools/bundle.py, so no backend is needed.
 final class DriversTestUITests: XCTestCase {
 
     let app = XCUIApplication()

@@ -40,6 +40,18 @@ jobs:
           path: verify_output.txt
           retention-days: 90
 
+      - name: Ensure tracking labels exist
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # `gh issue create --label` fails the whole job when a label is
+          # missing (every scheduled run from June to September 2026 died here),
+          # so create them idempotently first.
+          gh label create infra   --color 0E8A16 --description "CI, tooling, automation" 2>/dev/null || true
+          gh label create catalog --color 1D76DB --description "Manual URL catalog (tools/manual_urls.json)" 2>/dev/null || true
+          gh label create monthly --color 5319E7 --description "Recurring monthly job" 2>/dev/null || true
+
       - name: Update tracking issue
         if: always()
         env:
