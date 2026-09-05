@@ -115,7 +115,9 @@ class VerifyResult:
         canonical host.
         """
         if self.error is not None:
-            return "error"
+            # A transport failure (timeout, reset) on the canonical host is
+            # still recoverable when the recovery snapshot serves the PDF.
+            return "recovered" if self._recovery_ok() else "error"
         if not self.host_official:
             return "suspicious-host"
         canonical_ok = self._canonical_ok()
@@ -270,7 +272,7 @@ def verify_entry(
     sess = session or requests.Session()
     http, ct, cl, final_url, err = _probe_url(primary_url, session=sess)
     if err is not None:
-        return VerifyResult(
+        result = VerifyResult(
             code=code,
             url=primary_url,
             http=None,
@@ -280,21 +282,22 @@ def verify_entry(
             host_official=host_official,
             error=err,
         )
+    else:
+        result = VerifyResult(
+            code=code,
+            url=primary_url,
+            http=http,
+            content_type=ct,
+            content_length=cl,
+            expected_pdf=expected_pdf,
+            host_official=host_official,
+            redirected_to=final_url if final_url and final_url != primary_url else None,
+        )
 
-    result = VerifyResult(
-        code=code,
-        url=primary_url,
-        http=http,
-        content_type=ct,
-        content_length=cl,
-        expected_pdf=expected_pdf,
-        host_official=host_official,
-        redirected_to=final_url if final_url and final_url != primary_url else None,
-    )
-
-    # If the canonical probe didn't pass cleanly and the entry has a
-    # recovery_url, probe it. (Host allowlist NOT consulted for recovery_url —
-    # see invariant in the dataclass docstring.)
+    # If the canonical probe didn't pass cleanly (bad status, wrong content
+    # type, or a transport error such as ilsos.gov's timeouts) and the entry
+    # has a recovery_url, probe it. (Host allowlist NOT consulted for
+    # recovery_url — see invariant in the dataclass docstring.)
     recovery_url = entry.get("recovery_url", "")
     if recovery_url and host_official and not result._canonical_ok():
         result.recovery_url = recovery_url

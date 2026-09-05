@@ -92,10 +92,11 @@ _Status 2026-09-05: items 1, 2, 4 and 5 done on `main` or this branch. #62, #63,
    git push origin --delete docs/app-store-copy feat/verification-rigor fix/audit-findings \
      $(git branch -r | sed 's|origin/||' | grep -E '^(quality-report-|worktree-agent-|quality-tn|verify-ct-quality|add-.*-linting)')
    ```
-4. ~~Fix `verify-manuals.yml`: create the `infra`, `catalog`, `monthly` labels.~~ Done on this branch (idempotent `gh label create` step before the issue step). Re-run via `workflow_dispatch` on this branch: green, tracking issue #64 created. Result: 40 ok, SD recovered via archive, 10 failing, triaged on #64:
-   - Bot-wall / datacenter blocks, fix by adding `recovery_url` (archive snapshot) to `config.json`: MA, NH, NY (403), IL (timeout), TX (connection error).
-   - Real URL rot, needs a new `manual_url` in `tools/manual_urls.json` and `config.json`: KY, NC, UT, OH, WV (404, OH and WV even after following the agency redirect).
-   - No shipped bank is affected; all ten states still have `manual.pdf` in LFS and grade A reports. This is a citation-link problem. Note #61 added a second weekly `source-liveness.yml` cron that creates its own `stale-source` label; consider folding the monthly job into it.
+4. ~~Fix `verify-manuals.yml` and triage the stale URLs.~~ Done. The cron is fixed (labels created idempotently) and all ten failures from tracking issue #64 are resolved:
+   - New canonical URLs: **NC** (`nc-driver-handbook.pdf`, page dated 2026-08-11) and **WV** (`webapps.transportation.wv.gov/TWS/DMV/Drivers_Licensing_Handbook.pdf`). Both agencies republished: the new PDFs are newer editions than the stored manuals (NC stored 108 pp; WV stored "Revised 07/2022"). **Regenerate the NC and WV banks** per the Phase 5 content cadence; until then the About page links to the current edition while the bank reflects the previous one.
+   - `recovery_url` (Wayback snapshot, byte-identical to the stored manual, verified by SHA-256): KY, NH, NY, OH, TX, UT. IL and MA already had one in `config.json` but not in `tools/manual_urls.json`, which is what the verifier reads; now in both.
+   - Verifier bug fixed: a transport error (IL's timeouts) returned early and never probed `recovery_url`; it now reports `recovered` in that case (regression test added).
+   - Convention going forward: `recovery_url` and `recovery_reason` live in the catalog **and** the state's `config.json`; a changed canonical URL records `previous_manual_url` and `url_change_note` in the catalog. Note #61 added a second weekly `source-liveness.yml` cron that creates its own `stale-source` label; consider folding the monthly job into it.
 5. ~~Update `README.md` bundle size and remove the stale "Flask backend required" comment in `DriversTestUITests`.~~ Done on this branch.
 
 ### Phase 1 — Store-readiness engineering (weeks 1–3, parallel tracks)
@@ -176,7 +177,7 @@ Exit criterion: both apps in review with complete metadata; web launched.
 
 - Launch order: web (already live, announce once Phase 1 track D lands), then Android production, then iOS on approval. Do not gate one store on the other.
 - Monitoring: there is no analytics or crash reporting by design. Keep it that way for v1 and rely on store crash reports (Xcode Organizer, Play vitals), both of which need no SDK. Revisit only if the privacy label changes.
-- Content cadence: monthly URL verification (cron, now fixed), quarterly re-verification of the 50 manuals with `quiz_gates.py --write-report`, and a re-generation policy: when a manual edition changes, regenerate that state's EN bank, re-translate ES, re-run gates, bump the app.
+- Content cadence: monthly URL verification (cron, now fixed), quarterly re-verification of the 50 manuals with `quiz_gates.py --write-report`, and a re-generation policy: when a manual edition changes, regenerate that state's EN bank, re-translate ES, re-run gates, bump the app. **First candidates: NC and WV**, whose agencies republished newer editions in 2026 (found while fixing #64).
 - Release cadence: data-only updates ship as new app builds (the bundle is compiled in), so budget a monthly mobile release.
 - v1.1 backlog: DC via headless-browser capture, full #58 modal and per-language stats, Spanish-by-default from device locale, flashcard mode, iPad layout, Canadian provinces (INTERNATIONAL.md).
 
