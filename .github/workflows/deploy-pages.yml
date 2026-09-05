@@ -30,6 +30,9 @@ jobs:
       - name: Build questions bundle
         run: python tools/bundle.py
 
+      - name: Build static site pages (about, privacy, support, 404)
+        run: python tools/build_site_pages.py
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
