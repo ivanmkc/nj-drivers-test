@@ -38,9 +38,9 @@ docs/app-store/
 - Screenshots from the actual built apps (not the mock previews) — depends on #52 (web), #53 (iOS), #54 (android) landing UI polish
 - Production fonts (current images use DejaVu Serif as a stand-in for IBM Plex Serif; production assets should embed the real fonts)
 - Native-Spanish-speaker proofreading of all ES copy
-- App icon (1024×1024 iOS, 512×512 Play) — currently default
+- App icon files already exist and are wired into the apps; review the final icon in the archive and store preview
 - iPad screenshots if shipping for iPad
-- Privacy Policy + Support URL (must be hosted before App Store accepts the submission)
+- Privacy, support and attribution URLs return HTTP 200 (checked 2026-11-21). Recheck them with the final store forms.
 - Optional: 15–30s preview video for both stores
 
 ## Regenerating images
@@ -52,6 +52,10 @@ python3 docs/app-store/_compose.py
 ```
 
 Outputs are checked in so reviewers can see them on GitHub without running anything.
+
+## November 21 copy correction
+
+`COPY.md` now uses a 28-character English name recommendation, refreshed question counts, real support/privacy destinations, and wording that does not promise an exact paragraph link or a current edition for every question. The iOS study-language warning and separate language statistics are implemented on the iOS quality branch; other platform claims need their own validation. Pricing remains a proposed free/no-IAP default, not a verified store setting. Store links, final screenshots, a native Spanish proofread and owner approval remain outstanding.
 
 ## Acceptance criteria for this asset set
 
