@@ -1,6 +1,6 @@
 {
   "checked_at": "2026-11-21",
-  "method": "HTTP GET, PDF signature and SHA-256 comparison with stored manual.pdf; byte difference requires content review, not automatic proof of a newer edition.",
+  "method": "HTTP GET, PDF signature, and SHA-256 comparison with the stored Git LFS object digest (not the pointer file). Actual text was also compared for AR, SD and UT after fetching the LFS objects.",
   "results": [
     {
       "code": "ky",
@@ -8,7 +8,8 @@
       "status": 200,
       "pdf": true,
       "sha256": "d8047d28f8358bb27cb393f3c87df22ae9732e4c3783a8116f105ef48102276b",
-      "storedSha": "7b977c96e7a304685e7cd7a5f23853a26e5de6ae8a82c511d84d1254266c9bb7"
+      "storedSha": "d8047d28f8358bb27cb393f3c87df22ae9732e4c3783a8116f105ef48102276b",
+      "storedDigestSource": "Git LFS object SHA-256"
     },
     {
       "code": "ut",
@@ -16,7 +17,8 @@
       "status": 200,
       "pdf": true,
       "sha256": "3764482adaa0aa2fbc549ca9607fa87aef2abb77ad5c1297ac1e2642f94dcb21",
-      "storedSha": "9c8d5fed2eb887588f0140271e5dec4b0554dbb93fca46b2e230e1b59957b1eb"
+      "storedSha": "a0ee4daccde8eb7ba959960a34e25bc9ff4630390805d10993c1ca3011389c46",
+      "storedDigestSource": "Git LFS object SHA-256"
     },
     {
       "code": "sd",
@@ -24,7 +26,8 @@
       "status": 200,
       "pdf": true,
       "sha256": "bd7897cddb86a4956d579c1c3b38664437a8fe3c126815496eae4ab6abc440ea",
-      "storedSha": "8beb1cc9cbb1952e970b314ed7d23f8dcded8dbcf48668941a8c70ed11f16d35"
+      "storedSha": "226066735036ea786c5ce4b1e869018c23f1f4f74d0b579177177a5575bfb280",
+      "storedDigestSource": "Git LFS object SHA-256"
     }
   ],
   "fallback_probes": [
@@ -34,7 +37,8 @@
       "status": 200,
       "pdf": true,
       "sha256": "53a28691db6a5bd164b1e7650af7124907fde24fb5bd9e807cd611d5bd950d70",
-      "storedSha": "02d6c6ea4ec0179c7bf0835d36fe413c5d05be184f25384b52efdda33590b287"
+      "storedSha": "8fa9d5d45daf072ca263c04508dfd5a48b3c429cf63366912e94f5a9fa51d8a0",
+      "storedDigestSource": "Git LFS object SHA-256"
     },
     {
       "code": "az",
@@ -121,5 +125,25 @@
       "content_length": 9153599
     }
   ],
-  "summary": "8 of 8 flagged sources reachable: 6 canonical, 2 recovered. URL liveness does not certify the bank against the current edition. Six explicit content reviews remain: AR, KY, NC, SD, UT, WV."
+  "summary": "8 of 8 flagged sources reachable: 6 canonical, 2 recovered. KY is byte-identical to its stored PDF and needs no regeneration for the URL repair. Five explicit content reviews remain: AR, NC, SD, UT, WV.",
+  "textComparison": [
+    {
+      "code": "ar",
+      "storedPages": 98,
+      "currentPages": 98,
+      "normalizedTextIdentical": false
+    },
+    {
+      "code": "sd",
+      "storedPages": 68,
+      "currentPages": 72,
+      "normalizedTextIdentical": false
+    },
+    {
+      "code": "ut",
+      "storedPages": 112,
+      "currentPages": 115,
+      "normalizedTextIdentical": false
+    }
+  ]
 }
