@@ -59,6 +59,9 @@ MIN_CONTENT_BYTES = 100 * 1024  # 100 KB
 # State-agency hosts that are not under a `*.gov` TLD but ARE the official
 # canonical source. Keep this list short and document the reason inline.
 OFFICIAL_HOST_ALLOWLIST_EXCEPTIONS: dict[str, str] = {
+    # The official dps.arkansas.gov driver-manual URL redirects to this
+    # Arkansas government media CDN (checked 2026-11-21).
+    "media.ark.org": "Arkansas government media CDN used by dps.arkansas.gov.",
     # South Carolina DMV uses the .com host (linked from sc.gov) for all
     # downloads. https://scdmvonline.com/ is the official online portal.
     "scdmvonline.com": "Official SC DMV portal (linked from sc.gov).",
@@ -102,7 +105,7 @@ class VerifyResult:
         ``ok`` requires:
         * No transport error.
         * Host on the official-state-agency allowlist.
-        * HTTP 200 (after redirects).
+        * HTTP 200, or 206 with a known full-resource size (after redirects).
         * Content-Type is either ``application/pdf`` or ``text/html``.
           When the URL path ends in ``.pdf``, the body MUST be ``application/pdf``
           (otherwise the link has been silently retargeted to a landing page).
@@ -128,7 +131,11 @@ class VerifyResult:
         return "stale"
 
     def _canonical_ok(self) -> bool:
-        if self.http != 200:
+        if self.http not in (200, 206):
+            return False
+        if self.http == 206 and (
+            self.content_length is None or self.content_length < MIN_CONTENT_BYTES
+        ):
             return False
         ct = (self.content_type or "").split(";")[0].strip().lower()
         if self.expected_pdf and ct != "application/pdf":
@@ -188,23 +195,27 @@ def _head_or_get(
     session: requests.Session,
     timeout: int = TIMEOUT_SECONDS,
 ) -> tuple[requests.Response, str | None]:
-    """Issue HEAD; on 4xx/5xx fall back to a 1-byte ranged GET.
+    """Issue HEAD; on errors or missing metadata fall back to a ranged GET.
 
     Some CDNs serve 405/403 on HEAD but happily honor ranged GET. Returns the
     final ``Response`` and the final URL string after redirects.
     """
     headers = {"User-Agent": USER_AGENT, "Accept": "*/*"}
     resp = session.head(url, allow_redirects=True, timeout=timeout, headers=headers)
-    if resp.status_code >= 400:
+    if resp.status_code >= 400 or not resp.headers.get("Content-Type"):
+        resp.close()
         # Fall back to a tiny ranged GET — same data, cheaper than full GET.
         headers_get = dict(headers)
         headers_get["Range"] = "bytes=0-1023"
         resp = session.get(
             url, allow_redirects=True, timeout=timeout, headers=headers_get, stream=True
         )
-        # Drain (it's only ~1KB) so the connection can be reused.
+        # Servers may ignore Range and return the entire manual. Read only
+        # the first chunk, then close, rather than downloading megabytes.
         try:
-            _ = resp.content
+            prefix = next(resp.iter_content(chunk_size=1024), b"")
+            if prefix.startswith(b"%PDF") and not resp.headers.get("Content-Type"):
+                resp.headers["Content-Type"] = "application/pdf"
         finally:
             resp.close()
     return resp, resp.url
