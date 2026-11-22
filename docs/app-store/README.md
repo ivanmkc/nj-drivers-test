@@ -67,3 +67,5 @@ See issue #55 for the full launch checklist. At minimum before public store subm
 - [ ] App icon designed and rendered at every required size
 - [ ] Privacy Policy + Support URLs live
 - [ ] Both stores' Privacy / Data Safety forms completed (all "no data collected")
+
+November 22 follow-up: corrected both fallback-title candidates to 30 characters, shortened the English Play description to 73 characters, recomputed Spanish metadata counts, and explicitly marked retained over-limit drafts as unsuitable for submission.

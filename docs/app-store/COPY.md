@@ -19,8 +19,8 @@ iOS App Name (30) and Play Store Title (30) accept this exact string (28 chars).
 | Option | Length | Pitch |
 |---|---|---|
 | Driver's Test — Real Manuals | 28 | Differentiated, trustworthy. **Recommended.** |
-| DMV Practice — Official Sources | 30 | Heavier on the official angle; less warm. |
-| Permit Prep · 50 States Offline | 30 | Coverage + offline as the lead; loses the source story. |
+| DMV Practice: Official Sources | 30 | Heavier on the official angle; less warm. |
+| Permit Prep: 50 States Offline | 30 | Coverage + offline as the lead; loses the source story. |
 | Drive Ready: Practice Tests | 27 | Friendliest tone; weakest differentiation. |
 
 ### Tagline options (one-liner used in heroes, social, press)
@@ -137,7 +137,7 @@ Single all-up answer: **"Data Not Collected"**.
 
 ### Short Description (80)
 
-**Permit practice from the real DMV handbook. 50 states. 18,072 questions. Offline.** _(81 characters)_
+**Permit practice from DMV handbooks. 50 states. 18,072 questions. Offline.** _(73 characters)_
 
 ### Full Description (4000)
 
@@ -181,7 +181,7 @@ learning, education, test-prep, reference, lifestyle
 
 ### App Name (30)
 
-**Práctica para el examen de manejo** _(33 characters)_
+**Práctica para el examen de manejo** _(33 characters — over limit; do not submit)_
 
 Alternative within limit:
 **Práctica DMV — Manuales reales** _(30 characters)_
@@ -189,16 +189,16 @@ Alternative within limit:
 
 ### Subtitle (30)
 
-**Manuales DMV reales · 50 estados** _(32 characters)_
+**Manuales DMV reales · 50 estados** _(32 characters — over limit; use the shorter option below)_
 **Manuales reales · 50 estados** _(28 characters)_
 
 ### Short Description / Promo (Play 80 / iOS 170)
 
-**Práctica de licencia con preguntas del manual oficial del DMV. 50 estados. Sin conexión.** _(88 characters)_
+**Práctica de licencia con preguntas del manual oficial del DMV. 50 estados. Sin conexión.** _(88 characters — over the Play limit; use the Play field below)_
 
-**Play (80):** Práctica del DMV con preguntas del manual oficial. 50 estados. Sin conexión. _(78)_
+**Play (80):** Práctica del DMV con preguntas del manual oficial. 50 estados. Sin conexión. _(76)_
 
-**iOS Promo (170):** Practique sin conexión con preguntas basadas en manuales de los 50 estados. Consulte las fuentes y revise su progreso. Ayuda independiente, no un examen oficial. _(165)_
+**iOS Promo (170):** Practique sin conexión con preguntas basadas en manuales de los 50 estados. Consulte las fuentes y revise su progreso. Ayuda independiente, no un examen oficial. _(161)_
 
 ### Full Description (~2500 chars)
 
