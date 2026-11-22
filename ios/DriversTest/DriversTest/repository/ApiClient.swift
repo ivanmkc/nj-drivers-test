@@ -15,6 +15,8 @@ private struct BundleState: Codable {
     let testQuestionCount: Int
     let source: String?
     let officialTestLanguages: [String]?
+    let manualURL: String?
+    let contentReviewRequired: Bool?
     let categories: [String: Int]?
     let verification: BundleVerification?
     let languages: [String: [BundledQuestion]]
@@ -24,6 +26,8 @@ private struct BundleState: Codable {
         case passingScorePct = "passing_score_pct"
         case testQuestionCount = "test_question_count"
         case officialTestLanguages = "official_test_languages"
+        case manualURL = "manual_url"
+        case contentReviewRequired = "content_review_required"
     }
 }
 
@@ -103,7 +107,7 @@ class ApiClient {
         }
     }
 
-    private init() {}
+    init() {}
 
     func loadBundle() throws {
         guard !loaded else { return }
@@ -141,7 +145,9 @@ class ApiClient {
                 source: bs.source,
                 categories: bs.categories,
                 verification: bs.verification?.toStateVerification(),
-                officialTestLanguages: bs.officialTestLanguages
+                officialTestLanguages: bs.officialTestLanguages,
+                manualURL: bs.manualURL,
+                contentReviewRequired: bs.contentReviewRequired ?? false
             )
             infos.append(info)
             allQuestions[bs.code] = bs.languages
@@ -241,5 +247,4 @@ class ApiClient {
     func fetchEvidence(questionId: Int, state: String) -> [String]? {
         answerIndex[state]?["en"]?[questionId]?.evidence
     }
-
 }

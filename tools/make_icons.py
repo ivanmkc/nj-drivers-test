@@ -53,7 +53,7 @@ def draw_mark(canvas: Image.Image, scale: float = 1.0) -> None:
     ld = ImageDraw.Draw(layer)
     off = (layer_size - side) / 2
     ld.rounded_rectangle([off, off, off + side, off + side], radius=radius, fill=WHITE)
-    layer = layer.rotate(45, resample=Image.BICUBIC, expand=False)
+    layer = layer.rotate(45, resample=Image.Resampling.BICUBIC, expand=False)
     canvas.alpha_composite(layer, (int(cx - layer_size / 2), int(cy - layer_size / 2)))
 
     # Checkmark: thick polyline with round joints, in brand blue.
@@ -80,7 +80,7 @@ def render(size: int, *, rounded: bool, background: bool, mark_scale: float = 1.
         else:
             d.rectangle([0, 0, big - 1, big - 1], fill=BLUE)
     draw_mark(canvas, mark_scale)
-    return canvas.resize((size, size), Image.LANCZOS)
+    return canvas.resize((size, size), Image.Resampling.LANCZOS)
 
 
 def save(img: Image.Image, path: Path) -> None:

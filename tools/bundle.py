@@ -115,6 +115,8 @@ def build_bundle():
                 "passing_score_pct": cfg["passing_score_pct"],
                 "test_question_count": cfg["test_question_count"],
                 "source": cfg.get("source"),
+                "manual_url": cfg.get("manual_url"),
+                "content_review_required": bool(cfg.get("content_review_required", False)),
                 "official_test_languages": cfg.get("official_test_languages"),
                 "categories": categories,
                 "verification": verification,

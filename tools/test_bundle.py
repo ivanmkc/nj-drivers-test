@@ -164,3 +164,23 @@ def test_write_web_split_layout(states_dir, tmp_path: Path) -> None:
     (data_dir / "states" / "zz").mkdir()
     bundle.write_web_split(result, str(out))
     assert not (data_dir / "states" / "zz").exists()
+
+
+def test_bundle_propagates_current_source_and_pending_content_review(states_dir) -> None:
+    states_dir["write"](
+        "xx",
+        questions=_sample_questions(1),
+        config={
+            "name": "Example",
+            "agency": "DMV",
+            "passing_score_pct": 80,
+            "test_question_count": 25,
+            "manual_url": "https://example.gov/current.pdf",
+            "content_review_required": True,
+        },
+    )
+    state = bundle.build_bundle()["states"][0]
+    assert state["manual_url"] == "https://example.gov/current.pdf"
+    assert state["content_review_required"] is True
+    index, _ = bundle.split_for_web({"states": [state]})
+    assert index["states"][0]["content_review_required"] is True

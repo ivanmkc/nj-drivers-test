@@ -26,6 +26,12 @@
 		A10017 /* signs in Resources */ = {isa = PBXBuildFile; fileRef = B10018; };
 		A10018 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = B10019; };
 		A20001 /* DriversTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20001; };
+		A30001 = {isa = PBXBuildFile; fileRef = B30001; };
+		A10020 = {isa = PBXBuildFile; fileRef = B10020; };
+		A10021 = {isa = PBXBuildFile; fileRef = B10021; };
+		A10022 = {isa = PBXBuildFile; fileRef = B10022; };
+		A10023 = {isa = PBXBuildFile; fileRef = B10023; };
+		A10024 = {isa = PBXBuildFile; fileRef = B10024; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +67,13 @@
 		B20001 /* DriversTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversTestUITests.swift; sourceTree = "<group>"; };
 		C10001 /* DriversTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriversTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C20001 /* DriversTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriversTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversTestTests.swift; sourceTree = "<group>"; };
+		C30001 = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriversTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10020 = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		B10021 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceCitationView.swift; sourceTree = "<group>"; };
+		B10022 = {isa = PBXFileReference; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
+		B10023 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsBannerView.swift; sourceTree = "<group>"; };
+		B10024 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +99,7 @@
 			children = (
 				E10002 /* DriversTest */,
 				E20001 /* DriversTestUITests */,
+				E30001 /* DriversTestTests */,
 				E10008 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -156,6 +170,7 @@
 			children = (
 				C10001 /* DriversTest.app */,
 				C20001 /* DriversTestUITests.xctest */,
+				C30001 /* DriversTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +179,9 @@
 			isa = PBXGroup;
 			children = (
 				B10008 /* Components.swift */,
+				B10021 /* SourceCitationView.swift */,
+				B10023 /* StatsBannerView.swift */,
+				B10024 /* LanguageBarView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -183,6 +201,8 @@
 		E10011 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B10020 /* Fonts */,
+				B10022 /* translations.json */,
 				B10017 /* questions_bundle.json.gz */,
 				B10018 /* signs */,
 			);
@@ -197,6 +217,7 @@
 			path = DriversTestUITests;
 			sourceTree = "<group>";
 		};
+		E30001 = {isa = PBXGroup; children = (B30001,); path = DriversTestTests; sourceTree = "<group>"; };
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -235,6 +256,12 @@
 			productReference = C20001 /* DriversTestUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		F30001 = {
+			isa = PBXNativeTarget; buildConfigurationList = G30003;
+			buildPhases = (F30002,); buildRules = (); dependencies = (X10002,);
+			name = DriversTestTests; productName = DriversTestTests;
+			productReference = C30001; productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -269,6 +296,7 @@
 			targets = (
 				F10001 /* DriversTest */,
 				F20001 /* DriversTestUITests */,
+				F30001 /* DriversTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -295,6 +323,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10020 /* Fonts in Resources */,
+				A10022 /* translations.json in Resources */,
 				A10015 /* Assets.xcassets in Resources */,
 				A10016 /* questions_bundle.json.gz in Resources */,
 				A10017 /* signs in Resources */,
@@ -317,6 +347,9 @@
 				A10006 /* QuizViewModel.swift in Sources */,
 				A10007 /* AppRoot.swift in Sources */,
 				A10008 /* Components.swift in Sources */,
+				A10021 /* SourceCitationView.swift in Sources */,
+				A10023 /* StatsBannerView.swift in Sources */,
+				A10024 /* LanguageBarView.swift in Sources */,
 				A10009 /* StatePickerScreen.swift in Sources */,
 				A10010 /* HomeScreen.swift in Sources */,
 				A10011 /* QuizScreen.swift in Sources */,
@@ -334,6 +367,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F30002 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A30001,); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -349,7 +383,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
@@ -375,7 +409,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
@@ -493,6 +527,20 @@
 			};
 			name = Release;
 		};
+		G30005 = {isa = XCBuildConfiguration; buildSettings = {
+			BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGN_STYLE = Automatic;
+			GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+			PRODUCT_BUNDLE_IDENTIFIER = com.drivers.DriversTestTests; PRODUCT_NAME = "$(TARGET_NAME)";
+			SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1;
+			TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DriversTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DriversTest";
+		}; name = Debug; };
+		G30006 = {isa = XCBuildConfiguration; buildSettings = {
+			BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGN_STYLE = Automatic;
+			GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+			PRODUCT_BUNDLE_IDENTIFIER = com.drivers.DriversTestTests; PRODUCT_NAME = "$(TARGET_NAME)";
+			SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1;
+			TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DriversTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DriversTest";
+		}; name = Release; };
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -523,6 +571,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		G30003 = {isa = XCConfigurationList; buildConfigurations = (G30005,G30006,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
 /* End XCConfigurationList section */
 
 	};

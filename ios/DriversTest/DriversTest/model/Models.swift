@@ -38,6 +38,8 @@ struct StateInfo: Identifiable {
     let categories: [String: Int]?
     let verification: StateVerification?
     let officialTestLanguages: [String]?
+    let manualURL: String?
+    let contentReviewRequired: Bool
 
     var id: String { code }
 
@@ -113,4 +115,18 @@ struct WeakQuestion: Identifiable {
     let wrong: Int
     let seen: Int
     let category: String
+}
+
+// Describes only the visible artwork, without explaining the correct driving action.
+enum SignImageDescriptions {
+    static let descriptions: [String: String] = {
+        guard let url = Bundle.main.url(forResource: "descriptions", withExtension: "json", subdirectory: "signs"),
+              let data = try? Data(contentsOf: url),
+              let values = try? JSONDecoder().decode([String: String].self, from: data) else { return [:] }
+        return values
+    }()
+
+    static func description(for image: String) -> String {
+        descriptions[image] ?? "Road sign illustration"
+    }
 }

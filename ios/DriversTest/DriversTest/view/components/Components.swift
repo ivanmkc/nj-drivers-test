@@ -1,5 +1,15 @@
 import SwiftUI
 
+struct TapTargetButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(minWidth: 44, minHeight: 44)
+            .contentShape(Rectangle())
+            .foregroundColor(AppTheme.blue)
+            .opacity(configuration.isPressed ? 0.85 : 1)
+    }
+}
+
 struct CardStyle: ViewModifier {
     var cornerRadius: CGFloat = 12
     var borderColor: Color = AppTheme.border
@@ -18,70 +28,9 @@ extension View {
         modifier(CardStyle(cornerRadius: cornerRadius, borderColor: borderColor, borderWidth: borderWidth))
     }
 }
-
 // MARK: - LanguageBarView
 
-struct LanguageBarView: View {
-    @ObservedObject var localizer: Localizer
-    var availableLangs: [String]?
-    var officialTestLanguages: [String]?
-
-    private var langs: [String] {
-        availableLangs ?? ["en", "es"]
-    }
-
-    private static let langCodeToEnglish: [String: String] = [
-        "en": "english", "es": "spanish", "ja": "japanese", "fr": "french",
-    ]
-
-    private func isOfficialLang(_ langCode: String) -> Bool {
-        guard let official = officialTestLanguages else { return false }
-        if official.contains(where: { $0.lowercased() == "many" }) && official.count == 1 {
-            return false
-        }
-        guard let englishName = Self.langCodeToEnglish[langCode]?.lowercased() else { return false }
-        return official.contains { $0.lowercased() == englishName }
-    }
-
-    var body: some View {
-        HStack(spacing: 6) {
-            Image(systemName: "globe")
-                .font(.system(size: 16))
-                .foregroundColor(AppTheme.gray)
-            Spacer()
-            ForEach(langs, id: \.self) { lang in
-                let isOfficial = isOfficialLang(lang)
-                Button {
-                    withAnimation(.easeInOut(duration: 0.2)) {
-                        localizer.currentLang = lang
-                    }
-                } label: {
-                    HStack(spacing: 4) {
-                        Text(localizer.langLabels[lang] ?? lang.uppercased())
-                            .font(.system(size: 13, weight: .semibold))
-                        if officialTestLanguages != nil && isOfficial {
-                            Image(systemName: "checkmark.seal")
-                                .font(.system(size: 11))
-                                .foregroundColor(AppTheme.green)
-                                .accessibilityHidden(true)
-                        }
-                    }
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 6)
-                    .foregroundColor(lang == localizer.currentLang ? AppTheme.blue : AppTheme.gray)
-                    .background(lang == localizer.currentLang ? AppTheme.blueLight : AppTheme.card)
-                    .cardStyle(cornerRadius: 20, borderColor: lang == localizer.currentLang ? AppTheme.blue : AppTheme.border, borderWidth: 1.5)
-                    .frame(minHeight: 44)
-                    .contentShape(Rectangle())
-                }
-                .accessibilityHint(isOfficial ? "Official test language" : "")
-            }
-        }
-    }
-}
-
 // MARK: - StatItem (from HomeView)
-
 struct StatItem: View {
     let value: String
     let label: String
@@ -89,42 +38,16 @@ struct StatItem: View {
     var body: some View {
         VStack(spacing: 2) {
             Text(value)
-                .font(.system(size: 22, weight: .bold))
+                .font(AppTheme.display(22)).fontWeight(.bold)
                 .monospacedDigit()
             Text(label)
-                .font(.system(size: 11))
-                .foregroundColor(AppTheme.gray)
+                .font(AppTheme.body(14))
+                .foregroundColor(AppTheme.secondaryText)
                 .textCase(.uppercase)
         }
     }
 }
-
 // MARK: - StatsBannerView (from HomeView)
-
-struct StatsBannerView: View {
-    @ObservedObject var vm: QuizViewModel
-    @ObservedObject var localizer: Localizer
-
-    var body: some View {
-        HStack {
-            HStack(spacing: 16) {
-                StatItem(value: "\(vm.quizHistory.count)", label: localizer.localized("quizzes"))
-                StatItem(value: "\(vm.averageScore)%", label: localizer.localized("avgScore"))
-                StatItem(value: "\(vm.passStreak)", label: localizer.localized("passStreak"))
-            }
-            Spacer()
-            Button {
-                vm.showStats()
-            } label: {
-                Text(localizer.localized("viewStats"))
-                    .font(.system(size: 14, weight: .semibold))
-                    .foregroundColor(AppTheme.blue)
-            }
-        }
-        .padding(14)
-        .cardStyle(borderWidth: 1)
-    }
-}
 
 // MARK: - ModeButton (from HomeView)
 
@@ -139,15 +62,15 @@ struct ModeButton: View {
     var body: some View {
         Button(action: action) {
             VStack(spacing: 4) {
-                Image(systemName: systemImage)
-                    .font(.system(size: 20))
+                Image(systemName: systemImage).accessibilityHidden(true)
+                    .font(AppTheme.body(20))
                     .foregroundColor(isActive ? AppTheme.blue : AppTheme.gray)
                 HStack(spacing: 4) {
-                    Text(title).font(.system(size: 14, weight: .semibold))
+                    Text(title).font(AppTheme.body(14)).fontWeight(.semibold)
                     if badgeCount > 0 {
                         Text("\(badgeCount)")
-                            .font(.system(size: 11, weight: .bold))
-                            .foregroundColor(.white)
+                            .font(AppTheme.body(14)).fontWeight(.bold)
+                            .foregroundColor(AppTheme.onPrimary)
                             .padding(.horizontal, 6)
                             .padding(.vertical, 1)
                             .background(AppTheme.red)
@@ -155,7 +78,7 @@ struct ModeButton: View {
                     }
                 }
                 Text(desc)
-                    .font(.system(size: 11))
+                    .font(AppTheme.body(14))
                     .foregroundColor(isActive ? AppTheme.blue : AppTheme.gray)
             }
             .frame(maxWidth: .infinity)
@@ -184,16 +107,16 @@ struct ChoiceButton: View {
             HStack(alignment: .top, spacing: 12) {
                 ZStack {
                     if state == .correct {
-                        Image(systemName: "checkmark")
-                            .font(.system(size: 14, weight: .bold))
+                        Image(systemName: "checkmark").accessibilityHidden(true)
+                            .font(AppTheme.body(14)).fontWeight(.bold)
                             .foregroundColor(letterForeground)
                     } else if state == .wrong {
-                        Image(systemName: "xmark")
-                            .font(.system(size: 14, weight: .bold))
+                        Image(systemName: "xmark").accessibilityHidden(true)
+                            .font(AppTheme.body(14)).fontWeight(.bold)
                             .foregroundColor(letterForeground)
                     } else {
                         Text(letter)
-                            .font(.system(size: 14, weight: .bold))
+                            .font(AppTheme.body(14)).fontWeight(.bold)
                             .foregroundColor(letterForeground)
                     }
                 }
@@ -202,7 +125,7 @@ struct ChoiceButton: View {
                 .clipShape(Circle())
 
                 Text(text)
-                    .font(.system(size: 16))
+                    .font(AppTheme.body(16))
                     .lineSpacing(3)
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.leading)
@@ -214,13 +137,12 @@ struct ChoiceButton: View {
             .cardStyle(borderColor: borderColor)
         }
         .disabled(state != .normal)
-        .opacity(state == .disabled ? 0.7 : 1)
     }
 
     private var letterForeground: Color {
         switch state {
-        case .correct, .wrong: return .white
-        default: return AppTheme.gray
+        case .correct, .wrong: return AppTheme.onPrimary
+        default: return AppTheme.secondaryText
         }
     }
 
@@ -258,27 +180,27 @@ struct ReviewItemView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             Text(result.question)
-                .font(.system(size: 14, weight: .semibold))
+                .font(AppTheme.body(14)).fontWeight(.semibold)
 
             HStack(spacing: 4) {
                 Text(localizer.localized("yourAnswer") + ":")
-                    .font(.system(size: 13))
-                    .foregroundColor(AppTheme.gray)
+                    .font(AppTheme.body(14))
+                    .foregroundColor(AppTheme.secondaryText)
                 Text("\(result.yourAnswer): \(result.yourAnswerText)")
-                    .font(.system(size: 13, weight: .semibold))
+                    .font(AppTheme.body(14)).fontWeight(.semibold)
             }
 
             HStack(spacing: 4) {
                 Text(localizer.localized("correct") + ":")
-                    .font(.system(size: 13))
-                    .foregroundColor(AppTheme.gray)
+                    .font(AppTheme.body(14))
+                    .foregroundColor(AppTheme.secondaryText)
                 Text("\(result.correctAnswer): \(result.correctAnswerText)")
-                    .font(.system(size: 13, weight: .semibold))
+                    .font(AppTheme.body(14)).fontWeight(.semibold)
             }
 
             Text(result.explanation)
-                .font(.system(size: 13))
-                .foregroundColor(AppTheme.gray)
+                .font(AppTheme.body(14))
+                .foregroundColor(AppTheme.secondaryText)
                 .italic()
                 .padding(.top, 2)
         }
@@ -303,16 +225,20 @@ struct StatCardView: View {
     let value: String
     let label: String
     let color: Color
+    var accessibilityID: String?
 
     var body: some View {
         VStack(spacing: 4) {
             Text(value)
-                .font(.system(size: 26, weight: .bold))
+                .accessibilityIdentifier(accessibilityID ?? label)
+                .accessibilityLabel(label)
+                .accessibilityValue(value)
+                .font(AppTheme.display(26)).fontWeight(.bold)
                 .monospacedDigit()
                 .foregroundColor(color)
             Text(label)
-                .font(.system(size: 11))
-                .foregroundColor(AppTheme.gray)
+                .font(AppTheme.body(14))
+                .foregroundColor(AppTheme.secondaryText)
                 .textCase(.uppercase)
         }
         .frame(maxWidth: .infinity)
@@ -326,7 +252,7 @@ struct StatCardView: View {
 struct CategoryBarView: View {
     let category: String
     let pct: Int
-    var localizer: Localizer = .shared
+    @ObservedObject var localizer: Localizer = .shared
 
     private var barColor: Color {
         if pct >= 80 { return AppTheme.green }
@@ -335,30 +261,28 @@ struct CategoryBarView: View {
     }
 
     var body: some View {
-        HStack(spacing: 10) {
+        VStack(alignment: .leading, spacing: 6) {
             Text(localizer.localizedCategory(category))
-                .font(.system(size: 13))
-                .frame(width: 110, alignment: .leading)
-                .lineLimit(1)
-
-            GeometryReader { geo in
-                ZStack(alignment: .leading) {
-                    RoundedRectangle(cornerRadius: 5)
-                        .fill(AppTheme.border)
-                        .frame(height: 10)
-                    RoundedRectangle(cornerRadius: 5)
-                        .fill(barColor)
-                        .frame(width: geo.size.width * CGFloat(pct) / 100.0, height: 10)
+                .font(AppTheme.body(14))
+                .fixedSize(horizontal: false, vertical: true)
+            HStack(spacing: 10) {
+                GeometryReader { geo in
+                    ZStack(alignment: .leading) {
+                        RoundedRectangle(cornerRadius: 5).fill(AppTheme.border).frame(height: 10)
+                        RoundedRectangle(cornerRadius: 5).fill(barColor)
+                            .frame(width: geo.size.width * CGFloat(pct) / 100.0, height: 10)
+                    }
                 }
+                .frame(height: 10)
+                .accessibilityHidden(true)
+                Text("\(pct)%")
+                    .font(AppTheme.body(14)).fontWeight(.semibold)
+                    .monospacedDigit()
+                    .foregroundColor(AppTheme.secondaryText)
+                    .fixedSize()
             }
-            .frame(height: 10)
-
-            Text("\(pct)%")
-                .font(.system(size: 13, weight: .semibold))
-                .monospacedDigit()
-                .foregroundColor(barColor)
-                .frame(width: 36, alignment: .trailing)
         }
+        .accessibilityElement(children: .combine)
     }
 }
 
@@ -371,19 +295,19 @@ struct WeakItemView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             Text("Q\(weak.id)")
-                .font(.system(size: 14, weight: .semibold))
+                .font(AppTheme.body(14)).fontWeight(.semibold)
             HStack(spacing: 4) {
                 Text(localizer.localized("missed"))
-                    .font(.system(size: 12))
-                    .foregroundColor(AppTheme.gray)
+                    .font(AppTheme.body(14))
+                    .foregroundColor(AppTheme.secondaryText)
                 Text("\(weak.wrong)/\(weak.seen) (\(Int(round(weak.missRate * 100)))%)")
-                    .font(.system(size: 12, weight: .semibold))
-                    .foregroundColor(AppTheme.red)
+                    .font(AppTheme.body(14)).fontWeight(.semibold)
+                    .foregroundColor(AppTheme.errorText)
                 Text("\u{00B7}")
-                    .foregroundColor(AppTheme.gray)
+                    .foregroundColor(AppTheme.secondaryText)
                 Text(localizer.localizedCategory(weak.category))
-                    .font(.system(size: 12))
-                    .foregroundColor(AppTheme.gray)
+                    .font(AppTheme.body(14))
+                    .foregroundColor(AppTheme.secondaryText)
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -429,7 +353,7 @@ struct ScoreChartView: View {
                 context.stroke(path, with: .color(AppTheme.border), lineWidth: 1)
 
                 context.draw(
-                    Text("\(pct)%").font(.system(size: 10)).foregroundColor(Color(.systemGray)),
+                    Text("\(pct)%").font(AppTheme.body(14)).foregroundColor(AppTheme.secondaryText),
                     at: CGPoint(x: pad.leading - 8, y: y),
                     anchor: .trailing
                 )
@@ -475,7 +399,7 @@ struct ScoreChartView: View {
 
             // Dots
             for (i, p) in points.enumerated() {
-                let color: Color = data[i].pct >= passingPct ? AppTheme.green : AppTheme.red
+                let color: Color = data[i].total > 0 && data[i].correct * 100 >= data[i].total * passingPct ? AppTheme.green : AppTheme.red
                 var dotPath = Path()
                 dotPath.addEllipse(in: CGRect(x: p.x - 4, y: p.y - 4, width: 8, height: 8))
                 context.fill(dotPath, with: .color(color))
@@ -488,12 +412,17 @@ struct ScoreChartView: View {
             for (i, p) in points.enumerated() {
                 if i % step == 0 || i == n - 1 {
                     context.draw(
-                        Text("#\(startNum + i)").font(.system(size: 10)).foregroundColor(Color(.systemGray)),
+                        Text("#\(startNum + i)").font(AppTheme.body(14)).foregroundColor(AppTheme.secondaryText),
                         at: CGPoint(x: p.x, y: size.height - pad.bottom + 16),
                         anchor: .center
                     )
                 }
             }
         }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Localizer.shared.localized("scoreHistory"))
+        .accessibilityValue(history.suffix(20).enumerated().map { index, entry in
+            "#\(history.count - min(history.count, 20) + index + 1): \(entry.correct)/\(entry.total), \(entry.pct)%"
+        }.joined(separator: "; "))
     }
 }

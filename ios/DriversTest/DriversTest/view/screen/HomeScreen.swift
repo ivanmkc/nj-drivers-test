@@ -3,6 +3,8 @@ import SwiftUI
 struct HomeScreen: View {
     @ObservedObject var vm: QuizViewModel
     @ObservedObject var localizer: Localizer
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    @ScaledMetric(relativeTo: .body) private var countButtonHeight = 44.0
 
     var body: some View {
         ScrollView {
@@ -18,8 +20,8 @@ struct HomeScreen: View {
                     Text(localizer.localized("officialTestLangsCaption", substitutions: [
                         "agency": vm.currentState?.agency ?? "",
                     ]))
-                    .font(.system(size: 12))
-                    .foregroundColor(AppTheme.gray)
+                    .font(AppTheme.body(14))
+                    .foregroundColor(AppTheme.secondaryText)
                     .multilineTextAlignment(.center)
                 }
 
@@ -27,15 +29,15 @@ struct HomeScreen: View {
                     "state": vm.currentState?.code.uppercased() ?? "",
                     "state_name": vm.currentState?.name ?? "",
                 ]))
-                .font(.system(size: 28, weight: .bold))
+                .font(AppTheme.display(28)).fontWeight(.bold)
                 .foregroundColor(AppTheme.blue)
 
                 Text(localizer.localized("subtitle", substitutions: [
                     "state_name": vm.currentState?.name ?? "",
                     "agency": vm.currentState?.agency ?? "",
                 ]))
-                .font(.system(size: 15))
-                .foregroundColor(AppTheme.gray)
+                .font(AppTheme.body(15))
+                .foregroundColor(AppTheme.secondaryText)
 
                 if let state = vm.currentState {
                     Text(localizer.localized("passingScore", substitutions: [
@@ -43,10 +45,16 @@ struct HomeScreen: View {
                         "pass_count": "\(state.passCount)",
                         "test_count": "\(state.testQuestionCount)",
                     ]))
-                    .font(.system(size: 13))
-                    .foregroundColor(AppTheme.gray)
+                    .font(AppTheme.body(14))
+                    .foregroundColor(AppTheme.secondaryText)
                 }
 
+                if let notice = vm.languageFallbackNotice {
+                    Text(notice)
+                        .font(.subheadline)
+                        .foregroundColor(AppTheme.secondaryText)
+                        .accessibilityIdentifier("language-fallback-notice")
+                }
                 // Stats banner
                 if !vm.quizHistory.isEmpty {
                     StatsBannerView(vm: vm, localizer: localizer)
@@ -72,34 +80,30 @@ struct HomeScreen: View {
 
                 // Count selector
                 Text(localizer.localized("numQuestions"))
-                    .font(.system(size: 15, weight: .semibold))
+                    .font(AppTheme.body(15)).fontWeight(.semibold)
 
-                HStack(spacing: 8) {
-                    ForEach(vm.countOptions, id: \.self) { count in
-                        let isAll = count == vm.currentState?.totalQuestions
-                        Button {
-                            vm.selectedCount = count
-                        } label: {
-                            Text(isAll ? localizer.localized("all") : "\(count)")
-                                .font(.system(size: 16, weight: .semibold))
-                                .padding(.horizontal, 20)
-                                .padding(.vertical, 10)
-                                .foregroundColor(vm.selectedCount == count ? AppTheme.onPrimary : AppTheme.blue)
-                                .background(vm.selectedCount == count ? AppTheme.blue : AppTheme.card)
-                                .cardStyle(borderColor: AppTheme.blue)
-                                .frame(minHeight: 44)
-                                .contentShape(Rectangle())
+                let columns = dynamicTypeSize >= .xxxLarge ? 1 : 2
+                VStack(spacing: 8) {
+                    ForEach(Array(stride(from: 0, to: vm.countOptions.count, by: columns)), id: \.self) { start in
+                        HStack(spacing: 8) {
+                            ForEach(Array(vm.countOptions[start..<min(start + columns, vm.countOptions.count)]), id: \.self) { count in
+                                countButton(count)
+                            }
                         }
                     }
                 }
 
+                SourceCitationView(state: vm.currentState)
+                if let error = vm.quizError {
+                    Text(error).foregroundColor(AppTheme.errorText).accessibilityIdentifier("quiz-error")
+                }
                 // Start button
                 let weakEmpty = vm.quizMode == .weak && vm.weakQuestions.isEmpty
                 Button {
-                    vm.startQuiz()
+                    vm.requestQuiz()
                 } label: {
                     Text(weakEmpty ? localizer.localized("noWeakSpots") : localizer.localized("startQuiz"))
-                        .font(.system(size: 18, weight: .semibold))
+                        .font(AppTheme.body(18)).fontWeight(.semibold)
                         .foregroundColor(AppTheme.onPrimary)
                         .frame(maxWidth: .infinity)
                         .padding(16)
@@ -107,6 +111,7 @@ struct HomeScreen: View {
                         .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
                 .disabled(weakEmpty)
+                .accessibilityIdentifier("start-quiz")
 
                 // Change state (kept above the About section so it stays on
                 // screen without scrolling — UI tests and users both tap it)
@@ -114,8 +119,8 @@ struct HomeScreen: View {
                     vm.goStatePicker()
                 } label: {
                     Text(localizer.localized("changeState"))
-                        .font(.system(size: 14))
-                        .foregroundColor(AppTheme.gray)
+                        .font(AppTheme.body(14))
+                        .foregroundColor(AppTheme.secondaryText)
                         .frame(minHeight: 44)
                         .contentShape(Rectangle())
                 }
@@ -124,12 +129,33 @@ struct HomeScreen: View {
                 if let state = vm.currentState {
                     AboutTestSection(state: state, localizer: localizer)
                 }
-
             }
             .padding(.horizontal, 16)
             .padding(.top, 24)
         }
         .background(AppTheme.grayLight)
+        .alert(localizer.localized("studyLanguageTitle"), isPresented: $vm.showStudyWarning) {
+            Button(localizer.localized("studyContinue")) { vm.acknowledgeStudyLanguage() }
+            Button(localizer.localized("practiceEnglish")) { vm.practiceEnglish() }
+            Button(localizer.localized("cancel"), role: .cancel) {}
+        } message: {
+            Text(localizer.localized("studyLanguageMessage"))
+        }
+    }
+    private func countButton(_ count: Int) -> some View {
+        let isAll = count == vm.currentState?.totalQuestions
+        return Button { vm.selectedCount = count } label: {
+            Text(isAll ? localizer.localized("all") : localizer.localized("questionCount", substitutions: ["count": "\(count)"]))
+                .font(.body).fontWeight(.semibold)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity, minHeight: countButtonHeight)
+                .padding(8)
+                .foregroundColor(vm.selectedCount == count ? AppTheme.onPrimary : AppTheme.blue)
+                .background(vm.selectedCount == count ? AppTheme.blue : AppTheme.card)
+                .cardStyle(borderColor: AppTheme.blue)
+                .contentShape(Rectangle())
+        }
+        .accessibilityIdentifier("count-\(count)")
     }
 }
 
@@ -148,15 +174,15 @@ private struct AboutTestSection: View {
                 withAnimation(.easeInOut(duration: 0.2)) { isExpanded.toggle() }
             } label: {
                 HStack(spacing: 6) {
-                    Image(systemName: "info.circle")
+                    Image(systemName: "info.circle").accessibilityHidden(true)
                         .foregroundColor(AppTheme.blue)
                     Text(localizer.localized("aboutThisTest"))
-                        .font(.system(size: 15, weight: .semibold))
+                        .font(AppTheme.body(15)).fontWeight(.semibold)
                         .foregroundColor(.primary)
                     Spacer()
-                    Image(systemName: "chevron.down")
-                        .font(.system(size: 12, weight: .semibold))
-                        .foregroundColor(AppTheme.gray)
+                    Image(systemName: "chevron.down").accessibilityHidden(true)
+                        .font(AppTheme.body(14)).fontWeight(.semibold)
+                        .foregroundColor(AppTheme.secondaryText)
                         .rotationEffect(.degrees(isExpanded ? 180 : 0))
                 }
                 .frame(minHeight: 44)
@@ -201,20 +227,20 @@ private struct SourceRow: View {
     var body: some View {
         HStack(alignment: .top, spacing: 6) {
             Text(localizer.localized("source") + ":")
-                .font(.system(size: 13))
-                .foregroundColor(AppTheme.gray)
+                .font(AppTheme.body(14))
+                .foregroundColor(AppTheme.secondaryText)
 
             if let urlString = manualUrl, let url = URL(string: urlString) {
                 Link(destination: url) {
                     Text(source)
-                        .font(.system(size: 13))
+                        .font(AppTheme.body(14))
                         .foregroundColor(AppTheme.blue)
                         .underline()
                         .multilineTextAlignment(.leading)
                 }
             } else {
                 Text(source)
-                    .font(.system(size: 13))
+                    .font(AppTheme.body(14))
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.leading)
             }
@@ -247,16 +273,16 @@ private struct OfficialTestLanguagesRow: View {
         VStack(alignment: .leading, spacing: 4) {
             HStack(alignment: .top, spacing: 6) {
                 Text(localizer.localized("officialTestLangsRow") + ":")
-                    .font(.system(size: 13))
-                    .foregroundColor(AppTheme.gray)
+                    .font(AppTheme.body(14))
+                    .foregroundColor(AppTheme.secondaryText)
                 Text(displayText)
-                    .font(.system(size: 13))
+                    .font(AppTheme.body(14))
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.leading)
             }
             Text(localizer.localized("officialTestLangsPractice"))
-                .font(.system(size: 12))
-                .foregroundColor(AppTheme.gray)
+                .font(AppTheme.body(14))
+                .foregroundColor(AppTheme.secondaryText)
                 .italic()
         }
     }
@@ -317,19 +343,19 @@ private struct VerificationBadgesView: View {
                 if let edition = verification.edition {
                     HStack(spacing: 4) {
                         Text(localizer.localized("edition") + ":")
-                            .foregroundColor(AppTheme.gray)
+                            .foregroundColor(AppTheme.secondaryText)
                         Text(edition)
                     }
-                    .font(.system(size: 12))
+                    .font(AppTheme.body(14))
                 }
 
                 if let verifiedAt = verification.verifiedAt {
                     HStack(spacing: 4) {
                         Text(localizer.localized("verified") + ":")
-                            .foregroundColor(AppTheme.gray)
+                            .foregroundColor(AppTheme.secondaryText)
                         Text(Self.formatDate(verifiedAt))
                     }
-                    .font(.system(size: 12))
+                    .font(AppTheme.body(14))
                 }
             }
         }
@@ -363,16 +389,16 @@ private struct BadgePill: View {
     var body: some View {
         HStack(spacing: 4) {
             if let systemImage {
-                Image(systemName: systemImage)
-                    .font(.system(size: 11))
-                    .foregroundColor(AppTheme.green)
+                Image(systemName: systemImage).accessibilityHidden(true)
+                    .font(AppTheme.body(14))
+                    .foregroundColor(AppTheme.successText)
             }
             Text(label)
-                .foregroundColor(AppTheme.gray)
+                .foregroundColor(AppTheme.secondaryText)
             Text(value)
                 .fontWeight(.semibold)
         }
-        .font(.system(size: 12))
+        .font(AppTheme.body(14))
         .padding(.horizontal, 10)
         .padding(.vertical, 5)
         .background(AppTheme.blueLight)
@@ -398,7 +424,7 @@ private struct CategoryBreakdownView: View {
             ForEach(sortedCategories, id: \.name) { cat in
                 HStack(spacing: 8) {
                     Text(localizer.localizedCategory(cat.name))
-                        .font(.system(size: 12))
+                        .font(AppTheme.body(14))
                         .frame(width: 120, alignment: .leading)
                         .lineLimit(1)
 
@@ -410,9 +436,9 @@ private struct CategoryBreakdownView: View {
                     .frame(height: 8)
 
                     Text("\(cat.count)")
-                        .font(.system(size: 12, weight: .semibold))
+                        .font(AppTheme.body(14)).fontWeight(.semibold)
                         .monospacedDigit()
-                        .foregroundColor(AppTheme.gray)
+                        .foregroundColor(AppTheme.secondaryText)
                         .frame(width: 30, alignment: .trailing)
                 }
             }

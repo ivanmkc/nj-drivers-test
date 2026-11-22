@@ -4,6 +4,9 @@ struct StatePickerScreen: View {
     @ObservedObject var vm: QuizViewModel
     @ObservedObject var localizer: Localizer
 
+    @State private var search = ""
+    @FocusState private var searching: Bool
+
     var body: some View {
         ScrollView {
             VStack(spacing: 16) {
@@ -11,29 +14,51 @@ struct StatePickerScreen: View {
                     .padding(.bottom, 4)
 
                 Text(localizer.localized("appTitle"))
-                    .font(.system(size: 28, weight: .bold))
-                    .foregroundColor(AppTheme.blue)
+                    .font(AppTheme.display(28)).fontWeight(.bold)
+                    .foregroundColor(AppTheme.navy)
 
                 Text(localizer.localized("selectStateDesc"))
-                    .font(.system(size: 15))
-                    .foregroundColor(AppTheme.gray)
+                    .font(AppTheme.body(15))
+                    .foregroundColor(AppTheme.secondaryText)
                     .padding(.bottom, 8)
 
+                TextField(localizer.localized("searchStates"), text: $search)
+                    .textFieldStyle(.roundedBorder)
+                    .focused($searching)
+                    .submitLabel(.search)
+                    .onSubmit { searching = false }
+                    .frame(minHeight: 44)
+                    .accessibilityIdentifier("state-search")
+                Text(localizer.localized("unofficialNotice"))
+                    .font(.subheadline)
+                    .foregroundColor(AppTheme.secondaryText)
+
                 if vm.isLoading {
-                    ProgressView()
-                        .padding(.top, 40)
+                    VStack(spacing: 12) {
+                        ProgressView()
+                        Text(localizer.localized("loadingQuestions"))
+                    }
+                    .padding(.top, 40)
                 } else if let error = vm.loadError {
                     VStack(spacing: 8) {
                         Text("Failed to load questions")
-                            .font(.system(size: 15, weight: .semibold))
-                            .foregroundColor(AppTheme.red)
+                            .font(AppTheme.body(15)).fontWeight(.semibold)
+                            .foregroundColor(AppTheme.errorText)
+                        Button(localizer.localized("retryLoad")) { vm.loadStates() }
+                            .frame(minHeight: 44)
                         Text(error)
-                            .font(.system(size: 13))
-                            .foregroundColor(AppTheme.gray)
+                            .font(AppTheme.body(14))
+                            .foregroundColor(AppTheme.secondaryText)
                     }
                     .padding(.top, 40)
                 } else {
-                    ForEach(vm.allStates) { state in
+                    let matches = vm.allStates.sorted {
+                        $0.name.localizedStandardCompare($1.name) == .orderedAscending
+                    }.filter {
+                        search.isEmpty || $0.name.localizedCaseInsensitiveContains(search) || $0.code.localizedCaseInsensitiveContains(search)
+                    }
+                    if matches.isEmpty { Text(localizer.localized("noStates")) }
+                    ForEach(matches) { state in
                         StateCard(state: state, localizer: localizer) {
                             if state.hasQuestions {
                                 vm.selectState(state)
@@ -59,24 +84,24 @@ struct StateCard: View {
             HStack {
                 VStack(alignment: .leading, spacing: 2) {
                     Text(state.name)
-                        .font(.system(size: 17, weight: .semibold))
+                        .font(AppTheme.body(17)).fontWeight(.semibold)
                         .foregroundColor(.primary)
 
                     Text(passingText)
-                        .font(.system(size: 13))
-                        .foregroundColor(AppTheme.gray)
+                        .font(AppTheme.body(14))
+                        .foregroundColor(AppTheme.secondaryText)
                 }
 
                 Spacer()
 
                 if state.hasQuestions {
                     Text(localizer.localized("questionsAvailable", substitutions: ["count": "\(state.totalQuestions)"]))
-                        .font(.system(size: 13, weight: .semibold))
+                        .font(AppTheme.body(14)).fontWeight(.semibold)
                         .foregroundColor(AppTheme.blue)
                 } else {
                     Text(localizer.localized("comingSoon"))
-                        .font(.system(size: 11))
-                        .foregroundColor(AppTheme.gray)
+                        .font(AppTheme.body(14))
+                        .foregroundColor(AppTheme.secondaryText)
                         .padding(.horizontal, 8)
                         .padding(.vertical, 2)
                         .background(AppTheme.grayLight)

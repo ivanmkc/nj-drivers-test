@@ -3,11 +3,23 @@ import SwiftUI
 struct QuizScreen: View {
     @ObservedObject var vm: QuizViewModel
     @ObservedObject var localizer: Localizer
+    @State private var showExitConfirmation = false
 
     var body: some View {
         ScrollViewReader { proxy in
             ScrollView {
                 VStack(alignment: .leading, spacing: 12) {
+                    Button(localizer.localized("exitQuiz")) { showExitConfirmation = true }
+                        .frame(minHeight: 44)
+                        .accessibilityIdentifier("exit-quiz")
+                    if let error = vm.quizError {
+                        Text(error).foregroundColor(AppTheme.errorText).accessibilityIdentifier("quiz-error")
+                    }
+                    if vm.needsStudyWarning {
+                        Text(localizer.localized("studyLanguageFooter"))
+                            .font(.subheadline)
+                            .foregroundColor(AppTheme.secondaryText)
+                    }
                     // Progress bar
                     GeometryReader { geo in
                         ZStack(alignment: .leading) {
@@ -26,30 +38,24 @@ struct QuizScreen: View {
                     // Header
                     HStack {
                         Text("\(vm.currentIndex + 1) / \(vm.questions.count)")
-                            .font(.system(size: 14))
+                            .font(AppTheme.body(14))
                             .monospacedDigit()
-                            .foregroundColor(AppTheme.gray)
+                            .foregroundColor(AppTheme.secondaryText)
                         Spacer()
-                        HStack(spacing: 4) {
-                            Text("\(vm.correctCount)")
-                                .foregroundColor(AppTheme.green)
-                                .font(.system(size: 14, weight: .semibold))
-                                .monospacedDigit()
-                            Text("/")
-                                .foregroundColor(AppTheme.gray)
-                                .font(.system(size: 14))
-                            Text("\(vm.wrongCount)")
-                                .foregroundColor(AppTheme.red)
-                                .font(.system(size: 14, weight: .semibold))
-                                .monospacedDigit()
-                        }
+                        Text(localizer.localized("answerTally", substitutions: [
+                            "correct": "\(vm.correctCount)", "wrong": "\(vm.wrongCount)",
+                        ]))
+                        .font(.subheadline).fontWeight(.semibold)
+                        .foregroundColor(.primary)
+                        .multilineTextAlignment(.trailing)
+                        .fixedSize(horizontal: false, vertical: true)
                     }
 
                     if let q = vm.currentQuestion {
                         // Category badge
                         HStack(spacing: 6) {
                             Text(localizer.localizedCategory(q.category).uppercased())
-                                .font(.system(size: 12, weight: .semibold))
+                                .font(AppTheme.body(14)).fontWeight(.semibold)
                                 .foregroundColor(AppTheme.blue)
                                 .padding(.horizontal, 10)
                                 .padding(.vertical, 4)
@@ -58,8 +64,8 @@ struct QuizScreen: View {
 
                             if let miss = vm.questionMissInfo(q.id) {
                                 Text("\(localizer.localized("missed")) \(Int(round(Double(miss.wrong) / Double(miss.seen) * 100)))%")
-                                    .font(.system(size: 12, weight: .semibold))
-                                    .foregroundColor(AppTheme.red)
+                                    .font(AppTheme.body(14)).fontWeight(.semibold)
+                                    .foregroundColor(AppTheme.errorText)
                                     .padding(.horizontal, 10)
                                     .padding(.vertical, 4)
                                     .background(AppTheme.redLight)
@@ -67,31 +73,14 @@ struct QuizScreen: View {
                             }
                         }
 
+                        SourceCitationView(state: vm.currentState)
                         // Question text
                         Text(q.question)
-                            .font(.system(size: 18, weight: .semibold))
+                            .font(AppTheme.body(18)).fontWeight(.semibold)
                             .lineSpacing(4)
                             .fixedSize(horizontal: false, vertical: true)
 
-                        // Question image
-                        if let imageName = q.image,
-                           let path = Bundle.main.path(
-                               forResource: (imageName as NSString).deletingPathExtension,
-                               ofType: (imageName as NSString).pathExtension,
-                               inDirectory: "signs"
-                           ),
-                           let uiImage = UIImage(contentsOfFile: path) {
-                            Image(uiImage: uiImage)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(maxHeight: 240)
-                                .clipShape(RoundedRectangle(cornerRadius: 8))
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .stroke(AppTheme.border, lineWidth: 1)
-                                )
-                                .frame(maxWidth: .infinity)
-                        }
+                        signImage(for: q)
 
                         // Choices
                         ForEach(q.sortedChoiceKeys, id: \.self) { letter in
@@ -103,6 +92,7 @@ struct QuizScreen: View {
                                     vm.selectAnswer(letter)
                                 }
                             )
+                            .accessibilityIdentifier("answer-\(letter)")
                         }
 
                         // Explanation
@@ -112,9 +102,9 @@ struct QuizScreen: View {
                                     .fill(AppTheme.blue)
                                     .frame(width: 4)
                                 Text(explanation)
-                                    .font(.system(size: 14))
+                                    .font(AppTheme.body(14))
                                     .lineSpacing(4)
-                                    .foregroundColor(.secondary)
+                                    .foregroundColor(AppTheme.secondaryText)
                                     .padding(12)
                             }
                             .background(AppTheme.blueLight)
@@ -146,13 +136,14 @@ struct QuizScreen: View {
                                 }
                             } label: {
                                 Text(isLast ? localizer.localized("seeResults") : localizer.localized("next"))
-                                    .font(.system(size: 17, weight: .semibold))
+                                    .font(AppTheme.body(17)).fontWeight(.semibold)
                                     .foregroundColor(AppTheme.onPrimary)
                                     .frame(maxWidth: .infinity)
                                     .padding(16)
                                     .background(AppTheme.blue)
                                     .clipShape(RoundedRectangle(cornerRadius: 12))
                             }
+                            .accessibilityIdentifier("quiz-next")
                             .transition(.move(edge: .bottom).combined(with: .opacity))
                         }
                     }
@@ -161,6 +152,35 @@ struct QuizScreen: View {
                 .animation(.easeInOut(duration: 0.25), value: vm.answered)
             }
             .background(AppTheme.grayLight)
+        }
+        .alert(localizer.localized("exitQuiz"), isPresented: $showExitConfirmation) {
+            Button(localizer.localized("leaveQuiz"), role: .destructive) { vm.abandonQuiz() }
+            Button(localizer.localized("keepPracticing"), role: .cancel) {}
+        } message: {
+            Text(localizer.localized("exitQuizMessage"))
+        }
+    }
+
+    @ViewBuilder
+    private func signImage(for question: QuizQuestion) -> some View {
+        if let imageName = question.image,
+           let path = Bundle.main.path(
+               forResource: (imageName as NSString).deletingPathExtension,
+               ofType: (imageName as NSString).pathExtension,
+               inDirectory: "signs"
+           ),
+           let uiImage = UIImage(contentsOfFile: path) {
+            Image(uiImage: uiImage)
+                .resizable()
+                .scaledToFit()
+                .frame(maxHeight: 240)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(AppTheme.border, lineWidth: 1)
+                )
+                .frame(maxWidth: .infinity)
+                .accessibilityLabel(SignImageDescriptions.description(for: imageName))
         }
     }
 
@@ -192,26 +212,26 @@ private struct EvidenceBlockView: View {
 
             VStack(alignment: .leading, spacing: 8) {
                 HStack(spacing: 4) {
-                    Image(systemName: "text.book.closed")
-                        .font(.system(size: 12))
+                    Image(systemName: "text.book.closed").accessibilityHidden(true)
+                        .font(AppTheme.body(14))
                     Text(localizer.fromManualLabel())
-                        .font(.system(size: 12, weight: .semibold))
+                        .font(AppTheme.body(14)).fontWeight(.semibold)
                 }
-                .foregroundColor(AppTheme.gray)
+                .foregroundColor(AppTheme.secondaryText)
 
                 ForEach(evidence, id: \.self) { passage in
                     Text(passage)
-                        .font(.system(size: 13))
+                        .font(AppTheme.body(14))
                         .italic()
-                        .foregroundColor(AppTheme.gray)
+                        .foregroundColor(AppTheme.secondaryText)
                         .lineSpacing(3)
                         .fixedSize(horizontal: false, vertical: true)
                 }
 
                 if let source = sourceName {
                     Text("-- \(source)")
-                        .font(.system(size: 11))
-                        .foregroundColor(AppTheme.gray.opacity(0.7))
+                        .font(AppTheme.body(14))
+                        .foregroundColor(AppTheme.secondaryText)
                 }
             }
             .padding(12)

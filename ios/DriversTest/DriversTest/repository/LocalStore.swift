@@ -2,31 +2,46 @@ import Foundation
 
 class LocalStore {
     static let shared = LocalStore()
-    private init() {}
-    private let defaults = UserDefaults.standard
+    private let defaults: UserDefaults
+
+    init(defaults: UserDefaults = .standard) {
+        self.defaults = defaults
+    }
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()
 
-    private func storeKey(for stateCode: String) -> String {
-        "quiz_\(stateCode)"
+    private func storeKey(for stateCode: String, language: String? = nil) -> String {
+        "quiz_\(stateCode)" + (language.map { "_\($0)" } ?? "")
     }
 
-    func loadStore(for stateCode: String) -> QuizStore {
-        guard let data = defaults.data(forKey: storeKey(for: stateCode)),
+    func loadStore(for stateCode: String, language: String? = nil) -> QuizStore {
+        guard let data = defaults.data(forKey: storeKey(for: stateCode, language: language)),
               let store = try? decoder.decode(QuizStore.self, from: data) else {
             return .empty
         }
         return store
     }
 
-    func saveStore(_ store: QuizStore, for stateCode: String) {
+    func saveStore(_ store: QuizStore, for stateCode: String, language: String? = nil) {
         if let data = try? encoder.encode(store) {
-            defaults.set(data, forKey: storeKey(for: stateCode))
+            defaults.set(data, forKey: storeKey(for: stateCode, language: language))
         }
     }
 
     func clearStore(for stateCode: String) {
-        defaults.removeObject(forKey: storeKey(for: stateCode))
+        let prefix = storeKey(for: stateCode)
+        for key in defaults.dictionaryRepresentation().keys where key == prefix || key.hasPrefix(prefix + "_")
+            || key.hasPrefix("study_ack_\(stateCode)_") {
+            defaults.removeObject(forKey: key)
+        }
+    }
+
+    func hasAcknowledgedStudyLanguage(state: String, language: String) -> Bool {
+        defaults.bool(forKey: "study_ack_\(state)_\(language)")
+    }
+
+    func acknowledgeStudyLanguage(state: String, language: String) {
+        defaults.set(true, forKey: "study_ack_\(state)_\(language)")
     }
 
     var savedStateCode: String? {
@@ -39,8 +54,8 @@ class LocalStore {
         set { defaults.set(newValue, forKey: "quiz_lang") }
     }
 
-    func getWeakQuestions(for stateCode: String) -> [WeakQuestion] {
-        let store = loadStore(for: stateCode)
+    func getWeakQuestions(for stateCode: String, language: String? = nil) -> [WeakQuestion] {
+        let store = loadStore(for: stateCode, language: language)
         var weak: [WeakQuestion] = []
         for (idStr, record) in store.questions {
             guard let id = Int(idStr), record.wrong > 0, record.seen >= 1 else { continue }

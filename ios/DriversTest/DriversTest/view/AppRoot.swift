@@ -19,6 +19,10 @@ struct AppRoot: View {
                 StatsScreen(vm: vm, localizer: localizer)
             }
         }
+        .font(AppTheme.body(16))
+        .buttonStyle(TapTargetButtonStyle())
+        .preferredColorScheme(ProcessInfo.processInfo.arguments.contains("--uitest-dark") ? .dark : nil)
+        .onChange(of: localizer.currentLang) { _ in vm.showLegacyStats = false }
         .onAppear {
             vm.loadStates()
         }

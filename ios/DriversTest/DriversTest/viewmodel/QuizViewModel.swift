@@ -6,8 +6,11 @@ class QuizViewModel: ObservableObject {
     @Published var screen: AppScreen = .statePicker
     @Published var allStates: [StateInfo] = []
     @Published var currentState: StateInfo?
-    @Published private var cachedStore: QuizStore?
+    private var cachedStore: QuizStore?
     private var cachedStoreCode: String?
+    private var cachedLanguage: String?
+    @Published var showStudyWarning = false
+    @Published var showLegacyStats = false
 
     // Quiz state
     @Published var questions: [QuizQuestion] = []
@@ -25,25 +28,36 @@ class QuizViewModel: ObservableObject {
     @Published var selectedCount = 50
     @Published var isLoading = true
     @Published var loadError: String?
+    @Published var quizError: String?
+    @Published var languageFallbackNotice: String?
 
-    private let localizer = Localizer.shared
-    private let api = ApiClient.shared
-    private let storage = LocalStore.shared
+    private let localizer: Localizer
+    private let api: ApiClient
+    private let storage: LocalStore
+
+    init(api: ApiClient = .shared, storage: LocalStore = .shared, localizer: Localizer = .shared) {
+        self.api = api
+        self.storage = storage
+        self.localizer = localizer
+    }
 
     var store: QuizStore {
         guard let state = currentState else { return .empty }
-        if cachedStoreCode == state.code, let cached = cachedStore {
+        if showLegacyStats && screen == .stats { return storage.loadStore(for: state.code) }
+        if cachedStoreCode == state.code, cachedLanguage == localizer.currentLang, let cached = cachedStore {
             return cached
         }
-        let loaded = storage.loadStore(for: state.code)
+        let loaded = storage.loadStore(for: state.code, language: localizer.currentLang)
         cachedStore = loaded
         cachedStoreCode = state.code
+        cachedLanguage = localizer.currentLang
         return loaded
     }
 
     private func invalidateStoreCache() {
         cachedStore = nil
         cachedStoreCode = nil
+        cachedLanguage = nil
         cachedWeakQuestions = nil
         cachedWeakQuestionsCode = nil
     }
@@ -51,50 +65,26 @@ class QuizViewModel: ObservableObject {
     private func updateStoreCache(_ s: QuizStore) {
         cachedStore = s
         cachedStoreCode = currentState?.code
+        cachedLanguage = localizer.currentLang
         cachedWeakQuestions = nil
         cachedWeakQuestionsCode = nil
     }
 
     private var cachedWeakQuestions: [WeakQuestion]?
     private var cachedWeakQuestionsCode: String?
+    private var cachedWeakLanguage: String?
 
     var weakQuestions: [WeakQuestion] {
         guard let state = currentState else { return [] }
-        if cachedWeakQuestionsCode == state.code, let cached = cachedWeakQuestions {
+        if showLegacyStats && screen == .stats { return storage.getWeakQuestions(for: state.code) }
+        if cachedWeakQuestionsCode == state.code, cachedWeakLanguage == localizer.currentLang, let cached = cachedWeakQuestions {
             return cached
         }
-        let result = storage.getWeakQuestions(for: state.code)
+        let result = storage.getWeakQuestions(for: state.code, language: localizer.currentLang)
         cachedWeakQuestions = result
         cachedWeakQuestionsCode = state.code
+        cachedWeakLanguage = localizer.currentLang
         return result
-    }
-
-    var quizHistory: [QuizHistoryEntry] {
-        store.history
-    }
-
-    var averageScore: Int {
-        let h = quizHistory
-        guard !h.isEmpty else { return 0 }
-        return Int(h.map { Double($0.pct) }.reduce(0, +) / Double(h.count))
-    }
-
-    var passStreak: Int {
-        guard let state = currentState else { return 0 }
-        let h = quizHistory
-        var streak = 0
-        for entry in h.reversed() {
-            if entry.pct >= state.passingScorePct { streak += 1 } else { break }
-        }
-        return streak
-    }
-
-    var bestScore: Int {
-        quizHistory.map(\.pct).max() ?? 0
-    }
-
-    var questionsSeen: Int {
-        store.questions.count
     }
 
     var countOptions: [Int] {
@@ -117,7 +107,7 @@ class QuizViewModel: ObservableObject {
 
     var didPass: Bool {
         guard let state = currentState else { return false }
-        return resultPct >= state.passingScorePct
+        return !questions.isEmpty && correctCount * 100 >= questions.count * state.passingScorePct
     }
 
     var wrongResults: [SessionResult] {
@@ -169,12 +159,16 @@ class QuizViewModel: ObservableObject {
             // in English (saved state AND language persist in simulator
             // UserDefaults across launches within a test run).
             if ProcessInfo.processInfo.arguments.contains("--uitest-reset") {
+                if ProcessInfo.processInfo.arguments.contains("--uitest-clear-progress") {
+                    for state in allStates { storage.clearStore(for: state.code) }
+                }
                 storage.savedStateCode = nil
                 localizer.currentLang = "en"
             }
             if let savedCode = storage.savedStateCode,
                let saved = allStates.first(where: { $0.code == savedCode && $0.hasQuestions }) {
                 currentState = saved
+                normalizeLanguage(for: saved)
                 invalidateStoreCache()
                 selectedCount = min(50, saved.totalQuestions)
                 screen = .home
@@ -184,6 +178,8 @@ class QuizViewModel: ObservableObject {
     }
 
     func selectState(_ state: StateInfo) {
+        languageFallbackNotice = nil
+        normalizeLanguage(for: state)
         currentState = state
         invalidateStoreCache()
         storage.savedStateCode = state.code
@@ -201,8 +197,44 @@ class QuizViewModel: ObservableObject {
         screen = .home
     }
 
-    func startQuiz() {
+    var needsStudyWarning: Bool {
+        guard localizer.currentLang != "en", let state = currentState else { return false }
+        let names = ["es": "spanish", "ja": "japanese", "fr": "french"]
+        guard let name = names[localizer.currentLang], let official = state.officialTestLanguages else { return true }
+        return !official.contains { $0.lowercased() == name }
+    }
+
+    var legacySessionCount: Int {
+        guard let state = currentState else { return 0 }
+        return storage.loadStore(for: state.code).history.count
+    }
+
+    func requestQuiz() {
+        if needsStudyWarning, let state = currentState,
+           !storage.hasAcknowledgedStudyLanguage(state: state.code, language: localizer.currentLang) {
+            showStudyWarning = true
+        } else {
+            startQuiz()
+        }
+    }
+
+    func acknowledgeStudyLanguage() {
         guard let state = currentState else { return }
+        storage.acknowledgeStudyLanguage(state: state.code, language: localizer.currentLang)
+        startQuiz()
+    }
+
+    func practiceEnglish() {
+        localizer.currentLang = "en"
+        invalidateStoreCache()
+        quizMode = .random
+        startQuiz()
+    }
+
+    func startQuiz() {
+        showLegacyStats = false
+        guard let state = currentState else { return }
+        normalizeLanguage(for: state)
 
         if quizMode == .weak {
             let weak = weakQuestions
@@ -214,6 +246,12 @@ class QuizViewModel: ObservableObject {
         } else {
             questions = api.fetchQuiz(state: state.code, lang: localizer.currentLang, count: selectedCount)
         }
+        guard !questions.isEmpty else {
+            quizError = localizer.localized("quizUnavailable")
+            screen = .home
+            return
+        }
+        quizError = nil
         currentIndex = 0
         correctCount = 0
         wrongCount = 0
@@ -226,13 +264,15 @@ class QuizViewModel: ObservableObject {
     }
 
     func selectAnswer(_ letter: String) {
-        guard !answered, let q = currentQuestion, let state = currentState else { return }
-        answered = true
-        selectedAnswer = letter
-
+        guard screen == .quiz, !answered, let q = currentQuestion, q.choices[letter] != nil,
+              let state = currentState else { return }
         guard let response = api.fetchAnswer(questionId: q.id, state: state.code, lang: localizer.currentLang) else {
+            quizError = localizer.localized("answerUnavailable")
             return
         }
+        quizError = nil
+        answered = true
+        selectedAnswer = letter
         correctAnswer = response.answer
         explanation = response.explanation
         let isCorrect = letter == response.answer
@@ -245,7 +285,7 @@ class QuizViewModel: ObservableObject {
         record.seen += 1
         if !isCorrect { record.wrong += 1 }
         s.questions[idStr] = record
-        storage.saveStore(s, for: state.code)
+        storage.saveStore(s, for: state.code, language: localizer.currentLang)
         updateStoreCache(s)
 
         sessionResults.append(SessionResult(
@@ -261,6 +301,7 @@ class QuizViewModel: ObservableObject {
     }
 
     func nextQuestion() {
+        guard screen == .quiz, answered, currentIndex < questions.count else { return }
         currentIndex += 1
         if currentIndex >= questions.count {
             finishQuiz()
@@ -282,12 +323,21 @@ class QuizViewModel: ObservableObject {
             pct: resultPct,
             mode: quizMode.rawValue
         ))
-        storage.saveStore(s, for: state.code)
+        storage.saveStore(s, for: state.code, language: localizer.currentLang)
         updateStoreCache(s)
         screen = .results
     }
 
+    func abandonQuiz() {
+        questions = []
+        sessionResults = []
+        answered = false
+        quizError = nil
+        goHome()
+    }
+
     func showStats() {
+        showLegacyStats = false
         screen = .stats
     }
 
@@ -297,5 +347,42 @@ class QuizViewModel: ObservableObject {
         invalidateStoreCache()
         objectWillChange.send()
         screen = .home
+    }
+}
+
+extension QuizViewModel {
+    private func normalizeLanguage(for state: StateInfo) {
+        guard !state.languages.contains(localizer.currentLang) else { return }
+        let previous = localizer.langLabels[localizer.currentLang] ?? localizer.currentLang
+        localizer.currentLang = "en"
+        languageFallbackNotice = localizer.localized("languageFallback", substitutions: ["language": previous])
+    }
+
+    var quizHistory: [QuizHistoryEntry] {
+        store.history
+    }
+
+    var averageScore: Int {
+        let h = quizHistory
+        guard !h.isEmpty else { return 0 }
+        return Int(h.map { Double($0.pct) }.reduce(0, +) / Double(h.count))
+    }
+
+    var passStreak: Int {
+        guard let state = currentState else { return 0 }
+        let h = quizHistory
+        var streak = 0
+        for entry in h.reversed() {
+            if entry.total > 0 && entry.correct * 100 >= entry.total * state.passingScorePct { streak += 1 } else { break }
+        }
+        return streak
+    }
+
+    var bestScore: Int {
+        quizHistory.map(\.pct).max() ?? 0
+    }
+
+    var questionsSeen: Int {
+        store.questions.count
     }
 }
