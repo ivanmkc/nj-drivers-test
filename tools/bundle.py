@@ -88,7 +88,7 @@ def build_bundle():
                 continue
             lang = match.group(1)
             with open(os.path.join(state_dir, fname)) as f:
-                data = yaml.safe_load(f)
+                data = yaml.load(f, Loader=getattr(yaml, "CSafeLoader", yaml.SafeLoader))
             if not isinstance(data, dict) or "questions" not in data:
                 raise ValueError(
                     f"{state_code}/{fname}: expected a mapping with a 'questions' key, "

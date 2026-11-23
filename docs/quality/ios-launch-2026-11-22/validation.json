@@ -1,0 +1,57 @@
+{
+  "checked_at": "2026-11-22",
+  "toolchain": "Xcode 26.0.1 / iOS 26 SDK",
+  "checks": {
+    "pro-complete-final": {
+      "succeeded": true,
+      "passed_cases": 37,
+      "failed_cases": 0,
+      "log": "pro-complete-final.log",
+      "result_bundle": "pro-complete-final.xcresult"
+    },
+    "pro-content-verified": {
+      "succeeded": true,
+      "passed_cases": 2,
+      "failed_cases": 0,
+      "log": "pro-content-verified.log",
+      "result_bundle": "pro-content-verified.xcresult"
+    },
+    "se-content-verified": {
+      "succeeded": true,
+      "passed_cases": 2,
+      "failed_cases": 0,
+      "log": "se-content-verified.log",
+      "result_bundle": "se-content-verified.xcresult"
+    },
+    "pro-spanish-accessibility": {
+      "succeeded": true,
+      "passed_cases": 1,
+      "failed_cases": 0,
+      "log": "pro-spanish-accessibility.log",
+      "result_bundle": "pro-spanish-accessibility.xcresult"
+    },
+    "se-spanish-accessibility": {
+      "succeeded": true,
+      "passed_cases": 1,
+      "failed_cases": 0,
+      "log": "se-spanish-accessibility.log",
+      "result_bundle": "se-spanish-accessibility.xcresult"
+    }
+  },
+  "python_tests": 126,
+  "structural_english_questions": 18072,
+  "structural_issues": 0,
+  "unsigned_release_build": "final-content-device-release.log: BUILD SUCCEEDED",
+  "release_gate": {
+    "expected_exit": 1,
+    "held_states": [
+      "AR",
+      "NC",
+      "NJ",
+      "SD",
+      "UT",
+      "WV"
+    ]
+  },
+  "scope_limit": "Full suite precedes NJ metadata flag and Spanish dark-mode test extension; subsequent checks name that coverage explicitly."
+}

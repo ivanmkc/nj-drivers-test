@@ -4,6 +4,7 @@ struct QuizScreen: View {
     @ObservedObject var vm: QuizViewModel
     @ObservedObject var localizer: Localizer
     @State private var showExitConfirmation = false
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     var body: some View {
         ScrollViewReader { proxy in
@@ -36,19 +37,23 @@ struct QuizScreen: View {
                     .id("top")
 
                     // Header
-                    HStack {
+                    let headerLayout = dynamicTypeSize >= .xxxLarge ?
+                        AnyLayout(VStackLayout(alignment: .leading, spacing: 8)) :
+                        AnyLayout(HStackLayout())
+                    headerLayout {
                         Text("\(vm.currentIndex + 1) / \(vm.questions.count)")
                             .font(AppTheme.body(14))
                             .monospacedDigit()
                             .foregroundColor(AppTheme.secondaryText)
-                        Spacer()
+                        if dynamicTypeSize < .xxxLarge { Spacer() }
                         Text(localizer.localized("answerTally", substitutions: [
                             "correct": "\(vm.correctCount)", "wrong": "\(vm.wrongCount)",
                         ]))
                         .font(.subheadline).fontWeight(.semibold)
                         .foregroundColor(.primary)
-                        .multilineTextAlignment(.trailing)
+                        .multilineTextAlignment(dynamicTypeSize >= .xxxLarge ? .leading : .trailing)
                         .fixedSize(horizontal: false, vertical: true)
+                        .accessibilityIdentifier("quiz-tally")
                     }
 
                     if let q = vm.currentQuestion {
@@ -65,7 +70,7 @@ struct QuizScreen: View {
                             if let miss = vm.questionMissInfo(q.id) {
                                 Text("\(localizer.localized("missed")) \(Int(round(Double(miss.wrong) / Double(miss.seen) * 100)))%")
                                     .font(AppTheme.body(14)).fontWeight(.semibold)
-                                    .foregroundColor(AppTheme.errorText)
+                                    .foregroundColor(.primary)
                                     .padding(.horizontal, 10)
                                     .padding(.vertical, 4)
                                     .background(AppTheme.redLight)

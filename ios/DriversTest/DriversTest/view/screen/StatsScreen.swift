@@ -54,21 +54,16 @@ struct StatsScreen: View {
                         .foregroundColor(AppTheme.secondaryText)
                 }
                 // Top stats grid
-                LazyVGrid(columns: [
-                    GridItem(.flexible()),
-                    GridItem(.flexible()),
-                    GridItem(.flexible()),
-                ].prefix(dynamicTypeSize.isAccessibilitySize ? 1 : 3).map { $0 }, spacing: 10) {
+                let metricsLayout = dynamicTypeSize >= .xxxLarge ?
+                    AnyLayout(VStackLayout(spacing: 10)) : AnyLayout(HStackLayout(spacing: 10))
+                metricsLayout {
                     StatCardView(value: "\(vm.quizHistory.count)", label: localizer.localized("quizzes"),
                                  color: AppTheme.blue, accessibilityID: "stats-session-count")
                     StatCardView(value: "\(vm.averageScore)%", label: localizer.localized("avgScore"), color: avgScoreColor)
                     StatCardView(value: "\(vm.questionsSeen)", label: localizer.localized("qsSeen"), color: .primary)
                 }
 
-                LazyVGrid(columns: [
-                    GridItem(.flexible()),
-                    GridItem(.flexible()),
-                ].prefix(dynamicTypeSize.isAccessibilitySize ? 1 : 2).map { $0 }, spacing: 10) {
+                metricsLayout {
                     StatCardView(value: "\(vm.passStreak)", label: localizer.localized("passStreak"), color: AppTheme.green)
                     StatCardView(value: "\(vm.bestScore)%", label: localizer.localized("bestScore"), color: .primary)
                 }
@@ -86,10 +81,11 @@ struct StatsScreen: View {
                         .frame(height: 180)
                     } else {
                         Text(localizer.localized(vm.quizHistory.isEmpty ? "statsEmpty" : "statsOneMore"))
-                            .font(AppTheme.body(14))
+                            .font(.body)
                             .foregroundColor(AppTheme.secondaryText)
+                            .fixedSize(horizontal: false, vertical: true)
                             .frame(maxWidth: .infinity)
-                            .frame(height: 120)
+                            .padding(.vertical, 24)
                     }
                 }
                 .padding(16)

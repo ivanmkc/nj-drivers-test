@@ -184,3 +184,10 @@ def test_bundle_propagates_current_source_and_pending_content_review(states_dir)
     assert state["content_review_required"] is True
     index, _ = bundle.split_for_web({"states": [state]})
     assert index["states"][0]["content_review_required"] is True
+
+
+def test_bundle_loader_rejects_python_object_construction(states_dir) -> None:
+    state = states_dir["write"]("xx", questions=_sample_questions(1))
+    (state / "questions_en.yaml").write_text("!!python/object/apply:builtins.str [42]\n")
+    with pytest.raises(yaml.constructor.ConstructorError):
+        bundle.build_bundle()

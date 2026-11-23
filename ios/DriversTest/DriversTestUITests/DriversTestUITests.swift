@@ -1,3 +1,4 @@
+import UIKit
 import XCTest
 
 /// UI tests for the Driver's Test app.
@@ -129,27 +130,27 @@ final class DriversTestUITests: XCTestCase {
         app.buttons["count-10"].tap()
         tapWhenReachable(app.buttons["start-quiz"])
         capture("quiz-es-light")
-        if #available(iOS 17.0, *) { try app.performAccessibilityAudit() }
+        if #available(iOS 17.0, *) { try auditAccessibility() }
         for index in 0..<10 {
             let counter = app.staticTexts["\(index + 1) / 10"]
             XCTAssertTrue(counter.waitForExistence(timeout: 5))
             tapWhenReachable(app.buttons["answer-A"])
-            if index == 0, #available(iOS 17.0, *) { try app.performAccessibilityAudit() }
+            if index == 0, #available(iOS 17.0, *) { try auditAccessibility() }
             tapWhenReachable(app.buttons["quiz-next"])
         }
         capture("results-es")
-        if #available(iOS 17.0, *) { try app.performAccessibilityAudit() }
+        if #available(iOS 17.0, *) { try auditAccessibility() }
         tapWhenReachable(app.buttons["view-stats"])
         XCTAssertTrue(app.staticTexts["Tu Progreso"].waitForExistence(timeout: 5))
-        XCTAssertEqual(app.staticTexts["stats-session-count"].value as? String, "1")
+        XCTAssertEqual(app.descendants(matching: .any)["stats-session-count"].value as? String, "1")
         capture("stats-es")
-        if #available(iOS 17.0, *) { try app.performAccessibilityAudit() }
+        if #available(iOS 17.0, *) { try auditAccessibility() }
         app.terminate()
         app.launchArguments = []
         app.launch()
         XCTAssertTrue(app.staticTexts["Examen de Conducir NJ"].waitForExistence(timeout: 10))
         tapWhenReachable(app.buttons["view-stats"])
-        XCTAssertEqual(app.staticTexts["stats-session-count"].value as? String, "1")
+        XCTAssertEqual(app.descendants(matching: .any)["stats-session-count"].value as? String, "1")
     }
 
     func testScreensInDarkModeAtAccessibilityTextSize() throws {
@@ -159,18 +160,21 @@ final class DriversTestUITests: XCTestCase {
         app.launch()
         capture("picker-dark-accessibility")
         navigateToHome()
+        app.buttons["language-es"].tap()
+        XCTAssertTrue(app.staticTexts["Examen de Conducir NJ"].waitForExistence(timeout: 5))
         capture("home-dark-accessibility")
         tapWhenReachable(app.buttons["count-10"])
         tapWhenReachable(app.buttons["start-quiz"])
         XCTAssertTrue(app.staticTexts["1 / 10"].waitForExistence(timeout: 5))
         capture("quiz-dark-accessibility")
-        if #available(iOS 17.0, *) { try app.performAccessibilityAudit() }
+        if #available(iOS 17.0, *) { try auditAccessibility() }
         for _ in 0..<10 {
             tapWhenReachable(app.buttons["answer-A"])
             tapWhenReachable(app.buttons["quiz-next"])
         }
         capture("results-dark-accessibility")
         tapWhenReachable(app.buttons["view-stats"])
+        XCTAssertTrue(app.staticTexts["Tu Progreso"].waitForExistence(timeout: 5))
         capture("stats-dark-accessibility")
     }
 
@@ -237,6 +241,76 @@ final class DriversTestUITests: XCTestCase {
         confirmation.buttons["Leave quiz"].tap()
         XCTAssertTrue(app.staticTexts["NJ Driver's Test"].waitForExistence(timeout: 5))
         XCTAssertFalse(app.buttons["view-stats"].exists)
+    }
+
+    @available(iOS 17.0, *)
+    private func auditAccessibility() throws {
+        try app.performAccessibilityAudit { issue in
+            // iOS 26 intermittently reports contrast failure for this native black/white
+            // tally on a flat adaptive background. Handle only that ID, only if the
+            // CURRENT rendered pixels independently meet AA. Every other issue fails.
+            guard issue.auditType == .contrast, let element = issue.element,
+                  element.identifier == "quiz-tally",
+                  let contrast = self.measuredContrast(in: element.screenshot().image),
+                  contrast >= 4.5 else { return false }
+            let evidence = XCTAttachment(string: "Native quiz tally rendered contrast: \(contrast):1 (AA minimum 4.5:1)")
+            evidence.name = "quiz-tally-contrast-measurement"
+            evidence.lifetime = .keepAlways
+            self.add(evidence)
+            let pixels = XCTAttachment(screenshot: element.screenshot())
+            pixels.name = "quiz-tally-contrast-pixels"
+            pixels.lifetime = .keepAlways
+            self.add(pixels)
+            return true
+        }
+    }
+
+    private func measuredContrast(in image: UIImage) -> Double? {
+        guard let cgImage = image.cgImage,
+              let space = CGColorSpace(name: CGColorSpace.sRGB) else { return nil }
+        let width = cgImage.width
+        let height = cgImage.height
+        guard width > 0, height > 0 else { return nil }
+        var bytes = [UInt8](repeating: 0, count: width * height * 4)
+        let drawn = bytes.withUnsafeMutableBytes { storage -> Bool in
+            guard let context = CGContext(data: storage.baseAddress, width: width, height: height,
+                                          bitsPerComponent: 8, bytesPerRow: width * 4, space: space,
+                                          bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue |
+                                            CGBitmapInfo.byteOrder32Big.rawValue) else { return false }
+            context.draw(cgImage, in: CGRect(x: 0, y: 0, width: width, height: height))
+            return true
+        }
+        guard drawn else { return nil }
+        var colors: [UInt32: Int] = [:]
+        for index in stride(from: 0, to: bytes.count, by: 4) where bytes[index + 3] == 255 {
+            let rgb = (UInt32(bytes[index]) << 16) | (UInt32(bytes[index + 1]) << 8) | UInt32(bytes[index + 2])
+            colors[rgb, default: 0] += 1
+        }
+        let dominant = colors.sorted { $0.value > $1.value }.prefix(2)
+        guard dominant.count == 2, dominant.allSatisfy({ $0.value >= width * height / 100 }) else { return nil }
+        func luminance(_ rgb: UInt32) -> Double {
+            let channels = [16, 8, 0].map { shift -> Double in
+                let channel = Double((rgb >> shift) & 255) / 255
+                return channel <= 0.04045 ? channel / 12.92 : pow((channel + 0.055) / 1.055, 2.4)
+            }
+            return channels[0] * 0.2126 + channels[1] * 0.7152 + channels[2] * 0.0722
+        }
+        let values = dominant.map { luminance($0.key) }.sorted()
+        return (values[1] + 0.05) / (values[0] + 0.05)
+    }
+
+    func testMeasuredContrastKeepsLowContrastBlocking() throws {
+        func swatch(_ foreground: UIColor) -> UIImage {
+            UIGraphicsImageRenderer(size: CGSize(width: 100, height: 40)).image { context in
+                UIColor.white.setFill()
+                context.fill(CGRect(x: 0, y: 0, width: 100, height: 40))
+                foreground.setFill()
+                context.fill(CGRect(x: 0, y: 0, width: 50, height: 40))
+            }
+        }
+        XCTAssertEqual(try XCTUnwrap(measuredContrast(in: swatch(.black))), 21, accuracy: 0.1)
+        XCTAssertLessThan(try XCTUnwrap(measuredContrast(in: swatch(.lightGray))), 4.5)
+        XCTAssertNil(measuredContrast(in: swatch(.white)), "An unmeasurable label must not bypass the audit")
     }
 
     private func tapWhenReachable(_ element: XCUIElement) {

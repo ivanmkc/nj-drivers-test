@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-11-22",
+  "scope": "Follow-up to the six low-confidence rows in data/dmv_test_languages.json. Primary agency pages were read; no confidence was inflated merely because a page was reachable.",
+  "app_decision": "All six shipping state configs lack official_test_languages evidence, so the iOS app conservatively labels their non-English banks as study aids and offers English practice. This review does not alter those configs or declare unknown languages unavailable.",
+  "results": [
+    {
+      "code": "ms",
+      "source": "Mississippi DPS learner-permit page",
+      "url": "https://www.driverservicebureau.dps.ms.gov/Drivers/Learners_Permit",
+      "finding": "The current page requires an in-person knowledge exam but does not enumerate its available languages.",
+      "limit": "A missing language list is not proof of English-only testing. The older third-party EN/ES claim remains unconfirmed."
+    },
+    {
+      "code": "mt",
+      "source": "Montana MVD forms and driver manuals",
+      "url": "https://mvdmt.gov/forms-driver-license/",
+      "finding": "The agency lists Spanish, Arabic, Dari and Swahili study manuals.",
+      "limit": "Manual translations do not establish the language menu for the actual knowledge exam; do not promote the 2016 test-language list to current verified fact."
+    },
+    {
+      "code": "ok",
+      "source": "Service Oklahoma online written test",
+      "url": "https://oklahoma.gov/service/popular-services/written-test.html",
+      "finding": "The online-exam FAQ expressly says its written test is available only in English.",
+      "quote": "At this time, the written test is only available in English.",
+      "limit": "This is an online-test statement. It does not resolve all in-person or CareerTech testing options."
+    },
+    {
+      "code": "sc",
+      "source": "SCDMV driving tests",
+      "url": "https://www.dmv.sc.gov/driver-services/drivers-license/testing",
+      "finding": "The current page explains branch and authorized third-party testing but does not enumerate exam languages.",
+      "limit": "The legacy four-language list is not re-verified by this page."
+    },
+    {
+      "code": "sd",
+      "source": "South Dakota agency highway-safety planning document",
+      "url": "https://www.sd.gov/sys_attachment.do?sys_id=3f56bc351b4f62507e05ea85624bcbcf&sysparm_viewer_id=d256bc351b4f62507e05ea85624bcb01&sysparm_viewer_table=kb_knowledge",
+      "finding": "An agency planning document records that the written driver-license exam became available in Spanish in 2020.",
+      "quote": "In 2020, the written portion of the driver license exam was made available in Spanish.",
+      "limit": "This provides primary historical support for Spanish, not a complete current exam-language menu. Current application/manual translations alone are insufficient evidence."
+    },
+    {
+      "code": "wv",
+      "source": "WV DMV knowledge-testing documents",
+      "url": "https://dmv.wv.gov/appt-documents-knowledge-testing",
+      "finding": "The current official page links knowledge-testing resources and an interpreter/translator form.",
+      "limit": "It does not enumerate a complete current exam-language menu. An interpreter form or translated registration page does not prove a particular exam is offered in that language."
+    }
+  ],
+  "remaining": "Verify the actual non-commercial testing modes/languages with the relevant agencies before claiming full resolution of #58. Keep old evidence and separate online, in-person, interpreter and translated-handbook facts."
+}

@@ -226,24 +226,27 @@ struct StatCardView: View {
     let label: String
     let color: Color
     var accessibilityID: String?
+    @ScaledMetric(relativeTo: .body) private var minimumHeight = 104.0
 
     var body: some View {
         VStack(spacing: 4) {
             Text(value)
-                .accessibilityIdentifier(accessibilityID ?? label)
-                .accessibilityLabel(label)
-                .accessibilityValue(value)
                 .font(AppTheme.display(26)).fontWeight(.bold)
                 .monospacedDigit()
                 .foregroundColor(color)
             Text(label)
-                .font(AppTheme.body(14))
-                .foregroundColor(AppTheme.secondaryText)
-                .textCase(.uppercase)
+                .font(.body)
+                .foregroundColor(.primary)
+                .fixedSize(horizontal: false, vertical: true)
+                .multilineTextAlignment(.center)
         }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 16)
+        .frame(maxWidth: .infinity, minHeight: minimumHeight)
+        .padding(8)
         .cardStyle(borderWidth: 1)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(label)
+        .accessibilityValue(value)
+        .accessibilityIdentifier(accessibilityID ?? label)
     }
 }
 
