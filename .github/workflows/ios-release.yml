@@ -26,7 +26,7 @@ permissions:
 
 jobs:
   archive-and-upload:
-    runs-on: macos-14
+    runs-on: macos-15
     defaults:
       run:
         working-directory: ios/DriversTest
@@ -63,10 +63,13 @@ jobs:
 
       - name: Select Xcode
         run: |
-          XCODE_PATH=$(ls -d /Applications/Xcode_15*.app 2>/dev/null | sort -V | tail -1)
-          if [ -z "$XCODE_PATH" ]; then XCODE_PATH=$(ls -d /Applications/Xcode*.app 2>/dev/null | sort -V | tail -1); fi
-          echo "Using $XCODE_PATH"
+          XCODE_PATH=/Applications/Xcode_26.3.app
+          test -d "$XCODE_PATH" || { echo "::error::Xcode 26.3 is required"; exit 1; }
           sudo xcode-select -s "$XCODE_PATH/Contents/Developer"
+          xcodebuild -version
+          xcrun --sdk iphoneos --show-sdk-version
+          xcrun --sdk iphonesimulator --show-sdk-version
+          echo "PYTHON=$(command -v python3)" >> "$GITHUB_ENV"
 
       - name: Write App Store Connect API key
         env:
@@ -87,7 +90,7 @@ jobs:
         run: |
           EXTRA=()
           if [ -n "$MARKETING_VERSION_INPUT" ]; then EXTRA+=("MARKETING_VERSION=$MARKETING_VERSION_INPUT"); fi
-          xcodebuild archive \
+          xcodebuild archive -sdk iphoneos \
             -project DriversTest.xcodeproj \
             -scheme DriversTest \
             -configuration Release \

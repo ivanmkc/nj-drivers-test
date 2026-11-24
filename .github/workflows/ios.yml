@@ -16,7 +16,7 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: macos-14
+    runs-on: macos-15
     defaults:
       run:
         working-directory: ios/DriversTest
@@ -42,17 +42,20 @@ jobs:
 
       - name: Select Xcode
         run: |
-          XCODE_PATH=$(ls -d /Applications/Xcode_15*.app 2>/dev/null | sort -V | tail -1)
-          if [ -z "$XCODE_PATH" ]; then XCODE_PATH=$(ls -d /Applications/Xcode*.app 2>/dev/null | sort -V | tail -1); fi
-          echo "Using $XCODE_PATH"
+          XCODE_PATH=/Applications/Xcode_26.3.app
+          test -d "$XCODE_PATH" || { echo "::error::Xcode 26.3 is required"; exit 1; }
           sudo xcode-select -s "$XCODE_PATH/Contents/Developer"
+          xcodebuild -version
+          xcrun --sdk iphoneos --show-sdk-version
+          xcrun --sdk iphonesimulator --show-sdk-version
+          echo "PYTHON=$(command -v python3)" >> "$GITHUB_ENV"
 
       - name: List available simulators
         run: xcrun simctl list devices available | grep iPhone | head -10
 
       - name: Build
         run: |
-          xcodebuild build \
+          xcodebuild build -sdk iphonesimulator \
             -project DriversTest.xcodeproj \
             -scheme DriversTest \
             -destination 'generic/platform=iOS Simulator' \
@@ -61,7 +64,7 @@ jobs:
 
       - name: Build Release (unsigned, generic iOS device)
         run: |
-          xcodebuild build \
+          xcodebuild build -sdk iphoneos \
             -project DriversTest.xcodeproj \
             -scheme DriversTest \
             -destination 'generic/platform=iOS' \
@@ -82,19 +85,22 @@ jobs:
           ")
           echo "SIMULATOR_UDID=$UDID" >> $GITHUB_ENV
           echo "Booting simulator: $UDID"
-          xcrun simctl boot "$UDID" || true
+          test -n "$UDID" || { echo "::error::No available iPhone simulator"; exit 1; }
+          if ! xcrun simctl list devices booted -j | grep -q "$UDID"; then
+            xcrun simctl boot "$UDID"
+          fi
+          xcrun simctl bootstatus "$UDID" -b
 
       - name: Run UI Tests
         run: |
           echo "Testing on simulator: $SIMULATOR_UDID"
-          xcodebuild test \
+          xcodebuild test -sdk iphonesimulator \
             -project DriversTest.xcodeproj \
             -scheme DriversTest \
             -destination "platform=iOS Simulator,id=$SIMULATOR_UDID" \
             -configuration Debug \
             CODE_SIGNING_ALLOWED=NO \
-            -resultBundlePath TestResults.xcresult \
-            -only-testing:DriversTestUITests
+            -resultBundlePath TestResults.xcresult
 
       - name: Upload test results
         if: always()
