@@ -4,7 +4,7 @@ Scope: the five priority findings on the iOS App Store launch board. Android/web
 
 ## November 26 CI correction
 
-The subsequent c5529f9 CI run failed one unit test: the metadata assertion still expected NJ to be unheld after the 2026 manual review flag was added. The November 22 all-green app-code suite predates that metadata change; its result does not establish that c5529f9 passed. The assertion is now corrected without clearing the hold, and also checks that unheld KY remains unheld. All 17 unit tests passed locally on November 26; see the [follow-up record](../ios-launch-2026-11-26/README.md) for current CI and PR status.
+The subsequent c5529f9 CI run failed one unit test: the metadata assertion still expected NJ to be unheld after the 2026 manual review flag was added. The November 22 all-green app-code suite predates that metadata change; its result does not establish that c5529f9 passed. The assertion is now corrected without clearing the hold, and also checks that unheld KY remains unheld. All 17 unit tests passed locally on November 26, then fresh CI on ca02898 passed all 20 UI and 17 unit tests plus Debug/unsigned Release builds; see the [follow-up record](../ios-launch-2026-11-26/README.md) for current CI and PR status.
 
 ## Finding-to-fix map
 
@@ -104,7 +104,7 @@ Named screen captures and their originating tests are listed in [screenshots.jso
 
 ## Release work that is still required
 
-1. **Publish and review the changes.** [PR #78](https://github.com/ivanmkc/nj-drivers-test/pull/78) contains the build fixes. The source-review branch is stacked on it; the iOS quality branch is stacked on the source-review branch. Store-copy changes are independent. No merge is implied by a branch or PR existing.
+1. **Publish and review the changes.** [PR #78](https://github.com/ivanmkc/nj-drivers-test/pull/78) contains the build fixes. The source-review branch is stacked on it; the iOS quality branch is stacked on the source-review branch. Store-copy changes also inherit the build branch; they are independent of the source/quality changes. No merge is implied by a branch or PR existing.
 2. **Regenerate and verify AR, NC, NJ, SD, UT and WV banks against their current manuals, then regenerate affected translations.** The November 21 recheck reached all eight previously flagged source URLs (six canonical and two recovery). Kentucky was byte-identical to its stored LFS object. The five previously identified banks plus newly found NJ still have explicit review holds; the release lane refuses to upload while they remain. The generation/translation pipeline's Google application-default credentials are absent on this computer. Do not clear holds solely because a URL is reachable.
 The official NJ URL now serves 2026 while its stored bank cites 2025; the new NJ hold is included in this quality branch. See the [eight-question source spot-check](nj-source-spot-check.json) for bounded English/Spanish findings and source page numbers.
 
@@ -116,18 +116,18 @@ The six low-confidence language rows (MS, MT, OK, SC, SD, WV) were also checked 
 
 ### PR handoff
 
-Only #78 is submitted. These pushed branch comparisons are prepared for the remaining PRs; opening a comparison does not itself create a PR. Links returned HTTP 200 on November 22.
+PRs #78 and #79 are submitted. The remaining pushed branch comparisons are prepared for PR submission; opening a comparison does not itself create a PR. Links returned HTTP 200 on November 22.
 
 | Change | Base ← head | Action |
 | --- | --- | --- |
 | Build/CI | `main` ← `fix/ios-launch-build` | [Review PR #78](https://github.com/ivanmkc/nj-drivers-test/pull/78); its iOS CI run 129 succeeded |
-| Source review (original five holds) | `fix/ios-launch-build` ← `fix/source-freshness-review` | [Open prepared comparison](https://github.com/ivanmkc/nj-drivers-test/compare/fix/ios-launch-build...fix/source-freshness-review?expand=1) |
+| Source review (original five holds) | `fix/ios-launch-build` ← `fix/source-freshness-review` | [Review PR #79](https://github.com/ivanmkc/nj-drivers-test/pull/79) |
 | iOS quality + new NJ hold | `fix/source-freshness-review` ← `fix/ios-launch-quality` | [Open prepared comparison](https://github.com/ivanmkc/nj-drivers-test/compare/fix/source-freshness-review...fix/ios-launch-quality?expand=1) |
-| Store copy | `main` ← `fix/store-copy-readiness` | [Open prepared comparison](https://github.com/ivanmkc/nj-drivers-test/compare/main...fix/store-copy-readiness?expand=1) |
+| Store copy | `fix/ios-launch-build` ← `fix/store-copy-readiness` | [Open prepared comparison](https://github.com/ivanmkc/nj-drivers-test/compare/fix/ios-launch-build...fix/store-copy-readiness?expand=1) |
 
-Review the stack from build → source → quality, or retarget dependent PRs after each base lands. Do not merge a dependency that is still under review merely to make a comparison shorter. The independent store-copy branch can be reviewed separately.
+Review the stack from build → source → quality, or retarget dependent PRs after each base lands. Do not merge a dependency that is still under review merely to make a comparison shorter. Store copy can be reviewed separately against the build branch; retarget it to main after #78 lands.
 
-The GitHub connector refuses writes with “Resource not accessible by integration,” and the local gh token is invalid. The independent owner SSH login is valid; it can publish the code. PR #78 was created through the owner's existing GitHub browser session. Native browser actions stopped when Chrome repeatedly changed windows; ready PR descriptions are retained in `output/prs/`. Agent Bridge later refused the next board status save with “Tool access unavailable; renew the application run grant.” The last accepted board status therefore predates the final push/test record; the repository report is the newer evidence.
+The GitHub connector refuses writes with “Resource not accessible by integration,” and the local gh token is invalid. The independent owner SSH login is valid; it can publish the code. PR #78 was created through the owner's existing GitHub browser session. Native browser actions stopped when Chrome repeatedly changed windows; ready PR descriptions are retained in `output/prs/`. Agent Bridge later refused the next board status save with “Tool access unavailable; renew the application run grant.” At that point the last accepted board status predated the final push/test record. On November 26, board reads and review/checklist saves worked again; the follow-up record distinguishes the corrected CI result from the earlier failure.
 
 ## Recovery
 

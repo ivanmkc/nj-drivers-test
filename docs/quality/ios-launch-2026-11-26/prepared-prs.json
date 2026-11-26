@@ -1,0 +1,35 @@
+[
+  {
+    "number": 78,
+    "base": "main",
+    "head": "fix/ios-launch-build",
+    "title": "fix(ios): require Xcode 26 CI and propagate bundle failures",
+    "url": "https://github.com/ivanmkc/nj-drivers-test/pull/78"
+  },
+  {
+    "base": "fix/ios-launch-build",
+    "head": "fix/source-freshness-review",
+    "title": "fix(content): repair manual probes and retain edition review holds",
+    "body": "Repairs canonical manual probes, compares real Git LFS object hashes, preserves policy evidence and retains the five unresolved edition holds in this branch. Recorded November 21 source checks are retained; no bank regeneration is claimed. The companion quality branch adds the independently found NJ hold. Stacked on #78; part of #56.",
+    "compareUrl": "https://github.com/ivanmkc/nj-drivers-test/compare/fix/ios-launch-build...fix/source-freshness-review?expand=1",
+    "status": "open",
+    "number": 79,
+    "url": "https://github.com/ivanmkc/nj-drivers-test/pull/79"
+  },
+  {
+    "base": "fix/ios-launch-build",
+    "head": "fix/store-copy-readiness",
+    "title": "fix(store): correct listing limits, source claims and support URLs",
+    "body": "Corrects the recommended App Store name to fit the 30-character limit, updates the question count, and removes unsupported exact-paragraph/current-edition claims. Uses the actual support/privacy destinations and distinguishes mock screenshots, draft pricing and Spanish proofreading from release-approved assets.\n\nLinks returned HTTP 200 in the November 21 source check. The iOS study-language warning and separate statistics are in the companion iOS quality branch; other-platform claims still require validation. This PR does not submit store forms or approve the draft listing.\n\nPart of #55 and #56.\n\nAlso corrects the alternative-title and Spanish length annotations. Both recommended title alternatives are 30 characters; the English Play summary is 73 characters. Over-limit creative variants remain explicitly marked as drafts that must not be submitted.\n\nStacked on #78: the branch inherits its build fixes. Comparing to fix/ios-launch-build isolates the two store-copy commits; retarget to main once #78 lands.",
+    "compareUrl": "https://github.com/ivanmkc/nj-drivers-test/compare/fix/ios-launch-build...fix/store-copy-readiness?expand=1",
+    "status": "prepared_not_submitted"
+  },
+  {
+    "base": "fix/source-freshness-review",
+    "head": "fix/ios-launch-quality",
+    "title": "fix(ios): complete quiz recovery, language progress and accessibility coverage",
+    "body": "Implements the five-screen iOS polish with bundled fonts and source citations, separate state/language progress while preserving legacy records, study-only consent and an English practice path. Adds an explicit exit/discard policy, recoverable empty-bank/missing-answer handling, exact pass thresholds, adaptive question counts and accessible score-chart values.\n\nAdds an XCTest unit target and mandatory-screen UI tests covering quiz/results/statistics/relaunch, exit/cancel, study-language consent, source-review notices and accessibility. Final validation details and screenshots are recorded in docs/quality/ios-launch-2026-11-22/README.md.\n\nStacked on fix/source-freshness-review (which depends on #78). Part of #53, #58 and #56; does not close the parent launch issues because source regeneration, device VoiceOver, signing and owner approval remain outstanding.\n\nThe November 22 primary-source spot-check also found that NJ now serves a 2026 manual while its bank cites 2025. Adds NJ to the review holds (six states total across the stack) and records eight bounded English/Spanish source comparisons without claiming complete content regeneration. Final Swift code passes 20 UI and 17 unit tests; 126 Python tests, lint/type checks and an unsigned Release build pass. See the report for the final data-notice checks and remaining account/signing/device work.\n\nNovember 26 follow-up: fixes the c5529f9 CI metadata assertion without clearing NJ\u2019s hold. Local 17/17 unit tests and 10 bundle/release-gate tests pass. Fresh full CI: https://github.com/ivanmkc/nj-drivers-test/actions/runs/45907831941 (passed: 20 UI + 17 unit tests, Debug and unsigned Release builds). Stacked on #79.",
+    "compareUrl": "https://github.com/ivanmkc/nj-drivers-test/compare/fix/source-freshness-review...fix/ios-launch-quality?expand=1",
+    "status": "prepared_not_submitted"
+  }
+]

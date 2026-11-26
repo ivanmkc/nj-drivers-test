@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-11-26",
+  "code_commit": "ca02898b4f305dc1865d158c9b25bf49e1d38c14",
+  "local_xctest": {
+    "tests": 17,
+    "failures": 0,
+    "result_bundle": "metadata-unit-confirmed.xcresult"
+  },
+  "python_targeted_tests": {
+    "tests": 10,
+    "failures": 0
+  },
+  "swiftlint": "passed",
+  "release_holds_retained": [
+    "AR",
+    "NC",
+    "NJ",
+    "SD",
+    "UT",
+    "WV"
+  ],
+  "prior_ci_failure": {
+    "run_id": 45090886906,
+    "ui_tests": 20,
+    "ui_failures": 0,
+    "unit_tests": 17,
+    "unit_failures": 1,
+    "cause": "Stale XCTAssertFalse for NJ after adding its 2026 edition-review hold"
+  },
+  "fresh_ci": {
+    "run_id": 45907831941,
+    "status": "completed",
+    "url": "https://github.com/ivanmkc/nj-drivers-test/actions/runs/45907831941",
+    "conclusion": "success",
+    "ui_tests": 20,
+    "unit_tests": 17,
+    "failures": 0,
+    "metadata_regression": "passed",
+    "debug_build": "passed",
+    "unsigned_release_build": "passed"
+  },
+  "created_pr": {
+    "number": 79,
+    "base": "fix/ios-launch-build",
+    "head": "fix/source-freshness-review"
+  },
+  "google_adc": "DefaultCredentialsError",
+  "browser_coordination": "pending_owner_response"
+}
