@@ -2,6 +2,10 @@
 
 Scope: the five priority findings on the iOS App Store launch board. Android/web polish and new countries are separate work. Main remained `a9cb0df`; the build, source-review and copy branches from the interrupted run were preserved.
 
+## November 26 CI correction
+
+The subsequent c5529f9 CI run failed one unit test: the metadata assertion still expected NJ to be unheld after the 2026 manual review flag was added. The November 22 all-green app-code suite predates that metadata change; its result does not establish that c5529f9 passed. The assertion is now corrected without clearing the hold, and also checks that unheld KY remains unheld. All 17 unit tests passed locally on November 26; see the [follow-up record](../ios-launch-2026-11-26/README.md) for current CI and PR status.
+
 ## Finding-to-fix map
 
 | Board finding | Implemented change | Remaining acceptance work |

@@ -184,7 +184,12 @@ final class DriversTestTests: XCTestCase {
         let arkansas = try XCTUnwrap(ApiClient.shared.fetchStates().first { $0.code == "ar" })
         XCTAssertEqual(arkansas.manualURL, "https://media.ark.org/dps/Arkansas-DL-Study-Guide-English_11122026.pdf")
         XCTAssertTrue(arkansas.contentReviewRequired)
-        XCTAssertFalse(try XCTUnwrap(ApiClient.shared.fetchStates().first { $0.code == "nj" }).contentReviewRequired)
+        // NJ now serves a 2026 manual while its bank cites 2025. Keep that hold visible.
+        let newJersey = try XCTUnwrap(ApiClient.shared.fetchStates().first { $0.code == "nj" })
+        XCTAssertTrue(newJersey.contentReviewRequired)
+        // KY's source was byte-identical: an unheld bank must not inherit another state's hold.
+        let kentucky = try XCTUnwrap(ApiClient.shared.fetchStates().first { $0.code == "ky" })
+        XCTAssertFalse(kentucky.contentReviewRequired)
     }
 
     func testChangingStateCannotCreditEnglishFallbackToUnsupportedLanguage() throws {
