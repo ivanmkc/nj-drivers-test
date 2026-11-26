@@ -71,6 +71,14 @@ def _write_config(state_dir: str, entry: dict[str, Any]) -> str:
         "source": entry.get("source_description") or entry.get("source") or entry["name"],
     }
     config_path = os.path.join(state_dir, "config.json")
+    if os.path.exists(config_path):
+        with open(config_path) as existing_file:
+            existing = json.load(existing_file)
+        if not isinstance(existing, dict):
+            raise ValueError(f"Expected a config object at {config_path}")
+        # A source refresh must not erase policy evidence or clear an
+        # unresolved content-review hold before regeneration and verification.
+        config = {**existing, **config}
     with open(config_path, "w") as f:
         json.dump(config, f, indent=2)
         f.write("\n")

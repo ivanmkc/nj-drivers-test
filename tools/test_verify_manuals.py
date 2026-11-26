@@ -57,6 +57,7 @@ def _session_returning(head_resp: MagicMock, get_resp: MagicMock | None = None) 
         ("portal.ct.gov", True),
         ("oklahoma.gov", True),
         ("dot.state.wy.us", True),
+        ("media.ark.org", True),  # official Arkansas media CDN
         ("scdmvonline.com", True),  # exception list
         ("driving-tests.org", False),
         ("dmvquestionbank.com", False),
@@ -119,10 +120,9 @@ def test_verify_entry_403_then_ok_via_get_fallback() -> None:
     )
     sess = _session_returning(head, get)
     result = vm.verify_entry(entry, session=sess)
-    # status=206 != 200, so this is still "stale" by our strict check —
-    # which is correct: we want to surface anything that isn't a clean 200.
+    # A valid byte-range response proves the full PDF is reachable.
     assert result.http == 206
-    assert result.verdict == "stale"
+    assert result.verdict == "ok"
     # But the Content-Range total was parsed.
     assert result.content_length == 3_145_728
 
@@ -749,3 +749,24 @@ def test_find_stale_states_skips_malformed_entries() -> None:
     ]
     # All three should be silently skipped; no entries with codes means no stale.
     assert vm.find_stale_states(entries, now=now) == {}
+
+
+def test_missing_head_metadata_retries_get_and_sniffs_pdf() -> None:
+    entry = {"code": "sd", "manual_url": "https://www.sd.gov/sys_attachment.do?id=manual"}
+    head = _make_response(content_type="", content_length=0)
+    get = _make_response(content_type="", content_length=3_000_000)
+    get.iter_content.return_value = iter([b"%PDF-1.7 header"])
+    session = _session_returning(head, get)
+    result = vm.verify_entry(entry, session=session)
+    assert result.verdict == "ok"
+    assert result.content_type == "application/pdf"
+    session.get.assert_called_once()
+    get.close.assert_called_once()
+
+
+def test_partial_response_without_total_size_is_not_a_verified_manual() -> None:
+    entry = {"code": "co", "manual_url": "https://dmv.colorado.gov/manual.pdf"}
+    head = _make_response(status=403)
+    get = _make_response(status=206, content_length=1024)
+    result = vm.verify_entry(entry, session=_session_returning(head, get))
+    assert result.verdict == "stale"

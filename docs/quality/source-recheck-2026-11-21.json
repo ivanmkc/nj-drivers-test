@@ -1,0 +1,149 @@
+{
+  "checked_at": "2026-11-21",
+  "method": "HTTP GET, PDF signature, and SHA-256 comparison with the stored Git LFS object digest (not the pointer file). Actual text was also compared for AR, SD and UT after fetching the LFS objects.",
+  "results": [
+    {
+      "code": "ky",
+      "url": "https://wp.kentuckystatepolice.ky.gov/wp-content/uploads/2023/11/Kentucky-Driver-Manual-10-11-2023.pdf",
+      "status": 200,
+      "pdf": true,
+      "sha256": "d8047d28f8358bb27cb393f3c87df22ae9732e4c3783a8116f105ef48102276b",
+      "storedSha": "d8047d28f8358bb27cb393f3c87df22ae9732e4c3783a8116f105ef48102276b",
+      "storedDigestSource": "Git LFS object SHA-256"
+    },
+    {
+      "code": "ut",
+      "url": "https://dld.utah.gov/wp-content/uploads/Driver-Handbook-2026.pdf",
+      "status": 200,
+      "pdf": true,
+      "sha256": "3764482adaa0aa2fbc549ca9607fa87aef2abb77ad5c1297ac1e2642f94dcb21",
+      "storedSha": "a0ee4daccde8eb7ba959960a34e25bc9ff4630390805d10993c1ca3011389c46",
+      "storedDigestSource": "Git LFS object SHA-256"
+    },
+    {
+      "code": "sd",
+      "url": "https://www.sd.gov/sys_attachment.do?sys_id=d8e0b08e47bd0390a497127ba26d4348&sysparm_viewer_id=f2c07c4e47bd0390a497127ba26d43eb&sysparm_viewer_table=kb_knowledge",
+      "status": 200,
+      "pdf": true,
+      "sha256": "bd7897cddb86a4956d579c1c3b38664437a8fe3c126815496eae4ab6abc440ea",
+      "storedSha": "226066735036ea786c5ce4b1e869018c23f1f4f74d0b579177177a5575bfb280",
+      "storedDigestSource": "Git LFS object SHA-256"
+    }
+  ],
+  "fallback_probes": [
+    {
+      "code": "ar",
+      "url": "https://media.ark.org/dps/Arkansas-DL-Study-Guide-English_11122026.pdf",
+      "status": 200,
+      "pdf": true,
+      "sha256": "53a28691db6a5bd164b1e7650af7124907fde24fb5bd9e807cd611d5bd950d70",
+      "storedSha": "8fa9d5d45daf072ca263c04508dfd5a48b3c429cf63366912e94f5a9fa51d8a0",
+      "storedDigestSource": "Git LFS object SHA-256"
+    },
+    {
+      "code": "az",
+      "url": "https://apps.azdot.gov/files/mvd/mvd-forms-lib/99-0117.pdf?sfvrsn=43",
+      "error": "403 Client Error: Forbidden for url: https://apps.azdot.gov/files/mvd/mvd-forms-lib/99-0117.pdf?sfvrsn=43"
+    },
+    {
+      "code": "tn",
+      "url": "https://www.extglb.tn.gov/content/dam/tn/safety/documents/DL_Manual.pdf",
+      "error": "HTTPSConnectionPool(host='www.extglb.tn.gov', port=443): Max retries exceeded with url: /content/dam/tn/safety/documents/DL_Manual.pdf (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.extglb.tn.gov'. (_ssl.c:1010)\")))"
+    }
+  ],
+  "final_liveness": [
+    {
+      "timestamp": "2026-11-21T20:53:00Z",
+      "code": "ar",
+      "url": "https://media.ark.org/dps/Arkansas-DL-Study-Guide-English_11122026.pdf",
+      "verdict": "ok",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "content_length": null
+    },
+    {
+      "timestamp": "2026-11-21T20:51:55Z",
+      "code": "az",
+      "url": "https://apps.azdot.gov/files/mvd/mvd-forms-lib/99-0117.pdf",
+      "verdict": "ok",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "content_length": 3195207
+    },
+    {
+      "timestamp": "2026-11-21T20:51:55Z",
+      "code": "il",
+      "url": "https://web.archive.org/web/2026id_/https://www.ilsos.gov/publications/pdf_publications/dsd_a112.pdf",
+      "verdict": "recovered",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "content_length": 4344406
+    },
+    {
+      "timestamp": "2026-11-21T20:51:55Z",
+      "code": "ky",
+      "url": "https://wp.kentuckystatepolice.ky.gov/wp-content/uploads/2023/11/Kentucky-Driver-Manual-10-11-2023.pdf",
+      "verdict": "ok",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "content_length": 4659072
+    },
+    {
+      "timestamp": "2026-11-21T20:51:55Z",
+      "code": "oh",
+      "url": "https://web.archive.org/web/20260814172000/https://dam.assets.ohio.gov/image/upload/publicsafety.ohio.gov/hsy7607.pdf",
+      "verdict": "recovered",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "content_length": 6886166
+    },
+    {
+      "timestamp": "2026-11-21T20:51:55Z",
+      "code": "sd",
+      "url": "https://www.sd.gov/sys_attachment.do?sys_id=d8e0b08e47bd0390a497127ba26d4348&sysparm_viewer_id=f2c07c4e47bd0390a497127ba26d43eb&sysparm_viewer_table=kb_knowledge",
+      "verdict": "ok",
+      "http_status": 206,
+      "content_type": "application/pdf;charset=UTF-8",
+      "content_length": 2392336
+    },
+    {
+      "timestamp": "2026-11-21T20:51:55Z",
+      "code": "tn",
+      "url": "https://www.tn.gov/content/dam/tn/safety/documents/DL_Manual.pdf",
+      "verdict": "ok",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "content_length": null
+    },
+    {
+      "timestamp": "2026-11-21T20:51:55Z",
+      "code": "ut",
+      "url": "https://dld.utah.gov/wp-content/uploads/Driver-Handbook-2026.pdf",
+      "verdict": "ok",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "content_length": 9153599
+    }
+  ],
+  "summary": "8 of 8 flagged sources reachable: 6 canonical, 2 recovered. KY is byte-identical to its stored PDF and needs no regeneration for the URL repair. Five explicit content reviews remain: AR, NC, SD, UT, WV.",
+  "textComparison": [
+    {
+      "code": "ar",
+      "storedPages": 98,
+      "currentPages": 98,
+      "normalizedTextIdentical": false
+    },
+    {
+      "code": "sd",
+      "storedPages": 68,
+      "currentPages": 72,
+      "normalizedTextIdentical": false
+    },
+    {
+      "code": "ut",
+      "storedPages": 112,
+      "currentPages": 115,
+      "normalizedTextIdentical": false
+    }
+  ]
+}

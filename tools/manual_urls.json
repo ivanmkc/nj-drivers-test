@@ -27,12 +27,14 @@
     "code": "ar",
     "name": "Arkansas",
     "agency": "ASP",
-    "manual_url": "https://dps.arkansas.gov/wp-content/uploads/Arkansas-DL-Manual-English.pdf",
+    "manual_url": "https://media.ark.org/dps/Arkansas-DL-Study-Guide-English_11122026.pdf",
     "source_description": "Arkansas Driver License Test Study Guide (dps.arkansas.gov)",
     "passing_score_pct": 80,
     "test_question_count": 25,
     "edition": "2026-01",
-    "last_verified": "2026-09-05"
+    "last_verified": "2026-11-21",
+    "previous_manual_url": "https://dps.arkansas.gov/wp-content/uploads/Arkansas-DL-Manual-English.pdf",
+    "url_change_note": "2026-11-21: replaced obsolete redirect with the current Arkansas government media PDF (HTTP 200 and %PDF signature). Stored manual has different SHA-256; bank content review is required."
   },
   {
     "code": "az",
@@ -188,13 +190,15 @@
     "code": "ky",
     "name": "Kentucky",
     "agency": "KYTC",
-    "manual_url": "https://drive.ky.gov/Drivers/Documents/Kentucky-Driver-Manual.pdf",
+    "manual_url": "https://wp.kentuckystatepolice.ky.gov/wp-content/uploads/2023/11/Kentucky-Driver-Manual-10-11-2023.pdf",
     "source_description": "Kentucky Driver Manual (drive.ky.gov)",
     "passing_score_pct": 80,
     "test_question_count": 40,
-    "last_verified": "2026-09-05",
+    "last_verified": "2026-11-21",
     "recovery_url": "https://web.archive.org/web/20260128150319/https://drive.ky.gov/Drivers/Documents/Kentucky-Driver-Manual.pdf",
-    "recovery_reason": "drive.ky.gov returns 404 for the canonical PDF since 2026-09; Wayback snapshot 2026-01-28 is byte-identical to the manual the bank was generated from."
+    "recovery_reason": "drive.ky.gov returns 404 for the canonical PDF since 2026-09; Wayback snapshot 2026-01-28 is byte-identical to the manual the bank was generated from.",
+    "previous_manual_url": "https://drive.ky.gov/Drivers/Documents/Kentucky-Driver-Manual.pdf",
+    "url_change_note": "2026-11-21: current agency-linked PDF returns HTTP 200 and is byte-identical to the stored Git LFS object d8047d28f8358bb27cb393f3c87df22ae9732e4c3783a8116f105ef48102276b. Bank regeneration is not required for this URL repair."
   },
   {
     "code": "la",
@@ -458,14 +462,16 @@
     "code": "sd",
     "name": "South Dakota",
     "agency": "DPS",
-    "manual_url": "https://dps.sd.gov/application/files/9717/0863/8492/sd-driver-manual-rev-12-2023.pdf",
+    "manual_url": "https://www.sd.gov/sys_attachment.do?sys_id=d8e0b08e47bd0390a497127ba26d4348&sysparm_viewer_id=f2c07c4e47bd0390a497127ba26d43eb&sysparm_viewer_table=kb_knowledge",
     "recovery_url": "https://web.archive.org/web/20241125195101/https://dps.sd.gov/application/files/9717/0863/8492/sd-driver-manual-rev-12-2023.pdf",
     "recovery_reason": "SD DPS migrated to a ServiceNow portal in 2025; all dps.sd.gov/application/files/* URLs 302-redirect to a JS-rendered shell at www.sd.gov/dps. Wayback snapshot from 2024-11-25 is byte-identical to the canonical publication.",
     "source_description": "South Dakota Driver Manual (Dec 2023) (dps.sd.gov, via Internet Archive)",
     "passing_score_pct": 80,
     "test_question_count": 25,
     "edition": "2023-12",
-    "last_verified": "2026-09-05"
+    "last_verified": "2026-11-21",
+    "previous_manual_url": "https://dps.sd.gov/application/files/9717/0863/8492/sd-driver-manual-rev-12-2023.pdf",
+    "url_change_note": "2026-11-21: current agency-linked PDF returned HTTP 200 with PDF signature. SHA-256 differs from the stored manual; content review is required before release."
   },
   {
     "code": "tn",
@@ -493,14 +499,16 @@
     "code": "ut",
     "name": "Utah",
     "agency": "DLD",
-    "manual_url": "https://dld.utah.gov/wp-content/uploads/Driver-Handbook-REV-3.2026.pdf",
+    "manual_url": "https://dld.utah.gov/wp-content/uploads/Driver-Handbook-2026.pdf",
     "source_description": "Utah Driver Handbook 2025-2026 (Mar 2026 rev) (dld.utah.gov)",
     "passing_score_pct": 80,
     "test_question_count": 50,
     "edition": "2025-2026",
-    "last_verified": "2026-09-05",
+    "last_verified": "2026-11-21",
     "recovery_url": "https://web.archive.org/web/20260727184139/https://dld.utah.gov/wp-content/uploads/Driver-Handbook-REV-3.2026.pdf",
-    "recovery_reason": "dld.utah.gov returns 404 for Driver-Handbook-REV-3.2026.pdf since 2026-09; Wayback snapshot 2026-07-27 is byte-identical to the stored manual."
+    "recovery_reason": "dld.utah.gov returns 404 for Driver-Handbook-REV-3.2026.pdf since 2026-09; Wayback snapshot 2026-07-27 is byte-identical to the stored manual.",
+    "previous_manual_url": "https://dld.utah.gov/wp-content/uploads/Driver-Handbook-REV-3.2026.pdf",
+    "url_change_note": "2026-11-21: current agency-linked PDF returned HTTP 200 with PDF signature. SHA-256 differs from the stored manual; content review is required before release."
   },
   {
     "code": "va",

@@ -56,6 +56,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Check unresolved content reviews
+        run: python3 ../../tools/check_release_content.py
+
       - name: Bundle questions
         run: |
           pip install pyyaml
